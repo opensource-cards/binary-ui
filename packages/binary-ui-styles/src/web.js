@@ -31,6 +31,24 @@ export const NO_SELECT_CSS = `
   -webkit-touch-callout: none;
 `;
 
+export const WEBSITE_RESET_STYLES = `
+* {
+  box-sizing: border-box;
+  outline: 0;
+  -ms-content-zooming: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a, div, i, span {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+`;
+
 export const WEBSITE_WRAPPER_STYLE = Object.assign({}, MAXIMIZED_STYLE, {
   display: 'flex',
   flexDirection: 'column',
@@ -50,6 +68,7 @@ export default {
   MAXIMIZED_CSS,
   NO_SELECT_STYLE,
   NO_SELECT_CSS,
+  WEBSITE_RESET_STYLES,
   WEBSITE_WRAPPER_STYLE,
   WEBSITE_WRAPPER_CSS,
 };
