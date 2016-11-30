@@ -4,7 +4,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx'],
     alias: {
-      'binary-ui-icons': path.join(__dirname, '..', 'src')
+      'binary-ui-icons': path.join(__dirname, '..', '..', 'src')
     },
   },
   module: {

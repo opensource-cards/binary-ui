@@ -1,21 +1,22 @@
 {
   "name": "binary-ui-icons",
-  "version": "0.0.1",
+  "version": "0.0.2-rc.0",
   "description": "React icons for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
     "email": "rk@try.cards"
   },
   "scripts": {
+    "install-peer-dependencies": "npm install react@15.3.2 && npm install react-dom@15.3.2 && npm install react-art && npm install react-native && npm install styled-components",
+    "r-build-storybook": "cd example_r && npm run build-storybook",
+    "r-storybook": "cd example_r && npm run storybook",
     "rn-watch": "babel ./src --out-dir=./example_rn/lib --watch",
     "rn-storybook": "cd example_rn && npm run storybook",
     "rn-run-ios": "cd example_rn && react-native run-ios",
     "clean": "rimraf lib",
     "lint": "eslint src",
     "test": "mocha --recursive --compilers js:babel-core/register",
-    "build": "npm run lint && npm run clean && babel src --out-dir lib && npm test",
-    "build-storybook": "build-storybook -o docs",
-    "storybook": "start-storybook -p 6006"
+    "build": "npm run lint && npm run clean && babel src --out-dir lib && npm test"
   },
   "files": [
     "lib"
@@ -23,10 +24,10 @@
   "main": "lib/index.js",
   "dependencies": {},
   "peerDependencies": {
-    "react": "^15.3.2",
+    "react": "~15.3.2",
     "react-art": "^0.15.1",
     "react-native": "^0.37.0",
-    "styled-components": "^1.0.11"
+    "styled-components": "^1.1.2"
   },
   "devDependencies": {
     "babel": "^6.3.26",
@@ -44,7 +45,6 @@
     "eslint-plugin-jsx-a11y": "^1.0.2",
     "eslint-plugin-react": "^5.0.1",
     "mocha": "^3.0.2",
-    "rimraf": "^2.3.4",
-    "@kadira/storybook": "^2.21.0"
+    "rimraf": "^2.3.4"
   }
 }
