@@ -8,7 +8,9 @@ export default function (IconContentComponent) {
     size: React.PropTypes.number,
   };
 
-  const defaultProps = {};
+  const defaultProps = {
+    size: 20,
+  };
 
   const CardsIconHOCComponent = ({ color, size, ...surfaceProps }) => (
     <SurfaceWrapper size={size} {...surfaceProps} >

@@ -5,13 +5,12 @@ const DEFAULT_SIZE = 512;
 export default (Group, Shape, Surface) => {
   const propTypes = {
     color: React.PropTypes.string,
-    size: React.PropTypes.number,
+    size: React.PropTypes.number.isRequired,
     IconContentComponent: React.PropTypes.func.isRequired,
   };
 
   const defaultProps = {
     color: '#000000',
-    size: 20,
   };
 
   const SurfaceRendererNativeAndWeb = ({ color, size, IconContentComponent }) => {
