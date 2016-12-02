@@ -11,7 +11,7 @@ export default function (IconContentComponent) {
   const defaultProps = {};
 
   const CardsIconHOCComponent = ({ color, size, ...surfaceProps }) => (
-    <SurfaceWrapper {...surfaceProps} >
+    <SurfaceWrapper size={size} {...surfaceProps} >
       <SurfaceRenderer color={color} size={size} IconContentComponent={IconContentComponent} />
     </SurfaceWrapper>
   );
