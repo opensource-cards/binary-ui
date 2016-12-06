@@ -83,7 +83,7 @@ import {
   CardsIconUserAlt,
   CardsIconWhatsapp,
   CardsIconWhatsappAlt,
-} from '../../lib';
+} from 'binary-ui-icons';
 import styled from 'styled-components/native';
 
 const COLOR = '#0F9BE0';

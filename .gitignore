@@ -1,5 +1,6 @@
 # Compiled files
 lib
+storybooks/native/lib
 
 # Logs
 *.log

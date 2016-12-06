@@ -1,0 +1,12 @@
+{
+  "presets": ["react", "es2015"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "binary-ui-icons": "./lib/binary-ui-icons/src",
+        "binary-ui-styles": "./lib/binary-ui-styles/src"
+      }
+    }]
+  ]
+}

@@ -98,7 +98,7 @@ const CardsIconAddStyled = styled(CardsIconAdd)`
   background-color: #FFFF00;
 `;
 
-storiesOf('Icons Advanced', module)
+storiesOf('binary-ui-icons with styles', module)
   .add('styled', () => (
     <CardsIconAddStyled color={COLOR} size={SIZE} />
   ))
@@ -106,7 +106,7 @@ storiesOf('Icons Advanced', module)
     <CardsIconAddStyled color={COLOR} size={SIZE} onMouseDown={() => { console.log('onMouseDown'); }} />
   ));
 
-storiesOf('Icons', module)
+storiesOf('binary-ui-icons main', module)
   .add('CardsIconAdd', () => (
     <CardsIconAdd color={COLOR} size={SIZE} />
   ))
@@ -285,7 +285,7 @@ storiesOf('Icons', module)
     <CardsIconUserAlt color={COLOR} size={SIZE} />
   ));
 
-storiesOf('Companies & Social', module)
+storiesOf('binary-ui-icons companies & social', module)
   .add('CardsIconApple', () => (
     <CardsIconApple color={COLOR} size={SIZE} />
   ))

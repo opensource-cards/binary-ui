@@ -9,17 +9,18 @@
   },
   "dependencies": {
     "react": "15.4.1",
-    "react-native": "0.38.0",
+    "react-native": "0.38.1",
     "styled-components": "^1.1.2"
   },
   "jest": {
     "preset": "react-native"
   },
   "devDependencies": {
+    "@kadira/react-native-storybook": "^2.0.0",
     "babel-jest": "17.0.2",
+    "babel-plugin-module-resolver": "^2.4.0",
     "babel-preset-react-native": "1.9.0",
     "jest": "17.0.3",
-    "react-test-renderer": "15.4.1",
-    "@kadira/react-native-storybook": "^2.0.0"
+    "react-test-renderer": "15.4.1"
   }
 }
