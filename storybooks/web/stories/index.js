@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf, action } from '@kadira/storybook';
 import {
   CardsIconAdd,
   CardsIconAddCard,
@@ -85,6 +85,34 @@ import {
   CardsIconWhatsappAlt,
 } from 'binary-ui-icons';
 import styled from 'styled-components';
+
+import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
+import {
+  ActionIcon,
+  ActionLink,
+  ActionLinkInline,
+  ActionDiv,
+  ActionButton,
+  Alert,
+  AlertTypes,
+  Button,
+  ButtonTypes,
+  Checkbox,
+  ListItem,
+  ListItemContentText,
+  ListItemNameText,
+  ListItemPhotoWrapper,
+  Section,
+  SelectOptionModel,
+  Select,
+  Switch,
+  Textarea,
+  TextField,
+  TextFieldTypes,
+  Textview,
+} from 'binary-ui-components';
+import uuid from 'node-uuid';
+import { getImg } from './resources/fake-img';
 
 // render svg instead of canvas
 import ARTSVGMode from 'art/modes/svg';
@@ -354,4 +382,263 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .add('CardsIconWhatsappAlt', () => (
     <CardsIconWhatsappAlt color={COLOR} size={SIZE} />
+  ));
+
+const text = 'Button Text (very long name that will collapse when the screen is too narrow)';
+const selectedPhotoGuid = uuid.v1();
+
+storiesOf('binary-ui-components actionable icons', module)
+  .add('regular', () => (
+    <ActionableIcon
+      color="red"
+      IconComponent={CardsIconArrowDown}
+      size={20}
+    />
+  ))
+  .add('hover', () => (
+    <ActionableIcon
+      color="red"
+      IconComponent={CardsIconArrowDown}
+      isHover
+      size={20}
+    />
+  ))
+  .add('hover & active', () => (
+    <ActionableIcon
+      color="red"
+      IconComponent={CardsIconArrowDown}
+      isActive
+      isHover
+      size={20}
+    />
+  ))
+  .add('desabled', () => (
+    <ActionableIcon
+      color="red"
+      IconComponent={CardsIconArrowDown}
+      isDisabled
+      size={20}
+    />
+  ));
+
+storiesOf('binary-ui-components links', module)
+  .add('action icon', () => (
+    <ActionIcon IconComponent={CardsIconArrowDown} title="Icon" />
+  ))
+  .add('action link', () => (
+    <ActionLink IconComponentLeft={CardsIconArrowDown} >
+      ActionLink
+    </ActionLink>
+  ))
+  .add('action link inline', () => (
+    <ActionLinkInline href="http://try.cards/" IconComponentRight={CardsIconArrowDown} >
+      ActionLinkInline
+    </ActionLinkInline>
+  ))
+  .add('action div', () => (
+    <ActionDiv>Put test here</ActionDiv>
+  ));
+
+storiesOf('binary-ui-components alert', module)
+  .add('info', () => (
+    <Alert text="Alert text" type={AlertTypes.INFO} />
+  ))
+  .add('confirm', () => (
+    <Alert text="Alert text" type={AlertTypes.CONFIRM} />
+  ))
+  .add('critical', () => (
+    <Alert text="Alert text" type={AlertTypes.CRITICAL} />
+  ));
+
+storiesOf('binary-ui-components list items', module)
+  .add('with list item name text', () => (
+    <ListItem>
+      <ListItemNameText
+        IconComponent={CardsIconArrowDown}
+        isEdit
+        isFull
+        onClick={action()}
+      >
+        list item name text
+      </ListItemNameText>
+    </ListItem>
+  ))
+  .add('with button', () => (
+    <ListItem>
+      <ListItemNameText
+        IconComponent={CardsIconArrowDown}
+        isEdit
+        onClick={action()}
+      >
+        Button Label
+      </ListItemNameText>
+      <Button text={text} type={ButtonTypes.RIGHT} onClick={action()} />
+    </ListItem>
+  ))
+  .add('with text (number)', () => (
+    <ListItem>
+      <ListItemNameText>
+        Text Field
+      </ListItemNameText>
+      <TextField
+        isMoreButton
+        isRequired
+        value="000"
+        type={TextFieldTypes.NUMBER}
+        mask="####"
+        onRef={action()}
+        onTextChange={action()}
+        onMoreClick={action()}
+      />
+    </ListItem>
+  ))
+  .add('with text (phone number)', () => (
+    <ListItem>
+      <ListItemNameText>
+        Text Field Phone Number
+      </ListItemNameText>
+      <TextField
+        isMoreButton
+        value="000"
+        type={TextFieldTypes.PHONE_NUMBER}
+        mask="## #### ####"
+        onRef={action()}
+        onTextChange={action()}
+        onMoreClick={action()}
+      />
+    </ListItem>
+  ))
+  .add('with switch checked', () => (
+    <ListItem>
+      <ListItemNameText>
+        Switch Label
+      </ListItemNameText>
+      <Switch
+        id="switch-1"
+        isChecked
+        onChange={action()}
+      />
+    </ListItem>
+  ))
+  .add('with switch unchecked', () => (
+    <ListItem>
+      <ListItemNameText>
+        Switch Label
+      </ListItemNameText>
+      <Switch
+        id="switch-2"
+        onChange={action()}
+      />
+    </ListItem>
+  ))
+  .add('with select', () => (
+    <ListItem>
+      <ListItemNameText>
+        Select Label
+      </ListItemNameText>
+      <Select
+        selected="uk"
+        items={[
+          new SelectOptionModel('ko', 'ko', 'Korea (+82)'),
+          new SelectOptionModel('uk', 'uk', 'Ukraine (+38)'),
+        ]}
+        onChange={action()}
+      />
+    </ListItem>
+  ))
+  .add('textarea', () => (
+    <Textarea
+      isMoreButton
+      isRequired
+      value="000"
+      onRef={action()}
+      onTextChange={action()}
+      onMoreClick={action()}
+    />
+  ))
+  .add('photo selector', () => (
+    <ListItemPhotoWrapper
+      isSelectedable
+      limit={3}
+      noImageUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
+      uploadedPhotos={[{
+        url: getImg(),
+        guid: selectedPhotoGuid,
+        isNew: false,
+      }]}
+      selectedPhotoGuid={selectedPhotoGuid}
+      onPhotoClick={action()}
+      onSelectPhotoUrl={action()}
+      onSetUploadedPhotos={action()}
+      photoFit="contain"
+    />
+  ))
+  .add('with text', () => (
+    <ListItem>
+      <ListItemNameText>
+        ListItemContentText
+      </ListItemNameText>
+      <ListItemContentText
+        id="ListItemContentText Id"
+        isMoreButton
+        onMoreClick={action()}
+        text="ListItemContentText text"
+      />
+    </ListItem>
+  ))
+  .add('editing', () => (
+    <ListItem>
+      <ListItemNameText>
+        ListItemContentText
+      </ListItemNameText>
+      <TextField
+        id="ListItemContentText Id"
+        isMoreButton
+        placeholder="Placeholder"
+        text="ListItemContentText text"
+        value="Name"
+      />
+    </ListItem>
+  ));
+
+storiesOf('binary-ui-components textview', module)
+  .add('all', () => (
+    <Textview
+      id="text-id"
+      isMoreButton
+      onMoreClick={action()}
+    >
+      Look at "<a href="#">this</a>" text and a
+      <ActionButton
+        IconComponentRight={CardsIconArrowDown}
+        disabled={false}
+        style={undefined}
+        type="submit"
+        onClick={action()}
+      >
+        Link
+      </ActionButton>
+    </Textview>
+  ));
+
+storiesOf('binary-ui-components checkbox', module)
+  .add('checked', () => (
+    <Checkbox
+      id="checkbox-1"
+      isChecked
+      onChange={action()}
+    />
+  ))
+  .add('unchecked', () => (
+    <Checkbox
+      id="checkbox-2"
+      onChange={action()}
+    />
+  ));
+
+storiesOf('binary-ui-components section', module)
+  .add('main', () => (
+    <Section name="Section Title">
+      Section Text
+    </Section>
   ));

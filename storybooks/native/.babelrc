@@ -4,6 +4,7 @@
     ["module-resolver", {
       "root": ["./storybook"],
       "alias": {
+        "binary-ui-components": "./lib/binary-ui-components/src",
         "binary-ui-icons": "./lib/binary-ui-icons/src",
         "binary-ui-styles": "./lib/binary-ui-styles/src"
       }
