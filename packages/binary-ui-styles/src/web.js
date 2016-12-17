@@ -33,7 +33,6 @@ export const NO_SELECT_CSS = `
 
 export const WEBSITE_RESET_STYLES = `
 * {
-  box-sizing: border-box;
   outline: 0;
   -ms-content-zooming: none;
 }
