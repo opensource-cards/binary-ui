@@ -11,6 +11,7 @@ const propTypes = {
   isDisabled: React.PropTypes.bool,
   size: React.PropTypes.number,
   style: React.PropTypes.object,
+  onClick: React.PropTypes.func,
   IconComponent: React.PropTypes.func,
 };
 
@@ -18,7 +19,6 @@ const defaultProps = {
   isActive: false,
   isHover: false,
   isDisabled: false,
-  style: {},
 };
 
 const ActionableIcon = ({
@@ -28,6 +28,7 @@ const ActionableIcon = ({
   isHover,
   isDisabled,
   style,
+  onClick,
   IconComponent,
   ...props,
 }) => {
@@ -48,6 +49,7 @@ const ActionableIcon = ({
       color={actionColor}
       size={size}
       style={styleAction}
+      onClick={!isDisabled && onClick}
       IconComponent={IconComponent}
       {...props}
     />

@@ -47,7 +47,7 @@ export default class Textarea extends React.Component {
   }
 
   @autobind
-  onSetActiveStatus(isActive) {
+  onSetFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -69,8 +69,8 @@ export default class Textarea extends React.Component {
       <ListItemTextareaWrapper isTypingHighlight={isActive} isValid={isValid} >
         <TextareaInput
           onChange={this.onTextChange}
-          onBlur={(e) => { this.onSetActiveStatus(false); if (onBlur) { onBlur(e); } }}
-          onFocus={(e) => { this.onSetActiveStatus(true); if (onFocus) { onFocus(e); } }}
+          onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
+          onFocus={(e) => { this.onSetFocus(true); if (onFocus) { onFocus(e); } }}
           {...props}
         />
         {isMoreButton && (

@@ -1,3 +1,3 @@
-import ActionBlock from './components-styled/ActionBlock';
+import ActionDiv from './components';
 
-export default ActionBlock;
+export default ActionDiv;

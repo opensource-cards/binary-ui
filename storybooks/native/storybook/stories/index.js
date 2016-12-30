@@ -402,7 +402,7 @@ storiesOf('binary-ui-components actionable icons', module)
       />
     </View>
   ))
-  .add('desabled', () => (
+  .add('disabled', () => (
     <View>
       <StatusBar hidden />
       <ActionableIcon
@@ -415,6 +415,24 @@ storiesOf('binary-ui-components actionable icons', module)
   ));
 
 storiesOf('binary-ui-components links', module)
+  .add('action button', () => (
+    <View>
+      <StatusBar hidden />
+      <ActionButton IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+    </View>
+  ))
+  .add('action button disabled', () => (
+    <View>
+      <StatusBar hidden />
+      <ActionButton isDisabled IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+    </View>
+  ))
+  .add('action div', () => (
+    <View>
+      <StatusBar hidden />
+      <ActionBlock>Put test here</ActionBlock>
+    </View>
+  ))
   .add('action icon', () => (
     <View>
       <StatusBar hidden />
@@ -435,12 +453,6 @@ storiesOf('binary-ui-components links', module)
       <ActionLinkInline IconComponentRight={CardsIconArrowDown} >
         ActionLinkInline
       </ActionLinkInline>
-    </View>
-  ))
-  .add('action div', () => (
-    <View>
-      <StatusBar hidden />
-      <ActionBlock>Put test here</ActionBlock>
     </View>
   ));
 

@@ -21,11 +21,11 @@ export const RESET_BUTTON_CSS = `
 
 export default styled.button`
   ${RESET_BUTTON_CSS}
-  ${CARDS_BUTTON_CSS}
   ${(props) => (
     (props.isDisabled)
       ? CARDS_ICON_DISABLED_CSS
       : `
+        ${CARDS_BUTTON_CSS}
         ${CARDS_ICON_ACTIVE_PSEUDO_CSS}
         ${CARDS_ICON_HOVER_PSEUDO_CSS}
       `

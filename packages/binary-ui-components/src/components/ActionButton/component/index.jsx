@@ -9,6 +9,8 @@ const propTypes = {
   children: React.PropTypes.any,
   isDisabled: React.PropTypes.bool,
   style: React.PropTypes.object,
+  onClick: React.PropTypes.func,
+  onSubmit: React.PropTypes.func,
   IconComponentLeft: React.PropTypes.func,
   IconComponentRight: React.PropTypes.func,
 };
@@ -34,20 +36,25 @@ export default class ActionButton extends React.Component {
     const {
       children,
       isDisabled,
+      onClick,
+      onSubmit,
       IconComponentLeft,
       IconComponentRight,
       ...props,
     } = this.props;
     return (
-        <ActionButtonStyled
-          {...props}
-        >
-          <ActionButtonWrapper>
-            {IconComponentLeft && this.renderIconComponent(IconComponentLeft)}
-              {children}
-            {IconComponentRight && this.renderIconComponent(IconComponentRight)}
-          </ActionButtonWrapper>
-        </ActionButtonStyled>
+      <ActionButtonStyled
+        isDisabled={isDisabled}
+        onClick={!isDisabled && onClick}
+        onSubmit={!isDisabled && onSubmit}
+        {...props}
+      >
+        <ActionButtonWrapper>
+          {IconComponentLeft && this.renderIconComponent(IconComponentLeft)}
+            {children}
+          {IconComponentRight && this.renderIconComponent(IconComponentRight)}
+        </ActionButtonWrapper>
+      </ActionButtonStyled>
     );
   }
 }

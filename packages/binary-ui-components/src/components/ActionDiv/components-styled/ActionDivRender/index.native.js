@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components/native';
 import {
   CARDS_ICON_CSS,
-} from '../../../utils/styles';
+} from '../../../../utils/styles';
 import {
   CARDS_ICON_ACTIVE_CSS,
   CARDS_ICON_HOVER_CSS,
   CARDS_ICON_DISABLED_CSS,
-} from '../../../utils/styles.universal';
+} from '../../../../utils/styles.universal';
 
 // NOTE: does not work because of 'styled-components/native' bug
 const ActionButtonStyled = styled.Text`

@@ -59,7 +59,7 @@ export default class TextField extends React.Component {
   }
 
   @autobind
-  onSetActiveStatus(isActive) {
+  onSetFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -133,8 +133,8 @@ export default class TextField extends React.Component {
           type={this.getTypeHtml(type)}
           value={this.getFormattedValue(type, mask, value)}
           onChange={this.onChange}
-          onBlur={(e) => { this.onSetActiveStatus(false); if (onBlur) { onBlur(e); } }}
-          onFocus={(e) => { this.onSetActiveStatus(true); if (onFocus) { onFocus(e); } }}
+          onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
+          onFocus={(e) => { this.onSetFocus(true); if (onFocus) { onFocus(e); } }}
           {...props}
         />
       </ListItemContents>

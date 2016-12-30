@@ -10,6 +10,7 @@ const propTypes = {
   isHover: React.PropTypes.bool,
   isDisabled: React.PropTypes.bool,
   style: React.PropTypes.object,
+  onClick: React.PropTypes.func,
 };
 
 const defaultProps = {
@@ -24,6 +25,7 @@ const ActionableText = ({
   isHover,
   isDisabled,
   style,
+  onClick,
   ...props,
 }) => {
   const actionColor = getActionColorExt(
@@ -39,7 +41,11 @@ const ActionableText = ({
     ? Object.assign({}, style, CARDS_ICON_ACTIVE_STYLE, { color: actionColor })
     : Object.assign({}, style, { color: actionColor });
   return (
-    <ActionableTextWrapper style={styleAction} {...props} />
+    <ActionableTextWrapper
+      style={styleAction}
+      onClick={!isDisabled && onClick}
+      {...props}
+    />
   );
 };
 

@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import React from 'react';
 import IconStyledWrapper from '../components-styled/IconStyledWrapper';
 
@@ -11,29 +10,16 @@ const propTypes = {
 
 const defaultProps = {};
 
-export default class ActionableListItemIcon extends React.Component {
-
-  @autobind
-  onClick(e) {
-    e.stopPropagation();
-    const { onClick } = this.props;
-    if (onClick) {
-      onClick(e);
-    }
-  }
-
-  render() {
-    const { ...props } = this.props;
-    return (
-      <IconStyledWrapper
-        color="#7F7F7F"
-        size={18}
-        onClick={this.onClick}
-        {...props}
-      />
-    );
-  }
-}
+const ActionableListItemIcon = ({ isDisabled, onClick, ...props }) => (
+  <IconStyledWrapper
+    color="#7F7F7F"
+    size={18}
+    onClick={!isDisabled && onClick}
+    {...props}
+  />
+);
 
 ActionableListItemIcon.propTypes = propTypes;
 ActionableListItemIcon.defaultProps = defaultProps;
+
+export default ActionableListItemIcon;

@@ -21,7 +21,7 @@ export default class ActionListItemIcon extends React.Component {
       isActive: false,
       isHover: false,
     };
-    this.onTapUp = () => { this.onSetActiveStatus(false); };
+    this.onTapUp = () => { this.onSetActive(false); };
   }
 
   componentDidMount() {
@@ -35,7 +35,7 @@ export default class ActionListItemIcon extends React.Component {
   }
 
   @autobind
-  onSetActiveStatus(isActive) {
+  onSetActive(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -45,7 +45,7 @@ export default class ActionListItemIcon extends React.Component {
   }
 
   @autobind
-  onSetHoverStatus(isHover) {
+  onSetHover(isHover) {
     this.setState({
       isHover,
     });
@@ -65,10 +65,10 @@ export default class ActionListItemIcon extends React.Component {
         isActive={isActive}
         isHover={isHover}
         isDisabled={isDisabled}
-        onMouseDown={(e) => { this.onSetActiveStatus(true); if (onTapDown) { onTapDown(e); } }}
-        onTouchStart={(e) => { this.onSetActiveStatus(true); if (onTapDown) { onTapDown(e); } }}
-        onMouseEnter={(e) => { this.onSetHoverStatus(true); if (onMouseEnter) { onMouseEnter(e); } }}
-        onMouseLeave={(e) => { this.onSetHoverStatus(false); if (onMouseLeave) { onMouseLeave(e); } }}
+        onMouseDown={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+        onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+        onMouseEnter={!isDisabled && ((e) => { this.onSetHover(true); if (onMouseEnter) { onMouseEnter(e); } })}
+        onMouseLeave={!isDisabled && ((e) => { this.onSetHover(false); if (onMouseLeave) { onMouseLeave(e); } })}
         {...props}
       />
     );

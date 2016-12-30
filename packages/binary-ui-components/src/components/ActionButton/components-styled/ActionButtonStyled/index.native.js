@@ -9,7 +9,7 @@ import {
   CARDS_ICON_DISABLED_CSS,
 } from '../../../../utils/styles.universal';
 
-export const RESET_BUTTON_STYLES = `
+export const RESET_BUTTON_CSS = `
   color: inherit;
   padding: 0;
 `;
@@ -27,11 +27,11 @@ const StyledView = styled.View`
 `;
 
 const ActionButtonStyled = styled.TouchableOpacity`
-  ${RESET_BUTTON_STYLES}
-  ${CARDS_BUTTON_CSS}
+  ${RESET_BUTTON_CSS}
   ${props => (props.isDisabled
     ? CARDS_ICON_DISABLED_CSS
     : `
+      ${CARDS_BUTTON_CSS}
       ${CARDS_ICON_ACTIVE_CSS}
       ${CARDS_ICON_HOVER_CSS}
     `)

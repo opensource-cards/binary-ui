@@ -45,7 +45,7 @@ export default class Textarea extends React.Component {
   }
 
   @autobind
-  onSetActiveStatus(isActive) {
+  onSetFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -70,7 +70,7 @@ export default class Textarea extends React.Component {
           editable
           {...props}
           onChangeText={this.onTextChange}
-          onSetActiveStatus={this.onSetActiveStatus}
+          onSetFocus={this.onSetFocus}
         />
         {isMoreButton && (
           <ActionListItemIcon onClick={this.onMoreClick} IconComponent={CardsIconMore} />

@@ -1,3 +1,3 @@
-import ActionLinkInline from './components/ActionLinkInline';
+import ActionLinkInline from './components';
 
 export default ActionLinkInline;

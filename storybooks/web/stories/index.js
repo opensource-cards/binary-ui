@@ -83,6 +83,8 @@ import {
 import styled from 'styled-components';
 
 import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
+import ActionableText from 'binary-ui-components/components/ActionableText';
+import ActionableListItemIcon from 'binary-ui-components/components/ActionableListItemIcon';
 import {
   ActionIcon,
   ActionLink,
@@ -377,6 +379,7 @@ storiesOf('binary-ui-components actionable icons', module)
       color="red"
       IconComponent={CardsIconArrowDown}
       size={20}
+      onClick={action()}
     />
   ))
   .add('hover', () => (
@@ -385,6 +388,7 @@ storiesOf('binary-ui-components actionable icons', module)
       IconComponent={CardsIconArrowDown}
       isHover
       size={20}
+      onClick={action()}
     />
   ))
   .add('hover & active', () => (
@@ -394,33 +398,125 @@ storiesOf('binary-ui-components actionable icons', module)
       isActive
       isHover
       size={20}
+      onClick={action()}
     />
   ))
-  .add('desabled', () => (
+  .add('disabled', () => (
     <ActionableIcon
       color="red"
       IconComponent={CardsIconArrowDown}
       isDisabled
       size={20}
+      onClick={action()}
+    />
+  ));
+
+storiesOf('binary-ui-components actionable text', module)
+  .add('regular', () => (
+    <ActionableText
+      color="red"
+      onClick={action()}
+    >
+      regular
+    </ActionableText>
+  ))
+  .add('hover', () => (
+    <ActionableText
+      color="red"
+      isHover
+      onClick={action()}
+    >
+      hover
+    </ActionableText>
+  ))
+  .add('hover & active', () => (
+    <ActionableText
+      color="red"
+      isActive
+      isHover
+      onClick={action()}
+    >
+      hover & active
+    </ActionableText>
+  ))
+  .add('disabled', () => (
+    <ActionableText
+      color="red"
+      isDisabled
+      onClick={action()}
+    >
+      disabled
+    </ActionableText>
+  ));
+
+storiesOf('binary-ui-components actionable list item icon', module)
+  .add('regular', () => (
+    <ActionableListItemIcon
+      IconComponent={CardsIconArrowDown}
+      onClick={action()}
+    />
+  ))
+  .add('hover', () => (
+    <ActionableListItemIcon
+      IconComponent={CardsIconArrowDown}
+      isHover
+      onClick={action()}
+    />
+  ))
+  .add('hover & active', () => (
+    <ActionableListItemIcon
+      IconComponent={CardsIconArrowDown}
+      isActive
+      isHover
+      onClick={action()}
+    />
+  ))
+  .add('disabled', () => (
+    <ActionableListItemIcon
+      IconComponent={CardsIconArrowDown}
+      isDisabled
+      onClick={action()}
     />
   ));
 
 storiesOf('binary-ui-components links', module)
+  .add('action button', () => (
+    <ActionButton onClick={action()} IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+  ))
+  .add('action button disabled', () => (
+    <ActionButton isDisabled onClick={action()} IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+  ))
+  .add('action div', () => (
+    <ActionDiv onClick={action()} >Put test here</ActionDiv>
+  ))
+  .add('action div disabled', () => (
+    <ActionDiv isDisabled onClick={action()} >Put test here</ActionDiv>
+  ))
   .add('action icon', () => (
-    <ActionIcon IconComponent={CardsIconArrowDown} title="Icon" />
+    <ActionIcon title="Icon" onClick={action()} IconComponent={CardsIconArrowDown} />
+  ))
+  .add('action icon disabled', () => (
+    <ActionIcon isDisabled title="Icon" onClick={action()} IconComponent={CardsIconArrowDown} />
   ))
   .add('action link', () => (
-    <ActionLink IconComponentLeft={CardsIconArrowDown} >
+    <ActionLink onClick={action()} IconComponentLeft={CardsIconArrowDown} >
+      ActionLink
+    </ActionLink>
+  ))
+  .add('action link disabled', () => (
+    <ActionLink isDisabled onClick={action()} IconComponentLeft={CardsIconArrowDown} >
       ActionLink
     </ActionLink>
   ))
   .add('action link inline', () => (
-    <ActionLinkInline href="http://try.cards/" IconComponentRight={CardsIconArrowDown} >
+    <ActionLinkInline href="http://try.cards/" onClick={action()} IconComponentRight={CardsIconArrowDown} >
       ActionLinkInline
     </ActionLinkInline>
   ))
-  .add('action div', () => (
-    <ActionDiv>Put test here</ActionDiv>
+  .add('action link inline disabled', () => (
+    <ActionLinkInline href="http://try.cards/" isDisabled onClick={action()} IconComponentRight={CardsIconArrowDown} >
+      ActionLinkInline
+    </ActionLinkInline>
   ));
 
 storiesOf('binary-ui-components alert', module)

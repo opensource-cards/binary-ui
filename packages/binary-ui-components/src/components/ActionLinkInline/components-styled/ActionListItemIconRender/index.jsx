@@ -7,7 +7,11 @@ export default styled.a`
   color: ${CARDS_BLUE_COLOR};
   text-decoration: none;
   display: flex;
-  &:hover {
-    text-decoration: underline;
-  }
+  ${(props) => (
+    (!props.isDisabled) ? `
+      &:hover {
+        text-decoration: underline;
+      }
+    ` : 'cursor: default;'
+  )}
 `;
