@@ -1,4 +1,3 @@
-// import { actionAreaEditorHOC } from 'react-action-hoc';
 import React from 'react';
 import TextInputStyled from '../../components-styled/TextInputStyled';
 

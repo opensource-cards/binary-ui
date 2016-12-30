@@ -1,7 +1,7 @@
 import autobind from 'autobind-decorator';
 import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
 import React from 'react';
-import LinkExt from '../LinkExt';
+import ActionListItemIconRender from '../../components-styled/ActionListItemIconRender';
 import ActionLinkInlineWrapper from '../../components-styled/ActionLinkInlineWrapper';
 import ActionableIconWrapper from '../../components-styled/ActionableIconWrapper';
 import ActionableIcon from '../../../ActionableIcon';
@@ -11,6 +11,9 @@ const propTypes = {
   children: React.PropTypes.any,
   isDisabled: React.PropTypes.bool,
   style: React.PropTypes.object,
+  onMouseEnter: React.PropTypes.func,
+  onMouseLeave: React.PropTypes.func,
+  onTapDown: React.PropTypes.func,
   IconComponentLeft: React.PropTypes.func,
   IconComponentRight: React.PropTypes.func,
 };
@@ -25,6 +28,17 @@ export default class ActionLinkInline extends React.Component {
       isActive: false,
       isHover: false,
     };
+    this.onTapUp = () => { this.onSetActiveStatus(false); };
+  }
+
+  componentDidMount() {
+    window.addEventListener('mouseup', this.onTapUp);
+    window.addEventListener('touchend', this.onTapUp);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('mouseup', this.onTapUp);
+    window.removeEventListener('touchend', this.onTapUp);
   }
 
   @autobind
@@ -64,6 +78,9 @@ export default class ActionLinkInline extends React.Component {
     const {
       children,
       isDisabled,
+      onMouseEnter,
+      onMouseLeave,
+      onTapDown,
       IconComponentLeft,
       IconComponentRight,
       ...props,
@@ -71,9 +88,11 @@ export default class ActionLinkInline extends React.Component {
     const { isActive, isHover } = this.state;
     return (
       <ActionLinkInlineWrapper>
-        <LinkExt
-          onSetActiveStatus={this.onSetActiveStatus}
-          onSetHoverStatus={this.onSetHoverStatus}
+        <ActionListItemIconRender
+          onMouseDown={(e) => { this.onSetActiveStatus(true); if (onTapDown) { onTapDown(e); } }}
+          onTouchStart={(e) => { this.onSetActiveStatus(true); if (onTapDown) { onTapDown(e); } }}
+          onMouseEnter={(e) => { this.onSetHoverStatus(true); if (onMouseEnter) { onMouseEnter(e); } }}
+          onMouseLeave={(e) => { this.onSetHoverStatus(false); if (onMouseLeave) { onMouseLeave(e); } }}
           {...props}
         >
           {IconComponentLeft && this.renderIconComponent(IconComponentLeft)}
@@ -86,7 +105,7 @@ export default class ActionLinkInline extends React.Component {
             {children}
           </ActionableText>
           {IconComponentRight && this.renderIconComponent(IconComponentRight)}
-        </LinkExt>
+        </ActionListItemIconRender>
       </ActionLinkInlineWrapper>
     );
   }

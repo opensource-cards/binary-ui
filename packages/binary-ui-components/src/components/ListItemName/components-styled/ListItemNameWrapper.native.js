@@ -1,19 +1,10 @@
 import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components/native';
-import { EDIT_STYLE_NATIVE } from '../../../utils/styles';
 import React from 'react';
-
-/*
-const LIST_ITEM_NAME_IS_EDIT = `
-  ${EDIT_STYLE_NATIVE}
-  &:active {
-    ${HIGHTLIGHT_STYLE_EXT}
-  }
-`;
-*/
+import { EDIT_CSS } from '../../../utils/styles';
 
 const StyledTouchableOpacity = styled.TouchableOpacity`
-  ${EDIT_STYLE_NATIVE}
+  ${EDIT_CSS}
   align-items: center;
   height: ${LIST_ITEM_HEIGHT};
   flex-direction: row;

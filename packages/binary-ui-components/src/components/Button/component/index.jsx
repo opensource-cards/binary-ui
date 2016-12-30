@@ -15,8 +15,7 @@ const defaultProps = {
   type: ButtonTypes.RIGHT,
 };
 
-// ToDo: add numberOfLines={1} to Text
-
+// TODO: add numberOfLines={1} to Text
 const Button = ({ text, type, onClick }) => (
   <ListItemContents isTapHighlight onClick={onClick} >
     <ActionableListItemIcon onClick={onClick} IconComponent={getArrowClass(type)} />

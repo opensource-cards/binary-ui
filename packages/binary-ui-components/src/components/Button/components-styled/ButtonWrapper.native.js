@@ -1,10 +1,10 @@
-import styled from 'styled-components/native';
-import { LIST_ITEM_CONTENTS_BASE_STYLE_NATIVE } from '../../../utils/styles';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import styled from 'styled-components/native';
+import { LIST_ITEM_CONTENTS_BASE_CSS } from '../../../utils/styles';
 
 const StyledText = styled.Text`
-  ${LIST_ITEM_CONTENTS_BASE_STYLE_NATIVE}
+  ${LIST_ITEM_CONTENTS_BASE_CSS}
 `;
 
 const propTypes = {

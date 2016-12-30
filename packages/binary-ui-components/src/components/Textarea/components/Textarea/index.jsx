@@ -4,16 +4,13 @@ import React from 'react';
 import ListItemTextareaWrapper from '../ListItemTextareaWrapper';
 import TextareaInput from '../TextareaInput/index';
 import ActionListItemIcon from '../../../ActionListItemIcon';
-import { isEmpty } from '../../../../utils/string';
 
 const propTypes = {
-  getIsValid: React.PropTypes.func,
-  id: React.PropTypes.any,
   isMoreButton: React.PropTypes.bool.isRequired,
-  isRequired: React.PropTypes.bool,
-  isSubmitted: React.PropTypes.bool,
-  style: React.PropTypes.object,
+  isValid: React.PropTypes.bool,
   value: React.PropTypes.string,
+  onBlur: React.PropTypes.func,
+  onFocus: React.PropTypes.func,
   onTextChange: React.PropTypes.func.isRequired,
   onMoreClick: React.PropTypes.func,
 };
@@ -21,7 +18,7 @@ const propTypes = {
 const defaultProps = {
   value: '',
   isMoreButton: false,
-  isSubmitted: false,
+  isValid: true,
 };
 
 export default class Textarea extends React.Component {
@@ -30,30 +27,22 @@ export default class Textarea extends React.Component {
     super(props);
     this.state = {
       isActive: false,
-      isValid: true,
     };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const { isSubmitted } = this.props;
-    if (isSubmitted !== nextProps.isSubmitted && nextProps.isSubmitted === true) {
-      this.onSubmit();
-    }
   }
 
   @autobind
   onTextChange(e) {
-    const { id, onTextChange } = this.props;
+    const { onTextChange } = this.props;
     if (onTextChange) {
-      onTextChange(id, e.target.value);
+      onTextChange(e.target.value);
     }
   }
 
   @autobind
   onMoreClick() {
-    const { id, onMoreClick } = this.props;
+    const { onMoreClick } = this.props;
     if (onMoreClick) {
-      onMoreClick(id);
+      onMoreClick();
     }
   }
 
@@ -67,44 +56,22 @@ export default class Textarea extends React.Component {
     });
   }
 
-  onSubmit() {
-    this.setState({
-      isValid: this.isValid(),
-    });
-  }
-
-  isRequiredValid() {
-    const { isRequired, value } = this.props;
-    return isRequired && isEmpty(value);
-  }
-
-  isValid() {
-    if (!this.isRequiredValid()) {
-      return false;
-    }
-    const { getIsValid } = this.props;
-    if (getIsValid) {
-      return getIsValid();
-    }
-    return true;
-  }
-
   render() {
     const {
       isMoreButton,
-      isRequired,
-      isSubmitted,
-      onMoreClick,
-      onTextChange,
+      isValid,
+      onBlur,
+      onFocus,
       ...props,
     } = this.props;
-    const { isActive, isValid } = this.state;
+    const { isActive } = this.state;
     return (
       <ListItemTextareaWrapper isTypingHighlight={isActive} isValid={isValid} >
         <TextareaInput
-          {...props}
           onChange={this.onTextChange}
-          onSetActiveStatus={this.onSetActiveStatus}
+          onBlur={(e) => { this.onSetActiveStatus(false); if (onBlur) { onBlur(e); } }}
+          onFocus={(e) => { this.onSetActiveStatus(true); if (onFocus) { onFocus(e); } }}
+          {...props}
         />
         {isMoreButton && (
           <ActionListItemIcon onClick={this.onMoreClick} IconComponent={CardsIconMore} />

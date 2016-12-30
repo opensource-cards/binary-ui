@@ -4,7 +4,6 @@ import PhotoContent from '../../components-styled/PhotoContent';
 import PhotoCheckmark from '../../components-styled/PhotoCheckmark';
 
 const propTypes = {
-  id: React.PropTypes.string.isRequired,
   photoFit: React.PropTypes.string.isRequired,
   selected: React.PropTypes.bool.isRequired,
   url: React.PropTypes.string.isRequired,
@@ -17,9 +16,9 @@ export default class Photo extends React.Component {
 
   @autobind
   onPhotoClick() {
-    const { id, onPhotoClick } = this.props;
+    const { onPhotoClick } = this.props;
     if (onPhotoClick) {
-      onPhotoClick(id);
+      onPhotoClick();
     }
   }
 

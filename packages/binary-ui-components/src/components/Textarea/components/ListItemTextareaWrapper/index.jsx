@@ -1,5 +1,6 @@
 import React from 'react';
 import ListItemTextareaWrapperWrapper from '../../components-styled/ListItemTextareaWrapperWrapper';
+import { getHighlightEditStyle } from '../../../../utils/styles-api';
 
 const propTypes = {
   children: React.PropTypes.node,
@@ -17,7 +18,13 @@ const ListItemTextareaWrapper = ({
   isTypingHighlight,
   isValid,
 }) => (
-  <ListItemTextareaWrapperWrapper isTypingHighlight={isTypingHighlight} isValid={isValid} >
+  <ListItemTextareaWrapperWrapper
+    style={getHighlightEditStyle(
+      true,
+      isValid,
+      isTypingHighlight
+    )}
+  >
     {children}
   </ListItemTextareaWrapperWrapper>
 );

@@ -127,7 +127,7 @@ storiesOf('binary-ui-icons with styles', module)
     <CardsIconAddStyled color={COLOR} size={SIZE} />
   ))
   .add('styled events', () => (
-    <CardsIconAddStyled color={COLOR} size={SIZE} onMouseDown={() => { console.log('onMouseDown'); }} />
+    <CardsIconAddStyled color={COLOR} size={SIZE} onMouseDown={action()} />
   ));
 
 storiesOf('binary-ui-icons main', module)
@@ -477,10 +477,10 @@ storiesOf('binary-ui-components  list items', module)
       <StatusBar hidden />
       <ListItem>
         <ListItemNameText
-          IconComponent={CardsIconArrowDown}
           isEdit
           isFull
           onClick={action()}
+          IconComponent={CardsIconArrowDown}
         >
           list item name text
         </ListItemNameText>
@@ -492,9 +492,9 @@ storiesOf('binary-ui-components  list items', module)
       <StatusBar hidden />
       <ListItem>
         <ListItemNameText
-          IconComponent={CardsIconArrowDown}
           isEdit
           onClick={action()}
+          IconComponent={CardsIconArrowDown}
         >
           Button Label
         </ListItemNameText>
@@ -509,10 +509,10 @@ storiesOf('binary-ui-components  list items', module)
       </ListItemNameText>
       <TextField
         isMoreButton
-        isRequired
-        value="000"
-        type={TextFieldTypes.NUMBER}
+        isValid
         mask="####"
+        type={TextFieldTypes.NUMBER}
+        value="000"
         onRef={action()}
         onTextChange={action()}
         onMoreClick={action()}
@@ -526,12 +526,26 @@ storiesOf('binary-ui-components  list items', module)
       </ListItemNameText>
       <TextField
         isMoreButton
-        value="000"
-        type={TextFieldTypes.PHONE_NUMBER}
         mask="## #### ####"
+        type={TextFieldTypes.PHONE_NUMBER}
+        value="000"
         onRef={action()}
         onTextChange={action()}
         onMoreClick={action()}
+      />
+    </ListItem>
+  ))
+  .add('with text (!isValid)', () => (
+    <ListItem>
+      <ListItemNameText>
+        ListItemContentText
+      </ListItemNameText>
+      <TextField
+        isMoreButton
+        isValid={false}
+        placeholder="Placeholder"
+        value=""
+        onTextChange={action()}
       />
     </ListItem>
   ))
@@ -580,7 +594,21 @@ storiesOf('binary-ui-components  list items', module)
       <StatusBar hidden />
       <Textarea
         isMoreButton
-        placeholder={'Type here'}
+        placeholder="Type here"
+        value="000"
+        onTextChange={action()}
+        onMoreClick={action()}
+      />
+    </View>
+  ))
+  .add('textarea required', () => (
+    <View>
+      <StatusBar hidden />
+      <Textarea
+        isMoreButton
+        isValid={false}
+        placeholder="Type here"
+        value=""
         onTextChange={action()}
         onMoreClick={action()}
       />
@@ -588,7 +616,7 @@ storiesOf('binary-ui-components  list items', module)
   ))
   .add('photo selector', () => (
     <ListItemPhotoWrapper
-      isSelectedable
+      isSelectable
       limit={3}
       noImageUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
       uploadedPhotos={[{
@@ -609,24 +637,9 @@ storiesOf('binary-ui-components  list items', module)
         ListItemContentText
       </ListItemNameText>
       <ListItemContentText
-        id="ListItemContentText Id"
         isMoreButton
         onMoreClick={action()}
         text="ListItemContentText text"
-      />
-    </ListItem>
-  ))
-  .add('editing', () => (
-    <ListItem>
-      <ListItemNameText>
-        ListItemContentText
-      </ListItemNameText>
-      <TextField
-        id="ListItemContentText Id"
-        isMoreButton
-        placeholder="Placeholder"
-        text="ListItemContentText text"
-        value="Name"
       />
     </ListItem>
   ));
@@ -636,7 +649,6 @@ storiesOf('binary-ui-components textview', module)
     <View>
       <StatusBar hidden />
         <Textview
-        id="text-id"
         isMoreButton
         onMoreClick={action()}
       >

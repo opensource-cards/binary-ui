@@ -12,15 +12,13 @@ const defaultProps = {
   type: INFO,
 };
 
-const Alert = ({ text, type }) => {
-  return (
-    <AlertWrapper type={type} >
-      <AlertContent>
-        {text}
-      </AlertContent>
-    </AlertWrapper>
-  );
-};
+const Alert = ({ text, type }) => (
+  <AlertWrapper type={type} >
+    <AlertContent>
+      {text}
+    </AlertContent>
+  </AlertWrapper>
+);
 
 Alert.propTypes = propTypes;
 Alert.defaultProps = defaultProps;

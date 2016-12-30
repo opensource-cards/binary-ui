@@ -1,5 +1,6 @@
 import React from 'react';
 import ListItemContentsWrapper from '../components-styled/ListItemContentsWrapper';
+import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   borderColor: React.PropTypes.string,
@@ -28,11 +29,13 @@ const ListItemContents = ({
   onClick,
 }) => (
   <ListItemContentsWrapper
-    borderColor={borderColor}
-    isEdit={isEdit}
     isTapHighlight={isTapHighlight}
-    isTypingHighlight={isTypingHighlight}
-    isValid={isValid}
+    style={getHighlightEditStyle(
+      isEdit,
+      isValid,
+      isTypingHighlight,
+      borderColor
+    )}
     onClick={onClick}
   >
     {children}

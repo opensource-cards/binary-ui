@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import ActionableIcon from '../../ActionableIcon';
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionButtonStyled from '../components-styled/ActionButtonStyled';

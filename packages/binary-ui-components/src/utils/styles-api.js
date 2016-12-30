@@ -1,6 +1,5 @@
-import { EDIT_STYLE, TYPING_HIGHLIGHT_STYLE, TYPING_HIGHLIGHT_INVALID_STYLE } from './styles';
+import { getEditStyle, TYPING_HIGHLIGHT_STYLE, TYPING_HIGHLIGHT_INVALID_STYLE } from './styles';
 
-// TODO: change for RN an web
 export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, borderColor) {
   if (!isEdit) {
     return undefined;
@@ -15,32 +14,9 @@ export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, border
   }
   // only editable style
   if (borderColor) {
-    return Object.assign({}, EDIT_STYLE, {
-      borderBottomColor: borderColor,
-    });
+    return getEditStyle(borderColor);
   }
-  return EDIT_STYLE;
-}
-
-// TODO: remove
-export function getActionStyle(
-  style,
-  styleActiveExt,
-  styleDisabledExt,
-  styleHoverExt,
-  isActive,
-  isDisabled,
-  isHover
-) {
-  if (isDisabled) {
-    return Object.assign({}, style, styleDisabledExt);
-  }
-  return Object.assign(
-    {},
-    style,
-    isHover ? styleHoverExt : undefined,
-    isActive ? styleActiveExt : undefined
-  );
+  return getEditStyle();
 }
 
 export function getActionColorExt(

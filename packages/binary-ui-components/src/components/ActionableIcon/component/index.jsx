@@ -1,7 +1,7 @@
-import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
+import { CARDS_BLUE_COLOR, CARDS_DISABLED_COLOR } from 'binary-ui-styles';
 import React from 'react';
 import IconStyledWrapper from '../components-styled/ActionIconWrapper';
-import { CARDS_ICON_STYLE_ACTIVE_EXT_OBJ } from '../../../utils/styles';
+import { CARDS_ICON_ACTIVE_STYLE } from '../../../utils/styles.universal';
 import { getActionColorExt } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -35,13 +35,13 @@ const ActionableIcon = ({
     color,
     CARDS_BLUE_COLOR,
     CARDS_BLUE_COLOR,
-    '#808080',
+    CARDS_DISABLED_COLOR,
     isActive,
     isHover,
     isDisabled
   );
   const styleAction = isActive
-    ? Object.assign({}, style, CARDS_ICON_STYLE_ACTIVE_EXT_OBJ)
+    ? Object.assign({}, style, CARDS_ICON_ACTIVE_STYLE)
     : style;
   return (
     <IconStyledWrapper

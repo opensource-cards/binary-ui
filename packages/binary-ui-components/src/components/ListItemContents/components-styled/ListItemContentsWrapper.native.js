@@ -1,25 +1,10 @@
 import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
-import styled from 'styled-components/native';
-import { NO_EDIT_STYLE_NATIVE } from '../../../utils/styles';
-import { getHighlightEditStyle } from '../../../utils/styles-api';
 import React from 'react';
-
-/*
-const LIST_ITEM_IS_TAP_HIGHLIGHT = `
-  &:active {
-    ${HIGHTLIGHT_STYLE_EXT}
-  }
-`;
-*/
+import styled from 'styled-components/native';
+import { NO_EDIT_CSS } from '../../../utils/styles';
 
 const StyledView = styled.View`
-  ${NO_EDIT_STYLE_NATIVE}
-  ${props => getHighlightEditStyle(
-    props.isEdit,
-    props.isValid,
-    props.isTypingHighlight,
-    props.borderColor
-  )}
+  ${NO_EDIT_CSS}
   align-items: center;
   height: ${LIST_ITEM_HEIGHT};
   flex: 2;

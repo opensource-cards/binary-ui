@@ -1,24 +1,26 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import {
-  CARDS_ICON_STYLE_NATIVE,
-  CARDS_ICON_STYLE_ACTIVE_EXT_EXT,
-  CARDS_ICON_STYLE_HOVER_EXT_EXT,
-  CARDS_ICON_STYLE_DISABLED_EXT_EXT,
+  CARDS_ICON_CSS,
 } from '../../../utils/styles';
+import {
+  CARDS_ICON_ACTIVE_CSS,
+  CARDS_ICON_HOVER_CSS,
+  CARDS_ICON_DISABLED_CSS,
+} from '../../../utils/styles.universal';
 
 // NOTE: does not work because of 'styled-components/native' bug
 const ActionButtonStyled = styled.Text`
-  ${CARDS_ICON_STYLE_NATIVE}
+  ${CARDS_ICON_CSS}
   ${props => {
     if (props.isDisabled) {
-      return CARDS_ICON_STYLE_DISABLED_EXT_EXT;
+      return CARDS_ICON_DISABLED_CSS;
     }
     if (props.isActive) {
-      return CARDS_ICON_STYLE_ACTIVE_EXT_EXT;
+      return CARDS_ICON_ACTIVE_CSS;
     }
     if (props.isHover) {
-      return CARDS_ICON_STYLE_HOVER_EXT_EXT;
+      return CARDS_ICON_HOVER_CSS;
     }
     return '';
   }

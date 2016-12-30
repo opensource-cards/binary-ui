@@ -1,5 +1,4 @@
 import autobind from 'autobind-decorator';
-// TODO: make for native
 import uuid from 'react-native-uuid';
 import React from 'react';
 import Photo from '../Photo';
@@ -7,7 +6,7 @@ import PhotoUpload from '../PhotoUpload';
 import ListItemPhotoWrapperWrapper from '../../components-styled/ListItemPhotoWrapperWrapper';
 
 const propTypes = {
-  isSelectedable: React.PropTypes.bool,
+  isSelectable: React.PropTypes.bool,
   limit: React.PropTypes.number,
   noImageUrl: React.PropTypes.string.isRequired,
   photoFit: React.PropTypes.string,
@@ -19,7 +18,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isSelectedable: true,
+  isSelectable: true,
   photoFit: 'contain',
   uploadedPhotos: [],
 };
@@ -58,22 +57,21 @@ export default class ListItemPhotoWrapper extends React.Component {
 
   renderNodes() {
     const {
-      isSelectedable,
+      isSelectable,
       photoFit,
       selectedPhotoGuid,
       uploadedPhotos,
       onPhotoClick,
     } = this.props;
     return uploadedPhotos.map((photo) => {
-      const selected = isSelectedable && photo.guid === selectedPhotoGuid;
+      const selected = isSelectable && photo.guid === selectedPhotoGuid;
       return (
         <Photo
           key={photo.guid}
-          id={photo.guid}
-          url={photo.url}
           photoFit={photoFit}
           selected={selected}
-          onPhotoClick={onPhotoClick}
+          url={photo.url}
+          onPhotoClick={() => onPhotoClick(photo.guid)}
         />
       );
     });
