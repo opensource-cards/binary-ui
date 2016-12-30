@@ -17,26 +17,22 @@ import CardsIconCardsAlt from './components-icons/CardsIconCardsAlt';
 import CardsIconCheck from './components-icons/CardsIconCheck';
 import CardsIconCheckAlt from './components-icons/CardsIconCheckAlt';
 import CardsIconCopy from './components-icons/CardsIconCopy';
-import CardsIconCreateCard from './components-icons/CardsIconCreateCard';
 import CardsIconDelete from './components-icons/CardsIconDelete';
 import CardsIconDeleteAlt from './components-icons/CardsIconDeleteAlt';
 import CardsIconDeleted from './components-icons/CardsIconDeleted';
 import CardsIconDeletedAlt from './components-icons/CardsIconDeletedAlt';
+import CardsIconDesigner from './components-icons/CardsIconDesigner';
 import CardsIconDone from './components-icons/CardsIconDone';
 import CardsIconFacebook from './components-icons/CardsIconFacebook';
-import CardsIconFacebookAlt from './components-icons/CardsIconFacebookAlt';
 import CardsIconFacetime from './components-icons/CardsIconFacetime';
 import CardsIconFacetimeAlt from './components-icons/CardsIconFacetimeAlt';
 import CardsIconFavorites from './components-icons/CardsIconFavorites';
 import CardsIconFavoritesAlt from './components-icons/CardsIconFavoritesAlt';
 import CardsIconGoogle from './components-icons/CardsIconGoogle';
-import CardsIconIncoming from './components-icons/CardsIconIncoming';
-import CardsIconIncomingAlt from './components-icons/CardsIconIncomingAlt';
 import CardsIconInfo from './components-icons/CardsIconInfo';
 import CardsIconInfoAlt from './components-icons/CardsIconInfoAlt';
 import CardsIconInstagram from './components-icons/CardsIconInstagram';
 import CardsIconInstagramAlt from './components-icons/CardsIconInstagramAlt';
-import CardsIconIPhone from './components-icons/CardsIconIPhone';
 import CardsIconKeypad from './components-icons/CardsIconKeypad';
 import CardsIconKeypadAlt from './components-icons/CardsIconKeypadAlt';
 import CardsIconLinkedin from './components-icons/CardsIconLinkedin';
@@ -58,6 +54,7 @@ import CardsIconOpen from './components-icons/CardsIconOpen';
 import CardsIconRedhat from './components-icons/CardsIconRedhat';
 import CardsIconSave from './components-icons/CardsIconSave';
 import CardsIconScan from './components-icons/CardsIconScan';
+import CardsIconScanAlt from './components-icons/CardsIconScanAlt';
 import CardsIconSearch from './components-icons/CardsIconSearch';
 import CardsIconSettings from './components-icons/CardsIconSettings';
 import CardsIconSettingsAlt from './components-icons/CardsIconSettingsAlt';
@@ -73,7 +70,6 @@ import CardsIconText from './components-icons/CardsIconText';
 import CardsIconTextAlt from './components-icons/CardsIconTextAlt';
 import CardsIconTranslation from './components-icons/CardsIconTranslation';
 import CardsIconTwitter from './components-icons/CardsIconTwitter';
-import CardsIconTwitterAlt from './components-icons/CardsIconTwitterAlt';
 import CardsIconUbuntu from './components-icons/CardsIconUbuntu';
 import CardsIconUncheck from './components-icons/CardsIconUncheck';
 import CardsIconUser from './components-icons/CardsIconUser';
@@ -101,26 +97,22 @@ export {
   CardsIconCheck,
   CardsIconCheckAlt,
   CardsIconCopy,
-  CardsIconCreateCard,
   CardsIconDelete,
   CardsIconDeleteAlt,
   CardsIconDeleted,
   CardsIconDeletedAlt,
+  CardsIconDesigner,
   CardsIconDone,
   CardsIconFacebook,
-  CardsIconFacebookAlt,
   CardsIconFacetime,
   CardsIconFacetimeAlt,
   CardsIconFavorites,
   CardsIconFavoritesAlt,
   CardsIconGoogle,
-  CardsIconIncoming,
-  CardsIconIncomingAlt,
   CardsIconInfo,
   CardsIconInfoAlt,
   CardsIconInstagram,
   CardsIconInstagramAlt,
-  CardsIconIPhone,
   CardsIconKeypad,
   CardsIconKeypadAlt,
   CardsIconLinkedin,
@@ -142,6 +134,7 @@ export {
   CardsIconRedhat,
   CardsIconSave,
   CardsIconScan,
+  CardsIconScanAlt,
   CardsIconSearch,
   CardsIconSettings,
   CardsIconSettingsAlt,
@@ -157,7 +150,6 @@ export {
   CardsIconTextAlt,
   CardsIconTranslation,
   CardsIconTwitter,
-  CardsIconTwitterAlt,
   CardsIconUbuntu,
   CardsIconUncheck,
   CardsIconUser,
@@ -186,26 +178,22 @@ export default {
   CardsIconCheck,
   CardsIconCheckAlt,
   CardsIconCopy,
-  CardsIconCreateCard,
   CardsIconDelete,
   CardsIconDeleteAlt,
   CardsIconDeleted,
   CardsIconDeletedAlt,
+  CardsIconDesigner,
   CardsIconDone,
   CardsIconFacebook,
-  CardsIconFacebookAlt,
   CardsIconFacetime,
   CardsIconFacetimeAlt,
   CardsIconFavorites,
   CardsIconFavoritesAlt,
   CardsIconGoogle,
-  CardsIconIncoming,
-  CardsIconIncomingAlt,
   CardsIconInfo,
   CardsIconInfoAlt,
   CardsIconInstagram,
   CardsIconInstagramAlt,
-  CardsIconIPhone,
   CardsIconKeypad,
   CardsIconKeypadAlt,
   CardsIconLinkedin,
@@ -227,6 +215,7 @@ export default {
   CardsIconRedhat,
   CardsIconSave,
   CardsIconScan,
+  CardsIconScanAlt,
   CardsIconSearch,
   CardsIconSettings,
   CardsIconSettingsAlt,
@@ -242,7 +231,6 @@ export default {
   CardsIconTextAlt,
   CardsIconTranslation,
   CardsIconTwitter,
-  CardsIconTwitterAlt,
   CardsIconUbuntu,
   CardsIconUncheck,
   CardsIconUser,

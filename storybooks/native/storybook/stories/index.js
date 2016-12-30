@@ -20,26 +20,22 @@ import {
   CardsIconCheck,
   CardsIconCheckAlt,
   CardsIconCopy,
-  CardsIconCreateCard,
   CardsIconDelete,
   CardsIconDeleteAlt,
   CardsIconDeleted,
   CardsIconDeletedAlt,
   CardsIconDone,
+  CardsIconDesigner,
   CardsIconFacebook,
-  CardsIconFacebookAlt,
   CardsIconFacetime,
   CardsIconFacetimeAlt,
   CardsIconFavorites,
   CardsIconFavoritesAlt,
   CardsIconGoogle,
-  CardsIconIncoming,
-  CardsIconIncomingAlt,
   CardsIconInfo,
   CardsIconInfoAlt,
   CardsIconInstagram,
   CardsIconInstagramAlt,
-  CardsIconIPhone,
   CardsIconKeypad,
   CardsIconKeypadAlt,
   CardsIconLinkedin,
@@ -61,6 +57,7 @@ import {
   CardsIconRedhat,
   CardsIconSave,
   CardsIconScan,
+  CardsIconScanAlt,
   CardsIconSearch,
   CardsIconSettings,
   CardsIconSettingsAlt,
@@ -76,7 +73,6 @@ import {
   CardsIconTextAlt,
   CardsIconTranslation,
   CardsIconTwitter,
-  CardsIconTwitterAlt,
   CardsIconUbuntu,
   CardsIconUncheck,
   CardsIconUser,
@@ -176,9 +172,6 @@ storiesOf('binary-ui-icons main', module)
   .add('CardsIconCopy', () => (
     <CardsIconCopy color={COLOR} size={SIZE} />
   ))
-  .add('CardsIconCreateCard', () => (
-    <CardsIconCreateCard color={COLOR} size={SIZE} />
-  ))
   .add('CardsIconDelete', () => (
     <CardsIconDelete color={COLOR} size={SIZE} />
   ))
@@ -199,12 +192,6 @@ storiesOf('binary-ui-icons main', module)
   ))
   .add('CardsIconFavoritesAlt', () => (
     <CardsIconFavoritesAlt color={COLOR} size={SIZE} />
-  ))
-  .add('CardsIconIncoming', () => (
-    <CardsIconIncoming color={COLOR} size={SIZE} />
-  ))
-  .add('CardsIconIncomingAlt', () => (
-    <CardsIconIncomingAlt color={COLOR} size={SIZE} />
   ))
   .add('CardsIconInfo', () => (
     <CardsIconInfo color={COLOR} size={SIZE} />
@@ -258,6 +245,9 @@ storiesOf('binary-ui-icons main', module)
     <CardsIconSave color={COLOR} size={SIZE} />
   ))
   .add('CardsIconScan', () => (
+    <CardsIconScan color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconScanAlt', () => (
     <CardsIconScan color={COLOR} size={SIZE} />
   ))
   .add('CardsIconSearch', () => (
@@ -322,11 +312,11 @@ storiesOf('binary-ui-icons companies & social', module)
   .add('CardsIconCardsAlt', () => (
     <CardsIconCardsAlt color={COLOR} size={SIZE} />
   ))
+  .add('CardsIconDesigner', () => (
+    <CardsIconDesigner color={COLOR} size={SIZE} />
+  ))
   .add('CardsIconFacebook', () => (
     <CardsIconFacebook color={COLOR} size={SIZE} />
-  ))
-  .add('CardsIconFacebookAlt', () => (
-    <CardsIconFacebookAlt color={COLOR} size={SIZE} />
   ))
   .add('CardsIconFacetime', () => (
     <CardsIconFacetime color={COLOR} size={SIZE} />
@@ -342,9 +332,6 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .add('CardsIconInstagramAlt', () => (
     <CardsIconInstagramAlt color={COLOR} size={SIZE} />
-  ))
-  .add('CardsIconIPhone', () => (
-    <CardsIconIPhone color={COLOR} size={SIZE} />
   ))
   .add('CardsIconLinkedin', () => (
     <CardsIconLinkedin color={COLOR} size={SIZE} />
@@ -366,9 +353,6 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .add('CardsIconTwitter', () => (
     <CardsIconTwitter color={COLOR} size={SIZE} />
-  ))
-  .add('CardsIconTwitterAlt', () => (
-    <CardsIconTwitterAlt color={COLOR} size={SIZE} />
   ))
   .add('CardsIconUbuntu', () => (
     <CardsIconUbuntu color={COLOR} size={SIZE} />
