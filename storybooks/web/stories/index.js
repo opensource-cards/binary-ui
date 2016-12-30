@@ -101,13 +101,13 @@ import {
   ListItemNameText,
   ListItemPhotoWrapper,
   Section,
-  SelectOptionModel,
+  selectOptionModel,
   Select,
   Switch,
   Textarea,
   TextField,
   TextFieldTypes,
-  Textview,
+  TextView,
 } from 'binary-ui-components';
 import uuid from 'node-uuid';
 import { getImg } from './resources/fake-img';
@@ -633,8 +633,8 @@ storiesOf('binary-ui-components list items', module)
       <Select
         selected="uk"
         items={[
-          new SelectOptionModel('ko', 'ko', 'Korea (+82)'),
-          new SelectOptionModel('uk', 'uk', 'Ukraine (+38)'),
+          selectOptionModel('ko', 'ko', 'Korea (+82)'),
+          selectOptionModel('uk', 'uk', 'Ukraine (+38)'),
         ]}
         onChange={action()}
       />
@@ -693,7 +693,7 @@ storiesOf('binary-ui-components list items', module)
 
 storiesOf('binary-ui-components textview', module)
   .add('all', () => (
-    <Textview
+    <TextView
       isMoreButton
       onMoreClick={action()}
     >
@@ -707,7 +707,7 @@ storiesOf('binary-ui-components textview', module)
       >
         Link
       </ActionButton>
-    </Textview>
+    </TextView>
   ));
 
 storiesOf('binary-ui-components checkbox', module)

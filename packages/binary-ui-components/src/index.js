@@ -12,11 +12,11 @@ import ListItemContentText from './components/ListItemContentText';
 import ListItemNameText from './components/ListItemNameText';
 import ListItemPhotoWrapper from './components/ListItemPhotoWrapper';
 import Section from './components/Section';
-import Select, { SelectOptionModel } from './components/Select';
+import Select, { selectOptionModel } from './components/Select';
 import Switch from './components/Switch';
-import Textview from './components/Textview';
 import Textarea from './components/Textarea';
 import TextField, { TextFieldTypes } from './components/TextField';
+import TextView from './components/TextView';
 
 export {
   ActionLink,
@@ -37,10 +37,10 @@ export {
   ListItemPhotoWrapper,
   Section,
   Select,
-  SelectOptionModel,
+  selectOptionModel,
   Switch,
   Textarea,
   TextField,
   TextFieldTypes,
-  Textview,
+  TextView,
 };

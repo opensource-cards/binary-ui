@@ -102,13 +102,12 @@ import {
   ListItemNameText,
   ListItemPhotoWrapper,
   Section,
-  SelectOptionModel,
   Select,
   Switch,
   Textarea,
   TextField,
   TextFieldTypes,
-  Textview,
+  TextView,
 } from 'binary-ui-components';
 
 const COLOR = '#0F9BE0';
@@ -644,7 +643,7 @@ storiesOf('binary-ui-components textview', module)
   .add('all', () => (
     <View>
       <StatusBar hidden />
-        <Textview
+      <TextView
         isMoreButton
         onMoreClick={action()}
       >
@@ -657,7 +656,7 @@ storiesOf('binary-ui-components textview', module)
         >
           Link
         </ActionButton>
-      </Textview>
+      </TextView>
     </View>
   ));
 
