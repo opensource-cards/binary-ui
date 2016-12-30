@@ -1,7 +1,7 @@
 import { CARDS_BLUE_COLOR, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import React from 'react';
 import styled from 'styled-components';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
 const SWITCH_BACKGROUND_STYLE = `
   border-radius: ${LIST_ITEM_HALF_HEIGHT}px;

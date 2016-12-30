@@ -1,7 +1,7 @@
 import React from 'react';
 import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
 import styled from 'styled-components';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
 const SWITCH_HANDLE_STYLE = `
   background-color: white;

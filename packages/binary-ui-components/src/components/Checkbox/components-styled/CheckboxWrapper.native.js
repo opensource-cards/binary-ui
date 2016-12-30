@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles';
 import { TouchableOpacity } from 'react-native';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
 const CHECKBOX_WRAPPER_STYLE = `
   border-radius: ${LIST_ITEM_HALF_HEIGHT};

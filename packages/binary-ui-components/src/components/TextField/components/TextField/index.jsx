@@ -8,26 +8,23 @@ import TextFieldTypes from '../../constants/text-field-component-types';
 import { isNumberMaskValid, validatePhone } from '../../utils/validation';
 import ListItemContents from '../../../ListItemContents';
 import ActionListItemIcon from '../../../ActionListItemIcon';
-import { isEmpty } from '../../../../utils/string';
 
 const propTypes = {
   borderColor: React.PropTypes.string,
-  getIsValid: React.PropTypes.func,
-  id: React.PropTypes.any,
   isMoreButton: React.PropTypes.bool.isRequired,
-  isRequired: React.PropTypes.bool,
-  isSubmitted: React.PropTypes.bool,
+  isValid: React.PropTypes.bool,
   mask: React.PropTypes.string,
-  style: React.PropTypes.object,
   type: React.PropTypes.any,
   value: React.PropTypes.string,
+  onBlur: React.PropTypes.func,
+  onFocus: React.PropTypes.func,
   onMoreClick: React.PropTypes.func,
   onTextChange: React.PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   isMoreButton: false,
-  isSubmitted: false,
+  isValid: true,
   type: TextFieldTypes.ANY,
   value: '',
 };
@@ -38,41 +35,26 @@ export default class TextField extends React.Component {
     super(props);
     this.state = {
       isActive: false,
-      isValid: true,
     };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const { isSubmitted } = this.props;
-    if (isSubmitted !== nextProps.isSubmitted && nextProps.isSubmitted === true) {
-      this.onSubmit();
-    }
   }
 
   @autobind
   onChange(e) {
-    const { id, onTextChange, mask, type } = this.props;
-    const { isValid } = this.state;
-    // reset validity
-    if (isValid === false) {
-      this.setState({
-        isValid: true,
-      });
-    }
+    const { onTextChange, mask, type } = this.props;
     if (onTextChange) {
       const unmaskedValue = removeMask(e.target.value, mask);
       const finalValue = type === TextFieldTypes.PHONE_NUMBER
         ? validatePhone(unmaskedValue)
         : unmaskedValue;
-      onTextChange(id, finalValue);
+      onTextChange(finalValue);
     }
   }
 
   @autobind
   onMoreClick() {
-    const { id, onMoreClick } = this.props;
+    const { onMoreClick } = this.props;
     if (onMoreClick) {
-      onMoreClick(id);
+      onMoreClick();
     }
   }
 
@@ -83,12 +65,6 @@ export default class TextField extends React.Component {
     }
     this.setState({
       isActive,
-    });
-  }
-
-  onSubmit() {
-    this.setState({
-      isValid: this.isValid(),
     });
   }
 
@@ -131,39 +107,19 @@ export default class TextField extends React.Component {
     }
   }
 
-  isRequiredValid() {
-    const { isRequired, value } = this.props;
-    return isRequired && isEmpty(value);
-  }
-
-  isValid() {
-    if (!this.isRequiredValid()) {
-      return false;
-    }
-    const { getIsValid } = this.props;
-    if (getIsValid) {
-      return getIsValid();
-    }
-    return true;
-  }
-
   render() {
     const {
       borderColor,
-      getIsValid,
       isMoreButton,
-      isRequired,
-      isSubmitted,
+      isValid,
       mask,
       type,
       value,
-      onMoreClick,
-      onTextChange,
+      onBlur,
+      onFocus,
       ...props,
     } = this.props;
-    const { isActive, isValid } = this.state;
-    const inputType = this.getTypeHtml(type);
-    const formattedValue = this.getFormattedValue(type, mask, value);
+    const { isActive } = this.state;
     return (
       <ListItemContents
         borderColor={borderColor}
@@ -174,11 +130,12 @@ export default class TextField extends React.Component {
           <ActionListItemIcon onClick={this.onMoreClick} IconComponent={CardsIconMore} />
         )}
         <TextFieldInput
-          {...props}
-          type={inputType}
-          value={formattedValue}
+          type={this.getTypeHtml(type)}
+          value={this.getFormattedValue(type, mask, value)}
           onChange={this.onChange}
-          onSetActiveStatus={this.onSetActiveStatus}
+          onBlur={(e) => { this.onSetActiveStatus(false); if (onBlur) { onBlur(e); } }}
+          onFocus={(e) => { this.onSetActiveStatus(true); if (onFocus) { onFocus(e); } }}
+          {...props}
         />
       </ListItemContents>
     );

@@ -1,11 +1,10 @@
 import React from 'react';
-import { actionAreaEditorHOC } from 'react-action-hoc';
 import styled from 'styled-components';
-import { CARDS_INPUT_RESET_STYLE_WEB, FIELD_VALUE_FONT_STYLE_WEB } from '../../../../utils/styles';
+import { CARDS_INPUT_RESET_CSS, FIELD_VALUE_FONT_CSS } from '../../../../utils/styles';
 
 const TextInputStyled = styled.textarea`
-  ${CARDS_INPUT_RESET_STYLE_WEB}
-  ${FIELD_VALUE_FONT_STYLE_WEB}
+  ${CARDS_INPUT_RESET_CSS}
+  ${FIELD_VALUE_FONT_CSS}
   padding: 10px;
   overflow: hidden;
   min-height: 120px;
@@ -15,31 +14,27 @@ const TextInputStyled = styled.textarea`
   wrap: soft;
 `;
 
-const TextareaInput = actionAreaEditorHOC(
-  class TextareaInputRef extends React.Component {
+export default class TextareaInput extends React.Component {
 
-    constructor(props) {
-      super(props);
-      this.onRef = this.onRef.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.onRef = this.onRef.bind(this);
+  }
 
-    onRef(ref) {
-      const { onRef } = this.props;
-      if (onRef) {
-        onRef(ref);
-      }
-    }
-
-    render() {
-      const { onRef, ...props } = this.props;
-      return (
-        <TextInputStyled
-          innerRef={this.onRef}
-          {...props}
-        />
-      );
+  onRef(ref) {
+    const { onRef } = this.props;
+    if (onRef) {
+      onRef(ref);
     }
   }
-);
 
-export default TextareaInput;
+  render() {
+    const { onRef, ...props } = this.props;
+    return (
+      <TextInputStyled
+        innerRef={this.onRef}
+        {...props}
+      />
+    );
+  }
+}

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import {
-  CARDS_INPUT_RESET_STYLE_WEB,
-  LIST_ITEM_CONTENTS_BASE_STYLE_WEB,
+  CARDS_INPUT_RESET_CSS,
+  LIST_ITEM_CONTENTS_BASE_CSS,
 } from '../../../../utils/styles';
 
 export default styled.input`
-  ${CARDS_INPUT_RESET_STYLE_WEB}
-  ${LIST_ITEM_CONTENTS_BASE_STYLE_WEB}
+  ${CARDS_INPUT_RESET_CSS}
+  ${LIST_ITEM_CONTENTS_BASE_CSS}
   overflow: hidden;
   resize: none;
   text-align: left;

@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import {
-  CARDS_BUTTON_STYLE_EXT,
-  CARDS_ICON_STYLE_ACTIVE_PSEUDO,
-  CARDS_ICON_STYLE_HOVER_PSEUDO,
-  CARDS_ICON_STYLE_DISABLED_EXT_EXT,
+  CARDS_BUTTON_CSS,
+  CARDS_ICON_ACTIVE_PSEUDO_CSS,
+  CARDS_ICON_HOVER_PSEUDO_CSS,
 } from '../../../../utils/styles';
+import {
+  CARDS_ICON_DISABLED_CSS,
+} from '../../../../utils/styles.universal';
 
-export const RESET_BUTTON_STYLES = `
+export const RESET_BUTTON_CSS = `
   background: none;
   border: 0;
   box-sizing: content-box;
@@ -18,14 +20,14 @@ export const RESET_BUTTON_STYLES = `
 `;
 
 export default styled.button`
-  ${RESET_BUTTON_STYLES}
-  ${CARDS_BUTTON_STYLE_EXT}
+  ${RESET_BUTTON_CSS}
+  ${CARDS_BUTTON_CSS}
   ${(props) => (
     (props.isDisabled)
-      ? CARDS_ICON_STYLE_DISABLED_EXT_EXT
+      ? CARDS_ICON_DISABLED_CSS
       : `
-        ${CARDS_ICON_STYLE_ACTIVE_PSEUDO}
-        ${CARDS_ICON_STYLE_HOVER_PSEUDO}
+        ${CARDS_ICON_ACTIVE_PSEUDO_CSS}
+        ${CARDS_ICON_HOVER_PSEUDO_CSS}
       `
   )}
 `;

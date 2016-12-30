@@ -1,7 +1,7 @@
+import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
 import React from 'react';
 import styled from 'styled-components';
-import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
 const CHECKBOX_WRAPPER_STYLE = `
   flex-grow: 0;

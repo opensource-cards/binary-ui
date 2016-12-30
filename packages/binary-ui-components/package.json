@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-components",
-  "version": "0.0.1-rc.0",
+  "version": "0.1.0-rc.0",
   "description": "React components for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
@@ -18,20 +18,18 @@
   "main": "lib/index.js",
   "dependencies": {
     "autobind-decorator": "^1.3.3",
-    "binary-ui-icons": "^0.0.2-rc.2",
-    "binary-ui-styles": "^0.0.1-rc.3",
+    "binary-ui-icons": "^0.1.0-rc.0",
+    "binary-ui-styles": "^0.1.0-rc.0",
     "invariant": "^2.2.1",
-    "keycode.js": "^0.0.1",
     "mask-parser": "^0.0.1-rc.3",
-    "node-uuid": "^1.4.7",
-    "react-action-hoc": "^0.0.1-rc.10",
-    "react-native-image-picker": "^0.24.1",
-    "react-native-uuid": "^1.4.8",
     "styled-components": "^1.1.2"
   },
   "peerDependencies": {
+    "node-uuid": "^1.4.7",
     "react": "^15.3.2",
-    "react-art": "^0.15.1"
+    "react-art": "^0.15.1",
+    "react-native-image-picker": "^0.24.1",
+    "react-native-uuid": "^1.4.8"
   },
   "devDependencies": {
     "babel": "^6.3.26",
@@ -50,9 +48,12 @@
     "eslint-plugin-jsx-a11y": "^1.0.2",
     "eslint-plugin-react": "^5.0.1",
     "mocha": "^3.0.2",
+    "node-uuid": "^1.4.7",
     "react": "~15.3.2",
     "react-art": "^0.15.1",
     "react-native": "^0.38.0",
+    "react-native-image-picker": "^0.24.1",
+    "react-native-uuid": "^1.4.8",
     "rimraf": "^2.3.4"
   }
 }

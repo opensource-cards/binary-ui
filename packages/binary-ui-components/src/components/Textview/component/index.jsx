@@ -8,7 +8,6 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
   children: React.PropTypes.any,
-  id: React.PropTypes.any,
   isEdit: React.PropTypes.bool,
   isMoreButton: React.PropTypes.bool,
   onMoreClick: React.PropTypes.func,
@@ -22,9 +21,9 @@ export default class Textview extends React.Component {
 
   @autobind
   onMoreClick() {
-    const { id, onMoreClick } = this.props;
+    const { onMoreClick } = this.props;
     if (onMoreClick) {
-      onMoreClick(id);
+      onMoreClick();
     }
   }
 

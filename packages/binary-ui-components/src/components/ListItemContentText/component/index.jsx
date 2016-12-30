@@ -6,7 +6,6 @@ import ListItemContents from '../../ListItemContents';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
-  id: React.PropTypes.any,
   isMoreButton: React.PropTypes.bool,
   text: React.PropTypes.string.isRequired,
   onMoreClick: React.PropTypes.func,
@@ -20,9 +19,9 @@ export default class ListItemContentText extends React.Component {
 
   @autobind
   onMoreClick() {
-    const { id, onMoreClick } = this.props;
+    const { onMoreClick } = this.props;
     if (onMoreClick) {
-      onMoreClick(id);
+      onMoreClick();
     }
   }
 

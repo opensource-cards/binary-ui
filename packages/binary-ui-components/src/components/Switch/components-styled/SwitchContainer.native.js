@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import React from 'react';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
 const StyledOpacity = styled.TouchableOpacity`
   position: relative;

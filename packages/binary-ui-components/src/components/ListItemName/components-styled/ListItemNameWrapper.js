@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 import {
-  CURSOR_POINTER_STYLE_EXT,
-  NO_EDIT_STYLE_WEB,
-  EDIT_STYLE_WEB,
-  HIGHTLIGHT_STYLE_EXT,
+  CURSOR_POINTER_CSS,
+  NO_EDIT_CSS,
+  EDIT_CSS,
 } from '../../../utils/styles';
+import { HIGHTLIGHT_CSS } from '../../../utils/styles.universal';
 
 const LIST_ITEM_NAME_IS_EDIT = `
-  ${EDIT_STYLE_WEB}
+  ${EDIT_CSS}
   &:active {
-    ${HIGHTLIGHT_STYLE_EXT}
+    ${HIGHTLIGHT_CSS}
   }
 `;
 
 export default styled.div`
-  ${NO_EDIT_STYLE_WEB}
-  ${CURSOR_POINTER_STYLE_EXT}
+  ${NO_EDIT_CSS}
+  ${CURSOR_POINTER_CSS}
   align-items: center;
   display: flex;
   flex-direction: row;

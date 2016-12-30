@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import {
-  CARDS_BUTTON_STYLE_NATIVE,
-  CARDS_ICON_STYLE_ACTIVE_EXT_EXT,
-  CARDS_ICON_STYLE_HOVER_EXT_EXT,
-  CARDS_ICON_STYLE_DISABLED_EXT_EXT,
+  CARDS_BUTTON_CSS,
 } from '../../../../utils/styles';
+import {
+  CARDS_ICON_ACTIVE_CSS,
+  CARDS_ICON_HOVER_CSS,
+  CARDS_ICON_DISABLED_CSS,
+} from '../../../../utils/styles.universal';
 
 export const RESET_BUTTON_STYLES = `
   color: inherit;
@@ -26,12 +28,12 @@ const StyledView = styled.View`
 
 const ActionButtonStyled = styled.TouchableOpacity`
   ${RESET_BUTTON_STYLES}
-  ${CARDS_BUTTON_STYLE_NATIVE}
+  ${CARDS_BUTTON_CSS}
   ${props => (props.isDisabled
-    ? CARDS_ICON_STYLE_DISABLED_EXT_EXT
+    ? CARDS_ICON_DISABLED_CSS
     : `
-      ${CARDS_ICON_STYLE_ACTIVE_EXT_EXT}
-      ${CARDS_ICON_STYLE_HOVER_EXT_EXT}
+      ${CARDS_ICON_ACTIVE_CSS}
+      ${CARDS_ICON_HOVER_CSS}
     `)
   }
 `;

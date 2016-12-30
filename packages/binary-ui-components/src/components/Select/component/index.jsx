@@ -3,8 +3,8 @@ import React from 'react';
 import autobind from 'autobind-decorator';
 import SelectOption from '../components-styled/SelectOption';
 import SelectStyled from '../components-styled/SelectStyled';
+import ActionListItemIcon from '../../ActionListItemIcon';
 import ListItemContents from '../../ListItemContents';
-import ActionableListItemIcon from '../../ActionableListItemIcon';
 
 const propTypes = {
   items: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
@@ -17,14 +17,13 @@ const defaultProps = {
   selected: '',
 };
 
-export class Select extends React.Component {
+export default class Select extends React.Component {
 
   @autobind
   onClick() {
-    const selectRef = this.selectRef;
     const event = document.createEvent('MouseEvents');
     event.initMouseEvent('mousedown', true, true, window);
-    selectRef.dispatchEvent(event);
+    this.selectRef.dispatchEvent(event);
   }
 
   @autobind
@@ -44,7 +43,7 @@ export class Select extends React.Component {
     const { items } = this.props;
     return (
       <ListItemContents>
-        <ActionableListItemIcon
+        <ActionListItemIcon
           onClick={this.onClick}
           IconComponent={CardsIconArrowDown}
         />

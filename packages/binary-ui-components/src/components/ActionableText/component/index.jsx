@@ -1,7 +1,7 @@
-import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
+import { CARDS_BLUE_COLOR, CARDS_DISABLED_COLOR } from 'binary-ui-styles';
 import React from 'react';
 import ActionableTextWrapper from '../components-styled/ActionableTextWrapper';
-import { CARDS_ICON_STYLE_ACTIVE_EXT_OBJ } from '../../../utils/styles';
+import { CARDS_ICON_ACTIVE_STYLE } from '../../../utils/styles.universal';
 import { getActionColorExt } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -16,7 +16,6 @@ const defaultProps = {
   isActive: false,
   isHover: false,
   isDisabled: false,
-  style: {},
 };
 
 const ActionableText = ({
@@ -31,13 +30,13 @@ const ActionableText = ({
     color,
     CARDS_BLUE_COLOR,
     CARDS_BLUE_COLOR,
-    '#808080',
+    CARDS_DISABLED_COLOR,
     isActive,
     isHover,
     isDisabled
   );
   const styleAction = isActive
-    ? Object.assign({}, style, CARDS_ICON_STYLE_ACTIVE_EXT_OBJ, { color: actionColor })
+    ? Object.assign({}, style, CARDS_ICON_ACTIVE_STYLE, { color: actionColor })
     : Object.assign({}, style, { color: actionColor });
   return (
     <ActionableTextWrapper style={styleAction} {...props} />

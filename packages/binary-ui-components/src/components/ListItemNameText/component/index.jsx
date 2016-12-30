@@ -6,7 +6,6 @@ import ActionableListItemIcon from '../../ActionableListItemIcon';
 
 const propTypes = {
   children: React.PropTypes.node,
-  id: React.PropTypes.any,
   isEdit: React.PropTypes.bool,
   isFull: React.PropTypes.bool,
   onClick: React.PropTypes.func,
@@ -21,15 +20,10 @@ export default class ListItemNameText extends React.Component {
 
   @autobind
   onClick() {
-    const { id, onClick } = this.props;
+    const { onClick } = this.props;
     if (onClick) {
-      onClick(id);
+      onClick();
     }
-  }
-
-  renderListItemIcon() {
-    const { IconComponent } = this.props;
-    return (<ActionableListItemIcon onClick={this.onClick} IconComponent={IconComponent} />);
   }
 
   render() {
@@ -39,7 +33,9 @@ export default class ListItemNameText extends React.Component {
         <ListItemNameTextWrapper>
           {children.toUpperCase()}
         </ListItemNameTextWrapper>
-        {IconComponent && this.renderListItemIcon()}
+        {IconComponent && (
+          <ActionableListItemIcon onClick={this.onClick} IconComponent={IconComponent} />
+        )}
       </ListItemName>
     );
   }
