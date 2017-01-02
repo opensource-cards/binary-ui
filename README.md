@@ -3,13 +3,6 @@
 Binary-UI is a set of [React](http://facebook.github.io/react/) components that implement
 [Cards' Binary Design](https://try.cards) specification.
 
-## 
-
-## Installation
-Using npm:
-```sh
-npm install react-colorizer --save
-```
 ### Fira Sans Font
 
 Binary-UI was designed with the [Fira Sans](https://github.com/mozilla/Fira)
