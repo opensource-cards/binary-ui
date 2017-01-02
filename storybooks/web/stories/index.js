@@ -486,6 +486,9 @@ storiesOf('binary-ui-components links', module)
   .add('action button disabled', () => (
     <ActionButton isDisabled onClick={action()} IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
   ))
+  .add('action button submit disabled', () => (
+    <ActionButton isDisabled onClick={action()} type="submit" IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+  ))
   .add('action div', () => (
     <ActionDiv onClick={action()} >Put test here</ActionDiv>
   ))
