@@ -13,7 +13,7 @@ Merge all curves, export to SVG and copy path data `d=""` prop.
 
 ## Iconset
 
-![](/iconset-preview.svg)
+![](iconset-preview.gif)
 
 ## Example
 
