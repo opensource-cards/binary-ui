@@ -3,6 +3,7 @@ export const CARDS_GREY_COLOR = '#EEEAE5';
 export const CARDS_SECONDARY_COLOR = '#EAEBEC';
 export const CARDS_BLUE_COLOR = '#0087BD';
 export const CARDS_RED_COLOR = '#C40333';
+export const CARDS_GREEN_COLOR = '#009e6b';
 export const CARDS_DISABLED_COLOR = '#808080';
 
 export const LIST_ITEM_HEIGHT = 44;
@@ -12,6 +13,7 @@ export default {
   CARDS_SECONDARY_COLOR,
   CARDS_BLUE_COLOR,
   CARDS_RED_COLOR,
-  LIST_ITEM_HEIGHT,
+  CARDS_GREEN_COLOR,
   CARDS_DISABLED_COLOR,
+  LIST_ITEM_HEIGHT,
 };

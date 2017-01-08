@@ -11,15 +11,15 @@ const ALERT_COMMON_STYLES = `
 `;
 
 export const ALERT_STYLE = `
-  background-color: rgba(110,110,110,0.8);
+  background-color: rgba(110, 110, 110, 0.8);
 `;
 
 export const ALERT_STYLE_CONFIRM = `
-  background-color: rgba(0,158,107,0.8);
+  background-color: rgba(0, 158, 107, 0.8);
 `;
 
 export const ALERT_STYLE_CRITICAL = `
-  background-color: rgba(196,3,51,0.8);
+  background-color: rgba(196, 3, 51, 0.8);
 `;
 
 export default styled.div`

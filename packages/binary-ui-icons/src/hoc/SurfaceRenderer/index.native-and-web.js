@@ -13,17 +13,38 @@ export default (Group, Shape, Surface) => {
     color: '#000000',
   };
 
-  const SurfaceRendererNativeAndWeb = ({ color, size, IconContentComponent }) => {
-    const scale = size / DEFAULT_SIZE;
-    const ColoredShape = (shapeProps) => (<Shape fill={color} {...shapeProps} />);
-    return (
-      <Surface height={size} width={size} >
-        <Group fill={color} scale={scale} >
-          <IconContentComponent Group={Group} Shape={ColoredShape} />
-        </Group>
-      </Surface>
-    );
-  };
+  class SurfaceRendererNativeAndWeb extends React.Component {
+
+    constructor(props) {
+      super(props);
+      this.cache = {};
+      this.setColoredShape(props.color);
+    }
+
+    componentWillReceiveProps(nextProps) {
+      if (this.props.color !== nextProps.color) {
+        this.setColoredShape(nextProps.color);
+      }
+    }
+
+    setColoredShape(color) {
+      this.cache.ColoredShape = (shapeProps) => (
+        <Shape fill={color} {...shapeProps} />
+      );
+    }
+
+    render() {
+      const { color, size, IconContentComponent } = this.props;
+      const scale = size / DEFAULT_SIZE;
+      return (
+        <Surface height={size} width={size} >
+          <Group fill={color} scale={scale} >
+            <IconContentComponent Group={Group} Shape={this.cache.ColoredShape} />
+          </Group>
+        </Surface>
+      );
+    }
+  }
 
   SurfaceRendererNativeAndWeb.propTypes = propTypes;
   SurfaceRendererNativeAndWeb.defaultProps = defaultProps;
