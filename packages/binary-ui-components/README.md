@@ -4,7 +4,7 @@
 
 Component style follows a set of rules:
 - Flexbox layout is preferred for all elements
-- When navigating to another page on button press, the direction is associated with 
+- When navigating to another page on button press, the direction of the icon button should correspond to animation. If next page arrives from the right, use CardsIconArrowRight. If next page arrives from the bottom, use CardsIconArrowDown. 
 
 ## Component anatomy
 
