@@ -62,5 +62,5 @@ prop             | type                 | default value
 Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
-This project is licensed under the terms of the
-[MIT license](https://github.com/callemall/material-ui/blob/master/LICENSE)
+
+MIT
