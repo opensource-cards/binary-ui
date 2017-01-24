@@ -1,4 +1,5 @@
 # Styles
+
 ## Description
 
 ### Layout styles (web)
@@ -17,10 +18,10 @@ LIST_ITEM_HEIGHT       | default height of list elements in non-card stacks
 
 ### Layout styles (native)
 
-const                  | use
------------------------|-------------
-MAIN_FONT_FAMILY_IOS       | set default font for iOS
-MAIN_FONT_FAMILY_ANDROID       | set default font for Android
+const                     | use
+--------------------------|-------------
+MAIN_FONT_FAMILY_IOS      | set default font for iOS
+MAIN_FONT_FAMILY_ANDROID  | set default font for Android
 
 ### Color styles (web and native)
 
@@ -69,10 +70,6 @@ Cards color palette relies on six elementary color percepts of human vision—th
 </tr>
 </table>
 
-## Contribute
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md)
-
 ## License
-This project is licensed under the terms of the
-[MIT license](https://github.com/callemall/material-ui/blob/master/LICENSE)
+
+MIT
