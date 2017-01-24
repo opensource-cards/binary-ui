@@ -10,7 +10,7 @@ Binary Design's core values are functionality and minimalism. We deconstruct des
 
 Read about [iconography](/packages/binary-ui-icons/README.md), design of [components](packages/binary-ui-components/README.md) and [styles](/packages/binary-ui-styles/README.md).
 
-### Fira Sans Font
+## Fira Sans Font
 
 Binary-UI was designed with the [Fira Sans](https://github.com/mozilla/Fira)
 font. Be sure to include it in your project. Get this font from
@@ -21,4 +21,9 @@ or Mozilla:
 ```
 
 ## Examples
+
 * Storybook ([source](https://opensource-cards.github.io/binary-ui/))
+
+## License
+
+MIT
