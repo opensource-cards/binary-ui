@@ -57,10 +57,6 @@ prop             | type                 | default value
 `color`          | `string`             | 
 `size`         | `number`             | '20'
 
-## Contribute
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md)
-
 ## License
 
 MIT
