@@ -68,15 +68,7 @@ ListItemContents | `borderColor` <br> `children` <br> `isEdit` <br> `isTapHighli
 [TextField](https://opensource-cards.github.io/binary-ui/?selectedKind=binary-ui-components%20list%20items&selectedStory=with%20text%20%28number%29)          | `borderColor` <br> `isMoreButton` <br> `isValid` <br> `mask` <br> `type` (ANY, NUMBER, PASSWORD, EMAIL, PHONE_NUMBER, LINK) <br> `value` <br> `onBlur` <br> `onFocus` <br> `onMoreClick` <br> `onTextChange` | Description
 [TextView](https://opensource-cards.github.io/binary-ui/?selectedKind=binary-ui-components%20section&selectedStory=main)  | `children` <br> `isEdit` <br> `isMoreButton` <br> `onMoreClick` | Full width text component
 
-## Contribute
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## License
-This project is licensed under the terms of the
-[MIT license](https://github.com/callemall/material-ui/blob/master/LICENSE)
-
-## Note
+### Note
 
 These files should be set globally.
 
@@ -87,3 +79,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 ```
+
+## Contribute
+
+Please see [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## License
+
+MIT
