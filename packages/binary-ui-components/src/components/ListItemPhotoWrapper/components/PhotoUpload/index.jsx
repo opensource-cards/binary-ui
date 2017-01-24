@@ -33,7 +33,6 @@ export default class PhotoUpload extends React.Component {
       <PhotoUploadWrapper
         noImageUrl={noImageUrl}
         onClick={this.onDivClick}
-        onChange={onPhotoAdd}
       >
         <PhotoUploadInput
           innerRef={this.setLoaderRef}
