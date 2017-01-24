@@ -80,10 +80,6 @@ input::-webkit-inner-spin-button {
 }
 ```
 
-## Contribute
-
-Please see [CONTRIBUTING.md](CONTRIBUTING.md)
-
 ## License
 
 MIT
