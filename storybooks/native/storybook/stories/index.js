@@ -1,4 +1,3 @@
-import React from 'react';
 import { storiesOf, action } from '@kadira/react-native-storybook';
 import {
   CardsIconAdd,
@@ -80,11 +79,6 @@ import {
   CardsIconWhatsapp,
   CardsIconWhatsappAlt,
 } from 'binary-ui-icons';
-import styled from 'styled-components/native';
-
-import { StatusBar, Text, TextInput, View, Picker } from 'react-native';
-import uuid from 'react-native-uuid';
-import { getImg } from './resources/fake-img';
 import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
 import {
   ActionIcon,
@@ -109,6 +103,12 @@ import {
   TextFieldTypes,
   TextView,
 } from 'binary-ui-components';
+import React from 'react';
+import { StatusBar, Text, TextInput, View, Picker } from 'react-native';
+import uuid from 'react-native-uuid';
+import styled from 'styled-components/native';
+import BinaryUICarousel from './components/BinaryUICarousel';
+import { getImg } from './resources/fake-img';
 
 const COLOR = '#0F9BE0';
 const SIZE = 100;
@@ -689,4 +689,9 @@ storiesOf('binary-ui-components section', module)
         <Text>Section Text</Text>
       </Section>
     </View>
+  ));
+
+storiesOf('binary-ui-carousel section', module)
+  .add('example', () => (
+    <BinaryUICarousel />
   ));

@@ -1,0 +1,15 @@
+# Compiled files
+storybooks/native/lib
+lib
+
+# Logs
+*.log
+
+# Dependency directories
+node_modules
+
+# JetBrains
+.idea
+
+# Visual Studio Code
+.vscode

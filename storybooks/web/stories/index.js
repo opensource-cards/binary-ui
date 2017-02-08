@@ -80,8 +80,6 @@ import {
   CardsIconWhatsapp,
   CardsIconWhatsappAlt,
 } from 'binary-ui-icons';
-import styled from 'styled-components';
-
 import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
 import ActionableText from 'binary-ui-components/components/ActionableText';
 import ActionableListItemIcon from 'binary-ui-components/components/ActionableListItemIcon';
@@ -110,6 +108,10 @@ import {
   TextView,
 } from 'binary-ui-components';
 import uuid from 'node-uuid';
+import styled from 'styled-components';
+import BinaryUICarousel1 from './components/BinaryUICarousel1';
+import BinaryUICarousel2 from './components/BinaryUICarousel2';
+import BinaryUICarousel4 from './components/BinaryUICarousel4';
 import { getImg } from './resources/fake-img';
 
 // render svg instead of canvas
@@ -733,4 +735,15 @@ storiesOf('binary-ui-components section', module)
     <Section name="Section Title">
       Section Text
     </Section>
+  ));
+
+storiesOf('binary-ui-carousel section', module)
+  .add('1 component', () => (
+    <BinaryUICarousel1 />
+  ))
+  .add('2 components', () => (
+    <BinaryUICarousel2 />
+  ))
+  .add('4 components', () => (
+    <BinaryUICarousel4 />
   ));
