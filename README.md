@@ -21,7 +21,7 @@ or Mozilla:
 
 ## Examples
 
-* Storybook ([source](https://opensource-cards.github.io/binary-ui/))
+* [Storybook](https://opensource-cards.github.io/binary-ui/)
 
 ## License
 
