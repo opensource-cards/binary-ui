@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import React from 'react';
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionLinkRender from '../components-styled/ActionLinkRender';
@@ -29,6 +28,8 @@ export default class ActionLink extends React.Component {
       isHover: false,
     };
     this.onTapUp = () => { this.onSetActive(false); };
+    this.onSetActive = this.onSetActive.bind(this);
+    this.onSetHover = this.onSetHover.bind(this);
   }
 
   componentDidMount() {
@@ -41,7 +42,6 @@ export default class ActionLink extends React.Component {
     window.removeEventListener('touchend', this.onTapUp);
   }
 
-  @autobind
   onSetActive(isActive) {
     if (this.state.isActive === isActive) {
       return;
@@ -51,7 +51,6 @@ export default class ActionLink extends React.Component {
     });
   }
 
-  @autobind
   onSetHover(isHover) {
     this.setState({
       isHover,

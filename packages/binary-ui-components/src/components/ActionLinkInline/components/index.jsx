@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
 import React from 'react';
 import ActionListItemIconRender from '../components-styled/ActionListItemIconRender';
@@ -31,6 +30,8 @@ export default class ActionLinkInline extends React.Component {
       isHover: false,
     };
     this.onTapUp = () => { this.onSetActive(false); };
+    this.onSetActive = this.onSetActive.bind(this);
+    this.onSetHover = this.onSetHover.bind(this);
   }
 
   componentDidMount() {
@@ -43,7 +44,6 @@ export default class ActionLinkInline extends React.Component {
     window.removeEventListener('touchend', this.onTapUp);
   }
 
-  @autobind
   onSetActive(isActive) {
     if (this.state.isActive === isActive) {
       return;
@@ -53,7 +53,6 @@ export default class ActionLinkInline extends React.Component {
     });
   }
 
-  @autobind
   onSetHover(isHover) {
     this.setState({
       isHover,

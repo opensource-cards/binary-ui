@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import React from 'react';
 import ActionableIcon from '../../ActionableIcon';
 import { isLeftButton } from '../../../utils/events';
@@ -23,6 +22,8 @@ export default class ActionIcon extends React.Component {
       isHover: false,
     };
     this.onTapUp = () => { this.onSetActive(false); };
+    this.onSetActive = this.onSetActive.bind(this);
+    this.onSetHover = this.onSetHover.bind(this);
   }
 
   componentDidMount() {
@@ -35,7 +36,6 @@ export default class ActionIcon extends React.Component {
     window.removeEventListener('touchend', this.onTapUp);
   }
 
-  @autobind
   onSetActive(isActive) {
     if (this.state.isActive === isActive) {
       return;
@@ -45,7 +45,6 @@ export default class ActionIcon extends React.Component {
     });
   }
 
-  @autobind
   onSetHover(isHover) {
     this.setState({
       isHover,

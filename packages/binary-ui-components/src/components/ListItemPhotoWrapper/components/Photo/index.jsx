@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import React from 'react';
 import PhotoContent from '../../components-styled/PhotoContent';
 import PhotoCheckmark from '../../components-styled/PhotoCheckmark';
@@ -14,7 +13,11 @@ const defaultProps = {};
 
 export default class Photo extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onPhotoClick = this.onPhotoClick.bind(this);
+  }
+
   onPhotoClick() {
     const { onPhotoClick } = this.props;
     if (onPhotoClick) {

@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import { CardsIconMore } from 'binary-ui-icons';
 import React from 'react';
 import TextContent from '../components-styled/TextContent';
@@ -19,7 +18,11 @@ const defaultProps = {
 
 export default class TextView extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onMoreClick = this.onMoreClick.bind(this);
+  }
+
   onMoreClick() {
     const { onMoreClick } = this.props;
     if (onMoreClick) {

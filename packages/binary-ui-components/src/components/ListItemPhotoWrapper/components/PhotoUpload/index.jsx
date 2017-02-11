@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import React from 'react';
 import PhotoUploadInput from '../../components-styled/PhotoUploadInput';
 import PhotoUploadWrapper from '../../components-styled/PhotoUploadWrapper';
@@ -12,17 +11,21 @@ const defaultProps = {};
 
 export default class PhotoUpload extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onDivClick = this.onDivClick.bind(this);
+    this.onLoaderClick = this.onLoaderClick.bind(this);
+    this.setLoaderRef = this.setLoaderRef.bind(this);
+  }
+
   onDivClick() {
     this.loader.click();
   }
 
-  @autobind
   onLoaderClick() {
     this.loader.value = null;
   }
 
-  @autobind
   setLoaderRef(loader) {
     this.loader = loader;
   }

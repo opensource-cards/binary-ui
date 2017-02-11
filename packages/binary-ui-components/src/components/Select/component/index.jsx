@@ -1,6 +1,5 @@
 import { CardsIconArrowDown } from 'binary-ui-icons';
 import React from 'react';
-import autobind from 'autobind-decorator';
 import SelectOption from '../components-styled/SelectOption';
 import SelectStyled from '../components-styled/SelectStyled';
 import ActionListItemIcon from '../../ActionListItemIcon';
@@ -19,14 +18,19 @@ const defaultProps = {
 
 export default class Select extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+    this.onChange = this.onChange.bind(this);
+    this.setSelectRef = this.setSelectRef.bind(this);
+  }
+
   onClick() {
     const event = document.createEvent('MouseEvents');
     event.initMouseEvent('mousedown', true, true, window);
     this.selectRef.dispatchEvent(event);
   }
 
-  @autobind
   onChange(e) {
     const { onChange } = this.props;
     if (onChange) {
@@ -34,7 +38,6 @@ export default class Select extends React.Component {
     }
   }
 
-  @autobind
   setSelectRef(selectRef) {
     this.selectRef = selectRef;
   }

@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import { CardsIconCheck, CardsIconUncheck } from 'binary-ui-icons';
 import React from 'react';
 
@@ -14,7 +13,11 @@ const defaultProps = {
 
 export default class Checkbox extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
   onClick(e) {
     const { isChecked, onChange, onClick } = this.props;
     if (onClick) {

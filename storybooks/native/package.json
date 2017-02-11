@@ -8,16 +8,14 @@
     "storybook": "storybook start -p 7007"
   },
   "dependencies": {
-    "autobind-decorator": "^1.3.3",
     "invariant": "^2.2.1",
     "mask-parser": "^0.0.1-rc.3",
-    "node-uuid": "^1.4.7",
     "react": "15.4.1",
     "react-art": "^0.15.1",
     "react-native": "0.38.1",
     "react-native-image-picker": "^0.24.1",
-    "react-native-uuid": "^1.4.8",
-    "styled-components": "^1.1.2"
+    "styled-components": "^1.1.2",
+    "uuid": "^3.0.1"
   },
   "jest": {
     "preset": "react-native"
