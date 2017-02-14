@@ -5,7 +5,7 @@ const VERY_DARK_COLOR = '#404040';
 
 export default styled.div`
   ${NO_SELECT_CSS}
-  overflow: 100%;
+  overflow: hidden;
   padding-bottom: 9px;
   padding-left: 10px;
   padding-top: 9px;

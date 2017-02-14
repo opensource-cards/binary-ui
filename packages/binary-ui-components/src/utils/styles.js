@@ -36,6 +36,7 @@ export const LIST_ITEM_CONTENTS_BASE_CSS = `
 
 export const EDIT_CSS = `
   border-bottom: 1px solid ${CARDS_GREY_COLOR};
+  box-sizing: border-box;
 `;
 
 export function getEditStyle(color) {
@@ -46,14 +47,17 @@ export function getEditStyle(color) {
 
 export const NO_EDIT_CSS = `
   border-bottom: 1px solid white;
+  box-sizing: border-box;
 `;
 
 export const TYPING_HIGHLIGHT_STYLE = {
   borderBottom: `1px solid ${CARDS_BLUE_COLOR}`,
+  boxSizing: borderBox,
 };
 
 export const TYPING_HIGHLIGHT_INVALID_STYLE = {
   borderBottom: `1px solid ${CARDS_RED_COLOR}`,
+  boxSizing: borderBox,
 };
 
 export const CARDS_ICON_CSS = `
