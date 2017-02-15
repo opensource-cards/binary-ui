@@ -6,6 +6,7 @@ import ActionLinkInlineWrapper from '../components-styled/ActionLinkInlineWrappe
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionableIcon from '../../ActionableIcon';
 import ActionableText from '../../ActionableText';
+import { isLeftButton } from '../../../utils/events';
 
 const propTypes = {
   children: React.PropTypes.any,
@@ -92,11 +93,11 @@ export default class ActionLinkInline extends React.Component {
       <ActionLinkInlineWrapper>
         <ActionListItemIconRender
           isDisabled={isDisabled}
-          onMouseDown={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+          onClick={isDisabled ? (e) => { e.preventDefault(); } : (e) => { onClick(e); }}
+          onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
           onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
           onMouseEnter={!isDisabled && ((e) => { this.onSetHover(true); if (onMouseEnter) { onMouseEnter(e); } })}
           onMouseLeave={!isDisabled && ((e) => { this.onSetHover(false); if (onMouseLeave) { onMouseLeave(e); } })}
-          onClick={(!isDisabled && onClick) || ((e) => { e.preventDefault(); })}
           {...props}
         >
           {IconComponentLeft && this.renderIconComponent(IconComponentLeft)}
