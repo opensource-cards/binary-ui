@@ -52,12 +52,12 @@ export const NO_EDIT_CSS = `
 
 export const TYPING_HIGHLIGHT_STYLE = {
   borderBottom: `1px solid ${CARDS_BLUE_COLOR}`,
-  boxSizing: borderBox,
+  boxSizing: 'border-box',
 };
 
 export const TYPING_HIGHLIGHT_INVALID_STYLE = {
   borderBottom: `1px solid ${CARDS_RED_COLOR}`,
-  boxSizing: borderBox,
+  boxSizing: 'border-box',
 };
 
 export const CARDS_ICON_CSS = `
