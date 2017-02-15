@@ -4,6 +4,7 @@ import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionLinkRender from '../components-styled/ActionLinkRender';
 import ActionableIcon from '../../ActionableIcon';
 import ActionableText from '../../ActionableText';
+import { isLeftButton } from '../../../utils/events';
 
 const propTypes = {
   children: React.PropTypes.any,
@@ -88,7 +89,7 @@ export default class ActionLink extends React.Component {
     return (
       <ActionLinkRender
         onClick={!isDisabled && onClick}
-        onMouseDown={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+        onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
         onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
         onMouseEnter={!isDisabled && ((e) => { this.onSetHover(true); if (onMouseEnter) { onMouseEnter(e); } })}
         onMouseLeave={!isDisabled && ((e) => { this.onSetHover(false); if (onMouseLeave) { onMouseLeave(e); } })}
