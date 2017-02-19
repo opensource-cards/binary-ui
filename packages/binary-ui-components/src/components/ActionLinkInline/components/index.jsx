@@ -92,7 +92,7 @@ export default class ActionLinkInline extends React.Component {
       <ActionLinkInlineWrapper>
         <ActionListItemIconRender
           isDisabled={isDisabled}
-          onClick={isDisabled ? (e) => { e.preventDefault(); } : (e) => { onClick(e); }}
+          onClick={isDisabled ? (e) => { e.preventDefault(); } : (e) => { if (onClick) { onClick(e); } }}
           onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
           onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
           onMouseEnter={!isDisabled && ((e) => { this.onSetHover(true); if (onMouseEnter) { onMouseEnter(e); } })}
