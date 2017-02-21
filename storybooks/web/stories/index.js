@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import {
@@ -112,12 +113,15 @@ import {
 import uuid from 'node-uuid';
 import styled from 'styled-components';
 import { getImg } from './resources/fake-img';
+=======
+>>>>>>> e23ffc9fd83f12c770e750c3ab1bfaef0a3effc9
 
 // render svg instead of canvas
 import ARTSVGMode from 'art/modes/svg';
 import ARTCurrentMode from 'art/modes/current';
 ARTCurrentMode.setCurrent(ARTSVGMode);
 
+<<<<<<< HEAD
 const COLOR = '#0F9BE0';
 const SIZE = 100;
 
@@ -746,3 +750,7 @@ storiesOf('binary-ui-components section', module)
       Section Text
     </Section>
   ));
+=======
+import './index-icons';
+import './index-components';
+>>>>>>> e23ffc9fd83f12c770e750c3ab1bfaef0a3effc9

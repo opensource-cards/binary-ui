@@ -1,5 +1,4 @@
 import React from 'react';
-import autobind from 'autobind-decorator';
 import ListItemNameTextWrapper from '../components-styled/ListItemNameTextWrapper';
 import ListItemName from '../../ListItemName';
 import ActionableListItemIcon from '../../ActionableListItemIcon';
@@ -18,7 +17,11 @@ const defaultProps = {
 
 export default class ListItemNameText extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
   onClick() {
     const { onClick } = this.props;
     if (onClick) {

@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
 import React from 'react';
 import ActionListItemIconRender from '../components-styled/ActionListItemIconRender';
@@ -6,6 +5,7 @@ import ActionLinkInlineWrapper from '../components-styled/ActionLinkInlineWrappe
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionableIcon from '../../ActionableIcon';
 import ActionableText from '../../ActionableText';
+import { isLeftButton } from '../../../utils/events';
 
 const propTypes = {
   children: React.PropTypes.any,
@@ -30,6 +30,8 @@ export default class ActionLinkInline extends React.Component {
       isHover: false,
     };
     this.onTapUp = () => { this.onSetActive(false); };
+    this.onSetActive = this.onSetActive.bind(this);
+    this.onSetHover = this.onSetHover.bind(this);
   }
 
   componentDidMount() {
@@ -42,7 +44,6 @@ export default class ActionLinkInline extends React.Component {
     window.removeEventListener('touchend', this.onTapUp);
   }
 
-  @autobind
   onSetActive(isActive) {
     if (this.state.isActive === isActive) {
       return;
@@ -52,7 +53,6 @@ export default class ActionLinkInline extends React.Component {
     });
   }
 
-  @autobind
   onSetHover(isHover) {
     this.setState({
       isHover,
@@ -92,11 +92,11 @@ export default class ActionLinkInline extends React.Component {
       <ActionLinkInlineWrapper>
         <ActionListItemIconRender
           isDisabled={isDisabled}
-          onMouseDown={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+          onClick={isDisabled ? (e) => { e.preventDefault(); } : (e) => { if (onClick) { onClick(e); } }}
+          onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
           onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
           onMouseEnter={!isDisabled && ((e) => { this.onSetHover(true); if (onMouseEnter) { onMouseEnter(e); } })}
           onMouseLeave={!isDisabled && ((e) => { this.onSetHover(false); if (onMouseLeave) { onMouseLeave(e); } })}
-          onClick={(!isDisabled && onClick) || ((e) => { e.preventDefault(); })}
           {...props}
         >
           {IconComponentLeft && this.renderIconComponent(IconComponentLeft)}

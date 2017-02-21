@@ -1,9 +1,9 @@
+import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
+import React from 'react';
 import ActionableIcon from '../../ActionableIcon';
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionButtonStyled from '../components-styled/ActionButtonStyled';
 import ActionButtonWrapper from '../components-styled/ActionButtonWrapper';
-import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
-import React from 'react';
 
 const propTypes = {
   children: React.PropTypes.any,
@@ -51,7 +51,7 @@ export default class ActionButton extends React.Component {
       >
         <ActionButtonWrapper>
           {IconComponentLeft && this.renderIconComponent(IconComponentLeft)}
-            {children}
+          {children}
           {IconComponentRight && this.renderIconComponent(IconComponentRight)}
         </ActionButtonWrapper>
       </ActionButtonStyled>

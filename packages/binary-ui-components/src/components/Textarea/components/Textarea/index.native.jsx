@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import { CardsIconMore } from 'binary-ui-icons';
 import React from 'react';
 import ListItemTextareaWrapper from '../ListItemTextareaWrapper';
@@ -26,9 +25,11 @@ export default class Textarea extends React.Component {
     this.state = {
       isActive: false,
     };
+    this.onTextChange = this.onTextChange.bind(this);
+    this.onMoreClick = this.onMoreClick.bind(this);
+    this.onSetFocus = this.onSetFocus.bind(this);
   }
 
-  @autobind
   onTextChange(value) {
     const { onTextChange } = this.props;
     if (onTextChange) {
@@ -36,7 +37,6 @@ export default class Textarea extends React.Component {
     }
   }
 
-  @autobind
   onMoreClick() {
     const { onMoreClick } = this.props;
     if (onMoreClick) {
@@ -44,7 +44,6 @@ export default class Textarea extends React.Component {
     }
   }
 
-  @autobind
   onSetFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;

@@ -1,6 +1,5 @@
-import autobind from 'autobind-decorator';
-import uuid from 'node-uuid';
 import React from 'react';
+import uuid from 'uuid';
 import Photo from '../Photo';
 import PhotoUpload from '../PhotoUpload';
 import ListItemPhotoWrapperWrapper from '../../components-styled/ListItemPhotoWrapperWrapper';
@@ -25,7 +24,11 @@ const defaultProps = {
 
 export default class ListItemPhotoWrapper extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onPhotoAdd = this.onPhotoAdd.bind(this);
+  }
+
   onPhotoAdd(e) {
     const reader = new FileReader();
     const file = e.target.files[0];

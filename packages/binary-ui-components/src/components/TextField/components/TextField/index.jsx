@@ -1,4 +1,3 @@
-import autobind from 'autobind-decorator';
 import { CardsIconMore } from 'binary-ui-icons';
 import invariant from 'invariant';
 import { addMask, removeMask } from 'mask-parser';
@@ -36,9 +35,11 @@ export default class TextField extends React.Component {
     this.state = {
       isActive: false,
     };
+    this.onChange = this.onChange.bind(this);
+    this.onMoreClick = this.onMoreClick.bind(this);
+    this.onSetFocus = this.onSetFocus.bind(this);
   }
 
-  @autobind
   onChange(e) {
     const { onTextChange, mask, type } = this.props;
     if (onTextChange) {
@@ -50,7 +51,6 @@ export default class TextField extends React.Component {
     }
   }
 
-  @autobind
   onMoreClick() {
     const { onMoreClick } = this.props;
     if (onMoreClick) {
@@ -58,7 +58,6 @@ export default class TextField extends React.Component {
     }
   }
 
-  @autobind
   onSetFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;

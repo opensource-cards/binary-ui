@@ -1,7 +1,6 @@
 import ImagePicker from 'react-native-image-picker';
 import { TouchableOpacity } from 'react-native';
 import React from 'react';
-import autobind from 'autobind-decorator';
 import StyledImage from '../../components-styled/StyledImage';
 
 const propTypes = {
@@ -13,7 +12,11 @@ const defaultProps = {};
 
 export default class PhotoUpload extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
   onClick() {
     const { onPhotoAdd } = this.props;
     ImagePicker.showImagePicker({

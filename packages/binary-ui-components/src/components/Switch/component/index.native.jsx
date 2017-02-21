@@ -1,13 +1,9 @@
-import autobind from 'autobind-decorator';
 import React from 'react';
 import SwitchToggle from '../components-styled/SwitchToggle';
 import SwitchContainer from '../components-styled/SwitchContainer';
 import SwitchBackground from '../components-styled/SwitchBackground';
 import SwitchHandler from '../components-styled/SwitchHandler';
 import ListItemContents from '../../ListItemContents';
-import {
-  TouchableOpacity,
-} from 'react-native';
 
 const propTypes = {
   isChecked: React.PropTypes.bool.isRequired,
@@ -20,7 +16,11 @@ const defaultProps = {
 
 export default class Switch extends React.Component {
 
-  @autobind
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
   onClick() {
     const { isChecked, onChange } = this.props;
     if (onChange) {
