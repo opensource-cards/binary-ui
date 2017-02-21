@@ -76,6 +76,7 @@ import CardsIconUser from './components-icons/CardsIconUser';
 import CardsIconUserAlt from './components-icons/CardsIconUserAlt';
 import CardsIconWhatsapp from './components-icons/CardsIconWhatsapp';
 import CardsIconWhatsappAlt from './components-icons/CardsIconWhatsappAlt';
+import CardsIconYoutube from './components-icons/CardsIconYoutube';
 
 export {
   CardsIconAdd,
@@ -156,6 +157,7 @@ export {
   CardsIconUserAlt,
   CardsIconWhatsapp,
   CardsIconWhatsappAlt,
+  CardsIconYoutube,
 };
 
 export default {
@@ -237,4 +239,5 @@ export default {
   CardsIconUserAlt,
   CardsIconWhatsapp,
   CardsIconWhatsappAlt,
+  CardsIconYoutube,
 };

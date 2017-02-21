@@ -78,6 +78,7 @@ import {
   CardsIconUserAlt,
   CardsIconWhatsapp,
   CardsIconWhatsappAlt,
+  CardsIconYoutube,
 } from 'binary-ui-icons';
 import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
 import {
@@ -360,6 +361,9 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .add('CardsIconWhatsappAlt', () => (
     <CardsIconWhatsappAlt color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconYoutube', () => (
+    <CardsIconYoutube color={COLOR} size={SIZE} />
   ));
 
 const text = 'Button label text';

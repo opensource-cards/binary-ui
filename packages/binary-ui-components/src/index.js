@@ -14,6 +14,7 @@ import ListItemPhotoWrapper from './components/ListItemPhotoWrapper';
 import Section from './components/Section';
 import Select, { selectOptionModel } from './components/Select';
 import Switch from './components/Switch';
+import Slider from './components/Slider';
 import Textarea from './components/Textarea';
 import TextField, { TextFieldTypes } from './components/TextField';
 import TextView from './components/TextView';
@@ -39,6 +40,7 @@ export {
   Select,
   selectOptionModel,
   Switch,
+  Slider,
   Textarea,
   TextField,
   TextFieldTypes,

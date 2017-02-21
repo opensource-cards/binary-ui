@@ -79,6 +79,7 @@ import {
   CardsIconUserAlt,
   CardsIconWhatsapp,
   CardsIconWhatsappAlt,
+  CardsIconYoutube,
 } from 'binary-ui-icons';
 import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
 import ActionableText from 'binary-ui-components/components/ActionableText';
@@ -102,6 +103,7 @@ import {
   selectOptionModel,
   Select,
   Switch,
+  Slider,
   Textarea,
   TextField,
   TextFieldTypes,
@@ -367,6 +369,9 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .add('CardsIconWhatsappAlt', () => (
     <CardsIconWhatsappAlt color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconYoutube', () => (
+    <CardsIconYoutube color={COLOR} size={SIZE} />
   ));
 
 const text = 'Button Text (very long name that will collapse when the screen is too narrow)';
@@ -623,6 +628,14 @@ storiesOf('binary-ui-components list items', module)
       </ListItemNameText>
       <Switch
         id="switch-2"
+        onChange={action()}
+      />
+    </ListItem>
+  ))
+  .add('with slider', () => (
+    <ListItem>
+      <Slider
+        id="slider"
         onChange={action()}
       />
     </ListItem>
