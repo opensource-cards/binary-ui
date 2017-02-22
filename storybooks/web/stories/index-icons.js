@@ -78,6 +78,7 @@ import {
   CardsIconUserAlt,
   CardsIconWhatsapp,
   CardsIconWhatsappAlt,
+  CardsIconYoutube,
 } from 'binary-ui-icons';
 import React from 'react';
 import styled from 'styled-components';
@@ -333,4 +334,7 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .add('CardsIconWhatsappAlt', () => (
     <CardsIconWhatsappAlt color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconYoutube', () => (
+    <CardsIconYoutube color={COLOR} size={SIZE} />
   ));
