@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
-const SLIDER_HANDLE_STYLE = styled.div`
+export default styled.div`
   background-color: white;
   border-radius: 100%;
   height: ${LIST_ITEM_HALF_HEIGHT}px;
