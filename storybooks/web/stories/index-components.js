@@ -23,6 +23,7 @@ import {
   Section,
   selectOptionModel,
   Select,
+  Slider,
   Switch,
   Textarea,
   TextField,
@@ -266,6 +267,14 @@ storiesOf('binary-ui-components list items', module)
         placeholder="Placeholder"
         value=""
         onTextChange={action()}
+      />
+    </ListItem>
+  ))
+  .add('slider', () => (
+    <ListItem>
+      <Slider
+        id="slider-1"
+        onChange={action()}
       />
     </ListItem>
   ))
