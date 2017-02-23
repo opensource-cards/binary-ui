@@ -1,7 +1,7 @@
 {
   "scripts": {
     "storybook-web-build": "cd ./storybooks/web && npm run build-storybook",
-    "storybook-web-watch": "cd ./storybooks/web && babel ../../packages --ignore examples,lib,node_modules,test --out-dir=./lib --watch",
+    "storybook-web-watch": "cd ./storybooks/web && npm run storybook-web-watch",
     "storybook-web": "cd ./storybooks/web && npm run storybook",
     "storybook-native-watch": "cd ./storybooks/native && babel ../../packages --ignore examples,lib,node_modules --out-dir=./lib --watch",
     "storybook-native": "cd ./storybooks/native && rm -fr $TMPDIR/react-* && npm run storybook",
