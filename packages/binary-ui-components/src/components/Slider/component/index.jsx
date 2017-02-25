@@ -1,4 +1,4 @@
-import { CardsIconMinus, CardsIconAdd } from 'binary-ui-icons';
+import { CardsIconMinusAlt, CardsIconNewAlt } from 'binary-ui-icons';
 import React from 'react';
 import SliderContainer from '../components-styled/SliderContainer';
 import SliderHandler from '../components-styled/SliderHandler';
@@ -23,11 +23,11 @@ export default class Slider extends React.Component {
   render() {
     return (
       <SliderContainer>
-        <SliderScaleIcon IconComponent={CardsIconMinus} />
+        <SliderScaleIcon IconComponent={CardsIconMinusAlt} />
         <SliderScale>
           <SliderHandler />
         </SliderScale>
-        <SliderScaleIcon IconComponent={CardsIconAdd} />
+        <SliderScaleIcon IconComponent={CardsIconNewAlt} />
       </SliderContainer>
     );
   }

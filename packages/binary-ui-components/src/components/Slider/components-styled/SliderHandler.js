@@ -10,5 +10,5 @@ export default styled.div`
   box-sizing: border-box;
   border: 1px solid black;
   position: absolute;
-  transform: translateY(${LIST_ITEM_HALF_HEIGHT / 2}px);
+  transform: translateY(-${LIST_ITEM_HALF_HEIGHT / 2}px);
 `;
