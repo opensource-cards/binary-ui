@@ -1,4 +1,4 @@
-import { CARDS_GREY_COLOR, BINARY_COLOR_BLUE_40, BINARY_COLOR_RED_40 } from 'binary-ui-styles';
+import { BINARY_COLOR_SAND_90, BINARY_COLOR_BLUE_40, BINARY_COLOR_RED_40 } from 'binary-ui-styles';
 import { FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles/web';
 import {
   CARDS_ICON_ACTIVE_CSS,
@@ -35,13 +35,13 @@ export const LIST_ITEM_CONTENTS_BASE_CSS = `
 `;
 
 export const EDIT_CSS = `
-  border-bottom: 1px solid ${CARDS_GREY_COLOR};
+  border-bottom: 1px solid ${BINARY_COLOR_SAND_90};
   box-sizing: border-box;
 `;
 
 export function getEditStyle(color) {
   return {
-    borderBottom: `1px solid ${color || CARDS_GREY_COLOR}`,
+    borderBottom: `1px solid ${color || BINARY_COLOR_SAND_90}`,
   };
 }
 
