@@ -35,7 +35,7 @@ import styled from 'styled-components';
 import uuid from 'uuid';
 import { getImg } from './resources/fake-img';
 
-const text = 'Button Text (very long name that will collapse when the screen is too narrow)';
+const text = 'Important: for compatibility set container width in pixels!';
 const selectedPhotoGuid = uuid.v1();
 
 storiesOf('binary-ui-components actionable icons', module)

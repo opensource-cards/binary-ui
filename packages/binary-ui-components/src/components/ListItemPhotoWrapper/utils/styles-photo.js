@@ -1,24 +1,24 @@
-import { CARDS_BLUE_COLOR, CARDS_GREY_COLOR } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_SAND_90 } from 'binary-ui-styles';
 
 export const PHOTO_SIZE = 60;
 export const PHOTO_CHECKMARK_SIZE = 40;
 
 export const UNDERLINE_BORDER_STANDARD_WEB = `
-border : 1px solid ${CARDS_GREY_COLOR}
+border : 1px solid ${BINARY_COLOR_SAND_90}
 `;
 
 export const UNDERLINE_BORDER_ACTIVE_WEB = `
-border : 1px solid ${CARDS_BLUE_COLOR}
+border : 1px solid ${BINARY_COLOR_BLUE_40}
 `;
 
 export const UNDERLINE_BORDER_STANDARD_NATIVE = `
-border-color: ${CARDS_GREY_COLOR};
+border-color: ${BINARY_COLOR_SAND_90};
 border-width: 1;
 border-style: solid;
 `;
 
 export const UNDERLINE_BORDER_ACTIVE_NATIVE = `
-border-color: ${CARDS_BLUE_COLOR};
+border-color: ${BINARY_COLOR_BLUE_40};
 border-width: 1;
 border-style: solid;
 `;

@@ -1,4 +1,4 @@
-import { CARDS_BLUE_COLOR, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import React from 'react';
 import styled from 'styled-components/native';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
@@ -16,11 +16,11 @@ const SWITCH_BACKGROUND_STYLE = `
 */
 
 const SWITCH_BACKGROUND_CHECKED_STYLE = {
-  backgroundColor: CARDS_BLUE_COLOR,
+  backgroundColor: BINARY_COLOR_BLUE_40,
 };
 
 const SWITCH_BACKGROUND_UNCHECKED_STYLE = {
-  backgroundColor: '#d3d3d3',
+  backgroundColor: BINARY_COLOR_GRAY_80,
 };
 
 const SwitchBackgroundBase = styled.View`

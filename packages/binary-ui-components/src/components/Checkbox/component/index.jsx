@@ -1,4 +1,5 @@
 import { CardsIconCheck, CardsIconUncheck } from 'binary-ui-icons';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
 import React from 'react';
 
 const propTypes = {
@@ -32,9 +33,9 @@ export default class Checkbox extends React.Component {
   render() {
     const { isChecked, ...props } = this.props;
     return isChecked ? (
-      <CardsIconCheck color="#0087BD" size={30} onClick={this.onClick} {...props} />
+      <CardsIconCheck color={BINARY_COLOR_BLUE_40} size={30} onClick={this.onClick} {...props} />
     ) : (
-      <CardsIconUncheck color="#C0C0C0" size={30} onClick={this.onClick} {...props} />
+      <CardsIconUncheck color={BINARY_COLOR_GRAY_80} size={30} onClick={this.onClick} {...props} />
     );
   }
 }

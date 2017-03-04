@@ -1,4 +1,4 @@
-import { CARDS_GREY_COLOR, CARDS_BLUE_COLOR, CARDS_RED_COLOR } from 'binary-ui-styles';
+import { CARDS_GREY_COLOR, BINARY_COLOR_BLUE_40, BINARY_COLOR_RED_40 } from 'binary-ui-styles';
 import {
   CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_UNIVERSAL,
 } from './styles.universal';
@@ -49,11 +49,11 @@ export const NO_EDIT_CSS = `
 `;
 
 export const TYPING_HIGHLIGHT_STYLE = {
-  borderBottom: `1 solid ${CARDS_BLUE_COLOR}`,
+  borderBottom: `1 solid ${BINARY_COLOR_BLUE_40}`,
 };
 
 export const TYPING_HIGHLIGHT_INVALID_STYLE = {
-  borderBottom: `1 solid ${CARDS_RED_COLOR}`,
+  borderBottom: `1 solid ${BINARY_COLOR_RED_40}`,
 };
 
 export const CARDS_ICON_CSS = `
