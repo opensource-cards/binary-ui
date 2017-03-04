@@ -1,4 +1,4 @@
-import { CARDS_BLUE_COLOR, CARDS_DISABLED_COLOR } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import React from 'react';
 import ActionableTextWrapper from '../components-styled/ActionableTextWrapper';
 import { CARDS_ICON_ACTIVE_STYLE } from '../../../utils/styles.universal';
@@ -30,9 +30,9 @@ const ActionableText = ({
 }) => {
   const actionColor = getActionColorExt(
     color,
-    CARDS_BLUE_COLOR,
-    CARDS_BLUE_COLOR,
-    CARDS_DISABLED_COLOR,
+    BINARY_COLOR_BLUE_40,
+    BINARY_COLOR_BLUE_40,
+    BINARY_COLOR_GRAY_40,
     isActive,
     isHover,
     isDisabled

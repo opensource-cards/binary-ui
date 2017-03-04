@@ -1,4 +1,4 @@
-import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40 } from 'binary-ui-styles';
 import React from 'react';
 import ActionListItemIconRender from '../components-styled/ActionListItemIconRender';
 import ActionLinkInlineWrapper from '../components-styled/ActionLinkInlineWrapper';
@@ -65,7 +65,7 @@ export default class ActionLinkInline extends React.Component {
     return (
       <ActionableIconWrapper>
         <ActionableIcon
-          color={CARDS_BLUE_COLOR}
+          color={BINARY_COLOR_BLUE_40}
           IconComponent={IconComponent}
           isActive={isActive}
           isHover={isHover}
@@ -101,7 +101,7 @@ export default class ActionLinkInline extends React.Component {
         >
           {IconComponentLeft && this.renderIconComponent(IconComponentLeft)}
           <ActionableText
-            color={CARDS_BLUE_COLOR}
+            color={BINARY_COLOR_BLUE_40}
             isActive={isActive}
             isHover={isHover}
             isDisabled={isDisabled}

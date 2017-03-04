@@ -1,3 +1,4 @@
+import { BINARY_COLOR_GREEN_30, BINARY_COLOR_RED_40, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import styled from 'styled-components/native';
 import { INFO, CONFIRM, CRITICAL } from '../../constants/alert-types';
 
@@ -13,15 +14,15 @@ transition: background-color 0.5s ease-in-out;
 */
 
 export const ALERT_STYLE = `
-  background-color: rgba(110, 110, 110, 0.8);
+  background-color: ${BINARY_COLOR_GRAY_40};
 `;
 
 export const ALERT_STYLE_CONFIRM = `
-  background-color: rgba(0, 158, 107, 0.8);
+  background-color: ${BINARY_COLOR_GREEN_30};
 `;
 
 export const ALERT_STYLE_CRITICAL = `
-  background-color: rgba(196, 3, 51, 0.8);
+  background-color: ${BINARY_COLOR_RED_40};
 `;
 
 // NOTE: does not work because of 'styled-components/native' bug

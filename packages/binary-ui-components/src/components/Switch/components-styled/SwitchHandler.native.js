@@ -1,5 +1,5 @@
 import React from 'react';
-import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
 import styled from 'styled-components/native';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
@@ -19,12 +19,12 @@ const SWITCH_HANDLE_STYLE = `
 */
 
 const SWITCH_HANDLE_CHECKED_STYLE = {
-  borderColor: CARDS_BLUE_COLOR,
+  borderColor: BINARY_COLOR_BLUE_40,
   left: 22,
 };
 
 const SWITCH_HANDLE_UNCHECKED_STYLE = {
-  borderColor: '#d3d3d3',
+  borderColor: BINARY_COLOR_GRAY_80,
   left: 0,
 };
 

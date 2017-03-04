@@ -1,7 +1,6 @@
+import { BINARY_COLOR_GRAY_20 } from 'binary-ui-styles';
 import { FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles/web';
 import styled from 'styled-components';
-
-const VERY_DARK_COLOR = '#404040';
 
 export default styled.div`
   ${NO_SELECT_CSS}
@@ -17,5 +16,5 @@ export default styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 13px;
-  color: ${VERY_DARK_COLOR};
+  color: ${BINARY_COLOR_GRAY_20};
 `;

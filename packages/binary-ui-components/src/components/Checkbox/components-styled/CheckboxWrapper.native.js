@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
 import { TouchableOpacity } from 'react-native';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
@@ -16,7 +16,7 @@ const CHECKBOX_WRAPPER_STYLE = `
 
 export const CHECKBOX_CHECKED_WRAPPER_STYLE = {
   alignItems: 'center',
-  backgroundColor: CARDS_BLUE_COLOR,
+  backgroundColor: BINARY_COLOR_BLUE_40,
   borderColor: 'white',
   flex: 1,
   justifyContent: 'center',
@@ -25,7 +25,7 @@ export const CHECKBOX_CHECKED_WRAPPER_STYLE = {
 
 export const CHECKBOX_UNCHECKED_WRAPPER_STYLE = {
   backgroundColor: 'white',
-  borderColor: '#C0C0C0',
+  borderColor: BINARY_COLOR_GRAY_80,
 };
 
 const CheckboxWrapperBase = styled.View`

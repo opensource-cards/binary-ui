@@ -1,4 +1,4 @@
-import { CARDS_BLUE_COLOR } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40 } from 'binary-ui-styles';
 import React from 'react';
 import ActionableIcon from '../../ActionableIcon';
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
@@ -24,7 +24,7 @@ export default class ActionButton extends React.Component {
     return (
       <ActionableIconWrapper>
         <ActionableIcon
-          color={CARDS_BLUE_COLOR}
+          color={BINARY_COLOR_BLUE_40}
           IconComponent={IconComponent}
           isDisabled={isDisabled}
         />

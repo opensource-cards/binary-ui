@@ -1,7 +1,7 @@
 import {
   LIST_ITEM_HEIGHT,
-  CARDS_BLUE_COLOR,
-  CARDS_DISABLED_COLOR,
+  BINARY_COLOR_BLUE_40,
+  BINARY_COLOR_GRAY_40,
 } from 'binary-ui-styles';
 
 export const LIST_ITEM_HALF_HEIGHT = LIST_ITEM_HEIGHT / 2;
@@ -19,13 +19,13 @@ export const CARDS_ICON_ACTIVE_CSS = `
 `;
 
 export const CARDS_ICON_HOVER_CSS = `
-  color: ${CARDS_BLUE_COLOR};
+  color: ${BINARY_COLOR_BLUE_40};
 `;
 
 export const CARDS_ICON_DISABLED_CSS = `
-  color: ${CARDS_DISABLED_COLOR};
+  color: ${BINARY_COLOR_GRAY_40};
 `;
 
 export const CARDS_BUTTON_CSS = `
-  color: ${CARDS_BLUE_COLOR};
+  color: ${BINARY_COLOR_BLUE_40};
 `;
