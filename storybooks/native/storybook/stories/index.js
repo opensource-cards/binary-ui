@@ -20,6 +20,7 @@ import {
   CardsIconCheckAlt,
   CardsIconCopy,
   CardsIconDelete,
+  CardsIconDeleteCharacter,
   CardsIconDeleteAlt,
   CardsIconDeleted,
   CardsIconDeletedAlt,
@@ -172,6 +173,9 @@ storiesOf('binary-ui-icons main', module)
     <CardsIconCopy color={COLOR} size={SIZE} />
   ))
   .add('CardsIconDelete', () => (
+    <CardsIconDelete color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconDeleteCharacter', () => (
     <CardsIconDelete color={COLOR} size={SIZE} />
   ))
   .add('CardsIconDeleteAlt', () => (

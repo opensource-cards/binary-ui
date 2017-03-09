@@ -20,6 +20,7 @@ import {
   CardsIconCheckAlt,
   CardsIconCopy,
   CardsIconDelete,
+  CardsIconDeleteCharacter,
   CardsIconDeleteAlt,
   CardsIconDeleted,
   CardsIconDeletedAlt,
@@ -31,6 +32,7 @@ import {
   CardsIconFavorites,
   CardsIconFavoritesAlt,
   CardsIconGoogle,
+  CardsIconGithub,
   CardsIconInfo,
   CardsIconInfoAlt,
   CardsIconInstagram,
@@ -146,6 +148,9 @@ storiesOf('binary-ui-icons main', module)
   ))
   .add('CardsIconDelete', () => (
     <CardsIconDelete color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconDeleteCharacter', () => (
+    <CardsIconDeleteCharacter color={COLOR} size={SIZE} />
   ))
   .add('CardsIconDeleteAlt', () => (
     <CardsIconDeleteAlt color={COLOR} size={SIZE} />
@@ -298,6 +303,9 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .add('CardsIconGoogle', () => (
     <CardsIconGoogle color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconGithub', () => (
+    <CardsIconGithub color={COLOR} size={SIZE} />
   ))
   .add('CardsIconInstagram', () => (
     <CardsIconInstagram color={COLOR} size={SIZE} />

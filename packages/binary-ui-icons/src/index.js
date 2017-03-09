@@ -18,6 +18,7 @@ import CardsIconCheck from './components-icons/CardsIconCheck';
 import CardsIconCheckAlt from './components-icons/CardsIconCheckAlt';
 import CardsIconCopy from './components-icons/CardsIconCopy';
 import CardsIconDelete from './components-icons/CardsIconDelete';
+import CardsIconDeleteCharacter from './components-icons/CardsIconDeleteCharacter';
 import CardsIconDeleteAlt from './components-icons/CardsIconDeleteAlt';
 import CardsIconDeleted from './components-icons/CardsIconDeleted';
 import CardsIconDeletedAlt from './components-icons/CardsIconDeletedAlt';
@@ -29,6 +30,7 @@ import CardsIconFacetimeAlt from './components-icons/CardsIconFacetimeAlt';
 import CardsIconFavorites from './components-icons/CardsIconFavorites';
 import CardsIconFavoritesAlt from './components-icons/CardsIconFavoritesAlt';
 import CardsIconGoogle from './components-icons/CardsIconGoogle';
+import CardsIconGithub from './components-icons/CardsIconGithub';
 import CardsIconInfo from './components-icons/CardsIconInfo';
 import CardsIconInfoAlt from './components-icons/CardsIconInfoAlt';
 import CardsIconInstagram from './components-icons/CardsIconInstagram';
@@ -99,6 +101,7 @@ export {
   CardsIconCheckAlt,
   CardsIconCopy,
   CardsIconDelete,
+  CardsIconDeleteCharacter,
   CardsIconDeleteAlt,
   CardsIconDeleted,
   CardsIconDeletedAlt,
@@ -110,6 +113,7 @@ export {
   CardsIconFavorites,
   CardsIconFavoritesAlt,
   CardsIconGoogle,
+  CardsIconGithub,
   CardsIconInfo,
   CardsIconInfoAlt,
   CardsIconInstagram,
@@ -181,6 +185,7 @@ export default {
   CardsIconCheckAlt,
   CardsIconCopy,
   CardsIconDelete,
+  CardsIconDeleteCharacter,
   CardsIconDeleteAlt,
   CardsIconDeleted,
   CardsIconDeletedAlt,
@@ -192,6 +197,7 @@ export default {
   CardsIconFavorites,
   CardsIconFavoritesAlt,
   CardsIconGoogle,
+  CardsIconGithub,
   CardsIconInfo,
   CardsIconInfoAlt,
   CardsIconInstagram,
