@@ -14,6 +14,14 @@ const TextInputStyled = styled.textarea`
   wrap: soft;
 `;
 
+const propTypes = {
+  onRef: React.PropTypes.func,
+};
+
+const defaultProps = {
+  onRef: undefined,
+};
+
 export default class TextareaInput extends React.Component {
 
   constructor(props) {
@@ -29,6 +37,7 @@ export default class TextareaInput extends React.Component {
   }
 
   render() {
+    // NOTE: we do ths not to pass onRef tp a child component
     const { onRef, ...props } = this.props;
     return (
       <TextInputStyled
@@ -38,3 +47,6 @@ export default class TextareaInput extends React.Component {
     );
   }
 }
+
+TextareaInput.propTypes = propTypes;
+TextareaInput.defaultProps = defaultProps;

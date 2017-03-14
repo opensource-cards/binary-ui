@@ -198,6 +198,62 @@ storiesOf('binary-ui-components alert', module)
     <Alert text="Alert text" type={AlertTypes.CRITICAL} />
   ));
 
+class TextareaDemo1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '000',
+    };
+    this.onChange = this.onChange.bind(this);
+  }
+  onChange(value) {
+    this.setState({
+      value,
+    });
+  }
+  render() {
+    const { value } = this.state;
+    return (
+      <Textarea
+        isMoreButton
+        placeholder="Type here"
+        value={value}
+        onRef={action()}
+        onTextChange={this.onChange}
+        onMoreClick={action()}
+      />
+    );
+  }
+}
+
+class SliderDemo1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      position: 0,
+    };
+    this.onPositionChange = this.onPositionChange.bind(this);
+  }
+  onPositionChange(position) {
+    this.setState({
+      position,
+    });
+  }
+  render() {
+    const { position } = this.state;
+    return (
+      <ListItem>
+        <Slider
+          position={position}
+          renderIconLeft={() => (null)}
+          renderIconRight={() => (null)}
+          onPositionChange={this.onPositionChange}
+        />
+      </ListItem>
+    );
+  }
+}
+
 storiesOf('binary-ui-components list items', module)
   .add('with list item name text', () => (
     <ListItem>
@@ -271,12 +327,7 @@ storiesOf('binary-ui-components list items', module)
     </ListItem>
   ))
   .add('slider', () => (
-    <ListItem>
-      <Slider
-        id="slider-1"
-        onChange={action()}
-      />
-    </ListItem>
+    <SliderDemo1 />
   ))
   .add('with switch checked', () => (
     <ListItem>
@@ -317,14 +368,7 @@ storiesOf('binary-ui-components list items', module)
     </ListItem>
   ))
   .add('textarea', () => (
-    <Textarea
-      isMoreButton
-      placeholder="Type here"
-      value="000"
-      onRef={action()}
-      onTextChange={action()}
-      onMoreClick={action()}
-    />
+    <TextareaDemo1 />
   ))
   .add('textarea required', () => (
     <Textarea

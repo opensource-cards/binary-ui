@@ -21,7 +21,6 @@ export const CARDS_INPUT_RESET_CSS = `
   box-sizing: border-box;
   outline: 0;
   padding: 0;
-  user-select: all;
 `;
 
 export const LIST_ITEM_CONTENTS_BASE_CSS = `

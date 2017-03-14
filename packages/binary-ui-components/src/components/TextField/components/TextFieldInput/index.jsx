@@ -1,9 +1,13 @@
 import React from 'react';
 import TextInputStyled from '../../components-styled/TextInputStyled';
 
-const propTypes = {};
+const propTypes = {
+  onRef: React.PropTypes.func,
+};
 
-const defaultProps = {};
+const defaultProps = {
+  onRef: undefined,
+};
 
 class TextFieldInput extends React.Component {
 
@@ -20,6 +24,7 @@ class TextFieldInput extends React.Component {
   }
 
   render() {
+    // NOTE: we do ths not to pass onRef tp a child component
     const { onRef, ...props } = this.props;
     return (
       <TextInputStyled
