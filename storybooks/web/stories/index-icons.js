@@ -72,6 +72,7 @@ import {
   CardsIconTelegram,
   CardsIconText,
   CardsIconTextAlt,
+  CardsIconTime,
   CardsIconTranslation,
   CardsIconTwitter,
   CardsIconUbuntu,
@@ -262,6 +263,9 @@ storiesOf('binary-ui-icons main', module)
   ))
   .add('CardsIconTextAlt', () => (
     <CardsIconTextAlt color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconTime', () => (
+    <CardsIconTime color={COLOR} size={SIZE} />
   ))
   .add('CardsIconTranslation', () => (
     <CardsIconTranslation color={COLOR} size={SIZE} />

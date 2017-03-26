@@ -70,6 +70,7 @@ import CardsIconStoreAlt from './components-icons/CardsIconStoreAlt';
 import CardsIconTelegram from './components-icons/CardsIconTelegram';
 import CardsIconText from './components-icons/CardsIconText';
 import CardsIconTextAlt from './components-icons/CardsIconTextAlt';
+import CardsIconTime from './components-icons/CardsIconTime';
 import CardsIconTranslation from './components-icons/CardsIconTranslation';
 import CardsIconTwitter from './components-icons/CardsIconTwitter';
 import CardsIconUbuntu from './components-icons/CardsIconUbuntu';
@@ -153,6 +154,7 @@ export {
   CardsIconTelegram,
   CardsIconText,
   CardsIconTextAlt,
+  CardsIconTime,
   CardsIconTranslation,
   CardsIconTwitter,
   CardsIconUbuntu,
@@ -237,6 +239,7 @@ export default {
   CardsIconTelegram,
   CardsIconText,
   CardsIconTextAlt,
+  CardsIconTime,
   CardsIconTranslation,
   CardsIconTwitter,
   CardsIconUbuntu,

@@ -8,10 +8,12 @@ const propTypes = {
   isMoreButton: React.PropTypes.bool,
   text: React.PropTypes.string.isRequired,
   onMoreClick: React.PropTypes.func,
+  IconComponent: React.PropTypes.func,
 };
 
 const defaultProps = {
   isMoreButton: true,
+  IconComponent: CardsIconMore,
 };
 
 export default class ListItemContentText extends React.Component {
@@ -29,13 +31,13 @@ export default class ListItemContentText extends React.Component {
   }
 
   render() {
-    const { isMoreButton, text } = this.props;
+    const { isMoreButton, text, IconComponent } = this.props;
     return (
       <ListItemContents isEdit={false} >
         {isMoreButton && (
           <ActionListItemIcon
             onClick={this.onMoreClick}
-            IconComponent={CardsIconMore}
+            IconComponent={IconComponent}
           />
         )}
         <ListItemContentTextWrapper>
