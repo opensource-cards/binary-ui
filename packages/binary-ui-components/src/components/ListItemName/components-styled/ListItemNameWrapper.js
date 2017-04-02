@@ -1,15 +1,11 @@
 import styled from 'styled-components';
-import {
-  CURSOR_POINTER_CSS,
-  NO_EDIT_CSS,
-  EDIT_CSS,
-} from '../../../utils/styles';
-import { HIGHTLIGHT_CSS } from '../../../utils/styles.universal';
+import { CURSOR_POINTER_CSS, EDIT_CSS, NO_EDIT_CSS } from '../../../utils/styles';
+import { HIGHLIGHT_CSS } from '../../../utils/styles.universal';
 
 const LIST_ITEM_NAME_IS_EDIT = `
   ${EDIT_CSS}
   &:active {
-    ${HIGHTLIGHT_CSS}
+    ${HIGHLIGHT_CSS}
   }
 `;
 

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { NO_EDIT_CSS } from '../../../utils/styles';
-import { HIGHTLIGHT_CSS } from '../../../utils/styles.universal';
+import { HIGHLIGHT_CSS } from '../../../utils/styles.universal';
 
 const LIST_ITEM_IS_TAP_HIGHLIGHT = `
   &:active {
-    ${HIGHTLIGHT_CSS}
+    ${HIGHLIGHT_CSS}
   }
 `;
 

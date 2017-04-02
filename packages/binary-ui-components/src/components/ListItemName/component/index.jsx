@@ -13,12 +13,7 @@ const defaultProps = {
   isFull: false,
 };
 
-const ListItemName = ({
-  isEdit,
-  isFull,
-  children,
-  onClick,
-}) => (
+const ListItemName = ({ isEdit, isFull, children, onClick }) => (
   <ListItemNameWrapper isEdit={isEdit} isFull={isFull} onClick={onClick} >
     {children}
   </ListItemNameWrapper>

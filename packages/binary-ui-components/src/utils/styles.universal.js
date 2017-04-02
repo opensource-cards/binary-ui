@@ -6,7 +6,7 @@ import {
 
 export const LIST_ITEM_HALF_HEIGHT = LIST_ITEM_HEIGHT / 2;
 
-export const HIGHTLIGHT_CSS = `
+export const HIGHLIGHT_CSS = `
   background-color: rgba(0, 0, 0, 0.05);
 `;
 
