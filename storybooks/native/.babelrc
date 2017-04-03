@@ -5,7 +5,7 @@
       "root": ["./storybook"],
       "alias": {
         "binary-ui-components": "./lib/binary-ui-components/src",
-        "binary-ui-icons": "./lib/binary-ui-icons",
+        "binary-ui-icons/binary": "./lib/binary-ui-icons/src/components-icons",
         "binary-ui-styles": "./lib/binary-ui-styles/src"
       }
     }]

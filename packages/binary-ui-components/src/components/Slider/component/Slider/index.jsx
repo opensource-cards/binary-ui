@@ -24,6 +24,7 @@ export default class Slider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isDomInitialized: false,
       dragging: false,
     };
     this.onDraggingChanged = this.onDraggingChanged.bind(this);
@@ -51,23 +52,39 @@ export default class Slider extends React.Component {
 
   onSetBarDom(barDom) {
     this.barDom = barDom;
+    this.setState(() => ({
+      isDomInitialized: true,
+    }));
+  }
+
+  renderSliderHandler() {
+    const { isDomInitialized } = this.state;
+    if (!isDomInitialized) {
+      return null;
+    }
+    const { position, onPositionChange } = this.props;
+    const barDomBoundingClientRect = this.barDom.getBoundingClientRect();
+    return (
+      <SliderHandler
+        containerLeft={barDomBoundingClientRect.left}
+        containerWidth={barDomBoundingClientRect.width}
+        dragging={this.state.dragging}
+        position={position}
+        onDraggingChanged={this.onDraggingChanged}
+        onPositionChanged={onPositionChange}
+      />
+    );
   }
 
   render() {
-    const { position, renderIconLeft, renderIconRight, onPositionChange } = this.props;
+    const { renderIconLeft, renderIconRight } = this.props;
     return (
       <SliderContainer>
         <SliderScaleIcon>
           {renderIconLeft()}
         </SliderScaleIcon>
         <SliderScale innerRef={this.onSetBarDom} >
-          <SliderHandler
-            barDom={this.barDom}
-            dragging={this.state.dragging}
-            position={position}
-            onDraggingChanged={this.onDraggingChanged}
-            onPositionChanged={onPositionChange}
-          />
+          {this.renderSliderHandler()}
         </SliderScale>
         <SliderScaleIcon>
           {renderIconRight()}

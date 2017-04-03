@@ -1,5 +1,5 @@
+import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
-import { LIST_ITEM_HEIGHT } from '../../../utils/styles.universal';
 
 export default styled.div`
   position: relative;

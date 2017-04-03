@@ -5,16 +5,15 @@ import getPosition from '../../utils/position';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../../utils/styles.universal';
 
 const propTypes = {
-  barDom: React.PropTypes.object,
+  containerLeft: React.PropTypes.number.isRequired,
+  containerWidth: React.PropTypes.number.isRequired,
   dragging: React.PropTypes.bool.isRequired,
   position: React.PropTypes.number.isRequired,
   onDraggingChanged: React.PropTypes.func.isRequired,
   onPositionChanged: React.PropTypes.func.isRequired,
 };
 
-const defaultProps = {
-  barDom: undefined,
-};
+const defaultProps = {};
 
 export default class Slider extends React.Component {
 
@@ -52,12 +51,11 @@ export default class Slider extends React.Component {
     }
     e.preventDefault();
     e.stopImmediatePropagation();
-    const { onPositionChanged } = this.props;
-    const barDomBoundingClientRect = this.props.barDom.getBoundingClientRect();
+    const { containerLeft, containerWidth, onPositionChanged } = this.props;
     const position = getPosition(
-      barDomBoundingClientRect.left,
+      containerLeft,
       e.clientX,
-      barDomBoundingClientRect.width,
+      containerWidth,
     );
     validatePosition(position, onPositionChanged);
   }
@@ -68,12 +66,11 @@ export default class Slider extends React.Component {
     }
     e.preventDefault();
     e.stopImmediatePropagation();
-    const { onPositionChanged } = this.props;
-    const barDomBoundingClientRect = this.props.barDom.getBoundingClientRect();
+    const { containerLeft, containerWidth, onPositionChanged } = this.props;
     const position = getPosition(
-      barDomBoundingClientRect.left,
+      containerLeft,
       e.changedTouches[0].clientX,
-      barDomBoundingClientRect.width,
+      containerWidth,
     );
     validatePosition(position, onPositionChanged);
   }
@@ -83,20 +80,15 @@ export default class Slider extends React.Component {
   }
 
   render() {
-    const { barDom, position } = this.props;
-    if (!barDom) {
-      return null;
-    }
-    const barDomBoundingClientRect = barDom.getBoundingClientRect();
+    const { containerWidth, position } = this.props;
     const halfSize = LIST_ITEM_HALF_HEIGHT / 2;
-    const transformX = Math.round(position * barDomBoundingClientRect.width) - halfSize;
+    const transformX = Math.round(position * containerWidth) - halfSize;
     const transformY = - LIST_ITEM_HALF_HEIGHT / 2;
-    const style = {
-      transform: `translate3d(${transformX}px, ${transformY}px, 0)`,
-    };
     return (
       <SliderHandler
-        style={style}
+        style={{
+          transform: `translate3d(${transformX}px, ${transformY}px, 0)`,
+        }}
         onMouseDown={this.onGestureResponderStart}
         onTouchStart={this.onGestureResponderStart}
       />
