@@ -1,4 +1,4 @@
-import { CardsIconArrowDown } from 'binary-ui-icons';
+import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import React from 'react';
 import SelectOption from '../components-styled/SelectOption';
 import SelectStyled from '../components-styled/SelectStyled';
@@ -48,7 +48,7 @@ export default class Select extends React.Component {
       <ListItemContents>
         <ActionListItemIcon
           onClick={this.onClick}
-          IconComponent={CardsIconArrowDown}
+          IconComponent={ArrowDown}
         />
         <SelectStyled
           innerRef={this.setSelectRef}

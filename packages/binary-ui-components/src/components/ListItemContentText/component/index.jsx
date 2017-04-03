@@ -1,4 +1,4 @@
-import { CardsIconMore } from 'binary-ui-icons';
+import More from 'binary-ui-icons/binary/More';
 import React from 'react';
 import ListItemContentTextWrapper from '../components-styled/ListItemContentTextWrapper';
 import ListItemContents from '../../ListItemContents';
@@ -13,7 +13,7 @@ const propTypes = {
 
 const defaultProps = {
   isMoreButton: true,
-  IconComponent: CardsIconMore,
+  IconComponent: More,
 };
 
 export default class ListItemContentText extends React.Component {

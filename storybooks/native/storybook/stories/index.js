@@ -4,7 +4,7 @@ import {
   CardsIconAddCard,
   CardsIconApple,
   CardsIconAppleAlt,
-  CardsIconArrowDown,
+  ArrowDown,
   CardsIconArrowLeft,
   CardsIconArrowRight,
   CardsIconArrowUp,
@@ -134,8 +134,8 @@ storiesOf('binary-ui-icons main', module)
   .add('CardsIconAddCard', () => (
     <CardsIconAddCard color={COLOR} size={SIZE} />
   ))
-  .add('CardsIconArrowDown', () => (
-    <CardsIconArrowDown color={COLOR} size={SIZE} />
+  .add('ArrowDown', () => (
+    <ArrowDown color={COLOR} size={SIZE} />
   ))
   .add('CardsIconArrowLeft', () => (
     <CardsIconArrowLeft color={COLOR} size={SIZE} />
@@ -384,7 +384,7 @@ storiesOf('binary-ui-components actionable icons', module)
       <StatusBar hidden />
       <ActionableIcon
         color="red"
-        IconComponent={CardsIconArrowDown}
+        IconComponent={ArrowDown}
         size={20}
       />
     </View>
@@ -394,7 +394,7 @@ storiesOf('binary-ui-components actionable icons', module)
       <StatusBar hidden />
       <ActionableIcon
         color="red"
-        IconComponent={CardsIconArrowDown}
+        IconComponent={ArrowDown}
         isHover
         size={20}
       />
@@ -405,7 +405,7 @@ storiesOf('binary-ui-components actionable icons', module)
       <StatusBar hidden />
       <ActionableIcon
         color="red"
-        IconComponent={CardsIconArrowDown}
+        IconComponent={ArrowDown}
         isActive
         isHover
         size={20}
@@ -417,7 +417,7 @@ storiesOf('binary-ui-components actionable icons', module)
       <StatusBar hidden />
       <ActionableIcon
         color="red"
-        IconComponent={CardsIconArrowDown}
+        IconComponent={ArrowDown}
         isDisabled
         size={20}
       />
@@ -428,13 +428,13 @@ storiesOf('binary-ui-components links', module)
   .add('action button', () => (
     <View>
       <StatusBar hidden />
-      <ActionButton IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+      <ActionButton IconComponentLeft={ArrowDown} >Put test here</ActionButton>
     </View>
   ))
   .add('action button disabled', () => (
     <View>
       <StatusBar hidden />
-      <ActionButton isDisabled IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+      <ActionButton isDisabled IconComponentLeft={ArrowDown} >Put test here</ActionButton>
     </View>
   ))
   .add('action div', () => (
@@ -446,13 +446,13 @@ storiesOf('binary-ui-components links', module)
   .add('action icon', () => (
     <View>
       <StatusBar hidden />
-      <ActionIcon IconComponent={CardsIconArrowDown} title="Icon" />
+      <ActionIcon IconComponent={ArrowDown} title="Icon" />
     </View>
   ))
   .add('action link', () => (
     <View>
       <StatusBar hidden />
-      <ActionLink IconComponentLeft={CardsIconArrowDown} >
+      <ActionLink IconComponentLeft={ArrowDown} >
         ActionLink
       </ActionLink>
     </View>
@@ -460,7 +460,7 @@ storiesOf('binary-ui-components links', module)
   .add('action link inline', () => (
     <View>
       <StatusBar hidden />
-      <ActionLinkInline IconComponentRight={CardsIconArrowDown} >
+      <ActionLinkInline IconComponentRight={ArrowDown} >
         ActionLinkInline
       </ActionLinkInline>
     </View>
@@ -486,7 +486,7 @@ storiesOf('binary-ui-components  list items', module)
           isEdit
           isFull
           onClick={action()}
-          IconComponent={CardsIconArrowDown}
+          IconComponent={ArrowDown}
         >
           list item name text
         </ListItemNameText>
@@ -500,7 +500,7 @@ storiesOf('binary-ui-components  list items', module)
         <ListItemNameText
           isEdit
           onClick={action()}
-          IconComponent={CardsIconArrowDown}
+          IconComponent={ArrowDown}
         >
           Button Label
         </ListItemNameText>

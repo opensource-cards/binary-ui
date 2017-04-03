@@ -1,4 +1,4 @@
-import { CardsIconMore } from 'binary-ui-icons';
+import More from 'binary-ui-icons/binary/More';
 import React from 'react';
 import ListItemTextareaWrapper from '../ListItemTextareaWrapper';
 import TextareaInput from '../TextareaInput/index';
@@ -73,7 +73,7 @@ export default class Textarea extends React.Component {
           {...props}
         />
         {isMoreButton && (
-          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={CardsIconMore} />
+          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={More} />
         )}
       </ListItemTextareaWrapper>
     );

@@ -1,13 +1,14 @@
-import { CardsIconArrowDown, CardsIconArrowRight } from 'binary-ui-icons';
+import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
+import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import ButtonTypes from '../constants/button-component-types';
 
 export function getArrowClass(type) {
   switch (type) {
     case ButtonTypes.RIGHT:
-      return CardsIconArrowRight;
+      return ArrowRight;
     case ButtonTypes.DOWN:
-      return CardsIconArrowDown;
+      return ArrowDown;
     default:
-      return CardsIconArrowDown;
+      return ArrowDown;
   }
 }

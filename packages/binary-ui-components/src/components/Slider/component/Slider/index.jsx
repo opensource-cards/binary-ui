@@ -1,4 +1,5 @@
-import { CardsIconMinusAlt, CardsIconNewAlt } from 'binary-ui-icons';
+import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
+import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import React from 'react';
 import SliderHandler from '../SliderHandler';
 import SliderContainer from '../../components-styled/SliderContainer';
@@ -14,8 +15,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  renderIconLeft: () => (<CardsIconMinusAlt />),
-  renderIconRight: () => (<CardsIconNewAlt />),
+  renderIconLeft: () => (<MinusAlt />),
+  renderIconRight: () => (<NewAlt />),
 };
 
 export default class Slider extends React.Component {

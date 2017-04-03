@@ -1,7 +1,5 @@
 import { storiesOf, action } from '@kadira/storybook';
-import {
-  CardsIconArrowDown,
-} from 'binary-ui-icons';
+import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
 import ActionableText from 'binary-ui-components/components/ActionableText';
 import ActionableListItemIcon from 'binary-ui-components/components/ActionableListItemIcon';
@@ -42,7 +40,7 @@ storiesOf('binary-ui-components actionable icons', module)
   .add('regular', () => (
     <ActionableIcon
       color="red"
-      IconComponent={CardsIconArrowDown}
+      IconComponent={ArrowDown}
       size={20}
       onClick={action()}
     />
@@ -50,7 +48,7 @@ storiesOf('binary-ui-components actionable icons', module)
   .add('hover', () => (
     <ActionableIcon
       color="red"
-      IconComponent={CardsIconArrowDown}
+      IconComponent={ArrowDown}
       isHover
       size={20}
       onClick={action()}
@@ -59,7 +57,7 @@ storiesOf('binary-ui-components actionable icons', module)
   .add('hover & active', () => (
     <ActionableIcon
       color="red"
-      IconComponent={CardsIconArrowDown}
+      IconComponent={ArrowDown}
       isActive
       isHover
       size={20}
@@ -69,7 +67,7 @@ storiesOf('binary-ui-components actionable icons', module)
   .add('disabled', () => (
     <ActionableIcon
       color="red"
-      IconComponent={CardsIconArrowDown}
+      IconComponent={ArrowDown}
       isDisabled
       size={20}
       onClick={action()}
@@ -117,20 +115,20 @@ storiesOf('binary-ui-components actionable text', module)
 storiesOf('binary-ui-components actionable list item icon', module)
   .add('regular', () => (
     <ActionableListItemIcon
-      IconComponent={CardsIconArrowDown}
+      IconComponent={ArrowDown}
       onClick={action()}
     />
   ))
   .add('hover', () => (
     <ActionableListItemIcon
-      IconComponent={CardsIconArrowDown}
+      IconComponent={ArrowDown}
       isHover
       onClick={action()}
     />
   ))
   .add('hover & active', () => (
     <ActionableListItemIcon
-      IconComponent={CardsIconArrowDown}
+      IconComponent={ArrowDown}
       isActive
       isHover
       onClick={action()}
@@ -138,7 +136,7 @@ storiesOf('binary-ui-components actionable list item icon', module)
   ))
   .add('disabled', () => (
     <ActionableListItemIcon
-      IconComponent={CardsIconArrowDown}
+      IconComponent={ArrowDown}
       isDisabled
       onClick={action()}
     />
@@ -146,13 +144,13 @@ storiesOf('binary-ui-components actionable list item icon', module)
 
 storiesOf('binary-ui-components links', module)
   .add('action button', () => (
-    <ActionButton onClick={action()} IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+    <ActionButton onClick={action()} IconComponentLeft={ArrowDown} >Put test here</ActionButton>
   ))
   .add('action button disabled', () => (
-    <ActionButton isDisabled onClick={action()} IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+    <ActionButton isDisabled onClick={action()} IconComponentLeft={ArrowDown} >Put test here</ActionButton>
   ))
   .add('action button submit disabled', () => (
-    <ActionButton isDisabled onClick={action()} type="submit" IconComponentLeft={CardsIconArrowDown} >Put test here</ActionButton>
+    <ActionButton isDisabled onClick={action()} type="submit" IconComponentLeft={ArrowDown} >Put test here</ActionButton>
   ))
   .add('action div', () => (
     <ActionDiv onClick={action()} >Put test here</ActionDiv>
@@ -161,28 +159,28 @@ storiesOf('binary-ui-components links', module)
     <ActionDiv isDisabled onClick={action()} >Put test here</ActionDiv>
   ))
   .add('action icon', () => (
-    <ActionIcon title="Icon" onClick={action()} IconComponent={CardsIconArrowDown} />
+    <ActionIcon title="Icon" onClick={action()} IconComponent={ArrowDown} />
   ))
   .add('action icon disabled', () => (
-    <ActionIcon isDisabled title="Icon" onClick={action()} IconComponent={CardsIconArrowDown} />
+    <ActionIcon isDisabled title="Icon" onClick={action()} IconComponent={ArrowDown} />
   ))
   .add('action link', () => (
-    <ActionLink onClick={action()} IconComponentLeft={CardsIconArrowDown} >
+    <ActionLink onClick={action()} IconComponentLeft={ArrowDown} >
       ActionLink
     </ActionLink>
   ))
   .add('action link disabled', () => (
-    <ActionLink isDisabled onClick={action()} IconComponentLeft={CardsIconArrowDown} >
+    <ActionLink isDisabled onClick={action()} IconComponentLeft={ArrowDown} >
       ActionLink
     </ActionLink>
   ))
   .add('action link inline', () => (
-    <ActionLinkInline href="http://try.cards/" onClick={action()} IconComponentRight={CardsIconArrowDown} >
+    <ActionLinkInline href="http://try.cards/" onClick={action()} IconComponentRight={ArrowDown} >
       ActionLinkInline
     </ActionLinkInline>
   ))
   .add('action link inline disabled', () => (
-    <ActionLinkInline href="http://try.cards/" isDisabled onClick={action()} IconComponentRight={CardsIconArrowDown} >
+    <ActionLinkInline href="http://try.cards/" isDisabled onClick={action()} IconComponentRight={ArrowDown} >
       ActionLinkInline
     </ActionLinkInline>
   ));
@@ -261,7 +259,7 @@ storiesOf('binary-ui-components list items', module)
         isEdit
         isFull
         onClick={action()}
-        IconComponent={CardsIconArrowDown}
+        IconComponent={ArrowDown}
       >
         list item name text
       </ListItemNameText>
@@ -272,7 +270,7 @@ storiesOf('binary-ui-components list items', module)
       <ListItemNameText
         isEdit
         onClick={action()}
-        IconComponent={CardsIconArrowDown}
+        IconComponent={ArrowDown}
       >
         Button Label
       </ListItemNameText>
@@ -419,7 +417,7 @@ storiesOf('binary-ui-components textview', module)
     >
       Look at "<a href="#">this</a>" text and a
       <ActionButton
-        IconComponentRight={CardsIconArrowDown}
+        IconComponentRight={ArrowDown}
         disabled={false}
         style={undefined}
         type="submit"

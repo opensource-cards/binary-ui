@@ -1,4 +1,4 @@
-import { CardsIconMore } from 'binary-ui-icons';
+import More from 'binary-ui-icons/binary/More';
 import React from 'react';
 import TextContent from '../components-styled/TextContent';
 import TextContentBlock from '../components-styled/TextContentBlock';
@@ -41,7 +41,7 @@ export default class TextView extends React.Component {
           {children}
         </Content>
         {isMoreButton && (
-          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={CardsIconMore} />
+          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={More} />
         )}
       </TextWrapper>
     );

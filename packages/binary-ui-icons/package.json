@@ -13,6 +13,7 @@
     "build": "npm run lint && npm run clean && babel src --out-dir lib && npm test"
   },
   "files": [
+    "binary",
     "lib"
   ],
   "main": "lib/index.js",

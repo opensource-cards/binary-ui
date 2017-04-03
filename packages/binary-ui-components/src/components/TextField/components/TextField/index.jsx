@@ -1,4 +1,4 @@
-import { CardsIconMore } from 'binary-ui-icons';
+import More from 'binary-ui-icons/binary/More';
 import invariant from 'invariant';
 import { addMask, removeMask } from 'mask-parser';
 import React from 'react';
@@ -126,7 +126,7 @@ export default class TextField extends React.Component {
         isTypingHighlight={isActive}
       >
         {isMoreButton && (
-          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={CardsIconMore} />
+          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={More} />
         )}
         <TextFieldInput
           type={this.getTypeHtml(type)}
