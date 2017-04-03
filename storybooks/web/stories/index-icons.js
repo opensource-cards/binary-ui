@@ -1,4 +1,5 @@
-import { storiesOf, action } from '@kadira/storybook';
+import infoAddon from '@kadira/react-storybook-addon-info';
+import { setAddon, storiesOf, action } from '@kadira/storybook';
 import Add from 'binary-ui-icons/binary/Add';
 import AddCard from 'binary-ui-icons/binary/AddCard';
 import Apple from 'binary-ui-icons/binary/Apple';
@@ -84,6 +85,8 @@ import Youtube from 'binary-ui-icons/binary/Youtube';
 import React from 'react';
 import styled from 'styled-components';
 
+setAddon(infoAddon);
+
 const COLOR = '#0F9BE0';
 const SIZE = 100;
 
@@ -92,259 +95,259 @@ const AddStyled = styled(Add)`
 `;
 
 storiesOf('binary-ui-icons with styles', module)
-  .add('styled', () => (
+  .addWithInfo('styled', () => (
     <AddStyled color={COLOR} size={SIZE} />
   ))
-  .add('styled events', () => (
+  .addWithInfo('styled events', () => (
     <AddStyled color={COLOR} size={SIZE} onMouseDown={action()} />
   ));
 
 storiesOf('binary-ui-icons main', module)
-  .add('Add', () => (
+  .addWithInfo('Add', () => (
     <Add color={COLOR} size={SIZE} />
   ))
-  .add('AddCard', () => (
+  .addWithInfo('AddCard', () => (
     <AddCard color={COLOR} size={SIZE} />
   ))
-  .add('ArrowDown', () => (
+  .addWithInfo('ArrowDown', () => (
     <ArrowDown color={COLOR} size={SIZE} />
   ))
-  .add('ArrowLeft', () => (
+  .addWithInfo('ArrowLeft', () => (
     <ArrowLeft color={COLOR} size={SIZE} />
   ))
-  .add('ArrowRight', () => (
+  .addWithInfo('ArrowRight', () => (
     <ArrowRight color={COLOR} size={SIZE} />
   ))
-  .add('ArrowUp', () => (
+  .addWithInfo('ArrowUp', () => (
     <ArrowUp color={COLOR} size={SIZE} />
   ))
-  .add('Call', () => (
+  .addWithInfo('Call', () => (
     <Call color={COLOR} size={SIZE} />
   ))
-  .add('CallAlt', () => (
+  .addWithInfo('CallAlt', () => (
     <CallAlt color={COLOR} size={SIZE} />
   ))
-  .add('CameraAlt', () => (
+  .addWithInfo('CameraAlt', () => (
     <CameraAlt color={COLOR} size={SIZE} />
   ))
-  .add('Cancel', () => (
+  .addWithInfo('Cancel', () => (
     <Cancel color={COLOR} size={SIZE} />
   ))
-  .add('Card', () => (
+  .addWithInfo('Card', () => (
     <Card color={COLOR} size={SIZE} />
   ))
-  .add('CardAlt', () => (
+  .addWithInfo('CardAlt', () => (
     <CardAlt color={COLOR} size={SIZE} />
   ))
-  .add('Check', () => (
+  .addWithInfo('Check', () => (
     <Check color={COLOR} size={SIZE} />
   ))
-  .add('CheckAlt', () => (
+  .addWithInfo('CheckAlt', () => (
     <CheckAlt color={COLOR} size={SIZE} />
   ))
-  .add('Copy', () => (
+  .addWithInfo('Copy', () => (
     <Copy color={COLOR} size={SIZE} />
   ))
-  .add('Delete', () => (
+  .addWithInfo('Delete', () => (
     <Delete color={COLOR} size={SIZE} />
   ))
-  .add('DeleteCharacter', () => (
+  .addWithInfo('DeleteCharacter', () => (
     <DeleteCharacter color={COLOR} size={SIZE} />
   ))
-  .add('DeleteAlt', () => (
+  .addWithInfo('DeleteAlt', () => (
     <DeleteAlt color={COLOR} size={SIZE} />
   ))
-  .add('Deleted', () => (
+  .addWithInfo('Deleted', () => (
     <Deleted color={COLOR} size={SIZE} />
   ))
-  .add('DeletedAlt', () => (
+  .addWithInfo('DeletedAlt', () => (
     <DeletedAlt color={COLOR} size={SIZE} />
   ))
-  .add('Done', () => (
+  .addWithInfo('Done', () => (
     <Done color={COLOR} size={SIZE} />
   ))
-  .add('Favorites', () => (
+  .addWithInfo('Favorites', () => (
     <Favorites color={COLOR} size={SIZE} />
   ))
-  .add('FavoritesAlt', () => (
+  .addWithInfo('FavoritesAlt', () => (
     <FavoritesAlt color={COLOR} size={SIZE} />
   ))
-  .add('Info', () => (
+  .addWithInfo('Info', () => (
     <Info color={COLOR} size={SIZE} />
   ))
-  .add('InfoAlt', () => (
+  .addWithInfo('InfoAlt', () => (
     <InfoAlt color={COLOR} size={SIZE} />
   ))
-  .add('Keypad', () => (
+  .addWithInfo('Keypad', () => (
     <Keypad color={COLOR} size={SIZE} />
   ))
-  .add('KeypadAlt', () => (
+  .addWithInfo('KeypadAlt', () => (
     <KeypadAlt color={COLOR} size={SIZE} />
   ))
-  .add('Location', () => (
+  .addWithInfo('Location', () => (
     <Location color={COLOR} size={SIZE} />
   ))
-  .add('LocationAlt', () => (
+  .addWithInfo('LocationAlt', () => (
     <LocationAlt color={COLOR} size={SIZE} />
   ))
-  .add('Locked', () => (
+  .addWithInfo('Locked', () => (
     <Locked color={COLOR} size={SIZE} />
   ))
-  .add('LockedAlt', () => (
+  .addWithInfo('LockedAlt', () => (
     <LockedAlt color={COLOR} size={SIZE} />
   ))
-  .add('Logout', () => (
+  .addWithInfo('Logout', () => (
     <Logout color={COLOR} size={SIZE} />
   ))
-  .add('Minus', () => (
+  .addWithInfo('Minus', () => (
     <Minus color={COLOR} size={SIZE} />
   ))
-  .add('MinusAlt', () => (
+  .addWithInfo('MinusAlt', () => (
     <MinusAlt color={COLOR} size={SIZE} />
   ))
-  .add('More', () => (
+  .addWithInfo('More', () => (
     <More color={COLOR} size={SIZE} />
   ))
-  .add('MoreAlt', () => (
+  .addWithInfo('MoreAlt', () => (
     <MoreAlt color={COLOR} size={SIZE} />
   ))
-  .add('New', () => (
+  .addWithInfo('New', () => (
     <New color={COLOR} size={SIZE} />
   ))
-  .add('NewAlt', () => (
+  .addWithInfo('NewAlt', () => (
     <NewAlt color={COLOR} size={SIZE} />
   ))
-  .add('Open', () => (
+  .addWithInfo('Open', () => (
     <Open color={COLOR} size={SIZE} />
   ))
-  .add('Save', () => (
+  .addWithInfo('Save', () => (
     <Save color={COLOR} size={SIZE} />
   ))
-  .add('Scan', () => (
+  .addWithInfo('Scan', () => (
     <Scan color={COLOR} size={SIZE} />
   ))
-  .add('ScanAlt', () => (
+  .addWithInfo('ScanAlt', () => (
     <ScanAlt color={COLOR} size={SIZE} />
   ))
-  .add('Search', () => (
+  .addWithInfo('Search', () => (
     <Search color={COLOR} size={SIZE} />
   ))
-  .add('Settings', () => (
+  .addWithInfo('Settings', () => (
     <Settings color={COLOR} size={SIZE} />
   ))
-  .add('SettingsAlt', () => (
+  .addWithInfo('SettingsAlt', () => (
     <SettingsAlt color={COLOR} size={SIZE} />
   ))
-  .add('Share', () => (
+  .addWithInfo('Share', () => (
     <Share color={COLOR} size={SIZE} />
   ))
-  .add('ShareAlt', () => (
+  .addWithInfo('ShareAlt', () => (
     <ShareAlt color={COLOR} size={SIZE} />
   ))
-  .add('Stack', () => (
+  .addWithInfo('Stack', () => (
     <Stack color={COLOR} size={SIZE} />
   ))
-  .add('StackFull', () => (
+  .addWithInfo('StackFull', () => (
     <StackFull color={COLOR} size={SIZE} />
   ))
-  .add('StackNew', () => (
+  .addWithInfo('StackNew', () => (
     <StackNew color={COLOR} size={SIZE} />
   ))
-  .add('Store', () => (
+  .addWithInfo('Store', () => (
     <Store color={COLOR} size={SIZE} />
   ))
-  .add('StoreAlt', () => (
+  .addWithInfo('StoreAlt', () => (
     <StoreAlt color={COLOR} size={SIZE} />
   ))
-  .add('Text', () => (
+  .addWithInfo('Text', () => (
     <Text color={COLOR} size={SIZE} />
   ))
-  .add('TextAlt', () => (
+  .addWithInfo('TextAlt', () => (
     <TextAlt color={COLOR} size={SIZE} />
   ))
-  .add('Time', () => (
+  .addWithInfo('Time', () => (
     <Time color={COLOR} size={SIZE} />
   ))
-  .add('Translation', () => (
+  .addWithInfo('Translation', () => (
     <Translation color={COLOR} size={SIZE} />
   ))
-  .add('Uncheck', () => (
+  .addWithInfo('Uncheck', () => (
     <Uncheck color={COLOR} size={SIZE} />
   ))
-  .add('User', () => (
+  .addWithInfo('User', () => (
     <User color={COLOR} size={SIZE} />
   ))
-  .add('UserAlt', () => (
+  .addWithInfo('UserAlt', () => (
     <UserAlt color={COLOR} size={SIZE} />
   ));
 
 storiesOf('binary-ui-icons companies & social', module)
-  .add('Apple', () => (
+  .addWithInfo('Apple', () => (
     <Apple color={COLOR} size={SIZE} />
   ))
-  .add('AppleAlt', () => (
+  .addWithInfo('AppleAlt', () => (
     <AppleAlt color={COLOR} size={SIZE} />
   ))
-  .add('Cards', () => (
+  .addWithInfo('Cards', () => (
     <Cards color={COLOR} size={SIZE} />
   ))
-  .add('CardsAlt', () => (
+  .addWithInfo('CardsAlt', () => (
     <CardsAlt color={COLOR} size={SIZE} />
   ))
-  .add('Designer', () => (
+  .addWithInfo('Designer', () => (
     <Designer color={COLOR} size={SIZE} />
   ))
-  .add('Facebook', () => (
+  .addWithInfo('Facebook', () => (
     <Facebook color={COLOR} size={SIZE} />
   ))
-  .add('Facetime', () => (
+  .addWithInfo('Facetime', () => (
     <Facetime color={COLOR} size={SIZE} />
   ))
-  .add('FacetimeAlt', () => (
+  .addWithInfo('FacetimeAlt', () => (
     <FacetimeAlt color={COLOR} size={SIZE} />
   ))
-  .add('Google', () => (
+  .addWithInfo('Google', () => (
     <Google color={COLOR} size={SIZE} />
   ))
-  .add('Github', () => (
+  .addWithInfo('Github', () => (
     <Github color={COLOR} size={SIZE} />
   ))
-  .add('Instagram', () => (
+  .addWithInfo('Instagram', () => (
     <Instagram color={COLOR} size={SIZE} />
   ))
-  .add('InstagramAlt', () => (
+  .addWithInfo('InstagramAlt', () => (
     <InstagramAlt color={COLOR} size={SIZE} />
   ))
-  .add('Linkedin', () => (
+  .addWithInfo('Linkedin', () => (
     <Linkedin color={COLOR} size={SIZE} />
   ))
-  .add('LinkedinAlt', () => (
+  .addWithInfo('LinkedinAlt', () => (
     <LinkedinAlt color={COLOR} size={SIZE} />
   ))
-  .add('Medium', () => (
+  .addWithInfo('Medium', () => (
     <Medium color={COLOR} size={SIZE} />
   ))
-  .add('Microsoft', () => (
+  .addWithInfo('Microsoft', () => (
     <Microsoft color={COLOR} size={SIZE} />
   ))
-  .add('Redhat', () => (
+  .addWithInfo('Redhat', () => (
     <Redhat color={COLOR} size={SIZE} />
   ))
-  .add('Telegram', () => (
+  .addWithInfo('Telegram', () => (
     <Telegram color={COLOR} size={SIZE} />
   ))
-  .add('Twitter', () => (
+  .addWithInfo('Twitter', () => (
     <Twitter color={COLOR} size={SIZE} />
   ))
-  .add('Ubuntu', () => (
+  .addWithInfo('Ubuntu', () => (
     <Ubuntu color={COLOR} size={SIZE} />
   ))
-  .add('Whatsapp', () => (
+  .addWithInfo('Whatsapp', () => (
     <Whatsapp color={COLOR} size={SIZE} />
   ))
-  .add('WhatsappAlt', () => (
+  .addWithInfo('WhatsappAlt', () => (
     <WhatsappAlt color={COLOR} size={SIZE} />
   ))
-  .add('Youtube', () => (
+  .addWithInfo('Youtube', () => (
     <Youtube color={COLOR} size={SIZE} />
   ));

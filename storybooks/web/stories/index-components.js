@@ -1,4 +1,5 @@
-import { storiesOf, action } from '@kadira/storybook';
+import infoAddon from '@kadira/react-storybook-addon-info';
+import { setAddon, storiesOf, action } from '@kadira/storybook';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
 import ActionableText from 'binary-ui-components/components/ActionableText';
@@ -33,11 +34,13 @@ import styled from 'styled-components';
 import uuid from 'uuid';
 import { getImg } from './resources/fake-img';
 
+setAddon(infoAddon);
+
 const text = 'Important: for compatibility set container width in pixels!';
 const selectedPhotoGuid = uuid.v1();
 
 storiesOf('binary-ui-components actionable icons', module)
-  .add('regular', () => (
+  .addWithInfo('regular', () => (
     <ActionableIcon
       color="red"
       IconComponent={ArrowDown}
@@ -45,7 +48,7 @@ storiesOf('binary-ui-components actionable icons', module)
       onClick={action()}
     />
   ))
-  .add('hover', () => (
+  .addWithInfo('hover', () => (
     <ActionableIcon
       color="red"
       IconComponent={ArrowDown}
@@ -54,7 +57,7 @@ storiesOf('binary-ui-components actionable icons', module)
       onClick={action()}
     />
   ))
-  .add('hover & active', () => (
+  .addWithInfo('hover & active', () => (
     <ActionableIcon
       color="red"
       IconComponent={ArrowDown}
@@ -64,7 +67,7 @@ storiesOf('binary-ui-components actionable icons', module)
       onClick={action()}
     />
   ))
-  .add('disabled', () => (
+  .addWithInfo('disabled', () => (
     <ActionableIcon
       color="red"
       IconComponent={ArrowDown}
@@ -75,7 +78,7 @@ storiesOf('binary-ui-components actionable icons', module)
   ));
 
 storiesOf('binary-ui-components actionable text', module)
-  .add('regular', () => (
+  .addWithInfo('regular', () => (
     <ActionableText
       color="red"
       onClick={action()}
@@ -83,7 +86,7 @@ storiesOf('binary-ui-components actionable text', module)
       regular
     </ActionableText>
   ))
-  .add('hover', () => (
+  .addWithInfo('hover', () => (
     <ActionableText
       color="red"
       isHover
@@ -92,7 +95,7 @@ storiesOf('binary-ui-components actionable text', module)
       hover
     </ActionableText>
   ))
-  .add('hover & active', () => (
+  .addWithInfo('hover & active', () => (
     <ActionableText
       color="red"
       isActive
@@ -102,7 +105,7 @@ storiesOf('binary-ui-components actionable text', module)
       hover & active
     </ActionableText>
   ))
-  .add('disabled', () => (
+  .addWithInfo('disabled', () => (
     <ActionableText
       color="red"
       isDisabled
@@ -113,20 +116,20 @@ storiesOf('binary-ui-components actionable text', module)
   ));
 
 storiesOf('binary-ui-components actionable list item icon', module)
-  .add('regular', () => (
+  .addWithInfo('regular', () => (
     <ActionableListItemIcon
       IconComponent={ArrowDown}
       onClick={action()}
     />
   ))
-  .add('hover', () => (
+  .addWithInfo('hover', () => (
     <ActionableListItemIcon
       IconComponent={ArrowDown}
       isHover
       onClick={action()}
     />
   ))
-  .add('hover & active', () => (
+  .addWithInfo('hover & active', () => (
     <ActionableListItemIcon
       IconComponent={ArrowDown}
       isActive
@@ -134,7 +137,7 @@ storiesOf('binary-ui-components actionable list item icon', module)
       onClick={action()}
     />
   ))
-  .add('disabled', () => (
+  .addWithInfo('disabled', () => (
     <ActionableListItemIcon
       IconComponent={ArrowDown}
       isDisabled
@@ -143,56 +146,56 @@ storiesOf('binary-ui-components actionable list item icon', module)
   ));
 
 storiesOf('binary-ui-components links', module)
-  .add('action button', () => (
+  .addWithInfo('action button', () => (
     <ActionButton onClick={action()} IconComponentLeft={ArrowDown} >Put test here</ActionButton>
   ))
-  .add('action button disabled', () => (
+  .addWithInfo('action button disabled', () => (
     <ActionButton isDisabled onClick={action()} IconComponentLeft={ArrowDown} >Put test here</ActionButton>
   ))
-  .add('action button submit disabled', () => (
+  .addWithInfo('action button submit disabled', () => (
     <ActionButton isDisabled onClick={action()} type="submit" IconComponentLeft={ArrowDown} >Put test here</ActionButton>
   ))
-  .add('action div', () => (
+  .addWithInfo('action div', () => (
     <ActionDiv onClick={action()} >Put test here</ActionDiv>
   ))
-  .add('action div disabled', () => (
+  .addWithInfo('action div disabled', () => (
     <ActionDiv isDisabled onClick={action()} >Put test here</ActionDiv>
   ))
-  .add('action icon', () => (
+  .addWithInfo('action icon', () => (
     <ActionIcon title="Icon" onClick={action()} IconComponent={ArrowDown} />
   ))
-  .add('action icon disabled', () => (
+  .addWithInfo('action icon disabled', () => (
     <ActionIcon isDisabled title="Icon" onClick={action()} IconComponent={ArrowDown} />
   ))
-  .add('action link', () => (
+  .addWithInfo('action link', () => (
     <ActionLink onClick={action()} IconComponentLeft={ArrowDown} >
       ActionLink
     </ActionLink>
   ))
-  .add('action link disabled', () => (
+  .addWithInfo('action link disabled', () => (
     <ActionLink isDisabled onClick={action()} IconComponentLeft={ArrowDown} >
       ActionLink
     </ActionLink>
   ))
-  .add('action link inline', () => (
+  .addWithInfo('action link inline', () => (
     <ActionLinkInline href="http://try.cards/" onClick={action()} IconComponentRight={ArrowDown} >
       ActionLinkInline
     </ActionLinkInline>
   ))
-  .add('action link inline disabled', () => (
+  .addWithInfo('action link inline disabled', () => (
     <ActionLinkInline href="http://try.cards/" isDisabled onClick={action()} IconComponentRight={ArrowDown} >
       ActionLinkInline
     </ActionLinkInline>
   ));
 
 storiesOf('binary-ui-components alert', module)
-  .add('info', () => (
+  .addWithInfo('info', () => (
     <Alert text="Alert text" type={AlertTypes.INFO} />
   ))
-  .add('confirm', () => (
+  .addWithInfo('confirm', () => (
     <Alert text="Alert text" type={AlertTypes.CONFIRM} />
   ))
-  .add('critical', () => (
+  .addWithInfo('critical', () => (
     <Alert text="Alert text" type={AlertTypes.CRITICAL} />
   ));
 
@@ -253,7 +256,7 @@ class SliderDemo1 extends React.Component {
 }
 
 storiesOf('binary-ui-components list items', module)
-  .add('with list item name text', () => (
+  .addWithInfo('with list item name text', () => (
     <ListItem>
       <ListItemNameText
         isEdit
@@ -265,7 +268,7 @@ storiesOf('binary-ui-components list items', module)
       </ListItemNameText>
     </ListItem>
   ))
-  .add('with button', () => (
+  .addWithInfo('with button', () => (
     <ListItem>
       <ListItemNameText
         isEdit
@@ -277,7 +280,7 @@ storiesOf('binary-ui-components list items', module)
       <Button text={text} type={ButtonTypes.RIGHT} onClick={action()} />
     </ListItem>
   ))
-  .add('with text (number)', () => (
+  .addWithInfo('with text (number)', () => (
     <ListItem>
       <ListItemNameText>
         Text Field
@@ -294,7 +297,7 @@ storiesOf('binary-ui-components list items', module)
       />
     </ListItem>
   ))
-  .add('with text (phone number)', () => (
+  .addWithInfo('with text (phone number)', () => (
     <ListItem>
       <ListItemNameText>
         Text Field Phone Number
@@ -310,7 +313,7 @@ storiesOf('binary-ui-components list items', module)
       />
     </ListItem>
   ))
-  .add('with text (!isValid)', () => (
+  .addWithInfo('with text (!isValid)', () => (
     <ListItem>
       <ListItemNameText>
         ListItemContentText
@@ -324,10 +327,10 @@ storiesOf('binary-ui-components list items', module)
       />
     </ListItem>
   ))
-  .add('slider', () => (
+  .addWithInfo('slider', () => (
     <SliderDemo1 />
   ))
-  .add('with switch checked', () => (
+  .addWithInfo('with switch checked', () => (
     <ListItem>
       <ListItemNameText>
         Switch Label
@@ -339,7 +342,7 @@ storiesOf('binary-ui-components list items', module)
       />
     </ListItem>
   ))
-  .add('with switch unchecked', () => (
+  .addWithInfo('with switch unchecked', () => (
     <ListItem>
       <ListItemNameText>
         Switch Label
@@ -350,7 +353,7 @@ storiesOf('binary-ui-components list items', module)
       />
     </ListItem>
   ))
-  .add('with select', () => (
+  .addWithInfo('with select', () => (
     <ListItem>
       <ListItemNameText>
         Select Label
@@ -365,10 +368,10 @@ storiesOf('binary-ui-components list items', module)
       />
     </ListItem>
   ))
-  .add('textarea', () => (
+  .addWithInfo('textarea', () => (
     <TextareaDemo1 />
   ))
-  .add('textarea required', () => (
+  .addWithInfo('textarea required', () => (
     <Textarea
       isMoreButton
       isValid={false}
@@ -379,7 +382,7 @@ storiesOf('binary-ui-components list items', module)
       onMoreClick={action()}
     />
   ))
-  .add('photo selector', () => (
+  .addWithInfo('photo selector', () => (
     <ListItemPhotoWrapper
       isSelectable
       limit={3}
@@ -396,7 +399,7 @@ storiesOf('binary-ui-components list items', module)
       photoFit="contain"
     />
   ))
-  .add('with text', () => (
+  .addWithInfo('with text', () => (
     <ListItem>
       <ListItemNameText>
         ListItemContentText
@@ -410,7 +413,7 @@ storiesOf('binary-ui-components list items', module)
   ));
 
 storiesOf('binary-ui-components textview', module)
-  .add('all', () => (
+  .addWithInfo('all', () => (
     <TextView
       isMoreButton
       onMoreClick={action()}
@@ -429,14 +432,14 @@ storiesOf('binary-ui-components textview', module)
   ));
 
 storiesOf('binary-ui-components checkbox', module)
-  .add('checked', () => (
+  .addWithInfo('checked', () => (
     <Checkbox
       id="checkbox-1"
       isChecked
       onChange={action()}
     />
   ))
-  .add('unchecked', () => (
+  .addWithInfo('unchecked', () => (
     <Checkbox
       id="checkbox-2"
       onChange={action()}
@@ -444,7 +447,7 @@ storiesOf('binary-ui-components checkbox', module)
   ));
 
 storiesOf('binary-ui-components section', module)
-  .add('main', () => (
+  .addWithInfo('main', () => (
     <Section name="Section Title">
       Section Text
     </Section>

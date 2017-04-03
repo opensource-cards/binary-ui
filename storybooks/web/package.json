@@ -17,6 +17,7 @@
     "uuid": "^3.0.1"
   },
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.4.0",
     "@kadira/storybook": "^2.21.0",
     "babel": "^6.3.26",
     "babel-cli": "^6.11.4",
