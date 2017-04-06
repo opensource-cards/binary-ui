@@ -1,9 +1,2 @@
-import ActionButton from './component';
-import actionButtonModel from './models/action-button-model';
-
-export default ActionButton;
-
-export {
-  actionButtonModel,
-};
-
+export { default } from './component';
+export { default as actionButtonModel } from './models/action-button-model';

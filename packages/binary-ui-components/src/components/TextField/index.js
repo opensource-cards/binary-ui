@@ -1,8 +1,2 @@
-import TextField from './components/TextField';
-import TextFieldTypes from './constants/text-field-component-types';
-
-export default TextField;
-
-export {
-  TextFieldTypes,
-};
+export { default } from './components/TextField';
+export { default as TextFieldTypes } from './constants/text-field-component-types';

@@ -1,3 +1,1 @@
-import Switch from './component';
-
-export default Switch;
+export { default } from './component';

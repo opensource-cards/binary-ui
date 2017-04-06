@@ -1,8 +1,2 @@
-import Select from './component';
-import selectOptionModel from './models/SelectOptionModel';
-
-export default Select;
-
-export {
-  selectOptionModel,
-};
+export { default } from './component';
+export { default as selectOptionModel } from './models/SelectOptionModel';

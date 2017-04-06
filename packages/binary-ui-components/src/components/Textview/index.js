@@ -1,3 +1,1 @@
-import TextView from './component';
-
-export default TextView;
+export { default } from './component';

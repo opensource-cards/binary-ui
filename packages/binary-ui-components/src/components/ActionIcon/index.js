@@ -1,3 +1,1 @@
-import ActionIcon from './components';
-
-export default ActionIcon;
+export { default } from './components';

@@ -1,3 +1,1 @@
-import ListItemContents from './component';
-
-export default ListItemContents;
+export { default } from './component';

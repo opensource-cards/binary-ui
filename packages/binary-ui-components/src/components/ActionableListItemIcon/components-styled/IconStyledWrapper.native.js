@@ -1,9 +1,8 @@
 import styled from 'styled-components/native';
 import ActionableIcon from '../../ActionableIcon';
 import React from 'react';
-import {
-  TouchableOpacity,
-} from 'react-native';
+import { TouchableOpacity } from 'react-native';
+
 const StyledActionableIcon = styled(ActionableIcon)`
   flex-shrink: 0;
   padding-top: 9;

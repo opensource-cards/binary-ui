@@ -1,3 +1,1 @@
-import ActionableIcon from './component';
-
-export default ActionableIcon;
+export { default } from './component/ActionableIcon';

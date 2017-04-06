@@ -1,3 +1,1 @@
-import ListItemNameText from './component';
-
-export default ListItemNameText;
+export { default } from './component';

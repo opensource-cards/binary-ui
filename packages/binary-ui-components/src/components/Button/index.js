@@ -1,8 +1,2 @@
-import Button from './component';
-import ButtonTypes from './constants/button-component-types';
-
-export default Button;
-
-export {
-  ButtonTypes,
-};
+export { default } from './component';
+export { default as ButtonTypes } from './constants/button-component-types';

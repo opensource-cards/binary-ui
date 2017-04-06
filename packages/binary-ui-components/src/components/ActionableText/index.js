@@ -1,3 +1,1 @@
-import ActionableText from './component';
-
-export default ActionableText;
+export { default } from './component';

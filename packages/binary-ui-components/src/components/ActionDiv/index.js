@@ -1,3 +1,1 @@
-import ActionDiv from './components';
-
-export default ActionDiv;
+export { default } from './components';

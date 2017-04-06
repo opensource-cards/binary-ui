@@ -1,3 +1,1 @@
-import ListItemPhotoWrapper from './components/ListItemPhotoWrapper';
-
-export default ListItemPhotoWrapper;
+export { default } from './components/ListItemPhotoWrapper';

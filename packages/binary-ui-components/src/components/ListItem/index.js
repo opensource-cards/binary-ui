@@ -1,3 +1,1 @@
-import ListItem from './components-styled/ListItem';
-
-export default ListItem;
+export { default } from './components-styled/ListItem';

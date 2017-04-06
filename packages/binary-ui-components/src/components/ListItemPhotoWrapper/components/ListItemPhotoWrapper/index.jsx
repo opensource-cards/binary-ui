@@ -12,7 +12,6 @@ const propTypes = {
   selectedPhotoGuid: React.PropTypes.string,
   uploadedPhotos: React.PropTypes.array,
   onPhotoClick: React.PropTypes.func,
-  onSelectPhotoUrl: React.PropTypes.func,
   onPhotoUpload: React.PropTypes.func,
 };
 
@@ -36,25 +35,10 @@ export default class ListItemPhotoWrapper extends React.Component {
       const newPhoto = {
         url: upload.target.result,
         guid: uuid.v1(),
-        isNew: true,
       };
       this.props.onPhotoUpload(newPhoto);
-      this.setFirstPhotoSelectedIfFirst([
-        ...this.props.uploadedPhotos,
-        newPhoto,
-      ]);
     };
     reader.readAsDataURL(file);
-  }
-
-  setFirstPhotoSelectedIfFirst(uploadedPhotos) {
-    const isFirstPhoto = uploadedPhotos.length === 1;
-    if (isFirstPhoto) {
-      const { onSelectPhotoUrl } = this.props;
-      if (onSelectPhotoUrl) {
-        onSelectPhotoUrl(uploadedPhotos[0].guid);
-      }
-    }
   }
 
   renderNodes() {

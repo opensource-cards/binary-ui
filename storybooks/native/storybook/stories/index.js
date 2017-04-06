@@ -628,11 +628,9 @@ storiesOf('binary-ui-components  list items', module)
       uploadedPhotos={[{
         url: getImg(),
         guid: selectedPhotoGuid,
-        isNew: false,
       }]}
       selectedPhotoGuid={selectedPhotoGuid}
       onPhotoClick={action()}
-      onSelectPhotoUrl={action()}
       onPhotoUpload={action()}
       photoFit="contain"
     />

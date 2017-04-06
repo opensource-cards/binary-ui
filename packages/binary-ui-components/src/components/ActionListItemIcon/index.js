@@ -1,3 +1,1 @@
-import ActionListItemIcon from './components/ActionListItemIcon';
-
-export default ActionListItemIcon;
+export { default } from './components/ActionListItemIcon';

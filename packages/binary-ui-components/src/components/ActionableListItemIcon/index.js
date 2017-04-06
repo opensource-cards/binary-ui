@@ -1,3 +1,1 @@
-import ActionableListItemIcon from './component';
-
-export default ActionableListItemIcon;
+export { default } from './component';
