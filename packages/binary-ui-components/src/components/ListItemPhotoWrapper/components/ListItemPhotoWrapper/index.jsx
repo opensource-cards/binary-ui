@@ -13,7 +13,7 @@ const propTypes = {
   uploadedPhotos: React.PropTypes.array,
   onPhotoClick: React.PropTypes.func,
   onSelectPhotoUrl: React.PropTypes.func,
-  onSetUploadedPhotos: React.PropTypes.func,
+  onPhotoUpload: React.PropTypes.func,
 };
 
 const defaultProps = {
@@ -38,12 +38,11 @@ export default class ListItemPhotoWrapper extends React.Component {
         guid: uuid.v1(),
         isNew: true,
       };
-      const uploadedPhotos = [
+      this.props.onPhotoUpload(newPhoto);
+      this.setFirstPhotoSelectedIfFirst([
         ...this.props.uploadedPhotos,
         newPhoto,
-      ];
-      this.props.onSetUploadedPhotos(uploadedPhotos);
-      this.setFirstPhotoSelectedIfFirst(uploadedPhotos);
+      ]);
     };
     reader.readAsDataURL(file);
   }
