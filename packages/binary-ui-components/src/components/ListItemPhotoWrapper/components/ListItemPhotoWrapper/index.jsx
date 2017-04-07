@@ -41,13 +41,22 @@ export default class ListItemPhotoWrapper extends React.Component {
     reader.readAsDataURL(file);
   }
 
+  getOnPhotoClick(photoGuid) {
+    return () => {
+      const { onPhotoClick } = this.props;
+      if (!onPhotoClick) {
+        return;
+      }
+      onPhotoClick(photoGuid);
+    };
+  }
+
   renderNodes() {
     const {
       isSelectable,
       photoFit,
       selectedPhotoGuid,
       uploadedPhotos,
-      onPhotoClick,
     } = this.props;
     return uploadedPhotos.map((photo) => {
       const selected = isSelectable && photo.guid === selectedPhotoGuid;
@@ -57,7 +66,7 @@ export default class ListItemPhotoWrapper extends React.Component {
           photoFit={photoFit}
           selected={selected}
           url={photo.url}
-          onPhotoClick={() => onPhotoClick(photo.guid)}
+          onPhotoClick={this.getOnPhotoClick(photo.guid)}
         />
       );
     });
