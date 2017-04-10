@@ -6,11 +6,13 @@ const SurfaceRendererNativeAndWeb = createSurfaceRendererNativeAndWeb(Group, Sha
 
 const propTypes = {
   color: React.PropTypes.string,
-  size: React.PropTypes.number,
+  size: React.PropTypes.number.isRequired,
   IconContentComponent: React.PropTypes.func.isRequired,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  color: undefined,
+};
 
 const SurfaceRendererNative = ({ color, size, IconContentComponent }) => (
   <SurfaceRendererNativeAndWeb

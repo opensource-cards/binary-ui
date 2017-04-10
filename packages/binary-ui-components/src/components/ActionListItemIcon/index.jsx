@@ -1,17 +1,20 @@
 import React from 'react';
-import ActionableListItemIcon from '../../../ActionableListItemIcon';
-import { isLeftButton } from '../../../../utils/events';
+import ActionableListItemIcon from '../ActionableListItemIcon';
+import { isLeftButton } from '../../utils/events';
 
 const propTypes = {
-  color: React.PropTypes.string,
   isDisabled: React.PropTypes.bool,
-  size: React.PropTypes.number,
   onMouseEnter: React.PropTypes.func,
   onMouseLeave: React.PropTypes.func,
   onTapDown: React.PropTypes.func,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  isDisabled: false,
+  onMouseEnter: undefined,
+  onMouseLeave: undefined,
+  onTapDown: undefined,
+};
 
 export default class ActionListItemIcon extends React.Component {
 

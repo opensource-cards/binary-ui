@@ -13,6 +13,7 @@ const propTypes = {
 
 const defaultProps = {
   isMoreButton: true,
+  onMoreClick: undefined,
   IconComponent: More,
 };
 

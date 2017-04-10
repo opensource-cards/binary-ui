@@ -13,7 +13,8 @@
     "build": "npm run lint && npm run clean && babel src --out-dir lib && npm test"
   },
   "files": [
-    "lib"
+    "lib",
+    "mobile"
   ],
   "main": "lib/index.js",
   "dependencies": {

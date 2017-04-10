@@ -6,15 +6,12 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 import ListItemContents from '../../ListItemContents';
 
 const propTypes = {
-  items: React.PropTypes.arrayOf(React.PropTypes.any).isRequired,
+  items: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
   selected: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func.isRequired,
 };
 
-const defaultProps = {
-  items: [],
-  selected: '',
-};
+const defaultProps = {};
 
 export default class Select extends React.Component {
 
@@ -33,9 +30,7 @@ export default class Select extends React.Component {
 
   onChange(e) {
     const { onChange } = this.props;
-    if (onChange) {
-      onChange(e.target.value);
-    }
+    onChange(e.target.value);
   }
 
   setSelectRef(selectRef) {
@@ -43,7 +38,7 @@ export default class Select extends React.Component {
   }
 
   render() {
-    const { items } = this.props;
+    const { items, selected } = this.props;
     return (
       <ListItemContents>
         <ActionListItemIcon
@@ -52,7 +47,7 @@ export default class Select extends React.Component {
         />
         <SelectStyled
           innerRef={this.setSelectRef}
-          value={this.props.selected}
+          value={selected}
           onChange={this.onChange}
         >
           {items.map((listItem) => (

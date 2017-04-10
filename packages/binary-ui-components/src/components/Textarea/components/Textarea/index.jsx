@@ -1,13 +1,13 @@
 import More from 'binary-ui-icons/binary/More';
 import React from 'react';
 import ListItemTextareaWrapper from '../ListItemTextareaWrapper';
-import TextareaInput from '../TextareaInput/index';
+import TextareaInput from '../TextareaInput';
 import ActionListItemIcon from '../../../ActionListItemIcon';
 
 const propTypes = {
-  isMoreButton: React.PropTypes.bool.isRequired,
+  isMoreButton: React.PropTypes.bool,
   isValid: React.PropTypes.bool,
-  value: React.PropTypes.string,
+  value: React.PropTypes.string.isRequired,
   onBlur: React.PropTypes.func,
   onFocus: React.PropTypes.func,
   onTextChange: React.PropTypes.func.isRequired,
@@ -15,9 +15,12 @@ const propTypes = {
 };
 
 const defaultProps = {
-  value: '',
   isMoreButton: false,
   isValid: true,
+  onBlur: undefined,
+  onFocus: undefined,
+  onTextChange: undefined,
+  onMoreClick: undefined,
 };
 
 export default class Textarea extends React.Component {
@@ -67,8 +70,8 @@ export default class Textarea extends React.Component {
     return (
       <ListItemTextareaWrapper isTypingHighlight={isActive} isValid={isValid} >
         <TextareaInput
-          onChange={this.onTextChange}
           onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
+          onChange={this.onTextChange}
           onFocus={(e) => { this.onSetFocus(true); if (onFocus) { onFocus(e); } }}
           {...props}
         />

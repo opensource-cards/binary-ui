@@ -15,13 +15,15 @@ const SurfaceRendererNativeAndWeb = createSurfaceRendererNativeAndWeb(Group, Sha
 
 const propTypes = {
   color: React.PropTypes.string,
-  size: React.PropTypes.number,
+  size: React.PropTypes.number.isRequired,
   IconContentComponent: React.PropTypes.func.isRequired,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  color: undefined,
+};
 
-// Content is rendered on a second frame, to have the same checksum with a server rendering.
+// TODO: Content is rendered on a second frame, to have the same checksum with a server rendering.
 export default class SurfaceRendererWeb extends React.Component {
 
   constructor(props) {

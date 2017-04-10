@@ -1,4 +1,3 @@
 import styled from 'styled-components';
 
-export default styled.option`
-`;
+export default styled.option``;

@@ -6,7 +6,10 @@ const propTypes = {
   onClick: React.PropTypes.func,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  isDisabled: undefined,
+  onClick: undefined,
+};
 
 const ActionDiv = ({ isDisabled, onClick, ...props }) => (
   <ActionDivRender

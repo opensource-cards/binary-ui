@@ -6,12 +6,10 @@ import React from 'react';
 const propTypes = {
   isChecked: React.PropTypes.bool.isRequired,
   onChange: React.PropTypes.func.isRequired,
-  onClick: React.PropTypes.func,
+  onClick: React.PropTypes.func.isRequired,
 };
 
-const defaultProps = {
-  isChecked: false,
-};
+const defaultProps = {};
 
 export default class Checkbox extends React.Component {
 
@@ -22,13 +20,8 @@ export default class Checkbox extends React.Component {
 
   onClick(e) {
     const { isChecked, onChange, onClick } = this.props;
-    if (onClick) {
-      onClick(e);
-    }
-    if (onChange) {
-      const isCheckedNew = !isChecked;
-      onChange(e, isCheckedNew);
-    }
+    onClick(e);
+    onChange(e, !isChecked);
   }
 
   render() {

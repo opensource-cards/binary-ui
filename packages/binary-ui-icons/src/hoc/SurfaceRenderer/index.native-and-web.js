@@ -13,7 +13,10 @@ export default (Group, Shape, Surface) => {
     color: '#000000',
   };
 
-  class SurfaceRendererNativeAndWeb extends React.Component {
+  /**
+   * Assume IconContentComponent never changes.
+   */
+  class SurfaceRendererNativeAndWeb extends React.PureComponent {
 
     constructor(props) {
       super(props);

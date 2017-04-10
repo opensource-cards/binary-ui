@@ -10,7 +10,6 @@ import { isLeftButton } from '../../../utils/events';
 const propTypes = {
   children: React.PropTypes.any,
   isDisabled: React.PropTypes.bool,
-  style: React.PropTypes.object,
   onClick: React.PropTypes.func,
   onMouseEnter: React.PropTypes.func,
   onMouseLeave: React.PropTypes.func,
@@ -19,7 +18,14 @@ const propTypes = {
   IconComponentRight: React.PropTypes.func,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  children: undefined,
+  isDisabled: false,
+  onClick: undefined,
+  onMouseEnter: undefined,
+  onMouseLeave: undefined,
+  onTapDown: undefined,
+};
 
 export default class ActionLinkInline extends React.Component {
 
@@ -99,16 +105,16 @@ export default class ActionLinkInline extends React.Component {
           onMouseLeave={!isDisabled && ((e) => { this.onSetHover(false); if (onMouseLeave) { onMouseLeave(e); } })}
           {...props}
         >
-          {IconComponentLeft && this.renderIconComponent(IconComponentLeft)}
+          {IconComponentLeft ? this.renderIconComponent(IconComponentLeft) : null}
           <ActionableText
             color={BINARY_COLOR_BLUE_40}
             isActive={isActive}
-            isHover={isHover}
             isDisabled={isDisabled}
+            isHover={isHover}
           >
             {children}
           </ActionableText>
-          {IconComponentRight && this.renderIconComponent(IconComponentRight)}
+          {IconComponentRight ? this.renderIconComponent(IconComponentRight) : null}
         </ActionListItemIconRender>
       </ActionLinkInlineWrapper>
     );

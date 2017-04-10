@@ -1,2 +1,2 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
-module.exports = require('../lib/components-icons/UserAlt');
+module.exports = require('../lib/components-icons/Youtube');

@@ -9,8 +9,10 @@ const propTypes = {
 };
 
 const defaultProps = {
+  children: undefined,
   isEdit: false,
   isFull: false,
+  onClick: undefined,
 };
 
 const ListItemName = ({ isEdit, isFull, children, onClick }) => (

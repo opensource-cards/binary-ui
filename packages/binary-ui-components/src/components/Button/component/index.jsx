@@ -18,7 +18,13 @@ const defaultProps = {
 // TODO: add numberOfLines={1} to Text
 const Button = ({ text, type, onClick }) => (
   <ListItemContents isTapHighlight onClick={onClick} >
-    <ActionableListItemIcon onClick={onClick} IconComponent={getArrowClass(type)} />
+    <ActionableListItemIcon
+      isActive={false}
+      isDisabled={false}
+      isHover={false}
+      onClick={onClick}
+      IconComponent={getArrowClass(type)}
+    />
     <ButtonWrapper onClick={onClick}>
       {text}
     </ButtonWrapper>

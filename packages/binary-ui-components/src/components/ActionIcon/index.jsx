@@ -1,17 +1,20 @@
 import React from 'react';
-import ActionableIcon from '../../ActionableIcon';
-import { isLeftButton } from '../../../utils/events';
+import ActionableIcon from '../ActionableIcon';
+import { isLeftButton } from '../../utils/events';
 
 const propTypes = {
-  color: React.PropTypes.string,
-  size: React.PropTypes.number,
   isDisabled: React.PropTypes.bool,
   onMouseEnter: React.PropTypes.func,
   onMouseLeave: React.PropTypes.func,
   onTapDown: React.PropTypes.func,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  isDisabled: false,
+  onMouseEnter: undefined,
+  onMouseLeave: undefined,
+  onTapDown: undefined,
+};
 
 export default class ActionIcon extends React.Component {
 
@@ -63,8 +66,8 @@ export default class ActionIcon extends React.Component {
     return (
       <ActionableIcon
         isActive={isActive}
-        isHover={isHover}
         isDisabled={isDisabled}
+        isHover={isHover}
         onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
         onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
         onMouseEnter={!isDisabled && ((e) => { this.onSetHover(true); if (onMouseEnter) { onMouseEnter(e); } })}

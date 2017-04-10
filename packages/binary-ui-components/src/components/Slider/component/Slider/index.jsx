@@ -9,14 +9,14 @@ import getPosition from '../../utils/position';
 
 const propTypes = {
   position: React.PropTypes.number.isRequired,
-  renderIconLeft: React.PropTypes.func,
-  renderIconRight: React.PropTypes.func,
   onPositionChange: React.PropTypes.func.isRequired,
+  IconComponentLeft: React.PropTypes.func,
+  IconComponentRight: React.PropTypes.func,
 };
 
 const defaultProps = {
-  renderIconLeft: () => (<MinusAlt />),
-  renderIconRight: () => (<NewAlt />),
+  IconComponentLeft: MinusAlt,
+  IconComponentRight: NewAlt,
 };
 
 export default class Slider extends React.Component {
@@ -77,17 +77,17 @@ export default class Slider extends React.Component {
   }
 
   render() {
-    const { renderIconLeft, renderIconRight } = this.props;
+    const { IconComponentLeft, IconComponentRight } = this.props;
     return (
       <SliderContainer>
         <SliderScaleIcon>
-          {renderIconLeft()}
+          {IconComponentLeft ? <IconComponentLeft /> : null}
         </SliderScaleIcon>
         <SliderScale innerRef={this.onSetBarDom} >
           {this.renderSliderHandler()}
         </SliderScale>
         <SliderScaleIcon>
-          {renderIconRight()}
+          {IconComponentRight ? <IconComponentRight /> : null}
         </SliderScaleIcon>
       </SliderContainer>
     );

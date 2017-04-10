@@ -4,6 +4,7 @@ import { addMask, removeMask } from 'mask-parser';
 import React from 'react';
 import TextFieldInput from '../TextFieldInput';
 import TextFieldTypes from '../../constants/text-field-component-types';
+import { getTypeHtml } from '../../utils/text-field-type';
 import { isNumberMaskValid, validatePhone } from '../../utils/validation';
 import ListItemContents from '../../../ListItemContents';
 import ActionListItemIcon from '../../../ActionListItemIcon';
@@ -14,7 +15,7 @@ const propTypes = {
   isValid: React.PropTypes.bool,
   mask: React.PropTypes.string,
   type: React.PropTypes.any,
-  value: React.PropTypes.string,
+  value: React.PropTypes.string.isRequired,
   onBlur: React.PropTypes.func,
   onFocus: React.PropTypes.func,
   onMoreClick: React.PropTypes.func,
@@ -22,10 +23,14 @@ const propTypes = {
 };
 
 const defaultProps = {
+  borderColor: undefined,
   isMoreButton: false,
   isValid: true,
+  mask: undefined,
   type: TextFieldTypes.ANY,
-  value: '',
+  onBlur: undefined,
+  onFocus: undefined,
+  onMoreClick: undefined,
 };
 
 export default class TextField extends React.Component {
@@ -65,24 +70,6 @@ export default class TextField extends React.Component {
     this.setState({
       isActive,
     });
-  }
-
-  getTypeHtml(type) {
-    switch (type) {
-      case TextFieldTypes.ANY:
-      case TextFieldTypes.LINK:
-        return 'text';
-      case TextFieldTypes.EMAIL:
-        return 'email';
-      case TextFieldTypes.PASSWORD:
-        return 'password';
-      case TextFieldTypes.NUMBER:
-        return 'number';
-      case TextFieldTypes.PHONE_NUMBER:
-        return 'tel';
-      default:
-        return 'text';
-    }
   }
 
   getFormattedValue(type, mask, value) {
@@ -129,10 +116,10 @@ export default class TextField extends React.Component {
           <ActionListItemIcon onClick={this.onMoreClick} IconComponent={More} />
         )}
         <TextFieldInput
-          type={this.getTypeHtml(type)}
+          type={getTypeHtml(type)}
           value={this.getFormattedValue(type, mask, value)}
-          onChange={this.onChange}
           onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
+          onChange={this.onChange}
           onFocus={(e) => { this.onSetFocus(true); if (onFocus) { onFocus(e); } }}
           {...props}
         />

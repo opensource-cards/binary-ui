@@ -1,16 +1,18 @@
 import React from 'react';
-import SectionWrapper from '../../components-styled/SectionWrapper';
-import SectionContentWrapper from '../../components-styled/SectionContentWrapper';
-import SectionTitle from '../../components-styled/SectionTitle';
+import SectionWrapper from '../components-styled/SectionWrapper';
+import SectionContentWrapper from '../components-styled/SectionContentWrapper';
+import SectionTitle from '../components-styled/SectionTitle';
 
 const propTypes = {
-  name: React.PropTypes.any.isRequired,
   children: React.PropTypes.node,
+  name: React.PropTypes.string.isRequired,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  children: undefined,
+};
 
-const Section = ({ name, children }) => (
+const Section = ({ children, name }) => (
   <SectionWrapper>
     <SectionTitle>
       {name.toUpperCase()}

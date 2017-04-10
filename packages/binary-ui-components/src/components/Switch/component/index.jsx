@@ -10,9 +10,7 @@ const propTypes = {
   onChange: React.PropTypes.func.isRequired,
 };
 
-const defaultProps = {
-  isChecked: false,
-};
+const defaultProps = {};
 
 export default class Switch extends React.Component {
 
@@ -23,10 +21,7 @@ export default class Switch extends React.Component {
 
   onClick() {
     const { isChecked, onChange } = this.props;
-    if (onChange) {
-      const isCheckedNew = !isChecked;
-      onChange(isCheckedNew);
-    }
+    onChange(!isChecked);
   }
 
   render() {

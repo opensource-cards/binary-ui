@@ -20,12 +20,12 @@ import TextField, { TextFieldTypes } from './components/TextField';
 import TextView from './components/TextView';
 
 export {
-  ActionLink,
-  ActionLinkInline,
-  ActionDiv,
-  ActionIcon,
   ActionButton,
   actionButtonModel,
+  ActionDiv,
+  ActionIcon,
+  ActionLink,
+  ActionLinkInline,
   Alert,
   AlertTypes,
   Button,

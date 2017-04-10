@@ -13,10 +13,13 @@ const propTypes = {
 };
 
 const defaultProps = {
+  borderColor: undefined,
+  children: undefined,
   isEdit: true,
-  isValid: true,
   isTapHighlight: false,
   isTypingHighlight: false,
+  isValid: true,
+  onClick: undefined,
 };
 
 const ListItemContents = ({

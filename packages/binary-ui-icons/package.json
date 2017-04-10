@@ -16,7 +16,6 @@
     "binary",
     "lib"
   ],
-  "main": "lib/index.js",
   "dependencies": {},
   "peerDependencies": {
     "react": "~15.3.2",

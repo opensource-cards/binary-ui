@@ -12,7 +12,11 @@ const propTypes = {
 };
 
 const defaultProps = {
+  children: undefined,
   isEdit: false,
+  isFull: undefined,
+  onClick: undefined,
+  IconComponent: undefined,
 };
 
 export default class ListItemNameText extends React.Component {
@@ -37,7 +41,13 @@ export default class ListItemNameText extends React.Component {
           {children.toUpperCase()}
         </ListItemNameTextWrapper>
         {IconComponent && (
-          <ActionableListItemIcon onClick={this.onClick} IconComponent={IconComponent} />
+          <ActionableListItemIcon
+            isActive={false}
+            isDisabled={false}
+            isHover={false}
+            onClick={this.onClick}
+            IconComponent={IconComponent}
+          />
         )}
       </ListItemName>
     );

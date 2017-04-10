@@ -94,14 +94,6 @@ const AddStyled = styled(Add)`
   background-color: #FFFF00;
 `;
 
-storiesOf('binary-ui-icons with styles', module)
-  .addWithInfo('styled', () => (
-    <AddStyled color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('styled events', () => (
-    <AddStyled color={COLOR} size={SIZE} onMouseDown={action()} />
-  ));
-
 storiesOf('binary-ui-icons main', module)
   .addWithInfo('Add', () => (
     <Add color={COLOR} size={SIZE} />
@@ -350,4 +342,12 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .addWithInfo('Youtube', () => (
     <Youtube color={COLOR} size={SIZE} />
+  ));
+
+storiesOf('binary-ui-icons with styles', module)
+  .addWithInfo('styled', () => (
+    <AddStyled color={COLOR} size={SIZE} />
+  ))
+  .addWithInfo('styled events', () => (
+    <AddStyled color={COLOR} size={SIZE} onMouseDown={action()} />
   ));

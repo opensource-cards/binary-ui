@@ -2,18 +2,19 @@ import React from 'react';
 import SurfaceWrapper from '../../components-styled/SurfaceWrapper';
 import SurfaceRenderer from '../SurfaceRenderer';
 
-export default function (IconContentComponent) {
+export default (IconContentComponent) => {
   const propTypes = {
     color: React.PropTypes.string,
     size: React.PropTypes.number,
   };
 
   const defaultProps = {
+    color: undefined,
     size: 20,
   };
 
-  const CardsIconHOCComponent = ({ color, size, ...surfaceProps }) => (
-    <SurfaceWrapper size={size} {...surfaceProps} >
+  const CardsIconHOCComponent = ({ color, size, ...props }) => (
+    <SurfaceWrapper size={size} {...props} >
       <SurfaceRenderer color={color} size={size} IconContentComponent={IconContentComponent} />
     </SurfaceWrapper>
   );
@@ -22,4 +23,4 @@ export default function (IconContentComponent) {
   CardsIconHOCComponent.defaultProps = defaultProps;
 
   return CardsIconHOCComponent;
-}
+};

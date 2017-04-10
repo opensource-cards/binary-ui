@@ -82,7 +82,6 @@ import {
   CardsIconWhatsappAlt,
   CardsIconYoutube,
 } from 'binary-ui-icons';
-import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
 import {
   ActionIcon,
   ActionLink,
@@ -377,52 +376,6 @@ storiesOf('binary-ui-icons companies & social', module)
 const text = 'Button label text';
 const selectedPhotoGuid = uuid.v1();
 const selectValue = 'Ukraine (+380)';
-
-storiesOf('binary-ui-components actionable icons', module)
-  .add('regular', () => (
-    <View>
-      <StatusBar hidden />
-      <ActionableIcon
-        color="red"
-        IconComponent={ArrowDown}
-        size={20}
-      />
-    </View>
-  ))
-  .add('hover', () => (
-    <View>
-      <StatusBar hidden />
-      <ActionableIcon
-        color="red"
-        IconComponent={ArrowDown}
-        isHover
-        size={20}
-      />
-    </View>
-  ))
-  .add('hover & active', () => (
-    <View>
-      <StatusBar hidden />
-      <ActionableIcon
-        color="red"
-        IconComponent={ArrowDown}
-        isActive
-        isHover
-        size={20}
-      />
-    </View>
-  ))
-  .add('disabled', () => (
-    <View>
-      <StatusBar hidden />
-      <ActionableIcon
-        color="red"
-        IconComponent={ArrowDown}
-        isDisabled
-        size={20}
-      />
-    </View>
-  ));
 
 storiesOf('binary-ui-components links', module)
   .add('action button', () => (

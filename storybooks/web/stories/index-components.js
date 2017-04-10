@@ -1,34 +1,25 @@
 import infoAddon from '@kadira/react-storybook-addon-info';
 import { setAddon, storiesOf, action } from '@kadira/storybook';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
-import ActionableIcon from 'binary-ui-components/components/ActionableIcon';
-import ActionableText from 'binary-ui-components/components/ActionableText';
-import ActionableListItemIcon from 'binary-ui-components/components/ActionableListItemIcon';
-import {
-  ActionIcon,
-  ActionLink,
-  ActionLinkInline,
-  ActionDiv,
-  ActionButton,
-  Alert,
-  AlertTypes,
-  Button,
-  ButtonTypes,
-  Checkbox,
-  ListItem,
-  ListItemContentText,
-  ListItemNameText,
-  ListItemPhotoWrapper,
-  Section,
-  selectOptionModel,
-  Select,
-  Slider,
-  Switch,
-  Textarea,
-  TextField,
-  TextFieldTypes,
-  TextView,
-} from 'binary-ui-components';
+import ActionButton from 'binary-ui-components/mobile/ActionButton';
+import ActionDiv from 'binary-ui-components/mobile/ActionDiv';
+import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
+import ActionLink from 'binary-ui-components/mobile/ActionLink';
+import ActionLinkInline from 'binary-ui-components/mobile/ActionLinkInline';
+import Alert, { AlertTypes } from 'binary-ui-components/mobile/Alert';
+import Button, { ButtonTypes } from 'binary-ui-components/mobile/Button';
+import Checkbox from 'binary-ui-components/mobile/Checkbox';
+import ListItem from 'binary-ui-components/mobile/ListItem';
+import ListItemContentText from 'binary-ui-components/mobile/ListItemContentText';
+import ListItemNameText from 'binary-ui-components/mobile/ListItemNameText';
+import ListItemPhotoWrapper from 'binary-ui-components/mobile/ListItemPhotoWrapper';
+import Section from 'binary-ui-components/mobile/Section';
+import Select, { selectOptionModel } from 'binary-ui-components/mobile/Select';
+import Slider from 'binary-ui-components/mobile/Slider';
+import Switch from 'binary-ui-components/mobile/Switch';
+import Textarea from 'binary-ui-components/mobile/Textarea';
+import TextField, { TextFieldTypes } from 'binary-ui-components/mobile/TextField';
+import TextView from 'binary-ui-components/mobile/TextView';
 import React from 'react';
 import styled from 'styled-components';
 import uuid from 'uuid';
@@ -38,112 +29,6 @@ setAddon(infoAddon);
 
 const text = 'Important: for compatibility set container width in pixels!';
 const selectedPhotoGuid = uuid.v1();
-
-storiesOf('binary-ui-components actionable icons', module)
-  .addWithInfo('regular', () => (
-    <ActionableIcon
-      color="red"
-      IconComponent={ArrowDown}
-      size={20}
-      onClick={action()}
-    />
-  ))
-  .addWithInfo('hover', () => (
-    <ActionableIcon
-      color="red"
-      IconComponent={ArrowDown}
-      isHover
-      size={20}
-      onClick={action()}
-    />
-  ))
-  .addWithInfo('hover & active', () => (
-    <ActionableIcon
-      color="red"
-      IconComponent={ArrowDown}
-      isActive
-      isHover
-      size={20}
-      onClick={action()}
-    />
-  ))
-  .addWithInfo('disabled', () => (
-    <ActionableIcon
-      color="red"
-      IconComponent={ArrowDown}
-      isDisabled
-      size={20}
-      onClick={action()}
-    />
-  ));
-
-storiesOf('binary-ui-components actionable text', module)
-  .addWithInfo('regular', () => (
-    <ActionableText
-      color="red"
-      onClick={action()}
-    >
-      regular
-    </ActionableText>
-  ))
-  .addWithInfo('hover', () => (
-    <ActionableText
-      color="red"
-      isHover
-      onClick={action()}
-    >
-      hover
-    </ActionableText>
-  ))
-  .addWithInfo('hover & active', () => (
-    <ActionableText
-      color="red"
-      isActive
-      isHover
-      onClick={action()}
-    >
-      hover & active
-    </ActionableText>
-  ))
-  .addWithInfo('disabled', () => (
-    <ActionableText
-      color="red"
-      isDisabled
-      onClick={action()}
-    >
-      disabled
-    </ActionableText>
-  ));
-
-storiesOf('binary-ui-components actionable list item icon', module)
-  .addWithInfo('regular', () => (
-    <ActionableListItemIcon
-      IconComponent={ArrowDown}
-      onClick={action()}
-    />
-  ))
-  .addWithInfo('hover', () => (
-    <ActionableListItemIcon
-      IconComponent={ArrowDown}
-      isHover
-      onClick={action()}
-    />
-  ))
-  .addWithInfo('hover & active', () => (
-    <ActionableListItemIcon
-      IconComponent={ArrowDown}
-      isActive
-      isHover
-      onClick={action()}
-    />
-  ))
-  .addWithInfo('disabled', () => (
-    <ActionableListItemIcon
-      IconComponent={ArrowDown}
-      isDisabled
-      onClick={action()}
-    />
-  ));
 
 storiesOf('binary-ui-components links', module)
   .addWithInfo('action button', () => (
@@ -199,6 +84,91 @@ storiesOf('binary-ui-components alert', module)
     <Alert text="Alert text" type={AlertTypes.CRITICAL} />
   ));
 
+storiesOf('binary-ui-components checkbox', module)
+  .addWithInfo('checked', () => (
+    <Checkbox
+      isChecked
+      onChange={action()}
+      onClick={action()}
+    />
+  ))
+  .addWithInfo('unchecked', () => (
+    <Checkbox
+      isChecked={false}
+      onChange={action()}
+      onClick={action()}
+    />
+  ));
+
+storiesOf('binary-ui-components section', module)
+  .addWithInfo('main', () => (
+    <Section name="Section Title">
+      Section Text
+    </Section>
+  ));
+
+storiesOf('binary-ui-components select', module)
+  .addWithInfo('main', () => (
+    <Select
+      selected="uk"
+      items={[
+        selectOptionModel('ko', 'ko', 'Korea (+82)'),
+        selectOptionModel('uk', 'uk', 'Ukraine (+38)'),
+      ]}
+      onChange={action()}
+    />
+  ));
+
+storiesOf('binary-ui-components slider', module)
+  .addWithInfo('no buttons', () => (
+    <Slider
+      position={0}
+      onPositionChange={action()}
+      IconComponentLeft={null}
+      IconComponentRight={null}
+    />
+  ))
+  .addWithInfo('standard buttons', () => (
+    <Slider
+      position={0}
+      onPositionChange={action()}
+    />
+  ));
+
+storiesOf('binary-ui-components switch', module)
+  .addWithInfo('with switch checked', () => (
+    <Switch
+      isChecked
+      onChange={action()}
+    />
+  ))
+  .addWithInfo('with switch unchecked', () => (
+    <Switch
+      isChecked={false}
+      onChange={action()}
+    />
+  ));
+
+storiesOf('binary-ui-components textview', module)
+  .addWithInfo('rich', () => (
+    <TextView
+      isMoreButton
+      onMoreClick={action()}
+    >
+      Look at "<a href="#">this</a>" text and a
+      {' '}
+      <ActionButton
+        IconComponentRight={ArrowDown}
+        disabled={false}
+        style={undefined}
+        type="submit"
+        onClick={action()}
+      >
+        Link
+      </ActionButton>
+    </TextView>
+  ));
+
 class TextareaDemo1 extends React.Component {
   constructor(props) {
     super(props);
@@ -246,9 +216,9 @@ class SliderDemo1 extends React.Component {
       <ListItem>
         <Slider
           position={position}
-          renderIconLeft={() => (null)}
-          renderIconRight={() => (null)}
           onPositionChange={this.onPositionChange}
+          IconComponentLeft={null}
+          IconComponentRight={null}
         />
       </ListItem>
     );
@@ -336,7 +306,6 @@ storiesOf('binary-ui-components list items', module)
         Switch Label
       </ListItemNameText>
       <Switch
-        id="switch-1"
         isChecked
         onChange={action()}
       />
@@ -348,7 +317,7 @@ storiesOf('binary-ui-components list items', module)
         Switch Label
       </ListItemNameText>
       <Switch
-        id="switch-2"
+        isChecked={false}
         onChange={action()}
       />
     </ListItem>
@@ -408,45 +377,4 @@ storiesOf('binary-ui-components list items', module)
         text="ListItemContentText text"
       />
     </ListItem>
-  ));
-
-storiesOf('binary-ui-components textview', module)
-  .addWithInfo('all', () => (
-    <TextView
-      isMoreButton
-      onMoreClick={action()}
-    >
-      Look at "<a href="#">this</a>" text and a
-      <ActionButton
-        IconComponentRight={ArrowDown}
-        disabled={false}
-        style={undefined}
-        type="submit"
-        onClick={action()}
-      >
-        Link
-      </ActionButton>
-    </TextView>
-  ));
-
-storiesOf('binary-ui-components checkbox', module)
-  .addWithInfo('checked', () => (
-    <Checkbox
-      id="checkbox-1"
-      isChecked
-      onChange={action()}
-    />
-  ))
-  .addWithInfo('unchecked', () => (
-    <Checkbox
-      id="checkbox-2"
-      onChange={action()}
-    />
-  ));
-
-storiesOf('binary-ui-components section', module)
-  .addWithInfo('main', () => (
-    <Section name="Section Title">
-      Section Text
-    </Section>
   ));

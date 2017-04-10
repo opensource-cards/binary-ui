@@ -12,13 +12,14 @@ const propTypes = {
   selectedPhotoGuid: React.PropTypes.string,
   uploadedPhotos: React.PropTypes.array,
   onPhotoClick: React.PropTypes.func,
-  onPhotoUpload: React.PropTypes.func,
+  onPhotoUpload: React.PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   isSelectable: true,
   photoFit: 'contain',
   uploadedPhotos: [],
+  onPhotoClick: undefined,
 };
 
 export default class ListItemPhotoWrapper extends React.Component {

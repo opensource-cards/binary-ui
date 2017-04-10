@@ -23,8 +23,7 @@ const ActionButtonStyled = styled.Text`
       return CARDS_ICON_HOVER_CSS;
     }
     return '';
-  }
-  }
+  }}
 `;
 
 const propTypes = {

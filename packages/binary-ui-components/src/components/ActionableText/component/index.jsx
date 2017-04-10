@@ -7,23 +7,25 @@ import { getActionColorExt } from '../../../utils/styles-api';
 const propTypes = {
   color: React.PropTypes.string,
   isActive: React.PropTypes.bool,
+  isDisabled: React.PropTypes.bool.isRequired,
   isHover: React.PropTypes.bool,
-  isDisabled: React.PropTypes.bool,
   style: React.PropTypes.object,
   onClick: React.PropTypes.func,
 };
 
 const defaultProps = {
+  color: undefined,
   isActive: false,
   isHover: false,
-  isDisabled: false,
+  style: undefined,
+  onClick: undefined,
 };
 
 const ActionableText = ({
   color,
   isActive,
-  isHover,
   isDisabled,
+  isHover,
   style,
   onClick,
   ...props,
