@@ -12,8 +12,8 @@ const propTypes = {
   onMouseEnter: React.PropTypes.func,
   onMouseLeave: React.PropTypes.func,
   onTapDown: React.PropTypes.func,
-  IconComponentLeft: React.PropTypes.func,
-  IconComponentRight: React.PropTypes.func,
+  renderIconLeft: React.PropTypes.func,
+  renderIconRight: React.PropTypes.func,
 };
 
 const defaultProps = {
@@ -63,7 +63,7 @@ export default class ActionLink extends React.Component {
     });
   }
 
-  renderIconComponent(IconComponent) {
+  renderIcon(renderIcon) {
     const { isDisabled } = this.props;
     const { isActive, isHover } = this.state;
     return (
@@ -72,7 +72,7 @@ export default class ActionLink extends React.Component {
           isActive={isActive}
           isHover={isHover}
           isDisabled={isDisabled}
-          IconComponent={IconComponent}
+          renderIcon={renderIcon}
         />
       </ActionableIconWrapper>
     );
@@ -86,8 +86,8 @@ export default class ActionLink extends React.Component {
       onMouseEnter,
       onMouseLeave,
       onTapDown,
-      IconComponentLeft,
-      IconComponentRight,
+      renderIconLeft,
+      renderIconRight,
       ...props,
     } = this.props;
     const { isActive, isHover } = this.state;
@@ -100,7 +100,7 @@ export default class ActionLink extends React.Component {
         onMouseLeave={!isDisabled && ((e) => { this.onSetHover(false); if (onMouseLeave) { onMouseLeave(e); } })}
         {...props}
       >
-        {IconComponentLeft ? this.renderIconComponent(IconComponentLeft) : null}
+        {renderIconLeft ? this.renderIcon(renderIconLeft) : null}
         <ActionableText
           isActive={isActive}
           isDisabled={isDisabled}
@@ -108,7 +108,7 @@ export default class ActionLink extends React.Component {
         >
           {children}
         </ActionableText>
-        {IconComponentRight ? this.renderIconComponent(IconComponentRight) : null}
+        {renderIconRight ? this.renderIcon(renderIconRight) : null}
       </ActionLinkRender>
     );
   }

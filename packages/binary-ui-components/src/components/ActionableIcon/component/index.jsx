@@ -1,8 +1,8 @@
 import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import React from 'react';
-import IconStyledWrapper from '../ActionIconWrapper';
-import { CARDS_ICON_ACTIVE_STYLE } from '../../../../utils/styles.universal';
-import { getActionColorExt } from '../../../../utils/styles-api';
+import IconStyled from './IconStyled';
+import { CARDS_ICON_ACTIVE_STYLE } from '../../../utils/styles.universal';
+import { getActionColorExt } from '../../../utils/styles-api';
 
 const propTypes = {
   color: React.PropTypes.string,
@@ -12,7 +12,7 @@ const propTypes = {
   size: React.PropTypes.number,
   style: React.PropTypes.object,
   onClick: React.PropTypes.func,
-  IconComponent: React.PropTypes.func.isRequired,
+  renderIcon: React.PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -32,10 +32,10 @@ const ActionableIcon = ({
   isHover,
   style,
   onClick,
-  IconComponent,
+  renderIcon,
   ...props,
 }) => (
-  <IconStyledWrapper
+  <IconStyled
     color={getActionColorExt(
       color,
       BINARY_COLOR_BLUE_40,
@@ -48,7 +48,7 @@ const ActionableIcon = ({
     size={size}
     style={isActive ? Object.assign({}, style, CARDS_ICON_ACTIVE_STYLE) : style}
     onClick={!isDisabled && onClick}
-    IconComponent={IconComponent}
+    renderIcon={renderIcon}
     {...props}
   />
 );

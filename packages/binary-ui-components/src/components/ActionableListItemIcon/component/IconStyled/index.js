@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ActionableIcon from '../../ActionableIcon';
+import ActionableIcon from '../../../ActionableIcon';
 
 export default styled(ActionableIcon)`
   flex-shrink: 0;

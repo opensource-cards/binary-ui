@@ -8,7 +8,7 @@ const propTypes = {
   isEdit: React.PropTypes.bool,
   isFull: React.PropTypes.bool,
   onClick: React.PropTypes.func,
-  IconComponent: React.PropTypes.func,
+  renderIcon: React.PropTypes.func,
 };
 
 const defaultProps = {
@@ -16,7 +16,7 @@ const defaultProps = {
   isEdit: false,
   isFull: undefined,
   onClick: undefined,
-  IconComponent: undefined,
+  renderIcon: undefined,
 };
 
 export default class ListItemNameText extends React.Component {
@@ -34,19 +34,19 @@ export default class ListItemNameText extends React.Component {
   }
 
   render() {
-    const { isEdit, isFull, children, IconComponent } = this.props;
+    const { isEdit, isFull, children, renderIcon } = this.props;
     return (
       <ListItemName isEdit={isEdit} isFull={isFull} onClick={this.onClick} >
         <ListItemNameTextWrapper>
           {children.toUpperCase()}
         </ListItemNameTextWrapper>
-        {IconComponent && (
+        {renderIcon && (
           <ActionableListItemIcon
             isActive={false}
             isDisabled={false}
             isHover={false}
+            renderIcon={renderIcon}
             onClick={this.onClick}
-            IconComponent={IconComponent}
           />
         )}
       </ListItemName>

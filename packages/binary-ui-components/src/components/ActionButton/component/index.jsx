@@ -10,8 +10,8 @@ const propTypes = {
   isDisabled: React.PropTypes.bool,
   onClick: React.PropTypes.func,
   onSubmit: React.PropTypes.func,
-  IconComponentLeft: React.PropTypes.func,
-  IconComponentRight: React.PropTypes.func,
+  renderIconLeft: React.PropTypes.func,
+  renderIconRight: React.PropTypes.func,
 };
 
 const defaultProps = {
@@ -19,18 +19,20 @@ const defaultProps = {
   isDisabled: false,
   onClick: undefined,
   onSubmit: undefined,
+  renderIconLeft: undefined,
+  renderIconRight: undefined,
 };
 
 export default class ActionButton extends React.Component {
 
-  renderIconComponent(IconComponent) {
+  renderIcon(renderIcon) {
     const { isDisabled } = this.props;
     return (
       <ActionableIconWrapper>
         <ActionableIcon
           color={BINARY_COLOR_BLUE_40}
           isDisabled={isDisabled}
-          IconComponent={IconComponent}
+          renderIcon={renderIcon}
         />
       </ActionableIconWrapper>
     );
@@ -42,8 +44,8 @@ export default class ActionButton extends React.Component {
       isDisabled,
       onClick,
       onSubmit,
-      IconComponentLeft,
-      IconComponentRight,
+      renderIconLeft,
+      renderIconRight,
       ...props,
     } = this.props;
     return (
@@ -54,9 +56,9 @@ export default class ActionButton extends React.Component {
         {...props}
       >
         <ActionButtonWrapper>
-          {IconComponentLeft ? this.renderIconComponent(IconComponentLeft) : null}
+          {renderIconLeft ? this.renderIcon(renderIconLeft) : null}
           {children}
-          {IconComponentRight ? this.renderIconComponent(IconComponentRight) : null}
+          {renderIconRight ? this.renderIcon(renderIconRight) : null}
         </ActionButtonWrapper>
       </ActionButtonStyled>
     );

@@ -77,7 +77,7 @@ export default class Textarea extends React.Component {
           onSetFocus={this.onSetFocus}
         />
         {isMoreButton && (
-          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={More} />
+          <ActionListItemIcon renderIcon={() => (<More />)} onClick={this.onMoreClick} />
         )}
       </ListItemTextareaWrapper>
     );

@@ -3,17 +3,17 @@ import React from 'react';
 
 const propTypes = {
   style: React.PropTypes.object,
-  IconComponent: React.PropTypes.func,
+  renderIcon: React.PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
 
-const ActionIconWrapper = ({ style, IconComponent, ...props }) => {
-  const styleMerged = Object.assign({}, style, NO_SELECT_STYLE);
-  return (
-    <IconComponent style={styleMerged} {...props} />
-  );
-};
+const ActionIconWrapper = ({ style, renderIcon, ...props }) => (
+  React.cloneElement(renderIcon(), {
+    style: Object.assign({}, NO_SELECT_STYLE, style),
+    ...props,
+  })
+);
 
 ActionIconWrapper.defaultProps = defaultProps;
 ActionIconWrapper.propTypes = propTypes;

@@ -14,8 +14,8 @@ const propTypes = {
   onMouseEnter: React.PropTypes.func,
   onMouseLeave: React.PropTypes.func,
   onTapDown: React.PropTypes.func,
-  IconComponentLeft: React.PropTypes.func,
-  IconComponentRight: React.PropTypes.func,
+  renderIconLeft: React.PropTypes.func,
+  renderIconRight: React.PropTypes.func,
 };
 
 const defaultProps = {
@@ -65,17 +65,17 @@ export default class ActionLinkInline extends React.Component {
     });
   }
 
-  renderIconComponent(IconComponent) {
+  renderIcon(renderIcon) {
     const { isDisabled } = this.props;
     const { isActive, isHover } = this.state;
     return (
       <ActionableIconWrapper>
         <ActionableIcon
           color={BINARY_COLOR_BLUE_40}
-          IconComponent={IconComponent}
           isActive={isActive}
           isHover={isHover}
           isDisabled={isDisabled}
+          renderIcon={renderIcon}
         />
       </ActionableIconWrapper>
     );
@@ -89,8 +89,8 @@ export default class ActionLinkInline extends React.Component {
       onMouseEnter,
       onMouseLeave,
       onTapDown,
-      IconComponentLeft,
-      IconComponentRight,
+      renderIconLeft,
+      renderIconRight,
       ...props,
     } = this.props;
     const { isActive, isHover } = this.state;
@@ -105,7 +105,7 @@ export default class ActionLinkInline extends React.Component {
           onMouseLeave={!isDisabled && ((e) => { this.onSetHover(false); if (onMouseLeave) { onMouseLeave(e); } })}
           {...props}
         >
-          {IconComponentLeft ? this.renderIconComponent(IconComponentLeft) : null}
+          {renderIconLeft ? this.renderIcon(renderIconLeft) : null}
           <ActionableText
             color={BINARY_COLOR_BLUE_40}
             isActive={isActive}
@@ -114,7 +114,7 @@ export default class ActionLinkInline extends React.Component {
           >
             {children}
           </ActionableText>
-          {IconComponentRight ? this.renderIconComponent(IconComponentRight) : null}
+          {renderIconRight ? this.renderIcon(renderIconRight) : null}
         </ActionListItemIconRender>
       </ActionLinkInlineWrapper>
     );

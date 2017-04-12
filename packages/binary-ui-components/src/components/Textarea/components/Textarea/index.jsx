@@ -76,7 +76,7 @@ export default class Textarea extends React.Component {
           {...props}
         />
         {isMoreButton && (
-          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={More} />
+          <ActionListItemIcon renderIcon={() => (<More />)} onClick={this.onMoreClick} />
         )}
       </ListItemTextareaWrapper>
     );

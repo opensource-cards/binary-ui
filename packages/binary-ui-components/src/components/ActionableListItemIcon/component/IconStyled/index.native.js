@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import ActionableIcon from '../../ActionableIcon';
+import ActionableIcon from '../../../ActionableIcon';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 

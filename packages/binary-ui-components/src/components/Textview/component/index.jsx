@@ -10,7 +10,7 @@ const propTypes = {
   isEdit: React.PropTypes.bool,
   isMoreButton: React.PropTypes.bool,
   onMoreClick: React.PropTypes.func,
-  IconComponent: React.PropTypes.func,
+  renderIcon: React.PropTypes.func,
 };
 
 const defaultProps = {
@@ -18,7 +18,7 @@ const defaultProps = {
   isEdit: false,
   isMoreButton: false,
   onMoreClick: undefined,
-  IconComponent: More,
+  renderIcon: () => (<More />),
 };
 
 export default class TextView extends React.Component {
@@ -37,7 +37,7 @@ export default class TextView extends React.Component {
   }
 
   render() {
-    const { children, isEdit, isMoreButton, IconComponent } = this.props;
+    const { children, isEdit, isMoreButton, renderIcon } = this.props;
     const Content = typeof children === 'string'
       ? TextContent
       : TextContentBlock;
@@ -47,7 +47,7 @@ export default class TextView extends React.Component {
           {children}
         </Content>
         {isMoreButton && (
-          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={IconComponent} />
+          <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
       </TextWrapper>
     );

@@ -32,13 +32,13 @@ const selectedPhotoGuid = uuid.v1();
 
 storiesOf('binary-ui-components links', module)
   .addWithInfo('action button', () => (
-    <ActionButton onClick={action()} IconComponentLeft={ArrowDown} >Put test here</ActionButton>
+    <ActionButton onClick={action()} renderIconLeft={() => (<ArrowDown />)} >Put test here</ActionButton>
   ))
   .addWithInfo('action button disabled', () => (
-    <ActionButton isDisabled onClick={action()} IconComponentLeft={ArrowDown} >Put test here</ActionButton>
+    <ActionButton isDisabled onClick={action()} renderIconLeft={() => (<ArrowDown />)} >Put test here</ActionButton>
   ))
   .addWithInfo('action button submit disabled', () => (
-    <ActionButton isDisabled onClick={action()} type="submit" IconComponentLeft={ArrowDown} >Put test here</ActionButton>
+    <ActionButton isDisabled onClick={action()} type="submit" renderIconLeft={() => (<ArrowDown />)} >Put test here</ActionButton>
   ))
   .addWithInfo('action div', () => (
     <ActionDiv onClick={action()} >Put test here</ActionDiv>
@@ -47,28 +47,28 @@ storiesOf('binary-ui-components links', module)
     <ActionDiv isDisabled onClick={action()} >Put test here</ActionDiv>
   ))
   .addWithInfo('action icon', () => (
-    <ActionIcon title="Icon" onClick={action()} IconComponent={ArrowDown} />
+    <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} />
   ))
   .addWithInfo('action icon disabled', () => (
-    <ActionIcon isDisabled title="Icon" onClick={action()} IconComponent={ArrowDown} />
+    <ActionIcon isDisabled title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} />
   ))
   .addWithInfo('action link', () => (
-    <ActionLink onClick={action()} IconComponentLeft={ArrowDown} >
+    <ActionLink onClick={action()} renderIconLeft={() => (<ArrowDown />)} >
       ActionLink
     </ActionLink>
   ))
   .addWithInfo('action link disabled', () => (
-    <ActionLink isDisabled onClick={action()} IconComponentLeft={ArrowDown} >
+    <ActionLink isDisabled onClick={action()} renderIconLeft={() => (<ArrowDown />)} >
       ActionLink
     </ActionLink>
   ))
   .addWithInfo('action link inline', () => (
-    <ActionLinkInline href="http://try.cards/" onClick={action()} IconComponentRight={ArrowDown} >
+    <ActionLinkInline href="http://try.cards/" onClick={action()} renderIconRight={() => (<ArrowDown />)} >
       ActionLinkInline
     </ActionLinkInline>
   ))
   .addWithInfo('action link inline disabled', () => (
-    <ActionLinkInline href="http://try.cards/" isDisabled onClick={action()} IconComponentRight={ArrowDown} >
+    <ActionLinkInline href="http://try.cards/" isDisabled onClick={action()} renderIconRight={() => (<ArrowDown />)} >
       ActionLinkInline
     </ActionLinkInline>
   ));
@@ -123,9 +123,9 @@ storiesOf('binary-ui-components slider', module)
   .addWithInfo('no buttons', () => (
     <Slider
       position={0}
+      renderIconLeft={null}
+      renderIconRight={null}
       onPositionChange={action()}
-      IconComponentLeft={null}
-      IconComponentRight={null}
     />
   ))
   .addWithInfo('standard buttons', () => (
@@ -158,10 +158,10 @@ storiesOf('binary-ui-components textview', module)
       Look at "<a href="#">this</a>" text and a
       {' '}
       <ActionButton
-        IconComponentRight={ArrowDown}
         disabled={false}
         style={undefined}
         type="submit"
+        renderIconRight={() => (<ArrowDown />)}
         onClick={action()}
       >
         Link
@@ -216,9 +216,9 @@ class SliderDemo1 extends React.Component {
       <ListItem>
         <Slider
           position={position}
+          renderIconLeft={null}
+          renderIconRight={null}
           onPositionChange={this.onPositionChange}
-          IconComponentLeft={null}
-          IconComponentRight={null}
         />
       </ListItem>
     );
@@ -231,8 +231,8 @@ storiesOf('binary-ui-components list items', module)
       <ListItemNameText
         isEdit
         isFull
+        renderIcon={() => (<ArrowDown />)}
         onClick={action()}
-        IconComponent={ArrowDown}
       >
         list item name text
       </ListItemNameText>
@@ -242,8 +242,8 @@ storiesOf('binary-ui-components list items', module)
     <ListItem>
       <ListItemNameText
         isEdit
+        renderIcon={() => (<ArrowDown />)}
         onClick={action()}
-        IconComponent={ArrowDown}
       >
         Button Label
       </ListItemNameText>

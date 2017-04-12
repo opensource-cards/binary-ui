@@ -113,7 +113,7 @@ export default class TextField extends React.Component {
         isTypingHighlight={isActive}
       >
         {isMoreButton && (
-          <ActionListItemIcon onClick={this.onMoreClick} IconComponent={More} />
+          <ActionListItemIcon renderIcon={() => (<More />)} onClick={this.onMoreClick} />
         )}
         <TextFieldInput
           type={getTypeHtml(type)}

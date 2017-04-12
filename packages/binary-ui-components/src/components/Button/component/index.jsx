@@ -3,7 +3,7 @@ import ButtonWrapper from '../components-styled/ButtonWrapper';
 import ListItemContents from '../../ListItemContents';
 import ActionableListItemIcon from '../../ActionableListItemIcon';
 import ButtonTypes from '../constants/button-component-types';
-import { getArrowClass } from '../utils';
+import { renderIcon } from '../utils/render-icon';
 
 const propTypes = {
   text: React.PropTypes.string.isRequired,
@@ -23,7 +23,7 @@ const Button = ({ text, type, onClick }) => (
       isDisabled={false}
       isHover={false}
       onClick={onClick}
-      IconComponent={getArrowClass(type)}
+      renderIcon={renderIcon(type)}
     />
     <ButtonWrapper onClick={onClick}>
       {text}

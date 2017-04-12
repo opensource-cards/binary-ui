@@ -4,6 +4,7 @@ import { isLeftButton } from '../../utils/events';
 
 const propTypes = {
   isDisabled: React.PropTypes.bool,
+  renderIcon: React.PropTypes.func.isRequired,
   onMouseEnter: React.PropTypes.func,
   onMouseLeave: React.PropTypes.func,
   onTapDown: React.PropTypes.func,
@@ -57,6 +58,7 @@ export default class ActionListItemIcon extends React.Component {
   render() {
     const {
       isDisabled,
+      renderIcon,
       onMouseEnter,
       onMouseLeave,
       onTapDown,
@@ -68,6 +70,7 @@ export default class ActionListItemIcon extends React.Component {
         isActive={isActive}
         isHover={isHover}
         isDisabled={isDisabled}
+        renderIcon={renderIcon}
         onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
         onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
         onMouseEnter={!isDisabled && ((e) => { this.onSetHover(true); if (onMouseEnter) { onMouseEnter(e); } })}

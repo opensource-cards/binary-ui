@@ -42,8 +42,8 @@ export default class Select extends React.Component {
     return (
       <ListItemContents>
         <ActionListItemIcon
+          renderIcon={() => (<ArrowDown />)}
           onClick={this.onClick}
-          IconComponent={ArrowDown}
         />
         <SelectStyled
           innerRef={this.setSelectRef}
