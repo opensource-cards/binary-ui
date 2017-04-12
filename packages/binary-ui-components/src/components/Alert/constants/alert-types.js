@@ -1,6 +1,7 @@
-export const INFO = 1;
-export const CONFIRM = 2;
-export const CRITICAL = 3;
+
+const INFO = 'info';
+const CONFIRM = 'confirm';
+const CRITICAL = 'critical';
 
 export default {
   INFO,

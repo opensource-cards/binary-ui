@@ -1,29 +1,28 @@
+import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import React from 'react';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import ListItemContents from '../../ListItemContents';
 import ActionableListItemIcon from '../../ActionableListItemIcon';
-import ButtonTypes from '../constants/button-component-types';
-import { renderIcon } from '../utils/render-icon';
 
 const propTypes = {
   text: React.PropTypes.string.isRequired,
-  type: React.PropTypes.any,
+  renderIcon: React.PropTypes.func,
   onClick: React.PropTypes.func.isRequired,
 };
 
 const defaultProps = {
-  type: ButtonTypes.RIGHT,
+  renderIcon: () => (<ArrowRight />),
 };
 
 // TODO: add numberOfLines={1} to Text
-const Button = ({ text, type, onClick }) => (
+const Button = ({ text, renderIcon, onClick }) => (
   <ListItemContents isTapHighlight onClick={onClick} >
     <ActionableListItemIcon
       isActive={false}
       isDisabled={false}
       isHover={false}
       onClick={onClick}
-      renderIcon={renderIcon(type)}
+      renderIcon={renderIcon}
     />
     <ButtonWrapper onClick={onClick}>
       {text}

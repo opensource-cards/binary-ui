@@ -1,11 +1,11 @@
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import React from 'react';
-import SliderHandler from '../SliderHandler';
-import SliderContainer from '../../components-styled/SliderContainer';
-import SliderScale from '../../components-styled/SliderScale';
-import SliderScaleIcon from '../../components-styled/SliderScaleIcon';
-import getPosition from '../../utils/position';
+import SliderHandler from './SliderHandler';
+import SliderContainer from '../components-styled/SliderContainer';
+import SliderScale from '../components-styled/SliderScale';
+import SliderScaleIcon from '../components-styled/SliderScaleIcon';
+import getPosition from '../utils/position';
 
 const propTypes = {
   position: React.PropTypes.number.isRequired,

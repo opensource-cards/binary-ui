@@ -89,20 +89,19 @@ import {
   ActionDiv,
   ActionButton,
   Alert,
-  AlertTypes,
+  ALERT_TYPES,
   Button,
-  ButtonTypes,
   Checkbox,
+  ImagePicker,
   ListItem,
   ListItemContentText,
   ListItemNameText,
-  ListItemPhotoWrapper,
   Section,
   Select,
   Switch,
   Textarea,
   TextField,
-  TextFieldTypes,
+  TEXT_FIELD_TYPES,
   TextView,
 } from 'binary-ui-components';
 import React from 'react';
@@ -421,13 +420,13 @@ storiesOf('binary-ui-components links', module)
 
 storiesOf('binary-ui-components alert', module)
   .add('info', () => (
-    <Alert text="Alert text" type={AlertTypes.INFO} />
+    <Alert text="Alert text" type={ALERT_TYPES.INFO} />
   ))
   .add('confirm', () => (
-    <Alert text="Alert text" type={AlertTypes.CONFIRM} />
+    <Alert text="Alert text" type={ALERT_TYPES.CONFIRM} />
   ))
   .add('critical', () => (
-    <Alert text="Alert text" type={AlertTypes.CRITICAL} />
+    <Alert text="Alert text" type={ALERT_TYPES.CRITICAL} />
   ));
 
 storiesOf('binary-ui-components  list items', module)
@@ -457,7 +456,7 @@ storiesOf('binary-ui-components  list items', module)
         >
           Button Label
         </ListItemNameText>
-        <Button text={text} type={ButtonTypes.RIGHT} onClick={action()} />
+        <Button text={text} onClick={action()} />
       </ListItem>
     </View>
   ))
@@ -470,7 +469,7 @@ storiesOf('binary-ui-components  list items', module)
         isMoreButton
         isValid
         mask="####"
-        type={TextFieldTypes.NUMBER}
+        type={TEXT_FIELD_TYPES.NUMBER}
         value="000"
         onRef={action()}
         onTextChange={action()}
@@ -486,7 +485,7 @@ storiesOf('binary-ui-components  list items', module)
       <TextField
         isMoreButton
         mask="## #### ####"
-        type={TextFieldTypes.PHONE_NUMBER}
+        type={TEXT_FIELD_TYPES.PHONE_NUMBER}
         value="000"
         onRef={action()}
         onTextChange={action()}
@@ -544,7 +543,7 @@ storiesOf('binary-ui-components  list items', module)
       <ListItemNameText>
         Select Label
       </ListItemNameText>
-      <Button text={selectValue} type={ButtonTypes.DOWN} onClick={action()} />
+      <Button text={selectValue} onClick={action()} />
     </ListItem>
   </View>
   ))
@@ -573,8 +572,8 @@ storiesOf('binary-ui-components  list items', module)
       />
     </View>
   ))
-  .add('photo selector', () => (
-    <ListItemPhotoWrapper
+  .add('image picker', () => (
+    <ImagePicker
       isSelectable
       limit={3}
       noImageUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="

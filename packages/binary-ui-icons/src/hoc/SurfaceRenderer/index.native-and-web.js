@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import React from 'react';
 
 const DEFAULT_SIZE = 512;
@@ -54,3 +56,5 @@ export default (Group, Shape, Surface) => {
 
   return SurfaceRendererNativeAndWeb;
 };
+
+/* eslint-enable react/prop-types */

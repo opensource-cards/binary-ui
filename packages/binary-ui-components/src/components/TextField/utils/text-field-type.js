@@ -1,17 +1,17 @@
-import TextFieldTypes from '../constants/text-field-component-types';
+import TEXT_FIELD_TYPES from '../constants/text-field-component-types';
 
 export function getTypeHtml(type) {
   switch (type) {
-    case TextFieldTypes.ANY:
-    case TextFieldTypes.LINK:
+    case TEXT_FIELD_TYPES.ANY:
+    case TEXT_FIELD_TYPES.LINK:
       return 'text';
-    case TextFieldTypes.EMAIL:
+    case TEXT_FIELD_TYPES.EMAIL:
       return 'email';
-    case TextFieldTypes.PASSWORD:
+    case TEXT_FIELD_TYPES.PASSWORD:
       return 'password';
-    case TextFieldTypes.NUMBER:
+    case TEXT_FIELD_TYPES.NUMBER:
       return 'number';
-    case TextFieldTypes.PHONE_NUMBER:
+    case TEXT_FIELD_TYPES.PHONE_NUMBER:
       return 'tel';
     default:
       return 'text';

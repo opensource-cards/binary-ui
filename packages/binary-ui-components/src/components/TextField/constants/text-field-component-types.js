@@ -1,9 +1,10 @@
-const ANY = 1;
-const NUMBER = 2;
-const PASSWORD = 3;
-const EMAIL = 4;
-const PHONE_NUMBER = 5;
-const LINK = 6;
+
+const ANY = 'any';
+const NUMBER = 'number';
+const PASSWORD = 'password';
+const EMAIL = 'email';
+const PHONE_NUMBER = 'number';
+const LINK = 'link';
 
 export default {
   ANY,

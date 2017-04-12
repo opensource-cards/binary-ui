@@ -1,4 +1,4 @@
-# Styles
+# binary-ui-styles
 
 ## Description
 

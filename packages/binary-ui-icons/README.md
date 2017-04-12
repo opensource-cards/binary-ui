@@ -1,4 +1,4 @@
-# Icons
+# binary-ui-icons
 
 ## Design Rules
 

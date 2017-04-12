@@ -1,8 +1,8 @@
 import React from 'react';
 import uuid from 'uuid';
-import Photo from '../Photo';
-import PhotoUpload from '../PhotoUpload';
-import ListItemPhotoWrapperWrapper from '../../components-styled/ListItemPhotoWrapperWrapper';
+import Photo from './Photo';
+import PhotoUpload from './PhotoUpload';
+import ListItemPhotoWrapperWrapper from '../components-styled/ListItemPhotoWrapperWrapper';
 
 const propTypes = {
   isSelectable: React.PropTypes.bool,

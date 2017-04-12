@@ -6,19 +6,19 @@ import ActionDiv from 'binary-ui-components/mobile/ActionDiv';
 import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
 import ActionLink from 'binary-ui-components/mobile/ActionLink';
 import ActionLinkInline from 'binary-ui-components/mobile/ActionLinkInline';
-import Alert, { AlertTypes } from 'binary-ui-components/mobile/Alert';
-import Button, { ButtonTypes } from 'binary-ui-components/mobile/Button';
+import Alert, { ALERT_TYPES } from 'binary-ui-components/mobile/Alert';
+import Button from 'binary-ui-components/mobile/Button';
 import Checkbox from 'binary-ui-components/mobile/Checkbox';
 import ListItem from 'binary-ui-components/mobile/ListItem';
 import ListItemContentText from 'binary-ui-components/mobile/ListItemContentText';
 import ListItemNameText from 'binary-ui-components/mobile/ListItemNameText';
-import ListItemPhotoWrapper from 'binary-ui-components/mobile/ListItemPhotoWrapper';
+import ImagePicker from 'binary-ui-components/mobile/ImagePicker';
 import Section from 'binary-ui-components/mobile/Section';
-import Select, { selectOptionModel } from 'binary-ui-components/mobile/Select';
+import Select from 'binary-ui-components/mobile/Select';
 import Slider from 'binary-ui-components/mobile/Slider';
 import Switch from 'binary-ui-components/mobile/Switch';
 import Textarea from 'binary-ui-components/mobile/Textarea';
-import TextField, { TextFieldTypes } from 'binary-ui-components/mobile/TextField';
+import TextField, { TEXT_FIELD_TYPES } from 'binary-ui-components/mobile/TextField';
 import TextView from 'binary-ui-components/mobile/TextView';
 import React from 'react';
 import styled from 'styled-components';
@@ -75,13 +75,13 @@ storiesOf('binary-ui-components links', module)
 
 storiesOf('binary-ui-components alert', module)
   .addWithInfo('info', () => (
-    <Alert text="Alert text" type={AlertTypes.INFO} />
+    <Alert text="Alert text" type={ALERT_TYPES.INFO} />
   ))
   .addWithInfo('confirm', () => (
-    <Alert text="Alert text" type={AlertTypes.CONFIRM} />
+    <Alert text="Alert text" type={ALERT_TYPES.CONFIRM} />
   ))
   .addWithInfo('critical', () => (
-    <Alert text="Alert text" type={AlertTypes.CRITICAL} />
+    <Alert text="Alert text" type={ALERT_TYPES.CRITICAL} />
   ));
 
 storiesOf('binary-ui-components checkbox', module)
@@ -112,8 +112,8 @@ storiesOf('binary-ui-components select', module)
     <Select
       selected="uk"
       items={[
-        selectOptionModel('ko', 'ko', 'Korea (+82)'),
-        selectOptionModel('uk', 'uk', 'Ukraine (+38)'),
+        { key: 'ko', value: 'ko', label: 'Korea (+82)' },
+        { key: 'uk', value: 'uk', label: 'Ukraine (+38)' },
       ]}
       onChange={action()}
     />
@@ -247,7 +247,7 @@ storiesOf('binary-ui-components list items', module)
       >
         Button Label
       </ListItemNameText>
-      <Button text={text} type={ButtonTypes.RIGHT} onClick={action()} />
+      <Button text={text} onClick={action()} />
     </ListItem>
   ))
   .addWithInfo('with text (number)', () => (
@@ -259,7 +259,7 @@ storiesOf('binary-ui-components list items', module)
         isMoreButton
         isRequired
         mask="####"
-        type={TextFieldTypes.NUMBER}
+        type={TEXT_FIELD_TYPES.NUMBER}
         value="000"
         onRef={action()}
         onTextChange={action()}
@@ -275,7 +275,7 @@ storiesOf('binary-ui-components list items', module)
       <TextField
         isMoreButton
         mask="## #### ####"
-        type={TextFieldTypes.PHONE_NUMBER}
+        type={TEXT_FIELD_TYPES.PHONE_NUMBER}
         value="000"
         onRef={action()}
         onTextChange={action()}
@@ -351,8 +351,8 @@ storiesOf('binary-ui-components list items', module)
       onMoreClick={action()}
     />
   ))
-  .addWithInfo('photo selector', () => (
-    <ListItemPhotoWrapper
+  .addWithInfo('image picker', () => (
+    <ImagePicker
       isSelectable
       limit={3}
       noImageUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="

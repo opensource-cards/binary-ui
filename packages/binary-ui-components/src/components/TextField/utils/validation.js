@@ -1,8 +1,4 @@
 
-export function isNumberMaskValid(mask) {
-  return mask.replace(/\s/g, '').length === mask.length;
-}
-
-export function validatePhone(phoneNumber) {
+export function getValidatedPhone(phoneNumber) {
   return phoneNumber.replace(/(?!^)\+/g, '').replace(/[^0-9+]/g, '');
 }

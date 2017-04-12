@@ -1,4 +1,4 @@
-# Components
+# binary-ui-components
 
 ## Design Rules
 

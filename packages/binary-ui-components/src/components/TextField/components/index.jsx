@@ -1,13 +1,12 @@
 import More from 'binary-ui-icons/binary/More';
-import invariant from 'invariant';
 import { addMask, removeMask } from 'mask-parser';
 import React from 'react';
-import TextFieldInput from '../TextFieldInput';
-import TextFieldTypes from '../../constants/text-field-component-types';
-import { getTypeHtml } from '../../utils/text-field-type';
-import { isNumberMaskValid, validatePhone } from '../../utils/validation';
-import ListItemContents from '../../../ListItemContents';
-import ActionListItemIcon from '../../../ActionListItemIcon';
+import TextFieldInput from './TextFieldInput';
+import TEXT_FIELD_TYPES from '../constants/text-field-component-types';
+import { getTypeHtml } from '../utils/text-field-type';
+import { getValidatedPhone } from '../utils/validation';
+import ListItemContents from '../../ListItemContents';
+import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
   borderColor: React.PropTypes.string,
@@ -27,7 +26,7 @@ const defaultProps = {
   isMoreButton: false,
   isValid: true,
   mask: undefined,
-  type: TextFieldTypes.ANY,
+  type: TEXT_FIELD_TYPES.ANY,
   onBlur: undefined,
   onFocus: undefined,
   onMoreClick: undefined,
@@ -49,8 +48,8 @@ export default class TextField extends React.Component {
     const { onTextChange, mask, type } = this.props;
     if (onTextChange) {
       const unmaskedValue = removeMask(e.target.value, mask);
-      const finalValue = type === TextFieldTypes.PHONE_NUMBER
-        ? validatePhone(unmaskedValue)
+      const finalValue = type === TEXT_FIELD_TYPES.PHONE_NUMBER
+        ? getValidatedPhone(unmaskedValue)
         : unmaskedValue;
       onTextChange(finalValue);
     }
@@ -74,16 +73,12 @@ export default class TextField extends React.Component {
 
   getFormattedValue(type, mask, value) {
     switch (type) {
-      case TextFieldTypes.NUMBER:
-        if (!mask) {
-          return value;
+      case TEXT_FIELD_TYPES.NUMBER:
+        if (mask) {
+          console.warn('Mask is ignored for \'TEXT_FIELD_TYPES.NUMBER\'.');
         }
-        invariant(
-          isNumberMaskValid(mask),
-          'This mask is not valid for number.'
-        );
-        return addMask(value, mask);
-      case TextFieldTypes.PHONE_NUMBER:
+        return value;
+      case TEXT_FIELD_TYPES.PHONE_NUMBER:
         return addMask(value, mask);
       default:
         if (mask) {
