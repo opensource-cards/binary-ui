@@ -5,7 +5,7 @@ import { INFO } from '../constants/alert-types';
 
 const propTypes = {
   text: React.PropTypes.string.isRequired,
-  type: React.PropTypes.number,
+  type: React.PropTypes.string,
 };
 
 const defaultProps = {

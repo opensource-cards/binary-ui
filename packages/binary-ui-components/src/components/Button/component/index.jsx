@@ -1,22 +1,31 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import React from 'react';
+import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
-import ListItemContents from '../../ListItemContents';
 import ActionableListItemIcon from '../../ActionableListItemIcon';
+import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
-  text: React.PropTypes.string.isRequired,
+  isBold: React.PropTypes.bool.isRequired,
+  isEdit: React.PropTypes.bool.isRequired,
+  label: React.PropTypes.string.isRequired,
   renderIcon: React.PropTypes.func,
   onClick: React.PropTypes.func.isRequired,
 };
 
 const defaultProps = {
+  isBold: false,
+  isEdit: true,
   renderIcon: () => (<ArrowRight />),
 };
 
 // TODO: add numberOfLines={1} to Text
-const Button = ({ text, renderIcon, onClick }) => (
-  <ListItemContents isTapHighlight onClick={onClick} >
+const Button = ({ isBold, isEdit, label, renderIcon, onClick }) => (
+  <ButtonWrapper
+    isTapHighlight
+    style={getHighlightEditStyle(isEdit, true, false, undefined)}
+    onClick={onClick}
+  >
     <ActionableListItemIcon
       isActive={false}
       isDisabled={false}
@@ -24,10 +33,10 @@ const Button = ({ text, renderIcon, onClick }) => (
       onClick={onClick}
       renderIcon={renderIcon}
     />
-    <ButtonWrapper onClick={onClick}>
-      {text}
-    </ButtonWrapper>
-  </ListItemContents>
+    <ButtonText isBold={isBold} onClick={onClick}>
+      {label}
+    </ButtonText>
+  </ButtonWrapper>
 );
 
 Button.propTypes = propTypes;

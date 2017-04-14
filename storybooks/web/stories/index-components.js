@@ -12,14 +12,15 @@ import Checkbox from 'binary-ui-components/mobile/Checkbox';
 import ListItem from 'binary-ui-components/mobile/ListItem';
 import ListItemContentText from 'binary-ui-components/mobile/ListItemContentText';
 import ListItemNameText from 'binary-ui-components/mobile/ListItemNameText';
+import Group from 'binary-ui-components/mobile/Group';
 import ImagePicker from 'binary-ui-components/mobile/ImagePicker';
 import Section from 'binary-ui-components/mobile/Section';
 import Select from 'binary-ui-components/mobile/Select';
 import Slider from 'binary-ui-components/mobile/Slider';
 import Switch from 'binary-ui-components/mobile/Switch';
 import Textarea from 'binary-ui-components/mobile/Textarea';
-import TextField, { TEXT_FIELD_TYPES } from 'binary-ui-components/mobile/TextField';
-import TextView from 'binary-ui-components/mobile/TextView';
+import Input, { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
+import Text from 'binary-ui-components/mobile/Text';
 import React from 'react';
 import styled from 'styled-components';
 import uuid from 'uuid';
@@ -73,102 +74,6 @@ storiesOf('binary-ui-components links', module)
     </ActionLinkInline>
   ));
 
-storiesOf('binary-ui-components alert', module)
-  .addWithInfo('info', () => (
-    <Alert text="Alert text" type={ALERT_TYPES.INFO} />
-  ))
-  .addWithInfo('confirm', () => (
-    <Alert text="Alert text" type={ALERT_TYPES.CONFIRM} />
-  ))
-  .addWithInfo('critical', () => (
-    <Alert text="Alert text" type={ALERT_TYPES.CRITICAL} />
-  ));
-
-storiesOf('binary-ui-components checkbox', module)
-  .addWithInfo('checked', () => (
-    <Checkbox
-      isChecked
-      onChange={action()}
-      onClick={action()}
-    />
-  ))
-  .addWithInfo('unchecked', () => (
-    <Checkbox
-      isChecked={false}
-      onChange={action()}
-      onClick={action()}
-    />
-  ));
-
-storiesOf('binary-ui-components section', module)
-  .addWithInfo('main', () => (
-    <Section name="Section Title">
-      Section Text
-    </Section>
-  ));
-
-storiesOf('binary-ui-components select', module)
-  .addWithInfo('main', () => (
-    <Select
-      selected="uk"
-      items={[
-        { key: 'ko', value: 'ko', label: 'Korea (+82)' },
-        { key: 'uk', value: 'uk', label: 'Ukraine (+38)' },
-      ]}
-      onChange={action()}
-    />
-  ));
-
-storiesOf('binary-ui-components slider', module)
-  .addWithInfo('no buttons', () => (
-    <Slider
-      position={0}
-      renderIconLeft={null}
-      renderIconRight={null}
-      onPositionChange={action()}
-    />
-  ))
-  .addWithInfo('standard buttons', () => (
-    <Slider
-      position={0}
-      onPositionChange={action()}
-    />
-  ));
-
-storiesOf('binary-ui-components switch', module)
-  .addWithInfo('with switch checked', () => (
-    <Switch
-      isChecked
-      onChange={action()}
-    />
-  ))
-  .addWithInfo('with switch unchecked', () => (
-    <Switch
-      isChecked={false}
-      onChange={action()}
-    />
-  ));
-
-storiesOf('binary-ui-components textview', module)
-  .addWithInfo('rich', () => (
-    <TextView
-      isMoreButton
-      onMoreClick={action()}
-    >
-      Look at "<a href="#">this</a>" text and a
-      {' '}
-      <ActionButton
-        disabled={false}
-        style={undefined}
-        type="submit"
-        renderIconRight={() => (<ArrowDown />)}
-        onClick={action()}
-      >
-        Link
-      </ActionButton>
-    </TextView>
-  ));
-
 class TextareaDemo1 extends React.Component {
   constructor(props) {
     super(props);
@@ -213,145 +118,43 @@ class SliderDemo1 extends React.Component {
   render() {
     const { position } = this.state;
     return (
-      <ListItem>
-        <Slider
-          position={position}
-          renderIconLeft={null}
-          renderIconRight={null}
-          onPositionChange={this.onPositionChange}
-        />
-      </ListItem>
+      <Slider
+        position={position}
+        onPositionChange={this.onPositionChange}
+      />
     );
   }
 }
 
-storiesOf('binary-ui-components list items', module)
-  .addWithInfo('with list item name text', () => (
-    <ListItem>
-      <ListItemNameText
-        isEdit
-        isFull
-        renderIcon={() => (<ArrowDown />)}
-        onClick={action()}
-      >
-        list item name text
-      </ListItemNameText>
-    </ListItem>
+storiesOf('binary-ui-components', module)
+  .addWithInfo('Alert', () => (
+    <div>
+      <Alert text="Alert text" type={ALERT_TYPES.INFO} />
+      <Alert text="Alert text" type={ALERT_TYPES.CONFIRM} />
+      <Alert text="Alert text" type={ALERT_TYPES.CRITICAL} />
+    </div>
   ))
-  .addWithInfo('with button', () => (
-    <ListItem>
-      <ListItemNameText
-        isEdit
-        renderIcon={() => (<ArrowDown />)}
-        onClick={action()}
-      >
-        Button Label
-      </ListItemNameText>
-      <Button text={text} onClick={action()} />
-    </ListItem>
+  .addWithInfo('Button', () => (
+    <div>
+      <Button label={text} isBold onClick={action()} />
+      <Button label={text} isEdit={false} onClick={action()} />
+    </div>
   ))
-  .addWithInfo('with text (number)', () => (
-    <ListItem>
-      <ListItemNameText>
-        Text Field
-      </ListItemNameText>
-      <TextField
-        isMoreButton
-        isRequired
-        mask="####"
-        type={TEXT_FIELD_TYPES.NUMBER}
-        value="000"
-        onRef={action()}
-        onTextChange={action()}
-        onMoreClick={action()}
-      />
-    </ListItem>
-  ))
-  .addWithInfo('with text (phone number)', () => (
-    <ListItem>
-      <ListItemNameText>
-        Text Field Phone Number
-      </ListItemNameText>
-      <TextField
-        isMoreButton
-        mask="## #### ####"
-        type={TEXT_FIELD_TYPES.PHONE_NUMBER}
-        value="000"
-        onRef={action()}
-        onTextChange={action()}
-        onMoreClick={action()}
-      />
-    </ListItem>
-  ))
-  .addWithInfo('with text (!isValid)', () => (
-    <ListItem>
-      <ListItemNameText>
-        ListItemContentText
-      </ListItemNameText>
-      <TextField
-        isMoreButton
-        isValid={false}
-        placeholder="Placeholder"
-        value=""
-        onTextChange={action()}
-      />
-    </ListItem>
-  ))
-  .addWithInfo('slider', () => (
-    <SliderDemo1 />
-  ))
-  .addWithInfo('with switch checked', () => (
-    <ListItem>
-      <ListItemNameText>
-        Switch Label
-      </ListItemNameText>
-      <Switch
+  .addWithInfo('Checkbox', () => (
+    <div>
+      <Checkbox
         isChecked
         onChange={action()}
+        onClick={action()}
       />
-    </ListItem>
-  ))
-  .addWithInfo('with switch unchecked', () => (
-    <ListItem>
-      <ListItemNameText>
-        Switch Label
-      </ListItemNameText>
-      <Switch
+      <Checkbox
         isChecked={false}
         onChange={action()}
+        onClick={action()}
       />
-    </ListItem>
+    </div>
   ))
-  .addWithInfo('with select', () => (
-    <ListItem>
-      <ListItemNameText>
-        Select Label
-      </ListItemNameText>
-      <Select
-        selected="uk"
-        items={[
-          selectOptionModel('ko', 'ko', 'Korea (+82)'),
-          selectOptionModel('uk', 'uk', 'Ukraine (+38)'),
-        ]}
-        onChange={action()}
-      />
-    </ListItem>
-  ))
-  .addWithInfo('textarea', () => (
-    <TextareaDemo1 />
-  ))
-  .addWithInfo('textarea required', () => (
-    <Textarea
-      isMoreButton
-      isValid={false}
-      placeholder="Type here"
-      value=""
-      onRef={action()}
-      onTextChange={action()}
-      onMoreClick={action()}
-    />
-  ))
-  .addWithInfo('image picker', () => (
+  .addWithInfo('ImagePicker', () => (
     <ImagePicker
       isSelectable
       limit={3}
@@ -366,15 +169,142 @@ storiesOf('binary-ui-components list items', module)
       photoFit="contain"
     />
   ))
-  .addWithInfo('with text', () => (
-    <ListItem>
-      <ListItemNameText>
-        ListItemContentText
-      </ListItemNameText>
-      <ListItemContentText
-        isMoreButton
-        onMoreClick={action()}
-        text="ListItemContentText text"
+  .addWithInfo('Input', () => (
+      <div>
+        <Input
+          isRequired
+          type={INPUT_FIELD_TYPES.ANY}
+          onRef={action()}
+          onTextChange={action()}
+          onMoreClick={action()}
+          placeholder="INPUT_FIELD_TYPES.ANY"
+        />
+        <Input
+          isMoreButton
+          isRequired
+          type={INPUT_FIELD_TYPES.NUMBER}
+          onRef={action()}
+          onTextChange={action()}
+          onMoreClick={action()}
+          placeholder="INPUT_FIELD_TYPES.NUMBER"          
+        />
+        <Input
+          isMoreButton
+          type={INPUT_FIELD_TYPES.PHONE_NUMBER}
+          onRef={action()}
+          onTextChange={action()}
+          onMoreClick={action()}
+          placeholder="INPUT_FIELD_TYPES.PHONE_NUMBER"
+        />
+        <Input
+          isMoreButton
+          type={INPUT_FIELD_TYPES.PASSWORD}
+          onRef={action()}
+          onTextChange={action()}
+          onMoreClick={action()}
+          placeholder="INPUT_FIELD_TYPES.PASSWORD"
+        />
+        <Input
+          isMoreButton
+          isValid={false}
+          placeholder="Invalid"
+          onTextChange={action()}
+          onMoreClick={action()}          
+          onRef={action()}
+          type={INPUT_FIELD_TYPES.EMAIL}
+        />
+      </div>
+  ))
+  .addWithInfo('Group', () => (
+    <div>
+      <Group
+        renderLeft={() => (<Select
+        selected="uk"
+        items={[
+          { key: 'ko', value: 'ko', label: 'Korea (+82)' },
+          { key: 'uk', value: 'uk', label: 'Ukraine (+38)' },
+        ]}
+        onChange={action()}
+      />)}
+        renderRight={() => (<Input
+            isMoreButton
+            type={INPUT_FIELD_TYPES.PHONE_NUMBER}
+            onRef={action()}
+            onTextChange={action()}
+            onMoreClick={action()}
+            placeholder="Input"
+          />)}
       />
-    </ListItem>
+      <Group
+        renderLeft={() => (<Button label={text} renderIcon={() => (<ArrowDown />)} isBold onClick={action()} />)}
+        renderRight={() => (
+          <Slider
+            position={0}
+            renderIconLeft={null}
+            renderIconRight={null}
+            onPositionChange={action()}
+          />)}
+      />
+    </div>
+  ))
+  .addWithInfo('Section', () => (
+    <Section label="Section">
+      Section contents
+    </Section>
+  ))
+  .addWithInfo('Select', () => (
+    <Select
+      selected="uk"
+      items={[
+        { key: 'ko', value: 'ko', label: 'Korea (+82)' },
+        { key: 'uk', value: 'uk', label: 'Ukraine (+38)' },
+      ]}
+      onChange={action()}
+    />
+  ))
+  .addWithInfo('Slider', () => (
+    <div>
+      <Slider
+        position={0}
+        renderIconLeft={null}
+        renderIconRight={null}
+        onPositionChange={action()}
+      />
+      <SliderDemo1 />
+    </div>
+  ))
+  .addWithInfo('Switch', () => (
+    <div>
+      <Switch
+        isChecked
+        label={text}
+        onChange={action()}
+      />
+      <Switch
+        isChecked={false}
+        onChange={action()}
+      />
+    </div>
+  ))
+  .addWithInfo('Text', () => (
+    <Text
+      isMoreButton
+      onMoreClick={action()}
+    >
+      Look at "<a href="#">this</a>" text
+    </Text>
+  ))
+  .addWithInfo('Textarea', () => (
+    <div>
+      <TextareaDemo1 />
+      <Textarea
+        isMoreButton
+        isValid={false}
+        placeholder="Type here"
+        value=""
+        onRef={action()}
+        onTextChange={action()}
+        onMoreClick={action()}
+      />
+    </div>
   ));

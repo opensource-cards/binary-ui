@@ -1,5 +1,6 @@
 import React from 'react';
 import IconStyled from './IconStyled';
+import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 
 const propTypes = {
   isActive: React.PropTypes.bool.isRequired,
@@ -15,7 +16,7 @@ const defaultProps = {
 
 const ActionableListItemIcon = ({ isDisabled, renderIcon, onClick, ...props }) => (
   <IconStyled
-    color="#7F7F7F"
+    color={BINARY_COLOR_GRAY_40}
     isDisabled={isDisabled}
     size={18}
     renderIcon={renderIcon}

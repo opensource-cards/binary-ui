@@ -87,7 +87,7 @@ export default class Slider extends React.Component {
           {this.renderSliderHandler()}
         </SliderScale>
         <SliderScaleIcon>
-          {renderIconRight ? renderIconLeft() : null}
+          {renderIconRight ? renderIconRight() : null}
         </SliderScaleIcon>
       </SliderContainer>
     );

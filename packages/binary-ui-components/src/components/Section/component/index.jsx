@@ -5,17 +5,17 @@ import SectionTitle from '../components-styled/SectionTitle';
 
 const propTypes = {
   children: React.PropTypes.node,
-  name: React.PropTypes.string.isRequired,
+  label: React.PropTypes.string.isRequired,
 };
 
 const defaultProps = {
   children: undefined,
 };
 
-const Section = ({ children, name }) => (
+const Section = ({ children, label }) => (
   <SectionWrapper>
     <SectionTitle>
-      {name.toUpperCase()}
+      {label.toUpperCase()}
     </SectionTitle>
     <SectionContentWrapper>
       {children}

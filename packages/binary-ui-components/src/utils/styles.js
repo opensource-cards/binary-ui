@@ -12,6 +12,14 @@ export const FIELD_VALUE_FONT_CSS = `
   font-weight: 200;
 `;
 
+export const FIELD_NAME_FONT_CSS = `
+  font-family: ${FONT_FAMILY_MAIN};
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+`;
+
 export const CURSOR_POINTER_CSS = `
   cursor: default;
 `;
@@ -24,7 +32,6 @@ export const CARDS_INPUT_RESET_CSS = `
 `;
 
 export const LIST_ITEM_CONTENTS_BASE_CSS = `
-  ${FIELD_VALUE_FONT_CSS}
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;

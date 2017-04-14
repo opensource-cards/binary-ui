@@ -1,25 +1,25 @@
 /* eslint-disable */
-import { TEXT_FIELD_TYPES } from 'binary-ui-components/mobile/TextField';
+import { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
 import { isEmailLike, isPhoneLike } from 'pure-validation';
 
 export function isTextFieldValid(textFieldType, value) {
-  if (textFieldType === TEXT_FIELD_TYPES.ANY) {
+  if (textFieldType === INPUT_FIELD_TYPES.ANY) {
     return true;
   }
-  if (textFieldType === TEXT_FIELD_TYPES.NUMBER) {
+  if (textFieldType === INPUT_FIELD_TYPES.NUMBER) {
     console.warn('Not implemented.');
     return true;
   }
-  if (textFieldType === TEXT_FIELD_TYPES.PASSWORD) {
+  if (textFieldType === INPUT_FIELD_TYPES.PASSWORD) {
     return true;
   }
-  if (textFieldType === TEXT_FIELD_TYPES.EMAIL) {
+  if (textFieldType === INPUT_FIELD_TYPES.EMAIL) {
     return isEmailLike(value);
   }
-  if (textFieldType === TEXT_FIELD_TYPES.PHONE_NUMBER) {
+  if (textFieldType === INPUT_FIELD_TYPES.PHONE_NUMBER) {
     return isPhoneLike(value);
   }
-  if (textFieldType === TEXT_FIELD_TYPES.LINK) {
+  if (textFieldType === INPUT_FIELD_TYPES.LINK) {
     console.warn('Not implemented.');
     return true;
   }

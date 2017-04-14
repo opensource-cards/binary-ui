@@ -1,17 +1,23 @@
-import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import React from 'react';
+import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import SelectArrow from '../components-styled/SelectArrow';
 import SelectOption from '../components-styled/SelectOption';
 import SelectStyled from '../components-styled/SelectStyled';
-import ActionListItemIcon from '../../ActionListItemIcon';
-import ListItemContents from '../../ListItemContents';
+import SelectWrapper from '../components-styled/SelectWrapper';
+import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   items: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+  isBold: React.PropTypes.bool.isRequired,
+  isEdit: React.PropTypes.bool.isRequired,
   selected: React.PropTypes.string.isRequired,
   onChange: React.PropTypes.func.isRequired,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  isBold: false,
+  isEdit: true,
+};
 
 export default class Select extends React.Component {
 
@@ -38,15 +44,17 @@ export default class Select extends React.Component {
   }
 
   render() {
-    const { items, selected } = this.props;
+    const { items, isBold, isEdit, selected } = this.props;
     return (
-      <ListItemContents>
-        <ActionListItemIcon
-          renderIcon={() => (<ArrowDown />)}
-          onClick={this.onClick}
+      <SelectWrapper
+        style={getHighlightEditStyle(isEdit, true, false, undefined)}
+      >
+        <SelectArrow
+          color={BINARY_COLOR_GRAY_40}
         />
         <SelectStyled
           innerRef={this.setSelectRef}
+          isBold={isBold}
           value={selected}
           onChange={this.onChange}
         >
@@ -56,7 +64,7 @@ export default class Select extends React.Component {
             </SelectOption>
           ))}
         </SelectStyled>
-      </ListItemContents>
+      </SelectWrapper>
     );
   }
 }

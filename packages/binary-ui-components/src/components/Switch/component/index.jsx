@@ -3,14 +3,18 @@ import SwitchToggle from '../components-styled/SwitchToggle';
 import SwitchContainer from '../components-styled/SwitchContainer';
 import SwitchBackground from '../components-styled/SwitchBackground';
 import SwitchHandler from '../components-styled/SwitchHandler';
-import ListItemContents from '../../ListItemContents';
+import SwitchLabel from '../components-styled/SwitchLabel';
+import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const propTypes = {
+  label: React.PropTypes.node,
   isChecked: React.PropTypes.bool.isRequired,
   onChange: React.PropTypes.func.isRequired,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  label: undefined,
+};
 
 export default class Switch extends React.Component {
 
@@ -25,16 +29,19 @@ export default class Switch extends React.Component {
   }
 
   render() {
-    const { isChecked } = this.props;
+    const { isChecked, label } = this.props;
     return (
-      <ListItemContents isEdit={false} >
+      <SwitchWrapper>
+        <SwitchLabel>
+          {label}
+        </SwitchLabel>
         <SwitchToggle>
           <SwitchContainer onClick={this.onClick} >
             <SwitchBackground isChecked={isChecked} />
             <SwitchHandler isChecked={isChecked} />
           </SwitchContainer>
         </SwitchToggle>
-      </ListItemContents>
+      </SwitchWrapper>
     );
   }
 }

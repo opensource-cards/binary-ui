@@ -100,9 +100,8 @@ import {
   Select,
   Switch,
   Textarea,
-  TextField,
-  TEXT_FIELD_TYPES,
-  TextView,
+  INPUT_FIELD_TYPES,
+  Text,
 } from 'binary-ui-components';
 import React from 'react';
 import { StatusBar, Text, TextInput, View, Picker } from 'react-native';
@@ -469,7 +468,7 @@ storiesOf('binary-ui-components  list items', module)
         isMoreButton
         isValid
         mask="####"
-        type={TEXT_FIELD_TYPES.NUMBER}
+        type={INPUT_FIELD_TYPES.NUMBER}
         value="000"
         onRef={action()}
         onTextChange={action()}
@@ -485,7 +484,7 @@ storiesOf('binary-ui-components  list items', module)
       <TextField
         isMoreButton
         mask="## #### ####"
-        type={TEXT_FIELD_TYPES.PHONE_NUMBER}
+        type={INPUT_FIELD_TYPES.PHONE_NUMBER}
         value="000"
         onRef={action()}
         onTextChange={action()}
@@ -604,11 +603,11 @@ storiesOf('binary-ui-components textview', module)
   .add('all', () => (
     <View>
       <StatusBar hidden />
-      <TextView
+      <Text
         isMoreButton
         onMoreClick={action()}
       >
-        <Text>Look at "this" text and a </Text>
+        Look at "this" text and a
         <ActionButton
           disabled={false}
           style={undefined}
@@ -617,7 +616,7 @@ storiesOf('binary-ui-components textview', module)
         >
           Link
         </ActionButton>
-      </TextView>
+      </Text>
     </View>
   ));
 
