@@ -1,7 +1,8 @@
 import React from 'react';
-import ListItemTextareaWrapper from './ListItemTextareaWrapper';
 import TextareaInput from './TextareaInput';
+import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
 import ActionListItemIcon from '../../ActionListItemIcon';
+import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   isValid: React.PropTypes.bool,
@@ -67,7 +68,9 @@ export default class Textarea extends React.Component {
     } = this.props;
     const { isActive } = this.state;
     return (
-      <ListItemTextareaWrapper isTypingHighlight={isActive} isValid={isValid} >
+      <TextareaWrapperStyled
+        style={getHighlightEditStyle(true, isValid, isActive, undefined)}
+      >
         <TextareaInput
           onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
           onChange={this.onTextChange}
@@ -77,7 +80,7 @@ export default class Textarea extends React.Component {
         {renderIcon && (
           <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
-      </ListItemTextareaWrapper>
+      </TextareaWrapperStyled>
     );
   }
 }

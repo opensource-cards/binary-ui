@@ -6,6 +6,7 @@ import INPUT_FIELD_TYPES from '../constants/text-field-component-types';
 import { getTypeHtml } from '../utils/text-field-type';
 import { getValidatedPhone } from '../utils/validation';
 import ActionListItemIcon from '../../ActionListItemIcon';
+import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   borderColor: React.PropTypes.string,
@@ -102,9 +103,7 @@ export default class Input extends React.Component {
     const { isActive } = this.state;
     return (
       <InputWrapper
-        borderColor={borderColor}
-        isValid={isValid}
-        isTypingHighlight={isActive}
+        style={getHighlightEditStyle(true, isValid, isActive, borderColor)}
       >
         {renderIcon && (
           <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
