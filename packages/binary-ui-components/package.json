@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-components",
-  "version": "0.2.0-rc.0",
+  "version": "0.2.0-rc.1",
   "description": "React components for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
@@ -18,8 +18,8 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "binary-ui-icons": "^0.2.0-rc.0",
-    "binary-ui-styles": "^0.2.0-rc.0",
+    "binary-ui-icons": "^0.2.0-rc.1",
+    "binary-ui-styles": "^0.2.0-rc.1",
     "invariant": "^2.2.1",
     "mask-parser": "^0.0.1-rc.3",
     "styled-components": "^1.1.2",
