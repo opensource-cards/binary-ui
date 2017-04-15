@@ -6,6 +6,7 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
   children: React.PropTypes.any,
+  isBold: React.PropTypes.bool,
   isEdit: React.PropTypes.bool,
   renderIcon: React.PropTypes.func,
   onMoreClick: React.PropTypes.func,
@@ -14,6 +15,7 @@ const propTypes = {
 const defaultProps = {
   children: undefined,
   isEdit: false,
+  isBold: false,
   renderIcon: undefined,
   onMoreClick: undefined,
 };
@@ -34,13 +36,13 @@ export default class Text extends React.Component {
   }
 
   render() {
-    const { children, isEdit, renderIcon } = this.props;
+    const { children, isBold, isEdit, renderIcon } = this.props;
     const Content = typeof children === 'string'
       ? TextContent
       : TextContentBlock;
     return (
       <TextWrapper isEdit={isEdit}>
-        <Content>
+        <Content isBold={isBold}>
           {children}
         </Content>
         {renderIcon && (

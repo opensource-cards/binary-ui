@@ -257,6 +257,11 @@ storiesOf('binary-ui-components', module)
             onPositionChange={action()}
           />)}
       />
+      <Group
+        renderLeft={() => (<Text isBold >Label</Text>)}
+        renderRight={() => (
+          <TextareaDemo1 />)}
+      />
     </div>
   ))
   .addWithInfo('Section', () => (
@@ -299,12 +304,19 @@ storiesOf('binary-ui-components', module)
     </div>
   ))
   .addWithInfo('Text', () => (
-    <Text
-      renderIcon={() => (<More />)}
-      onMoreClick={action()}
-    >
-      Look at "<a href="#">this</a>" text
-    </Text>
+    <div>
+      <Text
+        renderIcon={() => (<More />)}
+        onMoreClick={action()}
+      >
+        Look at "<a href="#">this</a>" text
+      </Text>
+      <Text
+        isBold
+      >
+        Look at bold text
+      </Text>
+    </div>
   ))
   .addWithInfo('Textarea', () => (
     <div>
