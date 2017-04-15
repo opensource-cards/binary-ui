@@ -1,12 +1,11 @@
-import More from 'binary-ui-icons/binary/More';
 import React from 'react';
-import ListItemTextareaWrapper from '../ListItemTextareaWrapper';
-import TextareaInput from '../TextareaInput';
-import ActionListItemIcon from '../../../ActionListItemIcon';
+import ListItemTextareaWrapper from './ListItemTextareaWrapper';
+import TextareaInput from './TextareaInput';
+import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
-  isMoreButton: React.PropTypes.bool,
   isValid: React.PropTypes.bool,
+  renderIcon: React.PropTypes.func,
   value: React.PropTypes.string.isRequired,
   onBlur: React.PropTypes.func,
   onFocus: React.PropTypes.func,
@@ -15,8 +14,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isMoreButton: false,
   isValid: true,
+  renderIcon: undefined,
   onBlur: undefined,
   onFocus: undefined,
   onTextChange: undefined,
@@ -35,10 +34,10 @@ export default class Textarea extends React.Component {
     this.onSetFocus = this.onSetFocus.bind(this);
   }
 
-  onTextChange(value) {
+  onTextChange(e) {
     const { onTextChange } = this.props;
     if (onTextChange) {
-      onTextChange(value);
+      onTextChange(e.target.value);
     }
   }
 
@@ -60,24 +59,23 @@ export default class Textarea extends React.Component {
 
   render() {
     const {
-      isMoreButton,
       isValid,
-      onMoreClick,
-      onTextChange,
+      renderIcon,
+      onBlur,
+      onFocus,
       ...props,
     } = this.props;
     const { isActive } = this.state;
     return (
       <ListItemTextareaWrapper isTypingHighlight={isActive} isValid={isValid} >
         <TextareaInput
-          multiline
-          editable
+          onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
+          onChange={this.onTextChange}
+          onFocus={(e) => { this.onSetFocus(true); if (onFocus) { onFocus(e); } }}
           {...props}
-          onChangeText={this.onTextChange}
-          onSetFocus={this.onSetFocus}
         />
-        {isMoreButton && (
-          <ActionListItemIcon renderIcon={() => (<More />)} onClick={this.onMoreClick} />
+        {renderIcon && (
+          <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
       </ListItemTextareaWrapper>
     );

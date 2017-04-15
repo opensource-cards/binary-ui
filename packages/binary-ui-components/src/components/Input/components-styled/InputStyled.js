@@ -17,4 +17,9 @@ export default styled.input`
   text-align: left;
   width: 100%;
   wrap: soft;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 `;

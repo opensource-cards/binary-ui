@@ -1,4 +1,3 @@
-import More from 'binary-ui-icons/binary/More';
 import React from 'react';
 import TextContent from '../components-styled/TextContent';
 import TextContentBlock from '../components-styled/TextContentBlock';
@@ -8,17 +7,15 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 const propTypes = {
   children: React.PropTypes.any,
   isEdit: React.PropTypes.bool,
-  isMoreButton: React.PropTypes.bool,
-  onMoreClick: React.PropTypes.func,
   renderIcon: React.PropTypes.func,
+  onMoreClick: React.PropTypes.func,
 };
 
 const defaultProps = {
   children: undefined,
   isEdit: false,
-  isMoreButton: false,
+  renderIcon: undefined,
   onMoreClick: undefined,
-  renderIcon: () => (<More />),
 };
 
 export default class Text extends React.Component {
@@ -37,7 +34,7 @@ export default class Text extends React.Component {
   }
 
   render() {
-    const { children, isEdit, isMoreButton, renderIcon } = this.props;
+    const { children, isEdit, renderIcon } = this.props;
     const Content = typeof children === 'string'
       ? TextContent
       : TextContentBlock;
@@ -46,7 +43,7 @@ export default class Text extends React.Component {
         <Content>
           {children}
         </Content>
-        {isMoreButton && (
+        {renderIcon && (
           <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
       </TextWrapper>

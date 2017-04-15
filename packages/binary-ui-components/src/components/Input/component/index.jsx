@@ -1,4 +1,3 @@
-import More from 'binary-ui-icons/binary/More';
 import { addMask, removeMask } from 'mask-parser';
 import React from 'react';
 import InputStyled from '../components-styled/InputStyled';
@@ -10,11 +9,11 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
   borderColor: React.PropTypes.string,
-  isMoreButton: React.PropTypes.bool.isRequired,
   isValid: React.PropTypes.bool,
   mask: React.PropTypes.string,
   type: React.PropTypes.any,
   value: React.PropTypes.string.isRequired,
+  renderIcon: React.PropTypes.func,
   onBlur: React.PropTypes.func,
   onFocus: React.PropTypes.func,
   onMoreClick: React.PropTypes.func,
@@ -23,10 +22,10 @@ const propTypes = {
 
 const defaultProps = {
   borderColor: undefined,
-  isMoreButton: false,
   isValid: true,
   mask: undefined,
   type: INPUT_FIELD_TYPES.ANY,
+  renderIcon: undefined,
   onBlur: undefined,
   onFocus: undefined,
   onMoreClick: undefined,
@@ -91,9 +90,9 @@ export default class Input extends React.Component {
   render() {
     const {
       borderColor,
-      isMoreButton,
       isValid,
       mask,
+      renderIcon,
       type,
       value,
       onBlur,
@@ -107,8 +106,8 @@ export default class Input extends React.Component {
         isValid={isValid}
         isTypingHighlight={isActive}
       >
-        {isMoreButton && (
-          <ActionListItemIcon renderIcon={() => (<More />)} onClick={this.onMoreClick} />
+        {renderIcon && (
+          <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
         <InputStyled
           type={getTypeHtml(type)}

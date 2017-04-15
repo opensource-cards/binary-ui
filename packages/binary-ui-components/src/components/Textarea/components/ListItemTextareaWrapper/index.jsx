@@ -13,17 +13,9 @@ const defaultProps = {
   isValid: true,
 };
 
-const ListItemTextareaWrapper = ({
-  children,
-  isTypingHighlight,
-  isValid,
-}) => (
+const ListItemTextareaWrapper = ({ children, isTypingHighlight, isValid }) => (
   <ListItemTextareaWrapperWrapper
-    style={getHighlightEditStyle(
-      true,
-      isValid,
-      isTypingHighlight
-    )}
+    style={getHighlightEditStyle(true, isValid, isTypingHighlight, undefined)}
   >
     {children}
   </ListItemTextareaWrapperWrapper>

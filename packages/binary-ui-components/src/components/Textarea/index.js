@@ -1,1 +1,1 @@
-export { default } from './components/Textarea';
+export { default } from './components';

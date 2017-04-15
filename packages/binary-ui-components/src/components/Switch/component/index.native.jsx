@@ -6,6 +6,7 @@ import SwitchHandler from '../components-styled/SwitchHandler';
 import ListItemContents from '../../ListItemContents';
 
 const propTypes = {
+  label: React.PropTypes.node,
   isChecked: React.PropTypes.bool.isRequired,
   onChange: React.PropTypes.func.isRequired,
 };

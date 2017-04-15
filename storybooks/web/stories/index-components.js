@@ -1,6 +1,9 @@
 import infoAddon from '@kadira/react-storybook-addon-info';
 import { setAddon, storiesOf, action } from '@kadira/storybook';
+import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
+import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
+import More from 'binary-ui-icons/binary/More';
 import ActionButton from 'binary-ui-components/mobile/ActionButton';
 import ActionDiv from 'binary-ui-components/mobile/ActionDiv';
 import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
@@ -9,9 +12,6 @@ import ActionLinkInline from 'binary-ui-components/mobile/ActionLinkInline';
 import Alert, { ALERT_TYPES } from 'binary-ui-components/mobile/Alert';
 import Button from 'binary-ui-components/mobile/Button';
 import Checkbox from 'binary-ui-components/mobile/Checkbox';
-import ListItem from 'binary-ui-components/mobile/ListItem';
-import ListItemContentText from 'binary-ui-components/mobile/ListItemContentText';
-import ListItemNameText from 'binary-ui-components/mobile/ListItemNameText';
 import Group from 'binary-ui-components/mobile/Group';
 import ImagePicker from 'binary-ui-components/mobile/ImagePicker';
 import Section from 'binary-ui-components/mobile/Section';
@@ -91,9 +91,9 @@ class TextareaDemo1 extends React.Component {
     const { value } = this.state;
     return (
       <Textarea
-        isMoreButton
         placeholder="Type here"
         value={value}
+        renderIcon={() => (<More />)}
         onRef={action()}
         onTextChange={this.onChange}
         onMoreClick={action()}
@@ -120,6 +120,8 @@ class SliderDemo1 extends React.Component {
     return (
       <Slider
         position={position}
+        renderIconLeft={() => (<MinusAlt />)}
+        renderIconRight={() => (<NewAlt />)}
         onPositionChange={this.onPositionChange}
       />
     );
@@ -173,67 +175,77 @@ storiesOf('binary-ui-components', module)
       <div>
         <Input
           isRequired
-          type={INPUT_FIELD_TYPES.ANY}
-          onRef={action()}
-          onTextChange={action()}
-          onMoreClick={action()}
           placeholder="INPUT_FIELD_TYPES.ANY"
+          type={INPUT_FIELD_TYPES.ANY}
+          value=""
+          onRef={action()}
+          onTextChange={action()}
+          onMoreClick={action()}
         />
         <Input
-          isMoreButton
           isRequired
+          placeholder="INPUT_FIELD_TYPES.NUMBER"
           type={INPUT_FIELD_TYPES.NUMBER}
+          value=""
+          renderIcon={() => (<More />)}
           onRef={action()}
           onTextChange={action()}
           onMoreClick={action()}
-          placeholder="INPUT_FIELD_TYPES.NUMBER"          
         />
         <Input
-          isMoreButton
-          type={INPUT_FIELD_TYPES.PHONE_NUMBER}
-          onRef={action()}
-          onTextChange={action()}
-          onMoreClick={action()}
           placeholder="INPUT_FIELD_TYPES.PHONE_NUMBER"
-        />
-        <Input
-          isMoreButton
-          type={INPUT_FIELD_TYPES.PASSWORD}
+          type={INPUT_FIELD_TYPES.PHONE_NUMBER}
+          value=""
+          renderIcon={() => (<More />)}
           onRef={action()}
           onTextChange={action()}
           onMoreClick={action()}
-          placeholder="INPUT_FIELD_TYPES.PASSWORD"
         />
         <Input
-          isMoreButton
+          placeholder="INPUT_FIELD_TYPES.PASSWORD"
+          type={INPUT_FIELD_TYPES.PASSWORD}
+          value=""
+          renderIcon={() => (<More />)}
+          onRef={action()}
+          onTextChange={action()}
+          onMoreClick={action()}
+        />
+        <Input
           isValid={false}
           placeholder="Invalid"
+          type={INPUT_FIELD_TYPES.EMAIL}
+          value=""
+          renderIcon={() => (<More />)}
           onTextChange={action()}
           onMoreClick={action()}          
           onRef={action()}
-          type={INPUT_FIELD_TYPES.EMAIL}
         />
       </div>
   ))
   .addWithInfo('Group', () => (
     <div>
       <Group
-        renderLeft={() => (<Select
-        selected="uk"
-        items={[
-          { key: 'ko', value: 'ko', label: 'Korea (+82)' },
-          { key: 'uk', value: 'uk', label: 'Ukraine (+38)' },
-        ]}
-        onChange={action()}
-      />)}
-        renderRight={() => (<Input
-            isMoreButton
+        renderLeft={() => (
+          <Select
+            selected="uk"
+            items={[
+              { key: 'ko', value: 'ko', label: 'Korea (+82)' },
+              { key: 'uk', value: 'uk', label: 'Ukraine (+38)' },
+            ]}
+            onChange={action()}
+          />
+        )}
+        renderRight={() => (
+          <Input
+            placeholder="Input"
             type={INPUT_FIELD_TYPES.PHONE_NUMBER}
+            value=""
+            renderIcon={() => (<More />)}
             onRef={action()}
             onTextChange={action()}
             onMoreClick={action()}
-            placeholder="Input"
-          />)}
+          />
+        )}
       />
       <Group
         renderLeft={() => (<Button label={text} renderIcon={() => (<ArrowDown />)} isBold onClick={action()} />)}
@@ -288,7 +300,7 @@ storiesOf('binary-ui-components', module)
   ))
   .addWithInfo('Text', () => (
     <Text
-      isMoreButton
+      renderIcon={() => (<More />)}
       onMoreClick={action()}
     >
       Look at "<a href="#">this</a>" text
@@ -298,10 +310,10 @@ storiesOf('binary-ui-components', module)
     <div>
       <TextareaDemo1 />
       <Textarea
-        isMoreButton
         isValid={false}
         placeholder="Type here"
         value=""
+        renderIcon={() => (<More />)}
         onRef={action()}
         onTextChange={action()}
         onMoreClick={action()}
