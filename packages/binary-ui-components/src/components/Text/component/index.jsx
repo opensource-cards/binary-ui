@@ -1,6 +1,5 @@
 import React from 'react';
 import TextContent from '../components-styled/TextContent';
-import TextContentBlock from '../components-styled/TextContentBlock';
 import TextWrapper from '../components-styled/TextWrapper';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
@@ -37,14 +36,11 @@ export default class Text extends React.Component {
 
   render() {
     const { children, isBold, isEdit, renderIcon } = this.props;
-    const Content = typeof children === 'string'
-      ? TextContent
-      : TextContentBlock;
     return (
-      <TextWrapper isEdit={isEdit}>
-        <Content isBold={isBold}>
+      <TextWrapper isEdit={isEdit} >
+        <TextContent isBold={isBold} >
           {children}
-        </Content>
+        </TextContent>
         {renderIcon && (
           <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
