@@ -34,7 +34,7 @@ const ActionableIcon = ({
   <IconStyled
     color={getActionColorExt(
       color,
-      BINARY_COLOR_BLUE_40,
+      BINARY_COLOR_BLUE_60,
       BINARY_COLOR_BLUE_40,
       BINARY_COLOR_GRAY_40,
       isActive,
