@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import ActionableIcon from '../../../ActionableIcon';
+import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 
 export default styled(ActionableIcon)`
+  align-items: center;
+  display: flex;
   flex-shrink: 0;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  padding-left: 5px;
-  padding-right: 5px;
+  height: ${LIST_ITEM_HEIGHT}px;
+  justify-content: center;
   width: 30px;
 `;

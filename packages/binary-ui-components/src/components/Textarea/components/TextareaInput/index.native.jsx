@@ -8,6 +8,7 @@ import {
 export default styled.TextInput`
   ${CARDS_INPUT_RESET_CSS}
   ${FIELD_VALUE_FONT_STYLE_CSS}
+  background-color: transparent;
   padding: 10;
   height: 120;
   flex: 1;

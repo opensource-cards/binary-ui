@@ -3,7 +3,6 @@ import { EDIT_STYLE_EXT } from '../../../../utils/styles';
 
 const LIST_ITEM_TEXT_STYLE = `
   align-items: center;
-  background-color: white;
   flex: 1;
   flex-direction: row;
   justify-content: space-between;

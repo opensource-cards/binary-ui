@@ -1,4 +1,5 @@
-import { getEditStyle, TYPING_HIGHLIGHT_STYLE, TYPING_HIGHLIGHT_INVALID_STYLE } from './styles';
+import { BINARY_COLOR_SAND_90, BINARY_COLOR_BLUE_40, BINARY_COLOR_RED_40 } from 'binary-ui-styles';
+import { getEditStyle } from './styles';
 
 export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, borderColor) {
   if (!isEdit) {
@@ -6,17 +7,17 @@ export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, border
   }
   // not valid
   if (!isValid) {
-    return TYPING_HIGHLIGHT_INVALID_STYLE;
+    return getEditStyle(BINARY_COLOR_RED_40);
   }
   // active
   if (isTypingHighlight) {
-    return TYPING_HIGHLIGHT_STYLE;
+    return getEditStyle(BINARY_COLOR_BLUE_40);
   }
   // only editable style
   if (borderColor) {
-    return getEditStyle(borderColor);
+    return getEditStyle(borderColor || BINARY_COLOR_SAND_90);
   }
-  return getEditStyle();
+  return getEditStyle(BINARY_COLOR_SAND_90);
 }
 
 export function getActionColorExt(

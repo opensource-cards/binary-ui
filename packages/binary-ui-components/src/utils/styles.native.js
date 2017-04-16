@@ -1,4 +1,3 @@
-import { CARDS_GREY_COLOR, BINARY_COLOR_BLUE_40, BINARY_COLOR_RED_40 } from 'binary-ui-styles';
 import {
   CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_UNIVERSAL,
 } from './styles.universal';
@@ -34,27 +33,11 @@ export const LIST_ITEM_CONTENTS_BASE_CSS = `
   */
 `;
 
-export const EDIT_CSS = `
-  border-bottom: 1 solid ${CARDS_GREY_COLOR};
-`;
-
 export function getEditStyle(color) {
   return {
-    borderBottom: `1 solid ${color || CARDS_GREY_COLOR}`,
+    borderBottom: `1 solid ${color}`,
   };
 }
-
-export const NO_EDIT_CSS = `
-  border-bottom: 1 solid white;
-`;
-
-export const TYPING_HIGHLIGHT_STYLE = {
-  borderBottom: `1 solid ${BINARY_COLOR_BLUE_40}`,
-};
-
-export const TYPING_HIGHLIGHT_INVALID_STYLE = {
-  borderBottom: `1 solid ${BINARY_COLOR_RED_40}`,
-};
 
 export const CARDS_ICON_CSS = `
   color: black;

@@ -3,7 +3,7 @@ export const ANY = 'any';
 export const NUMBER = 'number';
 export const PASSWORD = 'password';
 export const EMAIL = 'email';
-export const PHONE_NUMBER = 'number';
+export const PHONE_NUMBER = 'phone-number';
 export const LINK = 'link';
 
 export default {

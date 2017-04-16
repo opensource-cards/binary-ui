@@ -6,7 +6,6 @@ import { EDIT_STYLE_EXT } from '../../../../utils/styles';
 const LIST_ITEM_TEXT_STYLE = `
   ${NO_SELECT_CSS}
   align-items: center;
-  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

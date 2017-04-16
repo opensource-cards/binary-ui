@@ -1,4 +1,3 @@
-import { BINARY_COLOR_SAND_90, BINARY_COLOR_BLUE_40, BINARY_COLOR_RED_40 } from 'binary-ui-styles';
 import { FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles/web';
 import {
   CARDS_ICON_ACTIVE_CSS,
@@ -40,31 +39,12 @@ export const LIST_ITEM_CONTENTS_BASE_CSS = `
   outline: 0;
 `;
 
-export const EDIT_CSS = `
-  border-bottom: 1px solid ${BINARY_COLOR_SAND_90};
-  box-sizing: border-box;
-`;
-
 export function getEditStyle(color) {
   return {
-    borderBottom: `1px solid ${color || BINARY_COLOR_SAND_90}`,
+    borderBottom: `1px solid ${color}`,
+    boxSizing: 'border-box',
   };
 }
-
-export const NO_EDIT_CSS = `
-  border-bottom: 1px solid white;
-  box-sizing: border-box;
-`;
-
-export const TYPING_HIGHLIGHT_STYLE = {
-  borderBottom: `1px solid ${BINARY_COLOR_BLUE_40}`,
-  boxSizing: 'border-box',
-};
-
-export const TYPING_HIGHLIGHT_INVALID_STYLE = {
-  borderBottom: `1px solid ${BINARY_COLOR_RED_40}`,
-  boxSizing: 'border-box',
-};
 
 export const CARDS_ICON_CSS = `
   ${NO_SELECT_CSS}

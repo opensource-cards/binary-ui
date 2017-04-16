@@ -4,6 +4,7 @@ import { CARDS_INPUT_RESET_CSS, FIELD_VALUE_FONT_CSS } from '../../../../utils/s
 export default styled.textarea`
   ${CARDS_INPUT_RESET_CSS}
   ${FIELD_VALUE_FONT_CSS}
+  background-color: transparent;
   padding: 10px;
   overflow: hidden;
   min-height: 120px;
