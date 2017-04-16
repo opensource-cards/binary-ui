@@ -1,24 +1,24 @@
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import { BINARY_COLOR_SAND_90, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
 import { NO_SELECT_CSS } from 'binary-ui-styles/web';
 import styled from 'styled-components';
-import { EDIT_STYLE_EXT } from '../../../../utils/styles';
 
-const LIST_ITEM_TEXT_STYLE = `
+export default styled.div`
+  ${CURSOR_POINTER_CSS}
   ${NO_SELECT_CSS}
   align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid transparent;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   min-height: ${LIST_ITEM_HEIGHT}px;
   padding-left: 10px;
-`;
-
-export default styled.div`
-  ${LIST_ITEM_TEXT_STYLE}
   ${(props) => {
     if (!props.isEdit) {
       return '';
     }
-    return `${EDIT_STYLE_EXT}`;
+    return `
+      border-bottom: 1px solid ${BINARY_COLOR_SAND_90}`;
   }}
 `;

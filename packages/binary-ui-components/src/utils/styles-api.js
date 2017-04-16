@@ -35,8 +35,10 @@ export function getActionColorExt(
   if (isActive && colorActive) {
     return colorActive;
   }
+  /*
   if (isHover && colorHover) {
     return colorHover;
   }
+  */
   return color;
 }

@@ -11,13 +11,14 @@ export default styled.input`
   ${FIELD_VALUE_FONT_CSS}
   ${LIST_ITEM_CONTENTS_BASE_CSS}
   background-color: transparent;
+  cursor: text;
   height: ${LIST_ITEM_HEIGHT}px;
-  overflow: hidden;
   resize: none;
+  overflow: hidden;
+  padding-left: 10px;
   text-align: left;
   width: 100%;
   wrap: soft;
-  padding-left: 10px;
   &::-webkit-outer-spin-button;
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;

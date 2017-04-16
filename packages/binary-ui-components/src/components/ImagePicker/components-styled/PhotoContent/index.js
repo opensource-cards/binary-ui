@@ -15,13 +15,8 @@ export default styled.div`
   height: ${PHOTO_SIZE}px;
   margin: 5px;
   width: ${PHOTO_SIZE}px;
-
   &:active {
     ${UNDERLINE_BORDER_ACTIVE_WEB}
     /* opacity: 0.5; */
-  }
-
-  &:hover {
-    ${UNDERLINE_BORDER_ACTIVE_WEB}
   }
 `;

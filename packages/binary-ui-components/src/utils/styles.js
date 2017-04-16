@@ -1,7 +1,6 @@
 import { FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles/web';
 import {
   CARDS_ICON_ACTIVE_CSS,
-  CARDS_ICON_HOVER_CSS,
   CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_UNIVERSAL,
 } from './styles.universal';
 
@@ -54,12 +53,6 @@ export const CARDS_ICON_CSS = `
 export const CARDS_ICON_ACTIVE_PSEUDO_CSS = `
   &:active {
     ${CARDS_ICON_ACTIVE_CSS}
-  }
-`;
-
-export const CARDS_ICON_HOVER_PSEUDO_CSS = `
-  &:hover {
-    ${CARDS_ICON_HOVER_CSS}
   }
 `;
 

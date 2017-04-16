@@ -1,7 +1,6 @@
-import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import React from 'react';
 import IconStyled from './IconStyled';
-import { CARDS_ICON_ACTIVE_STYLE } from '../../../utils/styles.universal';
 import { getActionColorExt } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -10,7 +9,6 @@ const propTypes = {
   isDisabled: React.PropTypes.bool.isRequired,
   isHover: React.PropTypes.bool,
   size: React.PropTypes.number,
-  style: React.PropTypes.object,
   onClick: React.PropTypes.func,
   renderIcon: React.PropTypes.func.isRequired,
 };
@@ -20,7 +18,6 @@ const defaultProps = {
   isActive: false,
   isHover: false,
   size: undefined,
-  style: undefined,
   onClick: undefined,
 };
 
@@ -30,7 +27,6 @@ const ActionableIcon = ({
   isActive,
   isDisabled,
   isHover,
-  style,
   onClick,
   renderIcon,
   ...props,
@@ -46,7 +42,6 @@ const ActionableIcon = ({
       isDisabled
     )}
     size={size}
-    style={isActive ? Object.assign({}, style, CARDS_ICON_ACTIVE_STYLE) : style}
     onClick={!isDisabled && onClick}
     renderIcon={renderIcon}
     {...props}

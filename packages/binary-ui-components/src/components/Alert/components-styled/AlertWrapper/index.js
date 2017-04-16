@@ -1,9 +1,11 @@
 import { BINARY_COLOR_GREEN_30, BINARY_COLOR_RED_40, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
 import { NO_SELECT_CSS } from 'binary-ui-styles/web';
 import styled from 'styled-components';
 import { INFO, CONFIRM, CRITICAL } from '../../constants/alert-types';
 
 const ALERT_COMMON_STYLES = `
+  ${CURSOR_POINTER_CSS}
   height: 40px;
   width: 100%;
   line-height: 40px;

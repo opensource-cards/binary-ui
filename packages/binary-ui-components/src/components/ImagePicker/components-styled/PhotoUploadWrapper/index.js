@@ -14,13 +14,8 @@ export default styled.div`
   margin: 5px;
   width: 60px;
   background-size: cover;
-
   &:active {
     ${UNDERLINE_BORDER_ACTIVE_WEB}
     /* opacity: 0.5; */
-  }
-
-  &:hover {
-    ${UNDERLINE_BORDER_ACTIVE_WEB}
   }
 `;

@@ -306,6 +306,7 @@ storiesOf('binary-ui-components', module)
   .addWithInfo('Text', () => (
     <div>
       <Text
+        isEdit
         renderIcon={() => (<More />)}
         onMoreClick={action()}
       >
