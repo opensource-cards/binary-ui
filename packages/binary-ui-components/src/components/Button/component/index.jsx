@@ -1,8 +1,8 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import React from 'react';
+import ButtonIcon from '../components-styled/ButtonIcon';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
-import ActionableListItemIcon from '../../ActionableListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -26,11 +26,8 @@ const Button = ({ isBold, isEdit, label, renderIcon, onClick }) => (
     style={getHighlightEditStyle(isEdit, true, false, undefined)}
     onClick={onClick}
   >
-    <ActionableListItemIcon
-      isActive={false}
-      isDisabled={false}
-      isHover={false}
-      onClick={onClick}
+    <ButtonIcon
+      size={18}
       renderIcon={renderIcon}
     />
     <ButtonText isBold={isBold} onClick={onClick}>

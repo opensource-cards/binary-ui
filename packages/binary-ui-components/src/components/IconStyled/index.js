@@ -8,14 +8,14 @@ const propTypes = {
 
 const defaultProps = {};
 
-const ActionIconWrapper = ({ style, renderIcon, ...props }) => (
+const IconStyled = ({ style, renderIcon, ...props }) => (
   React.cloneElement(renderIcon(), {
     style: Object.assign({}, NO_SELECT_STYLE, style),
     ...props,
   })
 );
 
-ActionIconWrapper.defaultProps = defaultProps;
-ActionIconWrapper.propTypes = propTypes;
+IconStyled.defaultProps = defaultProps;
+IconStyled.propTypes = propTypes;
 
-export default ActionIconWrapper;
+export default IconStyled;

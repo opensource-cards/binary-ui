@@ -1,10 +1,10 @@
 
 export const ANY = 'any';
-export const NUMBER = 'number';
+export const NUMBER = 'tel';
 export const PASSWORD = 'password';
 export const EMAIL = 'email';
-export const PHONE_NUMBER = 'phone-number';
-export const LINK = 'link';
+export const PHONE_NUMBER = 'tel';
+export const LINK = 'url';
 
 export default {
   ANY,

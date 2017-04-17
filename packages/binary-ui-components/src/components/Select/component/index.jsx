@@ -50,7 +50,7 @@ export default class Select extends React.Component {
         style={getHighlightEditStyle(isEdit, true, false, undefined)}
       >
         <SelectArrow
-          color={BINARY_COLOR_GRAY_40}
+          size={18}
         />
         <SelectStyled
           innerRef={this.setSelectRef}

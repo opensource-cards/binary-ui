@@ -25,7 +25,7 @@ export default class Checkbox extends React.Component {
   }
 
   render() {
-    const { isChecked, ...props } = this.props;
+    const { isChecked, onChange, onClick, ...props } = this.props;
     return isChecked ? (
       <Check color={BINARY_COLOR_BLUE_40} size={30} onClick={this.onClick} {...props} />
     ) : (

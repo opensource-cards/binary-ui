@@ -139,6 +139,7 @@ storiesOf('binary-ui-components', module)
   .addWithInfo('Button', () => (
     <div>
       <Button label={text} isBold onClick={action()} />
+      <Button label={text} isBold renderIcon={() => (<ArrowDown color="#0087BD" />)} onClick={action()} />
       <Button label={text} isEdit={false} onClick={action()} />
     </div>
   ))

@@ -1,7 +1,7 @@
 import { BINARY_COLOR_BLUE_40, BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import React from 'react';
-import IconStyled from './IconStyled';
-import { getActionColorExt } from '../../../utils/styles-api';
+import IconStyled from '../IconStyled';
+import { getActionColorExt } from '../../utils/styles-api';
 
 const propTypes = {
   color: React.PropTypes.string,
