@@ -4,6 +4,6 @@ import styled from 'styled-components';
 export default styled(ArrowDown)`
   pointer-events: none;
   position: absolute;
-  right: 10px;
+  right: 12px;
   top: 12px;
 `;

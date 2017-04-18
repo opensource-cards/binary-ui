@@ -1,5 +1,6 @@
+import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import React from 'react';
-import ActionableListItemIcon from '../ActionableListItemIcon';
+import ActionIconStyled from './components/ActionIconStyled';
 import { isLeftButton } from '../../utils/events';
 
 const propTypes = {
@@ -66,10 +67,12 @@ export default class ActionListItemIcon extends React.Component {
     } = this.props;
     const { isActive, isHover } = this.state;
     return (
-      <ActionableListItemIcon
+      <ActionIconStyled
+        color={BINARY_COLOR_GRAY_40}
         isActive={isActive}
         isHover={isHover}
         isDisabled={isDisabled}
+        size={18}
         renderIcon={renderIcon}
         onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
         onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}

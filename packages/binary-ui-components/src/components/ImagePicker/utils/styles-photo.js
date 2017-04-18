@@ -8,7 +8,7 @@ border : 1px solid ${BINARY_COLOR_SAND_90}
 `;
 
 export const UNDERLINE_BORDER_ACTIVE_WEB = `
-border : 1px solid ${BINARY_COLOR_BLUE_40}
+border : 1px solid ${BINARY_COLOR_BLUE_40};
 `;
 
 export const UNDERLINE_BORDER_STANDARD_NATIVE = `

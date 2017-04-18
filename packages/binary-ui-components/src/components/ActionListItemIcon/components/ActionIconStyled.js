@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ActionableIcon from '../../../ActionableIcon';
+import ActionableIcon from '../../ActionableIcon';
 import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 
 export default styled(ActionableIcon)`
@@ -8,5 +8,5 @@ export default styled(ActionableIcon)`
   flex-shrink: 0;
   height: ${LIST_ITEM_HEIGHT}px;
   justify-content: center;
-  width: 30px;
+  width: ${LIST_ITEM_HEIGHT}px;
 `;

@@ -10,7 +10,7 @@ export function getTypeHtml(type) {
     case INPUT_FIELD_TYPES.PASSWORD:
       return 'password';
     case INPUT_FIELD_TYPES.NUMBER:
-      return 'number';
+      return 'tel';
     case INPUT_FIELD_TYPES.PHONE_NUMBER:
       return 'tel';
     default:
