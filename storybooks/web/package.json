@@ -8,8 +8,7 @@
     "build-storybook": "build-storybook -o ../../docs"
   },
   "dependencies": {
-    "invariant": "^2.2.1",
-    "mask-parser": "^0.0.1-rc.3",
+    "mask-parser": "^0.0.1",
     "react": "~15.3.2",
     "react-art": "^0.15.1",
     "react-dom": "~15.3.2",

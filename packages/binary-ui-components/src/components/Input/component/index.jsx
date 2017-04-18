@@ -3,7 +3,6 @@ import React from 'react';
 import InputStyled from '../components-styled/InputStyled';
 import InputWrapper from '../components-styled/InputWrapper';
 import INPUT_FIELD_TYPES from '../constants/text-field-component-types';
-import { getTypeHtml } from '../utils/text-field-type';
 import { getValidatedPhone } from '../utils/validation';
 import ActionListItemIcon from '../../ActionListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
@@ -48,10 +47,11 @@ export default class Input extends React.Component {
     const { onTextChange, mask, type } = this.props;
     if (onTextChange) {
       const unmaskedValue = removeMask(e.target.value, mask);
-      const finalValue = type === INPUT_FIELD_TYPES.PHONE_NUMBER
-        ? getValidatedPhone(unmaskedValue)
-        : unmaskedValue;
-      onTextChange(finalValue);
+      if (type === INPUT_FIELD_TYPES.TEL) {
+        onTextChange(getValidatedPhone(unmaskedValue));
+        return;
+      }
+      onTextChange(unmaskedValue);
     }
   }
 
@@ -78,7 +78,7 @@ export default class Input extends React.Component {
           console.warn('Mask is ignored for \'INPUT_FIELD_TYPES.NUMBER\'.');
         }
         return value;
-      case INPUT_FIELD_TYPES.PHONE_NUMBER:
+      case INPUT_FIELD_TYPES.TEL:
         return addMask(value, mask);
       default:
         if (mask) {
@@ -109,7 +109,7 @@ export default class Input extends React.Component {
           <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
         <InputStyled
-          type={getTypeHtml(type)}
+          type={type}
           value={this.getFormattedValue(type, mask, value)}
           onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
           onChange={this.onChange}

@@ -484,7 +484,7 @@ storiesOf('binary-ui-components  list items', module)
       <TextField
         isMoreButton
         mask="## #### ####"
-        type={INPUT_FIELD_TYPES.PHONE_NUMBER}
+        type={INPUT_FIELD_TYPES.TEL}
         value="000"
         onRef={action()}
         onTextChange={action()}

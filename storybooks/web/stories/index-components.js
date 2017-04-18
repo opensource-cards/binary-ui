@@ -176,8 +176,8 @@ storiesOf('binary-ui-components', module)
       <div>
         <Input
           isRequired
-          placeholder="INPUT_FIELD_TYPES.ANY"
-          type={INPUT_FIELD_TYPES.ANY}
+          placeholder="INPUT_FIELD_TYPES.TEXT"
+          type={INPUT_FIELD_TYPES.TEXT}
           value=""
           onRef={action()}
           onTextChange={action()}
@@ -194,8 +194,8 @@ storiesOf('binary-ui-components', module)
           onMoreClick={action()}
         />
         <Input
-          placeholder="INPUT_FIELD_TYPES.PHONE_NUMBER"
-          type={INPUT_FIELD_TYPES.PHONE_NUMBER}
+          placeholder="INPUT_FIELD_TYPES.TEL"
+          type={INPUT_FIELD_TYPES.TEL}
           value=""
           renderIcon={() => (<More />)}
           onRef={action()}
@@ -239,7 +239,7 @@ storiesOf('binary-ui-components', module)
         renderRight={() => (
           <Input
             placeholder="Input"
-            type={INPUT_FIELD_TYPES.PHONE_NUMBER}
+            type={INPUT_FIELD_TYPES.TEL}
             value=""
             renderIcon={() => (<More />)}
             onRef={action()}

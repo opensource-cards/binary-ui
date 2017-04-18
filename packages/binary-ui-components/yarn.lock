@@ -54,8 +54,8 @@ ajv-keywords@^1.0.0:
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.5.1.tgz#314dd0a4b3368fad3dfcdc54ede6171b886daf3c"
 
 ajv@^4.7.0, ajv@^4.9.1:
-  version "4.11.6"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.6.tgz#947e93049790942b2a2d60a8289b28924d39f987"
+  version "4.11.7"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.7.tgz#8655a5d86d0824985cc471a1d913fb6729a0ec48"
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -992,13 +992,13 @@ binary-extensions@^1.0.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.8.0.tgz#48ec8d16df4377eae5fa5884682480af4d95c774"
 
-binary-ui-icons@^0.2.0-rc.4:
-  version "0.2.0-rc.4"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.2.0-rc.4.tgz#9cf1d7dbbb0a1883c5b6ccab04a22618400dc665"
+binary-ui-icons@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.2.0.tgz#21084f00957d57789d5fc587b0eefb4a0b9088bc"
 
-binary-ui-styles@^0.2.0-rc.1:
-  version "0.2.0-rc.1"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.2.0-rc.1.tgz#d9b970af52e77ecc4c81a495ff09e8fcb479d759"
+binary-ui-styles@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.2.0.tgz#74576a7111fa5e12b3e6a5fe6ea865deb91b4f87"
 
 binaryextensions@~1.0.0:
   version "1.0.1"
@@ -1735,9 +1735,16 @@ discontinuous-range@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/discontinuous-range/-/discontinuous-range-1.0.0.tgz#e38331f0844bba49b9a9cb71c771585aab1bc65a"
 
-doctrine@1.3.x, doctrine@^1.2.2:
+doctrine@1.3.x:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.3.0.tgz#13e75682b55518424276f7c173783456ef913d26"
+  dependencies:
+    esutils "^2.0.2"
+    isarray "^1.0.0"
+
+doctrine@^1.2.2:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
   dependencies:
     esutils "^2.0.2"
     isarray "^1.0.0"
@@ -2855,7 +2862,7 @@ inquirer@^0.12.0:
     strip-ansi "^3.0.0"
     through "^2.3.6"
 
-invariant@^2.2.0, invariant@^2.2.1:
+invariant@^2.2.0:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -4164,10 +4171,6 @@ react-clone-referenced-element@^1.0.1:
 react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
-
-react-native-image-picker@^0.24.1:
-  version "0.24.1"
-  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-0.24.1.tgz#0a73fc66ec9e0d28bf3a75df996ad29f695d016c"
 
 react-native@^0.38.0:
   version "0.38.1"
