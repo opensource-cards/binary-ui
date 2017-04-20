@@ -40,7 +40,9 @@ export default class Slider extends React.Component {
   }
 
   onGestureResponderStart(e) {
+    // prevent selecting text
     e.preventDefault();
+    // parents don't need to know about this event
     e.stopPropagation();
     this.props.onDraggingChanged(true);
   }
@@ -49,7 +51,9 @@ export default class Slider extends React.Component {
     if (!this.props.dragging) {
       return;
     }
+    // prevent selecting text
     e.preventDefault();
+    // prevent any other movement
     e.stopImmediatePropagation();
     const { containerLeft, containerWidth, onPositionChanged } = this.props;
     const position = getPosition(
@@ -64,7 +68,9 @@ export default class Slider extends React.Component {
     if (!this.props.dragging) {
       return;
     }
+    // prevent selecting text
     e.preventDefault();
+    // prevent any other movement
     e.stopImmediatePropagation();
     const { containerLeft, containerWidth, onPositionChanged } = this.props;
     const position = getPosition(
