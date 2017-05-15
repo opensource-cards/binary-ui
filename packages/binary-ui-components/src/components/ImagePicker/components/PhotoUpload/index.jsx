@@ -38,6 +38,7 @@ export default class PhotoUpload extends React.Component {
         onClick={this.onDivClick}
       >
         <PhotoUploadInput
+          accept="image/*"
           innerRef={this.setLoaderRef}
           type="file"
           onClick={this.onLoaderClick}
