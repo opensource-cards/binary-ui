@@ -67,6 +67,8 @@ import ShareAlt from 'binary-ui-icons/binary/ShareAlt';
 import Stack from 'binary-ui-icons/binary/Stack';
 import StackFull from 'binary-ui-icons/binary/StackFull';
 import StackNew from 'binary-ui-icons/binary/StackNew';
+import StackUnavailable from 'binary-ui-icons/binary/StackUnavailable';
+import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
 import Telegram from 'binary-ui-icons/binary/Telegram';
@@ -77,6 +79,7 @@ import Translation from 'binary-ui-icons/binary/Translation';
 import Twitter from 'binary-ui-icons/binary/Twitter';
 import Ubuntu from 'binary-ui-icons/binary/Ubuntu';
 import Uncheck from 'binary-ui-icons/binary/Uncheck';
+import Update from 'binary-ui-icons/binary/Update';
 import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
@@ -245,6 +248,12 @@ storiesOf('binary-ui-icons main', module)
   .addWithInfo('StackNew', () => (
     <StackNew color={COLOR} size={SIZE} />
   ))
+  .addWithInfo('StackUnavailable', () => (
+    <StackUnavailable color={COLOR} size={SIZE} />
+  ))
+  .addWithInfo('StackUnavailableAlt', () => (
+    <StackUnavailableAlt color={COLOR} size={SIZE} />
+  ))
   .addWithInfo('Store', () => (
     <Store color={COLOR} size={SIZE} />
   ))
@@ -265,6 +274,9 @@ storiesOf('binary-ui-icons main', module)
   ))
   .addWithInfo('Uncheck', () => (
     <Uncheck color={COLOR} size={SIZE} />
+  ))
+  .addWithInfo('Update', () => (
+    <Update color={COLOR} size={SIZE} />
   ))
   .addWithInfo('User', () => (
     <User color={COLOR} size={SIZE} />
