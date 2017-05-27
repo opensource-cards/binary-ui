@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-styles",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "React styles for Cards' Binary Design.",
   "keywords": [
     "react",
@@ -26,8 +26,6 @@
     "web.js"
   ],
   "main": "lib/index.js",
-  "dependencies": {},
-  "peerDependencies": {},
   "devDependencies": {
     "babel": "^6.3.26",
     "babel-cli": "^6.14.0",
