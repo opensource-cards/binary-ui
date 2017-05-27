@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SliderBar from './SliderBar';
 import SliderContainer from '../components-styled/SliderContainer';
 import SliderScaleIcon from '../components-styled/SliderScaleIcon';
 
 const propTypes = {
-  position: React.PropTypes.number.isRequired,
-  onPositionChange: React.PropTypes.func.isRequired,
-  renderIconLeft: React.PropTypes.func,
-  renderIconRight: React.PropTypes.func,
+  position: PropTypes.number.isRequired,
+  onPositionChange: PropTypes.func.isRequired,
+  renderIconLeft: PropTypes.func,
+  renderIconRight: PropTypes.func,
 };
 
 const defaultProps = {

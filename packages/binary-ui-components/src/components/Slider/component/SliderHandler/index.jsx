@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SliderHandler from '../../components-styled/SliderHandler';
 import validatePosition from '../../utils/position-validation';
@@ -5,12 +6,12 @@ import getPosition from '../../utils/position';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../../utils/styles.universal';
 
 const propTypes = {
-  containerLeft: React.PropTypes.number.isRequired,
-  containerWidth: React.PropTypes.number.isRequired,
-  dragging: React.PropTypes.bool.isRequired,
-  position: React.PropTypes.number.isRequired,
-  onDraggingChanged: React.PropTypes.func.isRequired,
-  onPositionChanged: React.PropTypes.func.isRequired,
+  containerLeft: PropTypes.number.isRequired,
+  containerWidth: PropTypes.number.isRequired,
+  dragging: PropTypes.bool.isRequired,
+  position: PropTypes.number.isRequired,
+  onDraggingChanged: PropTypes.func.isRequired,
+  onPositionChanged: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};

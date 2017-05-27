@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionLinkRender from '../components-styled/ActionLinkRender';
@@ -6,14 +7,14 @@ import ActionableText from '../../ActionableText';
 import { isLeftButton } from '../../../utils/events';
 
 const propTypes = {
-  children: React.PropTypes.any,
-  isDisabled: React.PropTypes.bool,
-  onClick: React.PropTypes.func,
-  onMouseEnter: React.PropTypes.func,
-  onMouseLeave: React.PropTypes.func,
-  onTapDown: React.PropTypes.func,
-  renderIconLeft: React.PropTypes.func,
-  renderIconRight: React.PropTypes.func,
+  children: PropTypes.any,
+  isDisabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  onTapDown: PropTypes.func,
+  renderIconLeft: PropTypes.func,
+  renderIconRight: PropTypes.func,
 };
 
 const defaultProps = {

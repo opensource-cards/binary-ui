@@ -1,5 +1,6 @@
-import styled from 'styled-components/native';
+import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components/native';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
 const StyledOpacity = styled.TouchableOpacity`
@@ -8,8 +9,8 @@ const StyledOpacity = styled.TouchableOpacity`
 `;
 
 const propTypes = {
-  onClick: React.PropTypes.func.isRequired,
-  children: React.PropTypes.any,
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.any,
 };
 
 const defaultProps = {};

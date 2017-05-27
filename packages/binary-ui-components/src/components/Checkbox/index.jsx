@@ -1,12 +1,13 @@
 import Check from 'binary-ui-icons/binary/Check';
 import Uncheck from 'binary-ui-icons/binary/Uncheck';
 import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const propTypes = {
-  isChecked: React.PropTypes.bool.isRequired,
-  onChange: React.PropTypes.func.isRequired,
-  onClick: React.PropTypes.func,
+  isChecked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
 
 const defaultProps = {

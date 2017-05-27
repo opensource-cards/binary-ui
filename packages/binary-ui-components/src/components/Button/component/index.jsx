@@ -1,4 +1,5 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ButtonIcon from '../components-styled/ButtonIcon';
 import ButtonText from '../components-styled/ButtonText';
@@ -6,11 +7,11 @@ import ButtonWrapper from '../components-styled/ButtonWrapper';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
-  isBold: React.PropTypes.bool.isRequired,
-  isEdit: React.PropTypes.bool.isRequired,
-  label: React.PropTypes.string.isRequired,
-  renderIcon: React.PropTypes.func,
-  onClick: React.PropTypes.func.isRequired,
+  isBold: PropTypes.bool.isRequired,
+  isEdit: PropTypes.bool.isRequired,
+  label: PropTypes.string.isRequired,
+  renderIcon: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 };
 
 const defaultProps = {

@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ActionableIcon from '../ActionableIcon';
 import { isLeftButton } from '../../utils/events';
 
 const propTypes = {
-  isDisabled: React.PropTypes.bool,
-  renderIcon: React.PropTypes.func.isRequired,
-  onMouseEnter: React.PropTypes.func,
-  onMouseLeave: React.PropTypes.func,
-  onTapDown: React.PropTypes.func,
+  isDisabled: PropTypes.bool,
+  renderIcon: PropTypes.func.isRequired,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  onTapDown: PropTypes.func,
 };
 
 const defaultProps = {

@@ -1,12 +1,13 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import PhotoContent from '../../components-styled/PhotoContent';
 import PhotoCheckmark from '../../components-styled/PhotoCheckmark';
 
 const propTypes = {
-  photoFit: React.PropTypes.string.isRequired,
-  selected: React.PropTypes.bool.isRequired,
-  url: React.PropTypes.string.isRequired,
-  onPhotoClick: React.PropTypes.func,
+  photoFit: PropTypes.string.isRequired,
+  selected: PropTypes.bool.isRequired,
+  url: PropTypes.string.isRequired,
+  onPhotoClick: PropTypes.func,
 };
 
 const defaultProps = {};

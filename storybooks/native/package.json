@@ -13,7 +13,7 @@
     "react-art": "^0.15.1",
     "react-native": "0.38.1",
     "react-native-image-picker": "^0.24.1",
-    "styled-components": "^1.1.2",
+    "styled-components": "^2.0.0",
     "uuid": "^3.0.1"
   },
   "jest": {

@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import AlertContent from '../components-styled/AlertContent';
 import AlertWrapper from '../components-styled/AlertWrapper';
 import { INFO } from '../constants/alert-types';
 
 const propTypes = {
-  text: React.PropTypes.string.isRequired,
-  type: React.PropTypes.string,
+  text: PropTypes.string.isRequired,
+  type: PropTypes.string,
 };
 
 const defaultProps = {

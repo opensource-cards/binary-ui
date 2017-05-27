@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import TextareaInput from './TextareaInput';
 import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
@@ -5,13 +6,13 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
-  isValid: React.PropTypes.bool,
-  renderIcon: React.PropTypes.func,
-  value: React.PropTypes.string.isRequired,
-  onBlur: React.PropTypes.func,
-  onFocus: React.PropTypes.func,
-  onTextChange: React.PropTypes.func.isRequired,
-  onMoreClick: React.PropTypes.func,
+  isValid: PropTypes.bool,
+  renderIcon: PropTypes.func,
+  value: PropTypes.string.isRequired,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+  onTextChange: PropTypes.func.isRequired,
+  onMoreClick: PropTypes.func,
 };
 
 const defaultProps = {

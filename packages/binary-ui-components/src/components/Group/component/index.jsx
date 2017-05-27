@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Divider from '../components-styled/Divider';
 import Left from '../components-styled/Left';
@@ -5,8 +6,8 @@ import Right from '../components-styled/Right';
 import Wrapper from '../components-styled/Wrapper';
 
 const propTypes = {
-  renderLeft: React.PropTypes.func,
-  renderRight: React.PropTypes.func,
+  renderLeft: PropTypes.func,
+  renderRight: PropTypes.func,
 };
 
 const defaultProps = {

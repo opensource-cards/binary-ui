@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import PhotoUploadInput from '../../components-styled/PhotoUploadInput';
 import PhotoUploadWrapper from '../../components-styled/PhotoUploadWrapper';
 
 const propTypes = {
-  noImageUrl: React.PropTypes.string.isRequired,
-  onPhotoAdd: React.PropTypes.func.isRequired,
+  noImageUrl: PropTypes.string.isRequired,
+  onPhotoAdd: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};

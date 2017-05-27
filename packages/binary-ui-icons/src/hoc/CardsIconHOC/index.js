@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SurfaceWrapper from '../../components-styled/SurfaceWrapper';
 import SurfaceRenderer from '../SurfaceRenderer';
 
 export default (IconContentComponent) => {
   const propTypes = {
-    color: React.PropTypes.string,
-    size: React.PropTypes.number,
+    color: PropTypes.string,
+    size: PropTypes.number,
   };
 
   const defaultProps = {

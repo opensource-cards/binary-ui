@@ -1,14 +1,15 @@
 import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ActionIconStyled from './components/ActionIconStyled';
 import { isLeftButton } from '../../utils/events';
 
 const propTypes = {
-  isDisabled: React.PropTypes.bool,
-  renderIcon: React.PropTypes.func.isRequired,
-  onMouseEnter: React.PropTypes.func,
-  onMouseLeave: React.PropTypes.func,
-  onTapDown: React.PropTypes.func,
+  isDisabled: PropTypes.bool,
+  renderIcon: PropTypes.func.isRequired,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  onTapDown: PropTypes.func,
 };
 
 const defaultProps = {

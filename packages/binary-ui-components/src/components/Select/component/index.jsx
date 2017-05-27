@@ -1,5 +1,5 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import SelectArrow from '../components-styled/SelectArrow';
 import SelectOption from '../components-styled/SelectOption';
 import SelectStyled from '../components-styled/SelectStyled';
@@ -7,11 +7,11 @@ import SelectWrapper from '../components-styled/SelectWrapper';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
-  items: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-  isBold: React.PropTypes.bool.isRequired,
-  isEdit: React.PropTypes.bool.isRequired,
-  selected: React.PropTypes.string.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isBold: PropTypes.bool.isRequired,
+  isEdit: PropTypes.bool.isRequired,
+  selected: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {

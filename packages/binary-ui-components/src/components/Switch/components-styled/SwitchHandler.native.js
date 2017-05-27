@@ -1,5 +1,6 @@
-import React from 'react';
 import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
+import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components/native';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
 
@@ -33,7 +34,7 @@ const SwitchHandlerBase = styled.View`
 `;
 
 const propTypes = {
-  isChecked: React.PropTypes.bool.isRequired,
+  isChecked: PropTypes.bool.isRequired,
 };
 
 const defaultProps = {};

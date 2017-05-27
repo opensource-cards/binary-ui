@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SwitchToggle from '../components-styled/SwitchToggle';
 import SwitchContainer from '../components-styled/SwitchContainer';
@@ -7,9 +8,9 @@ import SwitchLabel from '../components-styled/SwitchLabel';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const propTypes = {
-  label: React.PropTypes.node,
-  isChecked: React.PropTypes.bool.isRequired,
-  onChange: React.PropTypes.func.isRequired,
+  label: PropTypes.node,
+  isChecked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {

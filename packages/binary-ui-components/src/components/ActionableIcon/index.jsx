@@ -1,16 +1,17 @@
 import { BINARY_COLOR_BLUE_40, BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import PropTypes from 'prop-types';
 import React from 'react';
 import IconStyled from '../IconStyled';
 import { getActionColorExt } from '../../utils/styles-api';
 
 const propTypes = {
-  color: React.PropTypes.string,
-  isActive: React.PropTypes.bool,
-  isDisabled: React.PropTypes.bool.isRequired,
-  isHover: React.PropTypes.bool,
-  size: React.PropTypes.number,
-  onClick: React.PropTypes.func,
-  renderIcon: React.PropTypes.func.isRequired,
+  color: PropTypes.string,
+  isActive: PropTypes.bool,
+  isDisabled: PropTypes.bool.isRequired,
+  isHover: PropTypes.bool,
+  size: PropTypes.number,
+  onClick: PropTypes.func,
+  renderIcon: PropTypes.func.isRequired,
 };
 
 const defaultProps = {

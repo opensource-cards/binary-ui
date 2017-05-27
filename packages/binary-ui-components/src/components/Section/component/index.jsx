@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SectionWrapper from '../components-styled/SectionWrapper';
 import SectionContentWrapper from '../components-styled/SectionContentWrapper';
 import SectionTitle from '../components-styled/SectionTitle';
 
 const propTypes = {
-  children: React.PropTypes.node,
-  label: React.PropTypes.string.isRequired,
+  children: PropTypes.node,
+  label: PropTypes.string.isRequired,
 };
 
 const defaultProps = {

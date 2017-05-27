@@ -1,14 +1,15 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import TextContent from '../components-styled/TextContent';
 import TextWrapper from '../components-styled/TextWrapper';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
-  children: React.PropTypes.any,
-  isBold: React.PropTypes.bool,
-  isEdit: React.PropTypes.bool,
-  renderIcon: React.PropTypes.func,
-  onMoreClick: React.PropTypes.func,
+  children: PropTypes.any,
+  isBold: PropTypes.bool,
+  isEdit: PropTypes.bool,
+  renderIcon: PropTypes.func,
+  onMoreClick: PropTypes.func,
 };
 
 const defaultProps = {

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SliderHandler from '../SliderHandler';
 import SliderScale from '../../components-styled/SliderScale';
@@ -5,8 +6,8 @@ import { HOLD_TIME } from '../../utils/config';
 import getPosition from '../../utils/position';
 
 const propTypes = {
-  position: React.PropTypes.number.isRequired,
-  onPositionChange: React.PropTypes.func.isRequired,
+  position: PropTypes.number.isRequired,
+  onPositionChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};

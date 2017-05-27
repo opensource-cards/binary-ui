@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import uuid from 'uuid';
 import Photo from './Photo';
@@ -5,14 +6,14 @@ import PhotoUpload from './PhotoUpload';
 import ListItemPhotoWrapperWrapper from '../components-styled/ListItemPhotoWrapperWrapper';
 
 const propTypes = {
-  isSelectable: React.PropTypes.bool,
-  limit: React.PropTypes.number,
-  noImageUrl: React.PropTypes.string.isRequired,
-  photoFit: React.PropTypes.string,
-  selectedPhotoGuid: React.PropTypes.string,
-  uploadedPhotos: React.PropTypes.array,
-  onPhotoClick: React.PropTypes.func,
-  onPhotoUpload: React.PropTypes.func.isRequired,
+  isSelectable: PropTypes.bool,
+  limit: PropTypes.number,
+  noImageUrl: PropTypes.string.isRequired,
+  photoFit: PropTypes.string,
+  selectedPhotoGuid: PropTypes.string,
+  uploadedPhotos: PropTypes.array,
+  onPhotoClick: PropTypes.func,
+  onPhotoUpload: PropTypes.func.isRequired,
 };
 
 const defaultProps = {

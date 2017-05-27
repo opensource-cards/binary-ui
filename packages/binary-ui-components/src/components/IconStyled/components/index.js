@@ -1,9 +1,10 @@
 import { NO_SELECT_STYLE } from 'binary-ui-styles/web';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const propTypes = {
-  style: React.PropTypes.object,
-  renderIcon: React.PropTypes.func.isRequired,
+  style: PropTypes.object,
+  renderIcon: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};

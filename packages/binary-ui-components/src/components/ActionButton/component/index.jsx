@@ -1,4 +1,5 @@
 import { BINARY_COLOR_BLUE_40 } from 'binary-ui-styles';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ActionableIcon from '../../ActionableIcon';
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
@@ -6,12 +7,12 @@ import ActionButtonStyled from '../components-styled/ActionButtonStyled';
 import ActionButtonWrapper from '../components-styled/ActionButtonWrapper';
 
 const propTypes = {
-  children: React.PropTypes.any,
-  isDisabled: React.PropTypes.bool,
-  onClick: React.PropTypes.func,
-  onSubmit: React.PropTypes.func,
-  renderIconLeft: React.PropTypes.func,
-  renderIconRight: React.PropTypes.func,
+  children: PropTypes.any,
+  isDisabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  onSubmit: PropTypes.func,
+  renderIconLeft: PropTypes.func,
+  renderIconRight: PropTypes.func,
 };
 
 const defaultProps = {

@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import ActionDivRender from '../components-styled/ActionDivRender';
 
 const propTypes = {
-  isDisabled: React.PropTypes.bool,
-  onClick: React.PropTypes.func,
+  isDisabled: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 const defaultProps = {

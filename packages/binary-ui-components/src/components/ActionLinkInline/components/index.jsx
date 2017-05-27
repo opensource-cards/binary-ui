@@ -1,4 +1,5 @@
 import { BINARY_COLOR_BLUE_40 } from 'binary-ui-styles';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ActionListItemIconRender from '../components-styled/ActionListItemIconRender';
 import ActionLinkInlineWrapper from '../components-styled/ActionLinkInlineWrapper';
@@ -8,14 +9,14 @@ import ActionableText from '../../ActionableText';
 import { isLeftButton } from '../../../utils/events';
 
 const propTypes = {
-  children: React.PropTypes.any,
-  isDisabled: React.PropTypes.bool,
-  onClick: React.PropTypes.func,
-  onMouseEnter: React.PropTypes.func,
-  onMouseLeave: React.PropTypes.func,
-  onTapDown: React.PropTypes.func,
-  renderIconLeft: React.PropTypes.func,
-  renderIconRight: React.PropTypes.func,
+  children: PropTypes.any,
+  isDisabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  onTapDown: PropTypes.func,
+  renderIconLeft: PropTypes.func,
+  renderIconRight: PropTypes.func,
 };
 
 const defaultProps = {

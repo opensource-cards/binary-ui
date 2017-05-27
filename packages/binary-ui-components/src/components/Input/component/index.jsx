@@ -1,4 +1,5 @@
 import { addMask, removeMask } from 'mask-parser';
+import PropTypes from 'prop-types';
 import React from 'react';
 import InputStyled from '../components-styled/InputStyled';
 import InputWrapper from '../components-styled/InputWrapper';
@@ -8,16 +9,16 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
-  borderColor: React.PropTypes.string,
-  isValid: React.PropTypes.bool,
-  mask: React.PropTypes.string,
-  type: React.PropTypes.any,
-  value: React.PropTypes.string.isRequired,
-  renderIcon: React.PropTypes.func,
-  onBlur: React.PropTypes.func,
-  onFocus: React.PropTypes.func,
-  onMoreClick: React.PropTypes.func,
-  onTextChange: React.PropTypes.func.isRequired,
+  borderColor: PropTypes.string,
+  isValid: PropTypes.bool,
+  mask: PropTypes.string,
+  type: PropTypes.any,
+  value: PropTypes.string.isRequired,
+  renderIcon: PropTypes.func,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+  onMoreClick: PropTypes.func,
+  onTextChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {

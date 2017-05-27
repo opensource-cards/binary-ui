@@ -1,15 +1,16 @@
-import { BINARY_COLOR_BLUE_40, BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import PropTypes from 'prop-types';
 import React from 'react';
 import TextStyled from './TextStyled';
 import { getActionColorExt } from '../../../utils/styles-api';
 
 const propTypes = {
-  color: React.PropTypes.string,
-  isActive: React.PropTypes.bool,
-  isDisabled: React.PropTypes.bool.isRequired,
-  isHover: React.PropTypes.bool,
-  style: React.PropTypes.object,
-  onClick: React.PropTypes.func,
+  color: PropTypes.string,
+  isActive: PropTypes.bool,
+  isDisabled: PropTypes.bool.isRequired,
+  isHover: PropTypes.bool,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
 };
 
 const defaultProps = {
