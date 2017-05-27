@@ -4,7 +4,7 @@ export const PHOTO_SIZE = 60;
 export const PHOTO_CHECKMARK_SIZE = 40;
 
 export const UNDERLINE_BORDER_STANDARD_WEB = `
-border : 1px solid ${BINARY_COLOR_SAND_90}
+border : 1px solid ${BINARY_COLOR_SAND_90};
 `;
 
 export const UNDERLINE_BORDER_ACTIVE_WEB = `
