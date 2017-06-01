@@ -4,7 +4,6 @@ import {
   FIELD_VALUE_FONT_STYLE_CSS,
 } from '../../../../utils/styles';
 
-// TODO: make styled component
 export default styled.TextInput`
   ${CARDS_INPUT_RESET_CSS}
   ${FIELD_VALUE_FONT_STYLE_CSS}

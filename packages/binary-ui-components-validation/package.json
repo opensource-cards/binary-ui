@@ -15,7 +15,8 @@
   "scripts": {
     "clean": "rimraf lib",
     "lint": "eslint src",
-    "build": "npm run lint && npm run clean && babel src --out-dir lib"
+    "test": "mocha --recursive --compilers js:babel-core/register",
+    "build": "npm run lint && npm test && npm run clean && babel src --out-dir lib"
   },
   "license": "MIT",
   "repository": {
@@ -26,7 +27,8 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "pure-validation": "^0.0.1"
+    "pure-validation": "^0.0.1",
+    "url-regex": "^4.0.0"
   },
   "peerDependencies": {
     "binary-ui-components": "^0.2.4"
@@ -46,6 +48,8 @@
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.2.1",
     "eslint-plugin-react": "^6.2.0",
+    "mocha": "^3.4.2",
+    "react": "^15.5.4",
     "rimraf": "^2.5.4"
   }
 }

@@ -20,7 +20,6 @@ const defaultProps = {
   renderIcon: () => (<ArrowRight />),
 };
 
-// TODO: add numberOfLines={1} to Text
 const Button = ({ isBold, isEdit, label, renderIcon, onClick }) => (
   <ButtonWrapper
     isTapHighlight

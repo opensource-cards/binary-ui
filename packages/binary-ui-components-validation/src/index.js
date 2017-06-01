@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
 import { isEmailLike, isPhoneLike } from 'pure-validation';
+import urlRegex from 'url-regex';
 
 export function isTextFieldValid(textFieldType, value) {
   if (textFieldType === INPUT_FIELD_TYPES.TEXT) {
@@ -20,8 +21,7 @@ export function isTextFieldValid(textFieldType, value) {
     return isPhoneLike(value);
   }
   if (textFieldType === INPUT_FIELD_TYPES.LINK) {
-    console.warn('Not implemented.');
-    return true;
+    return urlRegex({exact: true}).test(value);
   }
   return true;
 }

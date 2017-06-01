@@ -38,13 +38,6 @@ export const LIST_ITEM_CONTENTS_BASE_CSS = `
   outline: 0;
 `;
 
-export function getEditStyle(color) {
-  return {
-    borderBottom: `1px solid ${color}`,
-    boxSizing: 'border-box',
-  };
-}
-
 export const CARDS_ICON_CSS = `
   ${NO_SELECT_CSS}
   color: black;

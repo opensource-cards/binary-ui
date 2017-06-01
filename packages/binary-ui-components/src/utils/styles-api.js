@@ -1,5 +1,5 @@
 import { BINARY_COLOR_SAND_90, BINARY_COLOR_BLUE_40, BINARY_COLOR_RED_40 } from 'binary-ui-styles';
-import { getEditStyle } from './styles';
+import { getEditStyle } from './styles-api-utils';
 
 export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, borderColor) {
   if (!isEdit) {

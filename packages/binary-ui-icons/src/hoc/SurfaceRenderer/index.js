@@ -5,7 +5,6 @@ import createSurfaceRendererNativeAndWeb from './index.native-and-web';
 /* eslint-disable global-require */
 // NOTE: This is not to break a server rendering.
 // NOTE: A `window` variable should not be defined on a server!
-// TODO: Come up with a better solution.
 const ReactArt = (typeof window === 'undefined')
   ? {}
   : (() => require('react-art'))();
@@ -24,7 +23,7 @@ const defaultProps = {
   color: undefined,
 };
 
-// TODO: Content is rendered on a second frame, to have the same checksum with a server rendering.
+// NOTE: Content is rendered on a second frame, to have the same checksum with a server rendering.
 export default class SurfaceRendererWeb extends React.Component {
 
   constructor(props) {
