@@ -30,7 +30,7 @@ const Button = ({ isBold, isEdit, label, renderIcon, onClick }) => (
       size={18}
       renderIcon={renderIcon}
     />
-    <ButtonText isBold={isBold} onClick={onClick}>
+    <ButtonText isBold={isBold}>
       {label}
     </ButtonText>
   </ButtonWrapper>
