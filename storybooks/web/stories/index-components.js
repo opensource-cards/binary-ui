@@ -272,11 +272,12 @@ storiesOf('binary-ui-components', module)
   ))
   .addWithInfo('Select', () => (
     <Select
-      selected="uk"
+      isValid={false}
       items={[
         { key: 'ko', value: 'ko', label: 'Korea (+82)' },
         { key: 'uk', value: 'uk', label: 'Ukraine (+38)' },
       ]}
+      selected="uk"
       onChange={action()}
     />
   ))

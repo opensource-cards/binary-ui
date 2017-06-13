@@ -7,9 +7,10 @@ import SelectWrapper from '../components-styled/SelectWrapper';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
+  isBold: PropTypes.bool,
+  isEdit: PropTypes.bool,
+  isValid: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  isBold: PropTypes.bool.isRequired,
-  isEdit: PropTypes.bool.isRequired,
   selected: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };
@@ -17,6 +18,7 @@ const propTypes = {
 const defaultProps = {
   isBold: false,
   isEdit: true,
+  isValid: true,
 };
 
 export default class Select extends React.Component {
@@ -44,10 +46,10 @@ export default class Select extends React.Component {
   }
 
   render() {
-    const { items, isBold, isEdit, selected } = this.props;
+    const { items, isBold, isEdit, isValid, selected } = this.props;
     return (
       <SelectWrapper
-        style={getHighlightEditStyle(isEdit, true, false, undefined)}
+        style={getHighlightEditStyle(isEdit, isValid, false, undefined)}
       >
         <SelectArrow
           size={18}
