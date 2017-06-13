@@ -1,4 +1,4 @@
-import { BINARY_COLOR_BLUE_40, BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconStyled from '../IconStyled';
@@ -8,7 +8,6 @@ const propTypes = {
   color: PropTypes.string,
   isActive: PropTypes.bool,
   isDisabled: PropTypes.bool.isRequired,
-  isHover: PropTypes.bool,
   size: PropTypes.number,
   onClick: PropTypes.func,
   renderIcon: PropTypes.func.isRequired,
@@ -17,7 +16,6 @@ const propTypes = {
 const defaultProps = {
   color: undefined,
   isActive: false,
-  isHover: false,
   size: undefined,
   onClick: undefined,
 };
@@ -27,7 +25,6 @@ const ActionableIcon = ({
   size,
   isActive,
   isDisabled,
-  isHover,
   onClick,
   renderIcon,
   ...props,
@@ -36,10 +33,8 @@ const ActionableIcon = ({
     color={getActionColorExt(
       color,
       BINARY_COLOR_BLUE_60,
-      BINARY_COLOR_BLUE_40,
       BINARY_COLOR_GRAY_40,
       isActive,
-      isHover,
       isDisabled
     )}
     size={size}

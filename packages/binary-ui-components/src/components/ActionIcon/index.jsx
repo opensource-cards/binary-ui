@@ -6,15 +6,11 @@ import { isLeftButton } from '../../utils/events';
 const propTypes = {
   isDisabled: PropTypes.bool,
   renderIcon: PropTypes.func.isRequired,
-  onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func,
   onTapDown: PropTypes.func,
 };
 
 const defaultProps = {
   isDisabled: false,
-  onMouseEnter: undefined,
-  onMouseLeave: undefined,
   onTapDown: undefined,
 };
 
@@ -24,11 +20,9 @@ export default class ActionIcon extends React.Component {
     super(props);
     this.state = {
       isActive: false,
-      isHover: false,
     };
     this.onTapUp = () => { this.onSetActive(false); };
     this.onSetActive = this.onSetActive.bind(this);
-    this.onSetHover = this.onSetHover.bind(this);
   }
 
   componentDidMount() {
@@ -50,32 +44,21 @@ export default class ActionIcon extends React.Component {
     });
   }
 
-  onSetHover(isHover) {
-    this.setState({
-      isHover,
-    });
-  }
-
   render() {
     const {
       isDisabled,
       renderIcon,
-      onMouseEnter,
-      onMouseLeave,
       onTapDown,
       ...props,
     } = this.props;
-    const { isActive, isHover } = this.state;
+    const { isActive } = this.state;
     return (
       <ActionableIcon
         isActive={isActive}
         isDisabled={isDisabled}
-        isHover={isHover}
         renderIcon={renderIcon}
         onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
         onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
-        onMouseEnter={!isDisabled && ((e) => { this.onSetHover(true); if (onMouseEnter) { onMouseEnter(e); } })}
-        onMouseLeave={!isDisabled && ((e) => { this.onSetHover(false); if (onMouseLeave) { onMouseLeave(e); } })}
         {...props}
       />
     );

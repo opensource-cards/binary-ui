@@ -23,10 +23,8 @@ export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, border
 export function getActionColorExt(
   color = '#000000',
   colorActive,
-  colorHover,
   colorDisabled,
   isActive,
-  isHover,
   isDisabled
 ) {
   if (isDisabled) {
@@ -35,10 +33,5 @@ export function getActionColorExt(
   if (isActive && colorActive) {
     return colorActive;
   }
-  /*
-  if (isHover && colorHover) {
-    return colorHover;
-  }
-  */
   return color;
 }
