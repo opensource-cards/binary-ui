@@ -5,15 +5,13 @@ import ProgressIndicator from '../components-styled/ProgressIndicator';
 
 const propTypes = {
   progress: PropTypes.number.isRequired,
-  onPositionChange: PropTypes.func.isRequired,
 };
 
-const defaultProps = {
-};
+const defaultProps = {};
 
-const ProgressBar = ({ progress, onPositionChange }) => (
+const ProgressBar = ({ progress }) => (
   <ProgressContainer>
-    <ProgressIndicator progress={progress} onPositionChange={onPositionChange} />
+    <ProgressIndicator progress={Math.min(Math.max(progress, 0), 100)} />
   </ProgressContainer>
 );
 

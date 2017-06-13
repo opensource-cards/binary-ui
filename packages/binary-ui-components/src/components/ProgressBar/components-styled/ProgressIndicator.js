@@ -1,4 +1,4 @@
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import { BINARY_COLOR_RED_40, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
@@ -7,12 +7,12 @@ export default styled.div`
     to bottom,
     transparent 0%,
     transparent 48%,
-    black 48%,
-    black 52%,
+    ${props => (props.progress >= 90 ? BINARY_COLOR_RED_40 : 'black')} 48%,
+    ${props => (props.progress >= 90 ? BINARY_COLOR_RED_40 : 'black')} 52%,
     transparent 52%,
     transparent 100%
   );
-  width: 30%; /* CHANGE THIS TO INDICATE PROGRESS */
+  width: ${props => props.progress}%;
   box-sizing: border-box;
   position: absolute;
   left: 0;

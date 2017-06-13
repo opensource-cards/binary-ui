@@ -295,9 +295,8 @@ storiesOf('binary-ui-components', module)
   ))
   .addWithInfo('ProgressBar', () => (
     <div>
-      <ProgressBar
-        progress={30}
-      />
+      <ProgressBar progress={89} />
+      <ProgressBar progress={90} />
     </div>
   ))
   .addWithInfo('Switch', () => (

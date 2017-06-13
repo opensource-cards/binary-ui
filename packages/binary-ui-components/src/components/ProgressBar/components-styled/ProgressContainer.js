@@ -2,7 +2,7 @@ import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
-background: linear-gradient(
+  background: linear-gradient(
     to bottom,
     transparent 0%,
     transparent 49%,
