@@ -1,8 +1,8 @@
+import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
-  height: 1px;
-  background: linear-gradient(
+background: linear-gradient(
     to bottom,
     transparent 0%,
     transparent 49%,
@@ -11,7 +11,7 @@ export default styled.div`
     transparent 51%,
     transparent 100%
   );
+  position: relative;
+  height: ${LIST_ITEM_HEIGHT}px;
   width: 100%;
-  padding: 20px 0;
-  box-sizing: border-box;
 `;

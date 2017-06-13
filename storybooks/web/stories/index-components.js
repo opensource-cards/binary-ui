@@ -14,6 +14,7 @@ import Button from 'binary-ui-components/mobile/Button';
 import Checkbox from 'binary-ui-components/mobile/Checkbox';
 import Group from 'binary-ui-components/mobile/Group';
 import ImagePicker from 'binary-ui-components/mobile/ImagePicker';
+import ProgressBar from 'binary-ui-components/mobile/ProgressBar';
 import Section from 'binary-ui-components/mobile/Section';
 import Select from 'binary-ui-components/mobile/Select';
 import Slider from 'binary-ui-components/mobile/Slider';
@@ -290,6 +291,13 @@ storiesOf('binary-ui-components', module)
         onPositionChange={action()}
       />
       <SliderDemo1 />
+    </div>
+  ))
+  .addWithInfo('ProgressBar', () => (
+    <div>
+      <ProgressBar
+        progress={30}
+      />
     </div>
   ))
   .addWithInfo('Switch', () => (
