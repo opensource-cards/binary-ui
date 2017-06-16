@@ -139,23 +139,18 @@ storiesOf('binary-ui-components', module)
   ))
   .addWithInfo('Button', () => (
     <div>
-      <Button label={text} isBold onClick={action()} />
-      <Button label={text} isBold renderIcon={() => (<ArrowDown color="#0087BD" />)} onClick={action()} />
-      <Button label={text} isEdit={false} onClick={action()} />
+      <Button label="A standard button" isBold onClick={action()} />
+      <Button label="A non editable button" isEdit={false} onClick={action()} />
+      <Button label="A disabled button" isBold isDisabled onClick={action()} />
+      <Button label="A standard with button icon" isBold renderIcon={() => (<ArrowDown />)} onClick={action()} />
+      <Button color="#0087BD" label="A colorful with icon button" isBold renderIcon={() => (<ArrowDown />)} onClick={action()} />
+      <Button color="#0087BD" label="A colorful with icon disabled button" isBold isDisabled renderIcon={() => (<ArrowDown />)} onClick={action()} />
     </div>
   ))
   .addWithInfo('Checkbox', () => (
     <div>
-      <Checkbox
-        isChecked
-        onChange={action()}
-        onClick={action()}
-      />
-      <Checkbox
-        isChecked={false}
-        onChange={action()}
-        onClick={action()}
-      />
+      <Checkbox isChecked onChange={action()} onClick={action()} />
+      <Checkbox isChecked={false} onChange={action()} onClick={action()} />
     </div>
   ))
   .addWithInfo('ImagePicker', () => (
@@ -322,8 +317,17 @@ storiesOf('binary-ui-components', module)
         Look at "<a href="#">this</a>" text
       </Text>
       <Text
-        isBold
+        isDisabled
+        isEdit
+        renderIcon={() => (<More />)}
+        onMoreClick={action()}
       >
+        Look at "<a href="#">this</a>" text
+      </Text>
+      <Text isBold >
+        Look at bold text
+      </Text>
+      <Text isBold isDisabled >
         Look at bold text
       </Text>
     </div>

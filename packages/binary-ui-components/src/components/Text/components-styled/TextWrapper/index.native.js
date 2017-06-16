@@ -10,12 +10,7 @@ const LIST_ITEM_TEXT_STYLE = `
 
 export default styled.View`
   ${LIST_ITEM_TEXT_STYLE}
-  ${(props) => {
-    if (props.isEdit) {
-      return EDIT_STYLE_EXT;
-    }
-    return '';
-  }}
+  ${props => (props.isEdit ? EDIT_STYLE_EXT : undefined)}
 `;
 
 /*

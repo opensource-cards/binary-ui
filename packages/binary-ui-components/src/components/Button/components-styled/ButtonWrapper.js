@@ -11,7 +11,7 @@ const LIST_ITEM_IS_TAP_HIGHLIGHT = `
 
 export default styled.div`
   ${CURSOR_POINTER_CSS}
-  ${props => (props.isTapHighlight ? LIST_ITEM_IS_TAP_HIGHLIGHT : '')}
+  ${props => (props.isTapHighlight ? LIST_ITEM_IS_TAP_HIGHLIGHT : undefined)}
   align-items: center;
   box-sizing: border-box;
   display: flex;

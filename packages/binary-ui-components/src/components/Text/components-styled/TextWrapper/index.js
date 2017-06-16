@@ -14,11 +14,5 @@ export default styled.div`
   justify-content: space-between;
   min-height: ${LIST_ITEM_HEIGHT}px;
   padding-left: 10px;
-  ${(props) => {
-    if (!props.isEdit) {
-      return '';
-    }
-    return `
-      border-bottom: 1px solid ${BINARY_COLOR_SAND_90}`;
-  }}
+  ${props => (props.isEdit ? `border-bottom: 1px solid ${BINARY_COLOR_SAND_90}` : undefined)}
 `;

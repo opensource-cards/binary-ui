@@ -23,9 +23,6 @@ export default styled.button`
   ${(props) => (
     (props.isDisabled)
       ? CARDS_ICON_DISABLED_CSS
-      : `
-        ${CARDS_BUTTON_CSS}
-        ${CARDS_ICON_ACTIVE_PSEUDO_CSS}
-      `
+      : `${CARDS_BUTTON_CSS}${CARDS_ICON_ACTIVE_PSEUDO_CSS}`
   )}
 `;

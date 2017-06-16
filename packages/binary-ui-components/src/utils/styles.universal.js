@@ -17,7 +17,6 @@ export const CARDS_ICON_ACTIVE_CSS = `
 
 export const CARDS_ICON_DISABLED_CSS = `
   color: ${BINARY_COLOR_GRAY_40};
-  
 `;
 
 export const CARDS_BUTTON_CSS = `

@@ -1,36 +1,48 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
+import { BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ButtonIcon from '../components-styled/ButtonIcon';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
-import { getHighlightEditStyle } from '../../../utils/styles-api';
+import { getActionColorExt, getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
-  isBold: PropTypes.bool.isRequired,
-  isEdit: PropTypes.bool.isRequired,
+  color: PropTypes.string,
+  isBold: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  isEdit: PropTypes.bool,
   label: PropTypes.string.isRequired,
   renderIcon: PropTypes.func,
   onClick: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
+  color: '#000000',
   isBold: false,
+  isDisabled: false,
   isEdit: true,
   renderIcon: () => (<ArrowRight />),
 };
 
-const Button = ({ isBold, isEdit, label, renderIcon, onClick }) => (
+const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick }) => (
   <ButtonWrapper
-    isTapHighlight
+    isTapHighlight={!isDisabled}
     style={getHighlightEditStyle(isEdit, true, false, undefined)}
-    onClick={onClick}
+    onClick={!isDisabled && onClick}
   >
     <ButtonIcon
+      color={getActionColorExt(
+        color,
+        BINARY_COLOR_BLUE_60,
+        BINARY_COLOR_GRAY_40,
+        false,
+        isDisabled
+      )}
       size={18}
       renderIcon={renderIcon}
     />
-    <ButtonText isBold={isBold}>
+    <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} >
       {label}
     </ButtonText>
   </ButtonWrapper>

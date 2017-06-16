@@ -1,7 +1,7 @@
 import { BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import TextStyled from './TextStyled';
+import TextStyled from '../component-styled/TextStyled';
 import { getActionColorExt } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -13,7 +13,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: undefined,
+  color: '#000000',
   isActive: false,
   style: undefined,
   onClick: undefined,

@@ -14,7 +14,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: undefined,
+  color: '#000000',
   isActive: false,
   size: undefined,
   onClick: undefined,

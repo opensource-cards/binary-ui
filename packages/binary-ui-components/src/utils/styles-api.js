@@ -21,7 +21,7 @@ export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, border
 }
 
 export function getActionColorExt(
-  color = '#000000',
+  color,
   colorActive,
   colorDisabled,
   isActive,
