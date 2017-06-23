@@ -27,7 +27,7 @@ export const ALERT_STYLE_CRITICAL = `
 
 export default styled.div`
   ${props => {
-    switch (props.type) {
+    switch (props.alertType) {
       case INFO:
         return `${NO_SELECT_CSS}${ALERT_COMMON_STYLES}${ALERT_STYLE}`;
       case CONFIRM:

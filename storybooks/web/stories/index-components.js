@@ -132,9 +132,9 @@ class SliderDemo1 extends React.Component {
 storiesOf('binary-ui-components', module)
   .addWithInfo('Alert', () => (
     <div>
-      <Alert text="Alert text" type={ALERT_TYPES.INFO} />
-      <Alert text="Alert text" type={ALERT_TYPES.CONFIRM} />
-      <Alert text="Alert text" type={ALERT_TYPES.CRITICAL} />
+      <Alert text="Alert text" type={ALERT_TYPES.INFO} onClick={action()} />
+      <Alert text="Alert text" type={ALERT_TYPES.CONFIRM} onClick={action()} />
+      <Alert text="Alert text" type={ALERT_TYPES.CRITICAL} onClick={action()} />
     </div>
   ))
   .addWithInfo('Button', () => (
