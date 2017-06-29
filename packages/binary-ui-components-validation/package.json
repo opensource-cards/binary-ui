@@ -27,7 +27,7 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "pure-validation": "^0.0.1",
+    "pure-validation": "^0.0.2",
     "url-regex": "^4.0.0"
   },
   "peerDependencies": {
