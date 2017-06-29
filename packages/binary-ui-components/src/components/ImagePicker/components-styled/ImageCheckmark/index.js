@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { BACKGROUND_IMAGE_URL, PHOTO_SIZE, PHOTO_CHECKMARK_SIZE } from '../../utils/styles-photo';
+import {
+  BACKGROUND_IMAGE_URL,
+  PHOTO_SIZE,
+  PHOTO_CHECKMARK_SIZE,
+} from '../../utils/styles-photo.native-and-web';
 
 export default styled.div`
   background-image: url(${BACKGROUND_IMAGE_URL});

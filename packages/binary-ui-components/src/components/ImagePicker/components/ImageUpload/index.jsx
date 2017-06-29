@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import PhotoUploadInput from '../../components-styled/PhotoUploadInput';
-import PhotoUploadWrapper from '../../components-styled/PhotoUploadWrapper';
+import ImageUploadInput from '../../components-styled/ImageUploadInput';
+import ImageUploadWrapper from '../../components-styled/ImageUploadWrapper';
 
 const propTypes = {
-  noImageUrl: PropTypes.string.isRequired,
-  onPhotoAdd: PropTypes.func.isRequired,
+  imageUploadUrl: PropTypes.string.isRequired,
+  onImageUpload: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
 
-export default class PhotoUpload extends React.Component {
+export default class ImageUpload extends React.Component {
 
   constructor(props) {
     super(props);
@@ -32,23 +32,20 @@ export default class PhotoUpload extends React.Component {
   }
 
   render() {
-    const { noImageUrl, onPhotoAdd } = this.props;
+    const { imageUploadUrl, onImageUpload } = this.props;
     return (
-      <PhotoUploadWrapper
-        noImageUrl={noImageUrl}
-        onClick={this.onDivClick}
-      >
-        <PhotoUploadInput
+      <ImageUploadWrapper imageUploadUrl={imageUploadUrl} onClick={this.onDivClick} >
+        <ImageUploadInput
           accept="image/*"
           innerRef={this.setLoaderRef}
           type="file"
           onClick={this.onLoaderClick}
-          onChange={onPhotoAdd}
+          onChange={onImageUpload}
         />
-      </PhotoUploadWrapper>
+      </ImageUploadWrapper>
     );
   }
 }
 
-PhotoUpload.propTypes = propTypes;
-PhotoUpload.defaultProps = defaultProps;
+ImageUpload.propTypes = propTypes;
+ImageUpload.defaultProps = defaultProps;

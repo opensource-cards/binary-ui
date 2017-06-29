@@ -1,98 +1,79 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import uuid from 'uuid';
-import Photo from './Photo';
-import PhotoUpload from './PhotoUpload';
-import ListItemPhotoWrapperWrapper from '../components-styled/ListItemPhotoWrapperWrapper';
+import Image from './Image';
+import ImageUpload from './ImageUpload';
+import ImagePickerWrapper from '../components-styled/ImagePickerWrapper';
 
 const propTypes = {
-  isSelectable: PropTypes.bool,
-  limit: PropTypes.number,
-  noImageUrl: PropTypes.string.isRequired,
-  photoFit: PropTypes.string,
-  selectedPhotoGuid: PropTypes.string,
-  uploadedPhotos: PropTypes.array,
-  onPhotoClick: PropTypes.func,
-  onPhotoUpload: PropTypes.func.isRequired,
+  imageUploadUrl: PropTypes.string.isRequired,
+  imageFit: PropTypes.string,
+  imageSelectedId: PropTypes.string,
+  images: PropTypes.array,
+  isImageUpload: PropTypes.bool,
+  onImageClick: PropTypes.func,
+  onImageUpload: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
-  isSelectable: true,
-  photoFit: 'contain',
-  uploadedPhotos: [],
-  onPhotoClick: undefined,
+  imageFit: 'contain',
+  images: [],
+  isImageUpload: true,
+  onImageClick: undefined,
 };
 
-export default class ListItemPhotoWrapper extends React.Component {
+export default class ImagePicker extends React.Component {
 
   constructor(props) {
     super(props);
-    this.onPhotoAdd = this.onPhotoAdd.bind(this);
+    this.onImageClick = this.onImageClick.bind(this);
+    this.onImageUpload = this.onImageUpload.bind(this);
   }
 
-  onPhotoAdd(e) {
+  onImageUpload(e) {
     const reader = new FileReader();
     const file = e.target.files[0];
     reader.onload = (upload) => {
-      const newPhoto = {
-        url: upload.target.result,
-        guid: uuid.v1(),
-      };
-      this.props.onPhotoUpload(newPhoto);
+      const { onImageUpload } = this.props;
+      onImageUpload(upload.target.result);
     };
     reader.readAsDataURL(file);
   }
 
-  getOnPhotoClick(photoGuid) {
-    return () => {
-      const { onPhotoClick } = this.props;
-      if (!onPhotoClick) {
-        return;
-      }
-      onPhotoClick(photoGuid);
-    };
-  }
-
-  renderNodes() {
-    const {
-      isSelectable,
-      photoFit,
-      selectedPhotoGuid,
-      uploadedPhotos,
-    } = this.props;
-    return uploadedPhotos.map((photo) => {
-      const selected = isSelectable && photo.guid === selectedPhotoGuid;
-      return (
-        <Photo
-          key={photo.guid}
-          photoFit={photoFit}
-          selected={selected}
-          url={photo.url}
-          onPhotoClick={this.getOnPhotoClick(photo.guid)}
-        />
-      );
-    });
-  }
-
-  renderPhotoUpload() {
-    const { limit, noImageUrl, uploadedPhotos } = this.props;
-    if (uploadedPhotos.length >= limit) {
-      return null;
+  onImageClick(imageId) {
+    const { onImageClick } = this.props;
+    if (!onImageClick) {
+      return;
     }
-    return (
-      <PhotoUpload noImageUrl={noImageUrl} onPhotoAdd={this.onPhotoAdd} />
-    );
+    onImageClick(imageId);
   }
 
   render() {
+    const {
+      images,
+      imageUploadUrl,
+      imageFit,
+      imageSelectedId,
+      isImageUpload,
+    } = this.props;
     return (
-      <ListItemPhotoWrapperWrapper>
-        {this.renderNodes()}
-        {this.renderPhotoUpload()}
-      </ListItemPhotoWrapperWrapper>
+      <ImagePickerWrapper>
+        {images.map(image => (
+          <Image
+            imageFit={imageFit}
+            imageId={image.id}
+            imageUrl={image.url}
+            isSelected={image.id === imageSelectedId}
+            key={image.id}
+            onImageClick={this.onImageClick}
+          />
+        ))}
+        {isImageUpload ? (
+          <ImageUpload imageUploadUrl={imageUploadUrl} onImageUpload={this.onImageUpload} />
+        ) : null}
+      </ImagePickerWrapper>
     );
   }
 }
 
-ListItemPhotoWrapper.propTypes = propTypes;
-ListItemPhotoWrapper.defaultProps = defaultProps;
+ImagePicker.propTypes = propTypes;
+ImagePicker.defaultProps = defaultProps;

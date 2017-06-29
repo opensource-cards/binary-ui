@@ -1,22 +1,21 @@
 import styled from 'styled-components';
+import { PHOTO_SIZE } from '../../utils/styles-photo.native-and-web';
 import {
-  PHOTO_SIZE,
-  UNDERLINE_BORDER_STANDARD_WEB,
-  UNDERLINE_BORDER_ACTIVE_WEB,
+  UNDERLINE_BORDER_STANDARD,
+  UNDERLINE_BORDER_ACTIVE,
 } from '../../utils/styles-photo';
 
 export default styled.div`
   border-radius: ${PHOTO_SIZE / 2}px;
-  ${UNDERLINE_BORDER_STANDARD_WEB}
-  background-image: url(${(props) => props.url});
+  ${UNDERLINE_BORDER_STANDARD}
+  background-image: url(${(props) => props.imageUrl});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: ${(props) => props.photoFit};
+  background-size: ${(props) => props.imageFit};
   height: ${PHOTO_SIZE}px;
   margin: 5px;
   width: ${PHOTO_SIZE}px;
   &:active {
-    ${UNDERLINE_BORDER_ACTIVE_WEB}
-    /* opacity: 0.5; */
+    ${UNDERLINE_BORDER_ACTIVE}
   }
 `;

@@ -22,8 +22,7 @@
     "binary-ui-styles": "^0.2.6",
     "mask-parser": "^0.0.1",
     "prop-types": "^15.5.10",
-    "styled-components": "^2.0.0",
-    "uuid": "^3.0.1"
+    "styled-components": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^15.3.2",

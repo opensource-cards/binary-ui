@@ -30,7 +30,7 @@ import { getImg } from './resources/fake-img';
 setAddon(infoAddon);
 
 const text = 'Important: for compatibility set container width in pixels!';
-const selectedPhotoGuid = uuid.v1();
+const imageSelectedId = uuid.v1();
 
 storiesOf('binary-ui-components links', module)
   .addWithInfo('action button', () => (
@@ -156,17 +156,16 @@ storiesOf('binary-ui-components', module)
   ))
   .addWithInfo('ImagePicker', () => (
     <ImagePicker
-      isSelectable
-      limit={3}
-      noImageUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
-      uploadedPhotos={[{
+      imageFit="contain"
+      imageUploadUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
+      images={[{
         url: getImg(),
-        guid: selectedPhotoGuid,
+        id: imageSelectedId,
       }]}
-      selectedPhotoGuid={selectedPhotoGuid}
-      onPhotoClick={action()}
-      onPhotoUpload={action()}
-      photoFit="contain"
+      imageSelectedId={imageSelectedId}
+      isImageUpload={1 < 3}
+      onImageClick={action()}
+      onImageUpload={action()}
     />
   ))
   .addWithInfo('Input', () => (
