@@ -13,5 +13,6 @@ export default styled.div`
   );
   position: relative;
   height: ${LIST_ITEM_HEIGHT}px;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 `;
