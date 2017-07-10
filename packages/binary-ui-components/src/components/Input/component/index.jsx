@@ -18,7 +18,7 @@ const propTypes = {
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   onMoreClick: PropTypes.func,
-  onTextChange: PropTypes.func.isRequired,
+  onTextChange: PropTypes.func,
 };
 
 const defaultProps = {
@@ -30,6 +30,7 @@ const defaultProps = {
   onBlur: undefined,
   onFocus: undefined,
   onMoreClick: undefined,
+  onTextChange: undefined,
 };
 
 export default class Input extends React.Component {
@@ -46,14 +47,15 @@ export default class Input extends React.Component {
 
   onChange(e) {
     const { onTextChange, mask, type } = this.props;
-    if (onTextChange) {
-      const unmaskedValue = removeMask(e.target.value, mask);
-      if (type === INPUT_FIELD_TYPES.TEL) {
-        onTextChange(getValidatedPhone(unmaskedValue));
-        return;
-      }
-      onTextChange(unmaskedValue);
+    if (!onTextChange) {
+      return;
     }
+    const unmaskedValue = removeMask(e.target.value, mask);
+    if (type === INPUT_FIELD_TYPES.TEL) {
+      onTextChange(getValidatedPhone(unmaskedValue));
+      return;
+    }
+    onTextChange(unmaskedValue);
   }
 
   onMoreClick() {
@@ -67,9 +69,9 @@ export default class Input extends React.Component {
     if (this.state.isActive === isActive) {
       return;
     }
-    this.setState({
+    this.setState(() => ({
       isActive,
-    });
+    }));
   }
 
   getFormattedValue(type, mask, value) {

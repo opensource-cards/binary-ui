@@ -39,9 +39,9 @@ export default class ActionIcon extends React.Component {
     if (this.state.isActive === isActive) {
       return;
     }
-    this.setState({
+    this.setState(() => ({
       isActive,
-    });
+    }));
   }
 
   render() {

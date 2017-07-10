@@ -49,9 +49,9 @@ export default class ActionLinkInline extends React.Component {
     if (this.state.isActive === isActive) {
       return;
     }
-    this.setState({
+    this.setState(() => ({
       isActive,
-    });
+    }));
   }
 
   renderIcon(renderIcon) {

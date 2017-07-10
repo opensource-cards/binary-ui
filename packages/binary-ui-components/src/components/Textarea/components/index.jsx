@@ -11,8 +11,8 @@ const propTypes = {
   value: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  onTextChange: PropTypes.func.isRequired,
   onMoreClick: PropTypes.func,
+  onTextChange: PropTypes.func,
 };
 
 const defaultProps = {
@@ -20,8 +20,8 @@ const defaultProps = {
   renderIcon: undefined,
   onBlur: undefined,
   onFocus: undefined,
-  onTextChange: undefined,
   onMoreClick: undefined,
+  onTextChange: undefined,
 };
 
 export default class Textarea extends React.Component {
@@ -38,9 +38,10 @@ export default class Textarea extends React.Component {
 
   onTextChange(e) {
     const { onTextChange } = this.props;
-    if (onTextChange) {
-      onTextChange(e.target.value);
+    if (!onTextChange) {
+      return;
     }
+    onTextChange(e.target.value);
   }
 
   onMoreClick() {
@@ -54,9 +55,9 @@ export default class Textarea extends React.Component {
     if (this.state.isActive === isActive) {
       return;
     }
-    this.setState({
+    this.setState(() => ({
       isActive,
-    });
+    }));
   }
 
   render() {

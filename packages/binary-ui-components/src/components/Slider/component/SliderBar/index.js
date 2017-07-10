@@ -70,9 +70,9 @@ export default class BarWrapper extends React.Component {
   }
 
   onDraggingChanged(dragging) {
-    this.setState({
+    this.setState(() => ({
       dragging,
-    });
+    }));
   }
 
   onSetBarDom(barDom) {

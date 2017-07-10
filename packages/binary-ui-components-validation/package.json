@@ -20,7 +20,8 @@
   },
   "license": "MIT",
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git@github.com:opensource-cards/binary-ui.git"
   },
   "files": [
     "lib"

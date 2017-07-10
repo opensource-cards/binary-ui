@@ -36,9 +36,9 @@ export default class SurfaceRendererWeb extends React.Component {
   componentDidMount() {
     if (this.state.isAllowRendering === false) {
       /* eslint-disable react/no-did-mount-set-state */
-      this.setState({
+      this.setState(() => ({
         isAllowRendering: true,
-      });
+      }));
       /* eslint-enable */
     }
   }

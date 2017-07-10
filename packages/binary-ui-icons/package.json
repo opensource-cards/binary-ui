@@ -12,6 +12,11 @@
     "test": "mocha --recursive --compilers js:babel-core/register",
     "build": "npm run lint && npm run clean && babel src --out-dir lib && npm test"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:opensource-cards/binary-ui.git"
+  },
   "files": [
     "binary",
     "lib"

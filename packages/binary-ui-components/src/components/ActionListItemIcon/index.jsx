@@ -40,9 +40,9 @@ export default class ActionListItemIcon extends React.Component {
     if (this.state.isActive === isActive) {
       return;
     }
-    this.setState({
+    this.setState(() => ({
       isActive,
-    });
+    }));
   }
 
   render() {
