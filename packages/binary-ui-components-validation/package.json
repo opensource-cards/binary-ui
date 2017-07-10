@@ -28,8 +28,7 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "pure-validation": "^0.0.2",
-    "url-regex": "^4.0.0"
+    "pure-validation": "^0.0.3"
   },
   "peerDependencies": {
     "binary-ui-components": "^0.2.7"

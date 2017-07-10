@@ -6,7 +6,8 @@
     "storybook-native-watch": "cd ./storybooks/native && babel ../../packages --ignore examples,lib,node_modules --out-dir=./lib --watch",
     "storybook-native": "cd ./storybooks/native && rm -fr $TMPDIR/react-* && npm run storybook",
     "storybook-emulator-ios": "cd ./storybooks/native && react-native run-ios",
-    "storybook-ios": "npm run storybook-native-watch & npm run storybook-native & npm run storybook-emulator-ios"
+    "storybook-ios": "npm run storybook-native-watch & npm run storybook-native & npm run storybook-emulator-ios",
+    "release": "lerna exec npm run build && npm run storybook-web-build"
   },
   "devDependencies": {
     "lerna": "2.0.0-beta.38"
