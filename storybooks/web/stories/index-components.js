@@ -3,6 +3,7 @@ import { setAddon, storiesOf, action } from '@kadira/storybook';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
+import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import More from 'binary-ui-icons/binary/More';
 import ActionButton from 'binary-ui-components/mobile/ActionButton';
 import ActionDiv from 'binary-ui-components/mobile/ActionDiv';
@@ -65,7 +66,7 @@ storiesOf('binary-ui-components links', module)
     </ActionLink>
   ))
   .addWithInfo('action link inline', () => (
-    <ActionLinkInline href="http://try.cards/" onClick={action()} renderIconRight={() => (<ArrowDown />)} >
+    <ActionLinkInline href="http://try.cards/" onClick={action()} renderIconRight={() => (<ArrowRight size={16} />)} >
       ActionLinkInline
     </ActionLinkInline>
   ))

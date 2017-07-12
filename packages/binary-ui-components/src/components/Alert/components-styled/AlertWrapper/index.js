@@ -19,11 +19,11 @@ const ALERT_COMMON_STYLES = `
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin: 3px auto 0 auto;
-  box-shadow: 0px 0px 3px 0px rgba(128,128,128,1);
+  box-shadow: 0px 0px 3px 0px rgba(128,128,128,0.5);
 `;
 
 export const ALERT_STYLE = `
-  background: linear-gradient(to top, ${BINARY_COLOR_SLATE_40},${BINARY_COLOR_SLATE_50});
+  background: ${BINARY_COLOR_SLATE_40};
   color: white;
 `;
 

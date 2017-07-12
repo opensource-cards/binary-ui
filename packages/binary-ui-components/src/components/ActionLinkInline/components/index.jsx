@@ -13,6 +13,7 @@ const propTypes = {
   isDisabled: PropTypes.bool,
   onClick: PropTypes.func,
   onTapDown: PropTypes.func,
+  size: PropTypes.number,
   renderIconLeft: PropTypes.func,
   renderIconRight: PropTypes.func,
 };
@@ -20,6 +21,7 @@ const propTypes = {
 const defaultProps = {
   children: undefined,
   isDisabled: false,
+  size: undefined,
   onClick: undefined,
   onTapDown: undefined,
 };
@@ -57,12 +59,14 @@ export default class ActionLinkInline extends React.Component {
   renderIcon(renderIcon) {
     const { isDisabled } = this.props;
     const { isActive } = this.state;
+    const { size } = this.props;
     return (
       <ActionableIconWrapper>
         <ActionableIcon
           color={BINARY_COLOR_BLUE_40}
           isActive={isActive}
           isDisabled={isDisabled}
+          size={size}
           renderIcon={renderIcon}
         />
       </ActionableIconWrapper>
