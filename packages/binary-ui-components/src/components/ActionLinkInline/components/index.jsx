@@ -57,9 +57,8 @@ export default class ActionLinkInline extends React.Component {
   }
 
   renderIcon(renderIcon) {
-    const { isDisabled } = this.props;
+    const { isDisabled, size } = this.props;
     const { isActive } = this.state;
-    const { size } = this.props;
     return (
       <ActionableIconWrapper>
         <ActionableIcon
