@@ -47,12 +47,13 @@ export default class SurfaceRendererWeb extends React.Component {
     if (this.state.isAllowRendering === false) {
       return null;
     }
-    const { color, size, IconContentComponent } = this.props;
+    const { color, size, IconContentComponent, ...props } = this.props;
     return (
       <SurfaceRendererNativeAndWeb
         color={color}
         size={size}
         IconContentComponent={IconContentComponent}
+        {...props}
       />
     );
   }

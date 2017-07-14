@@ -1703,10 +1703,10 @@ is-path-inside@^1.0.0:
     path-is-inside "^1.0.1"
 
 is-plain-object@^2.0.1:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-2.0.3.tgz#c15bf3e4b66b62d72efaf2925848663ecbc619b6"
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-2.0.4.tgz#2c163b3fafb1b606d9d17928f05c2a1c38e07677"
   dependencies:
-    isobject "^3.0.0"
+    isobject "^3.0.1"
 
 is-posix-bracket@^0.1.0:
   version "0.1.1"
@@ -1754,7 +1754,7 @@ isobject@^2.0.0:
   dependencies:
     isarray "1.0.0"
 
-isobject@^3.0.0:
+isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
 
@@ -2644,8 +2644,8 @@ through@^2.3.6:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
 tlds@^1.187.0:
-  version "1.191.0"
-  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.191.0.tgz#fb3f58717654c8dfa7bd23a7d02a3f1ea2160045"
+  version "1.192.0"
+  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.192.0.tgz#bfa77badc9dadba211bbecbcd1fb5ce980fb9448"
 
 to-fast-properties@^1.0.1:
   version "1.0.3"

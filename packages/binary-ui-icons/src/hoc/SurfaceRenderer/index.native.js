@@ -15,11 +15,12 @@ const defaultProps = {
   color: undefined,
 };
 
-const SurfaceRendererNative = ({ color, size, IconContentComponent }) => (
+const SurfaceRendererNative = ({ color, size, IconContentComponent, ...props }) => (
   <SurfaceRendererNativeAndWeb
     color={color}
     size={size}
     IconContentComponent={IconContentComponent}
+    {...props}
   />
 );
 

@@ -1,7 +1,5 @@
 import { FONT_FAMILY_MAIN } from 'binary-ui-styles/web';
-import {
-  BINARY_COLOR_GRAY_30,
-} from 'binary-ui-styles';
+import { BINARY_COLOR_GRAY_30 } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`

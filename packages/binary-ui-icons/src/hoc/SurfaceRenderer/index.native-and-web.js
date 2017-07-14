@@ -39,10 +39,10 @@ export default (Group, Shape, Surface) => {
     }
 
     render() {
-      const { color, size, IconContentComponent } = this.props;
+      const { color, size, IconContentComponent, ...props } = this.props;
       const scale = size / DEFAULT_SIZE;
       return (
-        <Surface height={size} width={size} >
+        <Surface height={size} width={size} {...props} >
           <Group fill={color} scale={scale} >
             <IconContentComponent Group={Group} Shape={this.cache.ColoredShape} />
           </Group>

@@ -105,9 +105,7 @@ export default class Input extends React.Component {
     } = this.props;
     const { isActive } = this.state;
     return (
-      <InputWrapper
-        style={getHighlightEditStyle(true, isValid, isActive, borderColor)}
-      >
+      <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, borderColor)} >
         {renderIcon && (
           <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
