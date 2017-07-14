@@ -1,7 +1,7 @@
 import infoAddon from '@kadira/react-storybook-addon-info';
 import { setAddon, storiesOf, action } from '@kadira/storybook';
-import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
-import NewAlt from 'binary-ui-icons/binary/NewAlt';
+import Remove from 'binary-ui-icons/binary/Remove';
+import Add from 'binary-ui-icons/binary/Add';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import More from 'binary-ui-icons/binary/More';
@@ -122,8 +122,8 @@ class SliderDemo1 extends React.Component {
     return (
       <Slider
         position={position}
-        renderIconLeft={() => (<MinusAlt />)}
-        renderIconRight={() => (<NewAlt />)}
+        renderIconLeft={() => (<Remove />)}
+        renderIconRight={() => (<Add />)}
         onPositionChange={this.onPositionChange}
       />
     );

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ActionableIcon from '../ActionableIcon';
 import { isLeftButton } from '../../utils/events';
+import Tooltip from './components-styled/Tooltip';
 
 const propTypes = {
   isDisabled: PropTypes.bool,
@@ -53,14 +54,17 @@ export default class ActionIcon extends React.Component {
     } = this.props;
     const { isActive } = this.state;
     return (
-      <ActionableIcon
-        isActive={isActive}
-        isDisabled={isDisabled}
-        renderIcon={renderIcon}
-        onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
-        onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
-        {...props}
-      />
+      <div style={{ position: 'relative' }}>
+        <ActionableIcon
+          isActive={isActive}
+          isDisabled={isDisabled}
+          renderIcon={renderIcon}
+          onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
+          onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+          {...props}
+        />
+        <Tooltip>Tooltip text</Tooltip>
+      </div>
     );
   }
 }

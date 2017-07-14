@@ -56,6 +56,7 @@ import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
 import Redhat from 'binary-ui-icons/binary/Redhat';
+import Remove from 'binary-ui-icons/binary/Remove';
 import Save from 'binary-ui-icons/binary/Save';
 import Scan from 'binary-ui-icons/binary/Scan';
 import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
@@ -90,276 +91,111 @@ import styled from 'styled-components';
 
 setAddon(infoAddon);
 
-const COLOR = '#0F9BE0';
-const SIZE = 100;
+const COLOR = '#000000';
+const SIZE = 50;
 
 const AddStyled = styled(Add)`
   background-color: #FFFF00;
 `;
 
-storiesOf('binary-ui-icons main', module)
-  .addWithInfo('Add', () => (
-    <Add color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('AddCard', () => (
-    <AddCard color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('ArrowDown', () => (
-    <ArrowDown color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('ArrowLeft', () => (
-    <ArrowLeft color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('ArrowRight', () => (
-    <ArrowRight color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('ArrowUp', () => (
-    <ArrowUp color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Call', () => (
-    <Call color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('CallAlt', () => (
-    <CallAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('CameraAlt', () => (
-    <CameraAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Cancel', () => (
-    <Cancel color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Card', () => (
-    <Card color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('CardAlt', () => (
-    <CardAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Check', () => (
-    <Check color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('CheckAlt', () => (
-    <CheckAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Copy', () => (
-    <Copy color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Delete', () => (
-    <Delete color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('DeleteCharacter', () => (
-    <DeleteCharacter color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('DeleteAlt', () => (
-    <DeleteAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Deleted', () => (
-    <Deleted color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('DeletedAlt', () => (
-    <DeletedAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Done', () => (
-    <Done color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Favorites', () => (
-    <Favorites color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('FavoritesAlt', () => (
-    <FavoritesAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Info', () => (
-    <Info color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('InfoAlt', () => (
-    <InfoAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Keypad', () => (
-    <Keypad color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('KeypadAlt', () => (
-    <KeypadAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Location', () => (
-    <Location color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('LocationAlt', () => (
-    <LocationAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Locked', () => (
-    <Locked color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('LockedAlt', () => (
-    <LockedAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Logout', () => (
-    <Logout color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Minus', () => (
-    <Minus color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('MinusAlt', () => (
-    <MinusAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('More', () => (
-    <More color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('MoreAlt', () => (
-    <MoreAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('New', () => (
-    <New color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('NewAlt', () => (
-    <NewAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Open', () => (
-    <Open color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Save', () => (
-    <Save color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Scan', () => (
-    <Scan color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('ScanAlt', () => (
-    <ScanAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Search', () => (
-    <Search color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Settings', () => (
-    <Settings color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('SettingsAlt', () => (
-    <SettingsAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Share', () => (
-    <Share color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('ShareAlt', () => (
-    <ShareAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Stack', () => (
-    <Stack color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('StackFull', () => (
-    <StackFull color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('StackNew', () => (
-    <StackNew color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('StackUnavailable', () => (
-    <StackUnavailable color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('StackUnavailableAlt', () => (
-    <StackUnavailableAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Store', () => (
-    <Store color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('StoreAlt', () => (
-    <StoreAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Text', () => (
-    <Text color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('TextAlt', () => (
-    <TextAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Time', () => (
-    <Time color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Translation', () => (
-    <Translation color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Uncheck', () => (
-    <Uncheck color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Update', () => (
-    <Update color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('User', () => (
-    <User color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('UserAlt', () => (
-    <UserAlt color={COLOR} size={SIZE} />
-  ));
-
-storiesOf('binary-ui-icons companies & social', module)
-  .addWithInfo('Apple', () => (
-    <Apple color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('AppleAlt', () => (
-    <AppleAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Cards', () => (
-    <Cards color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('CardsAlt', () => (
-    <CardsAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Designer', () => (
-    <Designer color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Facebook', () => (
-    <Facebook color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Facetime', () => (
-    <Facetime color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('FacetimeAlt', () => (
-    <FacetimeAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Google', () => (
-    <Google color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Github', () => (
-    <Github color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Instagram', () => (
-    <Instagram color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('InstagramAlt', () => (
-    <InstagramAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Linkedin', () => (
-    <Linkedin color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('LinkedinAlt', () => (
-    <LinkedinAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Medium', () => (
-    <Medium color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Microsoft', () => (
-    <Microsoft color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Redhat', () => (
-    <Redhat color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Telegram', () => (
-    <Telegram color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Twitter', () => (
-    <Twitter color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Ubuntu', () => (
-    <Ubuntu color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Whatsapp', () => (
-    <Whatsapp color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('WhatsappAlt', () => (
-    <WhatsappAlt color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('Youtube', () => (
-    <Youtube color={COLOR} size={SIZE} />
-  ));
-
-storiesOf('binary-ui-icons with styles', module)
-  .addWithInfo('styled', () => (
-    <AddStyled color={COLOR} size={SIZE} />
-  ))
-  .addWithInfo('styled events', () => (
-    <AddStyled color={COLOR} size={SIZE} onMouseDown={action()} />
-  ));
+storiesOf('binary-ui-icons', module)
+  .addWithInfo('General', () => (
+    <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
+      <div><Add color={COLOR} size={SIZE} />Add</div>
+      <div><AddCard color={COLOR} size={SIZE} />AddCard</div>
+      <div><ArrowDown color={COLOR} size={SIZE} />ArrowDown</div>
+      <div><ArrowLeft color={COLOR} size={SIZE} />ArrowLeft</div>
+      <div><ArrowRight color={COLOR} size={SIZE} />ArrowRight</div>
+      <div><ArrowUp color={COLOR} size={SIZE} />ArrowUp</div>
+      <div><Call color={COLOR} size={SIZE} />Call</div>
+      <div><CallAlt color={COLOR} size={SIZE} />CallAlt</div>
+      <div><CameraAlt color={COLOR} size={SIZE} />CameraAlt</div>
+      <div><Cancel color={COLOR} size={SIZE} />Cancel</div>
+      <div><Card color={COLOR} size={SIZE} />Card</div>
+      <div><CardAlt color={COLOR} size={SIZE} />CardAlt</div>
+      <div><Check color={COLOR} size={SIZE} />Check</div>
+      <div><CheckAlt color={COLOR} size={SIZE} />CheckAlt</div>
+      <div><Copy color={COLOR} size={SIZE} />Copy</div>
+      <div><Delete color={COLOR} size={SIZE} />Delete</div>
+      <div><DeleteCharacter color={COLOR} size={SIZE} />DeleteCharacter</div>
+      <div><DeleteAlt color={COLOR} size={SIZE} />DeleteAlt</div>
+      <div><Deleted color={COLOR} size={SIZE} />Deleted</div>
+      <div><DeletedAlt color={COLOR} size={SIZE} />DeletedAlt</div>
+      <div><Done color={COLOR} size={SIZE} />Done</div>
+      <div><Favorites color={COLOR} size={SIZE} />Favorites</div>
+      <div><FavoritesAlt color={COLOR} size={SIZE} />FavoritesAlt</div>
+      <div><Info color={COLOR} size={SIZE} />Info</div>
+      <div><InfoAlt color={COLOR} size={SIZE} />InfoAlt</div>
+      <div><Keypad color={COLOR} size={SIZE} />Keypad</div>
+      <div><KeypadAlt color={COLOR} size={SIZE} />KeypadAlt</div>
+      <div><Location color={COLOR} size={SIZE} />Location</div>
+      <div><LocationAlt color={COLOR} size={SIZE} />LocationAlt</div>
+      <div><Locked color={COLOR} size={SIZE} />Locked</div>
+      <div><LockedAlt color={COLOR} size={SIZE} />LockedAlt</div>
+      <div><Logout color={COLOR} size={SIZE} />Logout</div>
+      <div><Minus color={COLOR} size={SIZE} />Minus</div>
+      <div><MinusAlt color={COLOR} size={SIZE} />MinusAlt</div>
+      <div><More color={COLOR} size={SIZE} />More</div>
+      <div><MoreAlt color={COLOR} size={SIZE} />MoreAlt</div>
+      <div><New color={COLOR} size={SIZE} />New</div>
+      <div><NewAlt color={COLOR} size={SIZE} />NewAlt</div>
+      <div><Open color={COLOR} size={SIZE} />Open</div>
+      <div><Remove color={COLOR} size={SIZE} />Remove</div>
+      <div><Save color={COLOR} size={SIZE} />Save</div>
+      <div><Scan color={COLOR} size={SIZE} />Scan</div>
+      <div><ScanAlt color={COLOR} size={SIZE} />ScanAlt</div>
+      <div><Search color={COLOR} size={SIZE} />Search</div>
+      <div><Settings color={COLOR} size={SIZE} />Settings</div>
+      <div><SettingsAlt color={COLOR} size={SIZE} />SettingsAlt</div>
+      <div><Share color={COLOR} size={SIZE} />Share</div>
+      <div><ShareAlt color={COLOR} size={SIZE} />ShareAlt</div>
+      <div><Stack color={COLOR} size={SIZE} />Stack</div>
+      <div><StackFull color={COLOR} size={SIZE} />StackFull</div>
+      <div><StackNew color={COLOR} size={SIZE} />StackNew</div>
+      <div><StackUnavailable color={COLOR} size={SIZE} />StackUnavailable</div>
+      <div><StackUnavailableAlt color={COLOR} size={SIZE} />StackUnavailableAlt</div>
+      <div><Store color={COLOR} size={SIZE} />Store</div>
+      <div><StoreAlt color={COLOR} size={SIZE} />StoreAlt</div>
+      <div><Text color={COLOR} size={SIZE} />Text</div>
+      <div><TextAlt color={COLOR} size={SIZE} />TextAlt</div>
+      <div><Time color={COLOR} size={SIZE} />Time</div>
+      <div><Translation color={COLOR} size={SIZE} />Translation</div>
+      <div><Uncheck color={COLOR} size={SIZE} />Uncheck</div>
+      <div><Update color={COLOR} size={SIZE} />Update</div>
+      <div><User color={COLOR} size={SIZE} />User</div>
+      <div><UserAlt color={COLOR} size={SIZE} />UserAlt</div>
+    </div>
+  ))
+    .addWithInfo('Logotypes', () => (
+      <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
+        <div><Apple color={COLOR} size={SIZE} />Apple</div>
+        <div><AppleAlt color={COLOR} size={SIZE} />AppleAlt</div>
+        <div><Cards color={COLOR} size={SIZE} />Cards</div>
+        <div><CardsAlt color={COLOR} size={SIZE} />CardsAlt</div>
+        <div><Designer color={COLOR} size={SIZE} />Designer</div>
+        <div><Facebook color={COLOR} size={SIZE} />Facebook</div>
+        <div><Facetime color={COLOR} size={SIZE} />Facetime</div>
+        <div><FacetimeAlt color={COLOR} size={SIZE} />FacetimeAlt</div>
+        <div><Google color={COLOR} size={SIZE} />Google</div>
+        <div><Github color={COLOR} size={SIZE} />Github</div>
+        <div><Instagram color={COLOR} size={SIZE} />Instagram</div>
+        <div><InstagramAlt color={COLOR} size={SIZE} />InstagramAlt</div>
+        <div><Linkedin color={COLOR} size={SIZE} />Linkedin</div>
+        <div><LinkedinAlt color={COLOR} size={SIZE} />LinkedinAlt</div>
+        <div><Medium color={COLOR} size={SIZE} />Medium</div>
+        <div><Microsoft color={COLOR} size={SIZE} />Microsoft</div>
+        <div><Redhat color={COLOR} size={SIZE} />Redhat</div>
+        <div><Telegram color={COLOR} size={SIZE} />Telegram</div>
+        <div><Twitter color={COLOR} size={SIZE} />Twitter</div>
+        <div><Ubuntu color={COLOR} size={SIZE} />Ubuntu</div>
+        <div><Whatsapp color={COLOR} size={SIZE} />Whatsapp</div>
+        <div><WhatsappAlt color={COLOR} size={SIZE} />WhatsappAlt</div>
+        <div><Youtube color={COLOR} size={SIZE} />Youtube</div>
+      </div>
+    ))
+    .addWithInfo('Styled', () => (
+      <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
+        <div><AddStyled color='#C40333' size={SIZE} />Color</div>
+        <div><AddStyled color={COLOR} size={SIZE} onMouseDown={action()} />Action</div>
+      </div>
+    ));

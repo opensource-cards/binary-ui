@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import SurfaceWrapper from '../../components-styled/SurfaceWrapper';
 import SurfaceRenderer from '../SurfaceRenderer';
 
 export default (IconContentComponent) => {
@@ -15,9 +14,12 @@ export default (IconContentComponent) => {
   };
 
   const CardsIconHOCComponent = ({ color, size, ...props }) => (
-    <SurfaceWrapper size={size} {...props} >
-      <SurfaceRenderer color={color} size={size} IconContentComponent={IconContentComponent} />
-    </SurfaceWrapper>
+    <SurfaceRenderer
+      color={color}
+      size={size}
+      IconContentComponent={IconContentComponent}
+      {...props}
+    />
   );
 
   CardsIconHOCComponent.propTypes = propTypes;

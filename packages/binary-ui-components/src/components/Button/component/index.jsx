@@ -2,7 +2,7 @@ import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import { BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ButtonIcon from '../components-styled/ButtonIcon';
+import IconStyled from '../../IconStyled';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import { getActionColorExt, getHighlightEditStyle } from '../../../utils/styles-api';
@@ -31,7 +31,7 @@ const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick 
     style={getHighlightEditStyle(isEdit, true, false, undefined)}
     onClick={!isDisabled && onClick}
   >
-    <ButtonIcon
+    <IconStyled
       color={getActionColorExt(
         color,
         BINARY_COLOR_BLUE_60,
@@ -40,6 +40,7 @@ const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick 
         isDisabled
       )}
       size={18}
+      style={{ paddingRight: 10 }}
       renderIcon={renderIcon}
     />
     <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} >

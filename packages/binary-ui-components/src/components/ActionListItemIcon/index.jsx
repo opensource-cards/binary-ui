@@ -1,7 +1,7 @@
 import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionIconStyled from './components/ActionIconStyled';
+import ActionableIcon from '../ActionableIcon';
 import { isLeftButton } from '../../utils/events';
 
 const propTypes = {
@@ -54,7 +54,7 @@ export default class ActionListItemIcon extends React.Component {
     } = this.props;
     const { isActive } = this.state;
     return (
-      <ActionIconStyled
+      <ActionableIcon
         color={BINARY_COLOR_GRAY_40}
         isActive={isActive}
         isDisabled={isDisabled}

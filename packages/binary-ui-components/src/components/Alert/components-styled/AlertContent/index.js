@@ -11,4 +11,5 @@ export default styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
 `;

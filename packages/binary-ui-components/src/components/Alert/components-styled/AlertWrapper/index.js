@@ -1,8 +1,7 @@
 import {
   BINARY_COLOR_BLUE_40,
   BINARY_COLOR_RED_40,
-  BINARY_COLOR_SLATE_40,
-  BINARY_COLOR_SLATE_50,
+  BINARY_COLOR_GRAY_40,
   BINARY_COLOR_YELLOW_50,
 } from 'binary-ui-styles';
 import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
@@ -23,7 +22,7 @@ const ALERT_COMMON_STYLES = `
 `;
 
 export const ALERT_STYLE = `
-  background: ${BINARY_COLOR_SLATE_40};
+  background: ${BINARY_COLOR_GRAY_40};
   color: white;
 `;
 

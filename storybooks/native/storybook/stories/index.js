@@ -55,6 +55,7 @@ import {
   CardsIconNewAlt,
   CardsIconOpen,
   CardsIconRedhat,
+  CardsIconRemove,
   CardsIconSave,
   CardsIconScan,
   CardsIconScanAlt,
@@ -354,6 +355,9 @@ storiesOf('binary-ui-icons companies & social', module)
   ))
   .add('CardsIconRedhat', () => (
     <CardsIconRedhat color={COLOR} size={SIZE} />
+  ))
+  .add('CardsIconRemove', () => (
+    <CardsIconRemove color={COLOR} size={SIZE} />
   ))
   .add('CardsIconTelegram', () => (
     <CardsIconTelegram color={COLOR} size={SIZE} />
