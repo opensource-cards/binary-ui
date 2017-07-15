@@ -80,7 +80,7 @@ export default class Textarea extends React.Component {
           {...props}
         />
         {renderIcon && (
-          <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
+          <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} style={{ paddingRight: 10 }} />
         )}
       </TextareaWrapperStyled>
     );

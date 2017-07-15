@@ -21,6 +21,7 @@ import Select from 'binary-ui-components/mobile/Select';
 import Slider from 'binary-ui-components/mobile/Slider';
 import Switch from 'binary-ui-components/mobile/Switch';
 import Textarea from 'binary-ui-components/mobile/Textarea';
+import Tooltip from 'binary-ui-components/mobile/Tooltip';
 import Input, { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
 import Text from 'binary-ui-components/mobile/Text';
 import React from 'react';
@@ -49,8 +50,24 @@ storiesOf('binary-ui-components links', module)
   .addWithInfo('action div disabled', () => (
     <ActionDiv isDisabled onClick={action()} >Put test here</ActionDiv>
   ))
-  .addWithInfo('action icon', () => (
-    <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} />
+  .addWithInfo('action icon with tooltip', () => (
+    <div>
+      <div style={{ float: 'left', height: 40, width: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
+        <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} size={20} />
+        <Tooltip
+          placement='topleft'
+          label='Left tooltip'
+        />
+      </div>
+      <div style={{ float: 'right', height: 40, width: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
+        <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} size={20} />
+        <Tooltip
+          placement='topright'
+          label='Right tooltip'
+        />
+      </div>
+      <div style={{ clear: 'both' }} />
+    </div>
   ))
   .addWithInfo('action icon disabled', () => (
     <ActionIcon isDisabled title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} />

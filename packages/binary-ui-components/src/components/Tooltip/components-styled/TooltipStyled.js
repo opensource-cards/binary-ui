@@ -10,8 +10,7 @@ export default styled.div`
   cursor: default;
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 13px;
-  right: 0;
-  margin-left: -60px;
+  ${props => (props.placement ? 'right: 0;' : 'left: 0;')}
   padding: 5px 10px;
   position: absolute;
   text-align: center;
@@ -28,7 +27,7 @@ export default styled.div`
     border-color: transparent transparent ${BINARY_COLOR_GRAY_30} transparent;
     bottom: 100%;
     content: "";
-    right: 20px;
+    ${props => (props.placement ? 'right: 20px;' : 'left: 20px;')} /* need to think about other cases  */
     position: absolute;
     margin-left: -5px;
   }
