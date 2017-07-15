@@ -52,21 +52,23 @@ storiesOf('binary-ui-components links', module)
   ))
   .addWithInfo('action icon with tooltip', () => (
     <div>
-      <div style={{ float: 'left', height: 40, width: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
-        <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} size={20} />
-        <Tooltip
-          placement='topleft'
-          label='Left tooltip'
-        />
+      <div style={{ float: 'left', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
+        <ActionIcon id="IconTooltipLeft" title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} size={20} />
       </div>
-      <div style={{ float: 'right', height: 40, width: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
-        <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} size={20} />
-        <Tooltip
-          placement='topright'
-          label='Right tooltip'
-        />
+      <div style={{ float: 'right', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
+        <ActionIcon id="IconTooltipRight" title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} size={20} />
       </div>
       <div style={{ clear: 'both' }} />
+      <Tooltip
+        label="Right tooltip"
+        placement="bottom-right"
+        targetId="IconTooltipLeft"
+      />
+      <Tooltip
+        label="Left tooltip"
+        placement="bottom-left"
+        targetId="IconTooltipRight"
+      />
     </div>
   ))
   .addWithInfo('action icon disabled', () => (

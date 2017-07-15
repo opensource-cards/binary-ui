@@ -51,12 +51,12 @@ export default class ActionIcon extends React.Component {
       <div
         onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
         onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+        {...props}
       >
         <ActionableIcon
           isActive={isActive}
           isDisabled={isDisabled}
           renderIcon={renderIcon}
-          {...props}
         />
       </div>
     );
