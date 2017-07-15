@@ -34,6 +34,57 @@ setAddon(infoAddon);
 const text = 'Important: for compatibility set container width in pixels!';
 const imageSelectedId = uuid.v1();
 
+class TooltipDemo1 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isVisibleLeft: false,
+      isVisibleRight: false,
+    };
+    this.onChangeLeft = this.onChangeLeft.bind(this);
+    this.onChangeRight = this.onChangeRight.bind(this);
+  }
+
+  onChangeLeft() {
+    this.setState((prevState) => ({
+      isVisibleLeft: !prevState.isVisibleLeft,
+    }));
+  }
+
+  onChangeRight() {
+    this.setState((prevState) => ({
+      isVisibleRight: !prevState.isVisibleRight,
+    }));
+  }
+
+  render() {
+    const { isVisibleLeft, isVisibleRight } = this.state;
+    return (
+      <div>
+        <div style={{ float: 'left', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
+          <ActionIcon id="IconTooltipLeft" title="Icon" onClick={this.onChangeLeft} renderIcon={() => (<ArrowDown />)} size={20} />
+        </div>
+        <div style={{ float: 'right', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
+          <ActionIcon id="IconTooltipRight" title="Icon" onClick={this.onChangeRight} renderIcon={() => (<ArrowDown />)} size={20} />
+        </div>
+        <div style={{ clear: 'both' }} />
+        <Tooltip
+          isVisible={isVisibleLeft}
+          label="Right tooltip"
+          placement="bottom-right"
+          targetId="IconTooltipLeft"
+        />
+        <Tooltip
+          isVisible={isVisibleRight}
+          label="Left tooltip"
+          placement="bottom-left"
+          targetId="IconTooltipRight"
+        />
+      </div>
+    );
+  }
+}
+
 storiesOf('binary-ui-components links', module)
   .addWithInfo('action button', () => (
     <ActionButton onClick={action()} renderIconLeft={() => (<ArrowDown />)} >Put test here</ActionButton>
@@ -51,25 +102,7 @@ storiesOf('binary-ui-components links', module)
     <ActionDiv isDisabled onClick={action()} >Put test here</ActionDiv>
   ))
   .addWithInfo('action icon with tooltip', () => (
-    <div>
-      <div style={{ float: 'left', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
-        <ActionIcon id="IconTooltipLeft" title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} size={20} />
-      </div>
-      <div style={{ float: 'right', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
-        <ActionIcon id="IconTooltipRight" title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} size={20} />
-      </div>
-      <div style={{ clear: 'both' }} />
-      <Tooltip
-        label="Right tooltip"
-        placement="bottom-right"
-        targetId="IconTooltipLeft"
-      />
-      <Tooltip
-        label="Left tooltip"
-        placement="bottom-left"
-        targetId="IconTooltipRight"
-      />
-    </div>
+    <TooltipDemo1 />
   ))
   .addWithInfo('action icon disabled', () => (
     <ActionIcon isDisabled title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} />

@@ -3,6 +3,7 @@ import React from 'react';
 import TooltipStyled from './components-styled/TooltipStyled';
 
 const propTypes = {
+  isVisible: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
   placement: PropTypes.oneOf(['bottom-right', 'bottom-left']),
   targetId: PropTypes.string.isRequired,
@@ -48,10 +49,11 @@ export default class Tooltip extends React.Component {
   }
 
   render() {
-    const { label, placement } = this.props;
+    const { isVisible, label, placement } = this.props;
     return (
       <TooltipStyled
         innerRef={this.onRef}
+        isVisible={isVisible}
         parentDOM={this.cachedParentDom}
         placement={placement}
         targetDOM={this.cachedTargetDom}
