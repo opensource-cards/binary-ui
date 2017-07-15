@@ -689,9 +689,9 @@ binary-extensions@^1.0.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.8.0.tgz#48ec8d16df4377eae5fa5884682480af4d95c774"
 
-binary-ui-components@^0.2.8:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.2.8.tgz#8f10f44634a999bb78e53bdebefdc6f08356e709"
+binary-ui-components@^0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.2.9.tgz#c46e3d816cc9221330be5875c4c0aad27366ef2a"
   dependencies:
     binary-ui-icons "^0.2.8"
     binary-ui-styles "^0.2.8"
@@ -967,9 +967,16 @@ diff@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.2.0.tgz#c9ce393a4b7cbd0b058a725c93df299027868ff9"
 
-doctrine@1.3.x, doctrine@^1.2.2:
+doctrine@1.3.x:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.3.0.tgz#13e75682b55518424276f7c173783456ef913d26"
+  dependencies:
+    esutils "^2.0.2"
+    isarray "^1.0.0"
+
+doctrine@^1.2.2:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
   dependencies:
     esutils "^2.0.2"
     isarray "^1.0.0"

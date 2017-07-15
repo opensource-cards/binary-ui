@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import TooltipStyled from './components-styled/TooltipStyled';
+import TooltipWrapper from './components-styled/TooltipWrapper';
 
 const propTypes = {
   isVisible: PropTypes.bool.isRequired,
@@ -51,15 +52,17 @@ export default class Tooltip extends React.Component {
   render() {
     const { isVisible, label, placement } = this.props;
     return (
-      <TooltipStyled
-        innerRef={this.onRef}
-        isVisible={isVisible}
-        parentDOM={this.cachedParentDom}
-        placement={placement}
-        targetDOM={this.cachedTargetDom}
-      >
-        {label}
-      </TooltipStyled>
+      <TooltipWrapper>
+        <TooltipStyled
+          innerRef={this.onRef}
+          isVisible={isVisible}
+          parentDOM={this.cachedParentDom}
+          placement={placement}
+          targetDOM={this.cachedTargetDom}
+        >
+          {label}
+        </TooltipStyled>
+      </TooltipWrapper>
     );
   }
 }

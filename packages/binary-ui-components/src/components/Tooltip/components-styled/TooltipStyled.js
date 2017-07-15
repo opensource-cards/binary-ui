@@ -23,7 +23,7 @@ export default styled.div`
   user-select: none;
   z-index: 999;
   -webkit-font-smoothing: antialiased;
-  ${props => (props.isVisible ? 'opacity: 1;' : 'opacity: 0;')}
+  ${props => (props.isVisible ? 'opacity: 1;' : 'opacity: 0;pointer-events: none;')}
   ${props => {
     // if no parent - do not display tooltip
     if (!props.parentDOM || !props.targetDOM) {
@@ -31,6 +31,10 @@ export default styled.div`
     }
     const boundingParentRect = props.parentDOM.getBoundingClientRect();
     const boundingTargetRect = props.targetDOM.getBoundingClientRect();
+    console.log(
+      boundingParentRect,
+      boundingTargetRect,
+    );
     switch (props.placement) {
       case 'bottom-right': {
         const commonX = boundingTargetRect.left - boundingParentRect.left;
@@ -42,7 +46,7 @@ export default styled.div`
         `;
       }
       case 'bottom-left': {
-        const commonX = 0;
+        const commonX = boundingParentRect.right - boundingTargetRect.right;
         const commonY = boundingTargetRect.top - boundingParentRect.top;
         const targetCenterX = boundingTargetRect.width / 2;
         return `

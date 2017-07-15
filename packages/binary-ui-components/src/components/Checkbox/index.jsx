@@ -30,11 +30,18 @@ export default class Checkbox extends React.Component {
   }
 
   render() {
+    // NOTE: no need to set 'onChange' and 'onClick' handlers
+    /* eslint-disable no-unused-vars */
     const { isChecked, onChange, onClick, ...props } = this.props;
-    return isChecked ? (
-      <Check color={BINARY_COLOR_BLUE_40} size={30} onClick={this.onClick} {...props} />
-    ) : (
-      <Uncheck color={BINARY_COLOR_GRAY_80} size={30} onClick={this.onClick} {...props} />
+    /* eslint-enable no-unused-vars */
+    return (
+      <div onClick={this.onClick} {...props} >
+        {isChecked ? (
+          <Check color={BINARY_COLOR_BLUE_40} size={30} />
+        ) : (
+          <Uncheck color={BINARY_COLOR_GRAY_80} size={30} />
+        )}
+      </div>
     );
   }
 }

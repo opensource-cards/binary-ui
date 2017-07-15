@@ -60,7 +60,7 @@ class TooltipDemo1 extends React.Component {
   render() {
     const { isVisibleLeft, isVisibleRight } = this.state;
     return (
-      <div>
+      <div style={{ padding: 50 }} >
         <div style={{ float: 'left', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', position: 'relative' }}>
           <ActionIcon id="IconTooltipLeft" title="Icon" onClick={this.onChangeLeft} renderIcon={() => (<ArrowDown />)} size={20} />
         </div>
@@ -68,18 +68,42 @@ class TooltipDemo1 extends React.Component {
           <ActionIcon id="IconTooltipRight" title="Icon" onClick={this.onChangeRight} renderIcon={() => (<ArrowDown />)} size={20} />
         </div>
         <div style={{ clear: 'both' }} />
-        <Tooltip
-          isVisible={isVisibleLeft}
-          label="Right tooltip"
-          placement="bottom-right"
-          targetId="IconTooltipLeft"
-        />
-        <Tooltip
-          isVisible={isVisibleRight}
-          label="Left tooltip"
-          placement="bottom-left"
-          targetId="IconTooltipRight"
-        />
+        {/* 
+        <div style={{ margin: 50, backgroundColor: 'lightgray' }} >
+          <div>Container for Tooltips</div>
+          <Tooltip
+            isVisible={isVisibleLeft}
+            label="Right tooltip"
+            placement="bottom-right"
+            targetId="IconTooltipLeft"
+          />
+          <Tooltip
+            isVisible={isVisibleRight}
+            label="Left tooltip"
+            placement="bottom-left"
+            targetId="IconTooltipRight"
+          />
+        </div>
+        */}
+        
+        <div style={{ position: 'relative' }} >
+          <div style={{ position: 'absolute', top: 50, left: 50, backgroundColor: 'lightgray' }} >
+            <div>Container for Tooltips</div>
+            <Tooltip
+              isVisible={isVisibleLeft}
+              label="Right tooltip"
+              placement="bottom-right"
+              targetId="IconTooltipLeft"
+            />
+            <Tooltip
+              isVisible={isVisibleRight}
+              label="Left tooltip"
+              placement="bottom-left"
+              targetId="IconTooltipRight"
+            />
+          </div>
+        </div>
+        
       </div>
     );
   }
