@@ -4,7 +4,9 @@ import ActionableIcon from '../ActionableIcon';
 import { isLeftButton } from '../../utils/events';
 
 const propTypes = {
+  color: PropTypes.string,
   isDisabled: PropTypes.bool,
+  size: PropTypes.number,
   renderIcon: PropTypes.func.isRequired,
   onTapDown: PropTypes.func,
 };
@@ -45,7 +47,7 @@ export default class ActionIcon extends React.Component {
   }
 
   render() {
-    const { isDisabled, renderIcon, onTapDown, ...props } = this.props;
+    const { color, isDisabled, size, renderIcon, onTapDown, ...props } = this.props;
     const { isActive } = this.state;
     return (
       <div
@@ -54,8 +56,10 @@ export default class ActionIcon extends React.Component {
         {...props}
       >
         <ActionableIcon
+          color={color}
           isActive={isActive}
           isDisabled={isDisabled}
+          size={size}
           renderIcon={renderIcon}
         />
       </div>
