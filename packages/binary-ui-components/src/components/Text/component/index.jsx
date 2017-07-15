@@ -45,11 +45,14 @@ export default class Text extends React.Component {
           {children}
         </TextContent>
         {renderIcon && (
-          <ActionListItemIcon
-            isDisabled={isDisabled}
-            renderIcon={renderIcon}
+          <div
             onClick={this.onMoreClick}
-          />
+          >
+            <ActionListItemIcon
+              isDisabled={isDisabled}
+              renderIcon={renderIcon}
+            />
+          </div>
         )}
       </TextWrapper>
     );

@@ -14,10 +14,10 @@ export default styled.div`
   cursor: default;
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 13px;
+  ${props => (props.isVisible ? 'opacity: 1; transition: opacity 300ms ease-out;' : 'opacity: 0; transition: opacity 300ms ease-out;')}
   padding: 5px 10px;
   position: absolute;
   text-align: center;
-  visibility: visible;
   width: auto;
   white-space: nowrap;
   user-select: none;
