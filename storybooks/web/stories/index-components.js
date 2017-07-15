@@ -104,6 +104,9 @@ storiesOf('binary-ui-components links', module)
   .addWithInfo('action icon with tooltip', () => (
     <TooltipDemo1 />
   ))
+  .addWithInfo('action icon pass color', () => (
+    <ActionIcon color="red" title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} />
+  ))
   .addWithInfo('action icon disabled', () => (
     <ActionIcon isDisabled title="Icon" onClick={action()} renderIcon={() => (<ArrowDown />)} />
   ))
