@@ -41,15 +41,17 @@ export default class Slider extends React.Component {
   }
 
   onGestureResponderStart(e) {
+    const { onDraggingChanged } = this.props;
     // prevent selecting text
     e.preventDefault();
     // parents don't need to know about this event
     e.stopPropagation();
-    this.props.onDraggingChanged(true);
+    onDraggingChanged(true);
   }
 
   onMouseResponderMove(e) {
-    if (!this.props.dragging) {
+    const { dragging } = this.props;
+    if (!dragging) {
       return;
     }
     // prevent selecting text
@@ -66,7 +68,8 @@ export default class Slider extends React.Component {
   }
 
   onTouchResponderMove(e) {
-    if (!this.props.dragging) {
+    const { dragging } = this.props;
+    if (!dragging) {
       return;
     }
     // prevent selecting text
@@ -83,7 +86,8 @@ export default class Slider extends React.Component {
   }
 
   onGestureResponderEnd() {
-    this.props.onDraggingChanged(false);
+    const { onDraggingChanged } = this.props;
+    onDraggingChanged(false);
   }
 
   render() {

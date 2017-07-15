@@ -22,42 +22,18 @@ const defaultProps = {
   onMoreClick: undefined,
 };
 
-export default class Text extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.onMoreClick = this.onMoreClick.bind(this);
-  }
-
-  onMoreClick() {
-    const { onMoreClick } = this.props;
-    if (!onMoreClick) {
-      return;
-    }
-    onMoreClick();
-  }
-
-  render() {
-    const { children, isBold, isDisabled, isEdit, renderIcon } = this.props;
-    return (
-      <TextWrapper isEdit={isEdit} >
-        <TextContent isBold={isBold} isDisabled={isDisabled} >
-          {children}
-        </TextContent>
-        {renderIcon && (
-          <div
-            onClick={this.onMoreClick}
-          >
-            <ActionListItemIcon
-              isDisabled={isDisabled}
-              renderIcon={renderIcon}
-            />
-          </div>
-        )}
-      </TextWrapper>
-    );
-  }
-}
+const Text = ({ children, isBold, isDisabled, isEdit, renderIcon, onMoreClick }) => (
+  <TextWrapper isEdit={isEdit} >
+    <TextContent isBold={isBold} isDisabled={isDisabled} >
+      {children}
+    </TextContent>
+    {renderIcon && (
+      <ActionListItemIcon isDisabled={isDisabled} renderIcon={renderIcon} onClick={onMoreClick} />
+    )}
+  </TextWrapper>
+);
 
 Text.propTypes = propTypes;
 Text.defaultProps = defaultProps;
+
+export default Text;

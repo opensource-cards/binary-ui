@@ -14,15 +14,16 @@ export default styled.div`
   cursor: default;
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 13px;
-  ${props => (props.isVisible ? 'opacity: 1; transition: opacity 300ms ease-out;' : 'opacity: 0; transition: opacity 300ms ease-out;')}
   padding: 5px 10px;
   position: absolute;
   text-align: center;
+  transition: opacity 300ms ease-out;
   width: auto;
   white-space: nowrap;
   user-select: none;
   z-index: 999;
   -webkit-font-smoothing: antialiased;
+  ${props => (props.isVisible ? 'opacity: 1;' : 'opacity: 0;')}
   ${props => {
     // if no parent - do not display tooltip
     if (!props.parentDOM || !props.targetDOM) {

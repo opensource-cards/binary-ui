@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import TextareaInput from './TextareaInput';
+import TextareaInput from '../components-styled/TextareaInput';
 import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
 import ActionListItemIcon from '../../ActionListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
@@ -32,7 +32,6 @@ export default class Textarea extends React.Component {
       isActive: false,
     };
     this.onTextChange = this.onTextChange.bind(this);
-    this.onMoreClick = this.onMoreClick.bind(this);
     this.onSetFocus = this.onSetFocus.bind(this);
   }
 
@@ -42,13 +41,6 @@ export default class Textarea extends React.Component {
       return;
     }
     onTextChange(e.target.value);
-  }
-
-  onMoreClick() {
-    const { onMoreClick } = this.props;
-    if (onMoreClick) {
-      onMoreClick();
-    }
   }
 
   onSetFocus(isActive) {
@@ -66,13 +58,12 @@ export default class Textarea extends React.Component {
       renderIcon,
       onBlur,
       onFocus,
+      onMoreClick,
       ...props,
     } = this.props;
     const { isActive } = this.state;
     return (
-      <TextareaWrapperStyled
-        style={getHighlightEditStyle(true, isValid, isActive, undefined)}
-      >
+      <TextareaWrapperStyled style={getHighlightEditStyle(true, isValid, isActive, undefined)} >
         <TextareaInput
           onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
           onChange={this.onTextChange}
@@ -80,7 +71,7 @@ export default class Textarea extends React.Component {
           {...props}
         />
         {renderIcon && (
-          <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} style={{ paddingRight: 10 }} />
+          <ActionListItemIcon renderIcon={renderIcon} onClick={onMoreClick} />
         )}
       </TextareaWrapperStyled>
     );

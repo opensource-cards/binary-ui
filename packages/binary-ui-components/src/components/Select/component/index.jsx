@@ -51,9 +51,7 @@ export default class Select extends React.Component {
       <SelectWrapper
         style={getHighlightEditStyle(isEdit, isValid, false, undefined)}
       >
-        <SelectArrow
-          size={18}
-        />
+        <SelectArrow size={18} />
         <SelectStyled
           innerRef={this.setSelectRef}
           isBold={isBold}

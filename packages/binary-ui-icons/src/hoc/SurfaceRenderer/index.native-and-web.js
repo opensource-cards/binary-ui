@@ -27,7 +27,8 @@ export default (Group, Shape, Surface) => {
     }
 
     componentWillReceiveProps(nextProps) {
-      if (this.props.color !== nextProps.color) {
+      const { color } = this.props;
+      if (color !== nextProps.color) {
         this.setColoredShape(nextProps.color);
       }
     }

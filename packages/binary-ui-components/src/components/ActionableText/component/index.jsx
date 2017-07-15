@@ -26,22 +26,24 @@ const ActionableText = ({
   style,
   onClick,
   ...props,
-}) => {
-  const actionColor = getActionColorExt(
-    color,
-    BINARY_COLOR_BLUE_60,
-    BINARY_COLOR_GRAY_40,
-    isActive,
-    isDisabled
-  );
-  return (
-    <TextStyled
-      style={Object.assign({}, style, { color: actionColor })}
-      onClick={!isDisabled && onClick}
-      {...props}
-    />
-  );
-};
+}) => (
+  <TextStyled
+    style={Object.assign(
+      {},
+      style, {
+        color: getActionColorExt(
+          color,
+          BINARY_COLOR_BLUE_60,
+          BINARY_COLOR_GRAY_40,
+          isActive,
+          isDisabled
+        ),
+      }
+    )}
+    onClick={!isDisabled && onClick}
+    {...props}
+  />
+);
 
 ActionableText.propTypes = propTypes;
 ActionableText.defaultProps = defaultProps;

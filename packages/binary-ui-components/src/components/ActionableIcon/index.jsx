@@ -38,8 +38,8 @@ const ActionableIcon = ({
       isDisabled
     )}
     size={size}
-    onClick={!isDisabled && onClick}
     renderIcon={renderIcon}
+    onClick={!isDisabled && onClick}
     {...props}
   />
 );
