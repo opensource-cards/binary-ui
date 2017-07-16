@@ -50,7 +50,7 @@ export default class Tooltip extends React.Component {
   }
 
   render() {
-    const { isVisible, label, placement } = this.props;
+    const { isVisible, label, placement, ...props } = this.props;
     return (
       <TooltipWrapper>
         <TooltipStyled
@@ -59,6 +59,7 @@ export default class Tooltip extends React.Component {
           parentDOM={this.cachedParentDom}
           placement={placement}
           targetDOM={this.cachedTargetDom}
+          {...props}
         >
           {label}
         </TooltipStyled>

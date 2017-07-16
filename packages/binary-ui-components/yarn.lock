@@ -996,15 +996,15 @@ binary-extensions@^1.0.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.8.0.tgz#48ec8d16df4377eae5fa5884682480af4d95c774"
 
-binary-ui-icons@^0.2.8:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.2.8.tgz#c33e09fe29fa7fbadcbc732b7d925de7f164d206"
+binary-ui-icons@^0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.2.10.tgz#23cec8df0c88a0c4fb5969da6b418ae77e5f61b7"
   dependencies:
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.2.8:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.2.8.tgz#11b5e1b0e16b8db30a21526e40ec098e7d613de8"
+binary-ui-styles@^0.2.10:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.2.10.tgz#941bd8166442d2e7b4d3476f75ee5eb166125aea"
 
 binaryextensions@~1.0.0:
   version "1.0.1"
