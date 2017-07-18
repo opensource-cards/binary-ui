@@ -10,6 +10,6 @@
     "release": "lerna exec npm run build && npm run storybook-web-build"
   },
   "devDependencies": {
-    "lerna": "2.0.0-beta.38"
+    "lerna": "2.0.0"
   }
 }

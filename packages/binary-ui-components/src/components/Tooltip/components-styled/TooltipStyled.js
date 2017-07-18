@@ -17,24 +17,16 @@ export default styled.div`
   padding: 5px 10px;
   position: absolute;
   text-align: center;
-  transition: opacity 300ms ease-out;
-  width: auto;
-  white-space: nowrap;
+  transition: opacity 0.3s ease-out;
   user-select: none;
+  white-space: nowrap;
+  width: auto;
   z-index: 999;
   -webkit-font-smoothing: antialiased;
   ${props => (props.isVisible ? 'opacity: 1;' : 'opacity: 0;pointer-events: none;')}
   ${props => {
-    // if no parent - do not display tooltip
-    if (!props.parentDOM || !props.targetDOM) {
-      return 'display: none;';
-    }
     const boundingParentRect = props.parentDOM.getBoundingClientRect();
     const boundingTargetRect = props.targetDOM.getBoundingClientRect();
-    console.log(
-      boundingParentRect,
-      boundingTargetRect,
-    );
     switch (props.placement) {
       case 'bottom-right': {
         const commonX = boundingTargetRect.left - boundingParentRect.left;
@@ -67,7 +59,6 @@ export default styled.div`
     margin-left: -${TOOLTIP_ARROW_HEIGHT}px;
     position: absolute;
     ${props => {
-      // const boundingClientRect = props.targetDOM.getBoundingClientRect();
       switch (props.placement) {
         case 'bottom-left':
           return `right: ${TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;`;

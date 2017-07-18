@@ -18,8 +18,11 @@ export default class Tooltip extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      isReady: false,
+    };
     this.cachedTargetDom = null;
-    this.cachedParentDom = null;
+    this.cachedWrapperDom = null;
     this.onRef = this.onRef.bind(this);
   }
 
@@ -32,17 +35,19 @@ export default class Tooltip extends React.Component {
 
   onRef(node) {
     if (!node) {
-      this.cachedParentDom = null;
       this.cachedTargetDom = null;
+      this.cachedWrapperDom = null;
+      this.setState(() => ({
+        isReady: false,
+      }));
       return;
     }
     const { targetId } = this.props;
-    this.cachedParentDom = this.getParent(node);
     this.cachedTargetDom = this.getTarget(targetId);
-  }
-
-  getParent(node) {
-    return node.parentNode;
+    this.cachedWrapperDom = node;
+    this.setState(() => ({
+      isReady: true,
+    }));
   }
 
   getTarget(targetId) {
@@ -52,17 +57,18 @@ export default class Tooltip extends React.Component {
   render() {
     const { isVisible, label, placement, ...props } = this.props;
     return (
-      <TooltipWrapper>
-        <TooltipStyled
-          innerRef={this.onRef}
-          isVisible={isVisible}
-          parentDOM={this.cachedParentDom}
-          placement={placement}
-          targetDOM={this.cachedTargetDom}
-          {...props}
-        >
-          {label}
-        </TooltipStyled>
+      <TooltipWrapper innerRef={this.onRef} >
+        {(this.cachedWrapperDom && this.cachedTargetDom) ? (
+          <TooltipStyled
+            isVisible={isVisible}
+            parentDOM={this.cachedWrapperDom}
+            placement={placement}
+            targetDOM={this.cachedTargetDom}
+            {...props}
+          >
+            {label}
+          </TooltipStyled>
+        ) : null}
       </TooltipWrapper>
     );
   }
