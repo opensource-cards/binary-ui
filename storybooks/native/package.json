@@ -20,11 +20,11 @@
     "preset": "react-native"
   },
   "devDependencies": {
-    "@kadira/react-native-storybook": "^2.0.0",
     "babel-jest": "17.0.2",
     "babel-plugin-module-resolver": "^2.4.0",
     "babel-preset-react-native": "1.9.0",
     "jest": "17.0.3",
-    "react-test-renderer": "15.4.1"
+    "react-test-renderer": "15.4.1",
+    "@storybook/react-native": "3.1.9"
   }
 }

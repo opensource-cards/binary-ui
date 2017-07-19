@@ -1,4 +1,4 @@
-import { storiesOf, action } from '@kadira/react-native-storybook';
+import { storiesOf, action } from '@storybook/react-native';
 import {
   CardsIconAdd,
   CardsIconAddCard,

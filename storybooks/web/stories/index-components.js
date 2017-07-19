@@ -1,5 +1,5 @@
-import infoAddon from '@kadira/react-storybook-addon-info';
-import { setAddon, storiesOf, action } from '@kadira/storybook';
+import infoAddon from '@storybook/addon-info';
+import { setAddon, storiesOf, action } from '@storybook/react';
 import Remove from 'binary-ui-icons/binary/Remove';
 import Add from 'binary-ui-icons/binary/Add';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
