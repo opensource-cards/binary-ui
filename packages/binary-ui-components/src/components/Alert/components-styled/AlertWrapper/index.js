@@ -11,14 +11,14 @@ import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 const ALERT_COMMON_STYLES = `
   ${CURSOR_POINTER_CSS}
-  height: 40px;
-  width: 98%;
-  line-height: 40px;
-  transition: background-color 0.5s ease-in-out;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  box-shadow: 0px 0px 3px 0px rgba(128, 128, 128, 0.5);
+  height: 40px;
+  line-height: 40px;
   margin: 3px auto 0 auto;
-  box-shadow: 0px 0px 3px 0px rgba(128,128,128,0.5);
+  transition: background-color 0.5s ease-in-out;
+  width: 100%;
 `;
 
 export const ALERT_STYLE = `
