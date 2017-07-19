@@ -3,21 +3,25 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const propTypes = {
+  color: PropTypes.string,
   size: PropTypes.number,
   style: PropTypes.object,
   renderIcon: PropTypes.func.isRequired,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  color: undefined,
+  size: undefined,
+  style: undefined,
+};
 
-const IconStyled = ({ size, style, renderIcon, ...props }) => {
+const IconStyled = ({ color, size, style, renderIcon }) => {
   const element = renderIcon();
-  const elementSize = element.props.size;
   return (
     React.cloneElement(element, {
       ...element.props,
-      ...props,
-      size: size || elementSize,
+      color: color || element.props.color,
+      size: size || element.props.size,
       style: Object.assign({}, NO_SELECT_STYLE, style),
     })
   );

@@ -125,6 +125,9 @@ storiesOf('binary-ui-components links', module)
   .addWithInfo('action div disabled', () => (
     <ActionDiv isDisabled onClick={action()} >Put test here</ActionDiv>
   ))
+  .addWithInfo('action icon', () => (
+    <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<Add />)} />
+  ))
   .addWithInfo('action icon with tooltip', () => (
     <TooltipDemo1 />
   ))

@@ -22,30 +22,22 @@ export default (Group, Shape, Surface) => {
 
     constructor(props) {
       super(props);
-      this.cache = {};
-      this.setColoredShape(props.color);
+      this.renderShape = this.renderShape.bind(this);
     }
 
-    componentWillReceiveProps(nextProps) {
+    renderShape(shapeProps) {
       const { color } = this.props;
-      if (color !== nextProps.color) {
-        this.setColoredShape(nextProps.color);
-      }
-    }
-
-    setColoredShape(color) {
-      this.cache.ColoredShape = (shapeProps) => (
+      return (
         <Shape fill={color} {...shapeProps} />
       );
     }
 
     render() {
       const { color, size, IconContentComponent, ...props } = this.props;
-      const scale = size / DEFAULT_SIZE;
       return (
         <Surface height={size} width={size} {...props} >
-          <Group fill={color} scale={scale} >
-            <IconContentComponent Group={Group} Shape={this.cache.ColoredShape} />
+          <Group fill={color} scale={size / DEFAULT_SIZE} >
+            <IconContentComponent Group={Group} Shape={this.renderShape} />
           </Group>
         </Surface>
       );

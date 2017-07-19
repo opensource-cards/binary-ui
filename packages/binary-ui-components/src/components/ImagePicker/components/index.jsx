@@ -16,6 +16,7 @@ const propTypes = {
 
 const defaultProps = {
   imageFit: 'contain',
+  imageSelectedId: undefined,
   images: [],
   isImageUpload: true,
   onImageClick: undefined,

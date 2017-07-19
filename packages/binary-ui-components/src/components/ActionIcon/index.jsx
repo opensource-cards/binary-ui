@@ -12,7 +12,9 @@ const propTypes = {
 };
 
 const defaultProps = {
+  color: undefined,
   isDisabled: false,
+  size: undefined,
   onTapDown: undefined,
 };
 

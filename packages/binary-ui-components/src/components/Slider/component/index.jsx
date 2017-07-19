@@ -6,9 +6,9 @@ import SliderScaleIcon from '../components-styled/SliderScaleIcon';
 
 const propTypes = {
   position: PropTypes.number.isRequired,
-  onPositionChange: PropTypes.func.isRequired,
   renderIconLeft: PropTypes.func,
   renderIconRight: PropTypes.func,
+  onPositionChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {

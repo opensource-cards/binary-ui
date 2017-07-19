@@ -7,8 +7,8 @@ import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   isValid: PropTypes.bool,
-  renderIcon: PropTypes.func,
   value: PropTypes.string.isRequired,
+  renderIcon: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   onMoreClick: PropTypes.func,

@@ -9,7 +9,6 @@ const propTypes = {
   isActive: PropTypes.bool,
   isDisabled: PropTypes.bool.isRequired,
   size: PropTypes.number,
-  onClick: PropTypes.func,
   renderIcon: PropTypes.func.isRequired,
 };
 
@@ -17,7 +16,6 @@ const defaultProps = {
   color: '#000000',
   isActive: false,
   size: undefined,
-  onClick: undefined,
 };
 
 const ActionableIcon = ({
@@ -25,7 +23,6 @@ const ActionableIcon = ({
   size,
   isActive,
   isDisabled,
-  onClick,
   renderIcon,
   ...props,
 }) => (
@@ -39,7 +36,6 @@ const ActionableIcon = ({
     )}
     size={size}
     renderIcon={renderIcon}
-    onClick={!isDisabled && onClick}
     {...props}
   />
 );

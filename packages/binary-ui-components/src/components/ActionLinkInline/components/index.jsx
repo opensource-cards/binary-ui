@@ -11,17 +11,19 @@ import { isLeftButton } from '../../../utils/events';
 const propTypes = {
   children: PropTypes.any,
   isDisabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  onTapDown: PropTypes.func,
   size: PropTypes.number,
   renderIconLeft: PropTypes.func,
   renderIconRight: PropTypes.func,
+  onClick: PropTypes.func,
+  onTapDown: PropTypes.func,
 };
 
 const defaultProps = {
   children: undefined,
   isDisabled: false,
   size: undefined,
+  renderIconLeft: undefined,
+  renderIconRight: undefined,
   onClick: undefined,
   onTapDown: undefined,
 };
