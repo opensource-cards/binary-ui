@@ -1,23 +1,15 @@
-# Binary UI
+# Binary Design System
 
-A set of [React](http://facebook.github.io/react/) components that implement [Cards](https://try.cards) Binary Design specification.
+The Binary Design System offers a set of guidelines and open-source libraries for building modular web-apps. This repository provides a set of [React](http://facebook.github.io/react/) components and styles.
 
-Binary Design's core values are functionality and minimalism. We deconstruct design down to functional elements, with the following principles in mind:
-- Symbols are more powerful than words.
-- Design element must have a function.
-- The function should be absolutely necessary.
-
-Read about [iconography](/packages/binary-ui-icons/README.md), design of [components](packages/binary-ui-components/README.md) and [styles](/packages/binary-ui-styles/README.md).
-
-### Fira Sans Font
-
-Binary UI was designed with the [Fira Sans](https://github.com/mozilla/Fira)
-font. Be sure to include it in your project. Get this font from
-[Google Fonts](https://fonts.google.com/?selection.family=Fira+Sans)
-or Mozilla:
-```html
-<link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-```
+Binary Design in topics:
+- [Introduction](https://medium.com/binary-design/design-concept-65285d8d99c7)
+- [App layout](https://medium.com/binary-design/app-layout-cd526b9cf52f)
+- [Stack (module) anatomy](https://medium.com/binary-design/stack-anatomy-b12e77bedc74)
+- [Color system](https://medium.com/binary-design/color-system-f8c7dfae7ab5)
+- [Icon library](https://medium.com/binary-design/iconography-2f9d4e8deced)
+- [Typography](https://medium.com/binary-design/typography-dd26f30ad590)
+- [Writing style](https://medium.com/binary-design/writing-style-64490959a73c)
 
 ### License
 
