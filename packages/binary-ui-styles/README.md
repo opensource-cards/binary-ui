@@ -2,6 +2,8 @@
 
 ## Description
 
+This package provides a set of React components implementing Binary Design System. Read more about components: [Color System](https://medium.com/binary-design/color-system-f8c7dfae7ab5) and [Typography](https://medium.com/binary-design/typography-dd26f30ad590).
+
 ### Layout styles (web)
 
 const                  | use
