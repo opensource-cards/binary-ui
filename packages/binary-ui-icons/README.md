@@ -1,6 +1,14 @@
 # binary-ui-icons
 
-## Design Rules
+## Guidelines
+
+This package provides a set of React components implementing Binary Design System. Read more about components: [Iconography](https://medium.com/binary-design/iconography-2f9d4e8deced).
+
+## Iconset
+
+![](iconset-preview.gif)
+
+## How to contribute
 
 Icon style follows a set of rules:
 - Canvas size 512 × 512 px
@@ -10,10 +18,6 @@ Icon style follows a set of rules:
 - All shapes should be converted to curves. To import icons to this project, only `<path>` shape supported, no `<rect>`, `<ellipse>`, `<line>` or other basic SVG shapes 
 
 Merge all curves, export to SVG and copy path data `d=""` prop.
-
-## Iconset
-
-![](iconset-preview.gif)
 
 ## Example
 
