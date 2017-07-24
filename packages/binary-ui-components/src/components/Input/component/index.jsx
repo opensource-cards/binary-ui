@@ -109,7 +109,7 @@ export default class Input extends React.Component {
   getFormattedValue(type, mask, value) {
     switch (type) {
       case INPUT_FIELD_TYPES.NUMBER:
-        if (process.env.NODE_ENV === 'production') {
+        if (process.env.NODE_ENV !== 'production') {
           if (mask) {
             console.warn('Mask is ignored for \'INPUT_FIELD_TYPES.NUMBER\'.');
           }
