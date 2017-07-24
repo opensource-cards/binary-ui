@@ -25,15 +25,7 @@ export default class Select extends React.Component {
 
   constructor(props) {
     super(props);
-    this.onClick = this.onClick.bind(this);
     this.onChange = this.onChange.bind(this);
-    this.setSelectRef = this.setSelectRef.bind(this);
-  }
-
-  onClick() {
-    const event = document.createEvent('MouseEvents');
-    event.initMouseEvent('mousedown', true, true, window);
-    this.selectRef.dispatchEvent(event);
   }
 
   onChange(e) {
@@ -41,23 +33,12 @@ export default class Select extends React.Component {
     onChange(e.target.value);
   }
 
-  setSelectRef(selectRef) {
-    this.selectRef = selectRef;
-  }
-
   render() {
     const { items, isBold, isEdit, isValid, selected } = this.props;
     return (
-      <SelectWrapper
-        style={getHighlightEditStyle(isEdit, isValid, false, undefined)}
-      >
+      <SelectWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} >
         <SelectArrow size={18} />
-        <SelectStyled
-          innerRef={this.setSelectRef}
-          isBold={isBold}
-          value={selected}
-          onChange={this.onChange}
-        >
+        <SelectStyled isBold={isBold} value={selected} onChange={this.onChange} >
           {items.map((listItem) => (
             <SelectOption key={listItem.key} value={listItem.value} >
               {listItem.label}

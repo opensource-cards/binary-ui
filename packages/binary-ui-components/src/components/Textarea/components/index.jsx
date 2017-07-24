@@ -31,8 +31,25 @@ export default class Textarea extends React.Component {
     this.state = {
       isActive: false,
     };
+    this.onBlur = this.onBlur.bind(this);
+    this.onFocus = this.onFocus.bind(this);
     this.onTextChange = this.onTextChange.bind(this);
-    this.onSetFocus = this.onSetFocus.bind(this);
+  }
+
+  onBlur(e) {
+    const { onBlur } = this.props;
+    this.setFocus(false);
+    if (onBlur) {
+      onBlur(e);
+    }
+  }
+
+  onFocus(e) {
+    const { onFocus } = this.props;
+    this.setFocus(true);
+    if (onFocus) {
+      onFocus(e);
+    }
   }
 
   onTextChange(e) {
@@ -43,7 +60,7 @@ export default class Textarea extends React.Component {
     onTextChange(e.target.value);
   }
 
-  onSetFocus(isActive) {
+  setFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -53,6 +70,7 @@ export default class Textarea extends React.Component {
   }
 
   render() {
+    /* eslint-disable no-unused-vars  */
     const {
       isValid,
       renderIcon,
@@ -61,13 +79,14 @@ export default class Textarea extends React.Component {
       onMoreClick,
       ...props,
     } = this.props;
+    /* eslint-enable no-unused-vars  */
     const { isActive } = this.state;
     return (
       <TextareaWrapperStyled style={getHighlightEditStyle(true, isValid, isActive, undefined)} >
         <TextareaInput
-          onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
+          onBlur={this.onBlur}
           onChange={this.onTextChange}
-          onFocus={(e) => { this.onSetFocus(true); if (onFocus) { onFocus(e); } }}
+          onFocus={this.onFocus}
           {...props}
         />
         {renderIcon && (

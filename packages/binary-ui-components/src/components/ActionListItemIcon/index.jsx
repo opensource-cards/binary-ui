@@ -4,15 +4,19 @@ import React from 'react';
 import ActionableIcon from '../ActionableIcon';
 import { isLeftButton } from '../../utils/events';
 
+const ICON_STYLE = { paddingRight: 10 };
+
 const propTypes = {
   isDisabled: PropTypes.bool,
   renderIcon: PropTypes.func.isRequired,
-  onTapDown: PropTypes.func,
+  onMouseDown: PropTypes.func,
+  onTouchStart: PropTypes.func,
 };
 
 const defaultProps = {
   isDisabled: false,
-  onTapDown: undefined,
+  onMouseDown: undefined,
+  onTouchStart: undefined,
 };
 
 export default class ActionListItemIcon extends React.Component {
@@ -22,8 +26,9 @@ export default class ActionListItemIcon extends React.Component {
     this.state = {
       isActive: false,
     };
-    this.onTapUp = () => { this.onSetActive(false); };
-    this.onSetActive = this.onSetActive.bind(this);
+    this.onTapUp = () => { this.setActive(false); };
+    this.onMouseDown = this.onMouseDown.bind(this);
+    this.onTouchStart = this.onTouchStart.bind(this);
   }
 
   componentDidMount() {
@@ -36,7 +41,25 @@ export default class ActionListItemIcon extends React.Component {
     window.removeEventListener('touchend', this.onTapUp);
   }
 
-  onSetActive(isActive) {
+  onMouseDown(e) {
+    const { onMouseDown } = this.props;
+    if (isLeftButton(e)) {
+      this.setActive(true);
+    }
+    if (onMouseDown) {
+      onMouseDown(e);
+    }
+  }
+
+  onTouchStart(e) {
+    const { onTouchStart } = this.props;
+    this.setActive(true);
+    if (onTouchStart) {
+      onTouchStart(e);
+    }
+  }
+
+  setActive(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -46,17 +69,20 @@ export default class ActionListItemIcon extends React.Component {
   }
 
   render() {
+    /* eslint-disable no-unused-vars */
     const {
       isDisabled,
       renderIcon,
-      onTapDown,
+      onMouseDown,
+      onTouchStart,
       ...props,
     } = this.props;
+    /* eslint-enable no-unused-vars */
     const { isActive } = this.state;
     return (
       <div
-        onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
-        onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+        onMouseDown={!isDisabled && this.onMouseDown}
+        onTouchStart={!isDisabled && this.onTouchStart}
         {...props}
       >
         <ActionableIcon
@@ -64,7 +90,7 @@ export default class ActionListItemIcon extends React.Component {
           isActive={isActive}
           isDisabled={isDisabled}
           size={18}
-          style={{ paddingRight: 10 }}
+          style={ICON_STYLE}
           renderIcon={renderIcon}
         />
       </div>

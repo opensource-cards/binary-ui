@@ -11,8 +11,9 @@ const propTypes = {
   children: PropTypes.any,
   isDisabled: PropTypes.bool,
   onClick: PropTypes.func,
+  onMouseDown: PropTypes.func,
   onSubmit: PropTypes.func,
-  onTapDown: PropTypes.func,
+  onTouchStart: PropTypes.func,
   renderIconLeft: PropTypes.func,
   renderIconRight: PropTypes.func,
 };
@@ -21,8 +22,9 @@ const defaultProps = {
   children: undefined,
   isDisabled: false,
   onClick: undefined,
+  onMouseDown: undefined,
   onSubmit: undefined,
-  onTapDown: undefined,
+  onTouchStart: undefined,
   renderIconLeft: undefined,
   renderIconRight: undefined,
 };
@@ -34,8 +36,9 @@ export default class ActionButton extends React.Component {
     this.state = {
       isActive: false,
     };
-    this.onTapUp = () => { this.onSetActive(false); };
-    this.onSetActive = this.onSetActive.bind(this);
+    this.onTapUp = () => { this.setActive(false); };
+    this.onMouseDown = this.onMouseDown.bind(this);
+    this.onTouchStart = this.onTouchStart.bind(this);
   }
 
   componentDidMount() {
@@ -48,7 +51,25 @@ export default class ActionButton extends React.Component {
     window.removeEventListener('touchend', this.onTapUp);
   }
 
-  onSetActive(isActive) {
+  onMouseDown(e) {
+    const { onMouseDown } = this.props;
+    if (isLeftButton(e)) {
+      this.setActive(true);
+    }
+    if (onMouseDown) {
+      onMouseDown(e);
+    }
+  }
+
+  onTouchStart(e) {
+    const { onTouchStart } = this.props;
+    this.setActive(true);
+    if (onTouchStart) {
+      onTouchStart(e);
+    }
+  }
+
+  setActive(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -73,23 +94,26 @@ export default class ActionButton extends React.Component {
   }
 
   render() {
+    /* eslint-disable no-unused-vars */
     const {
       children,
       isDisabled,
       onClick,
+      onMouseDown,
       onSubmit,
-      onTapDown,
+      onTouchStart,
       renderIconLeft,
       renderIconRight,
       ...props,
     } = this.props;
+    /* eslint-enable no-unused-vars */
     return (
       <ActionButtonStyled
         isDisabled={isDisabled}
         onClick={!isDisabled && onClick}
         onSubmit={!isDisabled && onSubmit}
-        onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
-        onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+        onMouseDown={!isDisabled && this.onMouseDown}
+        onTouchStart={!isDisabled && this.onTouchStart}
         {...props}
       >
         <ActionButtonWrapper>

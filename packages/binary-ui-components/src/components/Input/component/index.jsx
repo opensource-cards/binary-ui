@@ -40,9 +40,19 @@ export default class Input extends React.Component {
     this.state = {
       isActive: false,
     };
+    this.onBlur = this.onBlur.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.onFocus = this.onFocus.bind(this);
     this.onMoreClick = this.onMoreClick.bind(this);
-    this.onSetFocus = this.onSetFocus.bind(this);
+    this.onSetInputRef = this.onSetInputRef.bind(this);
+  }
+
+  onBlur(e) {
+    const { onBlur } = this.props;
+    this.setFocus(false);
+    if (onBlur) {
+      onBlur(e);
+    }
   }
 
   onChange(e) {
@@ -58,6 +68,14 @@ export default class Input extends React.Component {
     onTextChange(unmaskedValue);
   }
 
+  onFocus(e) {
+    const { onFocus } = this.props;
+    this.setFocus(true);
+    if (onFocus) {
+      onFocus(e);
+    }
+  }
+
   onMoreClick() {
     const { onMoreClick } = this.props;
     if (onMoreClick) {
@@ -65,7 +83,11 @@ export default class Input extends React.Component {
     }
   }
 
-  onSetFocus(isActive) {
+  onSetInputRef(input) {
+    this.input = input;
+  }
+
+  setFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -75,22 +97,22 @@ export default class Input extends React.Component {
   }
 
   /**
-   * To avoid a bug with Android devices,
-   * see https://github.com/text-mask/text-mask/issues/300
+   * To avoid a bug with Android devices, see https://github.com/text-mask/text-mask/issues/300
    */
   getValue(maskedValue) {
     setTimeout(() => {
       this.input.value = this.input.value;
     }, 10);
-
     return maskedValue;
   }
 
   getFormattedValue(type, mask, value) {
     switch (type) {
       case INPUT_FIELD_TYPES.NUMBER:
-        if (mask) {
-          console.warn('Mask is ignored for \'INPUT_FIELD_TYPES.NUMBER\'.');
+        if (process.env.NODE_ENV === 'production') {
+          if (mask) {
+            console.warn('Mask is ignored for \'INPUT_FIELD_TYPES.NUMBER\'.');
+          }
         }
         return value;
       case INPUT_FIELD_TYPES.TEL:
@@ -104,6 +126,7 @@ export default class Input extends React.Component {
   }
 
   render() {
+    /* eslint-disable no-unused-vars  */
     const {
       borderColor,
       isValid,
@@ -115,6 +138,7 @@ export default class Input extends React.Component {
       onFocus,
       ...props,
     } = this.props;
+    /* eslint-enable no-unused-vars  */
     const { isActive } = this.state;
     return (
       <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, borderColor)} >
@@ -122,12 +146,12 @@ export default class Input extends React.Component {
           <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
         <InputStyled
+          innerRef={this.onSetInputRef}
           type={type}
-          innerRef={(ref) => { this.input = ref; }}
           value={this.getFormattedValue(type, mask, value)}
-          onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
+          onBlur={this.onBlur}
           onChange={this.onChange}
-          onFocus={(e) => { this.onSetFocus(true); if (onFocus) { onFocus(e); } }}
+          onFocus={this.onFocus}
           {...props}
         />
       </InputWrapper>

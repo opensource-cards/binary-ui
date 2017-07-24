@@ -15,7 +15,8 @@ const propTypes = {
   renderIconLeft: PropTypes.func,
   renderIconRight: PropTypes.func,
   onClick: PropTypes.func,
-  onTapDown: PropTypes.func,
+  onMouseDown: PropTypes.func,
+  onTouchStart: PropTypes.func,
 };
 
 const defaultProps = {
@@ -25,7 +26,8 @@ const defaultProps = {
   renderIconLeft: undefined,
   renderIconRight: undefined,
   onClick: undefined,
-  onTapDown: undefined,
+  onMouseDown: undefined,
+  onTouchStart: undefined,
 };
 
 export default class ActionLinkInline extends React.Component {
@@ -35,8 +37,10 @@ export default class ActionLinkInline extends React.Component {
     this.state = {
       isActive: false,
     };
-    this.onTapUp = () => { this.onSetActive(false); };
-    this.onSetActive = this.onSetActive.bind(this);
+    this.onTapUp = () => { this.setActive(false); };
+    this.onClick = this.onClick.bind(this);
+    this.onMouseDown = this.onMouseDown.bind(this);
+    this.onTouchStart = this.onTouchStart.bind(this);
   }
 
   componentDidMount() {
@@ -49,7 +53,35 @@ export default class ActionLinkInline extends React.Component {
     window.removeEventListener('touchend', this.onTapUp);
   }
 
-  onSetActive(isActive) {
+  onClick(e) {
+    const { isDisabled, onClick } = this.props;
+    if (isDisabled) {
+      e.preventDefault();
+    }
+    if (onClick) {
+      onClick(e);
+    }
+  }
+
+  onMouseDown(e) {
+    const { onMouseDown } = this.props;
+    if (isLeftButton(e)) {
+      this.setActive(true);
+    }
+    if (onMouseDown) {
+      onMouseDown(e);
+    }
+  }
+
+  onTouchStart(e) {
+    const { onTouchStart } = this.props;
+    this.setActive(true);
+    if (onTouchStart) {
+      onTouchStart(e);
+    }
+  }
+
+  setActive(isActive) {
     if (this.state.isActive === isActive) {
       return;
     }
@@ -75,23 +107,26 @@ export default class ActionLinkInline extends React.Component {
   }
 
   render() {
+    /* eslint-disable no-unused-vars */
     const {
       children,
       isDisabled,
-      onClick,
-      onTapDown,
       renderIconLeft,
       renderIconRight,
+      onClick,
+      onMouseDown,
+      onTouchStart,
       ...props,
     } = this.props;
+    /* eslint-enable no-unused-vars */
     const { isActive } = this.state;
     return (
       <ActionLinkInlineWrapper>
         <ActionListItemIconRender
           isDisabled={isDisabled}
-          onClick={isDisabled ? (e) => { e.preventDefault(); } : (e) => { if (onClick) { onClick(e); } }}
-          onMouseDown={!isDisabled && ((e) => { if (isLeftButton(e)) { this.onSetActive(true); } if (onTapDown) { onTapDown(e); } })}
-          onTouchStart={!isDisabled && ((e) => { this.onSetActive(true); if (onTapDown) { onTapDown(e); } })}
+          onClick={this.onClick}
+          onMouseDown={!isDisabled && this.onMouseDown}
+          onTouchStart={!isDisabled && this.onTouchStart}
           {...props}
         >
           {renderIconLeft ? this.renderIcon(renderIconLeft) : null}
