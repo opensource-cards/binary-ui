@@ -34,6 +34,36 @@ setAddon(infoAddon);
 const text = 'Important: for compatibility set container width in pixels!';
 const imageSelectedId = uuid.v1();
 
+class InputWithMask extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      value: '',
+    }
+  }
+
+  handleTextChange(value) {
+    this.setState({
+      value,
+    })
+  }
+
+  render() {
+    return (
+      <Input
+          placeholder="INPUT_FIELD_TYPES.TEL with mask"
+          type={INPUT_FIELD_TYPES.TEL}
+          value={this.state.value}
+          mask="(##) ###-##-##"
+          renderIcon={() => (<More />)}
+          onRef={action()}
+          onTextChange={value => this.handleTextChange(value)}
+          onMoreClick={action()}
+        />
+    )
+  }
+}
+
 class TooltipDemo1 extends React.Component {
   constructor(props) {
     super(props);
@@ -281,6 +311,7 @@ storiesOf('binary-ui-components', module)
           onTextChange={action()}
           onMoreClick={action()}
         />
+        <InputWithMask />
         <Input
           placeholder="INPUT_FIELD_TYPES.PASSWORD"
           type={INPUT_FIELD_TYPES.PASSWORD}

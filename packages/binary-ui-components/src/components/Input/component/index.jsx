@@ -74,6 +74,18 @@ export default class Input extends React.Component {
     }));
   }
 
+  /**
+   * To avoid a bug with Android devices,
+   * see https://github.com/text-mask/text-mask/issues/300
+   */
+  getValue(maskedValue) {
+    setTimeout(() => {
+      this.input.value = this.input.value;
+    }, 10);
+
+    return maskedValue;
+  }
+
   getFormattedValue(type, mask, value) {
     switch (type) {
       case INPUT_FIELD_TYPES.NUMBER:
@@ -82,7 +94,7 @@ export default class Input extends React.Component {
         }
         return value;
       case INPUT_FIELD_TYPES.TEL:
-        return addMask(value, mask);
+        return this.getValue(addMask(value, mask));
       default:
         if (mask) {
           return addMask(value, mask);
@@ -111,6 +123,7 @@ export default class Input extends React.Component {
         )}
         <InputStyled
           type={type}
+          innerRef={(ref) => { this.input = ref; }}
           value={this.getFormattedValue(type, mask, value)}
           onBlur={(e) => { this.onSetFocus(false); if (onBlur) { onBlur(e); } }}
           onChange={this.onChange}
