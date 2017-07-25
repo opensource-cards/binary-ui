@@ -24,15 +24,18 @@ describe('Utils', () => {
     const colorDisabled = '#D3D3D3';
 
     it('should return colorDisabled if disabled', () => expect(
-      getActionColorExt(color, colorActive, colorDisabled, false, true).to.equal(colorDisabled)
-    ));
+        getActionColorExt(color, colorActive, colorDisabled, false, true)
+      ).to.equal(colorDisabled)
+    );
 
     it('should return colorActive if active', () => expect(
-      getActionColorExt(color, colorActive, colorDisabled, true, false).to.equal(colorActive)
-    ));
+        getActionColorExt(color, colorActive, colorDisabled, true, false)
+      ).to.equal(colorActive)
+    );
 
-    it('should return color if no isActive or isDisabled specified', () => {
-      getActionColorExt(color, colorActive, colorDisabled).to.equal(color);
-    });
+    it('should return color if no isActive or isDisabled specified', () => expect(
+        getActionColorExt(color, colorActive, colorDisabled)
+      ).to.equal(color)
+    );
   });
 });
