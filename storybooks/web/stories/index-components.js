@@ -49,11 +49,12 @@ class InputWithMask extends React.Component {
   }
 
   render() {
+    const { value } = this.state;
     return (
       <Input
           placeholder="INPUT_FIELD_TYPES.TEL with mask"
           type={INPUT_FIELD_TYPES.TEL}
-          value={this.state.value}
+          value={value}
           mask="(##) ###-##-##"
           renderIcon={() => (<More />)}
           onRef={action()}
