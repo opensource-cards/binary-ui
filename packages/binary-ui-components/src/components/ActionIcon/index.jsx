@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ActionableIcon from '../ActionableIcon';
-import { isLeftButton } from '../../utils/events';
+import { isLeftMouseButton } from '../../utils/events';
 
 const propTypes = {
   color: PropTypes.string,
@@ -44,7 +44,7 @@ export default class ActionIcon extends React.Component {
 
   onMouseDown(e) {
     const { onMouseDown } = this.props;
-    if (isLeftButton(e)) {
+    if (isLeftMouseButton(e)) {
       this.setActive(true);
     }
     if (onMouseDown) {
