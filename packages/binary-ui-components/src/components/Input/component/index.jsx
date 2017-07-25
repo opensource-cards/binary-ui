@@ -101,7 +101,9 @@ export default class Input extends React.Component {
    */
   getValue(maskedValue) {
     setTimeout(() => {
-      this.input.value = this.input.value;
+      if (this.input !== undefined) {
+        this.input.value = this.input.value;
+      }
     }, 10);
     return maskedValue;
   }
