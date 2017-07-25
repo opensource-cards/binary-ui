@@ -5,7 +5,7 @@ import ActionableIcon from '../../ActionableIcon';
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionButtonStyled from '../components-styled/ActionButtonStyled';
 import ActionButtonWrapper from '../components-styled/ActionButtonWrapper';
-import { isLeftButton } from '../../../utils/events';
+import { isLeftMouseButton } from '../../../utils/events';
 
 const propTypes = {
   children: PropTypes.any,
@@ -53,7 +53,7 @@ export default class ActionButton extends React.Component {
 
   onMouseDown(e) {
     const { onMouseDown } = this.props;
-    if (isLeftButton(e)) {
+    if (isLeftMouseButton(e)) {
       this.setActive(true);
     }
     if (onMouseDown) {

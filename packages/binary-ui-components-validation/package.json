@@ -28,6 +28,7 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
+    "chai": "^4.1.0",
     "pure-validation": "^0.0.3"
   },
   "peerDependencies": {

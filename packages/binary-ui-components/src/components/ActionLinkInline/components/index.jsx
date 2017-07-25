@@ -6,7 +6,7 @@ import ActionLinkInlineWrapper from '../components-styled/ActionLinkInlineWrappe
 import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionableIcon from '../../ActionableIcon';
 import ActionableText from '../../ActionableText';
-import { isLeftButton } from '../../../utils/events';
+import { isLeftMouseButton } from '../../../utils/events';
 
 const propTypes = {
   children: PropTypes.any,
@@ -65,7 +65,7 @@ export default class ActionLinkInline extends React.Component {
 
   onMouseDown(e) {
     const { onMouseDown } = this.props;
-    if (isLeftButton(e)) {
+    if (isLeftMouseButton(e)) {
       this.setActive(true);
     }
     if (onMouseDown) {
