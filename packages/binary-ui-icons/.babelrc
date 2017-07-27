@@ -1,4 +1,14 @@
 {
   "presets": ["react", "es2015"],
-  "plugins": ["transform-object-rest-spread"]
+  "plugins": ["transform-object-rest-spread"],
+  "env": {
+    "release": {
+      "plugins": [
+        "transform-runtime",
+        ["transform-react-remove-prop-types", {
+          "mode": "wrap"
+        }]
+      ]
+    }
+  }
 }
