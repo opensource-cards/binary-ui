@@ -1,7 +1,6 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
+import PropTypes from 'prop-types';
 
 export default class Welcome extends React.Component {
   styles = {
@@ -23,7 +22,7 @@ export default class Welcome extends React.Component {
 
   showApp(event) {
     event.preventDefault();
-    if (this.props.showApp) this.props.showApp();
+    this.props.showApp();
   }
 
   render() {
@@ -45,10 +44,9 @@ export default class Welcome extends React.Component {
   }
 }
 
-Welcome.defaultProps = {
-  showApp: null,
-};
-
 Welcome.propTypes = {
   showApp: PropTypes.func,
+};
+Welcome.defaultProps = {
+  showApp: () => {},
 };

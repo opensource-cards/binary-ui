@@ -1,14 +1,19 @@
 {
-  "presets": ["react-native"],
-  "plugins": [
-    ["module-resolver", {
-      "root": ["./"],
-      "alias": {
-        "binary-ui-components": "./lib/binary-ui-components/src",
-        "binary-ui-components/mobile": "./lib/binary-ui-components/src/components",
-        "binary-ui-icons/binary": "./lib/binary-ui-icons/src/components-icons",
-        "binary-ui-styles": "./lib/binary-ui-styles/src"
-      }
-    }]
-  ]
+  "presets": ["babel-preset-expo"],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-react-jsx-source",
+        ["module-resolver", {
+          "root": ["./"],
+          "alias": {
+            "binary-ui-components": "./lib/binary-ui-components/src",
+            "binary-ui-components/mobile": "./lib/binary-ui-components/src/components",
+            "binary-ui-icons/binary": "./lib/binary-ui-icons/src/components-icons",
+            "binary-ui-styles": "./lib/binary-ui-styles/src"
+          }
+        }]
+      ]
+    }
+  }
 }

@@ -1,4 +1,5 @@
 {
-  "name": "native",
-  "displayName": "native"
+  "expo": {
+    "sdkVersion": "19.0.0"
+  }
 }
