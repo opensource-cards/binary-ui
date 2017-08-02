@@ -12,12 +12,12 @@ storiesOf('binary-ui-components', module)
     <Group
       renderLeft={() => (
         <Text>
-          Left
+          Left text
         </Text>
       )}
       renderRight={() => (
         <Text>
-          Right
+          Right text
         </Text>
       )}
     />
