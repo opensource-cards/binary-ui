@@ -3,28 +3,29 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "storybook-web-watch": "babel ../../packages --ignore examples,lib,node_modules,test --out-dir=./lib --watch",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "storybook": "storybook start -p 7007"
   },
   "dependencies": {
-    "mask-parser": "^0.0.1-rc.3",
-    "react": "15.4.1",
-    "react-art": "^0.15.1",
-    "react-native": "0.38.1",
-    "react-native-image-picker": "^0.24.1",
-    "styled-components": "^2.0.0",
-    "uuid": "^3.0.1"
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.47.0",
+    "styled-components": "^2.1.1"
+  },
+  "devDependencies": {
+    "@storybook/react-native": "^3.2.3",
+    "babel": "^6.3.26",
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-jest": "20.0.3",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-preset-react-native": "2.1.0",
+    "jest": "20.0.4",
+    "react-dom": "16.0.0-alpha.12",
+    "react-test-renderer": "16.0.0-alpha.12"
   },
   "jest": {
     "preset": "react-native"
-  },
-  "devDependencies": {
-    "babel-jest": "17.0.2",
-    "babel-plugin-module-resolver": "^2.4.0",
-    "babel-preset-react-native": "1.9.0",
-    "jest": "17.0.3",
-    "react-test-renderer": "15.4.1",
-    "@storybook/react-native": "3.1.9"
   }
 }
