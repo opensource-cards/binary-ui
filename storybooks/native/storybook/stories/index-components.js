@@ -28,17 +28,18 @@ storiesOf('binary-ui-components', module)
     />
   ))
   .add('Input', () => (
-    <TextInput />
-))
+    <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
+  ))
   .add('Select', () => (
     <Picker
       selectedValue="java"
-      onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
+      onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}
+    >
       <Picker.Item label="Java" value="java" />
       <Picker.Item label="JavaScript" value="js" />
     </Picker>
-))
-.add('Text', () => (
+  ))
+  .add('Text', () => (
     <View>
       <Text
         isEdit

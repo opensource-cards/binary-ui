@@ -1,7 +1,6 @@
 # Compiled files
 lib
 storybooks/native/lib
-storybooks/native/ios
 
 # Logs
 *.log
