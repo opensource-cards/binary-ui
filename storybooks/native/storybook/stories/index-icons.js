@@ -96,8 +96,96 @@ const SIZE = 50;
 
 storiesOf('binary-ui-icons', module)
   .add('general', () =>
-    <View>
-      <Add color={COLOR} size={SIZE} onPress={action('clicked')} />
+    <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
       <AddCard color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ArrowDown color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ArrowLeft color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ArrowRight color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ArrowUp color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Call color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <CallAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <CameraAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Cancel color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Card color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <CardAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Check color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <CheckAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Copy color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Delete color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <DeleteCharacter color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <DeleteAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Deleted color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <DeletedAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Done color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Favorites color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <FavoritesAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Info color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <InfoAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Keypad color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <KeypadAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Location color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <LocationAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Locked color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <LockedAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Logout color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Minus color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <MinusAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <More color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <MoreAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <New color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <NewAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Open color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Remove color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Save color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Scan color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ScanAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Search color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Settings color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <SettingsAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Share color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ShareAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Stack color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <StackFull color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <StackNew color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <StackUnavailable color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <StackUnavailableAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Store color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <StoreAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Text color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <TextAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Time color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Translation color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Uncheck color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Update color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <User color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <UserAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+    </View>
+  )
+.add('logotypes', () =>
+    <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
+      <Add color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Apple color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <AppleAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Cards color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <CardsAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Designer color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Facebook color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Facetime color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <FacetimeAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Google color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Github color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Instagram color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <InstagramAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Linkedin color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <LinkedinAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Medium color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Microsoft color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Redhat color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Telegram color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Twitter color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Ubuntu color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Whatsapp color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <WhatsappAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Youtube color={COLOR} size={SIZE} onPress={action('clicked')} />
     </View>
   );

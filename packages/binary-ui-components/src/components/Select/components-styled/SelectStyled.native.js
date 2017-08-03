@@ -4,7 +4,7 @@ import {
   FIELD_VALUE_FONT_CSS,
 } from '../../../utils/styles';
 
-export default styled.View`
+export default styled.Picker`
   ${CARDS_INPUT_RESET_CSS}
   ${FIELD_VALUE_FONT_CSS}
   /*
