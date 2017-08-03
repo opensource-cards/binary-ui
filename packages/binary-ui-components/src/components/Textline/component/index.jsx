@@ -22,9 +22,9 @@ const defaultProps = {
   onMoreClick: undefined,
 };
 
-const Text = ({ children, isBold, isDisabled, isEdit, renderIcon, onMoreClick }) => (
+const Textline = ({ children, isBold, isDisabled, isEdit, renderIcon, onMoreClick }) => (
   <TextWrapper isEdit={isEdit} >
-    <TextContent isBold={isBold} isDisabled={isDisabled} >
+    <TextContent numberOfLines={1} isBold={isBold} isDisabled={isDisabled} >
       {children}
     </TextContent>
     {renderIcon && (
@@ -33,7 +33,7 @@ const Text = ({ children, isBold, isDisabled, isEdit, renderIcon, onMoreClick })
   </TextWrapper>
 );
 
-Text.propTypes = propTypes;
-Text.defaultProps = defaultProps;
+Textline.propTypes = propTypes;
+Textline.defaultProps = defaultProps;
 
-export default Text;
+export default Textline;

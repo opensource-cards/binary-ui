@@ -1,5 +1,5 @@
 import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
-import { FONT_FAMILY_MAIN } from 'binary-ui-styles/web';
+import { FONT_FAMILY_MAIN } from 'binary-ui-styles';
 import styled from 'styled-components';
 import NATIVE_AND_WEB_STYLE from './style.native-and-web';
 

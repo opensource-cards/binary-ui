@@ -1,34 +1,33 @@
 import React from 'react';
-import { TextInput, Picker, View } from 'react-native';
+import { Picker, View } from 'react-native';
 
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
-import More from 'binary-ui-icons/binary/More';
+import IconMore from 'binary-ui-icons/binary/More';
 
 import Group from 'binary-ui-components/mobile/Group';
-// import Input from 'binary-ui-components/mobile/Input';
 import Select from 'binary-ui-components/mobile/Select';
-import Text from 'binary-ui-components/mobile/Text';
+import Textline from 'binary-ui-components/mobile/Textline';
 
 storiesOf('binary-ui-components', module)
   .add('Group', () => (
     <Group
       renderLeft={() => (
-        <Text>
+        <Textline isBold>
           Left text
-        </Text>
+        </Textline>
       )}
       renderRight={() => (
-        <Text>
+        <Textline>
           Right text
-        </Text>
+        </Textline>
       )}
     />
   ))
   .add('Input', () => (
-    <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1}} />
+    <TextInput />
   ))
   .add('Select', () => (
     <Picker
@@ -39,28 +38,28 @@ storiesOf('binary-ui-components', module)
       <Picker.Item label="JavaScript" value="js" />
     </Picker>
   ))
-  .add('Text', () => (
+  .add('Textline', () => (
     <View>
-      <Text
+      <Textline
         isEdit
-        renderIcon={() => (<More />)}
+        renderIcon={() => (<IconMore />)}
         onMoreClick={action()}
       >
-        Look at text
-      </Text>
-      <Text
+        Editable Textline
+      </Textline>
+      <Textline
         isDisabled
         isEdit
-        renderIcon={() => (<More />)}
+        renderIcon={() => (<IconMore />)}
         onMoreClick={action()}
       >
-        Look at text
-      </Text>
-      <Text isBold >
-        Look at bold text
-      </Text>
-      <Text isBold isDisabled >
-        Look at bold text
-      </Text>
+        Disabled editable Textline
+      </Textline>
+      <Textline isBold >
+        Bold Textline
+      </Textline>
+      <Textline isBold isDisabled >
+        Bold disabled Textline
+      </Textline>
     </View>
   ));

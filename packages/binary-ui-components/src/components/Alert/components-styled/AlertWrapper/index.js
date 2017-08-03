@@ -5,7 +5,7 @@ import {
   BINARY_COLOR_YELLOW_50,
 } from 'binary-ui-styles';
 import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
-import { NO_SELECT_CSS } from 'binary-ui-styles/web';
+import { NO_SELECT_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 

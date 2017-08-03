@@ -1,4 +1,4 @@
-import { FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles/web';
+import { FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles';
 import {
   CARDS_ICON_ACTIVE_CSS,
   CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_UNIVERSAL,

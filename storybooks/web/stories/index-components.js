@@ -23,7 +23,7 @@ import Switch from 'binary-ui-components/mobile/Switch';
 import Textarea from 'binary-ui-components/mobile/Textarea';
 import Tooltip from 'binary-ui-components/mobile/Tooltip';
 import Input, { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
-import Text from 'binary-ui-components/mobile/Text';
+import Textline from 'binary-ui-components/mobile/Textline';
 import React from 'react';
 import styled from 'styled-components';
 import uuid from 'uuid';
@@ -370,7 +370,7 @@ storiesOf('binary-ui-components', module)
           />)}
       />
       <Group
-        renderLeft={() => (<Text isBold >Label</Text>)}
+        renderLeft={() => (<Textline isBold >Label</Textline>)}
         renderRight={() => (
           <TextareaDemo1 />)}
       />
@@ -424,27 +424,27 @@ storiesOf('binary-ui-components', module)
   ))
   .addWithInfo('Text', () => (
     <div>
-      <Text
+      <Textline
         isEdit
         renderIcon={() => (<More />)}
         onMoreClick={action()}
       >
         Look at "<a href="#">this</a>" text
-      </Text>
-      <Text
+      </Textline>
+      <Textline
         isDisabled
         isEdit
         renderIcon={() => (<More />)}
         onMoreClick={action()}
       >
         Look at "<a href="#">this</a>" text
-      </Text>
-      <Text isBold >
+      </Textline>
+      <Textline isBold >
         Look at bold text
-      </Text>
-      <Text isBold isDisabled >
+      </Textline>
+      <Textline isBold isDisabled >
         Look at bold text
-      </Text>
+      </Textline>
     </div>
   ))
   .addWithInfo('Textarea', () => (
