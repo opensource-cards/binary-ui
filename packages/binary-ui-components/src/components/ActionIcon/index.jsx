@@ -1,104 +1,39 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ActionableIcon from '../ActionableIcon';
-import { isLeftMouseButton } from '../../utils/events';
+import ActionWrapper from '../ActionWrapper';
 
 const propTypes = {
   color: PropTypes.string,
   isDisabled: PropTypes.bool,
   size: PropTypes.number,
   renderIcon: PropTypes.func.isRequired,
-  onMouseDown: PropTypes.func,
-  onTouchStart: PropTypes.func,
 };
 
 const defaultProps = {
   color: undefined,
   isDisabled: false,
   size: undefined,
-  onMouseDown: undefined,
-  onTouchStart: undefined,
 };
 
-export default class ActionIcon extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      isActive: false,
-    };
-    this.onTapUp = () => { this.setActive(false); };
-    this.onMouseDown = this.onMouseDown.bind(this);
-    this.onTouchStart = this.onTouchStart.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('mouseup', this.onTapUp);
-    window.addEventListener('touchend', this.onTapUp);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('mouseup', this.onTapUp);
-    window.removeEventListener('touchend', this.onTapUp);
-  }
-
-  onMouseDown(e) {
-    const { onMouseDown } = this.props;
-    if (isLeftMouseButton(e)) {
-      this.setActive(true);
-    }
-    if (onMouseDown) {
-      onMouseDown(e);
-    }
-  }
-
-  onTouchStart(e) {
-    const { onTouchStart } = this.props;
-    this.setActive(true);
-    if (onTouchStart) {
-      onTouchStart(e);
-    }
-  }
-
-  setActive(isActive) {
-    if (this.state.isActive === isActive) {
-      return;
-    }
-    this.setState(() => ({
-      isActive,
-    }));
-  }
-
-  render() {
-    /* eslint-disable no-unused-vars */
-    const {
-      color,
-      isDisabled,
-      size,
-      renderIcon,
-      onMouseDown,
-      onTouchStart,
-      ...props,
-    } = this.props;
-    /* eslint-enable no-unused-vars */
-    const { isActive } = this.state;
-    return (
-      <div
-        onMouseDown={!isDisabled && this.onMouseDown}
-        onTouchStart={!isDisabled && this.onTouchStart}
-        {...props}
-      >
-        <ActionableIcon
-          color={color}
-          isActive={isActive}
-          isDisabled={isDisabled}
-          size={size}
-          renderIcon={renderIcon}
-        />
-      </div>
-    );
-  }
-}
+const ActionIcon = ({
+  color,
+  isDisabled,
+  size,
+  renderIcon,
+  ...props,
+}) => (
+  <ActionWrapper isDisabled={isDisabled} {...props} >
+    <ActionableIcon
+      color={color}
+      isDisabled={isDisabled}
+      size={size}
+      renderIcon={renderIcon}
+    />
+  </ActionWrapper>
+);
 
 ActionIcon.propTypes = propTypes;
 ActionIcon.defaultProps = defaultProps;
+
+export default ActionIcon;
