@@ -8,6 +8,6 @@ import {
 export default styled.Text`
   padding-left: 10;
   font-family: ${FONT_FAMILY_MAIN};
-  width: 90%;
+  flex: 9;
   ${props => (props.isBold ? FIELD_NAME_FONT_CSS : FIELD_VALUE_FONT_CSS)}
 `;

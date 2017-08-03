@@ -36,13 +36,13 @@ export default class ActionListItemIcon extends React.Component {
     return (
       <View
         {...props}
+        style={ICON_STYLE}
       >
         <ActionableIcon
           color={BINARY_COLOR_GRAY_40}
           isActive={isActive}
           isDisabled={isDisabled}
           size={18}
-          style={ICON_STYLE}
           renderIcon={renderIcon}
         />
       </View>

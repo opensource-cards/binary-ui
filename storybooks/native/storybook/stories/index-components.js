@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import IconMore from 'binary-ui-icons/binary/More';
-
+import Input from 'binary-ui-components/mobile/Input';
 import Group from 'binary-ui-components/mobile/Group';
 import Select from 'binary-ui-components/mobile/Select';
 import Textline from 'binary-ui-components/mobile/Textline';
@@ -27,7 +27,17 @@ storiesOf('binary-ui-components', module)
     />
   ))
   .add('Input', () => (
-    <TextInput />
+    <View>
+      <Input
+        placeholder=""
+        value="Input with more button"
+        renderIcon={() => (<IconMore />)}
+      />
+      <Input
+        placeholder="Input without button"
+        value=""
+      />
+    </View>
   ))
   .add('Select', () => (
     <Picker

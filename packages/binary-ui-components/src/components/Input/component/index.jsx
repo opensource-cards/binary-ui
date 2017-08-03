@@ -1,11 +1,11 @@
 import { addMask, removeMask } from 'mask-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
+import InputIcon from '../components-styled/InputIcon';
 import InputStyled from '../components-styled/InputStyled';
 import InputWrapper from '../components-styled/InputWrapper';
 import INPUT_FIELD_TYPES from '../constants/text-field-component-types';
 import { getValidatedPhone } from '../utils/validation';
-import ActionListItemIcon from '../../ActionListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -133,7 +133,7 @@ export default class Input extends React.Component {
     return (
       <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, borderColor)} >
         {renderIcon && (
-          <ActionListItemIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
+          <InputIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
         )}
         <InputStyled
           innerRef={this.onSetInputRef}

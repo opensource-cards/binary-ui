@@ -1,11 +1,9 @@
 import styled from 'styled-components/native';
-// import {
-//   CARDS_INPUT_RESET_CSS,
-//   FIELD_VALUE_FONT_CSS,
-//   LIST_ITEM_CONTENTS_BASE_CSS,
-// } from '../../../utils/styles';
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import { FONT_FAMILY_MAIN, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 
 export default styled.TextInput`
   height: ${LIST_ITEM_HEIGHT};
+  font-family: ${FONT_FAMILY_MAIN};
+  flex: 9;
+  padding-left: 10;
 `;

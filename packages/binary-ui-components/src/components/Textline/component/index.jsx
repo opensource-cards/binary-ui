@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import TextContent from '../components-styled/TextContent';
 import TextWrapper from '../components-styled/TextWrapper';
-import ActionListItemIcon from '../../ActionListItemIcon';
+import TextlineIcon from '../components-styled/TextlineIcon';
 
 const propTypes = {
   children: PropTypes.any,
@@ -28,7 +28,7 @@ const Textline = ({ children, isBold, isDisabled, isEdit, renderIcon, onMoreClic
       {children}
     </TextContent>
     {renderIcon && (
-      <ActionListItemIcon isDisabled={isDisabled} renderIcon={renderIcon} onClick={onMoreClick} />
+      <TextlineIcon isDisabled={isDisabled} renderIcon={renderIcon} onClick={onMoreClick} />
     )}
   </TextWrapper>
 );
