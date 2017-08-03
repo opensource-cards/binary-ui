@@ -49,11 +49,12 @@ a, div, i, span {
 }
 `;
 
-export const WEBSITE_WRAPPER_STYLE = Object.assign({}, MAXIMIZED_STYLE, {
+export const WEBSITE_WRAPPER_STYLE = {
+  ...MAXIMIZED_STYLE,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-});
+};
 
 export const WEBSITE_WRAPPER_CSS = `
   ${MAXIMIZED_CSS}

@@ -1,5 +1,4 @@
-import { FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles';
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import { FONT_FAMILY_MAIN, LIST_ITEM_HEIGHT, NO_SELECT_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`

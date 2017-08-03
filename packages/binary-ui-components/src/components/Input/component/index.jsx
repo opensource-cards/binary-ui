@@ -43,8 +43,6 @@ export default class Input extends React.Component {
     this.onBlur = this.onBlur.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onFocus = this.onFocus.bind(this);
-    this.onMoreClick = this.onMoreClick.bind(this);
-    this.onSetInputRef = this.onSetInputRef.bind(this);
   }
 
   onBlur(e) {
@@ -74,17 +72,6 @@ export default class Input extends React.Component {
     if (onFocus) {
       onFocus(e);
     }
-  }
-
-  onMoreClick() {
-    const { onMoreClick } = this.props;
-    if (onMoreClick) {
-      onMoreClick();
-    }
-  }
-
-  onSetInputRef(input) {
-    this.input = input;
   }
 
   setFocus(isActive) {
@@ -126,6 +113,7 @@ export default class Input extends React.Component {
       value,
       onBlur,
       onFocus,
+      onMoreClick,
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars  */
@@ -133,10 +121,9 @@ export default class Input extends React.Component {
     return (
       <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, borderColor)} >
         {renderIcon && (
-          <InputIcon renderIcon={renderIcon} onClick={this.onMoreClick} />
+          <InputIcon renderIcon={renderIcon} onClick={onMoreClick} />
         )}
         <InputStyled
-          innerRef={this.onSetInputRef}
           type={type}
           value={this.getFormattedValue(type, mask, value)}
           onBlur={this.onBlur}

@@ -3,9 +3,9 @@ import {
   BINARY_COLOR_RED_40,
   BINARY_COLOR_GRAY_40,
   BINARY_COLOR_YELLOW_50,
+  NO_SELECT_CSS,
 } from 'binary-ui-styles';
 import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
-import { NO_SELECT_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 

@@ -1,11 +1,16 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
-import { BINARY_COLOR_BLUE_60, BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
+import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconStyled from '../../IconStyled';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
-import { getActionColorExt, getHighlightEditStyle } from '../../../utils/styles-api';
+import {
+  getActionColorExt,
+  getHighlightEditStyle,
+} from '../../../utils/styles-api';
+
+const ICON_STYLE = { paddingRight: 10 };
 
 const propTypes = {
   color: PropTypes.string,
@@ -34,13 +39,13 @@ const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick 
     <IconStyled
       color={getActionColorExt(
         color,
-        BINARY_COLOR_BLUE_60,
         BINARY_COLOR_GRAY_40,
-        false,
         isDisabled
       )}
       size={18}
-      style={{ paddingRight: 10 }}
+      style={{
+        ...ICON_STYLE,
+      }}
       renderIcon={renderIcon}
     />
     <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} >

@@ -22,7 +22,7 @@ const IconStyled = ({ color, size, style, renderIcon }) => {
       ...element.props,
       color: color || element.props.color,
       size: size || element.props.size,
-      style: Object.assign({}, NO_SELECT_STYLE, style),
+      style: { ...NO_SELECT_STYLE, ...style },
     })
   );
 };

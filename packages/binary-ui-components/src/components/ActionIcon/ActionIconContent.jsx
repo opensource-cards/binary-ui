@@ -1,39 +1,41 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionIconContent from './ActionIconContent';
-import ActionWrapper from '../ActionWrapper';
+import ActionableIcon from '../ActionableIcon';
 
 const propTypes = {
   color: PropTypes.string,
-  isDisabled: PropTypes.bool,
+  isActive: PropTypes.bool,
+  isDisabled: PropTypes.bool.isRequired,
   size: PropTypes.number,
   renderIcon: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   color: undefined,
-  isDisabled: false,
+  isActive: false,
   size: undefined,
 };
 
-const ActionIcon = ({
+const ActionIconContent = ({
   color,
+  isActive,
   isDisabled,
   size,
   renderIcon,
   ...props,
 }) => (
-  <ActionWrapper isDisabled={isDisabled} {...props} >
-    <ActionIconContent
+  <div {...props} >
+    <ActionableIcon
       color={color}
+      isActive={isActive}
       isDisabled={isDisabled}
       size={size}
       renderIcon={renderIcon}
     />
-  </ActionWrapper>
+  </div>
 );
 
-ActionIcon.propTypes = propTypes;
-ActionIcon.defaultProps = defaultProps;
+ActionIconContent.propTypes = propTypes;
+ActionIconContent.defaultProps = defaultProps;
 
-export default ActionIcon;
+export default ActionIconContent;

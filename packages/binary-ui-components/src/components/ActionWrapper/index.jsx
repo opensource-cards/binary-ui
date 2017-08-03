@@ -7,6 +7,7 @@ const propTypes = {
   isDisabled: PropTypes.bool,
   onClick: PropTypes.func,
   onMouseDown: PropTypes.func,
+  onSubmit: PropTypes.func,
   onTouchStart: PropTypes.func,
 };
 
@@ -14,6 +15,7 @@ const defaultProps = {
   isDisabled: false,
   onClick: undefined,
   onMouseDown: undefined,
+  onSubmit: undefined,
   onTouchStart: undefined,
 };
 
@@ -27,6 +29,7 @@ export default class ActionWrapper extends React.Component {
     this.onTapUp = () => { this.setActive(false); };
     this.onClick = this.onClick.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
     this.onTouchStart = this.onTouchStart.bind(this);
   }
 
@@ -43,6 +46,7 @@ export default class ActionWrapper extends React.Component {
   onClick(e) {
     const { isDisabled, onClick } = this.props;
     if (isDisabled) {
+      e.preventDefault();
       return;
     }
     if (onClick) {
@@ -60,6 +64,16 @@ export default class ActionWrapper extends React.Component {
     }
     if (onMouseDown) {
       onMouseDown(e);
+    }
+  }
+
+  onSubmit(e) {
+    const { isDisabled, onSubmit } = this.props;
+    if (isDisabled) {
+      return;
+    }
+    if (onSubmit) {
+      onSubmit(e);
     }
   }
 
@@ -95,19 +109,15 @@ export default class ActionWrapper extends React.Component {
     } = this.props;
     /* eslint-enable no-unused-vars */
     const { isActive } = this.state;
-    return (
-      <div
-        onClick={this.onClick}
-        onMouseDown={this.onMouseDown}
-        onTouchStart={this.onTouchStart}
-        {...props}
-      >
-        {React.cloneElement(children, {
-          ...children.props,
-          isActive,
-        })}
-      </div>
-    );
+    return React.cloneElement(children, {
+      ...children.props,
+      isActive,
+      onClick: this.onClick,
+      onMouseDown: this.onMouseDown,
+      onSubmit: this.onSubmit,
+      onTouchStart: this.onTouchStart,
+      ...props,
+    });
   }
 }
 

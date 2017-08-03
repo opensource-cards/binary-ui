@@ -2,15 +2,10 @@ import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconStyled from '../IconStyled';
-import {
-  OPACITY_TRANSITION,
-  getActionColorExt,
-  getActionOpacityExt,
-} from '../../utils/styles-api';
+import { getActionColorExt } from '../../utils/styles-api';
 
 const propTypes = {
   color: PropTypes.string,
-  isActive: PropTypes.bool,
   isDisabled: PropTypes.bool.isRequired,
   size: PropTypes.number,
   style: PropTypes.object,
@@ -19,7 +14,6 @@ const propTypes = {
 
 const defaultProps = {
   color: '#000000',
-  isActive: false,
   size: undefined,
   style: {},
 };
@@ -27,7 +21,6 @@ const defaultProps = {
 const ActionableIcon = ({
   color,
   size,
-  isActive,
   isDisabled,
   style,
   renderIcon,
@@ -40,11 +33,7 @@ const ActionableIcon = ({
       isDisabled
     )}
     size={size}
-    style={{
-      ...style,
-      opacity: getActionOpacityExt(isActive, isDisabled),
-      transition: OPACITY_TRANSITION,
-    }}
+    style={style}
     renderIcon={renderIcon}
     {...props}
   />

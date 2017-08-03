@@ -1,7 +1,6 @@
-import { BINARY_COLOR_SAND_90, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
-import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
-import { NO_SELECT_CSS } from 'binary-ui-styles';
+import { BINARY_COLOR_SAND_90, LIST_ITEM_HEIGHT, NO_SELECT_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
+import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
 
 export default styled.div`
   ${CURSOR_POINTER_CSS}

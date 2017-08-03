@@ -24,7 +24,7 @@ const defaultProps = {
 
 const Textline = ({ children, isBold, isDisabled, isEdit, renderIcon, onMoreClick }) => (
   <TextWrapper isEdit={isEdit} >
-    <TextContent isBold={isBold} isDisabled={isDisabled} >
+    <TextContent isBold={isBold} isDisabled={isDisabled} numberOfLines={1} >
       {children}
     </TextContent>
     {renderIcon && (

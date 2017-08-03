@@ -1,5 +1,4 @@
-import { FONT_FAMILY_MAIN } from 'binary-ui-styles';
-import { BINARY_COLOR_GRAY_30 } from 'binary-ui-styles';
+import { BINARY_COLOR_GRAY_30, FONT_FAMILY_MAIN } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 const TOOLTIP_ARROW_HEIGHT = 5;

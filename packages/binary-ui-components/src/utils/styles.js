@@ -1,6 +1,5 @@
-import { FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_60, FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles';
 import {
-  CARDS_ICON_ACTIVE_CSS,
   CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_UNIVERSAL,
 } from './styles.universal';
 
@@ -41,12 +40,6 @@ export const LIST_ITEM_CONTENTS_BASE_CSS = `
 export const CARDS_ICON_CSS = `
   ${NO_SELECT_CSS}
   color: black;
-`;
-
-export const CARDS_ICON_ACTIVE_PSEUDO_CSS = `
-  &:active {
-    ${CARDS_ICON_ACTIVE_CSS}
-  }
 `;
 
 export const CARDS_BUTTON_CSS = `

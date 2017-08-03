@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import {
   CARDS_BUTTON_CSS,
-  CARDS_ICON_ACTIVE_PSEUDO_CSS,
 } from '../../../../utils/styles';
 import {
   CARDS_ICON_DISABLED_CSS,
 } from '../../../../utils/styles.universal';
+import { OPACITY_TRANSITION, getActionOpacityExt } from '../../../../utils/styles-api';
 
-export const RESET_BUTTON_CSS = `
+export default styled.button`
   background: none;
   border: 0;
   box-sizing: content-box;
@@ -16,13 +16,11 @@ export const RESET_BUTTON_CSS = `
   line-height: normal;
   outline: 0;
   padding: 0;
-`;
-
-export default styled.button`
-  ${RESET_BUTTON_CSS}
+  opacity: ${props => getActionOpacityExt(props.isActive, props.isDisabled)};
+  transition: ${OPACITY_TRANSITION};
   ${(props) => (
     (props.isDisabled)
       ? CARDS_ICON_DISABLED_CSS
-      : `${CARDS_BUTTON_CSS}${CARDS_ICON_ACTIVE_PSEUDO_CSS}`
+      : CARDS_BUTTON_CSS
   )}
 `;

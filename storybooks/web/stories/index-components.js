@@ -4,7 +4,7 @@ import Remove from 'binary-ui-icons/binary/Remove';
 import Add from 'binary-ui-icons/binary/Add';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
-import More from 'binary-ui-icons/binary/More';
+import IconMore from 'binary-ui-icons/binary/More';
 import ActionButton from 'binary-ui-components/mobile/ActionButton';
 import ActionDiv from 'binary-ui-components/mobile/ActionDiv';
 import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
@@ -41,13 +41,11 @@ class InputWithMask extends React.Component {
       value: '',
     }
   }
-
   handleTextChange(value) {
     this.setState({
       value,
     })
   }
-
   render() {
     const { value } = this.state;
     return (
@@ -56,8 +54,7 @@ class InputWithMask extends React.Component {
           type={INPUT_FIELD_TYPES.TEL}
           value={value}
           mask="(##) ###-##-##"
-          renderIcon={() => (<More />)}
-          onRef={action()}
+          renderIcon={() => (<IconMore />)}
           onTextChange={value => this.handleTextChange(value)}
           onMoreClick={action()}
         />
@@ -208,8 +205,7 @@ class TextareaDemo1 extends React.Component {
       <Textarea
         placeholder="Type here"
         value={value}
-        renderIcon={() => (<More />)}
-        onRef={action()}
+        renderIcon={() => (<IconMore />)}
         onTextChange={this.onChange}
         onMoreClick={action()}
       />
@@ -289,7 +285,6 @@ storiesOf('binary-ui-components', module)
           placeholder="INPUT_FIELD_TYPES.TEXT"
           type={INPUT_FIELD_TYPES.TEXT}
           value=""
-          onRef={action()}
           onTextChange={action()}
           onMoreClick={action()}
         />
@@ -298,8 +293,7 @@ storiesOf('binary-ui-components', module)
           placeholder="INPUT_FIELD_TYPES.NUMBER"
           type={INPUT_FIELD_TYPES.NUMBER}
           value=""
-          renderIcon={() => (<More />)}
-          onRef={action()}
+          renderIcon={() => (<IconMore />)}
           onTextChange={action()}
           onMoreClick={action()}
         />
@@ -307,8 +301,7 @@ storiesOf('binary-ui-components', module)
           placeholder="INPUT_FIELD_TYPES.TEL"
           type={INPUT_FIELD_TYPES.TEL}
           value=""
-          renderIcon={() => (<More />)}
-          onRef={action()}
+          renderIcon={() => (<IconMore />)}
           onTextChange={action()}
           onMoreClick={action()}
         />
@@ -317,8 +310,7 @@ storiesOf('binary-ui-components', module)
           placeholder="INPUT_FIELD_TYPES.PASSWORD"
           type={INPUT_FIELD_TYPES.PASSWORD}
           value=""
-          renderIcon={() => (<More />)}
-          onRef={action()}
+          renderIcon={() => (<IconMore />)}
           onTextChange={action()}
           onMoreClick={action()}
         />
@@ -327,10 +319,9 @@ storiesOf('binary-ui-components', module)
           placeholder="Invalid"
           type={INPUT_FIELD_TYPES.EMAIL}
           value=""
-          renderIcon={() => (<More />)}
+          renderIcon={() => (<IconMore />)}
           onTextChange={action()}
           onMoreClick={action()}          
-          onRef={action()}
         />
       </div>
   ))
@@ -352,8 +343,7 @@ storiesOf('binary-ui-components', module)
             placeholder="Input"
             type={INPUT_FIELD_TYPES.TEL}
             value=""
-            renderIcon={() => (<More />)}
-            onRef={action()}
+            renderIcon={() => (<IconMore />)}
             onTextChange={action()}
             onMoreClick={action()}
           />
@@ -367,12 +357,12 @@ storiesOf('binary-ui-components', module)
             renderIconLeft={null}
             renderIconRight={null}
             onPositionChange={action()}
-          />)}
+          />
+        )}
       />
       <Group
         renderLeft={() => (<Textline isBold >Label</Textline>)}
-        renderRight={() => (
-          <TextareaDemo1 />)}
+        renderRight={() => (<TextareaDemo1 />)}
       />
     </div>
   ))
@@ -426,7 +416,7 @@ storiesOf('binary-ui-components', module)
     <div>
       <Textline
         isEdit
-        renderIcon={() => (<More />)}
+        renderIcon={() => (<IconMore />)}
         onMoreClick={action()}
       >
         Look at "<a href="#">this</a>" text
@@ -434,7 +424,7 @@ storiesOf('binary-ui-components', module)
       <Textline
         isDisabled
         isEdit
-        renderIcon={() => (<More />)}
+        renderIcon={() => (<IconMore />)}
         onMoreClick={action()}
       >
         Look at "<a href="#">this</a>" text
@@ -454,8 +444,7 @@ storiesOf('binary-ui-components', module)
         isValid={false}
         placeholder="Type here"
         value=""
-        renderIcon={() => (<More />)}
-        onRef={action()}
+        renderIcon={() => (<IconMore />)}
         onTextChange={action()}
         onMoreClick={action()}
       />
