@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "lerna": "2.0.0"
+  },
+  "dependencies": {
+    "react-native": "^0.47.1"
   }
 }
