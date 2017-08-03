@@ -4,9 +4,7 @@
     "storybook-web-watch": "cd ./storybooks/web && npm run storybook-web-watch",
     "storybook-web": "cd ./storybooks/web && npm run storybook",
     "storybook-native-watch": "cd ./storybooks/native && npm run storybook-web-watch",
-    "storybook-native": "cd ./storybooks/native && rm -fr $TMPDIR/react-* && npm run storybook",
-    "storybook-emulator-ios": "cd ./storybooks/native && react-native run-ios",
-    "storybook-ios": "npm run storybook-native-watch & npm run storybook-native & npm run storybook-emulator-ios",
+    "storybook-ios": "cd ./storybooks/native && npm run ios",
     "release": "lerna exec npm run build && npm run storybook-web-build"
   },
   "devDependencies": {

@@ -1,31 +1,34 @@
 {
   "name": "native",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "storybook-web-watch": "babel ../../packages --ignore examples,lib,node_modules,test --out-dir=./lib --watch",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "storybook": "storybook start -p 7007"
-  },
-  "dependencies": {
-    "react": "16.0.0-alpha.12",
-    "react-native": "0.47.0",
-    "styled-components": "^2.1.1"
-  },
   "devDependencies": {
     "@storybook/react-native": "^3.2.3",
     "babel": "^6.3.26",
     "babel-cli": "^6.11.4",
-    "babel-core": "^6.13.2",
-    "babel-jest": "20.0.3",
-    "babel-plugin-module-resolver": "^2.7.1",
-    "babel-preset-react-native": "2.1.0",
-    "jest": "20.0.4",
+    "jest-expo": "~19.0.0",
     "react-dom": "16.0.0-alpha.12",
+    "react-native-scripts": "1.1.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "storybook-web-watch": "babel ../../packages --ignore examples,lib,node_modules,test --out-dir=./lib --watch",
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "storybook": "storybook start -p 7007"
+  },
   "jest": {
-    "preset": "react-native"
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "babel-plugin-module-resolver": "^2.7.1",
+    "expo": "^19.0.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.46.1",
+    "styled-components": "^2.1.1"
   }
 }

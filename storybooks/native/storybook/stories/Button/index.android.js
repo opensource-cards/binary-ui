@@ -1,22 +1,18 @@
-/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved, import/extensions */
-
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { TouchableNativeFeedback } from 'react-native';
 
-export default function Button(props) {
-  return (
-    <TouchableNativeFeedback onPress={props.onPress}>
-      {props.children}
-    </TouchableNativeFeedback>
-  );
-}
+const Button = props =>
+  <TouchableNativeFeedback onPress={props.onPress}>
+    {props.children}
+  </TouchableNativeFeedback>;
 
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  onPress: PropTypes.func,
+};
 Button.defaultProps = {
-  children: null,
   onPress: () => {},
 };
 
-Button.propTypes = {
-  children: PropTypes.node,
-  onPress: PropTypes.func,
-};
+export { Button as default };
