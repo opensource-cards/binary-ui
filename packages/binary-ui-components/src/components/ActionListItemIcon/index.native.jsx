@@ -1,10 +1,7 @@
-import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
-import ActionableIcon from '../ActionableIcon';
-
-const ICON_STYLE = { paddingRight: 10 };
+import { TouchableOpacity } from 'react-native';
+import ActionListItemIconContent from './ActionListItemIconContent';
 
 const propTypes = {
   isDisabled: PropTypes.bool,
@@ -16,16 +13,13 @@ const defaultProps = {
 };
 
 const ActionListItemIcon = ({ isDisabled, renderIcon, ...props }) => (
-  <TouchableOpacity>
-    <View {...props} style={ICON_STYLE} >
-      <ActionableIcon
-        color={BINARY_COLOR_GRAY_40}
-        isDisabled={isDisabled}
-        size={18}
-        renderIcon={renderIcon}
-      />
-    </View>
-  </TouchableOpacity>
+  !isDisabled ? (
+    <TouchableOpacity>
+      <ActionListItemIconContent isDisabled={isDisabled} renderIcon={renderIcon} {...props} />
+    </TouchableOpacity>
+  ) : (
+    <ActionListItemIconContent isDisabled={isDisabled} renderIcon={renderIcon} {...props} />
+  )
 );
 
 ActionListItemIcon.propTypes = propTypes;

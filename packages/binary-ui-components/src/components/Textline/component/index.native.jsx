@@ -1,3 +1,4 @@
+import isString from 'lodash/isString';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TextContent from '../components-styled/TextContent';
@@ -5,7 +6,11 @@ import TextWrapper from '../components-styled/TextWrapper';
 import TextlineIcon from '../components-styled/TextlineIcon';
 
 const propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.number,
+    PropTypes.string,
+  ]),
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
@@ -15,9 +20,9 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  isBold: false,
   isEdit: false,
   isDisabled: false,
-  isBold: false,
   renderIcon: undefined,
   onMoreClick: undefined,
 };
@@ -25,7 +30,7 @@ const defaultProps = {
 const Textline = ({ children, isBold, isDisabled, isEdit, renderIcon, onMoreClick }) => (
   <TextWrapper isEdit={isEdit} >
     <TextContent isBold={isBold} isDisabled={isDisabled} numberOfLines={1} >
-      {isBold ? children.toUpperCase() : children}
+      {isBold && isString(children) ? children.toUpperCase() : children}
     </TextContent>
     {renderIcon && (
       <TextlineIcon isDisabled={isDisabled} renderIcon={renderIcon} onClick={onMoreClick} />

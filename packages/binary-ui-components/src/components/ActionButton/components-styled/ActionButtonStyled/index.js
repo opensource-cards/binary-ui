@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 import {
   CARDS_BUTTON_CSS,
-} from '../../../../utils/styles';
-import {
   CARDS_ICON_DISABLED_CSS,
-} from '../../../../utils/styles.universal';
+} from '../../../../utils/styles';
 import { OPACITY_TRANSITION, getActionOpacityExt } from '../../../../utils/styles-api';
 
 export default styled.button`

@@ -1,15 +1,8 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
-import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { View } from 'react-native';
-import IconStyled from '../../IconStyled';
-import ButtonText from '../components-styled/ButtonText';
-import ButtonWrapper from '../components-styled/ButtonWrapper';
-import {
-  getActionColorExt,
-} from '../../../utils/styles-api';
-
+import { TouchableOpacity } from 'react-native';
+import ButtonContent from './ButtonContent.native';
 
 const propTypes = {
   color: PropTypes.string,
@@ -29,26 +22,14 @@ const defaultProps = {
   renderIcon: () => (<ArrowRight />),
 };
 
-const Button = ({ color, isBold, isEdit, isDisabled, label, renderIcon, onClick }) => (
-  <ButtonWrapper
-    isEdit={isEdit}
-    onClick={!isDisabled && onClick}
-  >
-    <View style={{ paddingRight: 10 }}>
-      <IconStyled
-        color={getActionColorExt(
-          color,
-          BINARY_COLOR_GRAY_40,
-          isDisabled
-        )}
-        size={18}
-        renderIcon={renderIcon}
-      />
-    </View>
-    <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} numberOfLines={1} >
-      {isBold ? label.toUpperCase() : label}
-    </ButtonText>
-  </ButtonWrapper>
+const Button = ({ isDisabled, ...props }) => (
+  !isDisabled ? (
+    <TouchableOpacity>
+      <ButtonContent isDisabled={isDisabled} {...props} />
+    </TouchableOpacity>
+  ) : (
+    <ButtonContent isDisabled={isDisabled} {...props} />
+  )
 );
 
 Button.propTypes = propTypes;

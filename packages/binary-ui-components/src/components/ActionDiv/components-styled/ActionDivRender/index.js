@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { CARDS_ICON_CSS } from '../../../../utils/styles';
-import { CARDS_ICON_DISABLED_CSS } from '../../../../utils/styles.universal';
+import { CARDS_ICON_CSS, CARDS_ICON_DISABLED_CSS } from '../../../../utils/styles';
 import { OPACITY_ACTIVE, OPACITY_TRANSITION } from '../../../../utils/styles-api';
 
 export default styled.div`

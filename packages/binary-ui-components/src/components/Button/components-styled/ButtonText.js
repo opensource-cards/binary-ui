@@ -1,11 +1,11 @@
 import { LIST_ITEM_HEIGHT, NO_SELECT_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
 import {
+  CARDS_ICON_DISABLED_CSS,
   FIELD_VALUE_FONT_CSS,
   FIELD_NAME_FONT_CSS,
   LIST_ITEM_CONTENTS_BASE_CSS,
 } from '../../../utils/styles';
-import { CARDS_ICON_DISABLED_CSS } from '../../../utils/styles.universal';
 
 export default styled.div`
   ${NO_SELECT_CSS}

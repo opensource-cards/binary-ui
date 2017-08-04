@@ -5,9 +5,6 @@ import { HIGHLIGHT_CSS } from '../../../utils/styles.universal';
 
 export default styled.div`
   ${CURSOR_POINTER_CSS}
-  ${props => (
-    props.isTapHighlight ? `&:active { ${HIGHLIGHT_CSS} }` : undefined
-  )}
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -15,4 +12,7 @@ export default styled.div`
   height: ${LIST_ITEM_HEIGHT}px;
   padding-left: 10px;
   width: 100%;
+  ${props => (
+    props.isTapHighlight ? `&:active { ${HIGHLIGHT_CSS} }` : undefined
+  )}
 `;

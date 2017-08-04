@@ -248,16 +248,6 @@ storiesOf('binary-ui-components', module)
       <Alert text="Alert text" type={ALERT_TYPES.CRITICAL} onClick={action()} />
     </div>
   ))
-  .addWithInfo('Button', () => (
-    <div>
-      <Button label="A standard button" isBold onClick={action()} />
-      <Button label="A non editable button" isEdit={false} onClick={action()} />
-      <Button label="A disabled button" isBold isDisabled onClick={action()} />
-      <Button label="A standard with button icon" isBold renderIcon={() => (<ArrowDown />)} onClick={action()} />
-      <Button color="#0087BD" label="A colorful with icon button" isBold renderIcon={() => (<ArrowDown />)} onClick={action()} />
-      <Button color="#0087BD" label="A colorful with icon disabled button" isBold isDisabled renderIcon={() => (<ArrowDown />)} onClick={action()} />
-    </div>
-  ))
   .addWithInfo('Checkbox', () => (
     <div>
       <Checkbox isChecked onChange={action()} onClick={action()} />
@@ -277,53 +267,6 @@ storiesOf('binary-ui-components', module)
       onImageClick={action()}
       onImageUpload={action()}
     />
-  ))
-  .addWithInfo('Input', () => (
-      <div>
-        <Input
-          isRequired
-          placeholder="INPUT_FIELD_TYPES.TEXT"
-          type={INPUT_FIELD_TYPES.TEXT}
-          value=""
-          onTextChange={action()}
-          onMoreClick={action()}
-        />
-        <Input
-          isRequired
-          placeholder="INPUT_FIELD_TYPES.NUMBER"
-          type={INPUT_FIELD_TYPES.NUMBER}
-          value=""
-          renderIcon={() => (<IconMore />)}
-          onTextChange={action()}
-          onMoreClick={action()}
-        />
-        <Input
-          placeholder="INPUT_FIELD_TYPES.TEL"
-          type={INPUT_FIELD_TYPES.TEL}
-          value=""
-          renderIcon={() => (<IconMore />)}
-          onTextChange={action()}
-          onMoreClick={action()}
-        />
-        <InputWithMask />
-        <Input
-          placeholder="INPUT_FIELD_TYPES.PASSWORD"
-          type={INPUT_FIELD_TYPES.PASSWORD}
-          value=""
-          renderIcon={() => (<IconMore />)}
-          onTextChange={action()}
-          onMoreClick={action()}
-        />
-        <Input
-          isValid={false}
-          placeholder="Invalid"
-          type={INPUT_FIELD_TYPES.EMAIL}
-          value=""
-          renderIcon={() => (<IconMore />)}
-          onTextChange={action()}
-          onMoreClick={action()}          
-        />
-      </div>
   ))
   .addWithInfo('Group', () => (
     <div>
@@ -410,31 +353,6 @@ storiesOf('binary-ui-components', module)
         isChecked={false}
         onChange={action()}
       />
-    </div>
-  ))
-  .addWithInfo('Text', () => (
-    <div>
-      <Textline
-        isEdit
-        renderIcon={() => (<IconMore />)}
-        onMoreClick={action()}
-      >
-        Look at "<a href="#">this</a>" text
-      </Textline>
-      <Textline
-        isDisabled
-        isEdit
-        renderIcon={() => (<IconMore />)}
-        onMoreClick={action()}
-      >
-        Look at "<a href="#">this</a>" text
-      </Textline>
-      <Textline isBold >
-        Look at bold text
-      </Textline>
-      <Textline isBold isDisabled >
-        Look at bold text
-      </Textline>
     </div>
   ))
   .addWithInfo('Textarea', () => (

@@ -1,7 +1,12 @@
-import { BINARY_COLOR_BLUE_60, FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles';
+import { BINARY_COLOR_GRAY_60, FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles';
 import {
   CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_UNIVERSAL,
 } from './styles.universal';
+
+export const CARDS_ICON_DISABLED_CSS = `
+  color: ${BINARY_COLOR_GRAY_60};
+  pointer-events: none;
+`;
 
 export const FIELD_VALUE_FONT_CSS = `
   font-family: ${FONT_FAMILY_MAIN};

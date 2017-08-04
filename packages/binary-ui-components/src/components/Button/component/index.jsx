@@ -5,10 +5,7 @@ import React from 'react';
 import IconStyled from '../../IconStyled';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
-import {
-  getActionColorExt,
-  getHighlightEditStyle,
-} from '../../../utils/styles-api';
+import { getActionColorExt, getHighlightEditStyle } from '../../../utils/styles-api';
 
 const ICON_STYLE = { paddingRight: 10 };
 
@@ -43,13 +40,11 @@ const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick 
         isDisabled
       )}
       size={18}
-      style={{
-        ...ICON_STYLE,
-      }}
+      style={ICON_STYLE}
       renderIcon={renderIcon}
     />
     <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} >
-      {isBold ? label.toUppercase() : label}
+      {isBold ? label.toUpperCase() : label}
     </ButtonText>
   </ButtonWrapper>
 );

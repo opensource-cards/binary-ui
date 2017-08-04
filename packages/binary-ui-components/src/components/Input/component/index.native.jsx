@@ -139,6 +139,7 @@ export default class Input extends React.Component {
         )}
         <InputStyled
           keyboardType={this.getKeyboardType()}
+          secureTextEntry={type === INPUT_FIELD_TYPES.PASSWORD}
           value={this.getFormattedValue(type, mask, value)}
           onBlur={this.onBlur}
           onChangeText={this.onChange}
