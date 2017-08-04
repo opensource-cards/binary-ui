@@ -20,21 +20,20 @@ describe('Utils', () => {
 
   describe('Styles-api, getActionColorExt()', () => {
     const color = '#ffffff';
-    const colorActive = '#ff0000';
     const colorDisabled = '#D3D3D3';
 
     it('should return colorDisabled if disabled', () => expect(
-        getActionColorExt(color, colorActive, colorDisabled, false, true)
+        getActionColorExt(color, colorDisabled, true)
       ).to.equal(colorDisabled)
     );
 
-    it('should return colorActive if active', () => expect(
-        getActionColorExt(color, colorActive, colorDisabled, true, false)
-      ).to.equal(colorActive)
+    it('should return color if active', () => expect(
+        getActionColorExt(color, colorDisabled, false)
+      ).to.equal(color)
     );
 
     it('should return color if no isActive or isDisabled specified', () => expect(
-        getActionColorExt(color, colorActive, colorDisabled)
+        getActionColorExt(color, colorDisabled)
       ).to.equal(color)
     );
   });
