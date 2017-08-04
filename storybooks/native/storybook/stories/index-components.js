@@ -24,9 +24,9 @@ class InputWithMask extends React.Component {
     }
   }
   handleTextChange(value) {
-    this.setState({
+    this.setState(() => ({
       value,
-    })
+    }));
   }
   render() {
     const { value } = this.state;
@@ -53,9 +53,9 @@ class TextareaDemo1 extends React.Component {
     this.onChange = this.onChange.bind(this);
   }
   onChange(value) {
-    this.setState({
+    this.setState(() => ({
       value,
-    });
+    }));
   }
   render() {
     const { value } = this.state;
