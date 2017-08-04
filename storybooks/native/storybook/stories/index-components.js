@@ -6,11 +6,15 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import Add from 'binary-ui-icons/binary/Add';
+import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import IconMore from 'binary-ui-icons/binary/More';
 import Input, { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
+
+import Button from 'binary-ui-components/mobile/Button';
 import Group from 'binary-ui-components/mobile/Group';
 import Select from 'binary-ui-components/mobile/Select';
 import Textline from 'binary-ui-components/mobile/Textline';
+import Textarea from 'binary-ui-components/mobile/Textarea';
 
 class InputWithMask extends React.Component {
   constructor() {
@@ -44,7 +48,7 @@ class TextareaDemo1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '000',
+      value: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     };
     this.onChange = this.onChange.bind(this);
   }
@@ -55,7 +59,15 @@ class TextareaDemo1 extends React.Component {
   }
   render() {
     const { value } = this.state;
-    return null;
+    return (
+      <Textarea
+        placeholder="Type here"
+        value={value}
+        renderIcon={() => (<IconMore />)}
+        onTextChange={this.onChange}
+        onMoreClick={action()}
+      />
+    );
   }
 }
 
@@ -65,19 +77,15 @@ storiesOf('binary-ui-components', module)
       <Add color="#000000" size={50} onPress={action('clicked')} />
     </TouchableOpacity>
   ))
-  .add('Group2', () => (
-    <Group
-      renderLeft={() => (
-        <Textline isBold>
-          Left text
-        </Textline>
-      )}
-      renderRight={() => (
-        <Textline>
-          Right text
-        </Textline>
-      )}
-    />
+  .add('Button', () => (
+    <View>
+      <Button label={"A standard button".toUpperCase()} isBold onClick={action()} />
+      <Button label="A non editable button" isEdit={false} onClick={action()} />
+      <Button label="A disabled button" isBold isDisabled onClick={action()} />
+      <Button label="A standard with button icon" isBold renderIcon={() => (<ArrowDown />)} onClick={action()} />
+      <Button color="#0087BD" label="A colorful with icon button" isBold renderIcon={() => (<ArrowDown />)} onClick={action()} />
+      <Button color="#0087BD" label="A colorful with icon disabled button" isBold isDisabled renderIcon={() => (<ArrowDown />)} onClick={action()} />
+    </View>
   ))
   .add('Input', () => (
     <View>

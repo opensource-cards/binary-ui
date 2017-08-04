@@ -14,7 +14,6 @@ export const FIELD_NAME_FONT_CSS = `
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
-  text-transform: uppercase;
 `;
 
 export const CURSOR_POINTER_CSS = `

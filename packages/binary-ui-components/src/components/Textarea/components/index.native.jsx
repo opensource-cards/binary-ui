@@ -84,6 +84,7 @@ export default class Textarea extends React.Component {
     return (
       <TextareaWrapperStyled style={getHighlightEditStyle(true, isValid, isActive, undefined)} >
         <TextareaInput
+          numberOfLines={3}
           onBlur={this.onBlur}
           onChange={this.onTextChange}
           onFocus={this.onFocus}
