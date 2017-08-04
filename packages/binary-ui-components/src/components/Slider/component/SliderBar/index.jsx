@@ -4,6 +4,7 @@ import SliderHandler from '../SliderHandler';
 import SliderScale from '../../components-styled/SliderScale';
 import { HOLD_TIME, TOLERANCE } from '../../utils/config';
 import getPosition from '../../utils/position';
+import { isLeftMouseButton } from '../../../../utils/events';
 
 const propTypes = {
   position: PropTypes.number.isRequired,
@@ -129,7 +130,7 @@ export default class BarWrapper extends React.Component {
     // allow only left button
     if (
       (holdTimer === null || holdTimer === undefined) &&
-      (e.button === 0 || e.button === undefined)
+      (isLeftMouseButton(e) || e.button === undefined)
     ) {
       this.cache.holdHandler = holdHandler;
       this.cache.holdTimer = setTimeout(this.cache.holdHandler, HOLD_TIME, e);
@@ -144,17 +145,17 @@ export default class BarWrapper extends React.Component {
   }
 
   checkHolding(e, isTouch) {
-    if (this.state.holding) {
-      const clientX = isTouch ? e.touches[0].clientX : e.clientX;
-      const clientY = isTouch ? e.touches[0].clientY : e.clientY;
-      const diffX = Math.abs(this.cache.holdPositionX - clientX);
-      const diffY = Math.abs(this.cache.holdPositionY - clientY);
-
-      if ((diffX !== 0 && diffX > TOLERANCE) || (diffY !== 0 && diffY > TOLERANCE)) {
-        this.setState(() => ({
-          holding: false,
-        }));
-      }
+    if (!this.state.holding) {
+      return;
+    }
+    const clientX = isTouch ? e.touches[0].clientX : e.clientX;
+    const clientY = isTouch ? e.touches[0].clientY : e.clientY;
+    const diffX = Math.abs(this.cache.holdPositionX - clientX);
+    const diffY = Math.abs(this.cache.holdPositionY - clientY);
+    if ((diffX !== 0 && diffX > TOLERANCE) || (diffY !== 0 && diffY > TOLERANCE)) {
+      this.setState(() => ({
+        holding: false,
+      }));
     }
   }
 
