@@ -109,14 +109,16 @@ export default class BarWrapper extends React.Component {
     }));
   }
 
-   getOnHoldHandler(clientX, targetBoundingClientRect) {
+  getOnHoldHandler(clientX, targetBoundingClientRect) {
     return () => {
       if (this.state.holding) {
+        const { onPositionChange } = this.props;
         const newPosition = getPosition(
           targetBoundingClientRect.left,
           clientX,
           targetBoundingClientRect.width,
         );
+        onPositionChange(newPosition);
         this.onDraggingChanged(true);
       }
     };
