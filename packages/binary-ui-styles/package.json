@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-styles",
-  "version": "0.2.16",
+  "version": "0.2.17",
   "description": "React styles for Cards' Binary Design.",
   "keywords": [
     "react",
@@ -22,11 +22,9 @@
     "url": "git@github.com:opensource-cards/binary-ui.git"
   },
   "files": [
-    "lib",
-    "native.js",
-    "web.js"
+    "lib"
   ],
-  "main": "lib/index.js",
+  "main": "index.js",
   "devDependencies": {
     "babel": "^6.3.26",
     "babel-cli": "^6.14.0",

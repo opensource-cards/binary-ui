@@ -45,7 +45,7 @@ acorn@^4.0.3:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-acorn@^5.0.1:
+acorn@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.1.tgz#53fe161111f912ab999ee887a90a0bc52822fd75"
 
@@ -1012,15 +1012,15 @@ binary-extensions@^1.0.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.9.0.tgz#66506c16ce6f4d6928a5b3cd6a33ca41e941e37b"
 
-binary-ui-icons@^0.2.15:
-  version "0.2.15"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.2.15.tgz#81965a474448225722ca7207fbbab8462369de72"
+binary-ui-icons@^0.2.16:
+  version "0.2.16"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.2.16.tgz#3af0a5fed58ab3d9ab8660f2251c1ae0c7332c94"
   dependencies:
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.2.15:
-  version "0.2.15"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.2.15.tgz#95e62bd9cb6aadd1f6a11a82b58cf5055f1492c4"
+binary-ui-styles@^0.2.16:
+  version "0.2.16"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.2.16.tgz#40cb4708a39cfa46c718fe2bf7a6a259006de808"
 
 binaryextensions@~1.0.0:
   version "1.0.1"
@@ -2094,10 +2094,10 @@ eslint@^2.8.0:
     user-home "^2.0.0"
 
 espree@^3.1.6:
-  version "3.4.3"
-  resolved "https://registry.yarnpkg.com/espree/-/espree-3.4.3.tgz#2910b5ccd49ce893c2ffffaab4fd8b3a31b82374"
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.0.tgz#98358625bdd055861ea27e2867ea729faf463d8d"
   dependencies:
-    acorn "^5.0.1"
+    acorn "^5.1.1"
     acorn-jsx "^3.0.0"
 
 esprima-fb@^15001.1.0-dev-harmony-fb:
