@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ActionListItemIcon from '../../ActionListItemIcon';
 import TextareaIcon from '../components-styled/TextareaIcon';
 import TextareaInput from '../components-styled/TextareaInput';
 import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
@@ -84,14 +85,17 @@ export default class Textarea extends React.Component {
     return (
       <TextareaWrapperStyled style={getHighlightEditStyle(true, isValid, isActive, undefined)} >
         <TextareaInput
-          numberOfLines={3}
+          multiline
+          underlineColorAndroid="rgba(0,0,0,0)"
           onBlur={this.onBlur}
           onChange={this.onTextChange}
           onFocus={this.onFocus}
           {...props}
         />
         {renderIcon && (
-          <TextareaIcon renderIcon={renderIcon} onClick={onMoreClick} />
+          <TextareaIcon>
+            <ActionListItemIcon renderIcon={renderIcon} onClick={onMoreClick} />
+          </TextareaIcon>
         )}
       </TextareaWrapperStyled>
     );

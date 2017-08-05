@@ -68,7 +68,7 @@ storiesOf('binary-ui-components', module)
       />
       <Group
         renderLeft={() => (<Textline isBold >Label</Textline>)}
-        renderRight={() => (<TextareaDemo1 />)}
+        renderRight={() => (<Textline isEdit >+8227073791</Textline>)}
       />
     </View>
   ))
@@ -77,4 +77,16 @@ storiesOf('binary-ui-components', module)
       <Picker.Item label="Java" value="java" />
       <Picker.Item label="JavaScript" value="js" />
     </Picker>
+  ))
+  .add('Textarea', () => (
+    <View>
+      <TextareaDemo1 />
+      <Textarea
+        placeholder="Empty text area placeholder"
+        value=""
+        renderIcon={() => (<IconMore />)}
+        onTextChange={this.onChange}
+        onMoreClick={action()}
+      />
+    </View>
   ));
