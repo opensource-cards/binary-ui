@@ -1,5 +1,7 @@
 import infoAddon from '@storybook/addon-info';
-import { setAddon, storiesOf, action } from '@storybook/react';
+import { setAddon, storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -9,7 +11,7 @@ import Textline from 'binary-ui-components/mobile/Textline';
 setAddon(infoAddon);
 
 storiesOf('binary-ui-components', module)
-  .addWithInfo('Textline', () => (
+  .add('Textline', withInfo('A Textline Component')(() => (
     <div>
       <Textline
         isEdit
@@ -56,4 +58,4 @@ storiesOf('binary-ui-components', module)
         Textline Editable Disabled and <a href="https://try.cards" style={{ color: 'blue' }} >Cards</a> together
       </Textline>
     </div>
-  ));
+  )));

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import ButtonContent from './ButtonContent.native';
+import { COLOR_BLACK } from '../../../utils/styles';
 
 const propTypes = {
   color: PropTypes.string,
@@ -15,16 +16,16 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: '#000000',
+  color: COLOR_BLACK,
   isBold: false,
   isDisabled: false,
   isEdit: true,
   renderIcon: () => (<ArrowRight />),
 };
 
-const Button = ({ isDisabled, ...props }) => (
+const Button = ({ isDisabled, onClick, ...props }) => (
   !isDisabled ? (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onClick} >
       <ButtonContent isDisabled={isDisabled} {...props} />
     </TouchableOpacity>
   ) : (

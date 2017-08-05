@@ -86,9 +86,9 @@ export default class Textarea extends React.Component {
       <TextareaWrapperStyled style={getHighlightEditStyle(true, isValid, isActive, undefined)} >
         <TextareaInput
           multiline
-          underlineColorAndroid="rgba(0,0,0,0)"
+          underlineColorAndroid="rgba(0, 0, 0, 0)"
           onBlur={this.onBlur}
-          onChange={this.onTextChange}
+          onChangeText={this.onTextChange}
           onFocus={this.onFocus}
           {...props}
         />

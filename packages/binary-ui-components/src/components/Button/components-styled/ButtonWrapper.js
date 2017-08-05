@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
-import { CURSOR_POINTER_CSS } from '../../../utils/styles';
-import { HIGHLIGHT_CSS } from '../../../utils/styles.universal';
+import { CURSOR_POINTER_CSS, HIGHLIGHT_CSS } from '../../../utils/styles';
 
 export default styled.div`
   ${CURSOR_POINTER_CSS}

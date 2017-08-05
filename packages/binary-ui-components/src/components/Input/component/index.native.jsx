@@ -141,7 +141,7 @@ export default class Input extends React.Component {
           keyboardType={this.getKeyboardType()}
           secureTextEntry={type === INPUT_FIELD_TYPES.PASSWORD}
           value={this.getFormattedValue(type, mask, value)}
-          underlineColorAndroid="rgba(0,0,0,0)"
+          underlineColorAndroid="rgba(0, 0, 0, 0)"
           onBlur={this.onBlur}
           onChangeText={this.onChange}
           onFocus={this.onFocus}

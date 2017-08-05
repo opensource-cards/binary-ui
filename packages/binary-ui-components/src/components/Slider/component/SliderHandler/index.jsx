@@ -3,7 +3,7 @@ import React from 'react';
 import SliderHandler from '../../components-styled/SliderHandler';
 import validatePosition from '../../utils/position-validation';
 import getPosition from '../../utils/position';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../../utils/styles.universal';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../../utils/styles';
 
 const propTypes = {
   containerLeft: PropTypes.number.isRequired,

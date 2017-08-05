@@ -1,5 +1,7 @@
 import infoAddon from '@storybook/addon-info';
-import { setAddon, storiesOf, action } from '@storybook/react';
+import { setAddon, storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 import Add from 'binary-ui-icons/binary/Add';
 import AddCard from 'binary-ui-icons/binary/AddCard';
 import Apple from 'binary-ui-icons/binary/Apple';
@@ -99,7 +101,7 @@ const AddStyled = styled(Add)`
 `;
 
 storiesOf('binary-ui-icons', module)
-  .addWithInfo('general', () => (
+  .add('general', (() => (
     <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
       <div><Add color={COLOR} size={SIZE} />Add</div>
       <div><AddCard color={COLOR} size={SIZE} />AddCard</div>
@@ -165,37 +167,37 @@ storiesOf('binary-ui-icons', module)
       <div><User color={COLOR} size={SIZE} />User</div>
       <div><UserAlt color={COLOR} size={SIZE} />UserAlt</div>
     </div>
-  ))
-    .addWithInfo('Logotypes', () => (
-      <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
-        <div><Apple color={COLOR} size={SIZE} />Apple</div>
-        <div><AppleAlt color={COLOR} size={SIZE} />AppleAlt</div>
-        <div><Cards color={COLOR} size={SIZE} />Cards</div>
-        <div><CardsAlt color={COLOR} size={SIZE} />CardsAlt</div>
-        <div><Designer color={COLOR} size={SIZE} />Designer</div>
-        <div><Facebook color={COLOR} size={SIZE} />Facebook</div>
-        <div><Facetime color={COLOR} size={SIZE} />Facetime</div>
-        <div><FacetimeAlt color={COLOR} size={SIZE} />FacetimeAlt</div>
-        <div><Google color={COLOR} size={SIZE} />Google</div>
-        <div><Github color={COLOR} size={SIZE} />Github</div>
-        <div><Instagram color={COLOR} size={SIZE} />Instagram</div>
-        <div><InstagramAlt color={COLOR} size={SIZE} />InstagramAlt</div>
-        <div><Linkedin color={COLOR} size={SIZE} />Linkedin</div>
-        <div><LinkedinAlt color={COLOR} size={SIZE} />LinkedinAlt</div>
-        <div><Medium color={COLOR} size={SIZE} />Medium</div>
-        <div><Microsoft color={COLOR} size={SIZE} />Microsoft</div>
-        <div><Redhat color={COLOR} size={SIZE} />Redhat</div>
-        <div><Telegram color={COLOR} size={SIZE} />Telegram</div>
-        <div><Twitter color={COLOR} size={SIZE} />Twitter</div>
-        <div><Ubuntu color={COLOR} size={SIZE} />Ubuntu</div>
-        <div><Whatsapp color={COLOR} size={SIZE} />Whatsapp</div>
-        <div><WhatsappAlt color={COLOR} size={SIZE} />WhatsappAlt</div>
-        <div><Youtube color={COLOR} size={SIZE} />Youtube</div>
-      </div>
-    ))
-    .addWithInfo('Styled', () => (
-      <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
-        <div><AddStyled color='#C40333' size={SIZE} />Color</div>
-        <div><AddStyled color={COLOR} size={SIZE} onMouseDown={action()} />Action</div>
-      </div>
-    ));
+  )))
+  .add('Logotypes', withInfo('')(() => (
+    <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
+      <div><Apple color={COLOR} size={SIZE} />Apple</div>
+      <div><AppleAlt color={COLOR} size={SIZE} />AppleAlt</div>
+      <div><Cards color={COLOR} size={SIZE} />Cards</div>
+      <div><CardsAlt color={COLOR} size={SIZE} />CardsAlt</div>
+      <div><Designer color={COLOR} size={SIZE} />Designer</div>
+      <div><Facebook color={COLOR} size={SIZE} />Facebook</div>
+      <div><Facetime color={COLOR} size={SIZE} />Facetime</div>
+      <div><FacetimeAlt color={COLOR} size={SIZE} />FacetimeAlt</div>
+      <div><Google color={COLOR} size={SIZE} />Google</div>
+      <div><Github color={COLOR} size={SIZE} />Github</div>
+      <div><Instagram color={COLOR} size={SIZE} />Instagram</div>
+      <div><InstagramAlt color={COLOR} size={SIZE} />InstagramAlt</div>
+      <div><Linkedin color={COLOR} size={SIZE} />Linkedin</div>
+      <div><LinkedinAlt color={COLOR} size={SIZE} />LinkedinAlt</div>
+      <div><Medium color={COLOR} size={SIZE} />Medium</div>
+      <div><Microsoft color={COLOR} size={SIZE} />Microsoft</div>
+      <div><Redhat color={COLOR} size={SIZE} />Redhat</div>
+      <div><Telegram color={COLOR} size={SIZE} />Telegram</div>
+      <div><Twitter color={COLOR} size={SIZE} />Twitter</div>
+      <div><Ubuntu color={COLOR} size={SIZE} />Ubuntu</div>
+      <div><Whatsapp color={COLOR} size={SIZE} />Whatsapp</div>
+      <div><WhatsappAlt color={COLOR} size={SIZE} />WhatsappAlt</div>
+      <div><Youtube color={COLOR} size={SIZE} />Youtube</div>
+    </div>
+  )))
+  .add('Styled', withInfo('')(() => (
+    <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
+      <div><AddStyled color='#C40333' size={SIZE} />Color</div>
+      <div><AddStyled color={COLOR} size={SIZE} onMouseDown={action()} />Action</div>
+    </div>
+  )));

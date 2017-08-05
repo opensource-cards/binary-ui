@@ -1,5 +1,6 @@
 import infoAddon from '@storybook/addon-info';
-import { setAddon, storiesOf, action } from '@storybook/react';
+import { setAddon, storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import Remove from 'binary-ui-icons/binary/Remove';
 import Add from 'binary-ui-icons/binary/Add';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
@@ -12,7 +13,6 @@ import ActionLink from 'binary-ui-components/mobile/ActionLink';
 import ActionLinkInline from 'binary-ui-components/mobile/ActionLinkInline';
 import Alert, { ALERT_TYPES } from 'binary-ui-components/mobile/Alert';
 import Button from 'binary-ui-components/mobile/Button';
-import Checkbox from 'binary-ui-components/mobile/Checkbox';
 import Group from 'binary-ui-components/mobile/Group';
 import ImagePicker from 'binary-ui-components/mobile/ImagePicker';
 import ProgressBar from 'binary-ui-components/mobile/ProgressBar';
@@ -248,12 +248,6 @@ storiesOf('binary-ui-components', module)
       <Alert text="Alert text" type={ALERT_TYPES.CRITICAL} onClick={action()} />
     </div>
   ))
-  .addWithInfo('Checkbox', () => (
-    <div>
-      <Checkbox isChecked onChange={action()} onClick={action()} />
-      <Checkbox isChecked={false} onChange={action()} onClick={action()} />
-    </div>
-  ))
   .addWithInfo('ImagePicker', () => (
     <ImagePicker
       imageFit="contain"
@@ -352,19 +346,6 @@ storiesOf('binary-ui-components', module)
       <Switch
         isChecked={false}
         onChange={action()}
-      />
-    </div>
-  ))
-  .addWithInfo('Textarea', () => (
-    <div>
-      <TextareaDemo1 />
-      <Textarea
-        isValid={false}
-        placeholder="Type here"
-        value=""
-        renderIcon={() => (<IconMore />)}
-        onTextChange={action()}
-        onMoreClick={action()}
       />
     </div>
   ));

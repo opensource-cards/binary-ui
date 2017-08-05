@@ -1,5 +1,7 @@
 import infoAddon from '@storybook/addon-info';
-import { setAddon, storiesOf, action } from '@storybook/react';
+import { setAddon, storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -9,7 +11,7 @@ import Button from 'binary-ui-components/mobile/Button';
 setAddon(infoAddon);
 
 storiesOf('binary-ui-components', module)
-  .addWithInfo('Button', () => (
+  .add('Button', withInfo('A Button Component')(() => (
     <div>
       <Button label="A standard button" isBold onClick={action()} />
       <Button label="A non editable button" isEdit={false} onClick={action()} />
@@ -18,4 +20,4 @@ storiesOf('binary-ui-components', module)
       <Button color="#0087BD" label="A colorful with icon button" isBold renderIcon={() => (<IconArrowDown />)} onClick={action()} />
       <Button color="#0087BD" label="A colorful with icon disabled button" isBold isDisabled renderIcon={() => (<IconArrowDown />)} onClick={action()} />
     </div>
-  ));
+  )));

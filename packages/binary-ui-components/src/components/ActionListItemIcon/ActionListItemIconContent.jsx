@@ -2,8 +2,7 @@ import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ActionableIcon from '../ActionableIcon';
-
-const ICON_STYLE = { paddingRight: 10 };
+import { ICON_STYLE_OBJ } from '../../utils/styles';
 
 const propTypes = {
   isActive: PropTypes.bool,
@@ -22,7 +21,7 @@ const ActionListItemIconContent = ({ isActive, isDisabled, renderIcon, ...props 
       isActive={isActive}
       isDisabled={isDisabled}
       size={18}
-      style={ICON_STYLE}
+      style={ICON_STYLE_OBJ}
       renderIcon={renderIcon}
     />
   </div>

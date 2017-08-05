@@ -1,7 +1,18 @@
 import { BINARY_COLOR_GRAY_60, FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles';
 import {
-  CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_UNIVERSAL,
-} from './styles.universal';
+  CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_NATIVE_AND_WEB,
+  COLOR_BLACK,
+  HIGHLIGHT_CSS,
+  ICON_STYLE_OBJ,
+  LIST_ITEM_HALF_HEIGHT,
+} from './styles.native-and-web';
+
+export {
+  COLOR_BLACK,
+  HIGHLIGHT_CSS,
+  ICON_STYLE_OBJ,
+  LIST_ITEM_HALF_HEIGHT,
+};
 
 export const CARDS_ICON_DISABLED_CSS = `
   color: ${BINARY_COLOR_GRAY_60};
@@ -48,5 +59,5 @@ export const CARDS_ICON_CSS = `
 
 export const CARDS_BUTTON_CSS = `
   ${NO_SELECT_CSS}
-  ${CARDS_BUTTON_CSS_UNIVERSAL};
+  ${CARDS_BUTTON_CSS_NATIVE_AND_WEB};
 `;

@@ -2,7 +2,7 @@ import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80, LIST_ITEM_HEIGHT } from 'bi
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components/native';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles';
 
 const SWITCH_BACKGROUND_STYLE = `
   border-radius: ${LIST_ITEM_HALF_HEIGHT};

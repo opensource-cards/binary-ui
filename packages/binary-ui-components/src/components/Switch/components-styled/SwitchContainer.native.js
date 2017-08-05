@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components/native';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles.universal';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles';
 
 const StyledOpacity = styled.TouchableOpacity`
   position: relative;
