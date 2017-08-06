@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import ActionListItemIconContent from './ActionListItemIconContent';
+import { ICON_STYLE_OBJ } from '../../utils/styles';
 
 const propTypes = {
   isDisabled: PropTypes.bool,
@@ -16,11 +17,13 @@ const defaultProps = {
 
 const ActionListItemIcon = ({ isDisabled, renderIcon, onClick, ...props }) => (
   !isDisabled ? (
-    <TouchableOpacity onPress={onClick} >
-      <ActionListItemIconContent isDisabled={isDisabled} renderIcon={renderIcon} {...props} />
+    <TouchableOpacity onPress={onClick} {...props} >
+      <ActionListItemIconContent isDisabled={isDisabled} renderIcon={renderIcon} />
     </TouchableOpacity>
   ) : (
-    <ActionListItemIconContent isDisabled={isDisabled} renderIcon={renderIcon} {...props} />
+    <View {...props} >
+      <ActionListItemIconContent isDisabled={isDisabled} renderIcon={renderIcon} />
+    </View>
   )
 );
 

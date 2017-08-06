@@ -1,7 +1,7 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import ButtonContent from './ButtonContent.native';
 import { COLOR_BLACK } from '../../../utils/styles';
 
@@ -25,11 +25,13 @@ const defaultProps = {
 
 const Button = ({ isDisabled, onClick, ...props }) => (
   !isDisabled ? (
-    <TouchableOpacity onPress={onClick} >
-      <ButtonContent isDisabled={isDisabled} {...props} />
+    <TouchableOpacity onPress={onClick} {...props} >
+      <ButtonContent isDisabled={isDisabled} />
     </TouchableOpacity>
   ) : (
-    <ButtonContent isDisabled={isDisabled} {...props} />
+    <View {...props} >
+      <ButtonContent isDisabled={isDisabled} />
+    </View>
   )
 );
 

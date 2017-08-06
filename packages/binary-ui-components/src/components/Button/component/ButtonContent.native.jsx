@@ -23,7 +23,7 @@ const ButtonContent = ({ color, isBold, isEdit, isDisabled, label, renderIcon })
   <ButtonWrapper
     style={getHighlightEditStyle(isEdit, true, false, undefined)}
   >
-    <View style={ICON_STYLE_OBJ}>
+    <View style={ICON_STYLE_OBJ} >
       <IconStyled
         color={getActionColorExt(
           color,

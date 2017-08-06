@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import ActionIconContent from './ActionIconContent';
 
 const propTypes = {
@@ -18,7 +18,7 @@ const defaultProps = {
 
 const ActionIcon = ({ color, isDisabled, size, renderIcon, ...props }) => (
   !isDisabled ? (
-    <TouchableOpacity isDisabled={isDisabled} {...props} >
+    <TouchableOpacity {...props} >
       <ActionIconContent
         color={color}
         isDisabled={isDisabled}
@@ -27,12 +27,14 @@ const ActionIcon = ({ color, isDisabled, size, renderIcon, ...props }) => (
       />
     </TouchableOpacity>
   ) : (
-    <ActionIconContent
-      color={color}
-      isDisabled={isDisabled}
-      size={size}
-      renderIcon={renderIcon}
-    />
+    <View {...props} >
+      <ActionIconContent
+        color={color}
+        isDisabled={isDisabled}
+        size={size}
+        renderIcon={renderIcon}
+      />
+    </View>
   )
 );
 

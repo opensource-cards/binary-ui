@@ -1,9 +1,7 @@
 import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { View } from 'react-native';
 import ActionableIcon from '../ActionableIcon';
-import { ICON_STYLE_OBJ } from '../../utils/styles';
 
 const propTypes = {
   isDisabled: PropTypes.bool.isRequired,
@@ -12,15 +10,13 @@ const propTypes = {
 
 const defaultProps = {};
 
-const ActionListItemIconContent = ({ isDisabled, renderIcon, ...props }) => (
-  <View {...props} style={ICON_STYLE_OBJ} >
-    <ActionableIcon
-      color={BINARY_COLOR_GRAY_40}
-      isDisabled={isDisabled}
-      size={18}
-      renderIcon={renderIcon}
-    />
-  </View>
+const ActionListItemIconContent = ({ isDisabled, renderIcon }) => (
+  <ActionableIcon
+    color={BINARY_COLOR_GRAY_40}
+    isDisabled={isDisabled}
+    size={18}
+    renderIcon={renderIcon}
+  />
 );
 
 ActionListItemIconContent.propTypes = propTypes;
