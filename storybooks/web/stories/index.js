@@ -5,6 +5,7 @@ import ARTCurrentMode from 'art/modes/current';
 ARTCurrentMode.setCurrent(ARTSVGMode);
 
 import './index-icons';
+import './index-components-action-icon';
 import './index-components-button';
 import './index-components-checkbox';
 import './index-components-input';
