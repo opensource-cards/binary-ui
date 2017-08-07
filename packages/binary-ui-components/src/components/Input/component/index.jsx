@@ -43,6 +43,16 @@ export default class Input extends React.Component {
     this.onBlur = this.onBlur.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onFocus = this.onFocus.bind(this);
+    this.setCaretPosition = this.setCaretPosition.bind(this);
+    this.onSetInputRef = this.onSetInputRef.bind(this);
+  }
+
+  componentDidUpdate() {
+    this.setCaretPosition();
+  }
+
+  onSetInputRef(input) {
+    this.input = input;
   }
 
   onBlur(e) {
@@ -72,6 +82,15 @@ export default class Input extends React.Component {
     if (onFocus) {
       onFocus(e);
     }
+  }
+
+  setCaretPosition() {
+    const input = this.input;
+    window.requestAnimationFrame(() => {
+      if (input !== undefined && this.state.isActive) {
+        input.selectionStart = input.selectionEnd = input.value.length;
+      }
+    });
   }
 
   setFocus(isActive) {
@@ -125,6 +144,7 @@ export default class Input extends React.Component {
         )}
         <InputStyled
           type={type}
+          innerRef={this.onSetInputRef}
           value={this.getFormattedValue(type, mask, value)}
           onBlur={this.onBlur}
           onChange={this.onChange}
