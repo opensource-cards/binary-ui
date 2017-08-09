@@ -26,12 +26,13 @@
     "binary-ui-styles": "^0.2.19",
     "mask-parser": "^0.0.1",
     "prop-types": "^15.5.10",
-    "react-native-slider": "^0.11.0",
     "styled-components": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^15.3.2",
-    "react-art": "^0.15.1"
+    "react-art": "^0.15.1",
+    "react-native": "^0.47.0",
+    "react-native-slider": "^0.11.0"
   },
   "devDependencies": {
     "babel": "^6.3.26",
@@ -55,7 +56,8 @@
     "mocha": "^3.0.2",
     "react": "~15.3.2",
     "react-art": "^0.15.1",
-    "react-native": "^0.38.0",
+    "react-native": "^0.47.0",
+    "react-native-slider": "^0.11.0",
     "rimraf": "^2.3.4"
   }
 }

@@ -27,7 +27,7 @@
   "peerDependencies": {
     "react": "^15.3.2",
     "react-art": "^0.15.1",
-    "react-native": "^0.38.0",
+    "react-native": "^0.47.0",
     "styled-components": "^2.0.0"
   },
   "devDependencies": {
