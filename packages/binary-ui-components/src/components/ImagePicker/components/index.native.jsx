@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Image from './Image';
+import ImageUpload from './ImageUpload';
 import ImagePickerWrapper from '../components-styled/ImagePickerWrapper';
-import ImageUploadWrapper from '../components-styled/ImageUploadWrapper';
-import ImageContent from '../components-styled/ImageContent';
-import { TouchableOpacity } from 'react-native';
-import IconDone from 'binary-ui-icons/binary/Done';
-import IconCamera from 'binary-ui-icons/binary/CameraAlt';
 
 const propTypes = {
+  imageSelectedId: PropTypes.string,
+  images: PropTypes.array,
   isImageUpload: PropTypes.bool,
+  onImageClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -22,25 +22,37 @@ export default class ImagePicker extends React.Component {
 
   constructor(props) {
     super(props);
+    this.onImageClick = this.onImageClick.bind(this);
+  }
+
+  onImageClick(imageId) {
+    const { onImageClick } = this.props;
+    if (!onImageClick) {
+      return;
+    }
+    onImageClick(imageId);
   }
 
   render() {
-    const { } = this.props;
+    const {
+      images,
+      imageSelectedId,
+      isImageUpload,
+    } = this.props;
     return (
       <ImagePickerWrapper>
-        <TouchableOpacity activeOpacity={0.5} >
-          <ImageContent
-            source={{ uri: 'https://facebook.github.io/react/img/logo_og.png' }}
-            style={{ width: 60, height: 60 }}
-          >
-            <IconDone size={40} color="#FFF" />
-          </ImageContent>
-        </TouchableOpacity>
-        <TouchableOpacity activeOpacity={0.5} >
-          <ImageUploadWrapper>
-            <IconCamera size={30} color="#aeaeae" />
-          </ImageUploadWrapper>
-        </TouchableOpacity>
+        {images.map(image => (
+          <Image
+            imageId={image.id}
+            imageUrl={image.url}
+            isSelected={image.id === imageSelectedId}
+            key={image.id}
+            onImageClick={this.onImageClick}
+          />
+        ))}
+        {isImageUpload ? (
+          <ImageUpload />
+        ) : null}
       </ImagePickerWrapper>
     );
   }

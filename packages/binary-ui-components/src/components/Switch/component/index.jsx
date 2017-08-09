@@ -8,8 +8,8 @@ import SwitchLabel from '../components-styled/SwitchLabel';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const propTypes = {
-  label: PropTypes.string,
   isChecked: PropTypes.bool.isRequired,
+  label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
 

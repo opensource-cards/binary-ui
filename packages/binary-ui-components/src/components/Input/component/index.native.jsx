@@ -9,10 +9,10 @@ import { getValidatedPhone } from '../utils/validation';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
-  borderColor: PropTypes.string,
   isValid: PropTypes.bool,
   mask: PropTypes.string,
   type: PropTypes.any,
+  styleBorderColor: PropTypes.string,
   value: PropTypes.string.isRequired,
   renderIcon: PropTypes.func,
   onBlur: PropTypes.func,
@@ -22,9 +22,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  borderColor: undefined,
   isValid: true,
   mask: undefined,
+  styleBorderColor: undefined,
   type: INPUT_FIELD_TYPES.ANY,
   renderIcon: undefined,
   onBlur: undefined,
@@ -119,12 +119,12 @@ export default class Input extends React.Component {
   render() {
     /* eslint-disable no-unused-vars  */
     const {
-      borderColor,
       isValid,
       mask,
-      renderIcon,
+      styleBorderColor,
       type,
       value,
+      renderIcon,
       onBlur,
       onFocus,
       onMoreClick,
@@ -133,7 +133,7 @@ export default class Input extends React.Component {
     /* eslint-enable no-unused-vars  */
     const { isActive } = this.state;
     return (
-      <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, borderColor)} >
+      <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, styleBorderColor)} >
         {renderIcon && (
           <InputIcon renderIcon={renderIcon} onClick={onMoreClick} />
         )}

@@ -6,7 +6,8 @@ const halfHeight = LIST_ITEM_HEIGHT / 2;
 export default styled.View`
   ${props => (props.progress >= 90
     ? `background-color: ${BINARY_COLOR_RED_40}`
-    : 'background-color: #000')}
+    : 'background-color: #000'
+  )}
   height: 1px;
   width: ${props => props.progress}%;
   position: absolute;

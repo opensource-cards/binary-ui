@@ -15,16 +15,30 @@ const imageSelectedId = uuid.v1();
 
 storiesOf('binary-ui-components', module)
   .add('ImagePicker', withInfo('ImagePicker Component')(() => (
-    <ImagePicker
-      imageFit="contain"
-      imageUploadUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
-      images={[{
-        url: getImg(),
-        id: imageSelectedId,
-      }]}
-      imageSelectedId={imageSelectedId}
-      isImageUpload={1 < 3}
-      onImageClick={action()}
-      onImageUpload={action()}
-    />
+    <div>
+      <ImagePicker
+        imageFit="contain"
+        imageUploadUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
+        images={[{
+          url: getImg(),
+          id: imageSelectedId,
+        }]}
+        imageSelectedId={imageSelectedId}
+        isImageUpload={false}
+        onImageClick={action()}
+        onImageUpload={action()}
+      />
+      <ImagePicker
+        imageFit="contain"
+        imageUploadUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
+        images={[{
+          url: getImg(),
+          id: imageSelectedId,
+        }]}
+        imageSelectedId={imageSelectedId}
+        isImageUpload
+        onImageClick={action()}
+        onImageUpload={action()}
+      />
+    </div>
   )));

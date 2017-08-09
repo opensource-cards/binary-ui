@@ -1,29 +1,32 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, Switch as SwitchRN } from 'react-native';
+import { Switch as SwitchRN } from 'react-native';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
 import SwitchLabel from '../components-styled/SwitchLabel';
 import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
 
+const SWITCH_RN_STYLE_OBJ = {
+  marginRight: 10,
+};
+
 const propTypes = {
-  label: PropTypes.string,
   isChecked: PropTypes.bool.isRequired,
+  label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   label: undefined,
-  isChecked: false,
 };
 
 export default class Switch extends React.Component {
 
   constructor(props) {
     super(props);
-    this.onClick = this.onClick.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
-  onClick() {
+  onChange() {
     const { isChecked, onChange } = this.props;
     onChange(!isChecked);
   }
@@ -36,14 +39,12 @@ export default class Switch extends React.Component {
           {label ? label.toUpperCase() : label}
         </SwitchLabel>
         <SwitchRN
-          onValueChange={this.onClick}
-          onTintColor={BINARY_COLOR_BLUE_40}
+          style={SWITCH_RN_STYLE_OBJ}
           thumbTintColor="#FFF"
           tintColor={BINARY_COLOR_GRAY_80}
           value={isChecked}
-          style={{
-            marginRight: 10,
-          }}
+          onTintColor={BINARY_COLOR_BLUE_40}
+          onValueChange={this.onChange}
         />
       </SwitchWrapper>
     );

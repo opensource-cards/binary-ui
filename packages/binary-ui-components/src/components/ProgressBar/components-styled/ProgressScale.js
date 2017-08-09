@@ -1,4 +1,4 @@
-import { BINARY_COLOR_RED_40, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 const halfHeight = LIST_ITEM_HEIGHT / 2;

@@ -5,7 +5,6 @@ import SectionContentWrapper from '../components-styled/SectionContentWrapper';
 import SectionTitleWrapper from '../components-styled/SectionTitleWrapper';
 import SectionTitleText from '../components-styled/SectionTitleText';
 
-
 const propTypes = {
   children: PropTypes.node,
   label: PropTypes.string.isRequired,

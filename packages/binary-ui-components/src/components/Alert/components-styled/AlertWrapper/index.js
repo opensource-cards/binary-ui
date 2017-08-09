@@ -5,11 +5,12 @@ import {
   BINARY_COLOR_YELLOW_50,
   NO_SELECT_CSS,
 } from 'binary-ui-styles';
-import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
 import styled from 'styled-components';
 import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
+import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
 
-const ALERT_COMMON_STYLES = `
+export default styled.div`
+  ${NO_SELECT_CSS}
   ${CURSOR_POINTER_CSS}
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -19,41 +20,18 @@ const ALERT_COMMON_STYLES = `
   margin: 3px auto 0 auto;
   transition: background-color 0.5s ease-in-out;
   width: 100%;
-`;
-
-export const ALERT_STYLE = `
-  background: ${BINARY_COLOR_GRAY_40};
-  color: white;
-`;
-
-export const ALERT_STYLE_CONFIRM = `
-  background: ${BINARY_COLOR_BLUE_40};
-  color: white;
-`;
-
-export const ALERT_STYLE_PRIORITY = `
-  background: ${BINARY_COLOR_YELLOW_50};
-  color: black;
-`;
-
-export const ALERT_STYLE_CRITICAL = `
-  background: ${BINARY_COLOR_RED_40};
-  color: white;
-`;
-
-export default styled.div`
   ${props => {
     switch (props.alertType) {
       case INFO:
-        return `${NO_SELECT_CSS}${ALERT_COMMON_STYLES}${ALERT_STYLE}`;
+        return `background: ${BINARY_COLOR_GRAY_40};color: white;`;
       case CONFIRM:
-        return `${NO_SELECT_CSS}${ALERT_COMMON_STYLES}${ALERT_STYLE_CONFIRM}`;
+        return `background: ${BINARY_COLOR_BLUE_40};color: white;`;
       case PRIORITY:
-        return `${NO_SELECT_CSS}${ALERT_COMMON_STYLES}${ALERT_STYLE_PRIORITY}`;
+        return `background: ${BINARY_COLOR_YELLOW_50};color: black;`;
       case CRITICAL:
-        return `${NO_SELECT_CSS}${ALERT_COMMON_STYLES}${ALERT_STYLE_CRITICAL}`;
+        return `background: ${BINARY_COLOR_RED_40};color: white;`;
       default:
-        return `${NO_SELECT_CSS}${ALERT_COMMON_STYLES}${ALERT_STYLE}`;
+        return `background: ${BINARY_COLOR_GRAY_40};color: white;`;
     }
   }}
 `;

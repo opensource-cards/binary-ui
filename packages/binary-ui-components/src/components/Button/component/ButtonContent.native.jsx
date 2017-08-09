@@ -6,7 +6,8 @@ import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyled from '../../IconStyled';
 import { getActionColorExt, getHighlightEditStyle } from '../../../utils/styles-api';
-import { ICON_STYLE_OBJ } from '../../../utils/styles';
+
+const ICON_STYLE_OBJ = { marginRight: 8 };
 
 const propTypes = {
   color: PropTypes.string.isRequired,
@@ -23,7 +24,7 @@ const ButtonContent = ({ color, isBold, isEdit, isDisabled, label, renderIcon })
   <ButtonWrapper
     style={getHighlightEditStyle(isEdit, true, false, undefined)}
   >
-    <View style={{ marginRight: 8 }} >
+    <View style={ICON_STYLE_OBJ} >
       <IconStyled
         color={getActionColorExt(
           color,

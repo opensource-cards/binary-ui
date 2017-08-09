@@ -4,6 +4,7 @@ import {
 } from 'binary-ui-styles';
 
 export const COLOR_BLACK = '#000000';
+
 export const TAP_HIGHLIGHT_COLOR = 'rgba(0, 0, 0, 0.05)';
 
 export const CARDS_BUTTON_CSS = `

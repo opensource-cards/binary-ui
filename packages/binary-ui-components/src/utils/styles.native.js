@@ -24,10 +24,5 @@ export const CARDS_ICON_CSS = `
 `;
 
 export const CARDS_INPUT_RESET_CSS = `
-  /*
-  border: 0;
-  box-sizing: border-box;
-  outline: 0;
-  */
   padding: 0;
 `;

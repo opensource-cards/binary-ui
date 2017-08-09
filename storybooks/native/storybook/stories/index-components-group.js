@@ -1,5 +1,5 @@
 import React from 'react';
-import { Picker, View } from 'react-native';
+import { View } from 'react-native';
 
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
@@ -43,10 +43,4 @@ storiesOf('binary-ui-components', module)
         renderRight={() => (<Textline isEdit >+8227073791</Textline>)}
       />
     </View>
-  ))
-  .add('Select', () => (
-    <Picker selectedValue="java" >
-      <Picker.Item label="Java" value="java" />
-      <Picker.Item label="JavaScript" value="js" />
-    </Picker>
   ));

@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import ActionListItemIconContent from './ActionListItemIconContent';
-import { ICON_STYLE_OBJ } from '../../utils/styles';
 
 const propTypes = {
   isDisabled: PropTypes.bool,

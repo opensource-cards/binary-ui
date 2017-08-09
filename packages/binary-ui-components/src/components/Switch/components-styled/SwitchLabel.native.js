@@ -1,8 +1,6 @@
 import { FONT_FAMILY_MAIN } from 'binary-ui-styles';
 import styled from 'styled-components/native';
-import {
-  FIELD_NAME_FONT_CSS,
-} from '../../../utils/styles';
+import { FIELD_NAME_FONT_CSS } from '../../../utils/styles';
 
 export default styled.Text`
   ${FIELD_NAME_FONT_CSS}

@@ -4,6 +4,20 @@ import SliderComponent from 'react-native-slider';
 import SliderContainer from '../components-styled/SliderContainer';
 import SliderScaleIcon from '../components-styled/SliderScaleIcon';
 
+const SLIDER_STYLE_OBJ = {
+  flex: 9,
+};
+
+const TRACK_STYLE_OBJ = {
+  height: 1,
+};
+
+const THUMB_STYLE_OBJ = {
+  backgroundColor: '#FFF',
+  borderWidth: 1,
+  borderColor: '#000',
+};
+
 const propTypes = {
   position: PropTypes.number.isRequired,
   renderIconLeft: PropTypes.func,
@@ -22,18 +36,10 @@ const Slider = ({ position, renderIconLeft, renderIconRight, onPositionChange })
       {renderIconLeft ? renderIconLeft() : null}
     </SliderScaleIcon>
     <SliderComponent
-      style={{
-        flex: 9,
-      }}
-      trackStyle={{
-        height: 1,
-      }}
+      style={SLIDER_STYLE_OBJ}
+      trackStyle={TRACK_STYLE_OBJ}
       minimumTrackTintColor="#b3b3b3"
-      thumbStyle={{
-        backgroundColor: '#FFF',
-        borderWidth: 1,
-        borderColor: '#000',
-      }}
+      thumbStyle={THUMB_STYLE_OBJ}
       value={position}
       onValueChange={onPositionChange}
     />

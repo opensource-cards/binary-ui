@@ -1,46 +1,24 @@
-import {
-  FONT_FAMILY_MAIN,
-} from 'binary-ui-styles';
+import { FONT_FAMILY_MAIN } from 'binary-ui-styles';
 import styled from 'styled-components/native';
 import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
-const ALERT_TEXT_COMMON_STYLES = `
+export default styled.Text`
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 14;
   font-weight: 400;
   padding-left: 15;
-`;
-
-export const ALERT_STYLE = `
-  color: #FFFFFF;
-`;
-
-export const ALERT_STYLE_CONFIRM = `
-  color: #FFFFFF;
-`;
-
-export const ALERT_STYLE_PRIORITY = `
-  color: #000000;
-`;
-
-export const ALERT_STYLE_CRITICAL = `
-  color: #FFFFFF;
-`;
-
-
-export default styled.Text`
   ${props => {
     switch (props.alertType) {
       case INFO:
-        return `${ALERT_TEXT_COMMON_STYLES}${ALERT_STYLE}`;
+        return 'color: #FFFFFF;';
       case CONFIRM:
-        return `${ALERT_TEXT_COMMON_STYLES}${ALERT_STYLE_CONFIRM}`;
+        return 'color: #FFFFFF;';
       case PRIORITY:
-        return `${ALERT_TEXT_COMMON_STYLES}${ALERT_STYLE_PRIORITY}`;
+        return 'color: #000000;';
       case CRITICAL:
-        return `${ALERT_TEXT_COMMON_STYLES}${ALERT_STYLE_CRITICAL}`;
+        return 'color: #FFFFFF;';
       default:
-        return `${ALERT_TEXT_COMMON_STYLES}${ALERT_STYLE}`;
+        return 'color: #FFFFFF;';
     }
   }}
 `;

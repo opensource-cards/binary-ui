@@ -1,10 +1,10 @@
 import IconDone from 'binary-ui-icons/binary/Done';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { TouchableOpacity } from 'react-native';
 import ImageContent from '../../components-styled/ImageContent';
 
 const propTypes = {
-  imageFit: PropTypes.string.isRequired,
   imageId: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   isSelected: PropTypes.bool.isRequired,
@@ -30,11 +30,18 @@ export default class Image extends React.Component {
   }
 
   render() {
-    const { imageFit, imageUrl, isSelected } = this.props;
+    const { imageUrl, isSelected } = this.props;
     return (
-      <ImageContent imageFit={imageFit} imageUrl={imageUrl} onClick={this.onImageClick} >
-        {isSelected ? (<IconDone size={40} color="#FFF" />) : null}
-      </ImageContent>
+      <TouchableOpacity activeOpacity={0.5} onPress={this.onImageClick} >
+        <ImageContent
+          source={{ uri: imageUrl }}
+          style={{ width: 60, height: 60 }}
+        >
+          {isSelected ? (
+            <IconDone size={40} color="#FFF" />
+          ) : null}
+        </ImageContent>
+      </TouchableOpacity>
     );
   }
 }
