@@ -26,6 +26,7 @@
     "binary-ui-styles": "^0.2.17",
     "mask-parser": "^0.0.1",
     "prop-types": "^15.5.10",
+    "react-native-slider": "^0.11.0",
     "styled-components": "^2.0.0"
   },
   "peerDependencies": {

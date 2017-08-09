@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SectionWrapper from '../components-styled/SectionWrapper';
 import SectionContentWrapper from '../components-styled/SectionContentWrapper';
-import SectionTitle from '../components-styled/SectionTitle';
+import SectionTitleWrapper from '../components-styled/SectionTitleWrapper';
+import SectionTitleText from '../components-styled/SectionTitleText';
+
 
 const propTypes = {
   children: PropTypes.node,
@@ -15,9 +17,11 @@ const defaultProps = {
 
 const Section = ({ children, label }) => (
   <SectionWrapper>
-    <SectionTitle>
-      {label.toUpperCase()}
-    </SectionTitle>
+    <SectionTitleWrapper>
+      <SectionTitleText>
+        {label.toUpperCase()}
+      </SectionTitleText>
+    </SectionTitleWrapper>
     <SectionContentWrapper>
       {children}
     </SectionContentWrapper>

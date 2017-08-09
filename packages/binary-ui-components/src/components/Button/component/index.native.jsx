@@ -1,9 +1,9 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { TouchableHighlight, View } from 'react-native';
 import ButtonContent from './ButtonContent.native';
-import { COLOR_BLACK } from '../../../utils/styles';
+import { TAP_HIGHLIGHT_COLOR } from '../../../utils/styles.native-and-web';
 
 const propTypes = {
   color: PropTypes.string,
@@ -16,21 +16,37 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: COLOR_BLACK,
+  color: '#000000',
   isBold: false,
   isDisabled: false,
   isEdit: true,
   renderIcon: () => (<ArrowRight />),
 };
 
-const Button = ({ isDisabled, onClick, ...props }) => (
+const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick, ...props }) => (
   !isDisabled ? (
-    <TouchableOpacity onPress={onClick} {...props} >
-      <ButtonContent isDisabled={isDisabled} />
-    </TouchableOpacity>
+    <TouchableHighlight underlayColor={TAP_HIGHLIGHT_COLOR} onPress={onClick} {...props} >
+      <View {...props}>
+        <ButtonContent
+          color={color}
+          isBold={isBold}
+          isDisabled={isDisabled}
+          isEdit={isEdit}
+          label={label}
+          renderIcon={renderIcon}
+        />
+      </View>
+    </TouchableHighlight>
   ) : (
     <View {...props} >
-      <ButtonContent isDisabled={isDisabled} />
+      <ButtonContent
+        color={color}
+        isBold={isBold}
+        isDisabled={isDisabled}
+        isEdit={isEdit}
+        label={label}
+        renderIcon={renderIcon}
+      />
     </View>
   )
 );

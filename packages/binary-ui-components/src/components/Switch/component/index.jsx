@@ -8,7 +8,7 @@ import SwitchLabel from '../components-styled/SwitchLabel';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const propTypes = {
-  label: PropTypes.node,
+  label: PropTypes.string,
   isChecked: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
 };
@@ -34,7 +34,7 @@ export default class Switch extends React.Component {
     return (
       <SwitchWrapper>
         <SwitchLabel>
-          {label}
+          {label ? label.toUpperCase() : undefined}
         </SwitchLabel>
         <SwitchToggle>
           <SwitchContainer onClick={this.onClick} >

@@ -15,7 +15,7 @@ const defaultProps = {
 
 const Alert = ({ text, type, ...props }) => (
   <AlertWrapper alertType={type} {...props} >
-    <AlertContent>
+    <AlertContent alertType={type} >
       {text}
     </AlertContent>
   </AlertWrapper>

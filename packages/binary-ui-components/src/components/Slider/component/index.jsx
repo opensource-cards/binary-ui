@@ -3,7 +3,6 @@ import React from 'react';
 import SliderBar from './SliderBar';
 import SliderContainer from '../components-styled/SliderContainer';
 import SliderScaleIcon from '../components-styled/SliderScaleIcon';
-
 const propTypes = {
   position: PropTypes.number.isRequired,
   renderIconLeft: PropTypes.func,

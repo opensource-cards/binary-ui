@@ -36,7 +36,7 @@ export default class Checkbox extends React.Component {
     const { isChecked, onChange, onClick, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     return (
-      <TouchableOpacity onPress={this.onPress} {...props} >
+      <TouchableOpacity activeOpacity={0.5} onPress={this.onPress} {...props} >
         {isChecked ? (
           <Check color={BINARY_COLOR_BLUE_40} size={30} />
         ) : (

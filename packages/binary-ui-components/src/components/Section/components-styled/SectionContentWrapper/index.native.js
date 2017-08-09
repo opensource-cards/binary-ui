@@ -1,5 +1,3 @@
 import styled from 'styled-components/native';
 
-export default styled.View`
-  padding: 10;
-`;
+export default styled.View``;

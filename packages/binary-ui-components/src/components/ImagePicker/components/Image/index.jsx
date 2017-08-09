@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ImageContent from '../../components-styled/ImageContent';
-import ImageCheckmark from '../../components-styled/ImageCheckmark';
+import IconDone from 'binary-ui-icons/binary/Done';
 
 const propTypes = {
   imageFit: PropTypes.string.isRequired,
@@ -33,7 +33,7 @@ export default class Image extends React.Component {
     const { imageFit, imageUrl, isSelected } = this.props;
     return (
       <ImageContent imageFit={imageFit} imageUrl={imageUrl} onClick={this.onImageClick} >
-        {isSelected ? (<ImageCheckmark />) : null}
+        {isSelected ? (<IconDone size={40} color="#FFF" />) : null}
       </ImageContent>
     );
   }
