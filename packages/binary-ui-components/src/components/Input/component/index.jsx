@@ -9,6 +9,7 @@ import { getValidatedPhone } from '../utils/validation';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
+  isBold: PropTypes.bool,
   isValid: PropTypes.bool,
   mask: PropTypes.string,
   styleBorderColor: PropTypes.string,
@@ -22,6 +23,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  isBold: false,
   isValid: true,
   mask: undefined,
   styleBorderColor: undefined,
@@ -126,6 +128,7 @@ export default class Input extends React.Component {
   render() {
     /* eslint-disable no-unused-vars  */
     const {
+      isBold,
       isValid,
       mask,
       styleBorderColor,
@@ -145,9 +148,10 @@ export default class Input extends React.Component {
           <InputIcon renderIcon={renderIcon} onClick={onMoreClick} />
         )}
         <InputStyled
+          isBold={isBold}
           type={type}
           innerRef={this.onSetInputRef}
-          value={this.getFormattedValue(type, mask, value)}
+          value={this.getFormattedValue(type, mask, isBold ? value.toUpperCase() : value)}
           onBlur={this.onBlur}
           onChange={this.onChange}
           onFocus={this.onFocus}

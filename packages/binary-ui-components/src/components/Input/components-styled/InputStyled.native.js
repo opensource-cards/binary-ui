@@ -1,9 +1,13 @@
 import styled from 'styled-components/native';
-import { FONT_FAMILY_MAIN, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
+import {
+  FIELD_VALUE_FONT_CSS,
+  FIELD_NAME_FONT_CSS,
+} from '../../../utils/styles';
 
 export default styled.TextInput`
   flex: 9;
-  font-family: ${FONT_FAMILY_MAIN};
+  ${props => (props.isBold ? FIELD_NAME_FONT_CSS : FIELD_VALUE_FONT_CSS)}
   height: ${LIST_ITEM_HEIGHT};
   padding-left: 10;
 `;
