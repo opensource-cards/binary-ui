@@ -26,7 +26,7 @@ const defaultProps = {
 const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick, ...props }) => (
   !isDisabled ? (
     <TouchableHighlight underlayColor={TAP_HIGHLIGHT_COLOR} onPress={onClick} {...props} >
-      <View {...props}>
+      <View style={{ width: '100%' }} {...props}>
         <ButtonContent
           color={color}
           isBold={isBold}
@@ -38,7 +38,7 @@ const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick,
       </View>
     </TouchableHighlight>
   ) : (
-    <View {...props} >
+    <View style={{ width: '100%' }} {...props} >
       <ButtonContent
         color={color}
         isBold={isBold}

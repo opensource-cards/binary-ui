@@ -59,7 +59,8 @@ storiesOf('binary-ui-components', module)
       />
       <Group
         renderLeft={() => (<Textline isBold >Label</Textline>)}
-        renderRight={() => (<Textline isEdit >+8227073791</Textline>)}
+        renderRight={() => (<Button label="Button" isEdit renderIcon={() => (<ArrowDown />)} onClick={action()} />)}
       />
+      <Button label="Button" isEdit renderIcon={() => (<ArrowDown />)} onClick={action()} />
     </div>
   ));
