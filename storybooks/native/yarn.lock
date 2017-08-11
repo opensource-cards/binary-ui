@@ -5994,6 +5994,10 @@ react-native-compat@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/react-native-compat/-/react-native-compat-0.0.2.tgz#5d7642f3d53ad324a025893be3c66d16a01cda23"
 
+react-native-image-picker@^0.26.3:
+  version "0.26.3"
+  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-0.26.3.tgz#0ad2eede49501a7046d8046a73813696539c3dcd"
+
 react-native-maps@0.15.3:
   version "0.15.3"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.15.3.tgz#5d9e0a8e30ecc51dc755b7a3b9d6b6ed5e2dd08c"
@@ -7557,7 +7561,7 @@ webpack-sources@^1.0.1:
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
 
-"websql@github:expo/node-websql#18.0.0":
+websql@expo/node-websql#18.0.0:
   version "0.4.4"
   resolved "https://codeload.github.com/expo/node-websql/tar.gz/e364fa65146a9e2157a19e5c719e7702c2b6b87a"
   dependencies:

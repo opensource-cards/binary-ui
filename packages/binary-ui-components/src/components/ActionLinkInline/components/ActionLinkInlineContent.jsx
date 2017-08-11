@@ -24,6 +24,7 @@ const defaultProps = {
 };
 
 export default class ActionLinkInlineContent extends React.Component {
+
   renderIcon(renderIcon) {
     const { isActive, isDisabled, size } = this.props;
     return (

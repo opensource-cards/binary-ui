@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ImageUploadIcon from '../ImageUploadIcon';
 import ImageUploadInput from '../../components-styled/ImageUploadInput';
 import ImageUploadWrapper from '../../components-styled/ImageUploadWrapper';
 
 const propTypes = {
-  imageUploadUrl: PropTypes.string.isRequired,
+  renderIcon: PropTypes.func.isRequired,
   onImageUpload: PropTypes.func.isRequired,
 };
 
@@ -16,7 +17,8 @@ export default class ImageUpload extends React.Component {
     super(props);
     this.onDivClick = this.onDivClick.bind(this);
     this.onLoaderClick = this.onLoaderClick.bind(this);
-    this.setLoaderRef = this.setLoaderRef.bind(this);
+    this.onImageUpload = this.onImageUpload.bind(this);
+    this.onSetLoaderRef = this.onSetLoaderRef.bind(this);
   }
 
   onDivClick() {
@@ -27,21 +29,32 @@ export default class ImageUpload extends React.Component {
     this.loader.value = null;
   }
 
-  setLoaderRef(loader) {
+  onImageUpload(e) {
+    const reader = new FileReader();
+    const file = e.target.files[0];
+    reader.onload = (upload) => {
+      const { onImageUpload } = this.props;
+      onImageUpload(upload.target.result);
+    };
+    reader.readAsDataURL(file);
+  }
+
+  onSetLoaderRef(loader) {
     this.loader = loader;
   }
 
   render() {
-    const { imageUploadUrl, onImageUpload } = this.props;
+    const { renderIcon } = this.props;
     return (
-      <ImageUploadWrapper imageUploadUrl={imageUploadUrl} onClick={this.onDivClick} >
+      <ImageUploadWrapper imageUploadUrl={renderIcon} onClick={this.onDivClick} >
         <ImageUploadInput
           accept="image/*"
-          innerRef={this.setLoaderRef}
+          innerRef={this.onSetLoaderRef}
           type="file"
           onClick={this.onLoaderClick}
-          onChange={onImageUpload}
+          onChange={this.onImageUpload}
         />
+        <ImageUploadIcon renderIcon={renderIcon} />
       </ImageUploadWrapper>
     );
   }

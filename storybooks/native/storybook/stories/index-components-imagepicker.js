@@ -1,3 +1,4 @@
+import IconCamera from 'binary-ui-icons/binary/CameraAlt';
 import React from 'react';
 import { View } from 'react-native';
 
@@ -17,8 +18,12 @@ storiesOf('binary-ui-components', module)
           id: imageSelectedId,
         }]}
         imageSelectedId={imageSelectedId}
+        renderUploadIcon={() => (
+          <IconCamera />
+        )}
         isImageUpload={false}
         onImageClick={action()}
+        onImageUpload={action()}
       />
       <ImagePicker
         images={[{
@@ -27,7 +32,11 @@ storiesOf('binary-ui-components', module)
         }]}
         imageSelectedId={imageSelectedId}
         isImageUpload={true}
+        renderUploadIcon={() => (
+          <IconCamera />
+        )}
         onImageClick={action()}
+        onImageUpload={action()}
       />
     </View>
   ));

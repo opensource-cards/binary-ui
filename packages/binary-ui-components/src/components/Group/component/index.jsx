@@ -18,11 +18,11 @@ const defaultProps = {
 const Group = ({ renderLeft, renderRight }) => (
   <Wrapper>
     <Left>
-     {renderLeft ? renderLeft() : null}
+      {renderLeft ? renderLeft() : null}
     </Left>
     <Divider />
     <Right>
-     {renderRight ? renderRight() : null}
+      {renderRight ? renderRight() : null}
     </Right>
   </Wrapper>
 );

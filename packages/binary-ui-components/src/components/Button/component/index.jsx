@@ -33,11 +33,7 @@ const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick 
     onClick={!isDisabled && onClick}
   >
     <IconStyled
-      color={getActionColorExt(
-        color,
-        BINARY_COLOR_GRAY_40,
-        isDisabled
-      )}
+      color={getActionColorExt(color, BINARY_COLOR_GRAY_40, isDisabled)}
       size={18}
       style={ICON_STYLE_OBJ}
       renderIcon={renderIcon}

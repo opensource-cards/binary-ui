@@ -6,10 +6,10 @@ export default styled.div`
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 14px;
   font-weight: 400;
+  overflow: hidden;
   padding-left: 15px;
   padding-right: 15px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
   -webkit-font-smoothing: antialiased;
 `;

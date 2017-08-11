@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionableIcon from '../ActionableIcon';
+import ActionableIcon from '../../../ActionableIcon';
 
 const propTypes = {
   color: PropTypes.string,

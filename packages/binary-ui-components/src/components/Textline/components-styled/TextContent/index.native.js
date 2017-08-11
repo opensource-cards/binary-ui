@@ -9,9 +9,9 @@ import {
 export default styled.Text.attrs({
   numberOfLines: 1,
 })`
-  padding-left: 10;
-  font-family: ${FONT_FAMILY_MAIN};
   flex: 9;
+  font-family: ${FONT_FAMILY_MAIN};
+  padding-left: 10;
   ${props => (props.isDisabled ? CARDS_ICON_DISABLED_CSS : undefined)}
   ${props => (props.isBold ? FIELD_NAME_FONT_CSS : FIELD_VALUE_FONT_CSS)}
 `;

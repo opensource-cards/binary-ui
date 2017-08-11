@@ -9,21 +9,18 @@ const propTypes = {
   color: PropTypes.string,
   isDisabled: PropTypes.bool.isRequired,
   size: PropTypes.number,
-  style: PropTypes.object,
   renderIcon: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   color: COLOR_BLACK,
   size: undefined,
-  style: {},
 };
 
 const ActionableIcon = ({
   color,
-  size,
   isDisabled,
-  style,
+  size,
   renderIcon,
   ...props,
 }) => (
@@ -34,7 +31,6 @@ const ActionableIcon = ({
       isDisabled
     )}
     size={size}
-    style={style}
     renderIcon={renderIcon}
     {...props}
   />

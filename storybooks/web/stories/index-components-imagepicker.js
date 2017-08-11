@@ -1,11 +1,13 @@
-import infoAddon from '@storybook/addon-info';
-import { setAddon, storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from '@storybook/addon-info';
+import IconCamera from 'binary-ui-icons/binary/CameraAlt';
 import React from 'react';
 import styled from 'styled-components';
 import { getImg } from './resources/fake-img';
 import uuid from 'uuid';
+
+import infoAddon from '@storybook/addon-info';
+import { setAddon, storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { withInfo } from '@storybook/addon-info';
 
 import ImagePicker from 'binary-ui-components/mobile/ImagePicker';
 
@@ -18,25 +20,29 @@ storiesOf('binary-ui-components', module)
     <div>
       <ImagePicker
         imageFit="contain"
-        imageUploadUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
         images={[{
           url: getImg(),
           id: imageSelectedId,
         }]}
         imageSelectedId={imageSelectedId}
         isImageUpload={false}
+        renderUploadIcon={() => (
+          <IconCamera />
+        )}
         onImageClick={action()}
         onImageUpload={action()}
       />
       <ImagePicker
         imageFit="contain"
-        imageUploadUrl="https://dararweyne.files.wordpress.com/2012/04/23.jpg?w=2000&h="
         images={[{
           url: getImg(),
           id: imageSelectedId,
         }]}
         imageSelectedId={imageSelectedId}
         isImageUpload
+        renderUploadIcon={() => (
+          <IconCamera />
+        )}
         onImageClick={action()}
         onImageUpload={action()}
       />

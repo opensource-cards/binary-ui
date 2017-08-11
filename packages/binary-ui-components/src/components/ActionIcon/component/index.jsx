@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ActionIconContent from './ActionIconContent';
-import ActionWrapper from '../ActionWrapper';
+import ActionWrapper from '../../ActionWrapper';
 
 const propTypes = {
   color: PropTypes.string,

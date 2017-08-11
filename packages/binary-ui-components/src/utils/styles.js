@@ -1,15 +1,16 @@
-import { BINARY_COLOR_GRAY_60, FONT_FAMILY_MAIN, NO_SELECT_CSS } from 'binary-ui-styles';
+import { BINARY_COLOR_GRAY_60, FONT_FAMILY_MAIN } from 'binary-ui-styles';
 import {
-  CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_NATIVE_AND_WEB,
   COLOR_BLACK,
   HIGHLIGHT_CSS,
   LIST_ITEM_HALF_HEIGHT,
+  TAP_HIGHLIGHT_COLOR,
 } from './styles.native-and-web';
 
 export {
   COLOR_BLACK,
   HIGHLIGHT_CSS,
   LIST_ITEM_HALF_HEIGHT,
+  TAP_HIGHLIGHT_COLOR,
 };
 
 export const ICON_STYLE_OBJ = { paddingRight: 10 };
@@ -50,14 +51,4 @@ export const LIST_ITEM_CONTENTS_BASE_CSS = `
   overflow: hidden;
   display: inline-block;
   outline: 0;
-`;
-
-export const CARDS_ICON_CSS = `
-  ${NO_SELECT_CSS}
-  color: black;
-`;
-
-export const CARDS_BUTTON_CSS = `
-  ${NO_SELECT_CSS}
-  ${CARDS_BUTTON_CSS_NATIVE_AND_WEB};
 `;

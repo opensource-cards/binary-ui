@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import SelectArrow from '../components-styled/SelectArrow';
-import SelectOption from '../components-styled/SelectOption';
 import SelectStyled from '../components-styled/SelectStyled';
 import SelectWrapper from '../components-styled/SelectWrapper';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
@@ -40,9 +39,9 @@ export default class Select extends React.Component {
         <SelectArrow size={18} />
         <SelectStyled isBold={isBold} value={selected} onChange={this.onChange} >
           {items.map((listItem) => (
-            <SelectOption key={listItem.key} value={listItem.value} >
+            <option key={listItem.key} value={listItem.value} >
               {listItem.label}
-            </SelectOption>
+            </option>
           ))}
         </SelectStyled>
       </SelectWrapper>

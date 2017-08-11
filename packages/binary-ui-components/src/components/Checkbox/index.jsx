@@ -26,7 +26,7 @@ export default class Checkbox extends React.Component {
     if (onClick) {
       onClick(e);
     }
-    onChange(e, !isChecked);
+    onChange(!isChecked);
   }
 
   render() {

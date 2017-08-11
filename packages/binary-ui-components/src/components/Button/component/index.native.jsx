@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight, View } from 'react-native';
 import ButtonContent from './ButtonContent.native';
-import { TAP_HIGHLIGHT_COLOR } from '../../../utils/styles.native-and-web';
+import { COLOR_BLACK, TAP_HIGHLIGHT_COLOR } from '../../../utils/styles';
 
 const propTypes = {
   color: PropTypes.string,
@@ -16,17 +16,30 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: '#000000',
+  color: COLOR_BLACK,
   isBold: false,
   isDisabled: false,
   isEdit: true,
   renderIcon: () => (<ArrowRight />),
 };
 
-const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick, ...props }) => (
+const Button = ({
+  color,
+  isBold,
+  isDisabled,
+  isEdit,
+  label,
+  renderIcon,
+  onClick,
+  ...props,
+}) => (
   !isDisabled ? (
-    <TouchableHighlight underlayColor={TAP_HIGHLIGHT_COLOR} onPress={onClick} {...props} >
-      <View style={{ width: '100%' }} {...props}>
+    <TouchableHighlight
+      underlayColor={TAP_HIGHLIGHT_COLOR}
+      onPress={onClick}
+      {...props}
+    >
+      <View style={{ width: '100%' }} >
         <ButtonContent
           color={color}
           isBold={isBold}
@@ -38,7 +51,7 @@ const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick,
       </View>
     </TouchableHighlight>
   ) : (
-    <View style={{ width: '100%' }} {...props} >
+    <View {...props} >
       <ButtonContent
         color={color}
         isBold={isBold}

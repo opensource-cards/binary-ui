@@ -8,11 +8,11 @@ import { TouchableOpacity } from 'react-native';
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
-  onClick: PropTypes.func,
+  onPress: PropTypes.func,
 };
 
 const defaultProps = {
-  onClick: undefined,
+  onPress: undefined,
 };
 
 export default class Checkbox extends React.Component {
@@ -23,17 +23,17 @@ export default class Checkbox extends React.Component {
   }
 
   onPress() {
-    const { isChecked, onChange, onClick } = this.props;
-    if (onClick) {
-      onClick();
+    const { isChecked, onChange, onPress } = this.props;
+    if (onPress) {
+      onPress();
     }
     onChange(!isChecked);
   }
 
   render() {
-    // NOTE: no need to set 'onChange' and 'onClick' handlers
+    // NOTE: no need to set 'onChange' and 'onPress' handlers
     /* eslint-disable no-unused-vars */
-    const { isChecked, onChange, onClick, ...props } = this.props;
+    const { isChecked, onChange, onPress, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     return (
       <TouchableOpacity activeOpacity={0.5} onPress={this.onPress} {...props} >

@@ -13,8 +13,8 @@ export default styled.View.attrs({
   border-top-left-radius: 5;
   border-top-right-radius: 5;
   height: 40px;
-  margin-top: 3px;
   justify-content: center;
+  margin-top: 3px;
   width: 100%;
   shadow-color: #000;
   shadow-opacity: 0.1;

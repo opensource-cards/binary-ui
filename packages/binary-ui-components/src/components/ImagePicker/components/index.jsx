@@ -5,13 +5,13 @@ import ImageUpload from './ImageUpload';
 import ImagePickerWrapper from '../components-styled/ImagePickerWrapper';
 
 const propTypes = {
-  imageUploadUrl: PropTypes.string.isRequired,
   imageFit: PropTypes.string,
   imageSelectedId: PropTypes.string,
   images: PropTypes.array,
   isImageUpload: PropTypes.bool,
+  renderUploadIcon: PropTypes.func.isRequired,
   onImageClick: PropTypes.func,
-  onImageUpload: PropTypes.func.isRequired,
+  onImageUpload: PropTypes.func,
 };
 
 const defaultProps = {
@@ -20,6 +20,7 @@ const defaultProps = {
   images: [],
   isImageUpload: true,
   onImageClick: undefined,
+  onImageUpload: undefined,
 };
 
 export default class ImagePicker extends React.Component {
@@ -27,17 +28,6 @@ export default class ImagePicker extends React.Component {
   constructor(props) {
     super(props);
     this.onImageClick = this.onImageClick.bind(this);
-    this.onImageUpload = this.onImageUpload.bind(this);
-  }
-
-  onImageUpload(e) {
-    const reader = new FileReader();
-    const file = e.target.files[0];
-    reader.onload = (upload) => {
-      const { onImageUpload } = this.props;
-      onImageUpload(upload.target.result);
-    };
-    reader.readAsDataURL(file);
   }
 
   onImageClick(imageId) {
@@ -51,10 +41,11 @@ export default class ImagePicker extends React.Component {
   render() {
     const {
       images,
-      imageUploadUrl,
       imageFit,
       imageSelectedId,
       isImageUpload,
+      renderUploadIcon,
+      onImageUpload,
     } = this.props;
     return (
       <ImagePickerWrapper>
@@ -65,11 +56,11 @@ export default class ImagePicker extends React.Component {
             imageUrl={image.url}
             isSelected={image.id === imageSelectedId}
             key={image.id}
-            onImageClick={this.onImageClick}
+            onClick={this.onImageClick}
           />
         ))}
         {isImageUpload ? (
-          <ImageUpload imageUploadUrl={imageUploadUrl} onImageUpload={this.onImageUpload} />
+          <ImageUpload renderIcon={renderUploadIcon} onImageUpload={onImageUpload} />
         ) : null}
       </ImagePickerWrapper>
     );

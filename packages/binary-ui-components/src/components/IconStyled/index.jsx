@@ -12,7 +12,7 @@ const propTypes = {
 const defaultProps = {
   color: undefined,
   size: undefined,
-  style: undefined,
+  style: {},
 };
 
 const IconStyled = ({ color, size, style, renderIcon }) => {

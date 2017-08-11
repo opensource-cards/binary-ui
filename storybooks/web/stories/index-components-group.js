@@ -6,8 +6,6 @@ import Add from 'binary-ui-icons/binary/Add';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import IconMore from 'binary-ui-icons/binary/More';
-import ActionButton from 'binary-ui-components/mobile/ActionButton';
-import ActionDiv from 'binary-ui-components/mobile/ActionDiv';
 import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
 import ActionLink from 'binary-ui-components/mobile/ActionLink';
 import ActionLinkInline from 'binary-ui-components/mobile/ActionLinkInline';
@@ -27,6 +25,7 @@ import Textline from 'binary-ui-components/mobile/Textline';
 import React from 'react';
 import styled from 'styled-components';
 import uuid from 'uuid';
+
 import { getImg } from './resources/fake-img';
 
 setAddon(infoAddon);
@@ -56,6 +55,10 @@ storiesOf('binary-ui-components', module)
       <Group
         renderLeft={() => (null)}
         renderRight={() => (null)}
+      />
+      <Group
+        renderLeft={() => (<Textline isBold >Label</Textline>)}
+        renderRight={() => (<Textline isEdit >+8227073791</Textline>)}
       />
       <Group
         renderLeft={() => (<Textline isBold >Label</Textline>)}

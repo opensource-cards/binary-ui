@@ -21,10 +21,6 @@ export const CARDS_ICON_DISABLED_CSS = `
   color: ${BINARY_COLOR_GRAY_60};
 `;
 
-export const CARDS_ICON_CSS = `
-  color: black;
-`;
-
 export const CARDS_INPUT_RESET_CSS = `
   padding: 0;
 `;

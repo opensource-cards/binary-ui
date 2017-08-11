@@ -4,7 +4,7 @@ import SliderHandler from '../SliderHandler';
 import SliderScale from '../../components-styled/SliderScale';
 import { HOLD_TIME, TOLERANCE } from '../../utils/config';
 import getPosition from '../../utils/position';
-import { isLeftMouseButton } from '../../../../utils/events';
+import { isLeftMouseButton, isUndefinedButton } from '../../../../utils/events';
 
 const propTypes = {
   position: PropTypes.number.isRequired,
@@ -41,17 +41,17 @@ export default class BarWrapper extends React.Component {
 
   componentDidMount() {
     window.addEventListener('mouseup', this.onMouseUp);
+    window.addEventListener('mousemove', this.onMouseMove);
     window.addEventListener('touchend', this.onTouchEnd);
     window.addEventListener('touchcancel', this.onTouchCancel);
-    window.addEventListener('mousemove', this.onMouseMove);
     window.addEventListener('touchmove', this.onTouchMove);
   }
 
   componentWillUnmount() {
     window.removeEventListener('mouseup', this.onMouseUp);
+    window.removeEventListener('mousemove', this.onMouseMove);
     window.removeEventListener('touchend', this.onTouchEnd);
     window.removeEventListener('touchcancel', this.onTouchCancel);
-    window.removeEventListener('mousemove', this.onMouseMove);
     window.removeEventListener('touchmove', this.onTouchMove);
   }
 
@@ -130,7 +130,7 @@ export default class BarWrapper extends React.Component {
     // allow only left button
     if (
       (holdTimer === null || holdTimer === undefined) &&
-      (isLeftMouseButton(e) || e.button === undefined)
+      (isLeftMouseButton(e) || isUndefinedButton(e))
     ) {
       this.cache.holdHandler = holdHandler;
       this.cache.holdTimer = setTimeout(this.cache.holdHandler, HOLD_TIME, e);

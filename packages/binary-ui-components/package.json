@@ -19,7 +19,8 @@
   },
   "files": [
     "lib",
-    "mobile"
+    "mobile",
+    "web"
   ],
   "dependencies": {
     "binary-ui-icons": "^0.2.19",
@@ -32,6 +33,7 @@
     "react": "^15.3.2",
     "react-art": "^0.15.1",
     "react-native": "^0.47.0",
+    "react-native-image-picker": "^0.26.3",
     "react-native-slider": "^0.11.0"
   },
   "devDependencies": {
@@ -57,6 +59,7 @@
     "react": "~15.3.2",
     "react-art": "^0.15.1",
     "react-native": "^0.47.0",
+    "react-native-image-picker": "^0.26.3",
     "react-native-slider": "^0.11.0",
     "rimraf": "^2.3.4"
   }

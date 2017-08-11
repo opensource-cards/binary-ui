@@ -8,7 +8,9 @@ const propTypes = {
   imageSelectedId: PropTypes.string,
   images: PropTypes.array,
   isImageUpload: PropTypes.bool,
+  renderUploadIcon: PropTypes.func.isRequired,
   onImageClick: PropTypes.func,
+  onImageUpload: PropTypes.func,
 };
 
 const defaultProps = {
@@ -16,6 +18,7 @@ const defaultProps = {
   images: [],
   isImageUpload: true,
   onImageClick: undefined,
+  onImageUpload: undefined,
 };
 
 export default class ImagePicker extends React.Component {
@@ -38,6 +41,8 @@ export default class ImagePicker extends React.Component {
       images,
       imageSelectedId,
       isImageUpload,
+      renderUploadIcon,
+      onImageUpload,
     } = this.props;
     return (
       <ImagePickerWrapper>
@@ -47,11 +52,11 @@ export default class ImagePicker extends React.Component {
             imageUrl={image.url}
             isSelected={image.id === imageSelectedId}
             key={image.id}
-            onImageClick={this.onImageClick}
+            onClick={this.onImageClick}
           />
         ))}
         {isImageUpload ? (
-          <ImageUpload />
+          <ImageUpload renderIcon={renderUploadIcon} onImageUpload={onImageUpload} />
         ) : null}
       </ImagePickerWrapper>
     );

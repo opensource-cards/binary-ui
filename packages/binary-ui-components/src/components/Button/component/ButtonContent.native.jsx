@@ -21,16 +21,10 @@ const propTypes = {
 const defaultProps = {};
 
 const ButtonContent = ({ color, isBold, isEdit, isDisabled, label, renderIcon }) => (
-  <ButtonWrapper
-    style={getHighlightEditStyle(isEdit, true, false, undefined)}
-  >
+  <ButtonWrapper style={getHighlightEditStyle(isEdit, true, false, undefined)} >
     <View style={ICON_STYLE_OBJ} >
       <IconStyled
-        color={getActionColorExt(
-          color,
-          BINARY_COLOR_GRAY_40,
-          isDisabled
-        )}
+        color={getActionColorExt(color, BINARY_COLOR_GRAY_40, isDisabled)}
         size={18}
         renderIcon={renderIcon}
       />
