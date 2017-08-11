@@ -40,7 +40,6 @@ export default class Switch extends React.Component {
         </SwitchLabel>
         <SwitchRN
           style={SWITCH_RN_STYLE_OBJ}
-          thumbTintColor="#FFF"
           tintColor={BINARY_COLOR_GRAY_80}
           value={isChecked}
           onTintColor={BINARY_COLOR_BLUE_40}

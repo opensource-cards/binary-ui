@@ -2,6 +2,8 @@ import { BINARY_COLOR_GRAY_60, FONT_FAMILY_MAIN } from 'binary-ui-styles';
 
 export * from './styles.native-and-web';
 
+export const ICON_STYLE_OBJ = { flex: 1 };
+
 export const FIELD_VALUE_FONT_CSS = `
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 18;

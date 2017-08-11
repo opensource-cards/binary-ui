@@ -3,16 +3,16 @@ import {
   CARDS_BUTTON_CSS as CARDS_BUTTON_CSS_NATIVE_AND_WEB,
   COLOR_BLACK,
   HIGHLIGHT_CSS,
-  ICON_STYLE_OBJ,
   LIST_ITEM_HALF_HEIGHT,
 } from './styles.native-and-web';
 
 export {
   COLOR_BLACK,
   HIGHLIGHT_CSS,
-  ICON_STYLE_OBJ,
   LIST_ITEM_HALF_HEIGHT,
 };
+
+export const ICON_STYLE_OBJ = { paddingRight: 10 };
 
 export const CARDS_ICON_DISABLED_CSS = `
   color: ${BINARY_COLOR_GRAY_60};
