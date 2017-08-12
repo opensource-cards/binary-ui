@@ -11,20 +11,22 @@ import Remove from 'binary-ui-icons/binary/Remove';
 
 setAddon(infoAddon);
 
-
 class SliderDemo extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       position: 0,
     };
-    this.onPositionChange = this.onPositionChange.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
-  onPositionChange(position) {
+
+  onChange(position) {
     this.setState(() => ({
       position,
     }));
   }
+
   render() {
     const { position } = this.state;
     return (
@@ -32,7 +34,7 @@ class SliderDemo extends React.Component {
         position={position}
         renderIconLeft={() => (<Remove />)}
         renderIconRight={() => (<Add />)}
-        onPositionChange={this.onPositionChange}
+        onChange={this.onChange}
       />
     );
   }

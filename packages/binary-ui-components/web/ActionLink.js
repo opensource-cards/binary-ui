@@ -1,2 +1,2 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
-module.exports = require('../lib/components/ActionLink');
+module.exports = require('../lib/components-web/ActionLink');

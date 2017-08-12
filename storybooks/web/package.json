@@ -8,7 +8,6 @@
     "build-storybook": "build-storybook -o ../../docs"
   },
   "dependencies": {
-    "mask-parser": "^0.0.1",
     "prop-types": "^15.5.10",
     "react": "~15.3.2",
     "react-art": "^0.15.1",

@@ -14,59 +14,48 @@ storiesOf('binary-ui-components', module)
         placeholder="Text Placeholder"
         type={INPUT_FIELD_TYPES.TEXT}
         value=""
-        onTextChange={action()}
-        onMoreClick={action()}
+        onChange={action()}
       />
       <Input
         placeholder="Text"
         type={INPUT_FIELD_TYPES.TEXT}
         value="Text"
-        onTextChange={action()}
-        onMoreClick={action()}
+        onChange={action()}
       />
       <Input
         isBold
         placeholder="Bold text"
         type={INPUT_FIELD_TYPES.TEXT}
         value="Bold text"
-        onTextChange={action()}
-        onMoreClick={action()}
+        onChange={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.NUMBER}
         value="1234567890"
         renderIcon={() => (<IconMore />)}
-        onTextChange={action()}
-        onMoreClick={action()}
+        onChange={action()}
+        onIconClick={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.TEL}
         value="010000000"
         renderIcon={() => (<IconMore />)}
-        onTextChange={action()}
-        onMoreClick={action()}
-      />
-      <Input
-        type={INPUT_FIELD_TYPES.TEL}
-        value="010000000"
-        mask="(##) ###-##-##"
-        renderIcon={() => (<IconMore />)}
-        onTextChange={action()}
-        onMoreClick={action()}
+        onChange={action()}
+        onIconClick={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.PASSWORD}
         value="Password"
         renderIcon={() => (<IconMore />)}
-        onTextChange={action()}
-        onMoreClick={action()}
+        onChange={action()}
+        onIconClick={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.EMAIL}
         value="job@try.cards"
         renderIcon={() => (<IconMore />)}
-        onTextChange={action()}
-        onMoreClick={action()}          
+        onChange={action()}
+        onIconClick={action()}
       />
       <Input
         isValid={false}
@@ -74,8 +63,8 @@ storiesOf('binary-ui-components', module)
         type={INPUT_FIELD_TYPES.EMAIL}
         value=""
         renderIcon={() => (<IconMore />)}
-        onTextChange={action()}
-        onMoreClick={action()}          
+        onChange={action()}
+        onIconClick={action()}
       />
     </View>
   ));

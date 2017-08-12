@@ -30,8 +30,8 @@ storiesOf('binary-ui-components', module)
             type={INPUT_FIELD_TYPES.TEL}
             value=""
             renderIcon={() => (<IconMore />)}
-            onTextChange={action()}
-            onMoreClick={action()}
+            onChange={action()}
+            onIconClick={action()}
           />
         )}
       />
@@ -45,8 +45,8 @@ storiesOf('binary-ui-components', module)
       />
       <Group
         renderLeft={() => (<Textline isBold >Label</Textline>)}
-        renderRight={() => (<Button label="Button" isEdit renderIcon={() => (<ArrowDown />)} onClick={action()} />)}
+        renderRight={() => (<Button label="Button" isEdit renderIcon={() => (<ArrowDown />)} onPress={action()} />)}
       />
-      <Button label="Button" isEdit renderIcon={() => (<ArrowDown />)} onClick={action()} />
+      <Button label="Button" isEdit renderIcon={() => (<ArrowDown />)} onPress={action()} />
     </View>
   ));

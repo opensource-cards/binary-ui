@@ -7,8 +7,6 @@ import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import IconMore from 'binary-ui-icons/binary/More';
 import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
-import ActionLink from 'binary-ui-components/mobile/ActionLink';
-import ActionLinkInline from 'binary-ui-components/mobile/ActionLinkInline';
 import Alert, { ALERT_TYPES } from 'binary-ui-components/mobile/Alert';
 import Button from 'binary-ui-components/mobile/Button';
 import Group from 'binary-ui-components/mobile/Group';
@@ -47,8 +45,8 @@ storiesOf('binary-ui-components', module)
             type={INPUT_FIELD_TYPES.TEL}
             value=""
             renderIcon={() => (<IconMore />)}
-            onTextChange={action()}
-            onMoreClick={action()}
+            onChange={action()}
+            onIconClick={action()}
           />
         )}
       />

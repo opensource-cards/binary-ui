@@ -16,7 +16,7 @@ storiesOf('binary-ui-components', module)
       <Textline
         isEdit
         renderIcon={() => (<IconMore />)}
-        onMoreClick={action()}
+        onIconClick={action()}
       >
         Textline Editable
       </Textline>
@@ -24,7 +24,7 @@ storiesOf('binary-ui-components', module)
         isDisabled
         isEdit
         renderIcon={() => (<IconMore />)}
-        onMoreClick={action()}
+        onIconClick={action()}
       >
         Textline Editable Disabled
       </Textline>
@@ -37,7 +37,7 @@ storiesOf('binary-ui-components', module)
       <Textline
         isEdit
         renderIcon={() => (<IconMore />)}
-        onMoreClick={action()}
+        onIconClick={action()}
       >
         Textline Editable and <a href="https://try.cards" style={{ color: 'blue' }} >Cards</a> together
       </Textline>
@@ -45,7 +45,7 @@ storiesOf('binary-ui-components', module)
         isBold
         isEdit
         renderIcon={() => (<IconMore />)}
-        onMoreClick={action()}
+        onIconClick={action()}
       >
         Textline Editable Bold and <a href="https://try.cards" style={{ color: 'blue' }} >Cards</a> together
       </Textline>
@@ -53,7 +53,7 @@ storiesOf('binary-ui-components', module)
         isDisabled
         isEdit
         renderIcon={() => (<IconMore />)}
-        onMoreClick={action()}
+        onIconClick={action()}
       >
         Textline Editable Disabled and <a href="https://try.cards" style={{ color: 'blue' }} >Cards</a> together
       </Textline>
