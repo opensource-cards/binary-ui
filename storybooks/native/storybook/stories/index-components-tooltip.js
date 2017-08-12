@@ -5,6 +5,9 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import Tooltip from 'binary-ui-components/mobile/Tooltip';
+import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
+import IconAdd from 'binary-ui-icons/binary/Add';
+import IconAddCard from 'binary-ui-icons/binary/AddCard';
 
 /*
 class TooltipDemo extends React.Component {
@@ -67,5 +70,27 @@ class TooltipDemo extends React.Component {
 
 storiesOf('binary-ui-components', module)
   .add('Tooltip', () => (
-    <Tooltip isVisible label="Tooltip" />
+    <View style={{ width: '100%', marginTop: 50 }}>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+        <View style={{ height: 50, width: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat' }}>
+          <IconAdd size={20} />
+        </View>
+        <View style={{ height: 50, width: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'skyblue' }}>
+          <IconAddCard size={20} />
+        </View>
+      </View>
+      <View>
+        <Text>Container for tooltips</Text>
+        <Tooltip
+          isVisible
+          label="Left tooltip"
+          placement="bottom-left"
+        />
+        <Tooltip
+          isVisible
+          label="Right tooltip"
+          placement="bottom-right"
+        />
+      </View>
+    </View>
   ));

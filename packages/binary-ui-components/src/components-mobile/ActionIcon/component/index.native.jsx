@@ -44,5 +44,3 @@ export default class ActionIcon extends React.PureComponent {
 
 ActionIcon.propTypes = propTypes;
 ActionIcon.defaultProps = defaultProps;
-
-export default ActionIcon;

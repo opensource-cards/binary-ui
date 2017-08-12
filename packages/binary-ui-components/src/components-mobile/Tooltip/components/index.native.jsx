@@ -16,55 +16,56 @@ const defaultProps = {
 };
 
 // findNodeHandle(view)
-const Tooltip = ({ label, target }) => {
-  if (!target) {
-    return null;
-  }
+const Tooltip = ({ label, placement, target }) => {
+  // if (!target) {
+  //   return null;
+  // }
   return (
-    <View>
-      <View
-        style={{
-          alignItems: 'center',
-          backgroundColor: BINARY_COLOR_GRAY_30,
-          borderRadius: 5,
-          elevation: 1,
-          paddingHorizontal: 10,
-          paddingVertical: 5,
-          shadowColor: '#000',
-          shadowOffset: { width: 0, height: 1 },
-          shadowOpacity: 0.1,
-          shadowRadius: 2,
-          width: 100,
-        }}
-      >
-        <Text
-          style={{
-            color: '#FFF',
-            fontFamily: FONT_FAMILY_MAIN,
-            fontSize: 13,
-            flex: 0,
-          }}
-        >
-          {label}
-        </Text>
-      </View>
+    <View
+      style={{
+        alignItems: 'center',
+        alignSelf: placement === 'bottom-left' ? 'flex-start' : 'flex-end',
+        backgroundColor: BINARY_COLOR_GRAY_30,
+        borderRadius: 5,
+        elevation: 1,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.1,
+        shadowRadius: 2,
+      }}
+    >
       <View
         style={{
           width: 5,
           height: 5,
           backgroundColor: 'transparent',
           borderStyle: 'solid',
-          borderTopWidth: 5,
+          borderTopWidth: 0,
           borderRightWidth: 5,
-          borderBottomWidth: 0,
+          borderBottomWidth: 5,
           borderLeftWidth: 5,
-          borderTopColor: BINARY_COLOR_GRAY_30,
+          borderTopColor: 'transparent',
           borderRightColor: 'transparent',
-          borderBottomColor: 'transparent',
+          borderBottomColor: BINARY_COLOR_GRAY_30,
           borderLeftColor: 'transparent',
-          marginLeft: 20,
+          left: placement === 'bottom-left' ? 20 : undefined,
+          right: placement === 'bottom-left' ? undefined : 20,
+          position: 'absolute',
+          top: -5,
         }}
       />
+      <Text
+        style={{
+          color: '#FFF',
+          fontFamily: FONT_FAMILY_MAIN,
+          fontSize: 13,
+          flex: 0,
+        }}
+      >
+        {label}
+      </Text>
     </View>
   );
 };

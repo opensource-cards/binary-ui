@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const DEFAULT_SIZE = 512;
-const DURATION_MSEC = 500;
-const ROTATION_INTERVAL = 10;
+const DURATION_MSEC = 20;
+const ROTATION_INTERVAL = 1;
 
 const propTypes = {
   isAnimating: PropTypes.bool,
