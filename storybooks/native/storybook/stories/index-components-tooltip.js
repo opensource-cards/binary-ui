@@ -48,13 +48,13 @@ class TooltipDemo extends React.Component {
               isVisible={isVisibleLeft}
               label="Left tooltip"
               placement="bottom-right"
-              targetId="IconTooltipLeft"
+              target="IconTooltipLeft"
             />
             <Tooltip
               isVisible={isVisibleRight}
               label="Right tooltip"
               placement="bottom-left"
-              targetId="IconTooltipRight"
+              target="IconTooltipRight"
             />
           </div>
         </div>

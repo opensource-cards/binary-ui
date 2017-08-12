@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import TooltipStyled from './components-styled/TooltipStyled';
 import TooltipWrapper from './components-styled/TooltipWrapper';
 
@@ -7,11 +8,12 @@ const propTypes = {
   isVisible: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
   placement: PropTypes.oneOf(['bottom-right', 'bottom-left']),
-  targetId: PropTypes.string.isRequired,
+  target: PropTypes.object,
 };
 
 const defaultProps = {
   placement: 'bottom-right',
+  target: undefined,
 };
 
 export default class Tooltip extends React.Component {
@@ -27,9 +29,9 @@ export default class Tooltip extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    const { targetId } = this.props;
-    if (targetId !== newProps.targetId) {
-      this.cachedTargetDom = this.getTarget(newProps.targetId);
+    const { target } = this.props;
+    if (target !== newProps.target) {
+      this.cachedTargetDom = this.getTarget(newProps.target);
     }
   }
 
@@ -42,20 +44,23 @@ export default class Tooltip extends React.Component {
       }));
       return;
     }
-    const { targetId } = this.props;
-    this.cachedTargetDom = this.getTarget(targetId);
+    const { target } = this.props;
+    this.cachedTargetDom = this.getTarget(target);
     this.cachedWrapperDom = node;
     this.setState(() => ({
       isReady: true,
     }));
   }
 
-  getTarget(targetId) {
-    return document.getElementById(targetId);
+  getTarget(target) {
+    return ReactDOM.findDOMNode(target);
   }
 
   render() {
-    const { isVisible, label, placement, ...props } = this.props;
+    const { isVisible, label, placement, target, ...props } = this.props;
+    if (!target) {
+      return null;
+    }
     return (
       <TooltipWrapper innerRef={this.onRef} >
         {(this.cachedWrapperDom && this.cachedTargetDom) ? (

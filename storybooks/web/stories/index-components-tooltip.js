@@ -15,11 +15,29 @@ class TooltipDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isRefLeft: false,
+      isRefRight: false,
       isVisibleLeft: false,
       isVisibleRight: false,
     };
+    this.onSetLeft = this.onSetLeft.bind(this);
+    this.onSetRight = this.onSetRight.bind(this);
     this.onChangeLeft = this.onChangeLeft.bind(this);
     this.onChangeRight = this.onChangeRight.bind(this);
+  }
+
+  onSetLeft(ref) {
+    this.buttonLeft = ref;
+    this.setState((prevState) => ({
+      isRefLeft: ref ? true : false,
+    }));
+  }
+
+  onSetRight(ref) {
+    this.buttonRight = ref;
+    this.setState((prevState) => ({
+      isRefRight: ref ? true : false,
+    }));
   }
 
   onChangeLeft() {
@@ -39,10 +57,10 @@ class TooltipDemo extends React.Component {
     return (
       <div style={{ padding: 50 }} >
         <div style={{ float: 'left', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat', position: 'relative' }}>
-          <ActionIcon id="IconTooltipLeft" title="Icon" onClick={this.onChangeLeft} renderIcon={() => (<Add />)} size={20} />
+          <ActionIcon ref={this.onSetLeft} title="Icon" onClick={this.onChangeLeft} renderIcon={() => (<Add />)} size={20} />
         </div>
         <div style={{ float: 'right', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat', position: 'relative' }}>
-          <ActionIcon id="IconTooltipRight" title="Icon" onClick={this.onChangeRight} renderIcon={() => (<Add />)} size={20} />
+          <ActionIcon ref={this.onSetRight} title="Icon" onClick={this.onChangeRight} renderIcon={() => (<Add />)} size={20} />
         </div>
         <div style={{ clear: 'both' }} />        
         <div style={{ position: 'relative' }} >
@@ -52,13 +70,13 @@ class TooltipDemo extends React.Component {
               isVisible={isVisibleLeft}
               label="Left tooltip"
               placement="bottom-right"
-              targetId="IconTooltipLeft"
+              target={this.buttonLeft}
             />
             <Tooltip
               isVisible={isVisibleRight}
               label="Right tooltip"
               placement="bottom-left"
-              targetId="IconTooltipRight"
+              target={this.buttonRight}
             />
           </div>
         </div>
