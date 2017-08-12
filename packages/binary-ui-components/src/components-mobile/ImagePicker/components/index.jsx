@@ -23,7 +23,7 @@ const defaultProps = {
   onImageUpload: undefined,
 };
 
-export default class ImagePicker extends React.Component {
+export default class ImagePicker extends React.PureComponent {
 
   constructor(props) {
     super(props);

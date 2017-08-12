@@ -25,7 +25,6 @@ export default class LogoSvg extends React.Component {
     this.state = {
       rotation: 0,
     };
-    this.cache = {};
     this.onTick = this.onTick.bind(this);
   }
 
@@ -57,11 +56,11 @@ export default class LogoSvg extends React.Component {
   }
 
   setInterval() {
-    this.cache.interval = window.setInterval(this.onTick, ROTATION_INTERVAL);
+    this.interval = window.setInterval(this.onTick, ROTATION_INTERVAL);
   }
 
   setNoInterval() {
-    window.clearInterval(this.cache.interval);
+    window.clearInterval(this.interval);
   }
 
   render() {

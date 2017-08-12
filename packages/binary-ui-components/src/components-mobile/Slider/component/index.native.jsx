@@ -36,10 +36,10 @@ const Slider = ({ position, renderIconLeft, renderIconRight, onChange }) => (
       {renderIconLeft ? renderIconLeft() : null}
     </SliderScaleIcon>
     <SliderComponent
-      style={SLIDER_STYLE_OBJ}
-      trackStyle={TRACK_STYLE_OBJ}
       minimumTrackTintColor="#b3b3b3"
+      style={SLIDER_STYLE_OBJ}
       thumbStyle={THUMB_STYLE_OBJ}
+      trackStyle={TRACK_STYLE_OBJ}
       value={position}
       onValueChange={onChange}
     />

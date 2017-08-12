@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TooltipStyled from './components-styled/TooltipStyled';
-import TooltipWrapper from './components-styled/TooltipWrapper';
+import TooltipStyled from '../components-styled/TooltipStyled';
+import TooltipWrapper from '../components-styled/TooltipWrapper';
 
 const propTypes = {
   isVisible: PropTypes.bool.isRequired,

@@ -1,7 +1,7 @@
 import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionableIcon from '../../components/ActionableIcon';
+import ActionableIcon from '../../../../components/ActionableIcon';
 
 const propTypes = {
   isDisabled: PropTypes.bool.isRequired,

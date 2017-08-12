@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight, View } from 'react-native';
 import ButtonContent from './ButtonContent.native';
+import ButtonContentHighlight from '../components-styled/ButtonContentHighlight.native';
 import { COLOR_BLACK, TAP_HIGHLIGHT_COLOR } from '../../../utils/styles';
 
 const propTypes = {
@@ -39,7 +40,7 @@ const Button = ({
       onPress={onPress}
       {...props}
     >
-      <View style={{ width: '100%' }} >
+      <ButtonContentHighlight>
         <ButtonContent
           color={color}
           isBold={isBold}
@@ -48,7 +49,7 @@ const Button = ({
           label={label}
           renderIcon={renderIcon}
         />
-      </View>
+      </ButtonContentHighlight>
     </TouchableHighlight>
   ) : (
     <View {...props} >

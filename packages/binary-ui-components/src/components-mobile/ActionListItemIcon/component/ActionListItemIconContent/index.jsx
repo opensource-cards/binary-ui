@@ -1,8 +1,8 @@
 import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { ICON_STYLE_OBJ } from '../../utils/styles';
-import ActionableIcon from '../../components/ActionableIcon';
+import ActionableIcon from '../../../../components/ActionableIcon';
+import { ICON_STYLE_OBJ } from '../../../../utils/styles';
 
 const propTypes = {
   isActive: PropTypes.bool,

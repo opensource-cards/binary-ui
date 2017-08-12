@@ -7,19 +7,14 @@ const propTypes = {
 
 const defaultProps = {};
 
-export default class ImageUploadIcon extends React.PureComponent {
-  render() {
-    const { renderIcon } = this.props;
-    const element = renderIcon();
-    return (
-      React.cloneElement(element, {
-        ...element.props,
-        color: '#aeaeae',
-        size: 30,
-      })
-    );
-  }
-}
+const ImageUploadIcon = ({ renderIcon }) => (
+  React.cloneElement(renderIcon(), {
+    color: '#aeaeae',
+    size: 30,
+  })
+);
 
 ImageUploadIcon.propTypes = propTypes;
 ImageUploadIcon.defaultProps = defaultProps;
+
+export default ImageUploadIcon;

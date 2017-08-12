@@ -11,5 +11,9 @@ setAddon(infoAddon);
 
 storiesOf('binary-ui-components', module)
   .add('Spinner', withInfo('Spinner component')(() => (
-    <Spinner/>
+    <div>
+      <Spinner/>
+      <Spinner size={50} />
+      <Spinner size={100} />
+    </div>
   )));

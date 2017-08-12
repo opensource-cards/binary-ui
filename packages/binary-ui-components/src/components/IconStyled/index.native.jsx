@@ -16,7 +16,6 @@ const IconStyled = ({ color, size, renderIcon }) => {
   const element = renderIcon();
   return (
     React.cloneElement(element, {
-      ...element.props,
       color: color || element.props.color,
       size: size || element.props.size,
     })

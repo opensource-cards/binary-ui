@@ -42,7 +42,7 @@ class TooltipDemo extends React.Component {
         </div>
         <div style={{ clear: 'both' }} />        
         <div style={{ position: 'relative' }} >
-          <div style={{ position: 'absolute', top: 50, left: 50, backgroundColor: 'lightgray' }} >
+          <div style={{ position: 'absolute', top: 50, left: 50, backgroundColor: '#aeaeae' }} >
             <div>Container for Tooltips</div>
             <Tooltip
               isVisible={isVisibleLeft}

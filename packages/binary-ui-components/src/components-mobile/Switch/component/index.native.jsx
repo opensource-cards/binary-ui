@@ -1,13 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Switch as SwitchRN } from 'react-native';
-import SwitchWrapper from '../components-styled/SwitchWrapper';
 import SwitchLabel from '../components-styled/SwitchLabel';
+import SwitchStyled from '../components-styled/SwitchStyled.native';
+import SwitchWrapper from '../components-styled/SwitchWrapper';
 import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
-
-const SWITCH_RN_STYLE_OBJ = {
-  marginRight: 10,
-};
 
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
@@ -19,7 +15,7 @@ const defaultProps = {
   label: undefined,
 };
 
-export default class Switch extends React.Component {
+export default class Switch extends React.PureComponent {
 
   constructor(props) {
     super(props);
@@ -38,8 +34,7 @@ export default class Switch extends React.Component {
         <SwitchLabel numberOfLines={1} >
           {label ? label.toUpperCase() : label}
         </SwitchLabel>
-        <SwitchRN
-          style={SWITCH_RN_STYLE_OBJ}
+        <SwitchStyled
           tintColor={BINARY_COLOR_GRAY_80}
           value={isChecked}
           onTintColor={BINARY_COLOR_BLUE_40}

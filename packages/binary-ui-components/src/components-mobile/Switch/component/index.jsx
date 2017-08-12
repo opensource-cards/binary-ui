@@ -17,7 +17,7 @@ const defaultProps = {
   label: undefined,
 };
 
-export default class Switch extends React.Component {
+export default class Switch extends React.PureComponent {
 
   constructor(props) {
     super(props);

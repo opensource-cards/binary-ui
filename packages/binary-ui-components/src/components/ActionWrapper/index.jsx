@@ -110,7 +110,6 @@ export default class ActionWrapper extends React.Component {
     /* eslint-enable no-unused-vars */
     const { isActive } = this.state;
     return React.cloneElement(children, {
-      ...children.props,
       isActive,
       onClick: this.onClick,
       onMouseDown: this.onMouseDown,
