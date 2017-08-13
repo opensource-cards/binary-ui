@@ -2,11 +2,7 @@ import { BINARY_COLOR_GRAY_30 } from 'binary-ui-styles';
 import styled from 'styled-components/native';
 import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_SHIFT } from '../config';
 
-export default styled.View.attrs({
-  style: () => ({
-    shadowOffset: { width: 0, height: 1 },
-  }),
-})`
+export default styled.View`
   align-items: center;
   background-color: ${BINARY_COLOR_GRAY_30};
   border-radius: 5;
@@ -15,6 +11,7 @@ export default styled.View.attrs({
   padding-vertical: 5;
   position: absolute;
   shadow-color: #000;
+  shadow-offset: { width: 0, height: 1 };
   shadow-opacity: 0.1;
   shadow-radius: 2;
   ${props => {
