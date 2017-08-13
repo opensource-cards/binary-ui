@@ -15,7 +15,7 @@ const propTypes = {
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
   renderIcon: PropTypes.func,
-  onIconClick: PropTypes.func,
+  onIconPress: PropTypes.func,
 };
 
 const defaultProps = {
@@ -24,16 +24,16 @@ const defaultProps = {
   isEdit: false,
   isDisabled: false,
   renderIcon: undefined,
-  onIconClick: undefined,
+  onIconPress: undefined,
 };
 
-const Textline = ({ children, isBold, isDisabled, isEdit, renderIcon, onIconClick }) => (
+const Textline = ({ children, isBold, isDisabled, isEdit, renderIcon, onIconPress }) => (
   <TextWrapper isEdit={isEdit} >
     <TextContent isBold={isBold} isDisabled={isDisabled} >
       {isBold && isString(children) ? children.toUpperCase() : children}
     </TextContent>
     {renderIcon && (
-      <TextlineIcon isDisabled={isDisabled} renderIcon={renderIcon} onPress={onIconClick} />
+      <TextlineIcon isDisabled={isDisabled} renderIcon={renderIcon} onPress={onIconPress} />
     )}
   </TextWrapper>
 );

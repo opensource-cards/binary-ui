@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const DEFAULT_SIZE = 512;
-const DURATION_MSEC = 20;
-const ROTATION_INTERVAL = 1;
+const ROTATION_INTERVAL = 10;
 
 const propTypes = {
+  duration: PropTypes.number.isRequired,
   isAnimating: PropTypes.bool,
   size: PropTypes.number,
   Group: PropTypes.func.isRequired,
@@ -50,8 +50,9 @@ export default class LogoSvg extends React.Component {
   }
 
   onTick() {
+    const { duration } = this.props;
     this.setState((prevState) => ({
-      rotation: prevState.rotation + 360 / (DURATION_MSEC / ROTATION_INTERVAL),
+      rotation: prevState.rotation + 360 / (duration / ROTATION_INTERVAL),
     }));
   }
 

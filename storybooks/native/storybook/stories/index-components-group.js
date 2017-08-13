@@ -31,7 +31,7 @@ storiesOf('binary-ui-components', module)
             value=""
             renderIcon={() => (<IconMore />)}
             onChange={action()}
-            onIconClick={action()}
+            onIconPress={action()}
           />
         )}
       />

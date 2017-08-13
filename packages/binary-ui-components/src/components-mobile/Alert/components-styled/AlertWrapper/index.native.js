@@ -7,7 +7,11 @@ import {
 import styled from 'styled-components/native';
 import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
-export default styled.View`
+export default styled.View.attrs({
+  style: () => ({
+    shadowOffset: { width: 0, height: 1 },
+  }),
+})`
   border-top-left-radius: 5;
   border-top-right-radius: 5;
   height: 40px;
@@ -15,7 +19,6 @@ export default styled.View`
   margin-top: 3px;
   width: 100%;
   shadow-color: #000;
-  shadow-offset: { width: 0, height: 1 };
   shadow-opacity: 0.1;
   shadow-radius: 2;
   elevation: 1;

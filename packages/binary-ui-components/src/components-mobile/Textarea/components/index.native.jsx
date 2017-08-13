@@ -13,7 +13,7 @@ const propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
-  onIconClick: PropTypes.func,
+  onIconPress: PropTypes.func,
 };
 
 const defaultProps = {
@@ -22,7 +22,7 @@ const defaultProps = {
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
-  onIconClick: undefined,
+  onIconPress: undefined,
 };
 
 export default class Textarea extends React.Component {
@@ -69,7 +69,7 @@ export default class Textarea extends React.Component {
       onBlur,
       onChange,
       onFocus,
-      onIconClick,
+      onIconPress,
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars  */
@@ -86,7 +86,7 @@ export default class Textarea extends React.Component {
         />
         {renderIcon && (
           <TextareaIcon>
-            <ActionListItemIcon renderIcon={renderIcon} onPress={onIconClick} />
+            <ActionListItemIcon renderIcon={renderIcon} onPress={onIconPress} />
           </TextareaIcon>
         )}
       </TextareaWrapperStyled>

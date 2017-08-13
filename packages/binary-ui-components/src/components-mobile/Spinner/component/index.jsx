@@ -1,5 +1,6 @@
 import React from 'react';
 import LogoSvg from './index.native-and-web';
+import { DURATION_MSEC } from '../config';
 
 /* eslint-disable global-require */
 // NOTE: window variable should not be defined on a server!
@@ -38,6 +39,7 @@ export default class LogoSvgWeb extends React.Component {
     const { Group, Shape, Surface } = ReactArt;
     return (
       <LogoSvg
+        duration={DURATION_MSEC}
         Group={Group}
         Shape={Shape}
         Surface={Surface}

@@ -10,8 +10,8 @@ const propTypes = {
 
 const defaultProps = {};
 
-const ProgressBar = ({ progress }) => (
-  <ProgressContainer>
+const ProgressBar = ({ progress, ...props }) => (
+  <ProgressContainer {...props} >
     <ProgressScale />
     <ProgressIndicator progress={Math.min(Math.max(progress, 0), 100)} />
   </ProgressContainer>

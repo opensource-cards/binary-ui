@@ -2938,10 +2938,6 @@ makeerror@1.0.x:
   dependencies:
     tmpl "1.0.x"
 
-mask-parser@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/mask-parser/-/mask-parser-0.0.1.tgz#0be454db7630dadb4fe28c986c2668bdfcdaf671"
-
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -3556,6 +3552,15 @@ react-devtools-core@2.3.1:
   dependencies:
     shell-quote "^1.6.1"
     ws "^2.0.3"
+
+react-dom@^15.3.2:
+  version "15.6.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.1.tgz#2cb0ed4191038e53c209eb3a79a23e2a4cf99470"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 react-native-image-picker@^0.26.3:
   version "0.26.3"

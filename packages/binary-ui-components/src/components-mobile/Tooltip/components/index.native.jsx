@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { findNodeHandle, Text, View } from 'react-native';
+import { findNodeHandle, View } from 'react-native';
 import { UIManager } from 'NativeModules';
 import TooltipStyled from '../components-styled/TooltipStyled';
 import TooltipArrow from '../components-styled/TooltipArrow.native';
@@ -30,6 +30,7 @@ export default class Tooltip extends React.Component {
     this.cachedTargetDom = null;
     this.cachedWrapperDom = null;
     this.onRef = this.onRef.bind(this);
+    this.onLayout = this.onLayout.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -61,28 +62,34 @@ export default class Tooltip extends React.Component {
     this.setParentBoundingRect();
   }
 
+  onLayout() {
+    // NOTE: recalculate positions of target and parent
+    this.setTargetBoundingRect();
+    this.setParentBoundingRect();
+  }
+
   getTarget(target) {
     return findNodeHandle(target);
   }
 
   setParentBoundingRect() {
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       UIManager.measure(findNodeHandle(this.cachedWrapperDom), (fx, fy, width, height, px, py) => {
         this.setState(() => ({
           parentBoundingRect: { fx, fy, width, height, px, py },
         }));
       });
-    }, 10);
+    });
   }
 
   setTargetBoundingRect() {
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       UIManager.measure(findNodeHandle(this.cachedTargetDom), (fx, fy, width, height, px, py) => {
         this.setState(() => ({
           targetBoundingRect: { fx, fy, width, height, px, py },
         }));
       });
-    }, 10);
+    });
   }
 
   render() {
@@ -92,12 +99,14 @@ export default class Tooltip extends React.Component {
       return null;
     }
     return (
-      <View ref={this.onRef} >
+      <View ref={this.onRef} onLayout={this.onLayout} >
         {parentBoundingRect ? (
           <TooltipStyled
+            isVisible={isVisible}
             parentBoundingRect={parentBoundingRect}
             placement={placement}
             targetBoundingRect={targetBoundingRect}
+            {...props}
           >
             <TooltipArrow placement={placement} />
             <TooltipText>

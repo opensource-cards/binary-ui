@@ -34,28 +34,28 @@ storiesOf('binary-ui-components', module)
         value="1234567890"
         renderIcon={() => (<IconMore />)}
         onChange={action()}
-        onIconClick={action()}
+        onIconPress={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.TEL}
         value="010000000"
         renderIcon={() => (<IconMore />)}
         onChange={action()}
-        onIconClick={action()}
+        onIconPress={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.PASSWORD}
         value="Password"
         renderIcon={() => (<IconMore />)}
         onChange={action()}
-        onIconClick={action()}
+        onIconPress={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.EMAIL}
         value="job@try.cards"
         renderIcon={() => (<IconMore />)}
         onChange={action()}
-        onIconClick={action()}
+        onIconPress={action()}
       />
       <Input
         isValid={false}
@@ -64,7 +64,7 @@ storiesOf('binary-ui-components', module)
         value=""
         renderIcon={() => (<IconMore />)}
         onChange={action()}
-        onIconClick={action()}
+        onIconPress={action()}
       />
     </View>
   ));

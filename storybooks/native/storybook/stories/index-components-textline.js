@@ -13,7 +13,7 @@ storiesOf('binary-ui-components', module)
       <Textline
         isEdit
         renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
+        onIconPress={action()}
       >
         Textline Editable
       </Textline>
@@ -21,7 +21,7 @@ storiesOf('binary-ui-components', module)
         isDisabled
         isEdit
         renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
+        onIconPress={action()}
       >
         Textline Editable Disabled
       </Textline>
@@ -34,7 +34,7 @@ storiesOf('binary-ui-components', module)
       <Textline
         isEdit
         renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
+        onIconPress={action()}
       >
         Textline Editable and <Text style={{ color: 'blue' }} onPress={() => Linking.openURL('https://try.cards')}>Cards</Text> together
       </Textline>
@@ -42,7 +42,7 @@ storiesOf('binary-ui-components', module)
         isBold
         isEdit
         renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
+        onIconPress={action()}
       >
         Textline Editable Bold and <Text style={{ color: 'blue' }} onPress={() => Linking.openURL('https://try.cards')}>Cards</Text> together
       </Textline>
@@ -50,7 +50,7 @@ storiesOf('binary-ui-components', module)
         isDisabled
         isEdit
         renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
+        onIconPress={action()}
       >
         Textline Editable Disabled and <Text style={{ color: 'blue' }} onPress={() => Linking.openURL('https://try.cards')}>Cards</Text> together
       </Textline>

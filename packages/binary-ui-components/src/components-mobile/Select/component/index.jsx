@@ -33,9 +33,9 @@ export default class Select extends React.PureComponent {
   }
 
   render() {
-    const { items, isBold, isEdit, isValid, selected } = this.props;
+    const { items, isBold, isEdit, isValid, selected, ...props } = this.props;
     return (
-      <SelectWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} >
+      <SelectWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} {...props} >
         <SelectArrow size={18} />
         <SelectStyled isBold={isBold} value={selected} onChange={this.onChange} >
           {items.map((listItem) => (

@@ -14,8 +14,8 @@ const defaultProps = {
   children: undefined,
 };
 
-const Section = ({ children, label }) => (
-  <SectionWrapper>
+const Section = ({ children, label, ...props }) => (
+  <SectionWrapper {...props} >
     <SectionTitleWrapper>
       <SectionTitleText>
         {label.toUpperCase()}

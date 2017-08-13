@@ -15,11 +15,16 @@ export default styled.View`
   border-right-color: transparent;
   border-bottom-color: ${BINARY_COLOR_GRAY_30};
   border-left-color: transparent;
-  ${props => (
-    props.placement === 'bottom-right'
-    ? `left: ${TOOLTIP_ARROW_SHIFT}`
-    : `right: ${TOOLTIP_ARROW_SHIFT}`
-  )};
+  ${props => {
+    switch (props.placement) {
+      case 'bottom-left':
+        return `right: ${TOOLTIP_ARROW_SHIFT};`;
+      case 'bottom-right':
+        return `left: ${TOOLTIP_ARROW_SHIFT};`;
+      default:
+        return undefined;
+    }
+  }}
   position: absolute;
   top: -${TOOLTIP_ARROW_HEIGHT};
 `;

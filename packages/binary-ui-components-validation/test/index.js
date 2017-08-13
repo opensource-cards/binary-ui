@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { isTextFieldValid } from '../src';
-import { INPUT_FIELD_TYPES } from '../../binary-ui-components/src/components/Input';
+import { INPUT_FIELD_TYPES } from '../../binary-ui-components/src/components-mobile/Input';
 
 describe('isTextFieldValid', () => {
   describe(`${INPUT_FIELD_TYPES.TEXT}`, () => {

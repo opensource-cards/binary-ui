@@ -14,9 +14,9 @@ const propTypes = {
   value: PropTypes.string.isRequired,
   renderIcon: PropTypes.func,
   onBlur: PropTypes.func,
+  onIconClick: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
-  onIconClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -26,9 +26,9 @@ const defaultProps = {
   type: INPUT_FIELD_TYPES.ANY,
   renderIcon: undefined,
   onBlur: undefined,
+  onIconClick: undefined,
   onChange: undefined,
   onFocus: undefined,
-  onIconClick: undefined,
 };
 
 export default class Input extends React.Component {

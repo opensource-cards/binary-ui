@@ -14,9 +14,9 @@ const propTypes = {
   value: PropTypes.string.isRequired,
   renderIcon: PropTypes.func,
   onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
-  onIconClick: PropTypes.func,
   onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  onIconPress: PropTypes.func,
 };
 
 const defaultProps = {
@@ -26,9 +26,9 @@ const defaultProps = {
   type: INPUT_FIELD_TYPES.ANY,
   renderIcon: undefined,
   onBlur: undefined,
-  onFocus: undefined,
-  onIconClick: undefined,
   onChange: undefined,
+  onFocus: undefined,
+  onIconPress: undefined,
 };
 
 export default class Input extends React.Component {
@@ -93,7 +93,7 @@ export default class Input extends React.Component {
       onBlur,
       onChange,
       onFocus,
-      onIconClick,
+      onIconPress,
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars  */
@@ -101,7 +101,7 @@ export default class Input extends React.Component {
     return (
       <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, styleBorderColor)} >
         {renderIcon && (
-          <InputIcon renderIcon={renderIcon} onPress={onIconClick} />
+          <InputIcon renderIcon={renderIcon} onPress={onIconPress} />
         )}
         <InputStyled
           isBold={isBold}

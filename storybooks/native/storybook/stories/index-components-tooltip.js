@@ -55,27 +55,29 @@ class TooltipDemo extends React.Component {
     return (
       <View style={{ width: '100%', marginTop: 50 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
-          <View style={{ height: 50, width: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat' }}>
+          <View style={{ height: 50, margin: 50, width: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat' }}>
             <ActionIcon ref={this.onSetLeft} title="Icon" onPress={this.onChangeLeft} renderIcon={() => (<IconAdd />)} size={20} />
           </View>
-          <View style={{ height: 50, width: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'skyblue' }}>
+          <View style={{ height: 50, margin: 50, width: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'skyblue' }}>
             <ActionIcon ref={this.onSetRight} title="Icon" onPress={this.onChangeRight} renderIcon={() => (<IconAddCard />)} size={20} />
           </View>
         </View>
-        <View>
-          <Text>Container for tooltips</Text>
-          <Tooltip
-            isVisible={isVisibleLeft}
-            label="Left tooltip"
-            placement="bottom-right"
-            target={this.buttonLeft}
-          />
-          <Tooltip
-            isVisible={isVisibleRight}
-            label="Right tooltip"
-            placement="bottom-left"
-            target={this.buttonRight}
-          />
+        <View style={{ margin: 50 }} >
+          <View style={{ margin: 50 }} >
+            <Text>Container for tooltips</Text>
+            <Tooltip
+              isVisible={isVisibleLeft}
+              label="Left tooltip"
+              placement="bottom-right"
+              target={this.buttonLeft}
+            />
+            <Tooltip
+              isVisible={isVisibleRight}
+              label="Right tooltip"
+              placement="bottom-left"
+              target={this.buttonRight}
+            />
+          </View>
         </View>
       </View>
     );
