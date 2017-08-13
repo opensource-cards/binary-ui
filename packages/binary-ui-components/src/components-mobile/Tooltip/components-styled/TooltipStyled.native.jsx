@@ -10,9 +10,12 @@ const propTypes = {
   parentBoundingRect: PropTypes.object.isRequired,
   placement: PropTypes.oneOf(['bottom-right', 'bottom-left']).isRequired,
   targetBoundingRect: PropTypes.object.isRequired,
+  style: PropTypes.object,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  style: {},
+};
 
 export default class TooltipStyled extends React.Component {
 
@@ -63,7 +66,7 @@ export default class TooltipStyled extends React.Component {
   }
 
   render() {
-    const { children, ...props } = this.props;
+    const { children, style, ...props } = this.props;
     return (
       <Animated.View
         style={{
@@ -83,6 +86,7 @@ export default class TooltipStyled extends React.Component {
           shadowOpacity: 0.1,
           shadowRadius: 2,
           ...this.getPositioning(),
+          ...style,
         }}
         {...props}
       >

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { findNodeHandle, View } from 'react-native';
-import { UIManager } from 'NativeModules';
+import { findNodeHandle, NativeModules, View } from 'react-native';
 import TooltipStyled from '../components-styled/TooltipStyled';
 import TooltipArrow from '../components-styled/TooltipArrow.native';
 import TooltipText from '../components-styled/TooltipText.native';
@@ -74,21 +73,27 @@ export default class Tooltip extends React.Component {
 
   setParentBoundingRect() {
     requestAnimationFrame(() => {
-      UIManager.measure(findNodeHandle(this.cachedWrapperDom), (fx, fy, width, height, px, py) => {
-        this.setState(() => ({
-          parentBoundingRect: { fx, fy, width, height, px, py },
-        }));
-      });
+      NativeModules.UIManager.measure(
+        findNodeHandle(this.cachedWrapperDom),
+        (fx, fy, width, height, px, py) => {
+          this.setState(() => ({
+            parentBoundingRect: { fx, fy, width, height, px, py },
+          }));
+        }
+      );
     });
   }
 
   setTargetBoundingRect() {
     requestAnimationFrame(() => {
-      UIManager.measure(findNodeHandle(this.cachedTargetDom), (fx, fy, width, height, px, py) => {
-        this.setState(() => ({
-          targetBoundingRect: { fx, fy, width, height, px, py },
-        }));
-      });
+      NativeModules.UIManager.measure(
+        findNodeHandle(this.cachedTargetDom),
+        (fx, fy, width, height, px, py) => {
+          this.setState(() => ({
+            targetBoundingRect: { fx, fy, width, height, px, py },
+          }));
+        }
+      );
     });
   }
 

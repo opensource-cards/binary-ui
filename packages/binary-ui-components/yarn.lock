@@ -1039,15 +1039,15 @@ binary-extensions@^1.0.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.9.0.tgz#66506c16ce6f4d6928a5b3cd6a33ca41e941e37b"
 
-binary-ui-icons@^0.2.19:
-  version "0.2.19"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.2.19.tgz#acce1b664c4014424de287c775e60d91d8945630"
+binary-ui-icons@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.3.0.tgz#1ab3930cdaeae28f0f31b4fa9ce7b2aca05ac97b"
   dependencies:
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.2.19:
-  version "0.2.19"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.2.19.tgz#ea9dd73f869d7ef806010490b31dd28338f36a39"
+binary-ui-styles@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.0.tgz#bee565c533ff4c6cb1287f5d6683aa63b21c0b8d"
 
 block-stream@*:
   version "0.0.9"
