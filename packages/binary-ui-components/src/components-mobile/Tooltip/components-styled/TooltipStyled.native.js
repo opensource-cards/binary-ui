@@ -26,7 +26,7 @@ export default styled.View.attrs({
         const targetCenterX = targetBoundingRect.width / 2;
         return `
           align-self: flex-start;
-          right: ${commonX + targetCenterX - TOOLTIP_ARROW_SHIFT}px;
+          right: ${(commonX + targetCenterX - TOOLTIP_ARROW_SHIFT) / 2}px;
           top: ${commonY + targetBoundingRect.height + TOOLTIP_ARROW_HEIGHT}px;
         `;
       }
@@ -36,7 +36,7 @@ export default styled.View.attrs({
         const targetCenterX = targetBoundingRect.width / 2;
         return `
           align-self: flex-end;
-          left: ${commonX + targetCenterX - TOOLTIP_ARROW_SHIFT}px;
+          left: ${(commonX + targetCenterX - TOOLTIP_ARROW_SHIFT) / 2}px;
           top: ${commonY + targetBoundingRect.height + TOOLTIP_ARROW_HEIGHT}px;
         `;
       }

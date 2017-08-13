@@ -1,10 +1,10 @@
-import { BINARY_COLOR_GRAY_30, FONT_FAMILY_MAIN } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { findNodeHandle, Text, View } from 'react-native';
 import { UIManager } from 'NativeModules';
 import TooltipStyled from '../components-styled/TooltipStyled';
-import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_WIDTH, TOOLTIP_ARROW_SHIFT } from '../config';
+import TooltipArrow from '../components-styled/TooltipArrow.native';
+import TooltipText from '../components-styled/TooltipText.native';
 
 const propTypes = {
   isVisible: PropTypes.bool.isRequired,
@@ -99,36 +99,10 @@ export default class Tooltip extends React.Component {
             placement={placement}
             targetBoundingRect={targetBoundingRect}
           >
-            <View
-              style={{
-                width: TOOLTIP_ARROW_WIDTH,
-                height: TOOLTIP_ARROW_HEIGHT,
-                backgroundColor: 'transparent',
-                borderStyle: 'solid',
-                borderTopWidth: 0,
-                borderRightWidth: 5,
-                borderBottomWidth: 5,
-                borderLeftWidth: 5,
-                borderTopColor: 'transparent',
-                borderRightColor: 'transparent',
-                borderBottomColor: BINARY_COLOR_GRAY_30,
-                borderLeftColor: 'transparent',
-                left: placement === 'bottom-right' ? TOOLTIP_ARROW_SHIFT : undefined,
-                right: placement === 'bottom-right' ? undefined : TOOLTIP_ARROW_SHIFT,
-                position: 'absolute',
-                top: -TOOLTIP_ARROW_HEIGHT,
-              }}
-            />
-            <Text
-              style={{
-                color: '#FFF',
-                fontFamily: FONT_FAMILY_MAIN,
-                fontSize: 13,
-                flex: 0,
-              }}
-            >
+            <TooltipArrow placement={placement} />
+            <TooltipText>
               {label}
-            </Text>
+            </TooltipText>
           </TooltipStyled>
         ) : null}
       </View>
