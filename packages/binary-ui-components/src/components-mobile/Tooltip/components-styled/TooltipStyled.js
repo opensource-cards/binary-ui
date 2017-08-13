@@ -1,9 +1,6 @@
 import { BINARY_COLOR_GRAY_30, FONT_FAMILY_MAIN } from 'binary-ui-styles';
 import styled from 'styled-components';
-
-const TOOLTIP_ARROW_HEIGHT = 5;
-const TOOLTIP_ARROW_WIDTH = 5;
-const TOOLTIP_ARROW_SHIFT = 20;
+import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_WIDTH, TOOLTIP_ARROW_SHIFT } from '../config';
 
 export default styled.div`
   background-color: ${BINARY_COLOR_GRAY_30};
@@ -27,21 +24,21 @@ export default styled.div`
     const boundingParentRect = props.parentDOM.getBoundingClientRect();
     const boundingTargetRect = props.targetDOM.getBoundingClientRect();
     switch (props.placement) {
-      case 'bottom-right': {
-        const commonX = boundingTargetRect.left - boundingParentRect.left;
-        const commonY = boundingTargetRect.top - boundingParentRect.top;
-        const targetCenterX = boundingTargetRect.width / 2;
-        return `
-          left: ${commonX + targetCenterX - TOOLTIP_ARROW_SHIFT}px;
-          top: ${commonY + boundingTargetRect.height + TOOLTIP_ARROW_HEIGHT}px;
-        `;
-      }
       case 'bottom-left': {
         const commonX = boundingParentRect.right - boundingTargetRect.right;
         const commonY = boundingTargetRect.top - boundingParentRect.top;
         const targetCenterX = boundingTargetRect.width / 2;
         return `
           right: ${commonX + targetCenterX - TOOLTIP_ARROW_SHIFT}px;
+          top: ${commonY + boundingTargetRect.height + TOOLTIP_ARROW_HEIGHT}px;
+        `;
+      }
+      case 'bottom-right': {
+        const commonX = boundingTargetRect.left - boundingParentRect.left;
+        const commonY = boundingTargetRect.top - boundingParentRect.top;
+        const targetCenterX = boundingTargetRect.width / 2;
+        return `
+          left: ${commonX + targetCenterX - TOOLTIP_ARROW_SHIFT}px;
           top: ${commonY + boundingTargetRect.height + TOOLTIP_ARROW_HEIGHT}px;
         `;
       }

@@ -8,7 +8,9 @@ import styled from 'styled-components/native';
 import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.View.attrs({
-  shadowOffset: () => ({ width: 0, height: 1 }),
+  style: () => ({
+    shadowOffset: { width: 0, height: 1 },
+  }),
 })`
   border-top-left-radius: 5;
   border-top-right-radius: 5;
