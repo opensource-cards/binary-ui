@@ -75,6 +75,7 @@ export default class Textarea extends React.Component {
       isValid,
       renderIcon,
       onBlur,
+      onChange,
       onFocus,
       onIconClick,
       ...props,
