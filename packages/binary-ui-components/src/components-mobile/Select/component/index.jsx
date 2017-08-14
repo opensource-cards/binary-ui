@@ -33,7 +33,9 @@ export default class Select extends React.PureComponent {
   }
 
   render() {
-    const { items, isBold, isEdit, isValid, selected, ...props } = this.props;
+    /* eslint-disable no-unused-vars */
+    const { items, isBold, isEdit, isValid, selected, onChange, ...props } = this.props;
+    /* eslint-enable no-unused-vars */
     return (
       <SelectWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} {...props} >
         <SelectArrow size={18} />
