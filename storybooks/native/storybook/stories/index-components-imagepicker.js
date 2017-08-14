@@ -22,7 +22,7 @@ storiesOf('binary-ui-components', module)
           <IconCamera />
         )}
         isImageUpload={false}
-        onImageClick={action()}
+        onImagePress={action()}
         onImageUpload={action()}
       />
       <ImagePicker
@@ -35,7 +35,7 @@ storiesOf('binary-ui-components', module)
         renderUploadIcon={() => (
           <IconCamera />
         )}
-        onImageClick={action()}
+        onImagePress={action()}
         onImageUpload={action()}
       />
     </View>

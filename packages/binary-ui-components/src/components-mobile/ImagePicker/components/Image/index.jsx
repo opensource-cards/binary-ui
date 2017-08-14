@@ -33,7 +33,9 @@ export default class Image extends React.Component {
     const { imageFit, imageUrl, isSelected } = this.props;
     return (
       <ImageContent imageFit={imageFit} imageUrl={imageUrl} onClick={this.onClick} >
-        {isSelected ? (<IconDone size={40} color="#FFF" />) : null}
+        {isSelected ? (
+          <IconDone size={40} color="#FFF" />
+        ) : null}
       </ImageContent>
     );
   }

@@ -8,31 +8,31 @@ const propTypes = {
   imageId: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   isSelected: PropTypes.bool.isRequired,
-  onClick: PropTypes.func,
+  onPress: PropTypes.func,
 };
 
 const defaultProps = {
-  onClick: undefined,
+  onPress: undefined,
 };
 
 export default class Image extends React.Component {
 
   constructor(props) {
     super(props);
-    this.onClick = this.onClick.bind(this);
+    this.onPress = this.onPress.bind(this);
   }
 
-  onClick() {
-    const { imageId, onClick } = this.props;
-    if (onClick) {
-      onClick(imageId);
+  onPress() {
+    const { imageId, onPress } = this.props;
+    if (onPress) {
+      onPress(imageId);
     }
   }
 
   render() {
     const { imageUrl, isSelected } = this.props;
     return (
-      <TouchableOpacity activeOpacity={0.5} onPress={this.onClick} >
+      <TouchableOpacity activeOpacity={0.5} onPress={this.onPress} >
         <ImageContent source={{ uri: imageUrl }} >
           {isSelected ? (
             <IconDone size={40} color="#FFF" />
