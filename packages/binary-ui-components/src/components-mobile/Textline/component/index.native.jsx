@@ -6,11 +6,7 @@ import TextWrapper from '../components-styled/TextWrapper';
 import TextlineIcon from '../components-styled/TextlineIcon';
 
 const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.array,
-    PropTypes.number,
-    PropTypes.string,
-  ]),
+  children: PropTypes.any,
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
