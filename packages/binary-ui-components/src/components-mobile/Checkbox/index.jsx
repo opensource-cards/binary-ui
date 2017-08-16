@@ -6,7 +6,7 @@ import React from 'react';
 
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   onClick: PropTypes.func,
 };
 
@@ -26,7 +26,9 @@ export default class Checkbox extends React.PureComponent {
     if (onClick) {
       onClick(e);
     }
-    onChange(!isChecked);
+    if (onChange) {
+      onChange(!isChecked);
+    }
   }
 
   render() {

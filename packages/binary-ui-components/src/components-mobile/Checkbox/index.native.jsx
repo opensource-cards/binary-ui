@@ -27,7 +27,9 @@ export default class Checkbox extends React.PureComponent {
     if (onPress) {
       onPress();
     }
-    onChange(!isChecked);
+    if (onChange) {
+      onChange(!isChecked);
+    }
   }
 
   render() {
