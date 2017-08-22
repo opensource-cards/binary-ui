@@ -9,8 +9,9 @@ import { getHighlightEditStyle } from '../../../utils/styles-api';
 const propTypes = {
   isBold: PropTypes.bool,
   isValid: PropTypes.bool,
-  type: PropTypes.any,
+  placeholder: PropTypes.string,
   styleBorderColor: PropTypes.string,
+  type: PropTypes.any,
   value: PropTypes.string.isRequired,
   renderIcon: PropTypes.func,
   onBlur: PropTypes.func,
@@ -22,6 +23,7 @@ const propTypes = {
 const defaultProps = {
   isBold: false,
   isValid: true,
+  placeholder: '',
   styleBorderColor: undefined,
   type: INPUT_FIELD_TYPES.ANY,
   renderIcon: undefined,
@@ -86,6 +88,7 @@ export default class Input extends React.Component {
     const {
       isBold,
       isValid,
+      placeholder,
       styleBorderColor,
       type,
       value,
@@ -106,6 +109,7 @@ export default class Input extends React.Component {
         <InputStyled
           isBold={isBold}
           keyboardType={this.getKeyboardType()}
+          placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           secureTextEntry={type === INPUT_FIELD_TYPES.PASSWORD}
           value={isBold ? value.toUpperCase() : value}
           underlineColorAndroid="rgba(0, 0, 0, 0)"
