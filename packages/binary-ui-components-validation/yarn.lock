@@ -607,24 +607,24 @@ binary-extensions@^1.0.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.10.0.tgz#9aeb9a6c5e88638aad171e167f5900abe24835d0"
 
-binary-ui-components@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.3.1.tgz#22b2b19bcb88696ccde2bd5262fddf62d932ed3f"
+binary-ui-components@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.3.2.tgz#3010a39a5188f9c24b190e023933d0dcbda85865"
   dependencies:
-    binary-ui-icons "^0.3.0"
-    binary-ui-styles "^0.3.0"
+    binary-ui-icons "^0.3.2"
+    binary-ui-styles "^0.3.2"
     prop-types "^15.5.10"
     styled-components "^2.0.0"
 
-binary-ui-icons@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.3.0.tgz#1ab3930cdaeae28f0f31b4fa9ce7b2aca05ac97b"
+binary-ui-icons@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.3.2.tgz#81b25c460bb7e4b33c255cf93ffb5bb0327e3176"
   dependencies:
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.0.tgz#bee565c533ff4c6cb1287f5d6683aa63b21c0b8d"
+binary-ui-styles@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.2.tgz#db4097a275ade976adb88d5a9d3896ce205ce24b"
 
 block-stream@*:
   version "0.0.9"
@@ -733,8 +733,8 @@ cli-cursor@^1.0.1:
     restore-cursor "^1.0.1"
 
 cli-width@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.1.0.tgz#b234ca209b29ef66fc518d9b98d5847b00edf00a"
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
 
 co@^4.6.0:
   version "4.6.0"
@@ -2348,8 +2348,8 @@ source-map-support@^0.4.15:
     source-map "^0.5.6"
 
 source-map@^0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.6.tgz#75ce38f52bf0733c5a7f0c118d81334a2bb5f412"
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
 sprintf-js@~1.0.2:
   version "1.0.3"
@@ -2429,8 +2429,8 @@ styled-components@^2.0.0:
     supports-color "^3.2.3"
 
 stylis@^3.2.1:
-  version "3.2.8"
-  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.2.8.tgz#9b23a3e06597f7944a3d9ae880d5796248b8784f"
+  version "3.2.9"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.2.9.tgz#95c23da02d4389a2c5bab544a84abb3c13cc5d71"
 
 supports-color@3.1.2:
   version "3.1.2"
@@ -2489,8 +2489,8 @@ through@^2.3.6:
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
 tlds@^1.187.0:
-  version "1.192.0"
-  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.192.0.tgz#bfa77badc9dadba211bbecbcd1fb5ce980fb9448"
+  version "1.194.0"
+  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.194.0.tgz#55bfb34859229e492497580b0040e7be58d171cd"
 
 to-fast-properties@^1.0.3:
   version "1.0.3"
