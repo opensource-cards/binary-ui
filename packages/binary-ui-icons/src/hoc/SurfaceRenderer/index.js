@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import createSurfaceRendererNativeAndWeb from './index.native-and-web';
+import createSurfaceRenderer from './index.native-and-web';
 
 /* eslint-disable global-require */
 // NOTE: This is not to break a server rendering.
@@ -10,8 +10,8 @@ const ReactArt = (typeof window === 'undefined')
   : (() => require('react-art'))();
 /* eslint-enable */
 
-const { Group, Shape, Surface } = ReactArt;
-const SurfaceRendererNativeAndWeb = createSurfaceRendererNativeAndWeb(Group, Shape, Surface);
+const { Group, Shape, Surface, Transform } = ReactArt;
+const SurfaceRenderer = createSurfaceRenderer(Group, Shape, Surface, Transform);
 
 const propTypes = {
   color: PropTypes.string,
@@ -49,7 +49,7 @@ export default class SurfaceRendererWeb extends React.Component {
     }
     const { color, size, IconContentComponent, ...props } = this.props;
     return (
-      <SurfaceRendererNativeAndWeb
+      <SurfaceRenderer
         color={color}
         size={size}
         IconContentComponent={IconContentComponent}

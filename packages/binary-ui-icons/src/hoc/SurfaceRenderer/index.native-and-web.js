@@ -4,7 +4,7 @@ import React from 'react';
 
 const DEFAULT_SIZE = 512;
 
-export default (Group, Shape, Surface) => {
+export default (Group, Shape, Surface, Transform) => {
   const propTypes = {
     color: PropTypes.string,
     size: PropTypes.number.isRequired,
@@ -37,7 +37,7 @@ export default (Group, Shape, Surface) => {
       return (
         <Surface height={size} width={size} {...props} >
           <Group fill={color} scale={size / DEFAULT_SIZE} >
-            <IconContentComponent Group={Group} Shape={this.renderShape} />
+            <IconContentComponent Group={Group} Shape={this.renderShape} Transform={Transform} />
           </Group>
         </Surface>
       );

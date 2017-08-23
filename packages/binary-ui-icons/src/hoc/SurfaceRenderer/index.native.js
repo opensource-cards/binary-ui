@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Group, Shape, Surface } from 'react-native/Libraries/ART/ReactNativeART';
-import createSurfaceRendererNativeAndWeb from './index.native-and-web';
+import { Group, Shape, Surface, Transform } from 'react-native/Libraries/ART/ReactNativeART';
+import createSurfaceRenderer from './index.native-and-web';
 
-const SurfaceRendererNativeAndWeb = createSurfaceRendererNativeAndWeb(Group, Shape, Surface);
+const SurfaceRenderer = createSurfaceRenderer(Group, Shape, Surface, Transform);
 
 const propTypes = {
   color: PropTypes.string,
@@ -16,7 +16,7 @@ const defaultProps = {
 };
 
 const SurfaceRendererNative = ({ color, size, IconContentComponent, ...props }) => (
-  <SurfaceRendererNativeAndWeb
+  <SurfaceRenderer
     color={color}
     size={size}
     IconContentComponent={IconContentComponent}
