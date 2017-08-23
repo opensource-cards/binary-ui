@@ -1039,15 +1039,15 @@ binary-extensions@^1.0.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.10.0.tgz#9aeb9a6c5e88638aad171e167f5900abe24835d0"
 
-binary-ui-icons@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.3.2.tgz#81b25c460bb7e4b33c255cf93ffb5bb0327e3176"
+binary-ui-icons@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.3.3.tgz#9bcbd53993bc771dfc7653d1dcd8707b68ea9169"
   dependencies:
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.2.tgz#db4097a275ade976adb88d5a9d3896ce205ce24b"
+binary-ui-styles@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.3.tgz#d9fa800794e78ce34e9f1858b550389d2ddf7c2c"
 
 block-stream@*:
   version "0.0.9"
@@ -2492,8 +2492,8 @@ is-glob@^2.0.0, is-glob@^2.0.1:
     is-extglob "^1.0.0"
 
 is-my-json-valid@^2.10.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/is-my-json-valid/-/is-my-json-valid-2.16.0.tgz#f079dd9bfdae65ee2038aae8acbc86ab109e3693"
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/is-my-json-valid/-/is-my-json-valid-2.16.1.tgz#5a846777e2c2620d1e69104e5d3a03b1f6088f11"
   dependencies:
     generate-function "^2.0.0"
     generate-object-property "^1.1.0"
@@ -3543,8 +3543,8 @@ react-clone-referenced-element@^1.0.1:
   resolved "https://registry.yarnpkg.com/react-clone-referenced-element/-/react-clone-referenced-element-1.0.1.tgz#2bba8c69404c5e4a944398600bcc4c941f860682"
 
 react-deep-force-update@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.0.tgz#8d131ae07ae02f08df60744eb2cf2de4fcb325f1"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.1.tgz#bcd31478027b64b3339f108921ab520b4313dc2c"
 
 react-devtools-core@2.3.1:
   version "2.3.1"

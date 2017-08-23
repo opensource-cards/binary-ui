@@ -25,6 +25,9 @@
     "lib"
   ],
   "main": "index.js",
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
   "devDependencies": {
     "babel": "^6.3.26",
     "babel-cli": "^6.14.0",

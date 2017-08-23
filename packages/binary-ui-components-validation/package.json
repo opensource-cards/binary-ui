@@ -28,6 +28,7 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
+    "babel-runtime": "^6.23.0",
     "pure-validation": "^0.0.3"
   },
   "peerDependencies": {
