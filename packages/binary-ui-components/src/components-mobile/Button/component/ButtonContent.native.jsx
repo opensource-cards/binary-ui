@@ -14,14 +14,15 @@ const propTypes = {
   isBold: PropTypes.bool.isRequired,
   isDisabled: PropTypes.bool.isRequired,
   isEdit: PropTypes.bool.isRequired,
+  isValid: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
   renderIcon: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
 
-const ButtonContent = ({ color, isBold, isEdit, isDisabled, label, renderIcon }) => (
-  <ButtonWrapper style={getHighlightEditStyle(isEdit, true, false, undefined)} >
+const ButtonContent = ({ color, isBold, isEdit, isDisabled, isValid, label, renderIcon }) => (
+  <ButtonWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} >
     <View style={ICON_STYLE_OBJ} >
       <IconStyled
         color={getActionColorExt(color, BINARY_COLOR_GRAY_40, isDisabled)}

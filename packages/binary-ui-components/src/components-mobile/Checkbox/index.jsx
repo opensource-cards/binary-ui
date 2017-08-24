@@ -11,6 +11,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  onChange: undefined,
   onClick: undefined,
 };
 

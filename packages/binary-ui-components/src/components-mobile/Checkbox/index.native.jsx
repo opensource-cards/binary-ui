@@ -7,11 +7,12 @@ import { TouchableOpacity } from 'react-native';
 
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   onPress: PropTypes.func,
 };
 
 const defaultProps = {
+  onChange: undefined,
   onPress: undefined,
 };
 

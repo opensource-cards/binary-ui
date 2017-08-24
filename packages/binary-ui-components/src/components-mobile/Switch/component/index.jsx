@@ -10,11 +10,12 @@ import SwitchWrapper from '../components-styled/SwitchWrapper';
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
   label: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 };
 
 const defaultProps = {
   label: undefined,
+  onChange: undefined,
 };
 
 export default class Switch extends React.PureComponent {
@@ -26,7 +27,9 @@ export default class Switch extends React.PureComponent {
 
   onClick() {
     const { isChecked, onChange } = this.props;
-    onChange(!isChecked);
+    if (onChange) {
+      onChange(!isChecked);
+    }
   }
 
   render() {

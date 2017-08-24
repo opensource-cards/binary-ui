@@ -13,6 +13,7 @@ const propTypes = {
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
+  isValid: PropTypes.bool,
   label: PropTypes.string.isRequired,
   renderIcon: PropTypes.func,
   onClick: PropTypes.func.isRequired,
@@ -23,13 +24,14 @@ const defaultProps = {
   isBold: false,
   isDisabled: false,
   isEdit: true,
+  isValid: true,
   renderIcon: () => (<ArrowRight />),
 };
 
-const Button = ({ color, isBold, isDisabled, isEdit, label, renderIcon, onClick }) => (
+const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon, onClick }) => (
   <ButtonWrapper
     isTapHighlight={!isDisabled}
-    style={getHighlightEditStyle(isEdit, true, false, undefined)}
+    style={getHighlightEditStyle(isEdit, isValid, false, undefined)}
     onClick={!isDisabled && onClick}
   >
     <IconStyled

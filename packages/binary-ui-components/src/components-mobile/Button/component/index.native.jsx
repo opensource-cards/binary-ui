@@ -11,6 +11,7 @@ const propTypes = {
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
+  isValid: PropTypes.bool,
   label: PropTypes.string.isRequired,
   renderIcon: PropTypes.func,
   onPress: PropTypes.func.isRequired,
@@ -21,6 +22,7 @@ const defaultProps = {
   isBold: false,
   isDisabled: false,
   isEdit: true,
+  isValid: true,
   renderIcon: () => (<ArrowRight />),
 };
 
@@ -29,6 +31,7 @@ const Button = ({
   isBold,
   isDisabled,
   isEdit,
+  isValid,
   label,
   renderIcon,
   onPress,
@@ -46,6 +49,7 @@ const Button = ({
           isBold={isBold}
           isDisabled={isDisabled}
           isEdit={isEdit}
+          isValid={isValid}
           label={label}
           renderIcon={renderIcon}
         />
@@ -58,6 +62,7 @@ const Button = ({
         isBold={isBold}
         isDisabled={isDisabled}
         isEdit={isEdit}
+        isValid={isValid}
         label={label}
         renderIcon={renderIcon}
       />
