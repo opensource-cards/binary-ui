@@ -6,6 +6,34 @@ import { View } from 'react-native';
 
 import Switch from 'binary-ui-components/mobile/Switch';
 
+class Demo extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isChecked: false,
+    };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(isChecked) {
+    this.setState(() => ({
+      isChecked,
+    }));
+  }
+
+  render() {
+    const { isChecked } = this.state;
+    return (
+      <Switch
+        isChecked={isChecked}
+        label="Demo"
+        onChange={this.onChange}
+      />
+    );
+  }
+}
+
 storiesOf('binary-ui-components', module)
   .add('Switch', () => (
     <View>
@@ -18,5 +46,6 @@ storiesOf('binary-ui-components', module)
         isChecked={false}
         onChange={action()}
       />
+      <Demo />
     </View>
   ));

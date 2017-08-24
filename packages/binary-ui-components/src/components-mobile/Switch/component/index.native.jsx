@@ -1,9 +1,33 @@
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Animated, StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 import SwitchLabel from '../components-styled/SwitchLabel';
-import SwitchStyled from '../components-styled/SwitchStyled.native';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
-import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
+import { LIST_ITEM_HALF_HEIGHT } from '../../../utils/styles';
+
+const styles = StyleSheet.create({
+  container: {
+    borderRadius: LIST_ITEM_HALF_HEIGHT,
+    height: LIST_ITEM_HALF_HEIGHT,
+    marginRight: 10,
+    width: LIST_ITEM_HALF_HEIGHT * 2,
+  },
+  animatedContainer: {
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: LIST_ITEM_HALF_HEIGHT * 2,
+  },
+  circle: {
+    backgroundColor: 'white',
+    borderRadius: LIST_ITEM_HALF_HEIGHT / 2,
+    borderWidth: 1,
+    height: LIST_ITEM_HALF_HEIGHT,
+    width: LIST_ITEM_HALF_HEIGHT,
+  },
+});
 
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
@@ -19,7 +43,31 @@ export default class Switch extends React.PureComponent {
 
   constructor(props) {
     super(props);
+    this.state = {
+      animatedColor: new Animated.Value(props.isChecked ? 1 : -1),
+      animatedTransform: new Animated.Value(
+        props.isChecked ? LIST_ITEM_HALF_HEIGHT / 2 : -LIST_ITEM_HALF_HEIGHT / 2
+      ),
+    };
     this.onChange = this.onChange.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { isChecked } = this.props;
+    if (isChecked === nextProps.isChecked) {
+      return;
+    }
+    const { animatedColor, animatedTransform } = this.state;
+    Animated.parallel([
+      Animated.spring(animatedTransform, {
+        toValue: nextProps.isChecked ? LIST_ITEM_HALF_HEIGHT / 2 : -LIST_ITEM_HALF_HEIGHT / 2,
+        duration: 250,
+      }),
+      Animated.timing(animatedColor, {
+        toValue: nextProps.isChecked ? 1 : -1,
+        duration: 250,
+      }),
+    ]).start();
   }
 
   onChange() {
@@ -28,18 +76,30 @@ export default class Switch extends React.PureComponent {
   }
 
   render() {
-    const { isChecked, label } = this.props;
+    const { label } = this.props;
+    const { animatedColor, animatedTransform } = this.state;
+    const animatedColorInterpolation = animatedColor.interpolate({
+      inputRange: [-1, 1],
+      outputRange: [BINARY_COLOR_GRAY_80, BINARY_COLOR_BLUE_40],
+    });
     return (
       <SwitchWrapper>
         <SwitchLabel numberOfLines={1} >
           {label ? label.toUpperCase() : label}
         </SwitchLabel>
-        <SwitchStyled
-          tintColor={BINARY_COLOR_GRAY_80}
-          value={isChecked}
-          onTintColor={BINARY_COLOR_BLUE_40}
-          onValueChange={this.onChange}
-        />
+        <TouchableWithoutFeedback onPress={this.onChange} >
+          <Animated.View
+            style={[styles.container, { backgroundColor: animatedColorInterpolation }]}
+          >
+            <Animated.View
+              style={[styles.animatedContainer, { transform: [{ translateX: animatedTransform }] }]}
+            >
+              <Animated.View
+                style={[styles.circle, { borderColor: animatedColorInterpolation }]}
+              />
+            </Animated.View>
+          </Animated.View>
+        </TouchableWithoutFeedback>
       </SwitchWrapper>
     );
   }
