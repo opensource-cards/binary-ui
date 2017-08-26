@@ -14,3 +14,4 @@ import './index-components-switch';
 import './index-components-textline';
 import './index-components-textarea';
 import './index-components-tooltip';
+import './index-components-viewline';

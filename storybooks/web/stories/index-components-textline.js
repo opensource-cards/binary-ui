@@ -13,49 +13,23 @@ setAddon(infoAddon);
 storiesOf('binary-ui-components', module)
   .add('Textline', withInfo('A Textline Component')(() => (
     <div>
-      <Textline
-        isEdit
-        renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
-      >
-        Textline Editable
+      <Textline>
+        Textline without icon
       </Textline>
       <Textline
-        isDisabled
-        isEdit
         renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
+        onIconPress={action()}
       >
-        Textline Editable Disabled
+        Textline with icon
+      </Textline>
+      <Textline isEdit>
+        Textline with underline
       </Textline>
       <Textline isBold >
-        Textline Bold
+        Textline with bold text
       </Textline>
-      <Textline isBold isDisabled >
-        Textline Bold Disabled
-      </Textline>
-      <Textline
-        isEdit
-        renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
-      >
-        Textline Editable and <a href="https://try.cards" style={{ color: 'blue' }} >Cards</a> together
-      </Textline>
-      <Textline
-        isBold
-        isEdit
-        renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
-      >
-        Textline Editable Bold and <a href="https://try.cards" style={{ color: 'blue' }} >Cards</a> together
-      </Textline>
-      <Textline
-        isDisabled
-        isEdit
-        renderIcon={() => (<IconMore />)}
-        onIconClick={action()}
-      >
-        Textline Editable Disabled and <a href="https://try.cards" style={{ color: 'blue' }} >Cards</a> together
+      <Textline isDisabled >
+        Textline disabled
       </Textline>
     </div>
   )));
