@@ -44,12 +44,8 @@ export default class Switch extends React.PureComponent {
 
   constructor(props) {
     super(props);
-    this.state = {
-      animatedColor: new Animated.Value(props.isChecked ? 1 : -1),
-      animatedTransform: new Animated.Value(
-        props.isChecked ? LIST_ITEM_HALF_HEIGHT / 2 : -LIST_ITEM_HALF_HEIGHT / 2
-      ),
-    };
+    this.animatedColor = new Animated.Value(props.isChecked ? 1 : -1);
+    this.animatedTransform = new Animated.Value(props.isChecked ? 1 : -1);
     this.onChange = this.onChange.bind(this);
   }
 
@@ -58,15 +54,16 @@ export default class Switch extends React.PureComponent {
     if (isChecked === nextProps.isChecked) {
       return;
     }
-    const { animatedColor, animatedTransform } = this.state;
     Animated.parallel([
-      Animated.spring(animatedTransform, {
-        toValue: nextProps.isChecked ? LIST_ITEM_HALF_HEIGHT / 2 : -LIST_ITEM_HALF_HEIGHT / 2,
+      Animated.timing(this.animatedColor, {
         duration: 250,
-      }),
-      Animated.timing(animatedColor, {
         toValue: nextProps.isChecked ? 1 : -1,
+        useNativeDriver: true,
+      }),
+      Animated.spring(this.animatedTransform, {
         duration: 250,
+        toValue: nextProps.isChecked ? 1 : -1,
+        useNativeDriver: true,
       }),
     ]).start();
   }
@@ -80,10 +77,13 @@ export default class Switch extends React.PureComponent {
 
   render() {
     const { label } = this.props;
-    const { animatedColor, animatedTransform } = this.state;
-    const animatedColorInterpolation = animatedColor.interpolate({
+    const animatedColorInterpolation = this.animatedColor.interpolate({
       inputRange: [-1, 1],
       outputRange: [BINARY_COLOR_GRAY_80, BINARY_COLOR_BLUE_40],
+    });
+    const animatedTransformInterpolation = this.animatedTransform.interpolate({
+      inputRange: [-1, 1],
+      outputRange: [LIST_ITEM_HALF_HEIGHT / 2, -LIST_ITEM_HALF_HEIGHT / 2],
     });
     return (
       <SwitchWrapper>
@@ -95,7 +95,10 @@ export default class Switch extends React.PureComponent {
             style={[styles.container, { backgroundColor: animatedColorInterpolation }]}
           >
             <Animated.View
-              style={[styles.animatedContainer, { transform: [{ translateX: animatedTransform }] }]}
+              style={[
+                styles.animatedContainer,
+                { transform: [{ translateX: animatedTransformInterpolation }],
+              }]}
             >
               <Animated.View
                 style={[styles.circle, { borderColor: animatedColorInterpolation }]}
