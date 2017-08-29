@@ -6,7 +6,8 @@ import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyled from '../../../components/IconStyled';
 import { getActionColorExt, getHighlightEditStyle } from '../../../utils/styles-api';
-import { COLOR_BLACK, ICON_STYLE_OBJ } from '../../../utils/styles';
+
+const ICON_STYLE_OBJ = { paddingRight: 10 };
 
 const propTypes = {
   color: PropTypes.string,
@@ -20,7 +21,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: COLOR_BLACK,
+  color: '#000000',
   isBold: false,
   isDisabled: false,
   isEdit: true,

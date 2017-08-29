@@ -4,7 +4,7 @@ import React from 'react';
 import { TouchableHighlight, View } from 'react-native';
 import ButtonContent from './ButtonContent.native';
 import ButtonContentHighlight from '../components-styled/ButtonContentHighlight.native';
-import { COLOR_BLACK, TAP_HIGHLIGHT_COLOR } from '../../../utils/styles';
+import { TAP_HIGHLIGHT_COLOR } from '../utils/styles';
 
 const propTypes = {
   color: PropTypes.string,
@@ -18,7 +18,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: COLOR_BLACK,
+  color: '#000000',
   isBold: false,
   isDisabled: false,
   isEdit: true,

@@ -2,7 +2,6 @@ import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconStyled from '../IconStyled';
-import { COLOR_BLACK } from '../../utils/styles';
 import {
   OPACITY_TRANSITION,
   getActionColorExt,
@@ -19,7 +18,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: COLOR_BLACK,
+  color: '#000000',
   isActive: false,
   size: undefined,
   style: {},

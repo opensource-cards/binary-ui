@@ -14,8 +14,6 @@ MAXIMIZED_CSS          | same as above but CSS
 NO_SELECT_STYLE        | make object non-selectable (JS)
 NO_SELECT_CSS          | same as above but CSS
 WEBSITE_RESET_STYLES   | neutralize default styles
-WEBSITE_WRAPPER_STYLE  | positioning website components using JS
-WEBSITE_WRAPPER_CSS    | same as above but CSS
 LIST_ITEM_HEIGHT       | default height of list elements in non-card stacks
 
 ### Layout styles (native)

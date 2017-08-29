@@ -1,8 +1,9 @@
+import { INPUT_RESET_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
-import { CARDS_INPUT_RESET_CSS, FIELD_VALUE_FONT_CSS } from '../../../../utils/styles';
+import { FIELD_VALUE_FONT_CSS } from '../../../../utils/styles';
 
 export default styled.textarea`
-  ${CARDS_INPUT_RESET_CSS}
+  ${INPUT_RESET_CSS}
   ${FIELD_VALUE_FONT_CSS}
   background-color: transparent;
   cursor: text;

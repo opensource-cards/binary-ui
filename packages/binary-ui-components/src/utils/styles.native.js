@@ -1,8 +1,10 @@
 import { BINARY_COLOR_GRAY_60, FONT_FAMILY_MAIN } from 'binary-ui-styles';
 
-export * from './styles.native-and-web';
+export { LIST_ITEM_HALF_HEIGHT } from './styles.native-and-web';
 
-export const ICON_STYLE_OBJ = { flex: 1 };
+export const FONT_DISABLED_CSS = `
+  color: ${BINARY_COLOR_GRAY_60};
+`;
 
 export const FIELD_VALUE_FONT_CSS = `
   font-family: ${FONT_FAMILY_MAIN};
@@ -15,12 +17,4 @@ export const FIELD_NAME_FONT_CSS = `
   font-size: 13;
   font-weight: 700;
   letter-spacing: 2;
-`;
-
-export const CARDS_ICON_DISABLED_CSS = `
-  color: ${BINARY_COLOR_GRAY_60};
-`;
-
-export const CARDS_INPUT_RESET_CSS = `
-  padding: 0;
 `;

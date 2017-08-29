@@ -1,7 +1,16 @@
+
 export * from './index.native-and-web';
 
 export const FONT_FAMILY_MAIN =
 'Fira Sans, Helvetica Neue, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif';
+
+export const INPUT_RESET_CSS = `
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0;
+`;
 
 export const MAXIMIZED_STYLE = {
   width: '100%',
@@ -14,6 +23,8 @@ export const MAXIMIZED_CSS = `
 `;
 
 export const NO_SELECT_STYLE = {
+  userSelect: 'none',
+  WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
   // ios safari
   WebkitTouchCallout: 'none',
   // chrome/safari/opera
@@ -22,8 +33,6 @@ export const NO_SELECT_STYLE = {
   MozUserSelect: 'none',
   // internet explorer/edge
   msUserSelect: 'none',
-  userSelect: 'none',
-  WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
 };
 
 export const NO_SELECT_CSS = `
@@ -33,32 +42,16 @@ export const NO_SELECT_CSS = `
 `;
 
 export const WEBSITE_RESET_STYLES = `
-* {
-  outline: 0;
-  -ms-content-zooming: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-a, div, i, span {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-`;
-
-export const WEBSITE_WRAPPER_STYLE = {
-  ...MAXIMIZED_STYLE,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-between',
-};
-
-export const WEBSITE_WRAPPER_CSS = `
-  ${MAXIMIZED_CSS}
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  * {
+    outline: 0;
+    -ms-content-zooming: none;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  a, div, i, span {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 `;

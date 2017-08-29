@@ -7,14 +7,13 @@ import {
 } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
-import { CURSOR_POINTER_CSS } from '../../../../utils/styles';
 
 export default styled.div`
   ${NO_SELECT_CSS}
-  ${CURSOR_POINTER_CSS}
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   box-shadow: 0px 0px 3px 0px rgba(128, 128, 128, 0.5);
+  cursor: default;
   height: 40px;
   line-height: 40px;
   margin: 3px auto 0 auto;
