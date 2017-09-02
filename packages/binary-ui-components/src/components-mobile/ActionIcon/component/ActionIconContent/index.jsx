@@ -16,14 +16,7 @@ const defaultProps = {
   size: undefined,
 };
 
-const ActionIconContent = ({
-  color,
-  isActive,
-  isDisabled,
-  size,
-  renderIcon,
-  ...props,
-}) => (
+const ActionIconContent = ({ color, isActive, isDisabled, size, renderIcon, ...props }) => (
   <div {...props} >
     <ActionableIcon
       color={color}

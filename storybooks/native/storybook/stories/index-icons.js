@@ -97,7 +97,7 @@ const COLOR = '#000000';
 const SIZE = 50;
 
 storiesOf('binary-ui-icons', module)
-  .add('general', () =>
+  .add('General', () =>
     <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
       <Add color={COLOR} size={SIZE} onPress={action('clicked')} />
       <AddCard color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -166,7 +166,7 @@ storiesOf('binary-ui-icons', module)
       <UserAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
     </View>
   )
-.add('logotypes', () =>
+.add('Logotypes', () =>
     <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
       <Apple color={COLOR} size={SIZE} onPress={action('clicked')} />
       <AppleAlt color={COLOR} size={SIZE} onPress={action('clicked')} />

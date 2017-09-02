@@ -1,11 +1,10 @@
-import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { View } from 'react-native';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyled from '../../../components/IconStyled';
-import { getActionColorExt, getHighlightEditStyle } from '../../../utils/styles-api';
+import { getActionOpacityExt, getHighlightEditStyle } from '../../../utils/styles-api';
 
 const ICON_STYLE_OBJ = { marginRight: 8 };
 
@@ -25,8 +24,8 @@ const ButtonContent = ({ color, isBold, isEdit, isDisabled, isValid, label, rend
   <ButtonWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} >
     <View style={ICON_STYLE_OBJ} >
       <IconStyled
-        color={getActionColorExt(color, BINARY_COLOR_GRAY_40, isDisabled)}
         size={18}
+        styleOpacity={getActionOpacityExt(false, isDisabled)}
         renderIcon={renderIcon}
       />
     </View>

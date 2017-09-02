@@ -5,10 +5,10 @@ export default styled.View`
   height: ${LIST_ITEM_HEIGHT};
   align-items: center;
   flex-direction: row;
+  opacity: ${props => props.styleOpacity};
   overflow: hidden;
   justify-content: space-between;
   width: 100%;
-  ${props => (props.isDisabled ? 'opacity: 0.2;' : undefined)}
   ${props => (props.isEdit
     ? `border-bottom-width: 1;border-bottom-color: ${BINARY_COLOR_SAND_90};`
     : undefined

@@ -103,7 +103,7 @@ const AddStyled = styled(Add)`
 `;
 
 storiesOf('binary-ui-icons', module)
-  .add('general', (() => (
+  .add('General', (() => (
     <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
       <div><Add color={COLOR} size={SIZE} />Add</div>
       <div><AddCard color={COLOR} size={SIZE} />AddCard</div>

@@ -3,6 +3,7 @@ import React from 'react';
 import ViewContent from '../components-styled/ViewContent';
 import ViewWrapper from '../components-styled/ViewWrapper';
 import ViewlineIcon from '../components-styled/ViewlineIcon';
+import { getActionOpacityExt } from '../../../utils/styles-api';
 
 const propTypes = {
   children: PropTypes.any,
@@ -21,7 +22,10 @@ const defaultProps = {
 };
 
 const Viewline = ({ children, isDisabled, isEdit, renderIcon, onIconPress }) => (
-  <ViewWrapper isDisabled={isDisabled} isEdit={isEdit} >
+  <ViewWrapper
+    isEdit={isEdit}
+    styleOpacity={getActionOpacityExt(false, isDisabled)}
+  >
     <ViewContent>
       {children}
     </ViewContent>

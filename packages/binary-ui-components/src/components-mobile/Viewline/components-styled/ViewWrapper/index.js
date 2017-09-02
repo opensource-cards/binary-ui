@@ -11,6 +11,7 @@ export default styled.div`
   flex-direction: row;
   justify-content: space-between;
   min-height: ${LIST_ITEM_HEIGHT}px;
+  opacity: ${props => props.styleOpacity};
   padding-left: 10px;
   ${props => (props.isEdit ? `border-bottom: 1px solid ${BINARY_COLOR_SAND_90}` : undefined)}
 `;

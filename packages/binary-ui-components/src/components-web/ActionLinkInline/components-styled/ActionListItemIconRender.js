@@ -7,7 +7,7 @@ export default styled.a`
   text-decoration: none;
   display: flex;
   ${(props) => (
-    (!props.isDisabled) ? `
+    !props.isDisabled ? `
       &:hover {
         text-decoration: underline;
         text-decoration-color: #b1d8e8;

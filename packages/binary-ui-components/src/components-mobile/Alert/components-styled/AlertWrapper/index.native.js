@@ -7,7 +7,7 @@ import {
 import styled from 'styled-components/native';
 import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
-export default styled.TouchableWithoutFeedback.attrs({
+export default styled.View.attrs({
   style: () => ({
     shadowOffset: { width: 0, height: 1 },
   }),

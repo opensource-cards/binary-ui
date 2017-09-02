@@ -1,9 +1,10 @@
-import { BINARY_COLOR_GRAY_60, FONT_FAMILY_MAIN } from 'binary-ui-styles';
+import { FONT_FAMILY_MAIN } from 'binary-ui-styles';
+import { OPACITY_ACTIVE } from './styles-api';
 
 export { LIST_ITEM_HALF_HEIGHT } from './styles.native-and-web';
 
 export const FONT_DISABLED_CSS = `
-  color: ${BINARY_COLOR_GRAY_60};
+  opacity: ${OPACITY_ACTIVE};
   pointer-events: none;
 `;
 
