@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import TextareaIcon from '../components-styled/TextareaIcon';
 import TextareaInput from '../components-styled/TextareaInput';
 import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
+import ActionListItemIcon from '../../ActionListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -91,7 +91,7 @@ export default class Textarea extends React.Component {
           {...props}
         />
         {renderIcon && (
-          <TextareaIcon renderIcon={renderIcon} onClick={onIconClick} />
+          <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
         )}
       </TextareaWrapperStyled>
     );

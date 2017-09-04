@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
+import IconStyledWrapper from '../components-styled/IconStyledWrapper';
 import IconStyled from '../../../components/IconStyled';
 import { getActionOpacityExt, getHighlightEditStyle } from '../../../utils/styles-api';
-
-const ICON_STYLE_OBJ = { paddingRight: 10 };
 
 const propTypes = {
   color: PropTypes.string,
@@ -34,13 +33,14 @@ const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon,
     style={getHighlightEditStyle(isEdit, isValid, false, undefined)}
     onClick={!isDisabled && onClick}
   >
-    <IconStyled
-      color={color}
-      size={18}
-      style={ICON_STYLE_OBJ}
-      styleOpacity={getActionOpacityExt(false, isDisabled)}
-      renderIcon={renderIcon}
-    />
+    <IconStyledWrapper>
+      <IconStyled
+        color={color}
+        size={18}
+        styleOpacity={getActionOpacityExt(false, isDisabled)}
+        renderIcon={renderIcon}
+      />
+    </IconStyledWrapper>
     <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} >
       {isBold ? label.toUpperCase() : label}
     </ButtonText>

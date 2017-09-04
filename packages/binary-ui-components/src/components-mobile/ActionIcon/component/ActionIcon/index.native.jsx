@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionIconContent from './ActionIconContent';
-import ActionWrapper from '../../../components/ActionWrapper';
+import { TouchableOpacity, View } from 'react-native';
+import ActionIconContent from '../ActionIconContent';
 
 const propTypes = {
   color: PropTypes.string,
@@ -20,15 +20,24 @@ const defaultProps = {
 export default class ActionIcon extends React.PureComponent {
   render() {
     const { color, isDisabled, size, renderIcon, ...props } = this.props;
-    return (
-      <ActionWrapper isDisabled={isDisabled} {...props} >
+    return !isDisabled ? (
+      <TouchableOpacity {...props} >
         <ActionIconContent
           color={color}
           isDisabled={isDisabled}
           size={size}
           renderIcon={renderIcon}
         />
-      </ActionWrapper>
+      </TouchableOpacity>
+    ) : (
+      <View {...props} >
+        <ActionIconContent
+          color={color}
+          isDisabled={isDisabled}
+          size={size}
+          renderIcon={renderIcon}
+        />
+      </View>
     );
   }
 }

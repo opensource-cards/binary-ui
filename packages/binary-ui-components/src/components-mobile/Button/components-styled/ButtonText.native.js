@@ -7,7 +7,8 @@ import {
 } from '../../../utils/styles';
 
 export default styled.Text`
-  ${props => (props.isDisabled ? FONT_DISABLED_CSS : `color: ${props.styleColor};`)}
+  color: ${props => props.styleColor};
+  ${props => (props.isDisabled ? FONT_DISABLED_CSS : undefined)}
   ${props => (props.isBold ? FIELD_NAME_FONT_CSS : FIELD_VALUE_FONT_CSS)}
   font-family: ${FONT_FAMILY_MAIN};
   flex: 9;

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import InputIcon from '../components-styled/InputIcon';
 import InputStyled from '../components-styled/InputStyled';
 import InputWrapper from '../components-styled/InputWrapper';
 import INPUT_FIELD_TYPES from '../constants/text-field-component-types';
+import ActionListItemIcon from '../../ActionListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -104,7 +104,7 @@ export default class Input extends React.Component {
     return (
       <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, styleBorderColor)} >
         {renderIcon && (
-          <InputIcon renderIcon={renderIcon} onPress={onIconPress} />
+          <ActionListItemIcon renderIcon={renderIcon} onPress={onIconPress} />
         )}
         <InputStyled
           isBold={isBold}

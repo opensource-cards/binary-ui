@@ -27,6 +27,13 @@ storiesOf('binary-ui-components', module)
       />
       <Input
         isBold
+        placeholder="Bold placeholder"
+        type={INPUT_FIELD_TYPES.TEXT}
+        value=""
+        onChange={action()}
+      />
+      <Input
+        isBold
         placeholder="Bold text"
         type={INPUT_FIELD_TYPES.TEXT}
         value="Bold text"

@@ -9,7 +9,8 @@ import {
 
 export default styled.div`
   ${NO_SELECT_CSS}
-  ${props => (props.isDisabled ? FONT_DISABLED_CSS : `color: ${props.styleColor};`)}
+  color: ${props => props.styleColor};
+  ${props => (props.isDisabled ? FONT_DISABLED_CSS : undefined)}
   ${props => (props.isBold ? FIELD_NAME_FONT_CSS : FIELD_VALUE_FONT_CSS)}
   ${LIST_ITEM_CONTENTS_BASE_CSS}
   height: ${LIST_ITEM_HEIGHT}px;

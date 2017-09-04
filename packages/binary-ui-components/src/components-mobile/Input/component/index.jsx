@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import InputIcon from '../components-styled/InputIcon';
 import InputStyled from '../components-styled/InputStyled';
 import InputWrapper from '../components-styled/InputWrapper';
 import INPUT_FIELD_TYPES from '../constants/text-field-component-types';
+import ActionListItemIcon from '../../ActionListItemIcon';
 import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   isBold: PropTypes.bool,
   isValid: PropTypes.bool,
+  placeholder: PropTypes.string,
   styleBorderColor: PropTypes.string,
   type: PropTypes.any,
   value: PropTypes.string.isRequired,
@@ -22,6 +23,7 @@ const propTypes = {
 const defaultProps = {
   isBold: false,
   isValid: true,
+  placeholder: '',
   styleBorderColor: undefined,
   type: INPUT_FIELD_TYPES.ANY,
   renderIcon: undefined,
@@ -41,12 +43,7 @@ export default class Input extends React.Component {
     this.onBlur = this.onBlur.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onFocus = this.onFocus.bind(this);
-    this.setCaretPosition = this.setCaretPosition.bind(this);
     this.onSetInputRef = this.onSetInputRef.bind(this);
-  }
-
-  componentDidUpdate() {
-    this.setCaretPosition();
   }
 
   onSetInputRef(input) {
@@ -77,17 +74,6 @@ export default class Input extends React.Component {
     }
   }
 
-  setCaretPosition() {
-    const input = this.input;
-    window.requestAnimationFrame(() => {
-      if (input !== undefined && this.state.isActive) {
-        if (input.selectionStart !== null && !input.selectionEnd) {
-          input.selectionStart = input.selectionEnd = input.value.length;
-        }
-      }
-    });
-  }
-
   setFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;
@@ -102,6 +88,7 @@ export default class Input extends React.Component {
     const {
       isBold,
       isValid,
+      placeholder,
       styleBorderColor,
       type,
       value,
@@ -117,10 +104,11 @@ export default class Input extends React.Component {
     return (
       <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, styleBorderColor)} >
         {renderIcon && (
-          <InputIcon renderIcon={renderIcon} onClick={onIconClick} />
+          <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
         )}
         <InputStyled
           isBold={isBold}
+          placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           type={type}
           innerRef={this.onSetInputRef}
           value={isBold ? value.toUpperCase() : value}

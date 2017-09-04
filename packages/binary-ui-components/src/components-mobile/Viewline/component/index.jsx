@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ViewContent from '../components-styled/ViewContent';
 import ViewWrapper from '../components-styled/ViewWrapper';
-import ViewlineIcon from '../components-styled/ViewlineIcon';
+import ActionListItemIcon from '../../ActionListItemIcon';
 import { getActionOpacityExt } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -30,7 +30,7 @@ const Viewline = ({ children, isDisabled, isEdit, renderIcon, onIconClick }) => 
       {children}
     </ViewContent>
     {renderIcon && (
-      <ViewlineIcon isDisabled={isDisabled} renderIcon={renderIcon} onClick={onIconClick} />
+      <ActionListItemIcon isDisabled={isDisabled} renderIcon={renderIcon} onClick={onIconClick} />
     )}
   </ViewWrapper>
 );

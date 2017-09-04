@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionListItemIconContent from './ActionListItemIconContent';
-import ActionWrapper from '../../../components/ActionWrapper';
+import ActionListItemIconContent from '../ActionListItemIconContent';
+import ActionWrapper from '../../../../components/ActionWrapper';
 
 const propTypes = {
   isDisabled: PropTypes.bool,
