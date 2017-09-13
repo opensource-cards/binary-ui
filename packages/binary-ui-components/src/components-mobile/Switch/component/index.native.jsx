@@ -58,12 +58,10 @@ export default class Switch extends React.PureComponent {
       Animated.timing(this.animatedColor, {
         duration: 250,
         toValue: nextProps.isChecked ? 1 : -1,
-        useNativeDriver: true,
       }),
       Animated.spring(this.animatedTransform, {
         duration: 250,
         toValue: nextProps.isChecked ? 1 : -1,
-        useNativeDriver: true,
       }),
     ]).start();
   }
