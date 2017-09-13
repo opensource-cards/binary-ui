@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { findNodeHandle, NativeModules, View } from 'react-native';
+import { findNodeHandle, NativeModules, TouchableWithoutFeedback, View } from 'react-native';
 import TooltipStyled from '../components-styled/TooltipStyled';
 import TooltipArrow from '../components-styled/TooltipArrow.native';
 import TooltipText from '../components-styled/TooltipText.native';
@@ -10,6 +10,10 @@ const propTypes = {
   label: PropTypes.string.isRequired,
   placement: PropTypes.oneOf(['bottom-right', 'bottom-left']),
   target: PropTypes.object,
+  onLongPress: PropTypes.func,
+  onPress: PropTypes.func,
+  onPressIn: PropTypes.func,
+  onPressOut: PropTypes.func,
 };
 
 const defaultProps = {
@@ -98,7 +102,17 @@ export default class Tooltip extends React.Component {
   }
 
   render() {
-    const { isVisible, label, placement, target, ...props } = this.props;
+    const {
+      isVisible,
+      label,
+      placement,
+      target,
+      onLongPress,
+      onPress,
+      onPressIn,
+      onPressOut,
+      ...props,
+    } = this.props;
     const { parentBoundingRect, targetBoundingRect } = this.state;
     if (!target || targetBoundingRect === undefined) {
       return null;
@@ -106,18 +120,25 @@ export default class Tooltip extends React.Component {
     return (
       <View ref={this.onRef} onLayout={this.onLayout} >
         {parentBoundingRect ? (
-          <TooltipStyled
-            isVisible={isVisible}
-            parentBoundingRect={parentBoundingRect}
-            placement={placement}
-            targetBoundingRect={targetBoundingRect}
-            {...props}
+          <TouchableWithoutFeedback
+            onLongPress={onLongPress}
+            onPress={onPress}
+            onPressIn={onPressIn}
+            onPressOut={onPressOut}
           >
-            <TooltipArrow placement={placement} />
-            <TooltipText>
-              {label}
-            </TooltipText>
-          </TooltipStyled>
+            <TooltipStyled
+              isVisible={isVisible}
+              parentBoundingRect={parentBoundingRect}
+              placement={placement}
+              targetBoundingRect={targetBoundingRect}
+              {...props}
+            >
+              <TooltipArrow placement={placement} />
+              <TooltipText>
+                {label}
+              </TooltipText>
+            </TooltipStyled>
+          </TouchableWithoutFeedback>
         ) : null}
       </View>
     );

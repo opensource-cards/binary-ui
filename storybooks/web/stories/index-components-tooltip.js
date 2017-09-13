@@ -71,12 +71,14 @@ class TooltipDemo extends React.Component {
               label="Left tooltip"
               placement="bottom-right"
               target={this.buttonLeft}
+              onClick={this.onChangeLeft}
             />
             <Tooltip
               isVisible={isVisibleRight}
               label="Right tooltip"
               placement="bottom-left"
               target={this.buttonRight}
+              onClick={this.onChangeRight}
             />
           </div>
         </div>
