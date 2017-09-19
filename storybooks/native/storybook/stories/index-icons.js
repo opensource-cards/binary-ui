@@ -91,6 +91,7 @@ import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
+import Yahoo from 'binary-ui-icons/binary/Yahoo';
 import Youtube from 'binary-ui-icons/binary/Youtube';
 
 const COLOR = '#000000';
@@ -190,6 +191,7 @@ storiesOf('binary-ui-icons', module)
       <Ubuntu color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Whatsapp color={COLOR} size={SIZE} onPress={action('clicked')} />
       <WhatsappAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Yahoo color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Youtube color={COLOR} size={SIZE} onPress={action('clicked')} />
     </View>
   );

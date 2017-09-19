@@ -89,6 +89,7 @@ import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
+import Yahoo from 'binary-ui-icons/binary/Yahoo';
 import Youtube from 'binary-ui-icons/binary/Youtube';
 import React from 'react';
 import styled from 'styled-components';
@@ -196,6 +197,7 @@ storiesOf('binary-ui-icons', module)
       <div><Ubuntu color={COLOR} size={SIZE} />Ubuntu</div>
       <div><Whatsapp color={COLOR} size={SIZE} />Whatsapp</div>
       <div><WhatsappAlt color={COLOR} size={SIZE} />WhatsappAlt</div>
+      <div><Yahoo color={COLOR} size={SIZE} />Yahoo</div>
       <div><Youtube color={COLOR} size={SIZE} />Youtube</div>
     </div>
   )))
