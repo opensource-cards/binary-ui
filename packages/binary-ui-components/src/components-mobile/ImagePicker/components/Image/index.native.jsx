@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import ImageContent from '../../components-styled/ImageContent';
+import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 const propTypes = {
   imageId: PropTypes.string.isRequired,
@@ -33,7 +34,7 @@ export default class Image extends React.Component {
     const { imageUrl, isSelected } = this.props;
     return (
       <TouchableOpacity activeOpacity={0.5} onPress={this.onPress} >
-        <ImageContent borderRadius={30} source={{ uri: imageUrl }} >
+        <ImageContent borderRadius={PHOTO_SIZE / 2} source={{ uri: imageUrl }} >
           {isSelected ? (
             <IconDone size={40} color="#FFF" />
           ) : null}
