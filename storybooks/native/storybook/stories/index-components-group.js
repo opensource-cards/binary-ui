@@ -36,6 +36,23 @@ storiesOf('binary-ui-components', module)
         )}
       />
       <Group
+        renderLeft={() => (
+          <Textline isBold>
+            Left text
+          </Textline>
+        )}
+        renderRight={() => (
+          <Input
+            placeholder="Input"
+            type={INPUT_FIELD_TYPES.TEL}
+            value="Lorem ipsum dolor sir amet"
+            renderIcon={() => (<IconMore />)}
+            onChange={action()}
+            onIconPress={action()}
+          />
+        )}
+      />
+      <Group
         renderLeft={() => (null)}
         renderRight={() => (null)}
       />

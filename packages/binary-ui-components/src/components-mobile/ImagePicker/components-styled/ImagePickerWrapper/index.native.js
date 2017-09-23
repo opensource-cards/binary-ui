@@ -6,4 +6,5 @@ export default styled.View`
   justify-content: center;
   margin-top: 15px;
   width: 100%;
-`;
+  overflow: hidden;
+  `;

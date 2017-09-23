@@ -37,6 +37,12 @@ storiesOf('binary-ui-components', module)
         onChange={action()}
       />
       <Input
+        type={INPUT_FIELD_TYPES.TEXT}
+        value="Lorem ipsum dolor sit amet ipsum dolor sit amet"
+        renderIcon={() => (<IconMore />)}
+        onChange={action()}
+      />
+      <Input
         type={INPUT_FIELD_TYPES.NUMBER}
         value="1234567890"
         renderIcon={() => (<IconMore />)}

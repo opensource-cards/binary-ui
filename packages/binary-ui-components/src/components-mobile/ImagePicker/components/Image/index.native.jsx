@@ -33,7 +33,7 @@ export default class Image extends React.Component {
     const { imageUrl, isSelected } = this.props;
     return (
       <TouchableOpacity activeOpacity={0.5} onPress={this.onPress} >
-        <ImageContent source={{ uri: imageUrl }} >
+        <ImageContent borderRadius={30} source={{ uri: imageUrl }} >
           {isSelected ? (
             <IconDone size={40} color="#FFF" />
           ) : null}

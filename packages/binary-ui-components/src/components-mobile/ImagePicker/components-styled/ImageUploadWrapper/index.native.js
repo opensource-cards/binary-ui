@@ -10,4 +10,5 @@ export default styled.View`
   background-color: transparent;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;

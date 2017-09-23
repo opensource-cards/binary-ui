@@ -1,6 +1,7 @@
+export * from './index.native-and-web';
 
-/* eslint-disable import/prefer-default-export */
 export const INPUT_RESET_CSS = `
   padding: 0;
 `;
-/* eslint-enable import/prefer-default-export */
+
+export const FONT_FAMILY_MAIN = 'Fira Sans';

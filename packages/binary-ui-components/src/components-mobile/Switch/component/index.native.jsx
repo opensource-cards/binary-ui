@@ -81,7 +81,7 @@ export default class Switch extends React.PureComponent {
     });
     const animatedTransformInterpolation = this.animatedTransform.interpolate({
       inputRange: [-1, 1],
-      outputRange: [LIST_ITEM_HALF_HEIGHT / 2, -LIST_ITEM_HALF_HEIGHT / 2],
+      outputRange: [-LIST_ITEM_HALF_HEIGHT / 2, LIST_ITEM_HALF_HEIGHT / 2],
     });
     return (
       <SwitchWrapper>

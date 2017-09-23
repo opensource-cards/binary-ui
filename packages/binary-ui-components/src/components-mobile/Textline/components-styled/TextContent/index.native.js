@@ -9,6 +9,7 @@ import {
 export default styled.Text.attrs({
   numberOfLines: 1,
 })`
+  color: hsl(0, 0%, 0%);
   flex: 9;
   font-family: ${FONT_FAMILY_MAIN};
   padding-left: 10;
