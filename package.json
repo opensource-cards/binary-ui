@@ -5,6 +5,7 @@
     "storybook-web": "cd ./storybooks/web && npm run storybook",
     "storybook-native-watch": "cd ./storybooks/native && npm run storybook-web-watch",
     "storybook-ios": "cd ./storybooks/native && npm run ios",
+    "storybook-android": "cd ./storybooks/native && npm run android",
     "release": "lerna exec npm run build && npm run storybook-web-build"
   },
   "devDependencies": {
