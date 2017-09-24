@@ -8,12 +8,14 @@ export const FONT_DISABLED_CSS = `
 `;
 
 export const FIELD_VALUE_FONT_CSS = `
+  color: hsl(0, 0%, 0%);
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 18;
   font-weight: 200;
 `;
 
 export const FIELD_NAME_FONT_CSS = `
+  color: hsl(0, 0%, 0%);
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 13;
   font-weight: 700;
