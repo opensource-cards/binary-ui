@@ -110,12 +110,12 @@ export default class Input extends React.Component {
           isBold={isBold}
           includeFontPadding
           keyboardType={this.getKeyboardType()}
+          paddingBottom={0}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           secureTextEntry={type === INPUT_FIELD_TYPES.PASSWORD}
           textAlignVertical="center"
           value={isBold ? value.toUpperCase() : value}
           underlineColorAndroid="rgba(0, 0, 0, 0)"
-          paddingBottom={0}
           onBlur={this.onBlur}
           onChangeText={onChange}
           onFocus={this.onFocus}
