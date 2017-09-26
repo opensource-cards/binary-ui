@@ -15,7 +15,10 @@ export default styled.input`
   height: ${LIST_ITEM_HEIGHT}px;
   resize: none;
   overflow: hidden;
+  padding-bottom: 0;
   padding-left: 10px;
+  padding-right: 0;
+  padding-top: 0;
   text-align: left;
   width: 100%;
   wrap: soft;

@@ -9,7 +9,6 @@ export const INPUT_RESET_CSS = `
   border-radius: 0;
   box-sizing: border-box;
   outline: 0;
-  padding: 0;
 `;
 
 export const MAXIMIZED_STYLE = {

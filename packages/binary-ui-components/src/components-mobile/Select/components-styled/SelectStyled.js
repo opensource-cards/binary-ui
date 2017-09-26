@@ -10,7 +10,10 @@ export default styled.select`
   height: ${LIST_ITEM_HEIGHT}px;
   line-height: ${LIST_ITEM_HEIGHT}px;
   overflow: hidden;
+  padding-bottom: 0;
+  padding-left: 0;
   padding-right: 35px;
+  padding-top: 0;
   text-overflow: ellipsis;
   width: 100%;
   white-space: nowrap;

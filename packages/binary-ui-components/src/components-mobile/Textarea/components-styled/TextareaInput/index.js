@@ -9,7 +9,10 @@ export default styled.textarea`
   cursor: text;
   min-height: 120px;
   overflow: hidden;
-  padding: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
   resize: none;
   text-align: left;
   width: 100%;
