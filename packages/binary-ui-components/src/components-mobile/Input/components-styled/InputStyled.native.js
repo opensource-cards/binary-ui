@@ -7,4 +7,5 @@ export default styled.TextInput`
   flex: 9;
   height: ${LIST_ITEM_HEIGHT};
   padding-left: 10;
+  padding-bottom: 0;
 `;

@@ -115,6 +115,7 @@ export default class Input extends React.Component {
           textAlignVertical="center"
           value={isBold ? value.toUpperCase() : value}
           underlineColorAndroid="rgba(0, 0, 0, 0)"
+          paddingBottom={0}
           onBlur={this.onBlur}
           onChangeText={onChange}
           onFocus={this.onFocus}
