@@ -63,26 +63,23 @@ class TooltipDemo extends React.Component {
           <ActionIcon ref={this.onSetRight} title="Icon" onClick={this.onChangeRight} renderIcon={() => (<Add />)} size={20} />
         </div>
         <div style={{ clear: 'both' }} />        
-        <div style={{ position: 'relative' }} >
-          <div style={{ position: 'absolute', top: 50, left: 50, backgroundColor: '#aeaeae' }} >
-            <div>Container for Tooltips</div>
-            <Tooltip
-              isVisible={isVisibleLeft}
-              label="Left tooltip"
-              placement="bottom-right"
-              target={this.buttonLeft}
-              onClick={this.onChangeLeft}
-            />
-            <Tooltip
-              isVisible={isVisibleRight}
-              label="Right tooltip"
-              placement="bottom-left"
-              target={this.buttonRight}
-              onClick={this.onChangeRight}
-            />
-          </div>
-        </div>
-        
+        <div>Container for Tooltips</div>
+        <Tooltip
+          isVisible={isVisibleLeft}
+          label="Left tooltip"
+          placement="bottom-right"
+          target={this.buttonLeft}
+          style={{ transform: 'translate3d(15px, -18px, 0)' }}
+          onClick={this.onChangeLeft}
+        />
+        <Tooltip
+          isVisible={isVisibleRight}
+          label="Right tooltip"
+          placement="bottom-left"
+          target={this.buttonRight}
+          style={{ transform: 'translate3d(-15px, -18px, 0)' }}
+          onClick={this.onChangeRight}
+        />
       </div>
     );
   }

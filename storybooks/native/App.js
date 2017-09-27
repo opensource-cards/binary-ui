@@ -11,7 +11,7 @@ export default class App extends React.Component {
 
   componentDidMount() {
     Font.loadAsync({
-      'Fira Sans': require('./node_modules/font-installer/lib/fira-sans/resources/Fira Sans Regular.ttf'),
+      // 'Fira Sans': require('./node_modules/font-installer/lib/fira-sans/resources/Fira Sans Regular.ttf'),
     }).then(() => {
       this.setState({ fontLoaded: true });
     });

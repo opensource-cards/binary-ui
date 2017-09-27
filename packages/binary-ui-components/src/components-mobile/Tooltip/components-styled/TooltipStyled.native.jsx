@@ -7,9 +7,7 @@ import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_SHIFT, TOOLTIP_ARROW_WIDTH } from '
 const propTypes = {
   children: PropTypes.any.isRequired,
   isVisible: PropTypes.bool.isRequired,
-  parentBoundingRect: PropTypes.object.isRequired,
   placement: PropTypes.oneOf(['bottom-right', 'bottom-left']).isRequired,
-  targetBoundingRect: PropTypes.object.isRequired,
   style: PropTypes.object,
 };
 
@@ -36,28 +34,20 @@ export default class TooltipStyled extends React.Component {
   }
 
   getPositioning() {
-    const { parentBoundingRect, targetBoundingRect } = this.props;
-    switch (this.props.placement) {
+    const { placement } = this.props;
+    switch (placement) {
       case 'bottom-left': {
-        const parentBoundingRectRight = parentBoundingRect.px + parentBoundingRect.width;
-        const targetBoundingRectLeft = targetBoundingRect.px + targetBoundingRect.width;
-        const commonX = parentBoundingRectRight - targetBoundingRectLeft;
-        const commonY = targetBoundingRect.py - parentBoundingRect.py;
-        const targetCenterX = targetBoundingRect.width / 2;
         return {
           alignSelf: 'flex-start',
-          right: commonX + targetCenterX - TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH,
-          top: commonY + targetBoundingRect.height + TOOLTIP_ARROW_HEIGHT,
+          right: -TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH,
+          top: TOOLTIP_ARROW_HEIGHT,
         };
       }
       case 'bottom-right': {
-        const commonX = targetBoundingRect.px - parentBoundingRect.px;
-        const commonY = targetBoundingRect.py - parentBoundingRect.py;
-        const targetCenterX = targetBoundingRect.width / 2;
         return {
           alignSelf: 'flex-end',
-          left: commonX + targetCenterX - TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH,
-          top: commonY + targetBoundingRect.height + TOOLTIP_ARROW_HEIGHT,
+          left: -TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH,
+          top: TOOLTIP_ARROW_HEIGHT,
         };
       }
       default:
