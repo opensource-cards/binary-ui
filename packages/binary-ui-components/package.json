@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-components",
-  "version": "0.3.15",
+  "version": "0.3.16",
   "description": "React components for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
@@ -24,8 +24,8 @@
   ],
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "binary-ui-icons": "^0.3.14",
-    "binary-ui-styles": "^0.3.15",
+    "binary-ui-icons": "^0.3.16",
+    "binary-ui-styles": "^0.3.16",
     "prop-types": "^15.5.10",
     "styled-components": "^2.0.0"
   },

@@ -3,8 +3,6 @@ import styled from 'styled-components/native';
 import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_SHIFT, TOOLTIP_ARROW_WIDTH } from '../config';
 
 export default styled.View`
-  width: ${TOOLTIP_ARROW_WIDTH}px;
-  height: ${TOOLTIP_ARROW_HEIGHT}px;
   background-color: transparent;
   border-style: solid;
   border-top-width: 0px;
@@ -15,6 +13,8 @@ export default styled.View`
   border-right-color: transparent;
   border-bottom-color: ${BINARY_COLOR_GRAY_30};
   border-left-color: transparent;
+  height: ${TOOLTIP_ARROW_HEIGHT}px;
+  width: ${TOOLTIP_ARROW_WIDTH}px;
   ${props => {
     switch (props.placement) {
       case 'bottom-left':

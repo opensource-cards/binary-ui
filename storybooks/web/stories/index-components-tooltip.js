@@ -69,7 +69,7 @@ class TooltipDemo extends React.Component {
           label="Left tooltip"
           placement="bottom-right"
           target={this.buttonLeft}
-          style={{ transform: 'translate3d(15px, -18px, 0)' }}
+          style={{ transform: 'translate3d(65px, 70px, 0)' }}
           onClick={this.onChangeLeft}
         />
         <Tooltip
@@ -77,7 +77,7 @@ class TooltipDemo extends React.Component {
           label="Right tooltip"
           placement="bottom-left"
           target={this.buttonRight}
-          style={{ transform: 'translate3d(-15px, -18px, 0)' }}
+          style={{ transform: 'translate3d(-65px, 70px, 0)' }}
           onClick={this.onChangeRight}
         />
       </div>

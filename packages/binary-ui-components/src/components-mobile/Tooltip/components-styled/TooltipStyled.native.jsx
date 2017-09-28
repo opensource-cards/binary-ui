@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Animated } from 'react-native';
-import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_SHIFT, TOOLTIP_ARROW_WIDTH } from '../config';
+import { Animated, StyleSheet } from 'react-native';
+import { TOOLTIP_ARROW_SHIFT, TOOLTIP_ARROW_WIDTH } from '../config';
+
+const styles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+  },
+});
 
 const propTypes = {
   children: PropTypes.any.isRequired,
@@ -39,7 +45,6 @@ export default class TooltipStyled extends React.Component {
         return {
           alignItems: 'flex-end',
           right: TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH,
-          
         };
       }
       case 'bottom-right': {
@@ -57,15 +62,12 @@ export default class TooltipStyled extends React.Component {
     const { children, style, ...props } = this.props;
     return (
       <Animated.View
-        style={{
+        style={[styles.container, {
           opacity: this.animatedOpacity.interpolate({
             inputRange: [0, 1],
             outputRange: [0, 1],
           }),
-          position: 'absolute',
-          ...this.getPositioning(),
-          ...style,
-        }}
+        }, this.getPositioning(), style]}
         {...props}
       >
         {children}

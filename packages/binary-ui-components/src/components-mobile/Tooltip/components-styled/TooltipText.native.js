@@ -3,7 +3,7 @@ import { FONT_FAMILY_MAIN } from 'binary-ui-styles';
 
 export default styled.Text`
   color: hsl(0, 100%, 100%);
+  flex: 0;
   font-family: ${FONT_FAMILY_MAIN};
   font-size: 13;
-  flex: 0;
 `;
