@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableWithoutFeedback } from 'react-native';
+import { TouchableWithoutFeedback, View } from 'react-native';
+import { BINARY_COLOR_GRAY_30 } from 'binary-ui-styles';
 import TooltipArrow from '../components-styled/TooltipArrow.native';
 import TooltipStyled from '../components-styled/TooltipStyled';
 import TooltipText from '../components-styled/TooltipText.native';
@@ -30,7 +31,6 @@ const Tooltip = ({
   ...props,
 }) => (
   <TouchableWithoutFeedback
-    onLayout={this.onLayout}
     onLongPress={onLongPress}
     onPress={onPress}
     onPressIn={onPressIn}
@@ -38,9 +38,23 @@ const Tooltip = ({
   >
     <TooltipStyled isVisible={isVisible} placement={placement} {...props} >
       <TooltipArrow placement={placement} />
-      <TooltipText>
-        {label}
-      </TooltipText>
+      <View
+        style={{
+          backgroundColor: BINARY_COLOR_GRAY_30,
+          borderRadius: 5,
+          elevation: 1,
+          paddingHorizontal: 10,
+          paddingVertical: 5,
+          shadowColor: '#000',
+          shadowOffset: { width: 0, height: 1 },
+          shadowOpacity: 0.1,
+          shadowRadius: 2,
+        }}
+      >
+        <TooltipText>
+          {label}
+        </TooltipText>
+      </View>
     </TooltipStyled>
   </TouchableWithoutFeedback>
 );

@@ -79,10 +79,10 @@ class TooltipDemo extends React.Component {
         />
         <Tooltip
           isVisible={isVisibleRight}
-          label="Right tooltip"
+          label="Right tooltip with very long text"
           placement="bottom-left"
           target={this.buttonRight}
-          style={{ transform: [{ translateX: -75 }, { translateY: 100 }] }}
+          style={{ transform: [{ translateX: -45 }, { translateY: 100 }] }}
           onPress={this.onChangeRight}
         />
       </View>

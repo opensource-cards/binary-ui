@@ -18,13 +18,11 @@ export default styled.View`
   ${props => {
     switch (props.placement) {
       case 'bottom-left':
-        return `right: ${TOOLTIP_ARROW_SHIFT};`;
+        return `margin-right: ${TOOLTIP_ARROW_SHIFT};`;
       case 'bottom-right':
-        return `left: ${TOOLTIP_ARROW_SHIFT};`;
+        return `margin-left: ${TOOLTIP_ARROW_SHIFT};`;
       default:
         return undefined;
     }
   }}
-  position: absolute;
-  top: -${TOOLTIP_ARROW_HEIGHT};
 `;
