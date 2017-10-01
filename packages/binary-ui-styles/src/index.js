@@ -2,7 +2,7 @@
 export * from './index.native-and-web';
 
 export const FONT_FAMILY_MAIN =
-'Fira Sans, Helvetica Neue, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif';
+'Fira Sans Regular, Helvetica Neue, Apple SD Gothic Neo, Malgun Gothic, Segoe UI, sans-serif';
 
 export const INPUT_RESET_CSS = `
   border: none;
