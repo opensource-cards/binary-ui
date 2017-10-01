@@ -24,8 +24,6 @@ import React from 'react';
 import styled from 'styled-components';
 import uuid from 'uuid';
 
-import { getImg } from './resources/fake-img';
-
 setAddon(infoAddon);
 
 const text = 'Important: for compatibility set container width in pixels!';

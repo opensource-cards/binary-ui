@@ -6,6 +6,7 @@ import ImageContent from '../../components-styled/ImageContent';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 const propTypes = {
+  imageFit: PropTypes.string.isRequired,
   imageId: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   isSelected: PropTypes.bool.isRequired,
@@ -31,10 +32,14 @@ export default class Image extends React.Component {
   }
 
   render() {
-    const { imageUrl, isSelected } = this.props;
+    const { imageFit, imageUrl, isSelected } = this.props;
     return (
       <TouchableOpacity activeOpacity={0.5} onPress={this.onPress} >
-        <ImageContent borderRadius={PHOTO_SIZE / 2} source={{ uri: imageUrl }} >
+        <ImageContent
+          borderRadius={PHOTO_SIZE / 2}
+          resizeMode={imageFit}
+          source={{ uri: imageUrl }}
+        >
           {isSelected ? (
             <IconDone size={40} color="#FFF" />
           ) : null}

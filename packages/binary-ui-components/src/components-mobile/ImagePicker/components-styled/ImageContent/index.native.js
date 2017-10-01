@@ -8,7 +8,6 @@ export default styled.Image`
   height: ${PHOTO_SIZE}px;
   margin: 5px;
   width: ${PHOTO_SIZE}px;
-  background-color: transparent;
   align-items: center;
   justify-content: center;
 `;

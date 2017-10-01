@@ -690,10 +690,8 @@ babel-plugin-transform-react-jsx@^6.24.1, babel-plugin-transform-react-jsx@^6.5.
     babel-runtime "^6.22.0"
 
 babel-plugin-transform-react-remove-prop-types@^0.4.6:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.8.tgz#0aff04bc1d6564ec49cf23bcffb99c11881958db"
-  dependencies:
-    babel-traverse "^6.25.0"
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.9.tgz#6805ef83d77bda94ded472ff2f2836bacd6ac44c"
 
 babel-plugin-transform-regenerator@^6.24.1, babel-plugin-transform-regenerator@^6.5.0:
   version "6.26.0"
@@ -941,7 +939,7 @@ babel-template@^6.24.1, babel-template@^6.26.0:
     babylon "^6.18.0"
     lodash "^4.17.4"
 
-babel-traverse@^6.0.20, babel-traverse@^6.24.1, babel-traverse@^6.25.0, babel-traverse@^6.26.0:
+babel-traverse@^6.0.20, babel-traverse@^6.24.1, babel-traverse@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-traverse/-/babel-traverse-6.26.0.tgz#46a9cbd7edcc62c8e5c064e2d2d8d0f4035766ee"
   dependencies:
@@ -1026,16 +1024,16 @@ binary-extensions@^1.0.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.10.0.tgz#9aeb9a6c5e88638aad171e167f5900abe24835d0"
 
-binary-ui-icons@^0.3.14:
-  version "0.3.14"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.3.14.tgz#3402cfee36201ea7f454f6416b5aca6b155ec633"
+binary-ui-icons@^0.3.16:
+  version "0.3.16"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.3.16.tgz#02373569524e86e107d87958c2f351145142ada2"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.3.15:
-  version "0.3.15"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.15.tgz#4fb614df1f2ed6deeedc8e31a26af2af5b8ab698"
+binary-ui-styles@^0.3.16:
+  version "0.3.16"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.16.tgz#e7b70173fb9a25c4205346b7fd04d60b8807fe77"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -1128,8 +1126,8 @@ bser@^2.0.0:
     node-int64 "^0.4.0"
 
 buffer@^5.0.3:
-  version "5.0.7"
-  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.0.7.tgz#570a290b625cf2603290c1149223d27ccf04db97"
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.0.8.tgz#84daa52e7cf2fa8ce4195bc5cf0f7809e0930b24"
   dependencies:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
@@ -4321,8 +4319,8 @@ styled-components@^2.0.0:
     supports-color "^3.2.3"
 
 stylis@^3.2.1:
-  version "3.2.18"
-  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.2.18.tgz#211661f13b636e9e451456a1aadcec31248edf0e"
+  version "3.2.19"
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.2.19.tgz#3bfeff425e12935cde5faed4a39de06b1aeb5acb"
 
 supports-color@3.1.2:
   version "3.1.2"

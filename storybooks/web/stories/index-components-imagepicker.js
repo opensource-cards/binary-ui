@@ -1,7 +1,6 @@
 import IconCamera from 'binary-ui-icons/binary/CameraAlt';
 import React from 'react';
 import styled from 'styled-components';
-import { getImg } from './resources/fake-img';
 import uuid from 'uuid';
 
 import infoAddon from '@storybook/addon-info';
@@ -21,7 +20,7 @@ storiesOf('binary-ui-components', module)
       <ImagePicker
         imageFit="contain"
         images={[{
-          url: getImg(),
+          url: 'http://contacts.try.cards/card-placeholder-logo.png',
           id: imageSelectedId,
         }]}
         imageSelectedId={imageSelectedId}
@@ -33,9 +32,9 @@ storiesOf('binary-ui-components', module)
         onImageUpload={action()}
       />
       <ImagePicker
-        imageFit="contain"
+        imageFit="cover"
         images={[{
-          url: getImg(),
+          url: 'http://contacts.try.cards/card-placeholder-logo.png',
           id: imageSelectedId,
         }]}
         imageSelectedId={imageSelectedId}

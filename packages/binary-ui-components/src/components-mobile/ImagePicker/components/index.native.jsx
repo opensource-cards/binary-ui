@@ -5,6 +5,7 @@ import ImageUpload from './ImageUpload';
 import ImagePickerWrapper from '../components-styled/ImagePickerWrapper';
 
 const propTypes = {
+  imageFit: PropTypes.string,
   imageSelectedId: PropTypes.string,
   images: PropTypes.array,
   isImageUpload: PropTypes.bool,
@@ -14,6 +15,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  imageFit: 'contain',
   imageSelectedId: undefined,
   images: [],
   isImageUpload: true,
@@ -39,6 +41,7 @@ export default class ImagePicker extends React.PureComponent {
   render() {
     const {
       images,
+      imageFit,
       imageSelectedId,
       isImageUpload,
       renderUploadIcon,
@@ -48,6 +51,7 @@ export default class ImagePicker extends React.PureComponent {
       <ImagePickerWrapper>
         {images.map(image => (
           <Image
+            imageFit={imageFit}
             imageId={image.id}
             imageUrl={image.url}
             isSelected={image.id === imageSelectedId}

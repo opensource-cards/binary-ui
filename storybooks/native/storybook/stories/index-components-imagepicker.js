@@ -13,8 +13,9 @@ storiesOf('binary-ui-components', module)
   .add('ImagePicker', () => (
     <View>
       <ImagePicker
+        imageFit="contain"
         images={[{
-          url: 'https://facebook.github.io/react/img/logo_og.png',
+          url: 'http://contacts.try.cards/card-placeholder-logo.png',
           id: imageSelectedId,
         }]}
         imageSelectedId={imageSelectedId}
@@ -26,8 +27,9 @@ storiesOf('binary-ui-components', module)
         onImageUpload={action()}
       />
       <ImagePicker
+        imageFit="cover"
         images={[{
-          url: 'https://facebook.github.io/react/img/logo_og.png',
+          url: 'http://contacts.try.cards/card-placeholder-logo.png',
           id: imageSelectedId,
         }]}
         imageSelectedId={imageSelectedId}
