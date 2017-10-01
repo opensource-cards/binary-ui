@@ -69,14 +69,14 @@ export const BINARY_COLOR_SLATE_30 = '#434556';
 export const BINARY_COLOR_SLATE_20 = '#2c2e3a';
 export const BINARY_COLOR_SLATE_10 = '#16171d';
 
-export const FONT_FAMILY_MAIN_100 = 'Fira Sans Thin';
-export const FONT_FAMILY_MAIN_200 = 'Fira Sans ExtraLight';
-export const FONT_FAMILY_MAIN_300 = 'Fira Sans Light';
-export const FONT_FAMILY_MAIN_400 = 'Fira Sans Regular';
-export const FONT_FAMILY_MAIN_500 = 'Fira Sans Medium';
-export const FONT_FAMILY_MAIN_600 = 'Fira Sans SemiBold';
-export const FONT_FAMILY_MAIN_700 = 'Fira Sans Bold';
-export const FONT_FAMILY_MAIN_800 = 'Fira Sans ExtraBold';
-export const FONT_FAMILY_MAIN_900 = 'Fira Sans Black';
+export const FONT_FAMILY_MAIN_100 = 'FiraSans-Thin';
+export const FONT_FAMILY_MAIN_200 = 'FiraSans-ExtraLight';
+export const FONT_FAMILY_MAIN_300 = 'FiraSans-Light';
+export const FONT_FAMILY_MAIN_400 = 'FiraSans-Regular';
+export const FONT_FAMILY_MAIN_500 = 'FiraSans-Medium';
+export const FONT_FAMILY_MAIN_600 = 'FiraSans-SemiBold';
+export const FONT_FAMILY_MAIN_700 = 'FiraSans-Bold';
+export const FONT_FAMILY_MAIN_800 = 'FiraSans-ExtraBold';
+export const FONT_FAMILY_MAIN_900 = 'FiraSans-Black';
 
 export const LIST_ITEM_HEIGHT = 44;
