@@ -1,4 +1,4 @@
-import { BINARY_COLOR_GRAY_30, FONT_FAMILY_MAIN } from 'binary-ui-styles';
+import { BINARY_COLOR_GRAY_30, FONT_FAMILY_MAIN_400 } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_WIDTH, TOOLTIP_ARROW_SHIFT } from '../config';
 
@@ -8,7 +8,7 @@ export default styled.div`
   box-shadow: 0px 0px 3px 0px rgba(128, 128, 128, 0.5);
   color: #fff;
   cursor: default;
-  font-family: ${FONT_FAMILY_MAIN};
+  font-family: ${FONT_FAMILY_MAIN_400};
   font-size: 13px;
   padding: 5px 10px;
   position: absolute;

@@ -1,4 +1,4 @@
-import { FONT_FAMILY_MAIN_200, FONT_FAMILY_MAIN_700 } from 'binary-ui-styles';
+import { FONT_FAMILY_MAIN_200, FONT_FAMILY_MAIN_600 } from 'binary-ui-styles';
 import { OPACITY_ACTIVE } from './styles-api';
 
 export { LIST_ITEM_HALF_HEIGHT } from './styles.native-and-web';
@@ -16,7 +16,7 @@ export const FIELD_VALUE_FONT_CSS = `
 
 export const FIELD_NAME_FONT_CSS = `
   color: hsl(0, 0%, 0%);
-  font-family: ${FONT_FAMILY_MAIN_700};
+  font-family: ${FONT_FAMILY_MAIN_600};
   font-size: 13px;
   letter-spacing: 2px;
 `;
