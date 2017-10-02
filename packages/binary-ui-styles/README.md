@@ -8,7 +8,6 @@ This package provides a set of React components implementing Binary Design Syste
 
 const                  | use
 -----------------------|-------------
-FONT_FAMILY_MAIN       | set default font families for all devices
 MAXIMIZED_STYLE        | make components' height and width 100% (JS)
 MAXIMIZED_CSS          | same as above but CSS
 NO_SELECT_STYLE        | make object non-selectable (JS)
