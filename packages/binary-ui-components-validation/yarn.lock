@@ -607,13 +607,13 @@ binary-extensions@^1.0.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.10.0.tgz#9aeb9a6c5e88638aad171e167f5900abe24835d0"
 
-binary-ui-components@^0.3.20:
-  version "0.3.20"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.3.20.tgz#62211b5eac825370ef1c6db2f2a509fcd80de8ea"
+binary-ui-components@^0.3.21:
+  version "0.3.21"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.3.21.tgz#f7cb406fb51d5f5926659c498bacc7f352e474a8"
   dependencies:
     babel-runtime "^6.23.0"
     binary-ui-icons "^0.3.17"
-    binary-ui-styles "^0.3.20"
+    binary-ui-styles "^0.3.21"
     prop-types "^15.5.10"
     styled-components "^2.0.0"
 
@@ -624,9 +624,9 @@ binary-ui-icons@^0.3.17:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.3.20:
-  version "0.3.20"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.20.tgz#faf38c781a696f357dc1a3b0d82493db0619fc10"
+binary-ui-styles@^0.3.21:
+  version "0.3.21"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.21.tgz#55c701ea0def86938a418f12312a341a44f70eee"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -2110,9 +2110,9 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-pure-validation@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/pure-validation/-/pure-validation-0.0.3.tgz#f48ef154053e7faaedc1ca23e7235d3cda984d26"
+pure-validation@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/pure-validation/-/pure-validation-0.0.4.tgz#e4dca9dd1447ce6c37a92b8ef0562fcf4d644787"
   dependencies:
     email-regex "^1.0.0"
     url-regex "^4.1.1"
@@ -2431,8 +2431,8 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
 styled-components@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.0.tgz#23823d305b1929723f927837735fdc2431545956"
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.1.tgz#f4835f1001c37bcc301ac3865b5d93466de4dd5b"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"

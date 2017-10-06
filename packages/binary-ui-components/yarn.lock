@@ -1031,9 +1031,9 @@ binary-ui-icons@^0.3.17:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.3.20:
-  version "0.3.20"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.20.tgz#faf38c781a696f357dc1a3b0d82493db0619fc10"
+binary-ui-styles@^0.3.21:
+  version "0.3.21"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.3.21.tgz#55c701ea0def86938a418f12312a341a44f70eee"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -4305,8 +4305,8 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
 styled-components@^2.0.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.0.tgz#23823d305b1929723f927837735fdc2431545956"
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.1.tgz#f4835f1001c37bcc301ac3865b5d93466de4dd5b"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
