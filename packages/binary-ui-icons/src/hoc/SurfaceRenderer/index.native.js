@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Group, Shape, Surface, Transform } from 'react-native/Libraries/ART/ReactNativeART';
+import { ART } from 'react-native';
 import createSurfaceRenderer from './index.native-and-web';
+
+const { Group, Shape, Surface, Transform } = ART;
 
 const SurfaceRenderer = createSurfaceRenderer(Group, Shape, Surface, Transform);
 

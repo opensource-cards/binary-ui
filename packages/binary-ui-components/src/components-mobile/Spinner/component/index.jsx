@@ -1,53 +1,25 @@
 import React from 'react';
+import ART from 'react-art-svg-renderer';
 import LogoSvg from './index.native-and-web';
 import { DURATION_MSEC } from '../config';
 
-/* eslint-disable global-require */
-// NOTE: window variable should not be defined on a server!
-const ReactArt = (typeof window === 'undefined')
-  ? undefined
-  : (() => require('react-art'))();
-/* eslint-enable */
+const { Group, Shape, Surface } = ART;
 
 const propTypes = {};
 
 const defaultProps = {};
 
-export default class LogoSvgWeb extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      isAllowRendering: false,
-    };
-  }
-
-  componentDidMount() {
-    if (this.state.isAllowRendering === false) {
-      /* eslint-disable react/no-did-mount-set-state */
-      this.setState(() => ({
-        isAllowRendering: true,
-      }));
-      /* eslint-enable react/no-did-mount-set-state */
-    }
-  }
-
-  render() {
-    if (this.state.isAllowRendering === false) {
-      return null;
-    }
-    const { Group, Shape, Surface } = ReactArt;
-    return (
-      <LogoSvg
-        duration={DURATION_MSEC}
-        Group={Group}
-        Shape={Shape}
-        Surface={Surface}
-        {...this.props}
-      />
-    );
-  }
-}
+const LogoSvgWeb = (props) => (
+  <LogoSvg
+    duration={DURATION_MSEC}
+    Group={Group}
+    Shape={Shape}
+    Surface={Surface}
+    {...props}
+  />
+);
 
 LogoSvgWeb.propTypes = propTypes;
 LogoSvgWeb.defaultProps = defaultProps;
+
+export default LogoSvgWeb;

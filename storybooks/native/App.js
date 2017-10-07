@@ -11,6 +11,7 @@ export default class App extends React.Component {
 
   componentDidMount() {
     Font.loadAsync({
+      /*
       'FiraSans Thin': require('./node_modules/font-installer/lib/fira-sans/resources/Fira Sans Thin.ttf'),
       'FiraSans ExtraLight': require('./node_modules/font-installer/lib/fira-sans/resources/Fira Sans ExtraLight.ttf'),
       'FiraSans Light': require('./node_modules/font-installer/lib/fira-sans/resources/Fira Sans Light.ttf'),
@@ -20,6 +21,7 @@ export default class App extends React.Component {
       'FiraSans Bold': require('./node_modules/font-installer/lib/fira-sans/resources/Fira Sans Bold.ttf'),
       'FiraSans ExtraBold': require('./node_modules/font-installer/lib/fira-sans/resources/Fira Sans ExtraBold.ttf'),
       'FiraSans Black': require('./node_modules/font-installer/lib/fira-sans/resources/Fira Sans Black.ttf'),
+      */
     }).then(() => {
       this.setState({ fontLoaded: true });
     });

@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-icons",
-  "version": "0.3.22",
+  "version": "0.3.23",
   "description": "React icons for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
@@ -26,8 +26,8 @@
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {
-    "react": "^15.3.2",
-    "react-art": "^0.15.1",
+    "react": "^16.0.0",
+    "react-art-svg-renderer": "^0.0.1-rc.8",
     "react-native": "^0.47.0",
     "styled-components": "^2.0.0"
   },
@@ -48,9 +48,9 @@
     "eslint-plugin-jsx-a11y": "^1.0.2",
     "eslint-plugin-react": "^5.0.1",
     "mocha": "^3.0.2",
-    "react": "~15.3.2",
-    "react-art": "^0.15.1",
-    "react-dom": "~15.3.2",
+    "react": "^16.0.0",
+    "react-art-svg-renderer": "^0.0.1-rc.8",
+    "react-dom": "^16.0.0",
     "react-native": "^0.38.0",
     "rimraf": "^2.3.4",
     "styled-components": "^2.0.0"
