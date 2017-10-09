@@ -59,7 +59,7 @@ import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
-import Pinch from 'binary-ui-icons/binary/Pinch';
+import Drawer from 'binary-ui-icons/binary/Drawer';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import Remove from 'binary-ui-icons/binary/Remove';
 import Save from 'binary-ui-icons/binary/Save';
@@ -77,7 +77,7 @@ import StackUnavailable from 'binary-ui-icons/binary/StackUnavailable';
 import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
-import Swipe from 'binary-ui-icons/binary/Swipe';
+import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
 import Telegram from 'binary-ui-icons/binary/Telegram';
 import Text from 'binary-ui-icons/binary/Text';
 import TextAlt from 'binary-ui-icons/binary/TextAlt';
@@ -139,7 +139,7 @@ storiesOf('binary-ui-icons', module)
       <New color={COLOR} size={SIZE} onPress={action('clicked')} />
       <NewAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Open color={COLOR} size={SIZE} onPress={action('clicked')} />
-      <Pinch color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Drawer color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Remove color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Save color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Scan color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -156,7 +156,7 @@ storiesOf('binary-ui-icons', module)
       <StackUnavailableAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Store color={COLOR} size={SIZE} onPress={action('clicked')} />
       <StoreAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
-      <Swipe color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <PhoneCard color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Text color={COLOR} size={SIZE} onPress={action('clicked')} />
       <TextAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Time color={COLOR} size={SIZE} onPress={action('clicked')} />

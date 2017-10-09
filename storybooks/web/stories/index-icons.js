@@ -57,7 +57,7 @@ import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
-import Pinch from 'binary-ui-icons/binary/Pinch';
+import Drawer from 'binary-ui-icons/binary/Drawer';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import Remove from 'binary-ui-icons/binary/Remove';
 import Save from 'binary-ui-icons/binary/Save';
@@ -75,7 +75,7 @@ import StackUnavailable from 'binary-ui-icons/binary/StackUnavailable';
 import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
-import Swipe from 'binary-ui-icons/binary/Swipe';
+import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
 import Telegram from 'binary-ui-icons/binary/Telegram';
 import Text from 'binary-ui-icons/binary/Text';
 import TextAlt from 'binary-ui-icons/binary/TextAlt';
@@ -145,7 +145,7 @@ storiesOf('binary-ui-icons', module)
       <div><New color={COLOR} size={SIZE} />New</div>
       <div><NewAlt color={COLOR} size={SIZE} />NewAlt</div>
       <div><Open color={COLOR} size={SIZE} />Open</div>
-      <div><Pinch color={COLOR} size={SIZE} />Pinch</div>
+      <div><Drawer color={COLOR} size={SIZE} />Drawer</div>
       <div><Remove color={COLOR} size={SIZE} />Remove</div>
       <div><Save color={COLOR} size={SIZE} />Save</div>
       <div><Scan color={COLOR} size={SIZE} />Scan</div>
@@ -162,7 +162,7 @@ storiesOf('binary-ui-icons', module)
       <div><StackUnavailableAlt color={COLOR} size={SIZE} />StackUnavailableAlt</div>
       <div><Store color={COLOR} size={SIZE} />Store</div>
       <div><StoreAlt color={COLOR} size={SIZE} />StoreAlt</div>
-      <div><Swipe color={COLOR} size={SIZE} />Swipe</div>
+      <div><PhoneCard color={COLOR} size={SIZE} />PhoneCard</div>
       <div><Text color={COLOR} size={SIZE} />Text</div>
       <div><TextAlt color={COLOR} size={SIZE} />TextAlt</div>
       <div><Time color={COLOR} size={SIZE} />Time</div>
