@@ -10,6 +10,37 @@ import Input, { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
 
 setAddon(infoAddon);
 
+class InputDemo extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: '',
+    };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(text) {
+    this.setState(() => ({
+      text,
+    }));
+  }
+
+  render() {
+    const { text } = this.state;
+    return (
+      <Input
+        placeholder="Demo"
+        type={INPUT_FIELD_TYPES.EMAIL}
+        value={text}
+        renderIcon={() => (<IconMore />)}
+        onChange={this.onChange}
+        onIconPress={action()}
+      />
+    );
+  }
+}
+
 storiesOf('binary-ui-components', module)
   .add('Input', withInfo('An Input Component')(() => (
     <div>
@@ -76,5 +107,6 @@ storiesOf('binary-ui-components', module)
         onChange={action()}
         onIconClick={action()}
       />
+      <InputDemo />
     </div>
   )));

@@ -69,6 +69,22 @@ export default class Input extends React.Component {
     }));
   }
 
+  getAutoCapitalize() {
+    const { type } = this.props;
+    switch (type) {
+      case INPUT_FIELD_TYPES.EMAIL:
+      case INPUT_FIELD_TYPES.LINK:
+      case INPUT_FIELD_TYPES.NUMBER:
+      case INPUT_FIELD_TYPES.PASSWORD:
+      case INPUT_FIELD_TYPES.TEL:
+        return 'none';
+      case INPUT_FIELD_TYPES.TEXT:
+        return 'sentences';
+      default:
+        return 'none';
+    }
+  }
+
   getKeyboardType() {
     const { type } = this.props;
     switch (type) {
@@ -107,6 +123,7 @@ export default class Input extends React.Component {
           <ActionListItemIcon renderIcon={renderIcon} onPress={onIconPress} />
         )}
         <InputStyled
+          autoCapitalize={this.getAutoCapitalize()}
           includeFontPadding
           isBold={isBold}
           keyboardType={this.getKeyboardType()}

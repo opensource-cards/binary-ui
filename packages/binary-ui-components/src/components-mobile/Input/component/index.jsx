@@ -107,10 +107,10 @@ export default class Input extends React.Component {
           <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
         )}
         <InputStyled
+          innerRef={this.onSetInputRef}
           isBold={isBold}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           type={type}
-          innerRef={this.onSetInputRef}
           value={isBold ? value.toUpperCase() : value}
           onBlur={this.onBlur}
           onChange={this.onChange}
