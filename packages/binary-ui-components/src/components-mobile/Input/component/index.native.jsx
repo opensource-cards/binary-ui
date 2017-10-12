@@ -107,8 +107,8 @@ export default class Input extends React.Component {
           <ActionListItemIcon renderIcon={renderIcon} onPress={onIconPress} />
         )}
         <InputStyled
-          isBold={isBold}
           includeFontPadding
+          isBold={isBold}
           keyboardType={this.getKeyboardType()}
           paddingBottom={0}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
