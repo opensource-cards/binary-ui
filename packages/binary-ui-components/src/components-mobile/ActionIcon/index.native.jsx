@@ -40,12 +40,12 @@ export default class ActionIcon extends React.PureComponent {
     } = this.props;
     return (
       <TouchableOpacity
-        {...props}
         activeOpacity={!isDisabled ? 0.2 : 1}
         onLongPress={!isDisabled ? onLongPress : undefined}
         onPress={!isDisabled ? onPress : undefined}
         onPressIn={!isDisabled ? onPressIn : undefined}
         onPressOut={!isDisabled ? onPressOut : undefined}
+        {...props}
       >
         {renderIcon({
           color: color || '#000000',

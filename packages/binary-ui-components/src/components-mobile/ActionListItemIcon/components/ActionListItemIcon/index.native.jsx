@@ -31,12 +31,12 @@ const ActionListItemIcon = ({
   ...props,
 }) => (
   <TouchableOpacity
-    {...props}
     activeOpacity={!isDisabled ? 0.2 : 1}
     onLongPress={!isDisabled ? onLongPress : undefined}
     onPress={!isDisabled ? onPress : undefined}
     onPressIn={!isDisabled ? onPressIn : undefined}
     onPressOut={!isDisabled ? onPressOut : undefined}
+    {...props}
   >
     {renderIcon({
       color: BINARY_COLOR_GRAY_40,

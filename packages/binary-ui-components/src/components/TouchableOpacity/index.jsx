@@ -84,6 +84,7 @@ export default class TouchableOpacity extends React.Component {
         style={{ ...style, opacity: isActive ? activeOpacity : 1, transition: OPACITY_TRANSITION }}
         onMouseDown={this.onMouseDown}
         onTouchStart={this.onTouchStart}
+        {...props}
       >
         {children}
       </div>
