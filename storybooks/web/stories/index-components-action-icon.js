@@ -14,8 +14,8 @@ setAddon(infoAddon);
 storiesOf('binary-ui-components', module)
   .add('ActionIcon', withInfo('An ActionIcon Component')(() => (
     <div>
-      <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<IconAdd />)} />
-      <ActionIcon color="red" title="Icon" onClick={action()} renderIcon={() => (<IconArrowDown />)} />
-      <ActionIcon isDisabled title="Icon" onClick={action()} renderIcon={() => (<IconArrowDown />)} />
+      <ActionIcon title="Icon" onClick={action()} renderIcon={(props) => (<IconAdd {...props} />)} />
+      <ActionIcon color="red" title="Icon" onClick={action()} renderIcon={(props) => (<IconArrowDown {...props} />)} />
+      <ActionIcon isDisabled title="Icon" onClick={action()} renderIcon={(props) => (<IconArrowDown {...props} />)} />
     </div>
   )));

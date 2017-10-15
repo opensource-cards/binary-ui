@@ -39,7 +39,7 @@ d="M256,65.5c105.14,0 190.5,85.36 190.5,190.5c0,105.14 -85.36,190.5 -190.5,190.5
 and use it in file named CardsIconCircle.jsx file:
 ```jsx
 import React from 'react';
-import cardsIconHOC from '../hoc/CardsIconHOC';
+import cardsIconHOC from '../hoc';
 
 export default cardsIconHOC(
   ({ Group, Shape }) => (

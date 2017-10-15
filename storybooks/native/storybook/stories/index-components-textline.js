@@ -14,7 +14,7 @@ storiesOf('binary-ui-components', module)
         Textline without icon
       </Textline>
       <Textline
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onIconPress={action()}
       >
         Textline with icon

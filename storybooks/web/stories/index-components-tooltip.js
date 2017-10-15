@@ -57,10 +57,10 @@ class TooltipDemo extends React.Component {
     return (
       <div style={{ padding: 50 }} >
         <div style={{ float: 'left', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat', position: 'relative' }}>
-          <ActionIcon ref={this.onSetLeft} title="Icon" onClick={this.onChangeLeft} renderIcon={() => (<Add />)} size={20} />
+          <ActionIcon ref={this.onSetLeft} title="Icon" onClick={this.onChangeLeft} renderIcon={(props) => (<Add {...props} />)} size={20} />
         </div>
         <div style={{ float: 'right', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat', position: 'relative' }}>
-          <ActionIcon ref={this.onSetRight} title="Icon" onClick={this.onChangeRight} renderIcon={() => (<Add />)} size={20} />
+          <ActionIcon ref={this.onSetRight} title="Icon" onClick={this.onChangeRight} renderIcon={(props) => (<Add {...props} />)} size={20} />
         </div>
         <div style={{ clear: 'both' }} />        
         <div>Container for Tooltips</div>

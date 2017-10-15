@@ -1,5 +1,5 @@
 import React from 'react';
-import cardsIconHOC from '../hoc/CardsIconHOC';
+import cardsIconHOC from '../hoc';
 
 export default cardsIconHOC(
   ({ Group, Shape }) => (

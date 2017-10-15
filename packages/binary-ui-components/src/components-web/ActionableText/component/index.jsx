@@ -5,7 +5,6 @@ import { OPACITY_TRANSITION, getActionOpacityExt } from '../../../utils/styles-a
 
 const propTypes = {
   color: PropTypes.string,
-  isActive: PropTypes.bool,
   isDisabled: PropTypes.bool.isRequired,
   style: PropTypes.object,
   onClick: PropTypes.func,
@@ -13,14 +12,12 @@ const propTypes = {
 
 const defaultProps = {
   color: '#000000',
-  isActive: false,
   style: undefined,
   onClick: undefined,
 };
 
 const ActionableText = ({
   color,
-  isActive,
   isDisabled,
   style,
   onClick,
@@ -30,7 +27,7 @@ const ActionableText = ({
     style={{
       ...style,
       color,
-      opacity: getActionOpacityExt(isActive, isDisabled),
+      opacity: getActionOpacityExt(false, isDisabled),
       transition: OPACITY_TRANSITION,
     }}
     onClick={!isDisabled && onClick}

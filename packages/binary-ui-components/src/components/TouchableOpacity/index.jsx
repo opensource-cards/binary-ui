@@ -1,25 +1,24 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { isLeftMouseButton } from '../../utils/events';
+import { OPACITY_TRANSITION } from '../../utils/styles-api';
 
 const propTypes = {
+  activeOpacity: PropTypes.number,
   children: PropTypes.any.isRequired,
-  isDisabled: PropTypes.bool,
-  onClick: PropTypes.func,
+  style: PropTypes.object,
   onMouseDown: PropTypes.func,
-  onSubmit: PropTypes.func,
   onTouchStart: PropTypes.func,
 };
 
 const defaultProps = {
-  isDisabled: false,
-  onClick: undefined,
+  activeOpacity: 0.2,
+  style: {},
   onMouseDown: undefined,
-  onSubmit: undefined,
   onTouchStart: undefined,
 };
 
-export default class ActionWrapper extends React.Component {
+export default class TouchableOpacity extends React.Component {
 
   constructor(props) {
     super(props);
@@ -27,9 +26,7 @@ export default class ActionWrapper extends React.Component {
       isActive: false,
     };
     this.onTapUp = () => { this.setActive(false); };
-    this.onClick = this.onClick.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
     this.onTouchStart = this.onTouchStart.bind(this);
   }
 
@@ -43,22 +40,8 @@ export default class ActionWrapper extends React.Component {
     window.removeEventListener('touchend', this.onTapUp);
   }
 
-  onClick(e) {
-    const { isDisabled, onClick } = this.props;
-    if (isDisabled) {
-      e.preventDefault();
-      return;
-    }
-    if (onClick) {
-      onClick(e);
-    }
-  }
-
   onMouseDown(e) {
-    const { isDisabled, onMouseDown } = this.props;
-    if (isDisabled) {
-      return;
-    }
+    const { onMouseDown } = this.props;
     if (isLeftMouseButton(e)) {
       this.setActive(true);
     }
@@ -67,21 +50,8 @@ export default class ActionWrapper extends React.Component {
     }
   }
 
-  onSubmit(e) {
-    const { isDisabled, onSubmit } = this.props;
-    if (isDisabled) {
-      return;
-    }
-    if (onSubmit) {
-      onSubmit(e);
-    }
-  }
-
   onTouchStart(e) {
-    const { isDisabled, onTouchStart } = this.props;
-    if (isDisabled) {
-      return;
-    }
+    const { onTouchStart } = this.props;
     this.setActive(true);
     if (onTouchStart) {
       onTouchStart(e);
@@ -100,25 +70,26 @@ export default class ActionWrapper extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      activeOpacity,
       children,
-      isDisabled,
-      onClick,
+      style,
       onMouseDown,
       onTouchStart,
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars */
     const { isActive } = this.state;
-    return React.cloneElement(children, {
-      isActive,
-      onClick: this.onClick,
-      onMouseDown: this.onMouseDown,
-      onSubmit: this.onSubmit,
-      onTouchStart: this.onTouchStart,
-      ...props,
-    });
+    return (
+      <div
+        style={{ ...style, opacity: isActive ? activeOpacity : 1, transition: OPACITY_TRANSITION }}
+        onMouseDown={this.onMouseDown}
+        onTouchStart={this.onTouchStart}
+      >
+        {children}
+      </div>
+    );
   }
 }
 
-ActionWrapper.propTypes = propTypes;
-ActionWrapper.defaultProps = defaultProps;
+TouchableOpacity.propTypes = propTypes;
+TouchableOpacity.defaultProps = defaultProps;

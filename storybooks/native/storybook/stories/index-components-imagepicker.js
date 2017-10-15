@@ -19,8 +19,8 @@ storiesOf('binary-ui-components', module)
           id: imageSelectedId,
         }]}
         imageSelectedId={imageSelectedId}
-        renderUploadIcon={() => (
-          <IconCamera />
+        renderUploadIcon={(props) => (
+          <IconCamera {...props} />
         )}
         isImageUpload={false}
         onImagePress={action()}
@@ -34,8 +34,8 @@ storiesOf('binary-ui-components', module)
         }]}
         imageSelectedId={imageSelectedId}
         isImageUpload={true}
-        renderUploadIcon={() => (
-          <IconCamera />
+        renderUploadIcon={(props) => (
+          <IconCamera {...props} />
         )}
         onImagePress={action()}
         onImageUpload={action()}

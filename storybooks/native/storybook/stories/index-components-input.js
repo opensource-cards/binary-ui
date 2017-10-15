@@ -30,7 +30,7 @@ class InputDemo extends React.Component {
         placeholder="Demo"
         type={INPUT_FIELD_TYPES.EMAIL}
         value={text}
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={this.onChange}
         onIconPress={action()}
       />
@@ -70,34 +70,34 @@ storiesOf('binary-ui-components', module)
       <Input
         type={INPUT_FIELD_TYPES.TEXT}
         value="Lorem ipsum dolor sit amet ipsum dolor sit amet"
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.NUMBER}
         value="1234567890"
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconPress={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.TEL}
         value="010000000"
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconPress={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.PASSWORD}
         value="Password"
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconPress={action()}
       />
       <Input
         type={INPUT_FIELD_TYPES.EMAIL}
         value="job@try.cards"
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconPress={action()}
       />
@@ -106,7 +106,7 @@ storiesOf('binary-ui-components', module)
         placeholder="Invalid Email"
         type={INPUT_FIELD_TYPES.EMAIL}
         value=""
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconPress={action()}
       />

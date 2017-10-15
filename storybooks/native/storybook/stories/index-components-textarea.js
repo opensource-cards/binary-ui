@@ -13,7 +13,7 @@ storiesOf('binary-ui-components', module)
       <Textarea
         placeholder="Textarea Placeholder"
         value=""
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconPress={action()}
       />
@@ -21,13 +21,13 @@ storiesOf('binary-ui-components', module)
         isValid={false}
         placeholder="Textarea Placeholder Invalid"
         value=""
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconPress={action()}
       />
       <Textarea
         value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconPress={action()}
       />

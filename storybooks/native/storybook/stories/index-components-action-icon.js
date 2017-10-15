@@ -11,8 +11,8 @@ import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
 storiesOf('binary-ui-components', module)
   .add('ActionIcon', () => (
     <View>
-      <ActionIcon title="Icon" onClick={action()} renderIcon={() => (<IconAdd />)} />
-      <ActionIcon color="red" title="Icon" onClick={action()} renderIcon={() => (<IconArrowDown />)} />
-      <ActionIcon isDisabled title="Icon" onClick={action()} renderIcon={() => (<IconArrowDown />)} />
+      <ActionIcon title="Icon" onClick={action()} renderIcon={(props) => (<IconAdd {...props} />)} />
+      <ActionIcon color="red" title="Icon" onClick={action()} renderIcon={(props) => (<IconArrowDown {...props} />)} />
+      <ActionIcon isDisabled title="Icon" onClick={action()} renderIcon={(props) => (<IconArrowDown {...props} />)} />
     </View>
   ));

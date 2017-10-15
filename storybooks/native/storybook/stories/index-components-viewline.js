@@ -14,7 +14,7 @@ storiesOf('binary-ui-components', module)
         <Text>Viewline without icon</Text>
       </Viewline>
       <Viewline
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onIconPress={action()}
       >
         <Text>Viewline with icon</Text>
@@ -26,7 +26,7 @@ storiesOf('binary-ui-components', module)
        <Text>Viewline disabled</Text>
       </Viewline>
       <Viewline
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onIconPress={action()}
       >
         <TouchableOpacity

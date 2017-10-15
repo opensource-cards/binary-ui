@@ -29,7 +29,7 @@ storiesOf('binary-ui-components', module)
             placeholder="Input"
             type={INPUT_FIELD_TYPES.TEL}
             value=""
-            renderIcon={() => (<IconMore />)}
+            renderIcon={(props) => (<IconMore {...props} />)}
             onChange={action()}
             onIconPress={action()}
           />
@@ -46,7 +46,7 @@ storiesOf('binary-ui-components', module)
             placeholder="Input"
             type={INPUT_FIELD_TYPES.TEL}
             value="Lorem ipsum dolor sir amet"
-            renderIcon={() => (<IconMore />)}
+            renderIcon={(props) => (<IconMore {...props} />)}
             onChange={action()}
             onIconPress={action()}
           />
@@ -62,8 +62,8 @@ storiesOf('binary-ui-components', module)
       />
       <Group
         renderLeft={() => (<Textline isBold >Label</Textline>)}
-        renderRight={() => (<Button label="Button" isEdit renderIcon={() => (<ArrowDown />)} onPress={action()} />)}
+        renderRight={() => (<Button label="Button" isEdit renderIcon={(props) => (<ArrowDown {...props} />)} onPress={action()} />)}
       />
-      <Button label="Button" isEdit renderIcon={() => (<ArrowDown />)} onPress={action()} />
+      <Button label="Button" isEdit renderIcon={(props) => (<ArrowDown {...props} />)} onPress={action()} />
     </View>
   ));

@@ -32,8 +32,8 @@ class SliderDemo extends React.Component {
     return (
       <Slider
         position={position}
-        renderIconLeft={() => (<Remove />)}
-        renderIconRight={() => (<Add />)}
+        renderIconLeft={(props) => (<Remove {...props} />)}
+        renderIconRight={(props) => (<Add {...props} />)}
         onChange={this.onChange}
       />
     );

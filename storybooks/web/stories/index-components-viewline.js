@@ -17,7 +17,7 @@ storiesOf('binary-ui-components', module)
         <div>Viewline without icon</div>
       </Viewline>
       <Viewline
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onIconPress={action()}
       >
         <div>Viewline with icon</div>
@@ -29,7 +29,7 @@ storiesOf('binary-ui-components', module)
       <div>Viewline disabled</div>
       </Viewline>
       <Viewline
-        renderIcon={() => (<IconMore />)}
+        renderIcon={(props) => (<IconMore {...props} />)}
         onIconPress={action()}
       >
         <div

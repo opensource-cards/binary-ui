@@ -4,7 +4,6 @@ import React from 'react';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyledWrapper from '../components-styled/IconStyledWrapper';
-import IconStyled from '../../../components/IconStyled';
 import { getActionOpacityExt, getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
@@ -24,7 +23,7 @@ const defaultProps = {
   isDisabled: false,
   isEdit: true,
   isValid: true,
-  renderIcon: () => (<ArrowRight />),
+  renderIcon: (props) => (<ArrowRight {...props} />),
 };
 
 const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon, onClick }) => (
@@ -34,12 +33,7 @@ const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon,
     onClick={!isDisabled && onClick}
   >
     <IconStyledWrapper>
-      <IconStyled
-        color={color}
-        size={18}
-        styleOpacity={getActionOpacityExt(false, isDisabled)}
-        renderIcon={renderIcon}
-      />
+      {renderIcon({ color, opacity: getActionOpacityExt(false, isDisabled), size: 18 })}
     </IconStyledWrapper>
     <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} >
       {isBold ? label.toUpperCase() : label}
