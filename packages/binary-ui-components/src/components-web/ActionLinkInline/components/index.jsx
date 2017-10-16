@@ -9,8 +9,7 @@ import TouchableOpacity from '../../../components/TouchableOpacity';
 
 const propTypes = {
   children: PropTypes.any,
-  isActive: PropTypes.bool,
-  isDisabled: PropTypes.bool.isRequired,
+  isDisabled: PropTypes.bool,
   size: PropTypes.number,
   renderIconLeft: PropTypes.func,
   renderIconRight: PropTypes.func,
@@ -22,7 +21,7 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
-  isActive: false,
+  isDisabled: false,
   size: undefined,
   renderIconLeft: undefined,
   renderIconRight: undefined,
@@ -35,12 +34,12 @@ const defaultProps = {
 export default class ActionLinkInline extends React.Component {
 
   renderIcon(renderIcon) {
-    const { isActive, isDisabled, size } = this.props;
+    const { isDisabled, size } = this.props;
     return (
       <ActionableIconWrapper>
         {renderIcon({
           color: BINARY_COLOR_BLUE_40,
-          opacity: getActionOpacityExt(isActive, isDisabled),
+          opacity: getActionOpacityExt(false, isDisabled),
           size,
         })}
       </ActionableIconWrapper>
