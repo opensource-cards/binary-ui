@@ -1,7 +1,7 @@
 import { BINARY_COLOR_BLUE_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionListItemIconRender from '../components-styled/ActionListItemIconRender';
+import ActionLinkInlineWrapper from '../components-styled/ActionLinkInlineWrapper';
 import ActionableText from '../../ActionableText';
 import ActionableIconLeft from '../../ActionableIconLeft';
 import ActionableIconRight from '../../ActionableIconRight';
@@ -10,6 +10,7 @@ import { OPACITY_ACTIVE, getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   children: PropTypes.any,
+  href: PropTypes.string,
   isDisabled: PropTypes.bool,
   size: PropTypes.number,
   renderIconLeft: PropTypes.func,
@@ -22,6 +23,7 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  href: undefined,
   isDisabled: false,
   size: undefined,
   renderIconLeft: undefined,
@@ -63,6 +65,7 @@ export default class ActionLinkInline extends React.Component {
   render() {
     const {
       children,
+      href,
       isDisabled,
       renderIconLeft,
       renderIconRight,
@@ -81,13 +84,13 @@ export default class ActionLinkInline extends React.Component {
         onTouchStart={!isDisabled ? onTouchStart : undefined}
         {...props}
       >
-        <ActionListItemIconRender isDisabled={isDisabled}>
+        <ActionLinkInlineWrapper href={href} isDisabled={isDisabled}>
           {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
           <ActionableText color={BINARY_COLOR_BLUE_40} isDisabled={isDisabled} >
             {children}
           </ActionableText>
           {renderIconRight ? this.renderIconRight(renderIconRight) : null}
-        </ActionListItemIconRender>
+        </ActionLinkInlineWrapper>
       </TouchableOpacity>
     );
   }

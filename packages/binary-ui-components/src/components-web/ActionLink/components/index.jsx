@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionLinkRender from '../components-styled/ActionLinkRender';
+import ActionLinkWrapper from '../components-styled/ActionLinkWrapper';
 import ActionableText from '../../ActionableText';
 import ActionableIconLeft from '../../ActionableIconLeft';
 import ActionableIconRight from '../../ActionableIconRight';
@@ -9,6 +9,7 @@ import { OPACITY_ACTIVE, getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   children: PropTypes.any,
+  href: PropTypes.string,
   isDisabled: PropTypes.bool,
   renderIconLeft: PropTypes.func,
   renderIconRight: PropTypes.func,
@@ -20,6 +21,7 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  href: undefined,
   isDisabled: false,
   renderIconLeft: undefined,
   renderIconRight: undefined,
@@ -52,6 +54,7 @@ export default class ActionLink extends React.Component {
   render() {
     const {
       children,
+      href,
       isDisabled,
       renderIconLeft,
       renderIconRight,
@@ -70,13 +73,13 @@ export default class ActionLink extends React.Component {
         onTouchStart={!isDisabled ? onTouchStart : undefined}
         {...props}
       >
-        <ActionLinkRender>
+        <ActionLinkWrapper href={href} >
           {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
           <ActionableText isDisabled={isDisabled} >
             {children}
           </ActionableText>
           {renderIconRight ? this.renderIconRight(renderIconRight) : null}
-        </ActionLinkRender>
+        </ActionLinkWrapper>
       </TouchableOpacity>
     );
   }
