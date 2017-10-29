@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionLinkRender from '../components-styled/ActionLinkRender';
 import ActionableText from '../../ActionableText';
+import ActionableIconLeft from '../../ActionableIconLeft';
+import ActionableIconRight from '../../ActionableIconRight';
 import TouchableOpacity from '../../../components/TouchableOpacity';
-import { getActionOpacityExt } from '../../../utils/styles-api';
+import { OPACITY_ACTIVE, getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   children: PropTypes.any,
@@ -30,12 +31,21 @@ const defaultProps = {
 
 export default class ActionLink extends React.Component {
 
-  renderIcon(renderIcon) {
+  renderIconLeft(renderIcon) {
     const { isDisabled } = this.props;
     return (
-      <ActionableIconWrapper>
-        {renderIcon({ color: '#000000', opacity: getActionOpacityExt(false, isDisabled) })}
-      </ActionableIconWrapper>
+      <ActionableIconLeft>
+        {renderIcon({ color: '#000000', opacity: getOpacity(isDisabled) })}
+      </ActionableIconLeft>
+    );
+  }
+
+  renderIconRight(renderIcon) {
+    const { isDisabled } = this.props;
+    return (
+      <ActionableIconRight>
+        {renderIcon({ color: '#000000', opacity: getOpacity(isDisabled) })}
+      </ActionableIconRight>
     );
   }
 
@@ -53,19 +63,19 @@ export default class ActionLink extends React.Component {
     } = this.props;
     return (
       <TouchableOpacity
-        activeOpacity={!isDisabled ? 0.2 : 1}
+        activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
         onClick={!isDisabled ? onClick : (e) => { e.preventDefault(); }}
         onMouseDown={!isDisabled ? onMouseDown : undefined}
         onSubmit={!isDisabled ? onSubmit : undefined}
         onTouchStart={!isDisabled ? onTouchStart : undefined}
         {...props}
       >
-        <ActionLinkRender {...props} >
-          {renderIconLeft ? this.renderIcon(renderIconLeft) : null}
+        <ActionLinkRender>
+          {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
           <ActionableText isDisabled={isDisabled} >
             {children}
           </ActionableText>
-          {renderIconRight ? this.renderIcon(renderIconRight) : null}
+          {renderIconRight ? this.renderIconRight(renderIconRight) : null}
         </ActionLinkRender>
       </TouchableOpacity>
     );

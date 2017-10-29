@@ -92,14 +92,10 @@ export default class Slider extends React.Component {
 
   render() {
     const { containerWidth, position } = this.props;
-    const halfSize = LIST_ITEM_HALF_HEIGHT / 2;
-    const transformX = Math.round(position * containerWidth) - halfSize;
-    const transformY = - LIST_ITEM_HALF_HEIGHT / 2;
     return (
       <SliderHandler
-        style={{
-          transform: `translate3d(${transformX}px, ${transformY}px, 0)`,
-        }}
+        styleTransformX={Math.round(position * containerWidth) - LIST_ITEM_HALF_HEIGHT / 2}
+        styleTransformY={-LIST_ITEM_HALF_HEIGHT / 2}
         onMouseDown={this.onGestureResponderStart}
         onTouchStart={this.onGestureResponderStart}
       />

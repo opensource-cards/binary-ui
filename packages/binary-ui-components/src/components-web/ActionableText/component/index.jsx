@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import TextStyled from '../component-styled/TextStyled';
-import { OPACITY_TRANSITION, getActionOpacityExt } from '../../../utils/styles-api';
+import { getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   color: PropTypes.string,
@@ -16,19 +16,12 @@ const defaultProps = {
   onClick: undefined,
 };
 
-const ActionableText = ({
-  color,
-  isDisabled,
-  style,
-  onClick,
-  ...props,
-}) => (
+const ActionableText = ({ color, isDisabled, style, onClick, ...props }) => (
   <TextStyled
     style={{
       ...style,
       color,
-      opacity: getActionOpacityExt(false, isDisabled),
-      transition: OPACITY_TRANSITION,
+      opacity: getOpacity(isDisabled),
     }}
     onClick={!isDisabled && onClick}
     {...props}

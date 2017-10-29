@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import TouchableOpacity from '../../components/TouchableOpacity';
-import { getActionOpacityExt } from '../../utils/styles-api';
+import { OPACITY_ACTIVE, getOpacity } from '../../utils/styles-api';
 
 const propTypes = {
   color: PropTypes.string,
@@ -37,7 +37,7 @@ export default class ActionIcon extends React.PureComponent {
     } = this.props;
     return (
       <TouchableOpacity
-        activeOpacity={!isDisabled ? 0.2 : 1}
+        activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
         onClick={!isDisabled ? onClick : (e) => { e.preventDefault(); }}
         onMouseDown={!isDisabled ? onMouseDown : undefined}
         onTouchStart={!isDisabled ? onTouchStart : undefined}
@@ -45,7 +45,7 @@ export default class ActionIcon extends React.PureComponent {
       >
         {renderIcon({
           color: color || '#000000',
-          opacity: getActionOpacityExt(false, isDisabled),
+          opacity: getOpacity(isDisabled),
           size,
         })}
       </TouchableOpacity>

@@ -2,7 +2,7 @@ import { BINARY_COLOR_GRAY_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { getActionOpacityExt } from '../../../../utils/styles-api';
+import { OPACITY_ACTIVE, getOpacity } from '../../../../utils/styles-api';
 
 const propTypes = {
   isDisabled: PropTypes.bool,
@@ -31,7 +31,7 @@ const ActionListItemIcon = ({
   ...props,
 }) => (
   <TouchableOpacity
-    activeOpacity={!isDisabled ? 0.2 : 1}
+    activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
     onLongPress={!isDisabled ? onLongPress : undefined}
     onPress={!isDisabled ? onPress : undefined}
     onPressIn={!isDisabled ? onPressIn : undefined}
@@ -40,7 +40,7 @@ const ActionListItemIcon = ({
   >
     {renderIcon({
       color: BINARY_COLOR_GRAY_40,
-      opacity: getActionOpacityExt(false, isDisabled),
+      opacity: getOpacity(isDisabled),
       size: 18,
     })}
   </TouchableOpacity>

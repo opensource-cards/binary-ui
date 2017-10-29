@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { isLeftMouseButton } from '../../utils/events';
-import { OPACITY_TRANSITION } from '../../utils/styles-api';
+import { OPACITY_ACTIVE, OPACITY_TRANSITION } from '../../utils/styles-api';
 
 const propTypes = {
   activeOpacity: PropTypes.number,
@@ -12,7 +12,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  activeOpacity: 0.2,
+  activeOpacity: OPACITY_ACTIVE,
   style: {},
   onMouseDown: undefined,
   onTouchStart: undefined,
@@ -81,7 +81,11 @@ export default class TouchableOpacity extends React.Component {
     const { isActive } = this.state;
     return (
       <div
-        style={{ ...style, opacity: isActive ? activeOpacity : 1, transition: OPACITY_TRANSITION }}
+        style={{
+          ...style,
+          opacity: isActive ? activeOpacity : 1,
+          transition: OPACITY_TRANSITION,
+        }}
         onMouseDown={this.onMouseDown}
         onTouchStart={this.onTouchStart}
         {...props}

@@ -3,7 +3,7 @@ import React from 'react';
 import ViewContent from '../components-styled/ViewContent';
 import ViewWrapper from '../components-styled/ViewWrapper';
 import ActionListItemIcon from '../../ActionListItemIcon';
-import { getActionOpacityExt } from '../../../utils/styles-api';
+import { getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   children: PropTypes.any,
@@ -24,7 +24,7 @@ const defaultProps = {
 const Viewline = ({ children, isDisabled, isEdit, renderIcon, onIconPress }) => (
   <ViewWrapper
     isEdit={isEdit}
-    styleOpacity={getActionOpacityExt(false, isDisabled)}
+    styleOpacity={getOpacity(isDisabled)}
   >
     <ViewContent>
       {children}

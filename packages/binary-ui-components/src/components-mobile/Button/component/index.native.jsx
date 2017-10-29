@@ -7,7 +7,7 @@ import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyledWrapper from '../components-styled/IconStyledWrapper.native';
 import { TAP_HIGHLIGHT_COLOR } from '../utils/styles';
-import { getActionOpacityExt, getHighlightEditStyle } from '../../../utils/styles-api';
+import { getOpacity, getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   color: PropTypes.string,
@@ -61,7 +61,7 @@ const Button = ({
     <ButtonContentHighlight>
       <ButtonWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} >
         <IconStyledWrapper>
-          {renderIcon({ color, opacity: getActionOpacityExt(false, isDisabled), size: 18 })}
+          {renderIcon({ color, opacity: getOpacity(isDisabled), size: 18 })}
         </IconStyledWrapper>
         <ButtonText isBold={isBold} isDisabled={isDisabled} numberOfLines={1} styleColor={color} >
           {isBold ? label.toUpperCase() : label}

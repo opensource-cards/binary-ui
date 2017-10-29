@@ -2,10 +2,11 @@ import { BINARY_COLOR_BLUE_40 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ActionListItemIconRender from '../components-styled/ActionListItemIconRender';
-import ActionableIconWrapper from '../components-styled/ActionableIconWrapper';
 import ActionableText from '../../ActionableText';
-import { getActionOpacityExt } from '../../../utils/styles-api';
+import ActionableIconLeft from '../../ActionableIconLeft';
+import ActionableIconRight from '../../ActionableIconRight';
 import TouchableOpacity from '../../../components/TouchableOpacity';
+import { OPACITY_ACTIVE, getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   children: PropTypes.any,
@@ -33,16 +34,29 @@ const defaultProps = {
 
 export default class ActionLinkInline extends React.Component {
 
-  renderIcon(renderIcon) {
+  renderIconLeft(renderIcon) {
     const { isDisabled, size } = this.props;
     return (
-      <ActionableIconWrapper>
+      <ActionableIconLeft>
         {renderIcon({
           color: BINARY_COLOR_BLUE_40,
-          opacity: getActionOpacityExt(false, isDisabled),
+          opacity: getOpacity(isDisabled),
           size,
         })}
-      </ActionableIconWrapper>
+      </ActionableIconLeft>
+    );
+  }
+
+  renderIconRight(renderIcon) {
+    const { isDisabled, size } = this.props;
+    return (
+      <ActionableIconRight>
+        {renderIcon({
+          color: BINARY_COLOR_BLUE_40,
+          opacity: getOpacity(isDisabled),
+          size,
+        })}
+      </ActionableIconRight>
     );
   }
 
@@ -60,19 +74,19 @@ export default class ActionLinkInline extends React.Component {
     } = this.props;
     return (
       <TouchableOpacity
-        activeOpacity={!isDisabled ? 0.2 : 1}
+        activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
         onClick={!isDisabled ? onClick : (e) => { e.preventDefault(); }}
         onMouseDown={!isDisabled ? onMouseDown : undefined}
         onSubmit={!isDisabled ? onSubmit : undefined}
         onTouchStart={!isDisabled ? onTouchStart : undefined}
         {...props}
       >
-        <ActionListItemIconRender isDisabled={isDisabled} {...props} >
-          {renderIconLeft ? this.renderIcon(renderIconLeft) : null}
+        <ActionListItemIconRender isDisabled={isDisabled}>
+          {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
           <ActionableText color={BINARY_COLOR_BLUE_40} isDisabled={isDisabled} >
             {children}
           </ActionableText>
-          {renderIconRight ? this.renderIcon(renderIconRight) : null}
+          {renderIconRight ? this.renderIconRight(renderIconRight) : null}
         </ActionListItemIconRender>
       </TouchableOpacity>
     );
