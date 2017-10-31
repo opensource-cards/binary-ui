@@ -17,8 +17,8 @@ acorn@^3.0.4:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
 acorn@^5.1.1:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.0.tgz#39fd0cf9d2dd4c82068602a404019d8ed5167b1c"
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.1.tgz#317ac7821826c22c702d66189ab8359675f135d7"
 
 ajv-keywords@^1.0.0:
   version "1.5.1"
@@ -607,26 +607,26 @@ binary-extensions@^1.0.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.10.0.tgz#9aeb9a6c5e88638aad171e167f5900abe24835d0"
 
-binary-ui-components@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.1.tgz#f3eaa29bcf94fd13ea96eb92ed6011f63904c82a"
+binary-ui-components@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.3.tgz#7cd4afc7ba8034e10f083c0994217dd3e6183ee6"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.4.0"
-    binary-ui-styles "^0.4.0"
+    binary-ui-icons "^0.4.2"
+    binary-ui-styles "^0.4.2"
     prop-types "^15.5.10"
     styled-components "^2.0.0"
 
-binary-ui-icons@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.0.tgz#4df0c46787c59cb41c5d34ddf46e700a3617302e"
+binary-ui-icons@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.2.tgz#fb3acd48bfb96376a9374478b5b701d8f0030191"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.0.tgz#3847cec8af10dbd4acd64b0270c334a8d2149a6d"
+binary-ui-styles@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.2.tgz#1ca03f4446dbfae470c4c8b318e85fb2f07a6ccc"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -2422,8 +2422,8 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
 styled-components@^2.0.0:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.2.tgz#a00c4b7a432ff77e5fb962ec1fbc030248d27171"
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.3.tgz#154575c269880c840f903f580287dab155cf684c"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"

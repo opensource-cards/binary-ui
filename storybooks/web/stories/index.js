@@ -24,3 +24,5 @@ import './index-components-viewline';
 
 import './index-components-action-link';
 import './index-components-action-link-inline';
+
+import './index-navbar';
