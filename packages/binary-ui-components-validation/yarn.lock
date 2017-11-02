@@ -607,26 +607,26 @@ binary-extensions@^1.0.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.10.0.tgz#9aeb9a6c5e88638aad171e167f5900abe24835d0"
 
-binary-ui-components@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.3.tgz#7cd4afc7ba8034e10f083c0994217dd3e6183ee6"
+binary-ui-components@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.4.tgz#b55cacfbf43ca53a9d675fff974575eeec28ee58"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.4.2"
-    binary-ui-styles "^0.4.2"
+    binary-ui-icons "^0.4.4"
+    binary-ui-styles "^0.4.4"
     prop-types "^15.5.10"
     styled-components "^2.0.0"
 
-binary-ui-icons@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.2.tgz#fb3acd48bfb96376a9374478b5b701d8f0030191"
+binary-ui-icons@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.4.tgz#6e83d6a3836f19ba7ce440ef67292f90724cb918"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.2.tgz#1ca03f4446dbfae470c4c8b318e85fb2f07a6ccc"
+binary-ui-styles@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.4.tgz#ad2984f775a67d0851b508bb58e67ee6975562bd"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -885,6 +885,10 @@ detect-indent@^4.0.0:
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-4.0.0.tgz#f76d064352cdf43a1cb6ce619c4ee3a9475de208"
   dependencies:
     repeating "^2.0.0"
+
+detect-libc@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.2.tgz#71ad5d204bf17a6a6ca8f450c61454066ef461e1"
 
 diff@3.2.0:
   version "3.2.0"
@@ -1896,9 +1900,10 @@ node-fetch@^1.0.1:
     is-stream "^1.0.1"
 
 node-pre-gyp@^0.6.36:
-  version "0.6.38"
-  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.38.tgz#e92a20f83416415bb4086f6d1fb78b3da73d113d"
+  version "0.6.39"
+  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.39.tgz#c00e96860b23c0e1420ac7befc5044e1d78d8649"
   dependencies:
+    detect-libc "^1.0.2"
     hawk "3.1.3"
     mkdirp "^0.5.1"
     nopt "^4.0.1"
