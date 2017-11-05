@@ -29,7 +29,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "pure-validation": "^0.0.4"
+    "pure-validation": "^0.0.5"
   },
   "peerDependencies": {
     "binary-ui-components": "^0.4.6"
