@@ -10,7 +10,7 @@ import Alert, { ALERT_TYPES } from 'binary-ui-components/mobile/Alert';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Alert', withInfo('Alert component')(() => (
     <div>
       <Alert text="Alert type INFO" type={ALERT_TYPES.INFO} />

@@ -103,7 +103,7 @@ const AddStyled = styled(Add)`
   background-color: #FFFF00;
 `;
 
-storiesOf('binary-ui-icons', module)
+storiesOf('binary-ui-icons/binary', module)
   .add('General', (() => (
     <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
       <div><Add color={COLOR} size={SIZE} />Add</div>

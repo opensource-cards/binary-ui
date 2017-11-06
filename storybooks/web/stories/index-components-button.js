@@ -10,7 +10,7 @@ import Button from 'binary-ui-components/mobile/Button';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Button', withInfo('A Button Component')(() => (
     <div>
       <Button label="A standard button" isBold onClick={action()} />

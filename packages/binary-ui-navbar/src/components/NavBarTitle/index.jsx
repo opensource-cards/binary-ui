@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import NavBarTitleIcon from './components-styled/NavBarTitleIcon';
 import NavBarTitleText from './components-styled/NavBarTitleText';
-import NavBarTitleWrapper from './components-styled/NavBarTitleWrapper';
+import NavBarTitleWrapperActionable from './components-styled/NavBarTitleWrapperActionable';
+import NavBarTitleWrapperText from './components-styled/NavBarTitleWrapperText';
 
 const propTypes = {
   children: PropTypes.node,
@@ -15,12 +16,16 @@ const defaultProps = {
 };
 
 const NavBarTitle = ({ children, isActionable, ...props }) => (
-  <NavBarTitleWrapper isActionable={isActionable} {...props}>
-    <NavBarTitleText>{children}</NavBarTitleText>
-    {isActionable === true ? (
+  isActionable ? (
+    <NavBarTitleWrapperActionable {...props}>
+      <NavBarTitleText>{children}</NavBarTitleText>
       <NavBarTitleIcon size={15} />
-    ) : null}
-  </NavBarTitleWrapper>
+    </NavBarTitleWrapperActionable>
+  ) : (
+    <NavBarTitleWrapperText {...props}>
+      <NavBarTitleText>{children}</NavBarTitleText>
+    </NavBarTitleWrapperText>
+  )
 );
 
 NavBarTitle.propTypes = propTypes;

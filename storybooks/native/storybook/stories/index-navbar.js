@@ -24,7 +24,8 @@ storiesOf('binary-ui-navbar', module)
           backgroundColor: "#eeeae5"
         }}
         headerTitle={{
-          children: "Stack with active buttons"
+          children: "Stack with active buttons",
+          isActionable: true
         }}
       />
       <NavBar

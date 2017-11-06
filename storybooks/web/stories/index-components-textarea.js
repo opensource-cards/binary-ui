@@ -10,7 +10,7 @@ import Textarea from 'binary-ui-components/mobile/Textarea';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Textarea', withInfo('A Textarea Component')(() => (
     <div>
       <Textarea

@@ -9,7 +9,7 @@ import Section from 'binary-ui-components/mobile/Section';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Section', withInfo('Section component')(() => (
     <Section label="Section Label">
       Section content

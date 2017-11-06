@@ -9,7 +9,7 @@ import Checkbox from 'binary-ui-components/mobile/Checkbox';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Checkbox', withInfo('A Checkbox Component')(() => (
     <div>
       <Checkbox isChecked onChange={action()} onClick={action()} />

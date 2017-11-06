@@ -10,7 +10,7 @@ import Viewline from 'binary-ui-components/mobile/Viewline';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Viewline', withInfo('A Viewline Component')(() => (
     <div>
       <Viewline>

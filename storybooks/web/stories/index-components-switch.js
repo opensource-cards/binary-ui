@@ -37,7 +37,7 @@ class Demo extends React.Component {
   }
 }
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Switch', withInfo('Switch component')(() => (
     <div>
       <Switch

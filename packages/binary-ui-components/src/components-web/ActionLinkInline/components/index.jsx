@@ -34,7 +34,7 @@ const defaultProps = {
   onTouchStart: undefined,
 };
 
-export default class ActionLinkInline extends React.Component {
+class ActionLinkInline extends React.Component {
 
   renderIconLeft(renderIcon) {
     const { isDisabled, size } = this.props;
@@ -62,6 +62,18 @@ export default class ActionLinkInline extends React.Component {
     );
   }
 
+  renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight }) {
+    return (
+      <ActionLinkInlineWrapper href={href} isDisabled={isDisabled}>
+        {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
+        <ActionableText color={BINARY_COLOR_BLUE_40} isDisabled={isDisabled} >
+          {children}
+        </ActionableText>
+        {renderIconRight ? this.renderIconRight(renderIconRight) : null}
+      </ActionLinkInlineWrapper>
+    );
+  }
+
   render() {
     const {
       children,
@@ -75,22 +87,20 @@ export default class ActionLinkInline extends React.Component {
       onTouchStart,
       ...props,
     } = this.props;
-    return (
+    return isDisabled ? (
+      <div onClick={(e) => { e.preventDefault(); }} {...props} >
+        {this.renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight })}
+      </div>
+    ) : (
       <TouchableOpacity
-        activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
-        onClick={!isDisabled ? onClick : (e) => { e.preventDefault(); }}
-        onMouseDown={!isDisabled ? onMouseDown : undefined}
-        onSubmit={!isDisabled ? onSubmit : undefined}
-        onTouchStart={!isDisabled ? onTouchStart : undefined}
+        activeOpacity={OPACITY_ACTIVE}
+        onClick={onClick}
+        onMouseDown={onMouseDown}
+        onSubmit={onSubmit}
+        onTouchStart={onTouchStart}
         {...props}
       >
-        <ActionLinkInlineWrapper href={href} isDisabled={isDisabled}>
-          {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
-          <ActionableText color={BINARY_COLOR_BLUE_40} isDisabled={isDisabled} >
-            {children}
-          </ActionableText>
-          {renderIconRight ? this.renderIconRight(renderIconRight) : null}
-        </ActionLinkInlineWrapper>
+        {this.renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight })}
       </TouchableOpacity>
     );
   }
@@ -98,3 +108,5 @@ export default class ActionLinkInline extends React.Component {
 
 ActionLinkInline.propTypes = propTypes;
 ActionLinkInline.defaultProps = defaultProps;
+
+export default ActionLinkInline;

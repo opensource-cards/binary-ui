@@ -6,7 +6,7 @@ import { View } from 'react-native';
 
 import ProgressBar from 'binary-ui-components/mobile/ProgressBar';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('ProgressBar', () => (
     <View>
       <ProgressBar progress={20} />

@@ -14,14 +14,4 @@ export default styled.div`
   text-overflow: ellipsis;
   transition: opacity 0.1s ease-out;
   width: fit-content;
-  ${props => (
-    props.isActionable === true
-      ? `
-        cursor: pointer;
-        &:active {
-          opacity: 0.5;
-        }
-      `
-      : 'cursor: default;'
-  )};
 `;

@@ -31,7 +31,7 @@ const defaultProps = {
   onTouchStart: undefined,
 };
 
-export default class ActionLink extends React.Component {
+class ActionLink extends React.Component {
 
   renderIconLeft(renderIcon) {
     const { isDisabled } = this.props;
@@ -51,6 +51,18 @@ export default class ActionLink extends React.Component {
     );
   }
 
+  renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight }) {
+    return (
+      <ActionLinkWrapper href={href} >
+        {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
+        <ActionableText isDisabled={isDisabled} >
+          {children}
+        </ActionableText>
+        {renderIconRight ? this.renderIconRight(renderIconRight) : null}
+      </ActionLinkWrapper>
+    );
+  }
+
   render() {
     const {
       children,
@@ -64,22 +76,20 @@ export default class ActionLink extends React.Component {
       onTouchStart,
       ...props,
     } = this.props;
-    return (
+    return isDisabled ? (
+      <div onClick={(e) => { e.preventDefault(); }} {...props} >
+        {this.renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight })}
+      </div>
+    ) : (
       <TouchableOpacity
-        activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
-        onClick={!isDisabled ? onClick : (e) => { e.preventDefault(); }}
-        onMouseDown={!isDisabled ? onMouseDown : undefined}
-        onSubmit={!isDisabled ? onSubmit : undefined}
-        onTouchStart={!isDisabled ? onTouchStart : undefined}
+        activeOpacity={OPACITY_ACTIVE}
+        onClick={onClick}
+        onMouseDown={onMouseDown}
+        onSubmit={onSubmit}
+        onTouchStart={onTouchStart}
         {...props}
       >
-        <ActionLinkWrapper href={href} >
-          {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
-          <ActionableText isDisabled={isDisabled} >
-            {children}
-          </ActionableText>
-          {renderIconRight ? this.renderIconRight(renderIconRight) : null}
-        </ActionLinkWrapper>
+        {this.renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight })}
       </TouchableOpacity>
     );
   }
@@ -87,3 +97,5 @@ export default class ActionLink extends React.Component {
 
 ActionLink.propTypes = propTypes;
 ActionLink.defaultProps = defaultProps;
+
+export default ActionLink;

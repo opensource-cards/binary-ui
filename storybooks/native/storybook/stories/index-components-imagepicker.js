@@ -9,7 +9,7 @@ import ImagePicker from 'binary-ui-components/mobile/ImagePicker';
 
 const imageSelectedId = 'uuid';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('ImagePicker', () => (
     <View>
       <ImagePicker

@@ -28,7 +28,7 @@ setAddon(infoAddon);
 
 const text = 'Important: for compatibility set container width in pixels!';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .addWithInfo('Group', () => (
     <div>
       <Group

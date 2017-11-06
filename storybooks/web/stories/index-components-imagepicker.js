@@ -14,7 +14,7 @@ setAddon(infoAddon);
 
 const imageSelectedId = uuid.v1();
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('ImagePicker', withInfo('ImagePicker Component')(() => (
     <div>
       <ImagePicker

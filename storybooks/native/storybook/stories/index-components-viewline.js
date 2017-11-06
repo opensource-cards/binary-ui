@@ -7,7 +7,7 @@ import { TouchableOpacity, Text, View } from 'react-native';
 import IconMore from 'binary-ui-icons/binary/More';
 import Viewline from 'binary-ui-components/mobile/Viewline';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Viewline', () => (
     <View>
       <Viewline>

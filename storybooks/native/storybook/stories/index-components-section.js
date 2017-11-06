@@ -6,7 +6,7 @@ import { Text } from 'react-native';
 
 import Section from 'binary-ui-components/mobile/Section';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Section', () => (
     <Section label="Section Label">
       <Text>Section content</Text>

@@ -7,7 +7,7 @@ import { Linking, Text, View } from 'react-native';
 import IconMore from 'binary-ui-icons/binary/More';
 import Textline from 'binary-ui-components/mobile/Textline';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Textline', () => (
     <View>
       <Textline>

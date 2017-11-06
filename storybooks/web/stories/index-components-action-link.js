@@ -10,7 +10,7 @@ import ActionLink from 'binary-ui-components/web/ActionLink';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/web', module)
   .add('ActionLink', withInfo('An ActionLink Component')(() => (
     <div>
       <ActionLink

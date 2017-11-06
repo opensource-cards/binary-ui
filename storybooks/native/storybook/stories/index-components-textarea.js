@@ -7,7 +7,7 @@ import { View } from 'react-native';
 import IconMore from 'binary-ui-icons/binary/More';
 import Textarea from 'binary-ui-components/mobile/Textarea';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Textarea', () => (
     <View>
       <Textarea

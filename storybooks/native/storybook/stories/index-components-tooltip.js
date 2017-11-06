@@ -90,7 +90,7 @@ class TooltipDemo extends React.Component {
   }
 }
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Tooltip', () => (
     <TooltipDemo />
   ));

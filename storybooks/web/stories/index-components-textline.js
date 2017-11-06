@@ -10,7 +10,7 @@ import Textline from 'binary-ui-components/mobile/Textline';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Textline', withInfo('A Textline Component')(() => (
     <div>
       <Textline>

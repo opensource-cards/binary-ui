@@ -6,7 +6,7 @@ import { View } from 'react-native';
 
 import Spinner from 'binary-ui-components/mobile/Spinner';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Spinner', () => (
     <View>
       <Spinner/>

@@ -19,28 +19,41 @@ const defaultProps = {
   onTouchStart: undefined,
 };
 
-const ActionListItemIcon = ({
-  isDisabled,
-  renderIcon,
-  onClick,
-  onMouseDown,
-  onTouchStart,
-  ...props,
-}) => (
-  <TouchableOpacity
-    activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
-    onClick={!isDisabled ? onClick : (e) => { e.preventDefault(); }}
-    onMouseDown={!isDisabled ? onMouseDown : undefined}
-    onTouchStart={!isDisabled ? onTouchStart : undefined}
-    {...props}
-  >
-    {renderIcon({
+class ActionListItemIcon extends React.Component {
+  renderIcon({ isDisabled, renderIcon }) {
+    return renderIcon({
       color: BINARY_COLOR_GRAY_40,
       opacity: getOpacity(isDisabled),
       size: 18,
-    })}
-  </TouchableOpacity>
-);
+    });
+  }
+
+  render() {
+    const {
+      isDisabled,
+      renderIcon,
+      onClick,
+      onMouseDown,
+      onTouchStart,
+      ...props,
+    } = this.props;
+    return isDisabled ? (
+      <div onClick={(e) => { e.preventDefault(); }} {...props} >
+        {this.renderIcon({ isDisabled, renderIcon })}
+      </div>
+    ) : (
+      <TouchableOpacity
+        activeOpacity={OPACITY_ACTIVE}
+        onClick={onClick}
+        onMouseDown={onMouseDown}
+        onTouchStart={onTouchStart}
+        {...props}
+      >
+        {this.renderIcon({ isDisabled, renderIcon })}
+      </TouchableOpacity>
+    );
+  }
+}
 
 ActionListItemIcon.propTypes = propTypes;
 ActionListItemIcon.defaultProps = defaultProps;

@@ -15,7 +15,7 @@ import Group from 'binary-ui-components/mobile/Group';
 import Select from 'binary-ui-components/mobile/Select';
 import Textline from 'binary-ui-components/mobile/Textline';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Group', () => (
     <View>
       <Group

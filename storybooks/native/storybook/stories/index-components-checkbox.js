@@ -6,7 +6,7 @@ import { View } from 'react-native';
 
 import Checkbox from 'binary-ui-components/mobile/Checkbox';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Checkbox', () => (
     <View>
       <Checkbox isChecked onChange={action()} onClick={action()} />

@@ -22,8 +22,15 @@ const defaultProps = {
   onTouchStart: undefined,
 };
 
-// NOTE: do not make functional component to be able to pass ref
-export default class ActionIcon extends React.PureComponent {
+class ActionIcon extends React.PureComponent {
+  renderIcon({ color, isDisabled, size, renderIcon }) {
+    return renderIcon({
+      color: color || '#000000',
+      opacity: getOpacity(isDisabled),
+      size,
+    });
+  }
+
   render() {
     const {
       color,
@@ -35,19 +42,19 @@ export default class ActionIcon extends React.PureComponent {
       onTouchStart,
       ...props,
     } = this.props;
-    return (
+    return isDisabled ? (
+      <div onClick={(e) => { e.preventDefault(); }} {...props} >
+        {this.renderIcon({ color, isDisabled, size, renderIcon })}
+      </div>
+    ) : (
       <TouchableOpacity
-        activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
-        onClick={!isDisabled ? onClick : (e) => { e.preventDefault(); }}
-        onMouseDown={!isDisabled ? onMouseDown : undefined}
-        onTouchStart={!isDisabled ? onTouchStart : undefined}
+        activeOpacity={OPACITY_ACTIVE}
+        onClick={onClick}
+        onMouseDown={onMouseDown}
+        onTouchStart={onTouchStart}
         {...props}
       >
-        {renderIcon({
-          color: color || '#000000',
-          opacity: getOpacity(isDisabled),
-          size,
-        })}
+        {this.renderIcon({ color, isDisabled, size, renderIcon })}
       </TouchableOpacity>
     );
   }
@@ -55,3 +62,5 @@ export default class ActionIcon extends React.PureComponent {
 
 ActionIcon.propTypes = propTypes;
 ActionIcon.defaultProps = defaultProps;
+
+export default ActionIcon;

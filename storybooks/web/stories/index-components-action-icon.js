@@ -11,7 +11,7 @@ import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('ActionIcon', withInfo('An ActionIcon Component')(() => (
     <div>
       <ActionIcon title="Icon" onClick={action()} renderIcon={(props) => (<IconAdd {...props} />)} />

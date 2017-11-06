@@ -7,7 +7,7 @@ import { View } from 'react-native';
 import IconArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import Alert, { ALERT_TYPES } from 'binary-ui-components/mobile/Alert';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Alert', () => (
     <View>
       <Alert text="Alert type INFO" type={ALERT_TYPES.INFO} />

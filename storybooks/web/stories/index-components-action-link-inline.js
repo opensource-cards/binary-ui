@@ -10,7 +10,7 @@ import ActionLinkInline from 'binary-ui-components/web/ActionLinkInline';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/web', module)
   .add('ActionLinkInline', withInfo('An ActionLinkInline Component')(() => (
     <div>
       <ActionLinkInline

@@ -9,7 +9,7 @@ import ProgressBar from 'binary-ui-components/mobile/ProgressBar';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('ProgressBar', withInfo('ProgressBar component')(() => (
     <div>
       <ProgressBar progress={20} />

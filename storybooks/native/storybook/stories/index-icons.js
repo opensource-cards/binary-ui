@@ -97,7 +97,7 @@ import Youtube from 'binary-ui-icons/binary/Youtube';
 const COLOR = '#000000';
 const SIZE = 50;
 
-storiesOf('binary-ui-icons', module)
+storiesOf('binary-ui-icons/binary', module)
   .add('General', () =>
     <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
       <Add color={COLOR} size={SIZE} onPress={action('clicked')} />

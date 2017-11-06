@@ -7,7 +7,7 @@ import { View } from 'react-native';
 import IconArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import Button from 'binary-ui-components/mobile/Button';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Button', () => (
     <View>
       <Button label="A standard button" isBold onPress={action()} />

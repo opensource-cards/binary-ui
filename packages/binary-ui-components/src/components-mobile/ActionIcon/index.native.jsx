@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import { OPACITY_ACTIVE, getOpacity } from '../../utils/styles-api';
 
 const propTypes = {
@@ -24,8 +24,15 @@ const defaultProps = {
   onPressOut: undefined,
 };
 
-// NOTE: do not make functional component to be able to pass ref
-export default class ActionIcon extends React.PureComponent {
+class ActionIcon extends React.PureComponent {
+  renderIcon({ color, isDisabled, size, renderIcon }) {
+    return renderIcon({
+      color: color || '#000000',
+      opacity: getOpacity(isDisabled),
+      size,
+    });
+  }
+
   render() {
     const {
       color,
@@ -38,20 +45,20 @@ export default class ActionIcon extends React.PureComponent {
       onPressOut,
       ...props,
     } = this.props;
-    return (
+    return isDisabled ? (
+      <View {...props} >
+        {this.renderIcon({ color, isDisabled, size, renderIcon })}
+      </View>
+    ) : (
       <TouchableOpacity
-        activeOpacity={!isDisabled ? OPACITY_ACTIVE : 1}
-        onLongPress={!isDisabled ? onLongPress : undefined}
-        onPress={!isDisabled ? onPress : undefined}
-        onPressIn={!isDisabled ? onPressIn : undefined}
-        onPressOut={!isDisabled ? onPressOut : undefined}
+        activeOpacity={OPACITY_ACTIVE}
+        onLongPress={onLongPress}
+        onPress={onPress}
+        onPressIn={onPressIn}
+        onPressOut={onPressOut}
         {...props}
       >
-        {renderIcon({
-          color: color || '#000000',
-          opacity: getOpacity(isDisabled),
-          size,
-        })}
+        {this.renderIcon({ color, isDisabled, size, renderIcon })}
       </TouchableOpacity>
     );
   }
@@ -59,3 +66,5 @@ export default class ActionIcon extends React.PureComponent {
 
 ActionIcon.propTypes = propTypes;
 ActionIcon.defaultProps = defaultProps;
+
+export default ActionIcon;

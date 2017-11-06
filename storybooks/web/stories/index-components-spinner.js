@@ -9,7 +9,7 @@ import Spinner from 'binary-ui-components/mobile/Spinner';
 
 setAddon(infoAddon);
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('Spinner', withInfo('Spinner component')(() => (
     <div>
       <Spinner/>

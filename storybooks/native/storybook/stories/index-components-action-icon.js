@@ -8,7 +8,7 @@ import IconAdd from 'binary-ui-icons/binary/Add';
 import IconArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
 
-storiesOf('binary-ui-components', module)
+storiesOf('binary-ui-components/mobile', module)
   .add('ActionIcon', () => (
     <View>
       <ActionIcon title="Icon" onClick={action()} renderIcon={(props) => (<IconAdd {...props} />)} />
