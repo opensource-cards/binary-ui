@@ -12,6 +12,7 @@ import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ArrowLeft from 'binary-ui-icons/binary/ArrowLeft';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import ArrowUp from 'binary-ui-icons/binary/ArrowUp';
+import Autoconnect from 'binary-ui-icons/binary/Autoconnect';
 import Call from 'binary-ui-icons/binary/Call';
 import CallAlt from 'binary-ui-icons/binary/CallAlt';
 import CameraAlt from 'binary-ui-icons/binary/CameraAlt';
@@ -106,6 +107,7 @@ storiesOf('binary-ui-icons/binary', module)
       <ArrowLeft color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowRight color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowUp color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Autoconnect color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Call color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CallAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CameraAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
