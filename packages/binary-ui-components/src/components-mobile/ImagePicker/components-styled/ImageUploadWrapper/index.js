@@ -1,16 +1,16 @@
+import { BINARY_COLOR_SAND_90 } from 'binary-ui-styles';
 import styled from 'styled-components';
+import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 export default styled.div`
   align-items: center;
-  border: 1px solid #aeaeae;
-  box-sizing: border-box;
-  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.1);
-  border-radius: 30px;
+  border: 1px solid ${BINARY_COLOR_SAND_90};
+  border-radius: ${PHOTO_SIZE / 2}px;
   display: flex;
-  height: 60px;
+  height: ${PHOTO_SIZE}px;
   justify-content: center;
   margin: 5px;
-  width: 60px;
+  width: ${PHOTO_SIZE}px;
   &:active {
     opacity: 0.5;
   }

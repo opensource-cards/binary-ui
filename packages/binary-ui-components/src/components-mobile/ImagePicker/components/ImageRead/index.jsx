@@ -15,7 +15,7 @@ const defaultProps = {
   onClick: undefined,
 };
 
-export default class Image extends React.Component {
+export default class ImageRead extends React.Component {
 
   constructor(props) {
     super(props);
@@ -34,12 +34,12 @@ export default class Image extends React.Component {
     return (
       <ImageContent imageFit={imageFit} imageUrl={imageUrl} onClick={this.onClick} >
         {isSelected ? (
-          <IconDone size={40} color="#FFF" />
+          <IconDone color="#FFF" size={40} />
         ) : null}
       </ImageContent>
     );
   }
 }
 
-Image.propTypes = propTypes;
-Image.defaultProps = defaultProps;
+ImageRead.propTypes = propTypes;
+ImageRead.defaultProps = defaultProps;

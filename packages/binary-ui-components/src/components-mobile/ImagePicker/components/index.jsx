@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Image from './Image';
+import ImageRead from './ImageRead';
 import ImageUpload from './ImageUpload';
 import ImagePickerWrapper from '../components-styled/ImagePickerWrapper';
 
@@ -50,7 +50,7 @@ export default class ImagePicker extends React.PureComponent {
     return (
       <ImagePickerWrapper>
         {images.map(image => (
-          <Image
+          <ImageRead
             imageFit={imageFit}
             imageId={image.id}
             imageUrl={image.url}

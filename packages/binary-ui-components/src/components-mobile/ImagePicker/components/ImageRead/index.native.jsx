@@ -1,7 +1,7 @@
-import IconDone from 'binary-ui-icons/binary/Done';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import IconDoneStyled from './components-styled/IconDoneStyled/index.native';
+import ImageStyled from './components-styled/ImageStyled/index.native';
 import ImageContent from '../../components-styled/ImageContent';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
@@ -17,7 +17,7 @@ const defaultProps = {
   onPress: undefined,
 };
 
-export default class Image extends React.Component {
+export default class ImageRead extends React.Component {
 
   constructor(props) {
     super(props);
@@ -34,20 +34,19 @@ export default class Image extends React.Component {
   render() {
     const { imageFit, imageUrl, isSelected } = this.props;
     return (
-      <TouchableOpacity activeOpacity={0.5} onPress={this.onPress} >
-        <ImageContent
+      <ImageContent activeOpacity={0.5} onPress={this.onPress} >
+        <ImageStyled
           borderRadius={PHOTO_SIZE / 2}
           resizeMode={imageFit}
           source={{ uri: imageUrl }}
-        >
-          {isSelected ? (
-            <IconDone size={40} color="#FFF" />
-          ) : null}
-        </ImageContent>
-      </TouchableOpacity>
+        />
+        {isSelected ? (
+          <IconDoneStyled color="#FFF" size={40} />
+        ) : null}
+      </ImageContent>
     );
   }
 }
 
-Image.propTypes = propTypes;
-Image.defaultProps = defaultProps;
+ImageRead.propTypes = propTypes;
+ImageRead.defaultProps = defaultProps;

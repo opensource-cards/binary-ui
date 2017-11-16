@@ -1,3 +1,4 @@
+import { BINARY_COLOR_SAND_90 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -8,7 +9,7 @@ const defaultProps = {};
 
 const ImageUploadIcon = ({ renderIcon }) => (
   renderIcon({
-    color: '#aeaeae',
+    color: BINARY_COLOR_SAND_90,
     size: 30,
   })
 );
