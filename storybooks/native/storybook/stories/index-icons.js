@@ -42,6 +42,7 @@ import Info from 'binary-ui-icons/binary/Info';
 import InfoAlt from 'binary-ui-icons/binary/InfoAlt';
 import Instagram from 'binary-ui-icons/binary/Instagram';
 import InstagramAlt from 'binary-ui-icons/binary/InstagramAlt';
+import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
@@ -63,6 +64,8 @@ import Open from 'binary-ui-icons/binary/Open';
 import Drawer from 'binary-ui-icons/binary/Drawer';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import Remove from 'binary-ui-icons/binary/Remove';
+import RotateLeft from 'binary-ui-icons/binary/RotateLeft';
+import RotateRight from 'binary-ui-icons/binary/RotateRight';
 import Save from 'binary-ui-icons/binary/Save';
 import Scan from 'binary-ui-icons/binary/Scan';
 import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
@@ -71,6 +74,7 @@ import Settings from 'binary-ui-icons/binary/Settings';
 import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
 import Share from 'binary-ui-icons/binary/Share';
 import ShareAlt from 'binary-ui-icons/binary/ShareAlt';
+import Skype from 'binary-ui-icons/binary/Skype';
 import Stack from 'binary-ui-icons/binary/Stack';
 import StackFull from 'binary-ui-icons/binary/StackFull';
 import StackNew from 'binary-ui-icons/binary/StackNew';
@@ -90,6 +94,7 @@ import Uncheck from 'binary-ui-icons/binary/Uncheck';
 import Update from 'binary-ui-icons/binary/Update';
 import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
+import Viber from 'binary-ui-icons/binary/Viber';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
 import Yahoo from 'binary-ui-icons/binary/Yahoo';
@@ -143,6 +148,8 @@ storiesOf('binary-ui-icons/binary', module)
       <Open color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Drawer color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Remove color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <RotateLeft color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <RotateRight color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Save color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Scan color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ScanAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -183,14 +190,17 @@ storiesOf('binary-ui-icons/binary', module)
       <Github color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Instagram color={COLOR} size={SIZE} onPress={action('clicked')} />
       <InstagramAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Kakaotalk color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Linkedin color={COLOR} size={SIZE} onPress={action('clicked')} />
       <LinkedinAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Medium color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Microsoft color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Redhat color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Skype color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Telegram color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Twitter color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Ubuntu color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Viber color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Whatsapp color={COLOR} size={SIZE} onPress={action('clicked')} />
       <WhatsappAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Yahoo color={COLOR} size={SIZE} onPress={action('clicked')} />

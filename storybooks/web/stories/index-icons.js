@@ -40,6 +40,7 @@ import Info from 'binary-ui-icons/binary/Info';
 import InfoAlt from 'binary-ui-icons/binary/InfoAlt';
 import Instagram from 'binary-ui-icons/binary/Instagram';
 import InstagramAlt from 'binary-ui-icons/binary/InstagramAlt';
+import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
@@ -61,6 +62,8 @@ import Open from 'binary-ui-icons/binary/Open';
 import Drawer from 'binary-ui-icons/binary/Drawer';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import Remove from 'binary-ui-icons/binary/Remove';
+import RotateLeft from 'binary-ui-icons/binary/RotateLeft';
+import RotateRight from 'binary-ui-icons/binary/RotateRight';
 import Save from 'binary-ui-icons/binary/Save';
 import Scan from 'binary-ui-icons/binary/Scan';
 import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
@@ -69,6 +72,7 @@ import Settings from 'binary-ui-icons/binary/Settings';
 import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
 import Share from 'binary-ui-icons/binary/Share';
 import ShareAlt from 'binary-ui-icons/binary/ShareAlt';
+import Skype from 'binary-ui-icons/binary/Skype';
 import Stack from 'binary-ui-icons/binary/Stack';
 import StackFull from 'binary-ui-icons/binary/StackFull';
 import StackNew from 'binary-ui-icons/binary/StackNew';
@@ -88,6 +92,7 @@ import Uncheck from 'binary-ui-icons/binary/Uncheck';
 import Update from 'binary-ui-icons/binary/Update';
 import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
+import Viber from 'binary-ui-icons/binary/Viber';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
 import Yahoo from 'binary-ui-icons/binary/Yahoo';
@@ -149,6 +154,8 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Open color={COLOR} size={SIZE} />Open</div>
       <div><Drawer color={COLOR} size={SIZE} />Drawer</div>
       <div><Remove color={COLOR} size={SIZE} />Remove</div>
+      <div><RotateLeft color={COLOR} size={SIZE} />RotateLeft</div>
+      <div><RotateRight color={COLOR} size={SIZE} />RotateRight</div>
       <div><Save color={COLOR} size={SIZE} />Save</div>
       <div><Scan color={COLOR} size={SIZE} />Scan</div>
       <div><ScanAlt color={COLOR} size={SIZE} />ScanAlt</div>
@@ -189,14 +196,17 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Github color={COLOR} size={SIZE} />Github</div>
       <div><Instagram color={COLOR} size={SIZE} />Instagram</div>
       <div><InstagramAlt color={COLOR} size={SIZE} />InstagramAlt</div>
+      <div><Kakaotalk color={COLOR} size={SIZE} />KakaoTalk</div>
       <div><Linkedin color={COLOR} size={SIZE} />Linkedin</div>
       <div><LinkedinAlt color={COLOR} size={SIZE} />LinkedinAlt</div>
       <div><Medium color={COLOR} size={SIZE} />Medium</div>
       <div><Microsoft color={COLOR} size={SIZE} />Microsoft</div>
       <div><Redhat color={COLOR} size={SIZE} />Redhat</div>
+      <div><Skype color={COLOR} size={SIZE} />Skype</div>
       <div><Telegram color={COLOR} size={SIZE} />Telegram</div>
       <div><Twitter color={COLOR} size={SIZE} />Twitter</div>
       <div><Ubuntu color={COLOR} size={SIZE} />Ubuntu</div>
+      <div><Viber color={COLOR} size={SIZE} />Viber</div>
       <div><Whatsapp color={COLOR} size={SIZE} />Whatsapp</div>
       <div><WhatsappAlt color={COLOR} size={SIZE} />WhatsappAlt</div>
       <div><Yahoo color={COLOR} size={SIZE} />Yahoo</div>
