@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import IconCancel from 'binary-ui-icons/binary/Cancel';
 import IconDone from 'binary-ui-icons/binary/Done';
 import NavBar from 'binary-ui-navbar';
+import NavBarIconNotification from 'binary-ui-navbar/components/NavBarIconNotification';
 
 setAddon(infoAddon);
 
@@ -16,7 +17,11 @@ storiesOf('binary-ui-navbar', module)
     <div>
       <NavBar
         headerButtonLeft={{
-          renderIcon: props => <IconCancel {...props} />,
+          renderIcon: props => (
+            <NavBarIconNotification>
+              <IconCancel {...props} />
+            </NavBarIconNotification>
+          ),
           onClick: action()
         }}
         headerButtonRight={{

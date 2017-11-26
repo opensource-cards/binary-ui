@@ -7,13 +7,18 @@ import { View } from 'react-native';
 import IconCancel from 'binary-ui-icons/binary/Cancel';
 import IconDone from 'binary-ui-icons/binary/Done';
 import NavBar from 'binary-ui-navbar';
+import NavBarIconNotification from 'binary-ui-navbar/components/NavBarIconNotification';
 
 storiesOf('binary-ui-navbar', module)
   .add('NavBar', () => (
     <View>
       <NavBar
         headerButtonLeft={{
-          renderIcon: props => <IconCancel {...props} />,
+          renderIcon: props => (
+            <NavBarIconNotification>
+              <IconCancel {...props} />
+            </NavBarIconNotification>
+          ),
           onPress: action()
         }}
         headerButtonRight={{
