@@ -18,7 +18,8 @@
     "url": "git@github.com:opensource-cards/binary-ui.git"
   },
   "files": [
-    "lib"
+    "lib",
+    "NavBarIconNotification.js"
   ],
   "main": "lib/index.js",
   "dependencies": {
