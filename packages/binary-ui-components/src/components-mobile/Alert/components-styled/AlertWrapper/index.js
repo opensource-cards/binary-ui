@@ -10,8 +10,7 @@ import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.div`
   ${NO_SELECT_CSS}
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
   box-shadow: 0px 0px 3px 0px rgba(128, 128, 128, 0.5);
   cursor: default;
   height: 40px;

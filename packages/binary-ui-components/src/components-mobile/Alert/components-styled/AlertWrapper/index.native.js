@@ -12,16 +12,15 @@ export default styled.View.attrs({
     shadowOffset: { width: 0, height: 1 },
   }),
 })`
-  border-top-left-radius: 5;
-  border-top-right-radius: 5;
+  border-radius: 5;
   height: 40px;
   justify-content: center;
-  margin-top: 3px;
-  width: 100%;
   shadow-color: #000;
   shadow-opacity: 0.1;
   shadow-radius: 2;
+  margin-top: 3px;
   elevation: 1;
+  width: 100%;
   ${props => {
     switch (props.alertType) {
       case INFO:
