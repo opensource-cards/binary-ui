@@ -13,7 +13,13 @@ storiesOf('binary-ui-components/mobile', module)
   .add('Spinner', withInfo('Spinner component')(() => (
     <div>
       <Spinner/>
+      <br />
       <Spinner size={50} />
+      <br />
       <Spinner size={100} />
+      <br />
+      <Spinner color="#d3d3d3" size={100} />
+      <br />
+      <Spinner color="#c90335" size={100} />
     </div>
   )));

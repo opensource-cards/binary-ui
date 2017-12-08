@@ -84,7 +84,7 @@ export default class Input extends React.Component {
   }
 
   render() {
-    /* eslint-disable no-unused-vars  */
+    /* eslint-disable no-unused-vars */
     const {
       isBold,
       isValid,
@@ -99,7 +99,7 @@ export default class Input extends React.Component {
       onIconClick,
       ...props,
     } = this.props;
-    /* eslint-enable no-unused-vars  */
+    /* eslint-enable no-unused-vars */
     const { isActive } = this.state;
     return (
       <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, styleBorderColor)} >

@@ -12,5 +12,7 @@ storiesOf('binary-ui-components/mobile', module)
       <Spinner/>
       <Spinner size={50} />
       <Spinner size={100} />
+      <Spinner color="#d3d3d3" size={100} />
+      <Spinner color="#c90335" size={100} />
     </View>
   ));

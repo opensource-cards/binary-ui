@@ -34,7 +34,7 @@ export default class Checkbox extends React.PureComponent {
   }
 
   render() {
-    // NOTE: no need to set 'onChange' and 'onPress' handlers
+    // Note: No need to pass 'onChange' and 'onPress' handlers.
     /* eslint-disable no-unused-vars */
     const { isChecked, onChange, onPress, ...props } = this.props;
     /* eslint-enable no-unused-vars */
