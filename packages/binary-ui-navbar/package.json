@@ -19,7 +19,9 @@
   },
   "files": [
     "lib",
-    "NavBarIconNotification.js"
+    "NavBarIconNotification.js",
+    "NavBarTitleAction.js",
+    "NavBarTitleText.js"
   ],
   "main": "lib/index.js",
   "dependencies": {

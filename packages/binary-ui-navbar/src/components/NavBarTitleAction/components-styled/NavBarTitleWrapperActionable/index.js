@@ -1,4 +1,4 @@
-import NavBarTitleWrapperBase from '../NavBarTitleWrapperBase';
+import NavBarTitleWrapperBase from '../../../../components-styled/NavBarTitleWrapperBase';
 
 export default NavBarTitleWrapperBase.extend`
   cursor: pointer;

@@ -7,6 +7,8 @@ import { View } from 'react-native';
 import IconCancel from 'binary-ui-icons/binary/Cancel';
 import IconDone from 'binary-ui-icons/binary/Done';
 import NavBar from 'binary-ui-navbar';
+import NavBarTitleAction from 'binary-ui-navbar/components/NavBarTitleAction';
+import NavBarTitleText from 'binary-ui-navbar/components/NavBarTitleText';
 import NavBarIconNotification from 'binary-ui-navbar/components/NavBarIconNotification';
 
 storiesOf('binary-ui-navbar', module)
@@ -28,11 +30,9 @@ storiesOf('binary-ui-navbar', module)
         headerStyle={{
           backgroundColor: "#eeeae5"
         }}
-        headerTitle={{
-          children: "Stack with active buttons",
-          isActionable: true
-        }}
-      />
+      >
+        <NavBarTitleAction>Stack with active buttons</NavBarTitleAction>
+      </NavBar>
       <NavBar
         headerButtonLeft={{
           isDisabled: true,
@@ -47,9 +47,8 @@ storiesOf('binary-ui-navbar', module)
         headerStyle={{
           backgroundColor: "#eeeae5"
         }}
-        headerTitle={{
-          children: "Stack with disabled buttons"
-        }}
-      />
+      >
+        <NavBarTitleAction>Stack with disabled buttons</NavBarTitleAction>
+      </NavBar>
     </View>
   ));

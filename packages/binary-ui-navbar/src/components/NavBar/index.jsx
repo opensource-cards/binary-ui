@@ -2,37 +2,36 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import NavBarIconButton from './components-styled/NavBarIconButton';
 import NavBarPlaceholder from './components-styled/NavBarPlaceholder';
-import NavBarTitle from './components/NavBarTitle';
 import NavBarWrapper from './components-styled/NavBarWrapper';
 
 const propTypes = {
+  children: PropTypes.node,
   headerButtonLeft: PropTypes.object,
   headerButtonRight: PropTypes.object,
   headerButtonRightSecondary: PropTypes.object,
   headerStyle: PropTypes.object,
-  headerTitle: PropTypes.object,
 };
 
 const defaultProps = {
+  children: null,
   headerButtonLeft: {},
   headerButtonRight: {},
   headerButtonRightSecondary: {},
   headerStyle: undefined,
-  headerTitle: {},
 };
 
 const NavBar = ({
+  children,
   headerButtonLeft,
   headerButtonRight,
   headerButtonRightSecondary,
   headerStyle,
-  headerTitle,
 }) => (
   <NavBarWrapper style={headerStyle}>
     {headerButtonLeft.renderIcon ? (
       <NavBarIconButton {...headerButtonLeft} />
     ) : <NavBarPlaceholder />}
-    <NavBarTitle {...headerTitle} />
+    {children}
     {headerButtonRightSecondary.renderIcon ? (
       <NavBarIconButton {...headerButtonRightSecondary} />
     ) : null}
