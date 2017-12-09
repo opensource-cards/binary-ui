@@ -23,7 +23,7 @@ const NavBarTitle = ({ children, isActionable, ...props }) => (
     </NavBarTitleWrapperActionable>
   ) : (
     <NavBarTitleWrapperText {...props}>
-      <NavBarTitleText>{children}</NavBarTitleText>
+      {children}
     </NavBarTitleWrapperText>
   )
 );

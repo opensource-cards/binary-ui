@@ -3,5 +3,7 @@ import styled from 'styled-components';
 
 export default styled.div`
   ${NO_SELECT_CSS}
-  width: 55px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 20px;
 `;

@@ -9,9 +9,9 @@ export default styled.div`
   font-size: 16px;
   flex-direction: row;
   height: 100%;
-  justify-content: center;
-  max-width: 200px;
+  overflow: hidden;
   text-overflow: ellipsis;
   transition: opacity 0.1s ease-out;
-  width: fit-content;
+  width: 100%;
+  white-space: nowrap;
 `;
