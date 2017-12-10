@@ -5,7 +5,7 @@ import TooltipStyled from '../components-styled/TooltipStyled';
 const propTypes = {
   isVisible: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
-  placement: PropTypes.oneOf(['bottom-right', 'bottom-left']),
+  placement: PropTypes.oneOf(['bottom-right', 'bottom-left', 'top-right', 'top-left']),
 };
 
 const defaultProps = {

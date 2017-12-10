@@ -66,7 +66,7 @@ class TooltipDemo extends React.Component {
         <div>Container for Tooltips</div>
         <Tooltip
           isVisible={isVisibleLeft}
-          label="Left tooltip"
+          label="Bottom Right tooltip"
           placement="bottom-right"
           target={this.buttonLeft}
           style={{ transform: 'translate3d(65px, 70px, 0)' }}
@@ -74,10 +74,26 @@ class TooltipDemo extends React.Component {
         />
         <Tooltip
           isVisible={isVisibleRight}
-          label="Right tooltip"
+          label="Bottom Left tooltip with very long text"
           placement="bottom-left"
           target={this.buttonRight}
           style={{ transform: 'translate3d(-65px, 70px, 0)' }}
+          onClick={this.onChangeRight}
+        />
+        <Tooltip
+          isVisible={isVisibleLeft}
+          label="Top Right tooltip"
+          placement="top-right"
+          target={this.topLeft}
+          style={{ transform: 'translate3d(65px, 15px, 0)' }}
+          onClick={this.onChangeLeft}
+        />
+        <Tooltip
+          isVisible={isVisibleRight}
+          label="Top Left tooltip with very long text"
+          placement="top-left"
+          target={this.topRight}
+          style={{ transform: 'translate3d(-65px, 15px, 0)' }}
           onClick={this.onChangeRight}
         />
       </div>

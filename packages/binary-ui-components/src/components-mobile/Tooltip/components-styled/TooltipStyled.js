@@ -22,13 +22,15 @@ export default styled.div`
   ${props => (props.isVisible ? 'opacity: 1;' : 'opacity: 0;pointer-events: none;')}
   ${props => {
     switch (props.placement) {
-      case 'bottom-left': {
+      case 'bottom-left':
+      case 'top-left': {
         return `
           right: ${-TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;
           top: ${TOOLTIP_ARROW_HEIGHT}px;
         `;
       }
-      case 'bottom-right': {
+      case 'bottom-right':
+      case 'top-right': {
         return `
           left: ${-TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;
           top: ${TOOLTIP_ARROW_HEIGHT}px;
@@ -41,7 +43,6 @@ export default styled.div`
   &::after {
     border-width: ${TOOLTIP_ARROW_WIDTH}px;
     border-style: solid;
-    border-color: transparent transparent ${BINARY_COLOR_GRAY_30} transparent;
     bottom: 100%;
     content: '';
     margin-left: -${TOOLTIP_ARROW_HEIGHT}px;
@@ -49,9 +50,29 @@ export default styled.div`
     ${props => {
       switch (props.placement) {
         case 'bottom-left':
-          return `right: ${TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;`;
+          return `
+            border-color: transparent transparent ${BINARY_COLOR_GRAY_30} transparent;
+            right: ${TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;
+            margin-bottom: 0px;
+          `;
         case 'bottom-right':
-          return `left: ${TOOLTIP_ARROW_SHIFT}px;`;
+          return `
+            border-color: transparent transparent ${BINARY_COLOR_GRAY_30} transparent;
+            left: ${TOOLTIP_ARROW_SHIFT}px;
+            margin-bottom: 0px;
+          `;
+        case 'top-left':
+          return `
+            border-color: ${BINARY_COLOR_GRAY_30} transparent transparent transparent;
+            right: ${TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;
+            margin-bottom: -${25 + 2 * TOOLTIP_ARROW_HEIGHT}px;
+          `;
+        case 'top-right':
+          return `
+            border-color: ${BINARY_COLOR_GRAY_30} transparent transparent transparent;
+            left: ${TOOLTIP_ARROW_SHIFT}px;
+            margin-bottom: -${25 + 2 * TOOLTIP_ARROW_HEIGHT}px;
+          `;
         default:
           return undefined;
       }
