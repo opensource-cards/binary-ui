@@ -34,7 +34,7 @@ storiesOf('binary-ui-navbar', module)
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleAction>Stack with active buttons</NavBarTitleAction>
+        <NavBarTitleAction>NavBar with active buttons</NavBarTitleAction>
       </NavBar>
       <NavBar
         headerButtonLeft={{
@@ -58,7 +58,7 @@ storiesOf('binary-ui-navbar', module)
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleAction>Stack with secondary button</NavBarTitleAction>
+        <NavBarTitleAction>NavBar with secondary button</NavBarTitleAction>
       </NavBar>
       <NavBar
         headerButtonLeft={{
@@ -75,7 +75,7 @@ storiesOf('binary-ui-navbar', module)
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleText>Stack with disabled buttons</NavBarTitleText>
+        <NavBarTitleText>NavBar with disabled buttons</NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonRight={{
@@ -86,7 +86,7 @@ storiesOf('binary-ui-navbar', module)
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleText>Stack without left button</NavBarTitleText>
+        <NavBarTitleText>NavBar without left button</NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonRight={{

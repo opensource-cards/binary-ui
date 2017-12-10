@@ -10,5 +10,5 @@ export default styled.Text.attrs({
   flex-direction: row;
   font-family: ${FONT_FAMILY_MAIN_500};
   font-size: 16;
-  justify-content: center;
+  justify-content: flex-start;
 `;

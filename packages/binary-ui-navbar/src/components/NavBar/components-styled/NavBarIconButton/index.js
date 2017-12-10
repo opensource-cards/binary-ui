@@ -11,5 +11,5 @@ export default styled(ActionIcon)`
   flex-grow: 0;
   height: 50px;
   justify-content: center;
-  width: 55px;
+  width: 50px;
 `;
