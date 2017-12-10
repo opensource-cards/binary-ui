@@ -5,5 +5,5 @@ export default styled.div`
   ${NO_SELECT_CSS}
   flex-grow: 0;
   flex-shrink: 0;
-  width: 20px;
+  width: 10px;
 `;

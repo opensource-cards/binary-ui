@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import NavBarTitleWrapperText from './components-styled/NavBarTitleWrapperText';
+import TitleWrapperText from './components-styled/TitleWrapperText';
+import TitleText from '../../components-styled/TitleText';
 
 const propTypes = {
   children: PropTypes.node,
@@ -11,9 +12,9 @@ const defaultProps = {
 };
 
 const NavBarTitleText = ({ children, ...props }) => (
-  <NavBarTitleWrapperText {...props}>
-    {children}
-  </NavBarTitleWrapperText>
+  <TitleWrapperText {...props}>
+    <TitleText>{children}</TitleText>
+  </TitleWrapperText>
 );
 
 NavBarTitleText.propTypes = propTypes;

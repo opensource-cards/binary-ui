@@ -1,9 +1,10 @@
 import styled from 'styled-components/native';
-import { STACK_HEADER_HEIGHT } from '../../constants';
 
 export default styled.View`
   align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  flex: 1;
   flex-direction: row;
-  height: ${STACK_HEADER_HEIGHT};
-  overflow: hidden;
+  height: 30px;
 `;

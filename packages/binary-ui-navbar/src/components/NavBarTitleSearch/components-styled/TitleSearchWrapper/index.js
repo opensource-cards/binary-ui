@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { STACK_HEADER_HEIGHT } from '../../constants';
 
 export default styled.div`
   align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 7px;
   display: flex;
   flex-direction: row;
-  font-size: 22px;
-  height: ${STACK_HEADER_HEIGHT}px;
-  z-index: 100;
+  height: 30px;
+  padding: 0 0 0 10px;
+  width: 100%;
 `;

@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import NavBarIconButton from './components-styled/NavBarIconButton';
-import NavBarPlaceholder from './components-styled/NavBarPlaceholder';
-import NavBarWrapper from './components-styled/NavBarWrapper';
+import IconButton from './components-styled/IconButton';
+import Space from './components-styled/Space';
+import Wrapper from './components-styled/Wrapper';
 
 const propTypes = {
   children: PropTypes.node,
   headerButtonLeft: PropTypes.object,
   headerButtonRight: PropTypes.object,
   headerButtonRightSecondary: PropTypes.object,
-  headerStyle: PropTypes.object,
 };
 
 const defaultProps = {
@@ -17,7 +16,6 @@ const defaultProps = {
   headerButtonLeft: {},
   headerButtonRight: {},
   headerButtonRightSecondary: {},
-  headerStyle: undefined,
 };
 
 const NavBar = ({
@@ -25,20 +23,20 @@ const NavBar = ({
   headerButtonLeft,
   headerButtonRight,
   headerButtonRightSecondary,
-  headerStyle,
+  ...props,
 }) => (
-  <NavBarWrapper style={headerStyle}>
+  <Wrapper {...props} >
     {headerButtonLeft.renderIcon ? (
-      <NavBarIconButton {...headerButtonLeft} />
-    ) : <NavBarPlaceholder />}
+      <IconButton {...headerButtonLeft} />
+    ) : <Space />}
     {children}
     {headerButtonRightSecondary.renderIcon ? (
-      <NavBarIconButton {...headerButtonRightSecondary} />
+      <IconButton {...headerButtonRightSecondary} />
     ) : null}
     {headerButtonRight.renderIcon ? (
-      <NavBarIconButton {...headerButtonRight} />
-    ) : null}
-  </NavBarWrapper>
+      <IconButton {...headerButtonRight} />
+    ) : <Space />}
+  </Wrapper>
 );
 
 NavBar.propTypes = propTypes;

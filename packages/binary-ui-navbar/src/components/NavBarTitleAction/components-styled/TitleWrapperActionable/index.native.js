@@ -1,7 +1,7 @@
 import { TouchableOpacity } from 'react-native';
-import NavBarTitleWrapperBase from '../../../../components-styled/NavBarTitleWrapperBase';
+import TitleWrapperBase from '../../../../components-styled/TitleWrapperBase';
 
-export default NavBarTitleWrapperBase
+export default TitleWrapperBase
   .withComponent(TouchableOpacity)
   .extend
   .attrs({

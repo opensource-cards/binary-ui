@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import NavBarTitleIcon from './components-styled/NavBarTitleIcon';
-import NavBarTitleText from './components-styled/NavBarTitleText';
-import NavBarTitleWrapperActionable from './components-styled/NavBarTitleWrapperActionable';
+import TitleIcon from './components-styled/TitleIcon';
+import TitleWrapperActionable from './components-styled/TitleWrapperActionable';
+import TitleText from '../../components-styled/TitleText';
 
 const propTypes = {
   children: PropTypes.node,
@@ -13,10 +13,10 @@ const defaultProps = {
 };
 
 const NavBarTitleAction = ({ children, ...props }) => (
-  <NavBarTitleWrapperActionable {...props}>
-    <NavBarTitleText>{children}</NavBarTitleText>
-    <NavBarTitleIcon size={15} />
-  </NavBarTitleWrapperActionable>
+  <TitleWrapperActionable {...props}>
+    <TitleText>{children}</TitleText>
+    <TitleIcon size={15} />
+  </TitleWrapperActionable>
 );
 
 NavBarTitleAction.propTypes = propTypes;

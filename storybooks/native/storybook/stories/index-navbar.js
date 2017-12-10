@@ -10,9 +10,75 @@ import IconDrawer from 'binary-ui-icons/binary/Drawer';
 import IconDone from 'binary-ui-icons/binary/Done';
 import IconSearch from 'binary-ui-icons/binary/Search';
 import NavBar from 'binary-ui-navbar';
-import NavBarTitleAction from 'binary-ui-navbar/components/NavBarTitleAction';
-import NavBarTitleText from 'binary-ui-navbar/components/NavBarTitleText';
 import NavBarIconNotification from 'binary-ui-navbar/components/NavBarIconNotification';
+import NavBarTitleAction from 'binary-ui-navbar/components/NavBarTitleAction';
+import NavBarTitleSearch from 'binary-ui-navbar/components/NavBarTitleSearch';
+import NavBarTitleText from 'binary-ui-navbar/components/NavBarTitleText';
+
+class Demo extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isSearch: false,
+      value: '',
+    };
+    this.onValueChange = this.onValueChange.bind(this);
+  }
+
+  setIsSearch(isSearch) {
+    this.setState(() => ({
+      isSearch,
+    }));
+  }
+
+  onValueChange(value) {
+    this.setState(() => ({
+      value,
+    }));
+  }
+
+  render() {
+    const { isSearch, value } = this.state;
+    return (
+      <NavBar
+        headerButtonLeft={isSearch ? undefined : {
+          renderIcon: props => (
+            <NavBarIconNotification>
+              <IconDrawer {...props} />
+            </NavBarIconNotification>
+          ),
+          onPress: action()
+        }}
+        headerButtonRight={isSearch ? {
+          renderIcon: props => <IconDone {...props} />,
+          onPress: () => {
+            this.setIsSearch(false);
+          }
+        } : {
+          renderIcon: props => <IconDone {...props} />,
+        }}
+        headerButtonRightSecondary={isSearch ? undefined : {
+          renderIcon: props => <IconSearch {...props} />,
+          onPress: () => {
+            this.setIsSearch(true);
+          }
+        }}
+        style={{
+          backgroundColor: "#eeeae5"
+        }}
+      >
+        {isSearch ? (
+          <NavBarTitleSearch value={value} onChange={this.onValueChange} />
+        ) : (
+          <NavBarTitleText>
+            Search Demo
+          </NavBarTitleText>
+        )}
+      </NavBar>
+    );
+  }
+}
 
 storiesOf('binary-ui-navbar', module)
   .add('NavBar', () => (
@@ -26,7 +92,7 @@ storiesOf('binary-ui-navbar', module)
           renderIcon: props => <IconDone {...props} />,
           onPress: action()
         }}
-        headerStyle={{
+        style={{
           backgroundColor: "#eeeae5"
         }}
       >
@@ -49,7 +115,7 @@ storiesOf('binary-ui-navbar', module)
           renderIcon: props => <IconSearch {...props} />,
           onClick: action()
         }}
-        headerStyle={{
+        style={{
           backgroundColor: "#eeeae5"
         }}
       >
@@ -66,11 +132,11 @@ storiesOf('binary-ui-navbar', module)
           renderIcon: props => <IconDone {...props} />,
           onPress: action()
         }}
-        headerStyle={{
+        style={{
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleAction>NavBar with disabled buttons</NavBarTitleAction>
+        <NavBarTitleText>NavBar with disabled buttons</NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonRight={{
@@ -78,11 +144,11 @@ storiesOf('binary-ui-navbar', module)
           renderIcon: props => <IconDone {...props} />,
           onPress: action()
         }}
-        headerStyle={{
+        style={{
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleAction>NavBar without left button</NavBarTitleAction>
+        <NavBarTitleText>NavBar without left button</NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonRight={{
@@ -90,47 +156,35 @@ storiesOf('binary-ui-navbar', module)
           renderIcon: props => <IconDone {...props} />,
           onPress: action()
         }}
-        headerStyle={{
+        style={{
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleAction>A really long title that doesn't fit into pretty much any possible screen width</NavBarTitleAction>
+        <NavBarTitleText>A really really long title that doesn't fit into pretty much any possible screen width</NavBarTitleText>
+      </NavBar>
+      <NavBar
+        headerButtonLeft={{
+          isDisabled: true,
+          renderIcon: props => <IconDone {...props} />,
+          onPress: action()
+        }}
+        style={{
+          backgroundColor: "#eeeae5"
+        }}
+      >
+        <NavBarTitleText>A really really long title that doesn't fit into pretty much any possible screen width</NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonRight={{
           renderIcon: props => <IconDone {...props} />,
           onPress: action()
         }}
-        headerStyle={{
+        style={{
           backgroundColor: "#eeeae5"
         }}
       >
-        <View
-          style={{
-            alignItems: 'center',
-            backgroundColor: "#FFFFFF",
-            borderRadius: 7,
-            flex: 1,
-            flexDirection: 'row',
-            height: 30,
-          }}
-        >
-          <IconSearch
-            size={20}
-            color="#A9A9A9"
-            margin={5}
-          />
-          <TextInput
-            autoFocus
-            clearButtonMode="always"
-            returnKeyType="search"
-            style={{
-              flex: 1,
-              fontFamily: FONT_FAMILY_MAIN_300,
-            }}
-              placeholder="Search"
-          />
-        </View>
+        <NavBarTitleSearch value="" />
       </NavBar>
+      <Demo />
     </View>
   ));
