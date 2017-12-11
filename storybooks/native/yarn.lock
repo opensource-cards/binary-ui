@@ -3347,7 +3347,7 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-font-installer@^0.1.2:
+font-installer@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/font-installer/-/font-installer-0.1.8.tgz#bd64d91339c864ccb4aca2b0ba31ce8f0aa23591"
 

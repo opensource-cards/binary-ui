@@ -3,7 +3,6 @@ import React from 'react';
 import SelectArrow from '../components-styled/SelectArrow';
 import SelectStyled from '../components-styled/SelectStyled';
 import SelectWrapper from '../components-styled/SelectWrapper';
-import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   isBold: PropTypes.bool,
@@ -37,7 +36,12 @@ export default class Select extends React.PureComponent {
     const { items, isBold, isEdit, isValid, selected, onChange, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     return (
-      <SelectWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} {...props} >
+      <SelectWrapper
+        isEdit={isEdit}
+        isTypingHighlight={false}
+        isValid={isValid}
+        {...props}
+      >
         <SelectArrow size={18} />
         <SelectStyled isBold={isBold} value={selected} onChange={this.onChange} >
           {items.map((listItem) => (

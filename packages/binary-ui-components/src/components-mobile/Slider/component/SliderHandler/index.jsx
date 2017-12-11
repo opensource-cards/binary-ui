@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import SliderHandler from '../../components-styled/SliderHandler';
-import validatePosition from '../../utils/position-validation';
 import getPosition from '../../utils/position';
+import validatePosition from '../../utils/position-validation';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../../utils/styles';
 
 const propTypes = {

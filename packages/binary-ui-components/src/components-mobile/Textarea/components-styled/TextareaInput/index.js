@@ -1,11 +1,11 @@
-import { INPUT_RESET_CSS } from 'binary-ui-styles';
+import { FONT_SET_LIGHT_CSS, INPUT_RESET_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
-import { FIELD_VALUE_FONT_CSS } from '../../../../utils/styles';
 
 export default styled.textarea`
   ${INPUT_RESET_CSS}
-  ${FIELD_VALUE_FONT_CSS}
+  ${FONT_SET_LIGHT_CSS}
   background-color: transparent;
+  border-radius: 0;
   cursor: text;
   min-height: 120px;
   overflow: hidden;

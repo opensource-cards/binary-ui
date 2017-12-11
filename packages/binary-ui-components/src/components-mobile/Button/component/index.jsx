@@ -1,10 +1,10 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
+import { getOpacity } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyledWrapper from '../components-styled/IconStyledWrapper';
-import { getOpacity, getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   color: PropTypes.string,
@@ -28,8 +28,10 @@ const defaultProps = {
 
 const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon, onClick }) => (
   <ButtonWrapper
+    isEdit={isEdit}
     isTapHighlight={!isDisabled}
-    style={getHighlightEditStyle(isEdit, isValid, false, undefined)}
+    isTypingHighlight={false}
+    isValid={isValid}
     onClick={!isDisabled && onClick}
   >
     <IconStyledWrapper>

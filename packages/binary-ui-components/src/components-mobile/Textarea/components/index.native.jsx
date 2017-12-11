@@ -3,7 +3,6 @@ import React from 'react';
 import TextareaInput from '../components-styled/TextareaInput';
 import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
 import ActionListItemIcon from '../../ActionListItemIcon';
-import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   isValid: PropTypes.bool,
@@ -74,7 +73,11 @@ export default class Textarea extends React.Component {
     /* eslint-enable no-unused-vars */
     const { isActive } = this.state;
     return (
-      <TextareaWrapperStyled style={getHighlightEditStyle(true, isValid, isActive, undefined)} >
+      <TextareaWrapperStyled
+        isEdit
+        isTypingHighlight={isActive}
+        isValid={isValid}
+      >
         <TextareaInput
           multiline
           underlineColorAndroid="rgba(0, 0, 0, 0)"

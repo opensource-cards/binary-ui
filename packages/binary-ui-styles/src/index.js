@@ -1,35 +1,25 @@
+import { FONT_FAMILY_MAIN_200, FONT_FAMILY_MAIN_600 } from './index.native-and-web';
 
 export * from './index.native-and-web';
 
+export const FONT_SET_BOLD_CSS = `
+  color: hsl(0, 0%, 0%);
+  font-family: ${FONT_FAMILY_MAIN_600};
+  font-size: 13px;
+  letter-spacing: 2px;
+`;
+
+export const FONT_SET_LIGHT_CSS = `
+  color: hsl(0, 0%, 0%);
+  font-family: ${FONT_FAMILY_MAIN_200};
+  font-size: 18px;
+`;
+
 export const INPUT_RESET_CSS = `
   border: none;
-  border-radius: 0;
   box-sizing: border-box;
   outline: 0;
 `;
-
-export const MAXIMIZED_STYLE = {
-  width: '100%',
-  height: '100%',
-};
-
-export const MAXIMIZED_CSS = `
-  height: 100%;
-  width: 100%;
-`;
-
-export const NO_SELECT_STYLE = {
-  userSelect: 'none',
-  WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
-  // ios safari
-  WebkitTouchCallout: 'none',
-  // chrome/safari/opera
-  WebkitUserSelect: 'none',
-  // firefox
-  MozUserSelect: 'none',
-  // internet explorer/edge
-  msUserSelect: 'none',
-};
 
 export const NO_SELECT_CSS = `
   user-select: none;
@@ -37,17 +27,4 @@ export const NO_SELECT_CSS = `
   -webkit-touch-callout: none;
 `;
 
-export const WEBSITE_RESET_STYLES = `
-  * {
-    outline: 0;
-    -ms-content-zooming: none;
-  }
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  a, div, i, span {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-`;
+export const OPACITY_TRANSITION = 'opacity 0.1s ease-out';

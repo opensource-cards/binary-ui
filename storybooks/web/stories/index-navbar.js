@@ -188,7 +188,18 @@ storiesOf('binary-ui-navbar', module)
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleSearch value="" />
+        <NavBarTitleSearch isBold value="Bold Text" />
+      </NavBar>
+      <NavBar
+        headerButtonRight={{
+          renderIcon: props => <IconDone {...props} />,
+          onClick: action()
+        }}
+        style={{
+          backgroundColor: "#eeeae5"
+        }}
+      >
+        <NavBarTitleSearch isValid={false} value="" />
       </NavBar>
       <Demo />
     </div>

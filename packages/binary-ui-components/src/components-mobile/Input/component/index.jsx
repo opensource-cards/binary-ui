@@ -4,7 +4,6 @@ import InputStyled from '../components-styled/InputStyled';
 import InputWrapper from '../components-styled/InputWrapper';
 import INPUT_FIELD_TYPES from '../constants/text-field-component-types';
 import ActionListItemIcon from '../../ActionListItemIcon';
-import { getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   isBold: PropTypes.bool,
@@ -102,7 +101,12 @@ export default class Input extends React.Component {
     /* eslint-enable no-unused-vars */
     const { isActive } = this.state;
     return (
-      <InputWrapper style={getHighlightEditStyle(true, isValid, isActive, styleBorderColor)} >
+      <InputWrapper
+        isEdit
+        isTypingHighlight={isActive}
+        isValid={isValid}
+        styleBorderColor={styleBorderColor}
+      >
         {renderIcon && (
           <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
         )}

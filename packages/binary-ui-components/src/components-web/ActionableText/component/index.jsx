@@ -1,7 +1,7 @@
+import { getOpacity } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TextStyled from '../component-styled/TextStyled';
-import { getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   color: PropTypes.string,

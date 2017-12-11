@@ -1,16 +1,23 @@
-import styled from 'styled-components';
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import {
-  FONT_DISABLED_CSS,
-  FIELD_NAME_FONT_CSS,
-  FIELD_VALUE_FONT_CSS,
-  LIST_ITEM_CONTENTS_BASE_CSS,
-} from '../../../../utils/styles';
+  FONT_SET_BOLD_CSS,
+  FONT_SET_LIGHT_CSS,
+  LIST_ITEM_HEIGHT,
+  OPACITY_ACTIVE,
+} from 'binary-ui-styles';
+import styled from 'styled-components';
 
 export default styled.div`
-  ${LIST_ITEM_CONTENTS_BASE_CSS}
-  ${props => (props.isDisabled ? FONT_DISABLED_CSS : undefined)}
-  ${props => (props.isBold ? FIELD_NAME_FONT_CSS : FIELD_VALUE_FONT_CSS)}
+  ${props => (props.isDisabled ? `
+    opacity: ${OPACITY_ACTIVE};
+    pointer-events: none;
+  ` : undefined)}
+  ${props => (props.isBold ? FONT_SET_BOLD_CSS : FONT_SET_LIGHT_CSS)}
+  display: inline-block;
   height: ${LIST_ITEM_HEIGHT}px;
   line-height: ${LIST_ITEM_HEIGHT}px;
+  outline: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 `;

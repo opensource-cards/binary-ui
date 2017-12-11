@@ -80,3 +80,40 @@ export const FONT_FAMILY_MAIN_800 = 'FiraSans-ExtraBold';
 export const FONT_FAMILY_MAIN_900 = 'FiraSans-Black';
 
 export const LIST_ITEM_HEIGHT = 44;
+
+export const OPACITY_ACTIVE = 0.2;
+
+// Note: This works on native and web as well. Be careful while making changes.
+function getEditStyle(color) {
+  return `
+    border-bottom-color: ${color};
+    border-bottom-width: 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-style: solid;
+  `;
+}
+
+export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, borderColor) {
+  if (!isEdit) {
+    return undefined;
+  }
+  if (!isValid) {
+    return getEditStyle(BINARY_COLOR_RED_40);
+  }
+  if (isTypingHighlight) {
+    return getEditStyle(BINARY_COLOR_BLUE_40);
+  }
+  if (borderColor) {
+    return getEditStyle(borderColor);
+  }
+  return getEditStyle(BINARY_COLOR_SAND_90);
+}
+
+export function getOpacity(isDisabled) {
+  if (isDisabled) {
+    return OPACITY_ACTIVE;
+  }
+  return 1;
+}

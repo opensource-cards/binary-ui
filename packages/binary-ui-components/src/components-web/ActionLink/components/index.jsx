@@ -1,3 +1,4 @@
+import { OPACITY_ACTIVE, getOpacity } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ActionLinkWrapper from '../components-styled/ActionLinkWrapper';
@@ -5,7 +6,6 @@ import ActionableText from '../../ActionableText';
 import ActionableIconLeft from '../../ActionableIconLeft';
 import ActionableIconRight from '../../ActionableIconRight';
 import TouchableOpacity from '../../../components/TouchableOpacity';
-import { OPACITY_ACTIVE, getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   children: PropTypes.any,

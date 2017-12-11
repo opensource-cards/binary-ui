@@ -1,9 +1,9 @@
+import { getOpacity } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ViewContent from '../components-styled/ViewContent';
 import ViewWrapper from '../components-styled/ViewWrapper';
 import ActionListItemIcon from '../../ActionListItemIcon';
-import { getOpacity } from '../../../utils/styles-api';
 
 const propTypes = {
   children: PropTypes.any,

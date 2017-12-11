@@ -1,13 +1,13 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
+import { getOpacity } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight } from 'react-native';
 import ButtonContentHighlight from '../components-styled/ButtonContentHighlight.native';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
-import IconStyledWrapper from '../components-styled/IconStyledWrapper.native';
+import IconStyledWrapper from '../components-styled/IconStyledWrapper';
 import { TAP_HIGHLIGHT_COLOR } from '../utils/styles';
-import { getOpacity, getHighlightEditStyle } from '../../../utils/styles-api';
 
 const propTypes = {
   color: PropTypes.string,
@@ -59,7 +59,12 @@ const Button = ({
     {...props}
   >
     <ButtonContentHighlight>
-      <ButtonWrapper style={getHighlightEditStyle(isEdit, isValid, false, undefined)} >
+      <ButtonWrapper
+        isEdit={isEdit}
+        isTapHighlight={!isDisabled}
+        isTypingHighlight={false}
+        isValid={isValid}
+      >
         <IconStyledWrapper>
           {renderIcon({ color, opacity: getOpacity(isDisabled), size: 18 })}
         </IconStyledWrapper>

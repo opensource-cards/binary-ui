@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import IconMark from './components/IconMark';
-import IconWrapper from './components/IconWrapper';
+import IconMark from './components-styled/IconMark';
+import IconWrapper from './components-styled/IconWrapper';
 
 const propTypes = {
   children: PropTypes.node,
