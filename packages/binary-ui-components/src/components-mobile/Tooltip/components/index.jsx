@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import TooltipStyled from '../components-styled/TooltipStyled';
+import TooltipWrapper from '../components-styled/TooltipWrapper';
 
 const propTypes = {
   isVisible: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
-  placement: PropTypes.oneOf(['bottom-right', 'bottom-left', 'top-right', 'top-left']),
+  placement: PropTypes.oneOf([
+    'bottom-right',
+    'bottom-left',
+    'top-right',
+    'top-left',
+  ]),
 };
 
 const defaultProps = {
@@ -13,9 +18,9 @@ const defaultProps = {
 };
 
 const Tooltip = ({ isVisible, label, placement, ...props }) => (
-  <TooltipStyled isVisible={isVisible} placement={placement} {...props} >
+  <TooltipWrapper isVisible={isVisible} placement={placement} {...props} >
     {label}
-  </TooltipStyled>
+  </TooltipWrapper>
 );
 
 Tooltip.propTypes = propTypes;

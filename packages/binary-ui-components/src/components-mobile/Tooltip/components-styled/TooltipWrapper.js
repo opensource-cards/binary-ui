@@ -53,14 +53,12 @@ export default styled.div`
             border-color: transparent transparent ${BINARY_COLOR_GRAY_30} transparent;
             bottom: 100%;
             right: ${TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;
-            margin-bottom: 0px;
           `;
         case 'bottom-right':
           return `
             border-color: transparent transparent ${BINARY_COLOR_GRAY_30} transparent;
             bottom: 100%;
             left: ${TOOLTIP_ARROW_SHIFT}px;
-            margin-bottom: 0px;
           `;
         case 'top-left':
           return `

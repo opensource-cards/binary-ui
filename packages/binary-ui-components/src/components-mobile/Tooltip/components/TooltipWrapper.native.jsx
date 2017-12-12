@@ -12,7 +12,12 @@ const styles = StyleSheet.create({
 const propTypes = {
   children: PropTypes.any.isRequired,
   isVisible: PropTypes.bool.isRequired,
-  placement: PropTypes.oneOf(['bottom-right', 'bottom-left', 'top-right', 'top-left']).isRequired,
+  placement: PropTypes.oneOf([
+    'bottom-right',
+    'bottom-left',
+    'top-right',
+    'top-left',
+  ]).isRequired,
   style: PropTypes.object,
 };
 
