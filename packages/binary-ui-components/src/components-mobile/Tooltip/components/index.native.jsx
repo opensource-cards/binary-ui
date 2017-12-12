@@ -20,32 +20,66 @@ const defaultProps = {
   placement: 'bottom-right',
 };
 
-const Tooltip = ({
-  isVisible,
-  label,
-  placement,
-  onLongPress,
-  onPress,
-  onPressIn,
-  onPressOut,
-  ...props,
-}) => (
-  <TouchableWithoutFeedback
-    onLongPress={onLongPress}
-    onPress={onPress}
-    onPressIn={onPressIn}
-    onPressOut={onPressOut}
-  >
-    <TooltipStyled isVisible={isVisible} placement={placement} {...props} >
-      <TooltipArrow placement={placement} />
-      <TooltipTextWrapper>
-        <TooltipText>
-          {label}
-        </TooltipText>
-      </TooltipTextWrapper>
-    </TooltipStyled>
-  </TouchableWithoutFeedback>
-);
+class Tooltip extends React.Component {
+
+  renderTooltip() {
+    // Note: No need to pass 'onLongPress', 'onPressIn', 'onPressOut' and 'onPressOut' handlers.
+    /* eslint-disable no-unused-vars */
+    const {
+      isVisible,
+      label,
+      placement,
+      onLongPress,
+      onPress,
+      onPressIn,
+      onPressOut,
+      ...props,
+    } = this.props;
+    /* eslint-enable no-unused-vars */
+    switch (placement) {
+      case 'bottom-left':
+      case 'bottom-right':
+        return (
+          <TooltipStyled isVisible={isVisible} placement={placement} {...props} >
+            <TooltipArrow placement={placement} />
+            <TooltipTextWrapper>
+              <TooltipText>
+                {label}
+              </TooltipText>
+            </TooltipTextWrapper>
+          </TooltipStyled>
+        );
+      case 'top-left':
+      case 'top-right':
+        return (
+          <TooltipStyled isVisible={isVisible} placement={placement} {...props} >
+            <TooltipTextWrapper>
+              <TooltipText>
+                {label}
+              </TooltipText>
+            </TooltipTextWrapper>
+            <TooltipArrow placement={placement} />
+          </TooltipStyled>
+        );
+      default:
+        return null;
+    }
+  }
+
+  render() {
+    const { onLongPress, onPress, onPressIn, onPressOut } = this.props;
+    return (
+      <TouchableWithoutFeedback
+        onLongPress={onLongPress}
+        onPress={onPress}
+        onPressIn={onPressIn}
+        onPressOut={onPressOut}
+      >
+        {this.renderTooltip()}
+      </TouchableWithoutFeedback>
+    );
+  }
+}
 
 Tooltip.propTypes = propTypes;
 Tooltip.defaultProps = defaultProps;

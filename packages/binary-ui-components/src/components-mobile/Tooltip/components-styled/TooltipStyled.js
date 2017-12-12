@@ -43,7 +43,6 @@ export default styled.div`
   &::after {
     border-width: ${TOOLTIP_ARROW_WIDTH}px;
     border-style: solid;
-    bottom: 100%;
     content: '';
     margin-left: -${TOOLTIP_ARROW_HEIGHT}px;
     position: absolute;
@@ -52,26 +51,28 @@ export default styled.div`
         case 'bottom-left':
           return `
             border-color: transparent transparent ${BINARY_COLOR_GRAY_30} transparent;
+            bottom: 100%;
             right: ${TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;
             margin-bottom: 0px;
           `;
         case 'bottom-right':
           return `
             border-color: transparent transparent ${BINARY_COLOR_GRAY_30} transparent;
+            bottom: 100%;
             left: ${TOOLTIP_ARROW_SHIFT}px;
             margin-bottom: 0px;
           `;
         case 'top-left':
           return `
             border-color: ${BINARY_COLOR_GRAY_30} transparent transparent transparent;
+            bottom: -${TOOLTIP_ARROW_HEIGHT * 2}px;
             right: ${TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH}px;
-            margin-bottom: -${25 + 2 * TOOLTIP_ARROW_HEIGHT}px;
           `;
         case 'top-right':
           return `
             border-color: ${BINARY_COLOR_GRAY_30} transparent transparent transparent;
+            bottom: -${TOOLTIP_ARROW_HEIGHT * 2}px;
             left: ${TOOLTIP_ARROW_SHIFT}px;
-            margin-bottom: -${25 + 2 * TOOLTIP_ARROW_HEIGHT}px;
           `;
         default:
           return undefined;

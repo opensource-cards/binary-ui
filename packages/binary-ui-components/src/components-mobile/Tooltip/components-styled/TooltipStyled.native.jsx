@@ -41,10 +41,22 @@ export default class TooltipStyled extends React.Component {
   getPositioning() {
     const { placement } = this.props;
     switch (placement) {
+      case 'top-left': {
+        return {
+          alignItems: 'flex-end',
+          right: TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH,
+        };
+      }
       case 'bottom-left': {
         return {
           alignItems: 'flex-end',
           right: TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH,
+        };
+      }
+      case 'top-right': {
+        return {
+          alignItems: 'flex-start',
+          left: -TOOLTIP_ARROW_SHIFT - TOOLTIP_ARROW_WIDTH,
         };
       }
       case 'bottom-right': {

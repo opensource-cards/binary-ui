@@ -90,7 +90,7 @@ class TooltipDemo extends React.Component {
           label="Top Right tooltip"
           placement="top-right"
           target={this.topLeft}
-          style={{ transform: [{ translateX: 75 }, { translateY: 45 }] }}
+          style={{ transform: [{ translateX: 75 }, { translateY: 20 }] }}
           onClick={this.onChangeLeft}
         />
         <Tooltip
@@ -98,7 +98,7 @@ class TooltipDemo extends React.Component {
           label="Top Left tooltip with very long text"
           placement="top-left"
           target={this.topRight}
-          style={{ transform: [{ translateX: -45 }, { translateY: 45 }] }}
+          style={{ transform: [{ translateX: -45 }, { translateY: 20 }] }}
           onClick={this.onChangeRight}
         />
       </View>
