@@ -607,26 +607,26 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.4.15:
-  version "0.4.15"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.15.tgz#0cb9f14132e78d1dd0010c45c60541cb4561b0ad"
+binary-ui-components@^0.4.16:
+  version "0.4.16"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.16.tgz#652d7e415b9a318eb29ca2b94efbb97ceaf424ac"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.4.15"
-    binary-ui-styles "^0.4.15"
+    binary-ui-icons "^0.4.16"
+    binary-ui-styles "^0.4.16"
     prop-types "^15.5.10"
     styled-components "^2.0.0"
 
-binary-ui-icons@^0.4.15:
-  version "0.4.15"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.15.tgz#65943edf93c3eb03a0d1d46cff8d4a30a9896dd3"
+binary-ui-icons@^0.4.16:
+  version "0.4.16"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.16.tgz#2d0af3faf389b1906b013444647b25828effd409"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.15:
-  version "0.4.15"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.15.tgz#aa4b48f75d67ecb382a3f23ea141f3a277ec066a"
+binary-ui-styles@^0.4.16:
+  version "0.4.16"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.16.tgz#d2d5c1a3097f18b58a562c7faa7ce3740f7a3ebf"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -1605,10 +1605,8 @@ is-property@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-property/-/is-property-1.0.2.tgz#57fe1c4e48474edd65b09911f26b1cd4095dda84"
 
 is-resolvable@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-resolvable/-/is-resolvable-1.0.0.tgz#8df57c61ea2e3c501408d100fb013cf8d6e0cc62"
-  dependencies:
-    tryit "^1.0.1"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-resolvable/-/is-resolvable-1.0.1.tgz#acca1cd36dbe44b974b924321555a70ba03b1cf4"
 
 is-stream@^1.0.1:
   version "1.1.0"
@@ -2520,10 +2518,6 @@ tough-cookie@~2.3.0:
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
-
-tryit@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/tryit/-/tryit-1.0.3.tgz#393be730a9446fd1ead6da59a014308f36c289cb"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
