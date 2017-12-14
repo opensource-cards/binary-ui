@@ -2,6 +2,12 @@ import { getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
+  align-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
   ${props => (
     getHighlightEditStyle(
       props.isEdit,
@@ -10,10 +16,4 @@ export default styled.div`
       props.styleBorderColor
     )
   )}
-  align-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  padding-top: 20px;
 `;

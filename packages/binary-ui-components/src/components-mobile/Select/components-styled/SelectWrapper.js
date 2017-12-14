@@ -1,5 +1,5 @@
+import { LIST_ITEM_HEIGHT, getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components';
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 
 export default styled.div`
   align-items: center;
@@ -11,4 +11,12 @@ export default styled.div`
   padding-left: 10px;
   position: relative;
   width: 100%;
+  ${props => (
+    getHighlightEditStyle(
+      props.isEdit,
+      props.isValid,
+      props.isTypingHighlight,
+      props.styleBorderColor
+    )
+  )}
 `;

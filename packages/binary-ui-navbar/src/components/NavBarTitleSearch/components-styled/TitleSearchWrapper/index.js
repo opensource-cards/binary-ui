@@ -2,14 +2,6 @@ import { getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
-  ${props => (
-    getHighlightEditStyle(
-      props.isEdit,
-      props.isValid,
-      props.isTypingHighlight,
-      props.styleBorderColor
-    )
-  )}
   align-items: center;
   background-color: #FFFFFF;
   border-radius: 7px;
@@ -18,4 +10,12 @@ export default styled.div`
   flex-direction: row;
   padding: 0 0 0 10px;
   width: 100%;
+  ${props => (
+    getHighlightEditStyle(
+      props.isEdit,
+      props.isValid,
+      props.isTypingHighlight,
+      props.styleBorderColor
+    )
+  )}
 `;

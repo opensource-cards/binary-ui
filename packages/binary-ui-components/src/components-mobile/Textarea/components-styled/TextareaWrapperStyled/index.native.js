@@ -2,6 +2,8 @@ import { getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components/native';
 
 export default styled.View`
+  justify-content: space-between;
+  flex-direction: row;
   ${props => (
     getHighlightEditStyle(
       props.isEdit,
@@ -10,6 +12,4 @@ export default styled.View`
       props.styleBorderColor
     )
   )}
-  justify-content: space-between;
-  flex-direction: row;
 `;
