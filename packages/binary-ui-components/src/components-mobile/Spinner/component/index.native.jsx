@@ -83,7 +83,7 @@ export default class LogoSvg extends React.Component {
             fill={color}
             opacity={0.2}
           />
-          <G originX={rotationCenter} originY={rotationCenter} rotate={rotation}>
+          <G originX={rotationCenter} originY={rotationCenter} rotation={rotation}>
             <Path
               d="M256,65.5c105.14,0 190.5,85.36 190.5,190.5l0,0c0,6.901 -5.603,12.504 -12.504,12.504c-6.901,0 -12.504,-5.603 -12.504,-12.504l0,0c0,-0.141 0.003,-0.282 0.007,-0.422c-0.227,-91.003 -74.062,-164.843 -165.064,-165.077c-0.144,0.005 -0.289,0.007 -0.435,0.007c-6.901,0 -12.504,-5.603 -12.504,-12.504l0,0c0,-6.901 5.603,-12.504 12.504,-12.504l0,0Z"
               fill={color}
