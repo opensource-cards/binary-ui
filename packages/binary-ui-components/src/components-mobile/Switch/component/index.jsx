@@ -18,7 +18,7 @@ const defaultProps = {
   onChange: undefined,
 };
 
-export default class Switch extends React.PureComponent {
+export default class Switch extends React.Component {
 
   constructor(props) {
     super(props);

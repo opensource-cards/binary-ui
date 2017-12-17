@@ -15,7 +15,7 @@ const defaultProps = {
   onClick: undefined,
 };
 
-export default class Checkbox extends React.PureComponent {
+export default class Checkbox extends React.Component {
 
   constructor(props) {
     super(props);

@@ -19,7 +19,7 @@ const defaultProps = {
   isValid: true,
 };
 
-export default class Select extends React.PureComponent {
+export default class Select extends React.Component {
 
   constructor(props) {
     super(props);

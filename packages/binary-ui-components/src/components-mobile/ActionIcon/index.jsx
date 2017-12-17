@@ -22,7 +22,7 @@ const defaultProps = {
   onTouchStart: undefined,
 };
 
-class ActionIcon extends React.PureComponent {
+class ActionIcon extends React.Component {
   renderIcon({ color, isDisabled, size, renderIcon }) {
     return renderIcon({
       color: color || '#000000',
