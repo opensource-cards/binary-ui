@@ -29,6 +29,7 @@ import Deleted from 'binary-ui-icons/binary/Deleted';
 import DeletedAlt from 'binary-ui-icons/binary/DeletedAlt';
 import Designer from 'binary-ui-icons/binary/Designer';
 import Done from 'binary-ui-icons/binary/Done';
+import Drawer from 'binary-ui-icons/binary/Drawer';
 import Facebook from 'binary-ui-icons/binary/Facebook';
 import Facetime from 'binary-ui-icons/binary/Facetime';
 import FacetimeAlt from 'binary-ui-icons/binary/FacetimeAlt';
@@ -43,8 +44,10 @@ import InstagramAlt from 'binary-ui-icons/binary/InstagramAlt';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
+import KStartup from 'binary-ui-icons/binary/KStartup';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
+import List from 'binary-ui-icons/binary/List';
 import Location from 'binary-ui-icons/binary/Location';
 import LocationAlt from 'binary-ui-icons/binary/LocationAlt';
 import Locked from 'binary-ui-icons/binary/Locked';
@@ -56,11 +59,15 @@ import Minus from 'binary-ui-icons/binary/Minus';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
 import More from 'binary-ui-icons/binary/More';
 import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
+import MyWorkspace from 'binary-ui-icons/binary/MyWorkspace';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
-import Drawer from 'binary-ui-icons/binary/Drawer';
+import Organization from 'binary-ui-icons/binary/Organization';
+import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
+import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
+import ResetSetting from 'binary-ui-icons/binary/ResetSetting';
 import Remove from 'binary-ui-icons/binary/Remove';
 import RotateLeft from 'binary-ui-icons/binary/RotateLeft';
 import RotateRight from 'binary-ui-icons/binary/RotateRight';
@@ -70,6 +77,7 @@ import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
 import Search from 'binary-ui-icons/binary/Search';
 import Settings from 'binary-ui-icons/binary/Settings';
 import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
+import SGSC from 'binary-ui-icons/binary/SGSC';
 import Share from 'binary-ui-icons/binary/Share';
 import ShareAlt from 'binary-ui-icons/binary/ShareAlt';
 import Skype from 'binary-ui-icons/binary/Skype';
@@ -92,6 +100,7 @@ import Uncheck from 'binary-ui-icons/binary/Uncheck';
 import Update from 'binary-ui-icons/binary/Update';
 import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
+import UserInvite from 'binary-ui-icons/binary/UserInvite';
 import Viber from 'binary-ui-icons/binary/Viber';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
@@ -134,12 +143,14 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Deleted color={COLOR} size={SIZE} />Deleted</div>
       <div><DeletedAlt color={COLOR} size={SIZE} />DeletedAlt</div>
       <div><Done color={COLOR} size={SIZE} />Done</div>
+      <div><Drawer color={COLOR} size={SIZE} />Drawer</div>
       <div><Favorites color={COLOR} size={SIZE} />Favorites</div>
       <div><FavoritesAlt color={COLOR} size={SIZE} />FavoritesAlt</div>
       <div><Info color={COLOR} size={SIZE} />Info</div>
       <div><InfoAlt color={COLOR} size={SIZE} />InfoAlt</div>
       <div><Keypad color={COLOR} size={SIZE} />Keypad</div>
       <div><KeypadAlt color={COLOR} size={SIZE} />KeypadAlt</div>
+      <div><List color={COLOR} size={SIZE} />List</div>
       <div><Location color={COLOR} size={SIZE} />Location</div>
       <div><LocationAlt color={COLOR} size={SIZE} />LocationAlt</div>
       <div><Locked color={COLOR} size={SIZE} />Locked</div>
@@ -152,8 +163,11 @@ storiesOf('binary-ui-icons/binary', module)
       <div><New color={COLOR} size={SIZE} />New</div>
       <div><NewAlt color={COLOR} size={SIZE} />NewAlt</div>
       <div><Open color={COLOR} size={SIZE} />Open</div>
-      <div><Drawer color={COLOR} size={SIZE} />Drawer</div>
+      <div><Organization color={COLOR} size={SIZE} />Organization</div>
+      <div><OrganizationDisconnected color={COLOR} size={SIZE} />OrganizationDisconnected</div>
+      <div><QuestionAlt color={COLOR} size={SIZE} />QuestionAlt</div>
       <div><Remove color={COLOR} size={SIZE} />Remove</div>
+      <div><ResetSetting color={COLOR} size={SIZE} />ResetSetting</div>
       <div><RotateLeft color={COLOR} size={SIZE} />RotateLeft</div>
       <div><RotateRight color={COLOR} size={SIZE} />RotateRight</div>
       <div><Save color={COLOR} size={SIZE} />Save</div>
@@ -180,6 +194,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Update color={COLOR} size={SIZE} />Update</div>
       <div><User color={COLOR} size={SIZE} />User</div>
       <div><UserAlt color={COLOR} size={SIZE} />UserAlt</div>
+      <div><UserInvite color={COLOR} size={SIZE} />UserInvite</div>
     </div>
   )))
   .add('Logotypes', withInfo('')(() => (
@@ -197,11 +212,14 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Instagram color={COLOR} size={SIZE} />Instagram</div>
       <div><InstagramAlt color={COLOR} size={SIZE} />InstagramAlt</div>
       <div><Kakaotalk color={COLOR} size={SIZE} />KakaoTalk</div>
+      <div><KStartup color={COLOR} size={SIZE} />KStartup</div>
       <div><Linkedin color={COLOR} size={SIZE} />Linkedin</div>
       <div><LinkedinAlt color={COLOR} size={SIZE} />LinkedinAlt</div>
       <div><Medium color={COLOR} size={SIZE} />Medium</div>
       <div><Microsoft color={COLOR} size={SIZE} />Microsoft</div>
+      <div><MyWorkspace color={COLOR} size={SIZE} />MyWorkspace</div>
       <div><Redhat color={COLOR} size={SIZE} />Redhat</div>
+      <div><SGSC color={COLOR} size={SIZE} />SGSC</div>
       <div><Skype color={COLOR} size={SIZE} />Skype</div>
       <div><Telegram color={COLOR} size={SIZE} />Telegram</div>
       <div><Twitter color={COLOR} size={SIZE} />Twitter</div>

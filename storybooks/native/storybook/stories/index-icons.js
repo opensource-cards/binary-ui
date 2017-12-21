@@ -31,6 +31,7 @@ import Deleted from 'binary-ui-icons/binary/Deleted';
 import DeletedAlt from 'binary-ui-icons/binary/DeletedAlt';
 import Designer from 'binary-ui-icons/binary/Designer';
 import Done from 'binary-ui-icons/binary/Done';
+import Drawer from 'binary-ui-icons/binary/Drawer';
 import Facebook from 'binary-ui-icons/binary/Facebook';
 import Facetime from 'binary-ui-icons/binary/Facetime';
 import FacetimeAlt from 'binary-ui-icons/binary/FacetimeAlt';
@@ -45,8 +46,10 @@ import InstagramAlt from 'binary-ui-icons/binary/InstagramAlt';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
+import KStartup from 'binary-ui-icons/binary/KStartup';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
+import List from 'binary-ui-icons/binary/List';
 import Location from 'binary-ui-icons/binary/Location';
 import LocationAlt from 'binary-ui-icons/binary/LocationAlt';
 import Locked from 'binary-ui-icons/binary/Locked';
@@ -58,11 +61,15 @@ import Minus from 'binary-ui-icons/binary/Minus';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
 import More from 'binary-ui-icons/binary/More';
 import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
+import MyWorkspace from 'binary-ui-icons/binary/MyWorkspace';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
-import Drawer from 'binary-ui-icons/binary/Drawer';
+import Organization from 'binary-ui-icons/binary/Organization';
+import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
+import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
+import ResetSetting from 'binary-ui-icons/binary/ResetSetting';
 import Remove from 'binary-ui-icons/binary/Remove';
 import RotateLeft from 'binary-ui-icons/binary/RotateLeft';
 import RotateRight from 'binary-ui-icons/binary/RotateRight';
@@ -72,6 +79,7 @@ import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
 import Search from 'binary-ui-icons/binary/Search';
 import Settings from 'binary-ui-icons/binary/Settings';
 import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
+import SGSC from 'binary-ui-icons/binary/SGSC';
 import Share from 'binary-ui-icons/binary/Share';
 import ShareAlt from 'binary-ui-icons/binary/ShareAlt';
 import Skype from 'binary-ui-icons/binary/Skype';
@@ -94,6 +102,7 @@ import Uncheck from 'binary-ui-icons/binary/Uncheck';
 import Update from 'binary-ui-icons/binary/Update';
 import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
+import UserInvite from 'binary-ui-icons/binary/UserInvite';
 import Viber from 'binary-ui-icons/binary/Viber';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
@@ -128,12 +137,14 @@ storiesOf('binary-ui-icons/binary', module)
       <Deleted color={COLOR} size={SIZE} onPress={action('clicked')} />
       <DeletedAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Done color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Drawer color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Favorites color={COLOR} size={SIZE} onPress={action('clicked')} />
       <FavoritesAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Info color={COLOR} size={SIZE} onPress={action('clicked')} />
       <InfoAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Keypad color={COLOR} size={SIZE} onPress={action('clicked')} />
       <KeypadAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <List color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Location color={COLOR} size={SIZE} onPress={action('clicked')} />
       <LocationAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Locked color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -146,8 +157,11 @@ storiesOf('binary-ui-icons/binary', module)
       <New color={COLOR} size={SIZE} onPress={action('clicked')} />
       <NewAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Open color={COLOR} size={SIZE} onPress={action('clicked')} />
-      <Drawer color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Organization color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <OrganizationDisconnected color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <QuestionAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Remove color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ResetSetting color={COLOR} size={SIZE} onPress={action('clicked')} />
       <RotateLeft color={COLOR} size={SIZE} onPress={action('clicked')} />
       <RotateRight color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Save color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -174,6 +188,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Update color={COLOR} size={SIZE} onPress={action('clicked')} />
       <User color={COLOR} size={SIZE} onPress={action('clicked')} />
       <UserAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <UserInvite color={COLOR} size={SIZE} onPress={action('clicked')} />
     </View>
   )
 .add('Logotypes', () =>
@@ -191,11 +206,14 @@ storiesOf('binary-ui-icons/binary', module)
       <Instagram color={COLOR} size={SIZE} onPress={action('clicked')} />
       <InstagramAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Kakaotalk color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <KStartup color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Linkedin color={COLOR} size={SIZE} onPress={action('clicked')} />
       <LinkedinAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Medium color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Microsoft color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <MyWorkspace color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Redhat color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <SGSC color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Skype color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Telegram color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Twitter color={COLOR} size={SIZE} onPress={action('clicked')} />
