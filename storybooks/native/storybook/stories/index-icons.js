@@ -46,7 +46,6 @@ import InstagramAlt from 'binary-ui-icons/binary/InstagramAlt';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
-import KStartup from 'binary-ui-icons/binary/KStartup';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
 import List from 'binary-ui-icons/binary/List';
@@ -61,7 +60,6 @@ import Minus from 'binary-ui-icons/binary/Minus';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
 import More from 'binary-ui-icons/binary/More';
 import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
-import MyWorkspace from 'binary-ui-icons/binary/MyWorkspace';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
@@ -79,7 +77,6 @@ import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
 import Search from 'binary-ui-icons/binary/Search';
 import Settings from 'binary-ui-icons/binary/Settings';
 import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
-import SGSC from 'binary-ui-icons/binary/SGSC';
 import Share from 'binary-ui-icons/binary/Share';
 import ShareAlt from 'binary-ui-icons/binary/ShareAlt';
 import Skype from 'binary-ui-icons/binary/Skype';
@@ -206,14 +203,11 @@ storiesOf('binary-ui-icons/binary', module)
       <Instagram color={COLOR} size={SIZE} onPress={action('clicked')} />
       <InstagramAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Kakaotalk color={COLOR} size={SIZE} onPress={action('clicked')} />
-      <KStartup color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Linkedin color={COLOR} size={SIZE} onPress={action('clicked')} />
       <LinkedinAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Medium color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Microsoft color={COLOR} size={SIZE} onPress={action('clicked')} />
-      <MyWorkspace color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Redhat color={COLOR} size={SIZE} onPress={action('clicked')} />
-      <SGSC color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Skype color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Telegram color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Twitter color={COLOR} size={SIZE} onPress={action('clicked')} />

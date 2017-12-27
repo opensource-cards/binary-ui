@@ -44,7 +44,6 @@ import InstagramAlt from 'binary-ui-icons/binary/InstagramAlt';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
-import KStartup from 'binary-ui-icons/binary/KStartup';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
 import List from 'binary-ui-icons/binary/List';
@@ -59,7 +58,6 @@ import Minus from 'binary-ui-icons/binary/Minus';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
 import More from 'binary-ui-icons/binary/More';
 import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
-import MyWorkspace from 'binary-ui-icons/binary/MyWorkspace';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
@@ -77,7 +75,6 @@ import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
 import Search from 'binary-ui-icons/binary/Search';
 import Settings from 'binary-ui-icons/binary/Settings';
 import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
-import SGSC from 'binary-ui-icons/binary/SGSC';
 import Share from 'binary-ui-icons/binary/Share';
 import ShareAlt from 'binary-ui-icons/binary/ShareAlt';
 import Skype from 'binary-ui-icons/binary/Skype';
@@ -212,14 +209,11 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Instagram color={COLOR} size={SIZE} />Instagram</div>
       <div><InstagramAlt color={COLOR} size={SIZE} />InstagramAlt</div>
       <div><Kakaotalk color={COLOR} size={SIZE} />KakaoTalk</div>
-      <div><KStartup color={COLOR} size={SIZE} />KStartup</div>
       <div><Linkedin color={COLOR} size={SIZE} />Linkedin</div>
       <div><LinkedinAlt color={COLOR} size={SIZE} />LinkedinAlt</div>
       <div><Medium color={COLOR} size={SIZE} />Medium</div>
       <div><Microsoft color={COLOR} size={SIZE} />Microsoft</div>
-      <div><MyWorkspace color={COLOR} size={SIZE} />MyWorkspace</div>
       <div><Redhat color={COLOR} size={SIZE} />Redhat</div>
-      <div><SGSC color={COLOR} size={SIZE} />SGSC</div>
       <div><Skype color={COLOR} size={SIZE} />Skype</div>
       <div><Telegram color={COLOR} size={SIZE} />Telegram</div>
       <div><Twitter color={COLOR} size={SIZE} />Twitter</div>
