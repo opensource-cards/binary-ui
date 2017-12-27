@@ -60,6 +60,7 @@ import Minus from 'binary-ui-icons/binary/Minus';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
 import More from 'binary-ui-icons/binary/More';
 import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
+import Naver from 'binary-ui-icons/binary/Naver';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
@@ -207,6 +208,7 @@ storiesOf('binary-ui-icons/binary', module)
       <LinkedinAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Medium color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Microsoft color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Naver color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Redhat color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Skype color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Telegram color={COLOR} size={SIZE} onPress={action('clicked')} />

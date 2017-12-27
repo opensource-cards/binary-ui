@@ -58,6 +58,7 @@ import Minus from 'binary-ui-icons/binary/Minus';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
 import More from 'binary-ui-icons/binary/More';
 import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
+import Naver from 'binary-ui-icons/binary/Naver';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
@@ -213,6 +214,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><LinkedinAlt color={COLOR} size={SIZE} />LinkedinAlt</div>
       <div><Medium color={COLOR} size={SIZE} />Medium</div>
       <div><Microsoft color={COLOR} size={SIZE} />Microsoft</div>
+      <div><Naver color={COLOR} size={SIZE} />Naver</div>
       <div><Redhat color={COLOR} size={SIZE} />Redhat</div>
       <div><Skype color={COLOR} size={SIZE} />Skype</div>
       <div><Telegram color={COLOR} size={SIZE} />Telegram</div>
