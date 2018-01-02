@@ -1,4 +1,8 @@
-import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
+import {
+  BINARY_COLOR_BLUE_40,
+  BINARY_COLOR_GRAY_80,
+  EASING_CURVE_COMPONENT_STATE,
+} from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Animated, StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
@@ -58,10 +62,12 @@ export default class Switch extends React.Component {
       Animated.timing(this.animatedColor, {
         duration: 250,
         toValue: nextProps.isChecked ? 1 : -1,
+        easing: EASING_CURVE_COMPONENT_STATE,
       }),
       Animated.spring(this.animatedTransform, {
         duration: 250,
         toValue: nextProps.isChecked ? 1 : -1,
+        easing: EASING_CURVE_COMPONENT_STATE,
       }),
     ]).start();
   }

@@ -5,7 +5,7 @@ export default TitleWrapperBase.extend`
   cursor: pointer;
   display: flex;
   flex-direction: row;
-&:active {
+  &:active {
     opacity: 0.5;
   }
 `;

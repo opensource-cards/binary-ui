@@ -1,4 +1,4 @@
-import { OPACITY_ACTIVE, OPACITY_TRANSITION } from 'binary-ui-styles';
+import { OPACITY_ACTIVE, TRANSITION_FEEDBACK_OPACITY } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { isLeftMouseButton } from '../../utils/events';
@@ -84,7 +84,7 @@ export default class TouchableOpacity extends React.Component {
         style={{
           ...style,
           opacity: isActive ? activeOpacity : 1,
-          transition: OPACITY_TRANSITION,
+          transition: TRANSITION_FEEDBACK_OPACITY,
         }}
         onMouseDown={this.onMouseDown}
         onTouchStart={this.onTouchStart}

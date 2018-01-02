@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { getHighlightEditStyle } from '../src/index.native-and-web';
+import { getHighlightEditStyle } from '../src/utils/index.native-and-web';
 
 describe('index.native-and-web', () => {
   describe('getHighlightEditStyle', () => {

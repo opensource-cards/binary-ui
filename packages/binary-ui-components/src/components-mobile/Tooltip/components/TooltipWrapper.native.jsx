@@ -1,3 +1,4 @@
+import { EASING_CURVE_COMPONENT_STATE } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Animated, StyleSheet } from 'react-native';
@@ -36,8 +37,9 @@ export default class TooltipStyled extends React.Component {
     const { isVisible } = this.props;
     if (isVisible !== newProps.isVisible) {
       Animated.timing(this.animatedOpacity, {
-        duration: 300,
+        duration: 250,
         toValue: newProps.isVisible ? 1 : 0,
+        easing: EASING_CURVE_COMPONENT_STATE,
         useNativeDriver: true,
       }).start();
     }

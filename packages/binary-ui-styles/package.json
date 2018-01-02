@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-styles",
-  "version": "0.4.19",
+  "version": "0.4.20",
   "description": "React styles for Cards' Binary Design.",
   "keywords": [
     "react",
@@ -25,9 +25,12 @@
   "files": [
     "lib"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "babel-runtime": "^6.23.0"
+  },
+  "peerDependencies": {
+    "react-native": "^0.47.0"
   },
   "devDependencies": {
     "babel": "^6.3.26",
@@ -42,6 +45,7 @@
     "eslint-config-airbnb": "^10.0.1",
     "eslint-plugin-import": "^1.14.0",
     "mocha": "^4.0.1",
+    "react-native": "^0.47.0",
     "rimraf": "^2.5.4"
   }
 }

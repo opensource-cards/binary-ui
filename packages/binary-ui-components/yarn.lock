@@ -35,8 +35,8 @@ acorn@^3.0.4:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
 acorn@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.2.1.tgz#317ac7821826c22c702d66189ab8359675f135d7"
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.3.0.tgz#7446d39459c54fb49a80e6ee6478149b940ec822"
 
 ajv-keywords@^1.0.0:
   version "1.5.1"
@@ -1041,16 +1041,16 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-icons@^0.4.17:
-  version "0.4.17"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.17.tgz#a8aaeacbbd82b407b5713f2746f9a19f670cfa36"
+binary-ui-icons@^0.4.19:
+  version "0.4.19"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.19.tgz#9cd8ab603f43f2753b538216ecee67ded3aea57a"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.17:
-  version "0.4.17"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.17.tgz#da4d8fa898714ee98b187133452ea6e367e9bb3c"
+binary-ui-styles@^0.4.19:
+  version "0.4.19"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.19.tgz#eb2764b8beae48b81172eca557f258b93a06a68c"
   dependencies:
     babel-runtime "^6.23.0"
 

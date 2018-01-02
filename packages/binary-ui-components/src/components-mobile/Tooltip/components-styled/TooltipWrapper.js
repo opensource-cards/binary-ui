@@ -1,4 +1,8 @@
-import { BINARY_COLOR_GRAY_30, FONT_FAMILY_MAIN_400 } from 'binary-ui-styles';
+import {
+  BINARY_COLOR_GRAY_30,
+  FONT_FAMILY_MAIN_400,
+  TRANSITION_COMPONENT_STATE_OPACITY,
+} from 'binary-ui-styles';
 import styled from 'styled-components';
 import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_WIDTH, TOOLTIP_ARROW_SHIFT } from '../config';
 
@@ -13,7 +17,7 @@ export default styled.div`
   padding: 5px 10px;
   position: absolute;
   text-align: center;
-  transition: opacity 0.3s ease-out;
+  transition: ${TRANSITION_COMPONENT_STATE_OPACITY};
   user-select: none;
   white-space: nowrap;
   width: auto;

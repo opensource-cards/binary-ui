@@ -16,7 +16,6 @@ export default styled.div`
   height: 40px;
   line-height: 40px;
   margin: 3px auto 0 auto;
-  transition: background-color 0.5s ease-in-out;
   width: 100%;
   ${props => {
     switch (props.alertType) {
