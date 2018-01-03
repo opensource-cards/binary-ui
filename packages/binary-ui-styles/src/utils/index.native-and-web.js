@@ -81,7 +81,7 @@ export const FONT_FAMILY_MAIN_900 = 'FiraSans-Black';
 
 export const LIST_ITEM_HEIGHT = 44;
 
-export const OPACITY_ACTIVE = 0.2;
+export const OPACITY_ACTIVE = 0.5;
 
 // Note: This works on native and web as well. Be careful while making changes.
 function getEditStyle(color) {
