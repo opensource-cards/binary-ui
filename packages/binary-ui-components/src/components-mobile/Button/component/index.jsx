@@ -32,7 +32,7 @@ const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon,
     isTapHighlight={!isDisabled}
     isTypingHighlight={false}
     isValid={isValid}
-    onClick={!isDisabled && onClick}
+    onClick={!isDisabled ? onClick : undefined}
   >
     <IconStyledWrapper>
       {renderIcon({ color, opacity: getOpacity(isDisabled), size: 18 })}

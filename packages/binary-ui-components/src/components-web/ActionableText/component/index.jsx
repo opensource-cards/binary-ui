@@ -23,7 +23,7 @@ const ActionableText = ({ color, isDisabled, style, onClick, ...props }) => (
       color,
       opacity: getOpacity(isDisabled),
     }}
-    onClick={!isDisabled && onClick}
+    onClick={!isDisabled ? onClick : undefined}
     {...props}
   />
 );
