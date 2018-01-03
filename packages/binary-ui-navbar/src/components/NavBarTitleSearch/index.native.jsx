@@ -89,9 +89,13 @@ class NavBarTitleSearch extends React.Component {
           autoCapitalize="none"
           autoFocus
           clearButtonMode="always"
+          includeFontPadding
           isBold={isBold}
+          paddingBottom={0}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           returnKeyType="search"
+          textAlignVertical="center"
+          underlineColorAndroid="rgba(0, 0, 0, 0)"
           value={isBold ? value.toUpperCase() : value}
           onBlur={this.onBlur}
           onChangeText={onChange}

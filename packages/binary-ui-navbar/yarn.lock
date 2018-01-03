@@ -993,26 +993,26 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.4.19:
-  version "0.4.19"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.19.tgz#63dd01bce2228a07558ec386e2abfc5127385932"
+binary-ui-components@^0.4.20:
+  version "0.4.20"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.20.tgz#7122e5a883c3795c69c428c7ee59b15a05ad4fd2"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.4.19"
-    binary-ui-styles "^0.4.19"
+    binary-ui-icons "^0.4.20"
+    binary-ui-styles "^0.4.20"
     prop-types "^15.5.10"
     styled-components "^2.0.0"
 
-binary-ui-icons@^0.4.19:
-  version "0.4.19"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.19.tgz#9cd8ab603f43f2753b538216ecee67ded3aea57a"
+binary-ui-icons@^0.4.20:
+  version "0.4.20"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.20.tgz#a1aa3137e5fb580b482a965a6b0e2259cc909341"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.19:
-  version "0.4.19"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.19.tgz#eb2764b8beae48b81172eca557f258b93a06a68c"
+binary-ui-styles@^0.4.20:
+  version "0.4.20"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.20.tgz#d7a81f3852617928cd91b13d98ced8c3805e3ddd"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -1969,8 +1969,8 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
 escodegen-wallaby@^1.6.7:
-  version "1.6.15"
-  resolved "https://registry.yarnpkg.com/escodegen-wallaby/-/escodegen-wallaby-1.6.15.tgz#9d5ef67dd4d8c7c8a58aff1e4edd63512566ba9f"
+  version "1.6.16"
+  resolved "https://registry.yarnpkg.com/escodegen-wallaby/-/escodegen-wallaby-1.6.16.tgz#f55b65d1a846d98584f1be18a2bf463f96280527"
   dependencies:
     esprima "^2.7.1"
     estraverse "^1.9.1"

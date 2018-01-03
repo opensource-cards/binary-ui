@@ -1946,8 +1946,8 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
 escodegen-wallaby@^1.6.7:
-  version "1.6.15"
-  resolved "https://registry.yarnpkg.com/escodegen-wallaby/-/escodegen-wallaby-1.6.15.tgz#9d5ef67dd4d8c7c8a58aff1e4edd63512566ba9f"
+  version "1.6.16"
+  resolved "https://registry.yarnpkg.com/escodegen-wallaby/-/escodegen-wallaby-1.6.16.tgz#f55b65d1a846d98584f1be18a2bf463f96280527"
   dependencies:
     esprima "^2.7.1"
     estraverse "^1.9.1"

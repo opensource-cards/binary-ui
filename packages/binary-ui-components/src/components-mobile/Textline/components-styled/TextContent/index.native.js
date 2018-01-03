@@ -1,4 +1,4 @@
-import { FONT_SET_BOLD_CSS, FONT_SET_LIGHT_CSS, OPACITY_ACTIVE } from 'binary-ui-styles';
+import { FONT_SET_BOLD_CSS, FONT_SET_LIGHT_CSS, OPACITY_DISABLED } from 'binary-ui-styles';
 import styled from 'styled-components/native';
 
 export default styled.Text.attrs({
@@ -6,7 +6,7 @@ export default styled.Text.attrs({
 })`
   color: hsl(0, 0%, 0%);
   flex: 9;
+  opacity: ${props => (props.isDisabled ? OPACITY_DISABLED : '1')};
   padding-left: 10;
-  ${props => (props.isDisabled ? `opacity: ${OPACITY_ACTIVE};` : undefined)}
   ${props => (props.isBold ? FONT_SET_BOLD_CSS : FONT_SET_LIGHT_CSS)}
 `;
