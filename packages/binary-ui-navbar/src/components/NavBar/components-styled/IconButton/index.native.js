@@ -9,5 +9,5 @@ export default styled(ActionIcon)`
   height: ${STACK_HEADER_HEIGHT};
   justify-content: center;
   overflow: hidden;
-  width: 50;
+  min-width: 50;
 `;

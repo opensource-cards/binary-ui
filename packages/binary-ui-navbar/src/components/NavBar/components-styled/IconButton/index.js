@@ -12,5 +12,5 @@ export default styled(ActionIcon)`
   flex-grow: 0;
   height: ${STACK_HEADER_HEIGHT}px;
   justify-content: center;
-  width: 50px;
+  min-width: 50px;
 `;
