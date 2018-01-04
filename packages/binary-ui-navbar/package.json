@@ -58,6 +58,6 @@
     "react-native": "^0.38.0",
     "rimraf": "^2.3.4",
     "styled-components": "^2.0.0",
-    "svgs": "^3.1.0"
+    "svgs": "^3.1.2"
   }
 }

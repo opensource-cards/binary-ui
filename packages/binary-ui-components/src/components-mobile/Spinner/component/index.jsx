@@ -4,7 +4,7 @@ import Svg, { G, Path } from 'svgs';
 import { getDuration } from '../utils';
 
 const DEFAULT_SIZE = 512;
-const ROTATION_INTERVAL = 10;
+const ROTATE_INTERVAL = 10;
 
 const propTypes = {
   color: PropTypes.string,
@@ -25,7 +25,7 @@ export default class LogoSvg extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      rotation: 0,
+      rotate: 0,
     };
     this.onTick = this.onTick.bind(this);
   }
@@ -54,12 +54,12 @@ export default class LogoSvg extends React.Component {
   onTick() {
     const { duration } = this.props;
     this.setState((prevState) => ({
-      rotation: prevState.rotation + 360 / (getDuration(duration) / ROTATION_INTERVAL),
+      rotate: (prevState.rotate + 360 / (getDuration(duration) / ROTATE_INTERVAL)) % 360,
     }));
   }
 
   setInterval() {
-    this.interval = window.setInterval(this.onTick, ROTATION_INTERVAL);
+    this.interval = window.setInterval(this.onTick, ROTATE_INTERVAL);
   }
 
   setNoInterval() {
@@ -71,9 +71,9 @@ export default class LogoSvg extends React.Component {
     /* eslint-disable no-unused-vars */
     const { color, duration, isAnimating, size, ...props } = this.props;
     /* eslint-enable no-unused-vars */
-    const { rotation } = this.state;
+    const { rotate } = this.state;
     const scale = size / DEFAULT_SIZE;
-    const rotationCenter = DEFAULT_SIZE / 2;
+    const rotateCenter = DEFAULT_SIZE / 2;
     /* eslint-disable max-len */
     return (
       <Svg height={size} width={size} {...props}>
@@ -83,9 +83,7 @@ export default class LogoSvg extends React.Component {
             fill={color}
             opacity={0.2}
           />
-          <G
-            transform={`translate(${rotationCenter}, ${rotationCenter}) rotate(${rotation}) translate(${-rotationCenter}, ${-rotationCenter})`}
-          >
+          <G originX={rotateCenter} originY={rotateCenter} rotate={rotate}>
             <Path
               d="M256,65.5c105.14,0 190.5,85.36 190.5,190.5l0,0c0,6.901 -5.603,12.504 -12.504,12.504c-6.901,0 -12.504,-5.603 -12.504,-12.504l0,0c0,-0.141 0.003,-0.282 0.007,-0.422c-0.227,-91.003 -74.062,-164.843 -165.064,-165.077c-0.144,0.005 -0.289,0.007 -0.435,0.007c-6.901,0 -12.504,-5.603 -12.504,-12.504l0,0c0,-6.901 5.603,-12.504 12.504,-12.504l0,0Z"
               fill={color}

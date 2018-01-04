@@ -12,7 +12,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "styled-components": "^2.0.0",
-    "svgs": "^3.1.0",
+    "svgs": "^3.1.2",
     "uuid": "^3.0.1"
   },
   "devDependencies": {
