@@ -12,6 +12,7 @@ const propTypes = {
   href: PropTypes.string,
   isDisabled: PropTypes.bool,
   size: PropTypes.number,
+  target: PropTypes.string,
   renderIconLeft: PropTypes.func,
   renderIconRight: PropTypes.func,
   onClick: PropTypes.func,
@@ -25,6 +26,7 @@ const defaultProps = {
   href: undefined,
   isDisabled: false,
   size: undefined,
+  target: undefined,
   renderIconLeft: undefined,
   renderIconRight: undefined,
   onClick: undefined,
@@ -61,9 +63,9 @@ class ActionLinkInline extends React.Component {
     );
   }
 
-  renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight }) {
+  renderContent({ children, href, isDisabled, target, renderIconLeft, renderIconRight }) {
     return (
-      <ActionLinkInlineWrapper href={href} isDisabled={isDisabled}>
+      <ActionLinkInlineWrapper href={href} isDisabled={isDisabled} target={target} >
         {renderIconLeft ? this.renderIconLeft(renderIconLeft) : null}
         <ActionableText color={BINARY_COLOR_BLUE_40} isDisabled={isDisabled} >
           {children}
@@ -78,6 +80,7 @@ class ActionLinkInline extends React.Component {
       children,
       href,
       isDisabled,
+      target,
       renderIconLeft,
       renderIconRight,
       onClick,
@@ -88,7 +91,14 @@ class ActionLinkInline extends React.Component {
     } = this.props;
     return isDisabled ? (
       <div onClick={(e) => { e.preventDefault(); }} {...props} >
-        {this.renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight })}
+        {this.renderContent({
+          children,
+          href,
+          isDisabled,
+          target,
+          renderIconLeft,
+          renderIconRight,
+        })}
       </div>
     ) : (
       <TouchableOpacity
@@ -99,7 +109,14 @@ class ActionLinkInline extends React.Component {
         onTouchStart={onTouchStart}
         {...props}
       >
-        {this.renderContent({ children, href, isDisabled, renderIconLeft, renderIconRight })}
+        {this.renderContent({
+          children,
+          href,
+          isDisabled,
+          target,
+          renderIconLeft,
+          renderIconRight,
+        })}
       </TouchableOpacity>
     );
   }
