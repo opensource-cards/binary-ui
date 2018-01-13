@@ -107,9 +107,9 @@ export default class Input extends React.Component {
         isValid={isValid}
         styleBorderColor={styleBorderColor}
       >
-        {renderIcon && (
+        {renderIcon ? (
           <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
-        )}
+        ) : null}
         <InputStyled
           innerRef={this.onSetInputRef}
           isBold={isBold}

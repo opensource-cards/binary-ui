@@ -123,9 +123,9 @@ export default class Input extends React.Component {
         isValid={isValid}
         styleBorderColor={styleBorderColor}
       >
-        {renderIcon && (
+        {renderIcon ? (
           <ActionListItemIcon renderIcon={renderIcon} onPress={onIconPress} />
-        )}
+        ) : null}
         <InputStyled
           autoCapitalize={this.getAutoCapitalize()}
           includeFontPadding
