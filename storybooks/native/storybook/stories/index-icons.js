@@ -13,6 +13,7 @@ import ArrowLeft from 'binary-ui-icons/binary/ArrowLeft';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import ArrowUp from 'binary-ui-icons/binary/ArrowUp';
 import Autoconnect from 'binary-ui-icons/binary/Autoconnect';
+import Behance from 'binary-ui-icons/binary/Behance';
 import Call from 'binary-ui-icons/binary/Call';
 import CallAlt from 'binary-ui-icons/binary/CallAlt';
 import CameraAlt from 'binary-ui-icons/binary/CameraAlt';
@@ -43,6 +44,7 @@ import Info from 'binary-ui-icons/binary/Info';
 import InfoAlt from 'binary-ui-icons/binary/InfoAlt';
 import Instagram from 'binary-ui-icons/binary/Instagram';
 import InstagramAlt from 'binary-ui-icons/binary/InstagramAlt';
+import KakaoPlus from 'binary-ui-icons/binary/KakaoPlus';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
@@ -70,12 +72,15 @@ import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import ResetSetting from 'binary-ui-icons/binary/ResetSetting';
 import Remove from 'binary-ui-icons/binary/Remove';
+import RoomBooking from 'binary-ui-icons/binary/RoomBooking';
 import RotateLeft from 'binary-ui-icons/binary/RotateLeft';
 import RotateRight from 'binary-ui-icons/binary/RotateRight';
 import Save from 'binary-ui-icons/binary/Save';
 import Scan from 'binary-ui-icons/binary/Scan';
 import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
 import Search from 'binary-ui-icons/binary/Search';
+import Send from 'binary-ui-icons/binary/Send';
+import SendAlt from 'binary-ui-icons/binary/SendAlt';
 import Settings from 'binary-ui-icons/binary/Settings';
 import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
 import Share from 'binary-ui-icons/binary/Share';
@@ -102,6 +107,7 @@ import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
 import UserInvite from 'binary-ui-icons/binary/UserInvite';
 import Viber from 'binary-ui-icons/binary/Viber';
+import Warning from 'binary-ui-icons/binary/Warning';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
 import Yahoo from 'binary-ui-icons/binary/Yahoo';
@@ -160,12 +166,15 @@ storiesOf('binary-ui-icons/binary', module)
       <QuestionAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Remove color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ResetSetting color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <RoomBooking color={COLOR} size={SIZE} onPress={action('clicked')} />
       <RotateLeft color={COLOR} size={SIZE} onPress={action('clicked')} />
       <RotateRight color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Save color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Scan color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ScanAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Search color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Send color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <SendAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Settings color={COLOR} size={SIZE} onPress={action('clicked')} />
       <SettingsAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Share color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -187,12 +196,14 @@ storiesOf('binary-ui-icons/binary', module)
       <User color={COLOR} size={SIZE} onPress={action('clicked')} />
       <UserAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <UserInvite color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Warning color={COLOR} size={SIZE} onPress={action('clicked')} />
     </View>
   )
 .add('Logotypes', () =>
     <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
       <Apple color={COLOR} size={SIZE} onPress={action('clicked')} />
       <AppleAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Behance color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Cards color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CardsAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Designer color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -203,6 +214,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Github color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Instagram color={COLOR} size={SIZE} onPress={action('clicked')} />
       <InstagramAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <KakaoPlus color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Kakaotalk color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Linkedin color={COLOR} size={SIZE} onPress={action('clicked')} />
       <LinkedinAlt color={COLOR} size={SIZE} onPress={action('clicked')} />

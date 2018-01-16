@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export default styled.div`
   ${NO_SELECT_CSS}
   align-items: center;
+  background-color: #FFFFFF;
   box-sizing: border-box;
   border-bottom: 1px solid transparent;
   cursor: default;

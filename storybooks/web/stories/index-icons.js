@@ -11,6 +11,7 @@ import ArrowLeft from 'binary-ui-icons/binary/ArrowLeft';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import ArrowUp from 'binary-ui-icons/binary/ArrowUp';
 import Autoconnect from 'binary-ui-icons/binary/Autoconnect';
+import Behance from 'binary-ui-icons/binary/Behance';
 import Call from 'binary-ui-icons/binary/Call';
 import CallAlt from 'binary-ui-icons/binary/CallAlt';
 import CameraAlt from 'binary-ui-icons/binary/CameraAlt';
@@ -41,6 +42,7 @@ import Info from 'binary-ui-icons/binary/Info';
 import InfoAlt from 'binary-ui-icons/binary/InfoAlt';
 import Instagram from 'binary-ui-icons/binary/Instagram';
 import InstagramAlt from 'binary-ui-icons/binary/InstagramAlt';
+import KakaoPlus from 'binary-ui-icons/binary/KakaoPlus';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
@@ -68,12 +70,15 @@ import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import ResetSetting from 'binary-ui-icons/binary/ResetSetting';
 import Remove from 'binary-ui-icons/binary/Remove';
+import RoomBooking from 'binary-ui-icons/binary/RoomBooking';
 import RotateLeft from 'binary-ui-icons/binary/RotateLeft';
 import RotateRight from 'binary-ui-icons/binary/RotateRight';
 import Save from 'binary-ui-icons/binary/Save';
 import Scan from 'binary-ui-icons/binary/Scan';
 import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
 import Search from 'binary-ui-icons/binary/Search';
+import Send from 'binary-ui-icons/binary/Send';
+import SendAlt from 'binary-ui-icons/binary/SendAlt';
 import Settings from 'binary-ui-icons/binary/Settings';
 import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
 import Share from 'binary-ui-icons/binary/Share';
@@ -100,6 +105,7 @@ import User from 'binary-ui-icons/binary/User';
 import UserAlt from 'binary-ui-icons/binary/UserAlt';
 import UserInvite from 'binary-ui-icons/binary/UserInvite';
 import Viber from 'binary-ui-icons/binary/Viber';
+import Warning from 'binary-ui-icons/binary/Warning';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
 import Yahoo from 'binary-ui-icons/binary/Yahoo';
@@ -166,12 +172,15 @@ storiesOf('binary-ui-icons/binary', module)
       <div><QuestionAlt color={COLOR} size={SIZE} />QuestionAlt</div>
       <div><Remove color={COLOR} size={SIZE} />Remove</div>
       <div><ResetSetting color={COLOR} size={SIZE} />ResetSetting</div>
+      <div><RoomBooking color={COLOR} size={SIZE} />RoomBooking</div>
       <div><RotateLeft color={COLOR} size={SIZE} />RotateLeft</div>
       <div><RotateRight color={COLOR} size={SIZE} />RotateRight</div>
       <div><Save color={COLOR} size={SIZE} />Save</div>
       <div><Scan color={COLOR} size={SIZE} />Scan</div>
       <div><ScanAlt color={COLOR} size={SIZE} />ScanAlt</div>
       <div><Search color={COLOR} size={SIZE} />Search</div>
+      <div><Send color={COLOR} size={SIZE} />Send</div>
+      <div><SendAlt color={COLOR} size={SIZE} />SendAlt</div>
       <div><Settings color={COLOR} size={SIZE} />Settings</div>
       <div><SettingsAlt color={COLOR} size={SIZE} />SettingsAlt</div>
       <div><Share color={COLOR} size={SIZE} />Share</div>
@@ -193,12 +202,14 @@ storiesOf('binary-ui-icons/binary', module)
       <div><User color={COLOR} size={SIZE} />User</div>
       <div><UserAlt color={COLOR} size={SIZE} />UserAlt</div>
       <div><UserInvite color={COLOR} size={SIZE} />UserInvite</div>
+      <div><Warning color={COLOR} size={SIZE} />Warning</div>
     </div>
   )))
   .add('Logotypes', withInfo('')(() => (
     <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
       <div><Apple color={COLOR} size={SIZE} />Apple</div>
       <div><AppleAlt color={COLOR} size={SIZE} />AppleAlt</div>
+      <div><Behance color={COLOR} size={SIZE} />Behance</div>
       <div><Cards color={COLOR} size={SIZE} />Cards</div>
       <div><CardsAlt color={COLOR} size={SIZE} />CardsAlt</div>
       <div><Designer color={COLOR} size={SIZE} />Designer</div>
@@ -209,6 +220,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Github color={COLOR} size={SIZE} />Github</div>
       <div><Instagram color={COLOR} size={SIZE} />Instagram</div>
       <div><InstagramAlt color={COLOR} size={SIZE} />InstagramAlt</div>
+      <div><KakaoPlus color={COLOR} size={SIZE} />KakaoPlus</div>
       <div><Kakaotalk color={COLOR} size={SIZE} />KakaoTalk</div>
       <div><Linkedin color={COLOR} size={SIZE} />Linkedin</div>
       <div><LinkedinAlt color={COLOR} size={SIZE} />LinkedinAlt</div>

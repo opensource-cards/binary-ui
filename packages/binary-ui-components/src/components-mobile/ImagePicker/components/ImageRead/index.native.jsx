@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconDoneStyled from './components-styled/IconDoneStyled/index.native';
+import { BINARY_COLOR_BLUE_50 } from 'binary-ui-styles';
 import ImageStyled from './components-styled/ImageStyled/index.native';
 import ImageContent from '../../components-styled/ImageContent';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
@@ -41,7 +42,7 @@ export default class ImageRead extends React.Component {
           source={{ uri: imageUrl }}
         />
         {isSelected ? (
-          <IconDoneStyled color="#FFF" size={40} />
+          <IconDoneStyled color={BINARY_COLOR_BLUE_50} size={40} />
         ) : null}
       </ImageContent>
     );

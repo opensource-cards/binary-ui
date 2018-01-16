@@ -1,4 +1,5 @@
 import IconDone from 'binary-ui-icons/binary/Done';
+import { BINARY_COLOR_BLUE_50 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ImageContent from '../../components-styled/ImageContent';
@@ -34,7 +35,7 @@ export default class ImageRead extends React.Component {
     return (
       <ImageContent imageFit={imageFit} imageUrl={imageUrl} onClick={this.onClick} >
         {isSelected ? (
-          <IconDone color="#FFF" size={40} />
+          <IconDone color={BINARY_COLOR_BLUE_50} size={40} />
         ) : null}
       </ImageContent>
     );

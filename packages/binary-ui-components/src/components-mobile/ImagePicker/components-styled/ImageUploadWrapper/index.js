@@ -4,6 +4,7 @@ import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 export default styled.div`
   align-items: center;
+  background-color: #FFFFFF;
   border: 1px solid ${BINARY_COLOR_SAND_90};
   border-radius: ${PHOTO_SIZE / 2}px;
   display: flex;

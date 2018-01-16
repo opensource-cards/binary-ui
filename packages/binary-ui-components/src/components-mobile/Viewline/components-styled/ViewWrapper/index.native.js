@@ -4,6 +4,7 @@ import styled from 'styled-components/native';
 export default styled.View`
   height: ${LIST_ITEM_HEIGHT};
   align-items: center;
+  background-color: #FFFFFF;
   flex-direction: row;
   opacity: ${props => props.styleOpacity};
   overflow: hidden;
