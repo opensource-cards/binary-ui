@@ -2,29 +2,29 @@ import {
   BINARY_COLOR_BLUE_40,
   BINARY_COLOR_RED_40,
   BINARY_COLOR_GRAY_40,
-  BINARY_COLOR_YELLOW_50,
-} from 'binary-ui-styles';
-import styled from 'styled-components/native';
-import { INFO, CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
+  BINARY_COLOR_YELLOW_50
+} from "binary-ui-styles";
+import styled from "styled-components/native";
+import { CONFIRM, PRIORITY, CRITICAL } from "../../constants/alert-types";
 
 export default styled.View.attrs({
   style: () => ({
-    shadowOffset: { width: 0, height: 1 },
-  }),
+    shadowOffset: { width: 0, height: 1 }
+  })
 })`
   border-radius: 5;
-  height: 40px;
+  flex-direction: row;
   justify-content: center;
   shadow-color: #000;
   shadow-opacity: 0.1;
   shadow-radius: 2;
   margin-top: 3px;
+  padding: 0 5px;
   elevation: 1;
-  width: 100%;
+  align-self: center;
+
   ${props => {
     switch (props.alertType) {
-      case INFO:
-        return `background-color: ${BINARY_COLOR_GRAY_40};`;
       case CONFIRM:
         return `background-color: ${BINARY_COLOR_BLUE_40};`;
       case PRIORITY:
@@ -32,7 +32,7 @@ export default styled.View.attrs({
       case CRITICAL:
         return `background-color: ${BINARY_COLOR_RED_40};`;
       default:
-        return `background-color: ${BINARY_COLOR_GRAY_40};`;
+        return `background-color: ${BINARY_COLOR_BLUE_40};`;
     }
-  }}
+  }};
 `;

@@ -1,23 +1,32 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import AlertContent from '../components-styled/AlertContent';
-import AlertWrapper from '../components-styled/AlertWrapper';
-import { INFO } from '../constants/alert-types';
+import PropTypes from "prop-types";
+import React from "react";
+import AlertContent from "../components-styled/AlertContent";
+import AlertWrapper from "../components-styled/AlertWrapper";
+import AlertIconWrapper from "../components-styled/AlertIconWrapper";
+import { CONFIRM } from "../constants/alert-types";
 
 const propTypes = {
   text: PropTypes.string.isRequired,
   type: PropTypes.string,
+  renderIconLeft: PropTypes.func,
+  renderIconRight: PropTypes.func
 };
 
 const defaultProps = {
-  type: INFO,
+  type: CONFIRM,
+  renderIconLeft: undefined,
+  renderIconRight: undefined
 };
 
-const Alert = ({ text, type, ...props }) => (
-  <AlertWrapper alertType={type} {...props} >
-    <AlertContent>
-      {text}
-    </AlertContent>
+const Alert = ({ text, type, renderIconLeft, renderIconRight, ...props }) => (
+  <AlertWrapper alertType={type} {...props}>
+    {renderIconLeft ? (
+      <AlertIconWrapper>{renderIconLeft()}</AlertIconWrapper>
+    ) : null}
+    <AlertContent>{text}</AlertContent>
+    {renderIconRight ? (
+      <AlertIconWrapper>{renderIconRight()}</AlertIconWrapper>
+    ) : null}
   </AlertWrapper>
 );
 

@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import { TouchableWithoutFeedback } from 'react-native';
-import AlertContent from '../components-styled/AlertContent';
-import AlertWrapper from '../components-styled/AlertWrapper';
-import { INFO } from '../constants/alert-types';
+import PropTypes from "prop-types";
+import React from "react";
+import { TouchableWithoutFeedback } from "react-native";
+import AlertContent from "../components-styled/AlertContent";
+import AlertWrapper from "../components-styled/AlertWrapper";
+import AlertIconWrapper from "../components-styled/AlertIconWrapper";
+import { CONFIRM } from "../constants/alert-types";
 
 const propTypes = {
   text: PropTypes.string.isRequired,
@@ -12,23 +13,41 @@ const propTypes = {
   onPress: PropTypes.func,
   onPressIn: PropTypes.func,
   onPressOut: PropTypes.func,
+  renderIconLeft: PropTypes.func,
+  renderIconRight: PropTypes.func
 };
 
 const defaultProps = {
-  type: INFO,
+  type: CONFIRM,
+  renderIconLeft: undefined,
+  renderIconRight: undefined
 };
 
-const Alert = ({ text, type, onLongPress, onPress, onPressIn, onPressOut, ...props }) => (
+const Alert = ({
+  text,
+  type,
+  onLongPress,
+  onPress,
+  onPressIn,
+  onPressOut,
+  renderIconLeft,
+  renderIconRight,
+  ...props
+}) => (
   <TouchableWithoutFeedback
     onLongPress={onLongPress}
     onPress={onPress}
     onPressIn={onPressIn}
     onPressOut={onPressOut}
   >
-    <AlertWrapper alertType={type} {...props} >
-      <AlertContent alertType={type} >
-        {text}
-      </AlertContent>
+    <AlertWrapper alertType={type} {...props}>
+      {renderIconLeft ? (
+        <AlertIconWrapper>{renderIconLeft()}</AlertIconWrapper>
+      ) : null}
+      <AlertContent alertType={type}>{text}</AlertContent>
+      {renderIconRight ? (
+        <AlertIconWrapper>{renderIconRight()}</AlertIconWrapper>
+      ) : null}
     </AlertWrapper>
   </TouchableWithoutFeedback>
 );
