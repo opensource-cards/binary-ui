@@ -8,6 +8,7 @@ import styled from "styled-components";
 import IconWarning from "binary-ui-icons/binary/Warning";
 import IconOrganizationDisconnected from "binary-ui-icons/binary/OrganizationDisconnected";
 import Alert, { ALERT_TYPES } from "binary-ui-components/mobile/Alert";
+import Spinner from "binary-ui-components/mobile/Spinner";
 
 setAddon(infoAddon);
 
@@ -25,6 +26,11 @@ storiesOf("binary-ui-components/mobile", module).add(
         text="Alert type CRITICAL"
         type={ALERT_TYPES.CRITICAL}
         renderIconLeft={() => <IconWarning color="#FFFFFF" />}
+      />
+      <Alert
+        text="Reconnecting to internet..."
+        type={ALERT_TYPES.CRITICAL}
+        renderIconLeft={() => <Spinner color="#FFFFFF" />}
       />
     </div>
   ))
