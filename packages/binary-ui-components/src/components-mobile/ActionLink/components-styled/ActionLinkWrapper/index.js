@@ -1,13 +1,13 @@
-import { BINARY_COLOR_BLUE_80 } from 'binary-ui-styles';
-import styled from 'styled-components';
-import TouchableOpacity from '../../../../components/TouchableOpacity';
+import { BINARY_COLOR_BLUE_80 } from "binary-ui-styles";
+import styled from "styled-components";
+import TouchableOpacity from "../../../../components/TouchableOpacity";
 
-const TouchableOpacityLink = TouchableOpacity.withComponent('a');
+const TouchableOpacityLink = TouchableOpacity.withComponent("a");
 
 export default styled(TouchableOpacityLink)`
   align-items: center;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   opacity: 1;
   text-decoration: none;
   &:hover {

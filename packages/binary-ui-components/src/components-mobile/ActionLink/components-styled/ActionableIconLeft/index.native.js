@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 export default styled.View`
-  padding-right: 5px;
+  padding-right: 3px;
 `;

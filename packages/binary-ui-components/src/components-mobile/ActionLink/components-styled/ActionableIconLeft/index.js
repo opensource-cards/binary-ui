@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export default styled.div`
   align-items: center;
   display: flex;
-  padding-right: 5px;
+  padding-right: 3px;
 `;
