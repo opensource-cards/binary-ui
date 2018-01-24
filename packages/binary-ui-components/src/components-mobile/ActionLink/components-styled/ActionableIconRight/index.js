@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-export default styled.a`
+export default styled.div`
   align-items: center;
-  cursor: pointer;
   display: flex;
-  text-decoration: none;
+  padding-left: 5px;
 `;

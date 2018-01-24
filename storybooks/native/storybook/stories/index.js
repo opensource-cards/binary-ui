@@ -1,6 +1,7 @@
 import './index-icons';
 
 import './index-components-action-icon';
+import './index-components-action-link';
 import './index-components-alert';
 import './index-components-button';
 import './index-components-checkbox';

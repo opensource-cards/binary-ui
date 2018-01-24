@@ -1,29 +1,26 @@
-import infoAddon from '@storybook/addon-info';
-import { setAddon, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
-import { withInfo } from '@storybook/addon-info';
+import { linkTo } from '@storybook/addon-links';
 import React from 'react';
+import { Text, View } from 'react-native';
 import styled from 'styled-components';
 
 import IconAdd from 'binary-ui-icons/binary/Add';
 import ActionLink from 'binary-ui-components/mobile/ActionLink';
 
-setAddon(infoAddon);
-
 storiesOf('binary-ui-components/mobile', module)
-  .add('ActionLink', withInfo('An ActionLink Component')(() => (
-    <div>
-      <div style={{ padding: '5px' }} >
-        1. Here is an <ActionLink
+  .add('ActionLink', () => (
+    <View>
+      <View style={{ padding: 5 }} >
+        <Text>1. Here is an </Text><ActionLink
           draggable={false}
           href="https://andcards.com"
           label="ActionLink"
-          style={{ display: "inline-block" }}
           title="Title"
           renderIconRight={rest => <IconAdd {...rest} />}
-        /> example.
-      </div>
-      <div style={{ padding: '5px' }} >
+        /><Text> example.</Text>
+      </View>
+      <View style={{ padding: 5 }} >
         <ActionLink
           draggable={false}
           href="https://andcards.com"
@@ -31,8 +28,8 @@ storiesOf('binary-ui-components/mobile', module)
           title="Title"
           renderIconRight={rest => <IconAdd {...rest} />}
         />
-      </div>
-      <div style={{ padding: '5px' }} >
+      </View>
+      <View style={{ padding: 5 }} >
         <ActionLink
           draggable={false}
           href="https://andcards.com"
@@ -41,6 +38,6 @@ storiesOf('binary-ui-components/mobile', module)
           title="Title"
           renderIconRight={rest => <IconAdd {...rest} />}
         />
-      </div>
-    </div>
-  )));
+      </View>
+    </View>
+  ));

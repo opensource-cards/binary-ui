@@ -3,6 +3,7 @@
 import './index-icons';
 
 import './index-components-action-icon';
+import './index-components-action-link';
 import './index-components-alert';
 import './index-components-button';
 import './index-components-checkbox';
@@ -18,8 +19,5 @@ import './index-components-textline';
 import './index-components-textarea';
 import './index-components-tooltip';
 import './index-components-viewline';
-
-import './index-components-action-link';
-import './index-components-action-link-inline';
 
 import './index-navbar';
