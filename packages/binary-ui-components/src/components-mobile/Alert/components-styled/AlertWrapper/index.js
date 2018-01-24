@@ -1,12 +1,11 @@
 import {
   BINARY_COLOR_BLUE_40,
   BINARY_COLOR_RED_40,
-  BINARY_COLOR_GRAY_40,
   BINARY_COLOR_YELLOW_50,
-  NO_SELECT_CSS
-} from "binary-ui-styles";
-import styled from "styled-components";
-import { CONFIRM, PRIORITY, CRITICAL } from "../../constants/alert-types";
+  NO_SELECT_CSS,
+} from 'binary-ui-styles';
+import styled from 'styled-components';
+import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.div`
   ${NO_SELECT_CSS} border-radius: 5px;

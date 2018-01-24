@@ -12,32 +12,28 @@ storiesOf('binary-ui-components/mobile', module)
   .add('ActionLink', () => (
     <View>
       <View style={{ padding: 5 }} >
-        <Text>1. Here is an </Text><ActionLink
-          draggable={false}
-          href="https://andcards.com"
-          label="ActionLink"
-          title="Title"
-          renderIconRight={rest => <IconAdd {...rest} />}
-        /><Text> example.</Text>
+        <Text>
+          <Text>1. Here is an </Text>
+          <ActionLink
+            draggable={false}
+            href="https://andcards.com"
+            title="Title"
+            renderIconRight={rest => <IconAdd {...rest} />}
+          >
+            ActionLink
+          </ActionLink>
+          <Text> example.</Text>
+        </Text>
       </View>
       <View style={{ padding: 5 }} >
         <ActionLink
           draggable={false}
           href="https://andcards.com"
-          label="2. ActionLink full width"
           title="Title"
           renderIconRight={rest => <IconAdd {...rest} />}
-        />
-      </View>
-      <View style={{ padding: 5 }} >
-        <ActionLink
-          draggable={false}
-          href="https://andcards.com"
-          isDisabled
-          label="3. ActionLink disabled"
-          title="Title"
-          renderIconRight={rest => <IconAdd {...rest} />}
-        />
+        >
+          2. ActionLink full width
+        </ActionLink>
       </View>
     </View>
   ));

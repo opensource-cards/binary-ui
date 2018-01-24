@@ -1,6 +1,6 @@
-import { FONT_FAMILY_MAIN_400 } from "binary-ui-styles";
-import styled from "styled-components/native";
-import { CONFIRM, PRIORITY, CRITICAL } from "../../constants/alert-types";
+import { FONT_FAMILY_MAIN_400 } from 'binary-ui-styles';
+import styled from 'styled-components/native';
+import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.Text`
   font-family: ${FONT_FAMILY_MAIN_400};
@@ -9,13 +9,13 @@ export default styled.Text`
   ${props => {
     switch (props.alertType) {
       case CONFIRM:
-        return "color: #FFFFFF;";
+        return 'color: #FFFFFF;';
       case PRIORITY:
-        return "color: #000000;";
+        return 'color: #000000;';
       case CRITICAL:
-        return "color: #FFFFFF;";
+        return 'color: #FFFFFF;';
       default:
-        return "color: #FFFFFF;";
+        return 'color: #FFFFFF;';
     }
   }};
 `;

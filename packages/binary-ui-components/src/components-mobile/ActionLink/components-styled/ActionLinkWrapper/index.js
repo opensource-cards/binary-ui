@@ -1,18 +1,25 @@
-import { BINARY_COLOR_BLUE_80 } from "binary-ui-styles";
-import styled from "styled-components";
-import TouchableOpacity from "../../../../components/TouchableOpacity";
+import {
+  BINARY_COLOR_BLUE_40,
+  BINARY_COLOR_BLUE_80,
+  NO_SELECT_CSS,
+  TRANSITION_FEEDBACK_OPACITY,
+} from 'binary-ui-styles';
+import styled from 'styled-components';
 
-const TouchableOpacityLink = TouchableOpacity.withComponent("a");
-
-export default styled(TouchableOpacityLink)`
-  align-items: center;
-  cursor: pointer;
-  display: inline-flex;
+export default styled.a`
+  ${NO_SELECT_CSS}
+  color: ${BINARY_COLOR_BLUE_40};
   opacity: 1;
   text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: ${BINARY_COLOR_BLUE_80};
-    text-underline-position: under;
+  transition: ${TRANSITION_FEEDBACK_OPACITY};
+  @media (pointer: fine) {
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: ${BINARY_COLOR_BLUE_80};
+      text-underline-position: under;
+    }
+    &:active {
+      opacity: 0.5;
+    }
   }
 `;

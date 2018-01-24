@@ -19,30 +19,23 @@ storiesOf("binary-ui-components/mobile", module).add(
         <ActionLink
           draggable={false}
           href="https://andcards.com"
-          label="ActionLink"
           title="Title"
           renderIconRight={rest => <IconAdd {...rest} />}
-        />{" "}
+        >
+          ActionLink
+        </ActionLink>
+        {" "}
         example.
       </div>
       <div style={{ padding: "5px" }}>
         <ActionLink
           draggable={false}
           href="https://andcards.com"
-          label="2. ActionLink full width"
           title="Title"
           renderIconLeft={rest => <IconAdd {...rest} />}
-        />
-      </div>
-      <div style={{ padding: "5px" }}>
-        <ActionLink
-          draggable={false}
-          href="https://andcards.com"
-          isDisabled
-          label="3. ActionLink disabled"
-          title="Title"
-          renderIconRight={rest => <IconAdd {...rest} />}
-        />
+        >
+          2. ActionLink full width
+        </ActionLink>
       </div>
     </div>
   ))

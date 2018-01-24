@@ -1,5 +1,5 @@
-import { FONT_FAMILY_MAIN_400 } from "binary-ui-styles";
-import styled from "styled-components";
+import { FONT_FAMILY_MAIN_400 } from 'binary-ui-styles';
+import styled from 'styled-components';
 
 export default styled.div`
   color: inherit;
