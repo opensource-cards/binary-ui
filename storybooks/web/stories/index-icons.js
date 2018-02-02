@@ -6,6 +6,7 @@ import Add from 'binary-ui-icons/binary/Add';
 import AddCard from 'binary-ui-icons/binary/AddCard';
 import Apple from 'binary-ui-icons/binary/Apple';
 import AppleAlt from 'binary-ui-icons/binary/AppleAlt';
+import Approval from 'binary-ui-icons/binary/Approval';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ArrowLeft from 'binary-ui-icons/binary/ArrowLeft';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
@@ -14,10 +15,12 @@ import Autoconnect from 'binary-ui-icons/binary/Autoconnect';
 import Behance from 'binary-ui-icons/binary/Behance';
 import Call from 'binary-ui-icons/binary/Call';
 import CallAlt from 'binary-ui-icons/binary/CallAlt';
+import CalendarView from 'binary-ui-icons/binary/CalendarView';
 import CameraAlt from 'binary-ui-icons/binary/CameraAlt';
 import Cancel from 'binary-ui-icons/binary/Cancel';
 import Card from 'binary-ui-icons/binary/Card';
 import CardAlt from 'binary-ui-icons/binary/CardAlt';
+import CardBroken from 'binary-ui-icons/binary/CardBroken';
 import Cards from 'binary-ui-icons/binary/Cards';
 import CardsAlt from 'binary-ui-icons/binary/CardsAlt';
 import Check from 'binary-ui-icons/binary/Check';
@@ -49,6 +52,7 @@ import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
 import List from 'binary-ui-icons/binary/List';
+import ListView from 'binary-ui-icons/binary/ListView';
 import Location from 'binary-ui-icons/binary/Location';
 import LocationAlt from 'binary-ui-icons/binary/LocationAlt';
 import Locked from 'binary-ui-icons/binary/Locked';
@@ -131,13 +135,16 @@ storiesOf('binary-ui-icons/binary', module)
       <div><ArrowLeft color={COLOR} size={SIZE} />ArrowLeft</div>
       <div><ArrowRight color={COLOR} size={SIZE} />ArrowRight</div>
       <div><ArrowUp color={COLOR} size={SIZE} />ArrowUp</div>
+      <div><Approval color={COLOR} size={SIZE} />Approval</div>
       <div><Autoconnect color={COLOR} size={SIZE} />Autoconnect</div>
       <div><Call color={COLOR} size={SIZE} />Call</div>
       <div><CallAlt color={COLOR} size={SIZE} />CallAlt</div>
+      <div><CalendarView color={COLOR} size={SIZE} />CalendarView</div>
       <div><CameraAlt color={COLOR} size={SIZE} />CameraAlt</div>
       <div><Cancel color={COLOR} size={SIZE} />Cancel</div>
       <div><Card color={COLOR} size={SIZE} />Card</div>
       <div><CardAlt color={COLOR} size={SIZE} />CardAlt</div>
+      <div><CardBroken color={COLOR} size={SIZE} />CardBroken</div>
       <div><Check color={COLOR} size={SIZE} />Check</div>
       <div><CheckAlt color={COLOR} size={SIZE} />CheckAlt</div>
       <div><Copy color={COLOR} size={SIZE} />Copy</div>
@@ -155,6 +162,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Keypad color={COLOR} size={SIZE} />Keypad</div>
       <div><KeypadAlt color={COLOR} size={SIZE} />KeypadAlt</div>
       <div><List color={COLOR} size={SIZE} />List</div>
+      <div><ListView color={COLOR} size={SIZE} />ListView</div>
       <div><Location color={COLOR} size={SIZE} />Location</div>
       <div><LocationAlt color={COLOR} size={SIZE} />LocationAlt</div>
       <div><Locked color={COLOR} size={SIZE} />Locked</div>

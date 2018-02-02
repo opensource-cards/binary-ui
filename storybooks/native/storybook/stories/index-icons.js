@@ -8,6 +8,7 @@ import Add from 'binary-ui-icons/binary/Add';
 import AddCard from 'binary-ui-icons/binary/AddCard';
 import Apple from 'binary-ui-icons/binary/Apple';
 import AppleAlt from 'binary-ui-icons/binary/AppleAlt';
+import Approval from 'binary-ui-icons/binary/Approval';
 import ArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import ArrowLeft from 'binary-ui-icons/binary/ArrowLeft';
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
@@ -16,10 +17,12 @@ import Autoconnect from 'binary-ui-icons/binary/Autoconnect';
 import Behance from 'binary-ui-icons/binary/Behance';
 import Call from 'binary-ui-icons/binary/Call';
 import CallAlt from 'binary-ui-icons/binary/CallAlt';
+import CalendarView from 'binary-ui-icons/binary/CalendarView';
 import CameraAlt from 'binary-ui-icons/binary/CameraAlt';
 import Cancel from 'binary-ui-icons/binary/Cancel';
 import Card from 'binary-ui-icons/binary/Card';
 import CardAlt from 'binary-ui-icons/binary/CardAlt';
+import CardBroken from 'binary-ui-icons/binary/CardBroken';
 import Cards from 'binary-ui-icons/binary/Cards';
 import CardsAlt from 'binary-ui-icons/binary/CardsAlt';
 import Check from 'binary-ui-icons/binary/Check';
@@ -51,6 +54,7 @@ import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
 import List from 'binary-ui-icons/binary/List';
+import ListView from 'binary-ui-icons/binary/ListView';
 import Location from 'binary-ui-icons/binary/Location';
 import LocationAlt from 'binary-ui-icons/binary/LocationAlt';
 import Locked from 'binary-ui-icons/binary/Locked';
@@ -121,6 +125,7 @@ storiesOf('binary-ui-icons/binary', module)
     <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
       <Add color={COLOR} size={SIZE} onPress={action('clicked')} />
       <AddCard color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Approval color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowDown color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowLeft color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowRight color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -128,10 +133,12 @@ storiesOf('binary-ui-icons/binary', module)
       <Autoconnect color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Call color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CallAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <CalendarView color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CameraAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Cancel color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Card color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CardAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <CardBroken color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Check color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CheckAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Copy color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -149,6 +156,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Keypad color={COLOR} size={SIZE} onPress={action('clicked')} />
       <KeypadAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <List color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ListView color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Location color={COLOR} size={SIZE} onPress={action('clicked')} />
       <LocationAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Locked color={COLOR} size={SIZE} onPress={action('clicked')} />
