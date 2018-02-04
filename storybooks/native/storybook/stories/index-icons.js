@@ -27,6 +27,7 @@ import Cards from 'binary-ui-icons/binary/Cards';
 import CardsAlt from 'binary-ui-icons/binary/CardsAlt';
 import Check from 'binary-ui-icons/binary/Check';
 import CheckAlt from 'binary-ui-icons/binary/CheckAlt';
+import Circle from 'binary-ui-icons/binary/Circle';
 import Copy from 'binary-ui-icons/binary/Copy';
 import Delete from 'binary-ui-icons/binary/Delete';
 import DeleteCharacter from 'binary-ui-icons/binary/DeleteCharacter';
@@ -141,6 +142,7 @@ storiesOf('binary-ui-icons/binary', module)
       <CardBroken color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Check color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CheckAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Circle color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Copy color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Delete color={COLOR} size={SIZE} onPress={action('clicked')} />
       <DeleteCharacter color={COLOR} size={SIZE} onPress={action('clicked')} />

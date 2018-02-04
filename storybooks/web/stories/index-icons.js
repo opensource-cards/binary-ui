@@ -25,6 +25,7 @@ import Cards from 'binary-ui-icons/binary/Cards';
 import CardsAlt from 'binary-ui-icons/binary/CardsAlt';
 import Check from 'binary-ui-icons/binary/Check';
 import CheckAlt from 'binary-ui-icons/binary/CheckAlt';
+import Circle from 'binary-ui-icons/binary/Circle';
 import Copy from 'binary-ui-icons/binary/Copy';
 import Delete from 'binary-ui-icons/binary/Delete';
 import DeleteCharacter from 'binary-ui-icons/binary/DeleteCharacter';
@@ -147,6 +148,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><CardBroken color={COLOR} size={SIZE} />CardBroken</div>
       <div><Check color={COLOR} size={SIZE} />Check</div>
       <div><CheckAlt color={COLOR} size={SIZE} />CheckAlt</div>
+      <div><Circle color={COLOR} size={SIZE} />Circle</div>
       <div><Copy color={COLOR} size={SIZE} />Copy</div>
       <div><Delete color={COLOR} size={SIZE} />Delete</div>
       <div><DeleteCharacter color={COLOR} size={SIZE} />DeleteCharacter</div>
