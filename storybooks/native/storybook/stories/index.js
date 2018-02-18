@@ -19,3 +19,7 @@ import './index-components-tooltip';
 import './index-components-viewline';
 
 import './index-navbar';
+
+import './index-date-picker';
+
+import './index-time-picker';

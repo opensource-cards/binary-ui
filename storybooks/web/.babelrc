@@ -5,9 +5,12 @@
       "root": ["./"],
       "alias": {
         "binary-ui-components/mobile": "./lib/binary-ui-components/src/components-mobile",
+        "binary-ui-components-validation": "./lib/binary-ui-components/src/binary-ui-components-validation",
+        "binary-ui-date-picker": "./lib/binary-ui-date-picker/src",
         "binary-ui-icons/binary": "./lib/binary-ui-icons/src/components-icons",
+        "binary-ui-navbar": "./lib/binary-ui-navbar/src",
         "binary-ui-styles": "./lib/binary-ui-styles/src",
-        "binary-ui-navbar": "./lib/binary-ui-navbar/src"
+        "binary-ui-time-picker": "./lib/binary-ui-time-picker/src"
       }
     }]
   ]

@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
 import React from 'react';
 import { View, TextInput } from 'react-native';
 import { FONT_FAMILY_MAIN_300 } from 'binary-ui-styles';
