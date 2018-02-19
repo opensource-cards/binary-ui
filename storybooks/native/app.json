@@ -1,9 +1,8 @@
 {
   "expo": {
-    "name": "andColorizer",
-    "description": "Create harmonious color sets with andColorizer.",
-    "slug": "colorizer",
-    "privacy": "unlisted",
+    "name": "binaryUI",
+    "description": "The Binary Design System offers a set of guidelines and open-source libraries for building modular web-apps.",
+    "privacy": "public",
     "sdkVersion": "25.0.0",
     "version": "0.1.1",
     "orientation": "portrait",
