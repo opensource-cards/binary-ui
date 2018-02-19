@@ -19,17 +19,7 @@ const defaultProps = {
 class TimePicker extends React.Component {
   constructor(props) {
     super(props);
-    const dateNow = new Date();
     this.state = {
-      date: new Date(
-        dateNow.getUTCFullYear(),
-        dateNow.getUTCMonth(),
-        dateNow.getUTCDate(),
-        props.hour,
-        props.minute,
-        0,
-        0
-      ),
       isVisible: false,
     };
     this.onDateChange = this.onDateChange.bind(this);
@@ -39,8 +29,8 @@ class TimePicker extends React.Component {
   onDateChange(date) {
     const { onChange } = this.props;
     onChange({
-      hour: date.getUTCHours(),
-      minute: date.getUTCMinutes(),
+      hour: date.getHours(),
+      minute: date.getMinutes(),
     });
   }
 
@@ -53,12 +43,25 @@ class TimePicker extends React.Component {
 
   render() {
     const { hour, minute, ...props } = this.props;
-    const { date, isVisible } = this.state;
+    const { isVisible } = this.state;
+    const dateNow = new Date();
     return (
       <React.Fragment>
         <Button {...props} label={`${hour}:${minute}`} onPress={this.onPress} />
         {isVisible ? (
-          <DatePickerIOS date={date} mode="time" onDateChange={this.onDateChange} />
+          <DatePickerIOS
+            date={new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              props.hour,
+              props.minute,
+              0,
+              0
+            )}
+            mode="time"
+            onDateChange={this.onDateChange}
+          />
         ) : null}
       </React.Fragment>
     );

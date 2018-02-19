@@ -20,9 +20,7 @@ const defaultProps = {
 class DatePicker extends React.Component {
   constructor(props) {
     super(props);
-    const dateNow = new Date();
     this.state = {
-      date: new Date(dateNow.year, dateNow.month, dateNow.day),
       isVisible: false,
     };
     this.onDateChange = this.onDateChange.bind(this);
@@ -32,9 +30,9 @@ class DatePicker extends React.Component {
   onDateChange(date) {
     const { onChange } = this.props;
     onChange({
-      year: date.getUTCFullYear(),
-      month: date.getUTCMinutes(),
-      day: date.getUTCDate(),
+      year: date.getFullYear(),
+      month: date.getMonth(),
+      day: date.getDate(),
     });
   }
 
@@ -47,7 +45,7 @@ class DatePicker extends React.Component {
 
   render() {
     const { day, month, year, ...props } = this.props;
-    const { date, isVisible } = this.state;
+    const { isVisible } = this.state;
     return (
       <React.Fragment>
         <Button
@@ -56,7 +54,11 @@ class DatePicker extends React.Component {
           onPress={this.onPress}
         />
         {isVisible ? (
-          <DatePickerIOS date={date} mode="date" onDateChange={this.onDateChange} />
+          <DatePickerIOS
+            date={new Date(year, month, day)}
+            mode="date"
+            onDateChange={this.onDateChange}
+          />
         ) : null}
       </React.Fragment>
     );
