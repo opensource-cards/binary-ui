@@ -18,4 +18,5 @@ export default styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
+  user-select: auto;
 `;
