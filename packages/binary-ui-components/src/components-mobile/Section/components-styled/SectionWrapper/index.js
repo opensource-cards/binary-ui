@@ -1,6 +1,7 @@
-import { NO_SELECT_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
-  ${NO_SELECT_CSS}
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
 `;

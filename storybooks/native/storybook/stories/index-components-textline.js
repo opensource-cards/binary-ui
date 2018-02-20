@@ -12,6 +12,12 @@ storiesOf('binary-ui-components/mobile', module)
       <Textline>
         Textline without icon
       </Textline>
+      <Textline>
+        A really really long title that doesn't fit into pretty much any possible screen width
+      </Textline>
+      <Textline renderIcon={(props) => (<IconMore {...props} />)}>
+        A really really long title that doesn't fit into pretty much any possible screen width with icon
+      </Textline>
       <Textline
         renderIcon={(props) => (<IconMore {...props} />)}
         onIconPress={action()}

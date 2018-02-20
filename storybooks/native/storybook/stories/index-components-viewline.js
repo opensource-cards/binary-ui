@@ -21,9 +21,6 @@ storiesOf('binary-ui-components/mobile', module)
       <Viewline isEdit>
         <Text>Viewline with underline</Text>
       </Viewline>
-      <Viewline isDisabled >
-       <Text>Viewline disabled</Text>
-      </Viewline>
       <Viewline
         renderIcon={(props) => (<IconMore {...props} />)}
         onIconPress={action()}

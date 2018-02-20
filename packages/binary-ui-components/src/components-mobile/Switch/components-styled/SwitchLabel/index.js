@@ -1,8 +1,7 @@
-import { FONT_SET_BOLD_CSS, LIST_ITEM_HEIGHT, NO_SELECT_CSS } from 'binary-ui-styles';
+import { FONT_SET_BOLD_CSS, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
-  ${NO_SELECT_CSS}
   ${FONT_SET_BOLD_CSS}
   display: inline-block;
   height: ${LIST_ITEM_HEIGHT}px;
@@ -10,7 +9,10 @@ export default styled.div`
   outline: 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  user-select: none;
   vertical-align: middle;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
   white-space: nowrap;
   width: calc(100% - ${LIST_ITEM_HEIGHT})%;
 `;

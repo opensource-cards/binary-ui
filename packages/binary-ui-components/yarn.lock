@@ -1034,16 +1034,16 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-icons@^0.4.24:
-  version "0.4.24"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.24.tgz#92793bbeb6060ab18682b1db8cbc0eafdce54ba6"
+binary-ui-icons@^0.4.25:
+  version "0.4.25"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.25.tgz#531358a7337a94023e1e70efa999118965d5cca6"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.24:
-  version "0.4.24"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.24.tgz#1531a88385ea33bcbf1b577f396c26e598f1b913"
+binary-ui-styles@^0.4.25:
+  version "0.4.25"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.25.tgz#0472f02ff1dd8ace1c27ec3bf1b149318d7127a3"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -2501,8 +2501,8 @@ inquirer@^3.0.6:
     through "^2.3.6"
 
 invariant@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.3.tgz#1a827dfde7dcbd7c323f0ca826be8fa7c5e9d688"
   dependencies:
     loose-envify "^1.0.0"
 

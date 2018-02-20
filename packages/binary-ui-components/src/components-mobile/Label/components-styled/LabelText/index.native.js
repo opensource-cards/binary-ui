@@ -5,8 +5,6 @@ export default styled.Text.attrs({
   numberOfLines: 1,
 })`
   color: hsl(0, 0%, 0%);
-  flex: 9;
   opacity: ${props => (props.isDisabled ? OPACITY_DISABLED : '1')};
-  padding-left: 10;
   ${props => (props.isBold ? FONT_SET_BOLD_CSS : FONT_SET_LIGHT_CSS)}
 `;

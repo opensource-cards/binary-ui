@@ -2,13 +2,11 @@ import {
   FONT_SET_BOLD_CSS,
   FONT_SET_LIGHT_CSS,
   LIST_ITEM_HEIGHT,
-  NO_SELECT_CSS,
   OPACITY_DISABLED,
 } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
-  ${NO_SELECT_CSS}
   ${props => (props.isBold ? FONT_SET_BOLD_CSS : FONT_SET_LIGHT_CSS)}
   color: ${props => props.styleColor};
   display: inline-block;
@@ -19,7 +17,10 @@ export default styled.div`
   overflow: hidden;
   pointer-events: ${props => (props.isDisabled ? 'none' : 'auto')};
   text-overflow: ellipsis;
+  user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
 `;

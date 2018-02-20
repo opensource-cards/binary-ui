@@ -8,7 +8,6 @@ This package provides a set of React components implementing Binary Design Syste
 
 const                  | use
 -----------------------|-------------
-NO_SELECT_CSS          | same as above but CSS
 LIST_ITEM_HEIGHT       | default height of list elements in non-card stacks
 
 ### Layout styles (native)

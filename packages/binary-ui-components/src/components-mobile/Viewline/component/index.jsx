@@ -1,4 +1,3 @@
-import { getOpacity } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ViewContent from '../components-styled/ViewContent';
@@ -7,7 +6,6 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
   children: PropTypes.any,
-  isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
   renderIcon: PropTypes.func,
   onIconClick: PropTypes.func,
@@ -16,21 +14,17 @@ const propTypes = {
 const defaultProps = {
   children: undefined,
   isEdit: false,
-  isDisabled: false,
   renderIcon: undefined,
   onIconClick: undefined,
 };
 
-const Viewline = ({ children, isDisabled, isEdit, renderIcon, onIconClick }) => (
-  <ViewWrapper
-    isEdit={isEdit}
-    styleOpacity={getOpacity(isDisabled)}
-  >
+const Viewline = ({ children, isEdit, renderIcon, onIconClick }) => (
+  <ViewWrapper isEdit={isEdit} >
     <ViewContent>
       {children}
     </ViewContent>
     {renderIcon && (
-      <ActionListItemIcon isDisabled={isDisabled} renderIcon={renderIcon} onClick={onIconClick} />
+      <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
     )}
   </ViewWrapper>
 );

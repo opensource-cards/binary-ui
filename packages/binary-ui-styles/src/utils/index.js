@@ -21,12 +21,6 @@ export const INPUT_RESET_CSS = `
   outline: 0;
 `;
 
-export const NO_SELECT_CSS = `
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
-`;
-
 export const EASING_CURVE_FEEDBACK = 'cubic-bezier(0.455, 0.030, 0.515, 0.955)';
 export const EASING_CURVE_COMPONENT_STATE = 'cubic-bezier(0.420, 0.000, 0.580, 1.000)';
 export const EASING_CURVE_VIEW_STATE = 'cubic-bezier(0.190, 1.000, 0.220, 1.000)';

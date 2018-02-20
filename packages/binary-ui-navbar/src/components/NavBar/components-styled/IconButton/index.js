@@ -1,10 +1,8 @@
 import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
-import { NO_SELECT_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { STACK_HEADER_HEIGHT } from '../../../../constants';
 
 export default styled(ActionIcon)`
-  ${NO_SELECT_CSS}
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -13,4 +11,7 @@ export default styled(ActionIcon)`
   height: ${STACK_HEADER_HEIGHT}px;
   justify-content: center;
   min-width: 50px;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
 `;

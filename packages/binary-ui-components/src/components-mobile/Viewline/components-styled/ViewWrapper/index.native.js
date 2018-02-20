@@ -7,7 +7,6 @@ export default styled.View`
   flex-direction: row;
   height: ${LIST_ITEM_HEIGHT};
   justify-content: space-between;
-  opacity: ${props => props.styleOpacity};
   overflow: hidden;
   width: 100%;
   ${props => (props.isEdit
