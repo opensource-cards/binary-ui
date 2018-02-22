@@ -5,6 +5,7 @@ import { TouchableOpacity, Text, View } from 'react-native';
 
 import IconMore from 'binary-ui-icons/binary/More';
 import Viewline from 'binary-ui-components/mobile/Viewline';
+import { OPACITY_ACTIVE } from 'binary-ui-styles';
 
 storiesOf('binary-ui-components/mobile', module)
   .add('Viewline', () => (
@@ -26,7 +27,7 @@ storiesOf('binary-ui-components/mobile', module)
         onIconPress={action()}
       >
         <TouchableOpacity
-          activeOpacity={0.5}
+          activeOpacity={OPACITY_ACTIVE}
           style={{
             backgroundColor: "hsla(0, 0%, 0%, 0.05)",
             padding: 10,

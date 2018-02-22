@@ -1,13 +1,10 @@
+import NotificationIcon from 'binary-ui-components/mobile/NotificationIcon';
 import styled from 'styled-components';
 
-export default styled.div`
-  background-color: red;
+export default styled(NotificationIcon)`
   border: 1px;
   border-color: #EDEBE6;
-  border-radius: 5px;
   border-style: solid;
   box-sizing: border-box;
-  height: 10px;
   position: absolute;
-  width: 10px;
 `;

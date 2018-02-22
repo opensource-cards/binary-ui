@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-navbar",
-  "version": "0.4.26",
+  "version": "0.4.27",
   "description": "React navigation bar for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
@@ -27,9 +27,9 @@
   "main": "lib/index.js",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "binary-ui-components": "^0.4.26",
-    "binary-ui-icons": "^0.4.26",
-    "binary-ui-styles": "^0.4.26",
+    "binary-ui-components": "^0.4.27",
+    "binary-ui-icons": "^0.4.27",
+    "binary-ui-styles": "^0.4.27",
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {

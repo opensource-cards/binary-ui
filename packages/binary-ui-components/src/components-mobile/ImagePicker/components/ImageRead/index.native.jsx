@@ -1,7 +1,7 @@
+import { BINARY_COLOR_BLUE_50, OPACITY_ACTIVE } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconDoneStyled from './components-styled/IconDoneStyled/index.native';
-import { BINARY_COLOR_BLUE_50 } from 'binary-ui-styles';
 import ImageStyled from './components-styled/ImageStyled/index.native';
 import ImageContent from '../../components-styled/ImageContent';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
@@ -35,7 +35,7 @@ export default class ImageRead extends React.Component {
   render() {
     const { imageFit, imageUrl, isSelected } = this.props;
     return (
-      <ImageContent activeOpacity={0.5} onPress={this.onPress} >
+      <ImageContent activeOpacity={OPACITY_ACTIVE} onPress={this.onPress} >
         <ImageStyled
           borderRadius={PHOTO_SIZE / 2}
           resizeMode={imageFit}

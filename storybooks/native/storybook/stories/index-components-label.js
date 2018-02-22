@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 import React from 'react';
-import { Linking, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 import Label from 'binary-ui-components/mobile/Label';
 

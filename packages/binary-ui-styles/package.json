@@ -1,9 +1,10 @@
 {
   "name": "binary-ui-styles",
-  "version": "0.4.26",
+  "version": "0.4.27",
   "description": "React styles for Cards' Binary Design.",
   "keywords": [
     "react",
+    "react-native",
     "binary",
     "styles"
   ],

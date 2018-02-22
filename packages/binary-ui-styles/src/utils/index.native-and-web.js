@@ -111,10 +111,3 @@ export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, border
   }
   return getEditStyle(BINARY_COLOR_SAND_90);
 }
-
-export function getOpacity(isDisabled) {
-  if (isDisabled) {
-    return OPACITY_ACTIVE;
-  }
-  return 1;
-}

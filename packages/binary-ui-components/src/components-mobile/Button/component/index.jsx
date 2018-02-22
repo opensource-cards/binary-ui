@@ -1,5 +1,5 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
-import { getOpacity } from 'binary-ui-styles';
+import { OPACITY_DISABLED } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ButtonText from '../components-styled/ButtonText';
@@ -35,7 +35,11 @@ const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon,
     onClick={!isDisabled ? onClick : undefined}
   >
     <IconStyledWrapper>
-      {renderIcon({ color, opacity: getOpacity(isDisabled), size: 18 })}
+      {renderIcon({
+        color,
+        opacity: isDisabled ? OPACITY_DISABLED : 1,
+        size: 18,
+      })}
     </IconStyledWrapper>
     <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} >
       {isBold ? label.toUpperCase() : label}

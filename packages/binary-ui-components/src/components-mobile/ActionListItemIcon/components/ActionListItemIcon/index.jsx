@@ -1,4 +1,4 @@
-import { BINARY_COLOR_GRAY_40, OPACITY_ACTIVE, getOpacity } from 'binary-ui-styles';
+import { BINARY_COLOR_GRAY_40, OPACITY_ACTIVE, OPACITY_DISABLED } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TouchableOpacity from '../../../../components/TouchableOpacity';
@@ -22,7 +22,7 @@ class ActionListItemIcon extends React.Component {
   renderIcon({ isDisabled, renderIcon }) {
     return renderIcon({
       color: BINARY_COLOR_GRAY_40,
-      opacity: getOpacity(isDisabled),
+      opacity: isDisabled ? OPACITY_DISABLED : 1,
       size: 18,
     });
   }

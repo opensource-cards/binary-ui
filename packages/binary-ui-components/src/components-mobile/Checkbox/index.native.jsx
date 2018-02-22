@@ -1,6 +1,6 @@
 import Check from 'binary-ui-icons/binary/Check';
 import Uncheck from 'binary-ui-icons/binary/Uncheck';
-import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80 } from 'binary-ui-styles';
+import { BINARY_COLOR_BLUE_40, BINARY_COLOR_GRAY_80, OPACITY_ACTIVE } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
@@ -39,7 +39,7 @@ export default class Checkbox extends React.Component {
     const { isChecked, onChange, onPress, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     return (
-      <TouchableOpacity activeOpacity={0.5} onPress={this.onPress} {...props} >
+      <TouchableOpacity activeOpacity={OPACITY_ACTIVE} onPress={this.onPress} {...props} >
         {isChecked ? (
           <Check color={BINARY_COLOR_BLUE_40} size={30} />
         ) : (

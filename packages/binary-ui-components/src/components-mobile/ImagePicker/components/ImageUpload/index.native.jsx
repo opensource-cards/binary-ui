@@ -1,3 +1,4 @@
+import { OPACITY_ACTIVE } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ImageUploadIcon from '../ImageUploadIcon';
@@ -11,7 +12,7 @@ const propTypes = {
 const defaultProps = {};
 
 const ImageUpload = ({ renderIcon, onImageUpload }) => (
-  <ImageUploadWrapper activeOpacity={0.5} onPress={onImageUpload} >
+  <ImageUploadWrapper activeOpacity={OPACITY_ACTIVE} onPress={onImageUpload} >
     <ImageUploadIcon renderIcon={renderIcon} />
   </ImageUploadWrapper>
 );
