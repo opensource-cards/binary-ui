@@ -37,16 +37,16 @@ class ActionListItemIcon extends React.Component {
       ...props,
     } = this.props;
     return isDisabled ? (
-      <div onClick={(e) => { e.preventDefault(); }} {...props} >
+      <div {...props} onClick={(e) => { e.preventDefault(); }} >
         {this.renderIcon({ isDisabled, renderIcon })}
       </div>
     ) : (
       <TouchableOpacity
+        {...props}
         activeOpacity={OPACITY_ACTIVE}
         onClick={onClick}
         onMouseDown={onMouseDown}
         onTouchStart={onTouchStart}
-        {...props}
       >
         {this.renderIcon({ isDisabled, renderIcon })}
       </TouchableOpacity>

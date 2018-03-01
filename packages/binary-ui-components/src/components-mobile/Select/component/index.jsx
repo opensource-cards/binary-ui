@@ -37,10 +37,10 @@ export default class Select extends React.Component {
     /* eslint-enable no-unused-vars */
     return (
       <SelectWrapper
+        {...props}
         isEdit={isEdit}
         isTypingHighlight={false}
         isValid={isValid}
-        {...props}
       >
         <SelectArrow size={18} />
         <SelectStyled isBold={isBold} value={selected} onChange={this.onChange} >

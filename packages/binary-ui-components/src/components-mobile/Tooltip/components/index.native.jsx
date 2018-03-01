@@ -41,7 +41,7 @@ const Tooltip = ({
     onPressIn={onPressIn}
     onPressOut={onPressOut}
   >
-    <TooltipWrapper isVisible={isVisible} placement={placement} {...props} >
+    <TooltipWrapper {...props} isVisible={isVisible} placement={placement} >
       {(placement === 'bottom-left' || placement === 'bottom-right') ? (
         <TooltipArrow placement={placement} />
       ) : null}

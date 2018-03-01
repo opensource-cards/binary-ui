@@ -5,11 +5,13 @@ import { TimePickerAndroid } from 'react-native';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
+  isDisabled: PropTypes.bool,
   minute: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
+  isDisabled: false,
   onChange: () => {},
 };
 
@@ -47,6 +49,8 @@ class TimePicker extends React.Component {
 
   render() {
     const { hour, minute, ...props } = this.props;
+    // A "isDisabled" property is passed to the button.
+    // Clicks will be ignored if "isDisabled" has a "true" value.
     return (
       <Button {...props} label={`${hour}:${minute}`} onPress={this.onPress} />
     );

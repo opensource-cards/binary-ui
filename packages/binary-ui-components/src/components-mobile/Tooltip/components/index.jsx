@@ -18,7 +18,7 @@ const defaultProps = {
 };
 
 const Tooltip = ({ isVisible, label, placement, ...props }) => (
-  <TooltipWrapper isVisible={isVisible} placement={placement} {...props} >
+  <TooltipWrapper {...props} isVisible={isVisible} placement={placement} >
     {label}
   </TooltipWrapper>
 );

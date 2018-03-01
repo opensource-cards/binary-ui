@@ -47,6 +47,13 @@ storiesOf('binary-ui-components/mobile', module)
         onChange={action()}
       />
       <Input
+        isDisabled
+        placeholder="Disabled"
+        type={INPUT_FIELD_TYPES.TEXT}
+        value=""
+        onChange={action()}
+      />
+      <Input
         placeholder="Text"
         type={INPUT_FIELD_TYPES.TEXT}
         value="Text"

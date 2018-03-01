@@ -91,6 +91,7 @@ class NavBarTitleSearch extends React.Component {
       >
         <IconSearch color="#A9A9A9" size={20} />
         <TitleSearchInput
+          {...props}
           autoFocus
           isBold={isBold}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
@@ -99,7 +100,6 @@ class NavBarTitleSearch extends React.Component {
           onBlur={this.onBlur}
           onChange={this.onChange}
           onFocus={this.onFocus}
-          {...props}
         />
       </TitleSearchWrapper>
     );

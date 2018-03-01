@@ -5,12 +5,14 @@ import { DatePickerAndroid } from 'react-native';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
+  isDisabled: PropTypes.bool,
   month: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
+  isDisabled: false,
   onChange: () => {},
 };
 
@@ -52,6 +54,8 @@ class DatePicker extends React.Component {
 
   render() {
     const { day, month, year, ...props } = this.props;
+    // A "isDisabled" property is passed to the button.
+    // Clicks will be ignored if "isDisabled" has a "true" value.
     return (
       <Button
         {...props}

@@ -42,12 +42,12 @@ class ActionLink extends React.Component {
   }
 
   render() {
-    // Note: No need to pass 'href' and 'onPress' props.
+    // Note: No need to pass 'href' prop.
     /* eslint-disable no-unused-vars */
-    const { children, href, onPress, ...props } = this.props;
+    const { children, href, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     return (
-      <ActionLinkWrapper onPress={this.onPress} {...props} >
+      <ActionLinkWrapper {...props} onPress={this.onPress} >
         {children}
       </ActionLinkWrapper>
     );

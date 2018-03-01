@@ -41,8 +41,20 @@ storiesOf('binary-ui-time-picker', module)
       <View>
         <Text>Static</Text>
       </View>
+      <View>
+        <Text>Available</Text>
+      </View>
       <TimePicker
         hour={22}
+        minute={59}
+        onChange={action}
+      />
+      <View>
+        <Text>Disabled</Text>
+      </View>
+      <TimePicker
+        hour={22}
+        isDisabled
         minute={59}
         onChange={action}
       />

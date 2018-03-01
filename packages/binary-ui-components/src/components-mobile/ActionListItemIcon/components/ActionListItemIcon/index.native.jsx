@@ -45,12 +45,12 @@ class ActionListItemIcon extends React.Component {
       </View>
     ) : (
       <TouchableOpacity
+        {...props}
         activeOpacity={OPACITY_ACTIVE}
         onLongPress={onLongPress}
         onPress={onPress}
         onPressIn={onPressIn}
         onPressOut={onPressOut}
-        {...props}
       >
         {this.renderIcon({ isDisabled, renderIcon })}
       </TouchableOpacity>

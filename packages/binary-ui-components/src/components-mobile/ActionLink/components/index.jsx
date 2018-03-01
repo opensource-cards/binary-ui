@@ -13,7 +13,7 @@ const defaultProps = {
 };
 
 const ActionLink = ({ children, href, ...props }) => (
-  <ActionLinkWrapper href={href} {...props} >
+  <ActionLinkWrapper {...props} href={href} >
     {children}
   </ActionLinkWrapper>
 );

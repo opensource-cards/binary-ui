@@ -4,11 +4,13 @@ import Input from '../components-styled/Input';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
+  isDisabled: PropTypes.bool,
   minute: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
+  isDisabled: false,
   onChange: () => {},
 };
 

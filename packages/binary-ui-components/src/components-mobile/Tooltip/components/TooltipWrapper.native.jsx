@@ -81,13 +81,13 @@ export default class TooltipStyled extends React.Component {
     const { children, style, ...props } = this.props;
     return (
       <Animated.View
+        {...props}
         style={[styles.container, {
           opacity: this.animatedOpacity.interpolate({
             inputRange: [0, 1],
             outputRange: [0, 1],
           }),
         }, this.getPositioning(), style]}
-        {...props}
       >
         {children}
       </Animated.View>

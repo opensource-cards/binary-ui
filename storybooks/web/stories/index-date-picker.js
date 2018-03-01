@@ -45,8 +45,17 @@ storiesOf('binary-ui-date-picker', module)
   .add('DatePicker', withInfo('DatePicker component')(() => (
     <div>
       <div>Preview</div>
+      <div>Available</div>
       <DatePicker
         day={23}
+        month={1}
+        year={2018}
+        onChange={action}
+      />
+      <div>Disabled</div>
+      <DatePicker
+        day={23}
+        isDisabled
         month={1}
         year={2018}
         onChange={action}

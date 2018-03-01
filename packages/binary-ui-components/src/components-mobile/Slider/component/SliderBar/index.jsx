@@ -181,10 +181,10 @@ export default class BarWrapper extends React.Component {
     const { position, onChange, ...props } = this.props;
     return (
       <SliderScale
+        {...props}
         innerRef={this.onSetBarDom}
         onMouseDown={this.onMouseDown}
         onTouchStart={this.onTouchStart}
-        {...props}
       >
         {this.renderSliderHandler(position, onChange)}
       </SliderScale>

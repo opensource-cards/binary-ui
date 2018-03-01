@@ -88,10 +88,10 @@ export default class Textarea extends React.Component {
         isValid={isValid}
       >
         <TextareaInput
+          {...props}
           onBlur={this.onBlur}
           onChange={this.onChange}
           onFocus={this.onFocus}
-          {...props}
         />
         {renderIcon && (
           <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />

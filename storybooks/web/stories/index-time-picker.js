@@ -42,8 +42,16 @@ storiesOf('binary-ui-time-picker', module)
   .add('TimePicker', withInfo('TimePicker component')(() => (
     <div>
       <div>Preview</div>
+      <div>Available</div>
       <TimePicker
         hour={22}
+        minute={59}
+        onChange={action}
+      />
+      <div>Disabled</div>
+      <TimePicker
+        hour={22}
+        isDisabled
         minute={59}
         onChange={action}
       />

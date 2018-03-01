@@ -79,12 +79,12 @@ export default class Textarea extends React.Component {
         isValid={isValid}
       >
         <TextareaInput
+          {...props}
           multiline
           underlineColorAndroid="rgba(0, 0, 0, 0)"
           onBlur={this.onBlur}
           onChangeText={onChange}
           onFocus={this.onFocus}
-          {...props}
         />
         {renderIcon && (
           <ActionListItemIcon renderIcon={renderIcon} onPress={onIconPress} />

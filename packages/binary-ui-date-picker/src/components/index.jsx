@@ -5,12 +5,14 @@ import React from 'react';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
+  isDisabled: PropTypes.bool,
   month: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
+  isDisabled: false,
   onChange: () => {},
 };
 

@@ -32,7 +32,7 @@ export default (IconContentComponent) => {
     render() {
       const { color, size, ...props } = this.props;
       return (
-        <Svg height={size} width={size} {...props} >
+        <Svg {...props} height={size} width={size} >
           <G fill={color} scale={size / DEFAULT_SIZE} >
             <IconContentComponent Group={G} Shape={this.renderShape} />
           </G>

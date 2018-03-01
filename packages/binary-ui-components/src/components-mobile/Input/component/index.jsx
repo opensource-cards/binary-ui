@@ -7,6 +7,7 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
   isBold: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   isValid: PropTypes.bool,
   placeholder: PropTypes.string,
   styleBorderColor: PropTypes.string,
@@ -21,6 +22,7 @@ const propTypes = {
 
 const defaultProps = {
   isBold: false,
+  isDisabled: false,
   isValid: true,
   placeholder: '',
   styleBorderColor: undefined,
@@ -33,7 +35,6 @@ const defaultProps = {
 };
 
 export default class Input extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -86,6 +87,7 @@ export default class Input extends React.Component {
     /* eslint-disable no-unused-vars */
     const {
       isBold,
+      isDisabled,
       isValid,
       placeholder,
       styleBorderColor,
@@ -111,6 +113,8 @@ export default class Input extends React.Component {
           <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
         ) : null}
         <InputStyled
+          {...props}
+          disabled={isDisabled}
           innerRef={this.onSetInputRef}
           isBold={isBold}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
@@ -119,7 +123,6 @@ export default class Input extends React.Component {
           onBlur={this.onBlur}
           onChange={this.onChange}
           onFocus={this.onFocus}
-          {...props}
         />
       </InputWrapper>
     );

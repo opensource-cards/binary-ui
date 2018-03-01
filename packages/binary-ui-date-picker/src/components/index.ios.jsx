@@ -1,16 +1,18 @@
 import Button from 'binary-ui-components/mobile/Button';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { DatePickerIOS } from 'react-native';
+import { DatePickerIOS, LayoutAnimation } from 'react-native';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
+  isDisabled: PropTypes.bool,
   month: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
+  isDisabled: false,
   onChange: () => {},
 };
 
@@ -38,6 +40,21 @@ class DatePicker extends React.Component {
 
   onPress() {
     const { isVisible } = this.state;
+    LayoutAnimation.configureNext({
+      duration: 250,
+      create: {
+        type: LayoutAnimation.Types.easeInEaseOut,
+        property: LayoutAnimation.Properties.opacity,
+      },
+      update: {
+        type: LayoutAnimation.Types.easeInEaseOut,
+        property: LayoutAnimation.Properties.opacity,
+      },
+      delete: {
+        type: LayoutAnimation.Types.easeInEaseOut,
+        property: LayoutAnimation.Properties.opacity,
+      },
+    });
     this.setState(() => ({
       isVisible: !isVisible,
     }));
@@ -46,6 +63,8 @@ class DatePicker extends React.Component {
   render() {
     const { day, month, year, ...props } = this.props;
     const { isVisible } = this.state;
+    // A "isDisabled" property is passed to the button.
+    // Clicks will be ignored if "isDisabled" has a "true" value.
     return (
       <React.Fragment>
         <Button

@@ -44,8 +44,21 @@ storiesOf('binary-ui-date-picker', module)
       <View>
         <Text>Static</Text>
       </View>
+      <View>
+        <Text>Available</Text>
+      </View>
       <DatePicker
         day={23}
+        month={1}
+        year={2018}
+        onChange={action}
+      />
+      <View>
+        <Text>Disabled</Text>
+      </View>
+      <DatePicker
+        day={23}
+        isDisabled
         month={1}
         year={2018}
         onChange={action}

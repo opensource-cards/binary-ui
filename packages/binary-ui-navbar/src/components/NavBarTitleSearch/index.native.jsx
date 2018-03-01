@@ -86,6 +86,7 @@ class NavBarTitleSearch extends React.Component {
           size={20}
         />
         <TitleSearchInput
+          {...props}
           autoCapitalize="none"
           autoFocus
           clearButtonMode="always"
@@ -100,7 +101,6 @@ class NavBarTitleSearch extends React.Component {
           onBlur={this.onBlur}
           onChangeText={onChange}
           onFocus={this.onFocus}
-          {...props}
         />
       </TitleSearchWrapper>
     );

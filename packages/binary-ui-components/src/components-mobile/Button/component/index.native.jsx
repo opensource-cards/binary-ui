@@ -51,12 +51,12 @@ const Button = ({
   ...props,
 }) => (
   <TouchableHighlight
+    {...props}
     underlayColor={!isDisabled ? TAP_HIGHLIGHT_COLOR : undefined}
     onLongPress={!isDisabled ? onLongPress : undefined}
     onPress={!isDisabled ? onPress : undefined}
     onPressIn={!isDisabled ? onPressIn : undefined}
     onPressOut={!isDisabled ? onPressOut : undefined}
-    {...props}
   >
     <ButtonContentHighlight>
       <ButtonWrapper
