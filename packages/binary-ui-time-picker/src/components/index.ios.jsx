@@ -1,4 +1,5 @@
 import Button from 'binary-ui-components/mobile/Button';
+import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DatePickerIOS, LayoutAnimation } from 'react-native';
@@ -8,11 +9,13 @@ const propTypes = {
   isDisabled: PropTypes.bool,
   minute: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
+  renderLeft: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   isDisabled: false,
   onChange: () => {},
+  renderLeft: () => null,
 };
 
 /**
@@ -59,14 +62,19 @@ class TimePicker extends React.Component {
   }
 
   render() {
-    const { hour, minute, ...props } = this.props;
+    const { hour, minute, renderLeft, ...props } = this.props;
     const { isVisible } = this.state;
     const dateNow = new Date();
     // A "isDisabled" property is passed to the button.
     // Clicks will be ignored if "isDisabled" has a "true" value.
     return (
       <React.Fragment>
-        <Button {...props} label={`${hour}:${minute}`} onPress={this.onPress} />
+        <Group
+          renderLeft={renderLeft}
+          renderRight={() => (
+            <Button {...props} label={`${hour}:${minute}`} onPress={this.onPress} />
+          )}
+        />
         {isVisible ? (
           <DatePickerIOS
             date={new Date(

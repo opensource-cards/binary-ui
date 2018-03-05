@@ -1,5 +1,6 @@
-import isEmpty from 'lodash/isEmpty';
+import Group from 'binary-ui-components/mobile/Group';
 import Input from 'binary-ui-components/mobile/Input';
+import isEmpty from 'lodash/isEmpty';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -9,11 +10,13 @@ const propTypes = {
   month: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
+  renderLeft: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   isDisabled: false,
   onChange: () => {},
+  renderLeft: () => null,
 };
 
 class DatePicker extends React.Component {
@@ -50,15 +53,20 @@ class DatePicker extends React.Component {
   }
 
   render() {
-    const { day, month, year, ...props } = this.props;
+    const { day, month, year, renderLeft, ...props } = this.props;
     return (
-      <Input
-        {...props}
-        type="date"
-        value={`${year}-${this.getValueValid(month)}-${this.getValueValid(
-          day
-        )}`}
-        onChange={this.onChange}
+      <Group
+        renderLeft={renderLeft}
+        renderRight={() => (
+          <Input
+            {...props}
+            type="date"
+            value={`${year}-${this.getValueValid(month)}-${this.getValueValid(
+              day
+            )}`}
+            onChange={this.onChange}
+          />
+        )}
       />
     );
   }

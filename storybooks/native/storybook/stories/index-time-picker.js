@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import React from 'react';
 import { Text, View } from 'react-native';
 
+import Label from 'binary-ui-components/mobile/Label';
 import TimePicker from 'binary-ui-time-picker';
 
 class TimePickerDemo extends React.Component {
@@ -30,6 +31,11 @@ class TimePickerDemo extends React.Component {
         hour={hour}
         minute={minute}
         onChange={this.onChange}
+        renderLeft={() => (
+          <Label isBold>
+            Demo
+          </Label>
+        )}
       />
     );
   }
@@ -41,22 +47,26 @@ storiesOf('binary-ui-time-picker', module)
       <View>
         <Text>Static</Text>
       </View>
-      <View>
-        <Text>Available</Text>
-      </View>
       <TimePicker
         hour={22}
         minute={59}
         onChange={action}
+        renderLeft={() => (
+          <Label isBold>
+            Available
+          </Label>
+        )}
       />
-      <View>
-        <Text>Disabled</Text>
-      </View>
       <TimePicker
         hour={22}
         isDisabled
         minute={59}
         onChange={action}
+        renderLeft={() => (
+          <Label isBold>
+            Disabled
+          </Label>
+        )}
       />
       <View>
         <Text>Demo</Text>

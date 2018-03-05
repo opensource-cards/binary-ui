@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import React from 'react';
 import { Text, View } from 'react-native';
 
+import Label from 'binary-ui-components/mobile/Label';
 import DatePicker from 'binary-ui-date-picker';
 
 class DatePickerDemo extends React.Component {
@@ -33,6 +34,11 @@ class DatePickerDemo extends React.Component {
         month={month}
         year={year}
         onChange={this.onChange}
+        renderLeft={() => (
+          <Label isBold>
+            Demo
+          </Label>
+        )}
       />
     );
   }
@@ -44,24 +50,28 @@ storiesOf('binary-ui-date-picker', module)
       <View>
         <Text>Static</Text>
       </View>
-      <View>
-        <Text>Available</Text>
-      </View>
       <DatePicker
         day={23}
         month={1}
         year={2018}
         onChange={action}
+        renderLeft={() => (
+          <Label isBold>
+            Available
+          </Label>
+        )}
       />
-      <View>
-        <Text>Disabled</Text>
-      </View>
       <DatePicker
         day={23}
         isDisabled
         month={1}
         year={2018}
         onChange={action}
+        renderLeft={() => (
+          <Label isBold>
+            Disabled
+          </Label>
+        )}
       />
       <View>
         <Text>Demo</Text>

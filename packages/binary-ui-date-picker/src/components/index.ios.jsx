@@ -1,4 +1,5 @@
 import Button from 'binary-ui-components/mobile/Button';
+import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DatePickerIOS, LayoutAnimation } from 'react-native';
@@ -9,11 +10,13 @@ const propTypes = {
   month: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
+  renderLeft: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   isDisabled: false,
   onChange: () => {},
+  renderLeft: () => null,
 };
 
 /**
@@ -61,16 +64,21 @@ class DatePicker extends React.Component {
   }
 
   render() {
-    const { day, month, year, ...props } = this.props;
+    const { day, month, year, renderLeft, ...props } = this.props;
     const { isVisible } = this.state;
     // A "isDisabled" property is passed to the button.
     // Clicks will be ignored if "isDisabled" has a "true" value.
     return (
       <React.Fragment>
-        <Button
-          {...props}
-          label={`${year}-${month}-${day}`}
-          onPress={this.onPress}
+        <Group
+          renderLeft={renderLeft}
+          renderRight={() => (
+            <Button
+              {...props}
+              label={`${year}-${month}-${day}`}
+              onPress={this.onPress}
+            />
+          )}
         />
         {isVisible ? (
           <DatePickerIOS
