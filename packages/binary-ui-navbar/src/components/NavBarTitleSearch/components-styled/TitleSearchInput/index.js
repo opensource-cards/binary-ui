@@ -9,7 +9,6 @@ export default styled.input`
   background-color: transparent;
   border-radius: inherit;
   height: ${INPUT_HEIGHT - 1}px;
-  outline: 0;
   padding-bottom: 10px;
   padding-left: 5px;
   padding-right: 5px;

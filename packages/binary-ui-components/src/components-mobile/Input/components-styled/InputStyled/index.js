@@ -14,7 +14,6 @@ export default styled.input`
   cursor: text;
   display: inline-block;
   height: ${LIST_ITEM_HEIGHT - 1}px;
-  outline: 0;
   overflow: hidden;
   padding-bottom: 0;
   padding-left: 10px;
@@ -26,7 +25,6 @@ export default styled.input`
   white-space: nowrap;
   width: 100%;
   wrap: soft;
-  &::-webkit-outer-spin-button;
   &::-webkit-inner-spin-button {
     margin: 0;
     -webkit-appearance: none;
