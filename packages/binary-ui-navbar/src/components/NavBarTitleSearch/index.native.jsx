@@ -93,6 +93,7 @@ class NavBarTitleSearch extends React.Component {
           includeFontPadding
           isBold={isBold}
           paddingBottom={0}
+          paddingTop={0}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           returnKeyType="search"
           textAlignVertical="center"

@@ -7,9 +7,9 @@ export default styled.TextInput`
   color: hsl(0, 0%, 0%);
   flex: 9;
   min-height: ${LIST_ITEM_HEIGHT * 2};
-  padding-bottom: 10;
-  padding-left: 10;
-  padding-right: 10;
-  padding-top: 10;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
   text-align-vertical: top;
 `;

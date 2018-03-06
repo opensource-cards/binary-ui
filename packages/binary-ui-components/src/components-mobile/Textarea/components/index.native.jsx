@@ -81,6 +81,8 @@ export default class Textarea extends React.Component {
         <TextareaInput
           {...props}
           multiline
+          paddingBottom={0}
+          paddingTop={0}
           underlineColorAndroid="rgba(0, 0, 0, 0)"
           onBlur={this.onBlur}
           onChangeText={onChange}

@@ -136,6 +136,7 @@ export default class Input extends React.Component {
           isBold={isBold}
           keyboardType={this.getKeyboardType()}
           paddingBottom={0}
+          paddingTop={0}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           secureTextEntry={type === INPUT_FIELD_TYPES.PASSWORD}
           textAlignVertical="center"
