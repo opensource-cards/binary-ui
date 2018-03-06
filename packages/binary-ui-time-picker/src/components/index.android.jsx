@@ -3,6 +3,7 @@ import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TimePickerAndroid } from 'react-native';
+import { getValueValid } from '../utils';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
@@ -28,11 +29,11 @@ class TimePicker extends React.Component {
   }
 
   onPress() {
-    const { onChange } = this.props;
+    const { hour: initHour, minute: initMinute, onChange } = this.props;
     try {
       TimePickerAndroid.open({
-        hour: 14,
-        minute: 0,
+        hour: initHour,
+        minute: initMinute,
         is24Hour: true,
       }).then(({ action, hour, minute }) => {
         if (action === TimePickerAndroid.dismissedAction) {
@@ -58,7 +59,11 @@ class TimePicker extends React.Component {
       <Group
         renderLeft={renderLeft}
         renderRight={() => (
-          <Button {...props} label={`${hour}:${minute}`} onPress={this.onPress} />
+          <Button
+            {...props}
+            label={`${getValueValid(hour)}:${getValueValid(minute)}`}
+            onPress={this.onPress}
+          />
         )}
       />
     );

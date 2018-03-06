@@ -3,6 +3,7 @@ import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DatePickerIOS, LayoutAnimation } from 'react-native';
+import { getValueValid } from '../utils';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
@@ -72,7 +73,11 @@ class TimePicker extends React.Component {
         <Group
           renderLeft={renderLeft}
           renderRight={() => (
-            <Button {...props} label={`${hour}:${minute}`} onPress={this.onPress} />
+            <Button
+              {...props}
+              label={`${getValueValid(hour)}:${getValueValid(minute)}`}
+              onPress={this.onPress}
+            />
           )}
         />
         {isVisible ? (
@@ -81,10 +86,8 @@ class TimePicker extends React.Component {
               dateNow.getFullYear(),
               dateNow.getMonth(),
               dateNow.getDate(),
-              props.hour,
-              props.minute,
-              0,
-              0
+              hour,
+              minute
             )}
             mode="time"
             onDateChange={this.onDateChange}

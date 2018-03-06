@@ -2,6 +2,7 @@ import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Input from '../components-styled/Input';
+import { getValueValid } from '../utils';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
@@ -38,13 +39,6 @@ class TimePicker extends React.Component {
     }
   }
 
-  getValueValid(value) {
-    if (value < 10) {
-      return `0${value}`;
-    }
-    return value;
-  }
-
   render() {
     const { hour, minute, renderLeft, ...props } = this.props;
     return (
@@ -54,7 +48,7 @@ class TimePicker extends React.Component {
           <Input
             {...props}
             type="time"
-            value={`${this.getValueValid(hour)}:${this.getValueValid(minute)}`}
+            value={`${getValueValid(hour)}:${getValueValid(minute)}`}
             onChange={this.onChange}
           />
         )}

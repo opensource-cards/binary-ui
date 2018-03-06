@@ -3,6 +3,7 @@ import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DatePickerIOS, LayoutAnimation } from 'react-native';
+import { getValueValid } from '../utils';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
@@ -36,7 +37,7 @@ class DatePicker extends React.Component {
     const { onChange } = this.props;
     onChange({
       year: date.getFullYear(),
-      month: date.getMonth(),
+      month: date.getMonth() + 1,
       day: date.getDate(),
     });
   }
@@ -75,14 +76,14 @@ class DatePicker extends React.Component {
           renderRight={() => (
             <Button
               {...props}
-              label={`${year}-${month}-${day}`}
+              label={`${year}-${getValueValid(month)}-${getValueValid(day)}`}
               onPress={this.onPress}
             />
           )}
         />
         {isVisible ? (
           <DatePickerIOS
-            date={new Date(year, month, day)}
+            date={new Date(year, month - 1, day)}
             mode="date"
             onDateChange={this.onDateChange}
           />

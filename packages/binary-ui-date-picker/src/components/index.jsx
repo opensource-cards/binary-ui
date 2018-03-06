@@ -3,6 +3,7 @@ import Input from 'binary-ui-components/mobile/Input';
 import isEmpty from 'lodash/isEmpty';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { getValueValid } from '../utils';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
@@ -45,13 +46,6 @@ class DatePicker extends React.Component {
     }
   }
 
-  getValueValid(value) {
-    if (value < 10) {
-      return `0${value}`;
-    }
-    return value;
-  }
-
   render() {
     const { day, month, year, renderLeft, ...props } = this.props;
     return (
@@ -61,9 +55,7 @@ class DatePicker extends React.Component {
           <Input
             {...props}
             type="date"
-            value={`${year}-${this.getValueValid(month)}-${this.getValueValid(
-              day
-            )}`}
+            value={`${year}-${getValueValid(month)}-${getValueValid(day)}`}
             onChange={this.onChange}
           />
         )}

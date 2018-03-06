@@ -3,6 +3,7 @@ import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DatePickerAndroid } from 'react-native';
+import { getValueValid } from '../utils';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
@@ -37,14 +38,14 @@ class DatePicker extends React.Component {
     } = this.props;
     try {
       DatePickerAndroid.open({
-        date: new Date(initYear, initMonth, initDay),
+        date: new Date(initYear, initMonth - 1, initDay),
       }).then(({ action, day, year, month }) => {
         if (action === DatePickerAndroid.dismissedAction) {
           return;
         }
         onChange({
           day,
-          month,
+          month: month + 1,
           year,
         });
       });
@@ -65,7 +66,7 @@ class DatePicker extends React.Component {
         renderRight={() => (
           <Button
             {...props}
-            label={`${year}-${month}-${day}`}
+            label={`${year}-${getValueValid(month)}-${getValueValid(day)}`}
             onPress={this.onPress}
           />
         )}
