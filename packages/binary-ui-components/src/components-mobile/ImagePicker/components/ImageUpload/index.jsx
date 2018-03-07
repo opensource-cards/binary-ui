@@ -12,7 +12,6 @@ const propTypes = {
 const defaultProps = {};
 
 export default class ImageUpload extends React.Component {
-
   constructor(props) {
     super(props);
     this.onDivClick = this.onDivClick.bind(this);

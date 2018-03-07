@@ -7,11 +7,14 @@ import getPosition from '../../utils/position';
 import { isLeftMouseButton, isUndefinedButton } from '../../../../utils/events';
 
 const propTypes = {
+  innerRef: PropTypes.func,
   position: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  innerRef: () => {},
+};
 
 export default class BarWrapper extends React.Component {
 
@@ -28,6 +31,7 @@ export default class BarWrapper extends React.Component {
       holding: false,
       isDomInitialized: false,
     };
+    this.onBarRef = this.onBarRef.bind(this);
     this.onDraggingChanged = this.onDraggingChanged.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onMouseMove = this.onMouseMove.bind(this);
@@ -36,7 +40,6 @@ export default class BarWrapper extends React.Component {
     this.onMouseUp = this.onMouseUp.bind(this);
     this.onTouchCancel = this.onTouchCancel.bind(this);
     this.onTouchEnd = this.onTouchEnd.bind(this);
-    this.onSetBarDom = this.onSetBarDom.bind(this);
   }
 
   componentDidMount() {
@@ -53,6 +56,15 @@ export default class BarWrapper extends React.Component {
     window.removeEventListener('touchend', this.onTouchEnd);
     window.removeEventListener('touchcancel', this.onTouchCancel);
     window.removeEventListener('touchmove', this.onTouchMove);
+  }
+
+  onBarRef(barRef) {
+    const { innerRef } = this.props;
+    this.barRef = barRef;
+    this.setState(() => ({
+      isDomInitialized: true,
+    }));
+    innerRef(barRef);
   }
 
   onMouseMove(e) {
@@ -100,13 +112,6 @@ export default class BarWrapper extends React.Component {
   onDraggingChanged(dragging) {
     this.setState(() => ({
       dragging,
-    }));
-  }
-
-  onSetBarDom(barDom) {
-    this.barDom = barDom;
-    this.setState(() => ({
-      isDomInitialized: true,
     }));
   }
 
@@ -164,11 +169,11 @@ export default class BarWrapper extends React.Component {
     if (!isDomInitialized) {
       return null;
     }
-    const barDomBoundingClientRect = this.barDom.getBoundingClientRect();
+    const barRefBoundingClientRect = this.barRef.getBoundingClientRect();
     return (
       <SliderHandler
-        containerLeft={barDomBoundingClientRect.left}
-        containerWidth={barDomBoundingClientRect.width}
+        containerLeft={barRefBoundingClientRect.left}
+        containerWidth={barRefBoundingClientRect.width}
         dragging={dragging}
         position={position}
         onDraggingChanged={this.onDraggingChanged}
@@ -182,7 +187,7 @@ export default class BarWrapper extends React.Component {
     return (
       <SliderScale
         {...props}
-        innerRef={this.onSetBarDom}
+        innerRef={this.onBarRef}
         onMouseDown={this.onMouseDown}
         onTouchStart={this.onTouchStart}
       >

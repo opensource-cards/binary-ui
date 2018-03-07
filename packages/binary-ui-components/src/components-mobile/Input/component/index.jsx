@@ -43,11 +43,6 @@ export default class Input extends React.Component {
     this.onBlur = this.onBlur.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onFocus = this.onFocus.bind(this);
-    this.onSetInputRef = this.onSetInputRef.bind(this);
-  }
-
-  onSetInputRef(input) {
-    this.input = input;
   }
 
   onBlur(e) {
@@ -115,7 +110,6 @@ export default class Input extends React.Component {
         <InputStyled
           {...props}
           disabled={isDisabled}
-          innerRef={this.onSetInputRef}
           isBold={isBold}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           type={type}
