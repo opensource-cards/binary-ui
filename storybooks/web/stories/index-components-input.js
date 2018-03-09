@@ -100,7 +100,7 @@ storiesOf('binary-ui-components/mobile', module)
       />
       <Input
         type={INPUT_FIELD_TYPES.EMAIL}
-        value="job@try.cards"
+        value="job@andcards.com"
         renderIcon={(props) => (<IconMore {...props} />)}
         onChange={action()}
         onIconClick={action()}
