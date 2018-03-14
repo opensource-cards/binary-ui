@@ -1,9 +1,9 @@
 import Group from 'binary-ui-components/mobile/Group';
 import Input from 'binary-ui-components/mobile/Input';
 import isEmpty from 'lodash/isEmpty';
+import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { getValueValid } from '../utils';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
@@ -55,7 +55,7 @@ class DatePicker extends React.Component {
           <Input
             {...props}
             type="date"
-            value={`${year}-${getValueValid(month)}-${getValueValid(day)}`}
+            value={`${year}-${padStart(month, 2, '0')}-${padStart(day, 2, '0')}`}
             onChange={this.onChange}
           />
         )}

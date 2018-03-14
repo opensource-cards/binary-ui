@@ -1,8 +1,8 @@
 import Group from 'binary-ui-components/mobile/Group';
+import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Input from '../components-styled/Input';
-import { getValueValid } from '../utils';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
@@ -48,7 +48,7 @@ class TimePicker extends React.Component {
           <Input
             {...props}
             type="time"
-            value={`${getValueValid(hour)}:${getValueValid(minute)}`}
+            value={`${padStart(hour, 2, '0')}:${padStart(minute, 2, '0')}`}
             onChange={this.onChange}
           />
         )}

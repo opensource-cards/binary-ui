@@ -1,9 +1,9 @@
 import Button from 'binary-ui-components/mobile/Button';
 import Group from 'binary-ui-components/mobile/Group';
+import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DatePickerAndroid } from 'react-native';
-import { getValueValid } from '../utils';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
@@ -66,7 +66,7 @@ class DatePicker extends React.Component {
         renderRight={() => (
           <Button
             {...props}
-            label={`${year}-${getValueValid(month)}-${getValueValid(day)}`}
+            label={`${year}-${padStart(month, 2, '0')}-${padStart(day, 2, '0')}`}
             onPress={this.onPress}
           />
         )}

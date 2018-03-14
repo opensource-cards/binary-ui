@@ -1,9 +1,9 @@
 import Button from 'binary-ui-components/mobile/Button';
 import Group from 'binary-ui-components/mobile/Group';
+import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DatePickerIOS, LayoutAnimation } from 'react-native';
-import { getValueValid } from '../utils';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
@@ -75,7 +75,7 @@ class TimePicker extends React.Component {
           renderRight={() => (
             <Button
               {...props}
-              label={`${getValueValid(hour)}:${getValueValid(minute)}`}
+              label={`${padStart(hour, 2, '0')}:${padStart(minute, 2, '0')}`}
               onPress={this.onPress}
             />
           )}

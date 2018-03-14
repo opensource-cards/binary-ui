@@ -24,6 +24,7 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "binary-ui-components": "^0.4.31",
+    "lodash": "^4.17.5",
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {

@@ -26,6 +26,7 @@
     "binary-ui-components": "^0.4.31",
     "binary-ui-icons": "^0.4.31",
     "binary-ui-styles": "^0.4.31",
+    "lodash": "^4.17.5",
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {

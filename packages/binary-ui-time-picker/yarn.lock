@@ -986,26 +986,26 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.4.30:
-  version "0.4.30"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.30.tgz#a5930de895746572a73a5f4efdffa5965b887d9b"
+binary-ui-components@^0.4.31:
+  version "0.4.31"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.31.tgz#c67c581c43d0ce44c8b40e630b24f310b4351a5f"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.4.30"
-    binary-ui-styles "^0.4.30"
+    binary-ui-icons "^0.4.31"
+    binary-ui-styles "^0.4.31"
     prop-types "^15.5.10"
     styled-components "^2.0.0"
 
-binary-ui-icons@^0.4.30:
-  version "0.4.30"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.30.tgz#0bb1e3a02aed80557609dccbb3c12097ebd2f9e6"
+binary-ui-icons@^0.4.31:
+  version "0.4.31"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.31.tgz#781a58ca34a1bd9a0012d21e6d802cd128afad20"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.30:
-  version "0.4.30"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.30.tgz#361d5d81438aaea62e61bf264984535feb384326"
+binary-ui-styles@^0.4.31:
+  version "0.4.31"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.31.tgz#787c17a8e31edd459850f020aa961f6b34a83ad7"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -3436,7 +3436,7 @@ lodash@^3.1.0, lodash@^3.2.0, lodash@^3.3.1, lodash@^3.5.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
 
