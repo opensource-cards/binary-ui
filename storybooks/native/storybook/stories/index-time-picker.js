@@ -7,7 +7,6 @@ import Label from 'binary-ui-components/mobile/Label';
 import TimePicker from 'binary-ui-time-picker';
 
 class TimePickerDemo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

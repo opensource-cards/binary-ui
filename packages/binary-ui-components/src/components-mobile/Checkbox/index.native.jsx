@@ -17,7 +17,6 @@ const defaultProps = {
 };
 
 export default class Checkbox extends React.Component {
-
   constructor(props) {
     super(props);
     this.onPress = this.onPress.bind(this);

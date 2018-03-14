@@ -3,7 +3,6 @@ import React from 'react';
 import Storybook from './storybook';
 
 export default class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = { isFontsLoaded: false };

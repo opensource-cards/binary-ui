@@ -10,7 +10,6 @@ import DatePicker from 'binary-ui-date-picker';
 setAddon(infoAddon);
 
 class DatePickerDemo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

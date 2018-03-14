@@ -7,7 +7,6 @@ import Label from 'binary-ui-components/mobile/Label';
 import DatePicker from 'binary-ui-date-picker';
 
 class DatePickerDemo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

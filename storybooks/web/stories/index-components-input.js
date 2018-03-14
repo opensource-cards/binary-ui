@@ -11,7 +11,6 @@ import Input, { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
 setAddon(infoAddon);
 
 class InputDemo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

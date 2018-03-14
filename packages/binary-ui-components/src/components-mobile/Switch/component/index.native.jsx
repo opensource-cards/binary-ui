@@ -2,6 +2,7 @@ import {
   BINARY_COLOR_BLUE_40,
   BINARY_COLOR_GRAY_80,
   EASING_CURVE_COMPONENT_STATE,
+  OPACITY_DISABLED,
 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -35,22 +36,23 @@ const styles = StyleSheet.create({
 
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
+  isDisabled: PropTypes.bool,
   label: PropTypes.string,
   onChange: PropTypes.func,
 };
 
 const defaultProps = {
+  isDisabled: false,
   label: undefined,
   onChange: undefined,
 };
 
 export default class Switch extends React.Component {
-
   constructor(props) {
     super(props);
     this.animatedColor = new Animated.Value(props.isChecked ? 1 : -1);
     this.animatedTransform = new Animated.Value(props.isChecked ? 1 : -1);
-    this.onChange = this.onChange.bind(this);
+    this.onPress = this.onPress.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -72,15 +74,18 @@ export default class Switch extends React.Component {
     ]).start();
   }
 
-  onChange() {
-    const { isChecked, onChange } = this.props;
+  onPress() {
+    const { isChecked, isDisabled, onChange } = this.props;
+    if (isDisabled) {
+      return;
+    }
     if (onChange) {
       onChange(!isChecked);
     }
   }
 
   render() {
-    const { label } = this.props;
+    const { isDisabled, label } = this.props;
     const animatedColorInterpolation = this.animatedColor.interpolate({
       inputRange: [-1, 1],
       outputRange: [BINARY_COLOR_GRAY_80, BINARY_COLOR_BLUE_40],
@@ -91,12 +96,14 @@ export default class Switch extends React.Component {
     });
     return (
       <SwitchWrapper>
-        <SwitchLabel numberOfLines={1} >
-          {label ? label.toUpperCase() : label}
+        <SwitchLabel isBold isDisabled={isDisabled} >
+          {label}
         </SwitchLabel>
-        <TouchableWithoutFeedback onPress={this.onChange} >
+        {isDisabled ? (
           <Animated.View
-            style={[styles.container, { backgroundColor: animatedColorInterpolation }]}
+            style={[styles.container, { backgroundColor: animatedColorInterpolation }, {
+              opacity: OPACITY_DISABLED,
+            }]}
           >
             <Animated.View
               style={[
@@ -109,7 +116,24 @@ export default class Switch extends React.Component {
               />
             </Animated.View>
           </Animated.View>
-        </TouchableWithoutFeedback>
+        ) : (
+          <TouchableWithoutFeedback onPress={this.onPress} >
+            <Animated.View
+              style={[styles.container, { backgroundColor: animatedColorInterpolation }]}
+            >
+              <Animated.View
+                style={[
+                  styles.animatedContainer,
+                  { transform: [{ translateX: animatedTransformInterpolation }],
+                }]}
+              >
+                <Animated.View
+                  style={[styles.circle, { borderColor: animatedColorInterpolation }]}
+                />
+              </Animated.View>
+            </Animated.View>
+          </TouchableWithoutFeedback>
+        )}
       </SwitchWrapper>
     );
   }

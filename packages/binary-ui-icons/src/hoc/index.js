@@ -16,7 +16,6 @@ export default (IconContentComponent) => {
   };
 
   class Index extends React.PureComponent {
-
     constructor(props) {
       super(props);
       this.renderShape = this.renderShape.bind(this);

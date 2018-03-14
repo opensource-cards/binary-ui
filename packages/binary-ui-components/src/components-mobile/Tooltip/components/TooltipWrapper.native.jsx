@@ -27,7 +27,6 @@ const defaultProps = {
 };
 
 export default class TooltipStyled extends React.Component {
-
   constructor(props) {
     super(props);
     this.animatedOpacity = new Animated.Value(props.isVisible ? 1 : 0);

@@ -18,7 +18,6 @@ import NavBarTitleText from 'binary-ui-navbar/components/NavBarTitleText';
 setAddon(infoAddon);
 
 class Demo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

@@ -17,7 +17,6 @@ const defaultProps = {
 };
 
 export default class ImageRead extends React.Component {
-
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);

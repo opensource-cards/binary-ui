@@ -24,7 +24,6 @@ const defaultProps = {
 };
 
 export default class ImagePicker extends React.Component {
-
   constructor(props) {
     super(props);
     this.onImagePress = this.onImagePress.bind(this);

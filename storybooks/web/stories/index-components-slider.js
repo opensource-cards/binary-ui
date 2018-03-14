@@ -12,7 +12,6 @@ import Remove from 'binary-ui-icons/binary/Remove';
 setAddon(infoAddon);
 
 class SliderDemo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

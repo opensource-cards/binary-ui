@@ -10,7 +10,6 @@ import TimePicker from 'binary-ui-time-picker';
 setAddon(infoAddon);
 
 class TimePickerDemo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

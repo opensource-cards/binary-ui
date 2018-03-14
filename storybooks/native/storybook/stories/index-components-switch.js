@@ -6,7 +6,6 @@ import { View } from 'react-native';
 import Switch from 'binary-ui-components/mobile/Switch';
 
 class Demo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -39,6 +38,12 @@ storiesOf('binary-ui-components/mobile', module)
       <Switch
         isChecked
         label="Switch label"
+        onChange={action()}
+      />
+      <Switch
+        isChecked
+        isDisabled
+        label="Switch disabled"
         onChange={action()}
       />
       <Switch

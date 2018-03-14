@@ -15,7 +15,6 @@ import NavBarTitleSearch from 'binary-ui-navbar/components/NavBarTitleSearch';
 import NavBarTitleText from 'binary-ui-navbar/components/NavBarTitleText';
 
 class Demo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

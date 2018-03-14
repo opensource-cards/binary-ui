@@ -9,37 +9,41 @@ import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
+  isDisabled: PropTypes.bool,
   label: PropTypes.string,
   onChange: PropTypes.func,
 };
 
 const defaultProps = {
+  isDisabled: false,
   label: undefined,
   onChange: undefined,
 };
 
 export default class Switch extends React.Component {
-
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
   }
 
   onClick() {
-    const { isChecked, onChange } = this.props;
+    const { isChecked, isDisabled, onChange } = this.props;
+    if (isDisabled) {
+      return;
+    }
     if (onChange) {
       onChange(!isChecked);
     }
   }
 
   render() {
-    const { isChecked, label } = this.props;
+    const { isChecked, isDisabled, label } = this.props;
     return (
       <SwitchWrapper>
-        <SwitchLabel>
-          {label ? label.toUpperCase() : undefined}
+        <SwitchLabel isBold isDisabled={isDisabled} >
+          {label}
         </SwitchLabel>
-        <SwitchToggle>
+        <SwitchToggle isDisabled={isDisabled} >
           <SwitchContainer onClick={this.onClick} >
             <SwitchBackground isChecked={isChecked} />
             <SwitchHandler isChecked={isChecked} />

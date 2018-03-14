@@ -17,7 +17,6 @@ const propTypes = {
 const defaultProps = {};
 
 export default class Slider extends React.Component {
-
   constructor(props) {
     super(props);
     this.onGestureResponderStart = this.onGestureResponderStart.bind(this);

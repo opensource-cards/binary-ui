@@ -24,7 +24,6 @@ const defaultProps = {
 };
 
 export default class Textarea extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

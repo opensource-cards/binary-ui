@@ -17,7 +17,6 @@ const defaultProps = {
 };
 
 export default class BarWrapper extends React.Component {
-
   constructor(props) {
     super(props);
     this.cache = {

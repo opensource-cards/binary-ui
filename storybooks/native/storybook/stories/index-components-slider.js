@@ -8,7 +8,6 @@ import Remove from 'binary-ui-icons/binary/Remove';
 import Slider from 'binary-ui-components/mobile/Slider';
 
 class SliderDemo extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

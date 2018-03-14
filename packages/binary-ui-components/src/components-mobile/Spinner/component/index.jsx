@@ -21,7 +21,6 @@ const defaultProps = {
 };
 
 export default class LogoSvg extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {

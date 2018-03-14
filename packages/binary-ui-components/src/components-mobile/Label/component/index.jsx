@@ -3,12 +3,13 @@ import React from 'react';
 import LabelText from '../components-styled/LabelText';
 
 const propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
 };
 
 const defaultProps = {
+  children: '',
   isBold: false,
   isDisabled: false,
 };
