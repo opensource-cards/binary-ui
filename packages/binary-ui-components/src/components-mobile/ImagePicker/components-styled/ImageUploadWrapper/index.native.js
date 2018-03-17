@@ -1,5 +1,5 @@
 import { BINARY_COLOR_SAND_90 } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 export default styled.TouchableOpacity`

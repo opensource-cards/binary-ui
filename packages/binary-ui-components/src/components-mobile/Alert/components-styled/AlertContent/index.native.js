@@ -1,5 +1,5 @@
 import { FONT_FAMILY_MAIN_400 } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.Text`

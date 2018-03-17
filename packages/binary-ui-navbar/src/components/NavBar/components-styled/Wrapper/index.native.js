@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { STACK_HEADER_HEIGHT } from '../../../../constants';
 
 export default styled.View`

@@ -1,5 +1,5 @@
 import { BINARY_COLOR_GRAY_30 } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_SHIFT, TOOLTIP_ARROW_WIDTH } from '../config';
 
 export default styled.View`

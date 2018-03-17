@@ -1,5 +1,5 @@
 import { BINARY_COLOR_GRAY_30 } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 export default styled.View.attrs({
   style: () => ({

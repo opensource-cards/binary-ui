@@ -1,5 +1,5 @@
 import { BINARY_COLOR_RED_50 } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 export default styled.View`
   background-color: ${BINARY_COLOR_RED_50};

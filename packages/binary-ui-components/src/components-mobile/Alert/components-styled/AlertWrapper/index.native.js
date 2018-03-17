@@ -3,7 +3,7 @@ import {
   BINARY_COLOR_RED_40,
   BINARY_COLOR_YELLOW_50,
 } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.View.attrs({

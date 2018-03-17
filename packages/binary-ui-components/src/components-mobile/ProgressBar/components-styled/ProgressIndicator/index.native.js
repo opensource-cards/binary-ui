@@ -1,5 +1,5 @@
 import { BINARY_COLOR_RED_40 } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { LIST_ITEM_HALF_HEIGHT } from '../../../../utils/styles';
 
 export default styled.View`

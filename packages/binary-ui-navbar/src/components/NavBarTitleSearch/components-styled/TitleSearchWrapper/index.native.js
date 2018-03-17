@@ -1,5 +1,5 @@
 import { getHighlightEditStyle } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { INPUT_HEIGHT } from '../../constants';
 
 export default styled.View`

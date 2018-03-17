@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { FONT_FAMILY_MAIN_400 } from 'binary-ui-styles';
 
 export default styled.Text`

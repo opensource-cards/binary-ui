@@ -1,5 +1,5 @@
 import NotificationIcon from 'binary-ui-components/mobile/NotificationIcon';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 export default styled(NotificationIcon)`
   border-color: #EDEBE6;

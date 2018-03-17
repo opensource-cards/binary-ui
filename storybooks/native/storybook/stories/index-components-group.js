@@ -10,17 +10,16 @@ import Input, { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
 
 import Button from 'binary-ui-components/mobile/Button';
 import Group from 'binary-ui-components/mobile/Group';
-import Select from 'binary-ui-components/mobile/Select';
-import Textline from 'binary-ui-components/mobile/Textline';
+import Label from 'binary-ui-components/mobile/Label';
 
 storiesOf('binary-ui-components/mobile', module)
   .add('Group', () => (
     <View>
       <Group
         renderLeft={() => (
-          <Textline isBold>
+          <Label isBold>
             Left text
-          </Textline>
+          </Label>
         )}
         renderRight={() => (
           <Input
@@ -35,9 +34,9 @@ storiesOf('binary-ui-components/mobile', module)
       />
       <Group
         renderLeft={() => (
-          <Textline isBold>
+          <Label isBold>
             Left text
-          </Textline>
+          </Label>
         )}
         renderRight={() => (
           <Input
@@ -55,11 +54,11 @@ storiesOf('binary-ui-components/mobile', module)
         renderRight={() => (null)}
       />
       <Group
-        renderLeft={() => (<Textline isBold >Label</Textline>)}
-        renderRight={() => (<Textline isEdit >+8227073791</Textline>)}
+        renderLeft={() => (<Label isBold >Label</Label>)}
+        renderRight={() => (<Label isDisabled >+8227073791</Label>)}
       />
       <Group
-        renderLeft={() => (<Textline isBold >Label</Textline>)}
+        renderLeft={() => (<Label isBold >Label</Label>)}
         renderRight={() => (<Button label="Button" isEdit renderIcon={(props) => (<ArrowDown {...props} />)} onPress={action()} />)}
       />
       <Button label="Button" isEdit renderIcon={(props) => (<ArrowDown {...props} />)} onPress={action()} />

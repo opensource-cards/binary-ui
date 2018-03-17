@@ -1,5 +1,5 @@
 import { FONT_SET_BOLD_CSS, FONT_SET_LIGHT_CSS, OPACITY_DISABLED } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 export default styled.Text.attrs({
   numberOfLines: 1,

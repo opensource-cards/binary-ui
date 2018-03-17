@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-date-picker",
-  "version": "0.4.31",
+  "version": "0.5.0",
   "description": "React navigation bar for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
@@ -23,16 +23,16 @@
   "main": "lib/index.js",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "binary-ui-components": "^0.4.31",
-    "binary-ui-icons": "^0.4.31",
-    "binary-ui-styles": "^0.4.31",
+    "binary-ui-components": "^0.5.0",
+    "binary-ui-icons": "^0.5.0",
+    "binary-ui-styles": "^0.5.0",
     "lodash": "^4.17.5",
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {
     "react": "^16.0.0",
     "react-native": "^0.47.0",
-    "styled-components": "^2.0.0"
+    "styled-components": "^3.0.0"
   },
   "devDependencies": {
     "babel": "^6.3.26",
@@ -54,7 +54,7 @@
     "react": "^16.0.0",
     "react-native": "^0.38.0",
     "rimraf": "^2.3.4",
-    "styled-components": "^2.0.0",
+    "styled-components": "^3.0.0",
     "svgs": "^3.1.2"
   }
 }

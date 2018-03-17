@@ -1,5 +1,5 @@
 import { BINARY_COLOR_SAND_90, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 export default styled.View`
   align-items: center;

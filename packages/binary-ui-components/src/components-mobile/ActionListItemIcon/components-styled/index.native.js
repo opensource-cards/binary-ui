@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import ActionListItemIcon from '../components/ActionListItemIcon';
 
 export default styled(ActionListItemIcon)`

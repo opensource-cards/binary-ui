@@ -11,6 +11,7 @@ import Alert, { ALERT_TYPES } from 'binary-ui-components/mobile/Alert';
 import Button from 'binary-ui-components/mobile/Button';
 import Group from 'binary-ui-components/mobile/Group';
 import ImagePicker from 'binary-ui-components/mobile/ImagePicker';
+import Label from 'binary-ui-components/mobile/Label';
 import ProgressBar from 'binary-ui-components/mobile/ProgressBar';
 import Section from 'binary-ui-components/mobile/Section';
 import Select from 'binary-ui-components/mobile/Select';
@@ -19,7 +20,6 @@ import Switch from 'binary-ui-components/mobile/Switch';
 import Textarea from 'binary-ui-components/mobile/Textarea';
 import Tooltip from 'binary-ui-components/mobile/Tooltip';
 import Input, { INPUT_FIELD_TYPES } from 'binary-ui-components/mobile/Input';
-import Textline from 'binary-ui-components/mobile/Textline';
 import React from 'react';
 import styled from 'styled-components';
 import uuid from 'uuid';
@@ -33,9 +33,9 @@ storiesOf('binary-ui-components/mobile', module)
     <div>
       <Group
         renderLeft={() => (
-          <Textline isBold>
+          <Label isBold>
             Left text
-          </Textline>
+          </Label>
         )}
         renderRight={() => (
           <Input
@@ -53,11 +53,11 @@ storiesOf('binary-ui-components/mobile', module)
         renderRight={() => (null)}
       />
       <Group
-        renderLeft={() => (<Textline isBold >Label</Textline>)}
-        renderRight={() => (<Textline isEdit >+8227073791</Textline>)}
+        renderLeft={() => (<Label isBold >Label</Label>)}
+        renderRight={() => (<Label isDisabled >+8227073791</Label>)}
       />
       <Group
-        renderLeft={() => (<Textline isBold >Label</Textline>)}
+        renderLeft={() => (<Label isBold >Label</Label>)}
         renderRight={() => (<Button label="Button" isEdit renderIcon={(props) => (<ArrowDown {...props} />)} onClick={action()} />)}
       />
       <Button label="Button" isEdit renderIcon={(props) => (<ArrowDown {...props} />)} onClick={action()} />

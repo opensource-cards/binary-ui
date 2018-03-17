@@ -4,7 +4,7 @@ import {
   INPUT_RESET_CSS,
   LIST_ITEM_HEIGHT,
 } from 'binary-ui-styles';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 
 export default styled.TextInput`
   ${INPUT_RESET_CSS}

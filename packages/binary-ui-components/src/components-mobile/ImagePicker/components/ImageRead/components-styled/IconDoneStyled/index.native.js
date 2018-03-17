@@ -1,5 +1,5 @@
 import IconDone from 'binary-ui-icons/binary/Done';
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 import { PHOTO_SIZE } from '../../../../utils/styles.native-and-web';
 
 export default styled(IconDone)`
