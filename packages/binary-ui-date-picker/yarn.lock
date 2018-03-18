@@ -994,20 +994,19 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.0.tgz#7f2ad77de8db1c95c613f695f394718f1c130435"
+binary-ui-components@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.1.tgz#5d25a3119f6ab680f55a11c075169dcf938d4e58"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.5.0"
+    binary-ui-icons "^0.5.1"
     binary-ui-styles "^0.5.0"
     prop-types "^15.5.10"
-    react-native-slider "^0.11.0"
     styled-components "^3.0.0"
 
-binary-ui-icons@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.0.tgz#e7df7fc118c1e1d3352121c0433db823b6c7df55"
+binary-ui-icons@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.1.tgz#c5614c83649feb40bc1594b7d6075724422a58d8"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
@@ -4189,7 +4188,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -4260,12 +4259,6 @@ react-clone-referenced-element@^1.0.1:
 react-deep-force-update@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.1.tgz#bcd31478027b64b3339f108921ab520b4313dc2c"
-
-react-native-slider@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/react-native-slider/-/react-native-slider-0.11.0.tgz#b68a0bc43c8422b24cd57947cc5ac2bcdb58fadc"
-  dependencies:
-    prop-types "^15.5.6"
 
 react-native@^0.38.0:
   version "0.38.1"

@@ -20,9 +20,9 @@ const defaultProps = {
 
 const SliderBar = ({ position, style, onChange }) => (
   <Slider
-    step={1}
+    step={0.01}
     minimumValue={0}
-    maximumValue={100}
+    maximumValue={1}
     style={[styles.slider, style]}
     value={position}
     onValueChange={onChange}

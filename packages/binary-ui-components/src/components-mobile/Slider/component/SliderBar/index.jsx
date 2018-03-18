@@ -17,7 +17,7 @@ export default class SliderBar extends React.Component {
 
   onChange(e) {
     const { onChange } = this.props;
-    onChange(Number(e.target.value));
+    onChange(Number(e.target.value) / 100);
   }
 
   render() {
@@ -28,7 +28,7 @@ export default class SliderBar extends React.Component {
         min="0"
         max="100"
         type="range"
-        value={position}
+        value={position * 100}
         onChange={this.onChange}
       />
     );
