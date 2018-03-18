@@ -1,10 +1,10 @@
+import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../../utils/styles';
 
 export default styled.div`
   flex-grow: 0;
   flex-shrink: 0;
-  height: ${LIST_ITEM_HALF_HEIGHT}px;
+  height: ${LIST_ITEM_HEIGHT / 2}px;
   margin: 10px;
-  width: ${LIST_ITEM_HALF_HEIGHT}px;
+  width: ${LIST_ITEM_HEIGHT / 2}px;
 `;

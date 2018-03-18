@@ -17,10 +17,10 @@ const propTypes = {
 const defaultProps = {
   isDisabled: false,
   label: undefined,
-  onChange: undefined,
+  onChange: () => {},
 };
 
-export default class Switch extends React.Component {
+class Switch extends React.Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -31,9 +31,7 @@ export default class Switch extends React.Component {
     if (isDisabled) {
       return;
     }
-    if (onChange) {
-      onChange(!isChecked);
-    }
+    onChange(!isChecked);
   }
 
   render() {
@@ -56,3 +54,5 @@ export default class Switch extends React.Component {
 
 Switch.defaultProps = defaultProps;
 Switch.propTypes = propTypes;
+
+export default Switch;

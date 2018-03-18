@@ -994,26 +994,27 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.4.31:
-  version "0.4.31"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.4.31.tgz#c67c581c43d0ce44c8b40e630b24f310b4351a5f"
+binary-ui-components@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.0.tgz#7f2ad77de8db1c95c613f695f394718f1c130435"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.4.31"
-    binary-ui-styles "^0.4.31"
+    binary-ui-icons "^0.5.0"
+    binary-ui-styles "^0.5.0"
     prop-types "^15.5.10"
-    styled-components "^2.0.0"
+    react-native-slider "^0.11.0"
+    styled-components "^3.0.0"
 
-binary-ui-icons@^0.4.31:
-  version "0.4.31"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.31.tgz#781a58ca34a1bd9a0012d21e6d802cd128afad20"
+binary-ui-icons@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.0.tgz#e7df7fc118c1e1d3352121c0433db823b6c7df55"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.31:
-  version "0.4.31"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.31.tgz#787c17a8e31edd459850f020aa961f6b34a83ad7"
+binary-ui-styles@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.0.tgz#3c017131374a898b5a828cd4678da904fe8cfec4"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -2825,8 +2826,8 @@ iconv-lite@^0.4.17, iconv-lite@^0.4.5, iconv-lite@~0.4.13:
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
 ieee754@^1.1.4:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.10.tgz#719a6f7b026831e64bdb838b0de1bb0029bbf716"
 
 ignore@^3.1.2:
   version "3.3.7"
@@ -4188,7 +4189,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.6.0:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -4259,6 +4260,12 @@ react-clone-referenced-element@^1.0.1:
 react-deep-force-update@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.1.tgz#bcd31478027b64b3339f108921ab520b4313dc2c"
+
+react-native-slider@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/react-native-slider/-/react-native-slider-0.11.0.tgz#b68a0bc43c8422b24cd57947cc5ac2bcdb58fadc"
+  dependencies:
+    prop-types "^15.5.6"
 
 react-native@^0.38.0:
   version "0.38.1"
@@ -5010,19 +5017,6 @@ strip-outer@^1.0.0:
   dependencies:
     escape-string-regexp "^1.0.2"
 
-styled-components@^2.0.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.4.0.tgz#086d0fd483d54638837fca3ea546a030b94adf75"
-  dependencies:
-    buffer "^5.0.3"
-    css-to-react-native "^2.0.3"
-    fbjs "^0.8.9"
-    hoist-non-react-statics "^1.2.0"
-    is-plain-object "^2.0.1"
-    prop-types "^15.5.4"
-    stylis "^3.4.0"
-    supports-color "^3.2.3"
-
 styled-components@^3.0.0:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.2.3.tgz#50f71207320eeb1ef539dec4637f21f5e3c936b4"
@@ -5042,7 +5036,7 @@ stylis-rule-sheet@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/stylis-rule-sheet/-/stylis-rule-sheet-0.0.10.tgz#44e64a2b076643f4b52e5ff71efc04d8c3c4a430"
 
-stylis@^3.4.0, stylis@^3.5.0:
+stylis@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.5.0.tgz#016fa239663d77f868fef5b67cf201c4b7c701e1"
 

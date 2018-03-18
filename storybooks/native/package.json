@@ -34,7 +34,6 @@
     "font-installer": "^0.1.8",
     "react": "16.2.0",
     "react-native": "0.52.0",
-    "react-native-slider": "^0.11.0",
     "styled-components": "^3.0.0",
     "svgs": "^3.1.2"
   }

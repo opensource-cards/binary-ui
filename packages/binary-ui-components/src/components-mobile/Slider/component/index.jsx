@@ -16,12 +16,12 @@ const defaultProps = {
   renderIconRight: undefined,
 };
 
-const Slider = ({ position, renderIconLeft, renderIconRight, onChange }) => (
+const Slider = ({ renderIconLeft, renderIconRight, ...props }) => (
   <SliderContainer>
     <SliderScaleIcon>
       {renderIconLeft ? renderIconLeft() : null}
     </SliderScaleIcon>
-    <SliderBar position={position} onChange={onChange} />
+    <SliderBar {...props} />
     <SliderScaleIcon>
       {renderIconRight ? renderIconRight() : null}
     </SliderScaleIcon>

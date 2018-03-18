@@ -21,5 +21,6 @@ storiesOf('binary-ui-components/mobile', module)
       <Spinner color="#d3d3d3" size={100} />
       <br />
       <Spinner color="#c90335" size={100} />
+      <br />
     </div>
   )));

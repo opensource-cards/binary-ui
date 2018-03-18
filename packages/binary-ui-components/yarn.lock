@@ -1081,16 +1081,16 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-icons@^0.4.31:
-  version "0.4.31"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.4.31.tgz#781a58ca34a1bd9a0012d21e6d802cd128afad20"
+binary-ui-icons@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.0.tgz#e7df7fc118c1e1d3352121c0433db823b6c7df55"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.4.31:
-  version "0.4.31"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.4.31.tgz#787c17a8e31edd459850f020aa961f6b34a83ad7"
+binary-ui-styles@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.0.tgz#3c017131374a898b5a828cd4678da904fe8cfec4"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -2642,8 +2642,8 @@ iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
 ieee754@^1.1.4:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.10.tgz#719a6f7b026831e64bdb838b0de1bb0029bbf716"
 
 ignore@^3.1.2:
   version "3.3.7"
@@ -3964,7 +3964,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:
@@ -4039,12 +4039,6 @@ react-deep-force-update@^1.0.0:
 react-devtools-core@2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-2.3.1.tgz#dc83aba85735effe5e1dc386a1614cb5e8d0047d"
-
-react-native-slider@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/react-native-slider/-/react-native-slider-0.11.0.tgz#b68a0bc43c8422b24cd57947cc5ac2bcdb58fadc"
-  dependencies:
-    prop-types "^15.5.6"
 
 react-native@^0.47.0:
   version "0.47.2"

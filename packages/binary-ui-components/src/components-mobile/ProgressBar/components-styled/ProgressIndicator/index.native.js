@@ -1,6 +1,5 @@
-import { BINARY_COLOR_RED_40 } from 'binary-ui-styles';
+import { BINARY_COLOR_RED_40, LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
-import { LIST_ITEM_HALF_HEIGHT } from '../../../../utils/styles';
 
 export default styled.View`
   ${props => (props.progress >= 90
@@ -9,6 +8,6 @@ export default styled.View`
   )}
   height: 1px;
   position: absolute;
-  top: ${LIST_ITEM_HALF_HEIGHT};
+  top: ${LIST_ITEM_HEIGHT / 2};
   width: ${props => props.progress}%;
 `;
