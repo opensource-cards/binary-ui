@@ -615,9 +615,9 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.1.tgz#5d25a3119f6ab680f55a11c075169dcf938d4e58"
+binary-ui-components@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.2.tgz#4571c025375ab16ca57a5c9df394b4f776b27cb2"
   dependencies:
     babel-runtime "^6.23.0"
     binary-ui-icons "^0.5.1"

@@ -91,6 +91,7 @@ import SettingsAlt from 'binary-ui-icons/binary/SettingsAlt';
 import Share from 'binary-ui-icons/binary/Share';
 import ShareAlt from 'binary-ui-icons/binary/ShareAlt';
 import Skype from 'binary-ui-icons/binary/Skype';
+import SmartLock from 'binary-ui-icons/binary/SmartLock';
 import Stack from 'binary-ui-icons/binary/Stack';
 import StackFull from 'binary-ui-icons/binary/StackFull';
 import StackNew from 'binary-ui-icons/binary/StackNew';
@@ -189,6 +190,7 @@ storiesOf('binary-ui-icons/binary', module)
       <SettingsAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Share color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ShareAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <SmartLock color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Stack color={COLOR} size={SIZE} onPress={action('clicked')} />
       <StackFull color={COLOR} size={SIZE} onPress={action('clicked')} />
       <StackNew color={COLOR} size={SIZE} onPress={action('clicked')} />
