@@ -6,6 +6,7 @@ import INPUT_FIELD_TYPES from '../constants/text-field-component-types';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
+  autoCapitalize: PropTypes.string,
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isValid: PropTypes.bool,
@@ -21,6 +22,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  autoCapitalize: 'sentences',
   isBold: false,
   isDisabled: false,
   isValid: true,
@@ -69,22 +71,6 @@ export default class Input extends React.Component {
     }));
   }
 
-  getAutoCapitalize() {
-    const { type } = this.props;
-    switch (type) {
-      case INPUT_FIELD_TYPES.EMAIL:
-      case INPUT_FIELD_TYPES.LINK:
-      case INPUT_FIELD_TYPES.NUMBER:
-      case INPUT_FIELD_TYPES.PASSWORD:
-      case INPUT_FIELD_TYPES.TEL:
-        return 'none';
-      case INPUT_FIELD_TYPES.TEXT:
-        return 'sentences';
-      default:
-        return 'none';
-    }
-  }
-
   getKeyboardType() {
     const { type } = this.props;
     switch (type) {
@@ -102,6 +88,7 @@ export default class Input extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      autoCapitalize,
       isBold,
       isDisabled,
       isValid,
@@ -130,7 +117,7 @@ export default class Input extends React.Component {
         ) : null}
         <InputStyled
           {...props}
-          autoCapitalize={this.getAutoCapitalize()}
+          autoCapitalize={autoCapitalize}
           editable={!isDisabled}
           includeFontPadding
           isBold={isBold}
