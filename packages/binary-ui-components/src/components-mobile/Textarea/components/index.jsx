@@ -92,9 +92,9 @@ export default class Textarea extends React.Component {
           onChange={this.onChange}
           onFocus={this.onFocus}
         />
-        {renderIcon && (
+        {renderIcon ? (
           <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
-        )}
+        ) : null}
       </TextareaWrapperStyled>
     );
   }
