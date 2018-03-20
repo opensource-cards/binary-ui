@@ -6,6 +6,7 @@ import { action } from '@storybook/addon-actions';
 
 import Add from 'binary-ui-icons/binary/Add';
 import AddCard from 'binary-ui-icons/binary/AddCard';
+import AddEmoji from 'binary-ui-icons/binary/AddEmoji';
 import Apple from 'binary-ui-icons/binary/Apple';
 import AppleAlt from 'binary-ui-icons/binary/AppleAlt';
 import Approval from 'binary-ui-icons/binary/Approval';
@@ -37,6 +38,7 @@ import DeletedAlt from 'binary-ui-icons/binary/DeletedAlt';
 import Designer from 'binary-ui-icons/binary/Designer';
 import Done from 'binary-ui-icons/binary/Done';
 import Drawer from 'binary-ui-icons/binary/Drawer';
+import Event from 'binary-ui-icons/binary/Event';
 import Facebook from 'binary-ui-icons/binary/Facebook';
 import Facetime from 'binary-ui-icons/binary/Facetime';
 import FacetimeAlt from 'binary-ui-icons/binary/FacetimeAlt';
@@ -97,6 +99,7 @@ import StackFull from 'binary-ui-icons/binary/StackFull';
 import StackNew from 'binary-ui-icons/binary/StackNew';
 import StackUnavailable from 'binary-ui-icons/binary/StackUnavailable';
 import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
+import Statistics from 'binary-ui-icons/binary/Statistics';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
 import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
@@ -127,6 +130,7 @@ storiesOf('binary-ui-icons/binary', module)
     <View style={{flexWrap: 'wrap', flexDirection: 'row'}}>
       <Add color={COLOR} size={SIZE} onPress={action('clicked')} />
       <AddCard color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <AddEmoji color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Approval color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowDown color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowLeft color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -152,6 +156,7 @@ storiesOf('binary-ui-icons/binary', module)
       <DeletedAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Done color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Drawer color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Event color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Favorites color={COLOR} size={SIZE} onPress={action('clicked')} />
       <FavoritesAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Info color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -196,6 +201,7 @@ storiesOf('binary-ui-icons/binary', module)
       <StackNew color={COLOR} size={SIZE} onPress={action('clicked')} />
       <StackUnavailable color={COLOR} size={SIZE} onPress={action('clicked')} />
       <StackUnavailableAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Statistics color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Store color={COLOR} size={SIZE} onPress={action('clicked')} />
       <StoreAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <PhoneCard color={COLOR} size={SIZE} onPress={action('clicked')} />

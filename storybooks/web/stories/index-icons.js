@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import Add from 'binary-ui-icons/binary/Add';
 import AddCard from 'binary-ui-icons/binary/AddCard';
+import AddEmoji from 'binary-ui-icons/binary/AddEmoji';
 import Apple from 'binary-ui-icons/binary/Apple';
 import AppleAlt from 'binary-ui-icons/binary/AppleAlt';
 import Approval from 'binary-ui-icons/binary/Approval';
@@ -35,6 +36,7 @@ import DeletedAlt from 'binary-ui-icons/binary/DeletedAlt';
 import Designer from 'binary-ui-icons/binary/Designer';
 import Done from 'binary-ui-icons/binary/Done';
 import Drawer from 'binary-ui-icons/binary/Drawer';
+import Event from 'binary-ui-icons/binary/Event';
 import Facebook from 'binary-ui-icons/binary/Facebook';
 import Facetime from 'binary-ui-icons/binary/Facetime';
 import FacetimeAlt from 'binary-ui-icons/binary/FacetimeAlt';
@@ -95,6 +97,7 @@ import StackFull from 'binary-ui-icons/binary/StackFull';
 import StackNew from 'binary-ui-icons/binary/StackNew';
 import StackUnavailable from 'binary-ui-icons/binary/StackUnavailable';
 import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
+import Statistics from 'binary-ui-icons/binary/Statistics';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
 import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
@@ -133,6 +136,7 @@ storiesOf('binary-ui-icons/binary', module)
     <div style={{ display: 'grid', fontFamily: 'sans-serif', fontSize: 10, textAlign: 'center', gridGap: 30, gridTemplateColumns: 'repeat(auto-fit, 50px)' }}>
       <div><Add color={COLOR} size={SIZE} />Add</div>
       <div><AddCard color={COLOR} size={SIZE} />AddCard</div>
+      <div><AddEmoji color={COLOR} size={SIZE} />AddEmoji</div>
       <div><ArrowDown color={COLOR} size={SIZE} />ArrowDown</div>
       <div><ArrowLeft color={COLOR} size={SIZE} />ArrowLeft</div>
       <div><ArrowRight color={COLOR} size={SIZE} />ArrowRight</div>
@@ -158,6 +162,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><DeletedAlt color={COLOR} size={SIZE} />DeletedAlt</div>
       <div><Done color={COLOR} size={SIZE} />Done</div>
       <div><Drawer color={COLOR} size={SIZE} />Drawer</div>
+      <div><Event color={COLOR} size={SIZE} />Event</div>
       <div><Favorites color={COLOR} size={SIZE} />Favorites</div>
       <div><FavoritesAlt color={COLOR} size={SIZE} />FavoritesAlt</div>
       <div><Info color={COLOR} size={SIZE} />Info</div>
@@ -202,6 +207,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><StackNew color={COLOR} size={SIZE} />StackNew</div>
       <div><StackUnavailable color={COLOR} size={SIZE} />StackUnavailable</div>
       <div><StackUnavailableAlt color={COLOR} size={SIZE} />StackUnavailableAlt</div>
+      <div><Statistics color={COLOR} size={SIZE} />Statistics</div>
       <div><Store color={COLOR} size={SIZE} />Store</div>
       <div><StoreAlt color={COLOR} size={SIZE} />StoreAlt</div>
       <div><PhoneCard color={COLOR} size={SIZE} />PhoneCard</div>
