@@ -23,9 +23,9 @@ const Viewline = ({ children, isEdit, renderIcon, onIconClick }) => (
     <ViewContent>
       {children}
     </ViewContent>
-    {renderIcon && (
+    {renderIcon ? (
       <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
-    )}
+    ) : null}
   </ViewWrapper>
 );
 
