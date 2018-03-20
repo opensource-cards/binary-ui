@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-time-picker",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "React navigation bar for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
@@ -23,7 +23,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "binary-ui-components": "^0.5.2",
+    "binary-ui-components": "^0.5.3",
     "lodash": "^4.17.5",
     "prop-types": "^15.5.10"
   },
