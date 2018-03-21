@@ -1081,16 +1081,16 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-icons@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.1.tgz#c5614c83649feb40bc1594b7d6075724422a58d8"
+binary-ui-icons@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.3.tgz#d4f69641f5c6c9965bc7ce073a9698d6c013ce68"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.0.tgz#3c017131374a898b5a828cd4678da904fe8cfec4"
+binary-ui-styles@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.3.tgz#b202ebe4dd99885b8442e7c1f7d99971009aad71"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -4366,8 +4366,8 @@ resolve-url@^0.2.1:
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
 
 resolve@^1.1.6:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.6.0.tgz#0fbd21278b27b4004481c395349e7aba60a9ff5c"
   dependencies:
     path-parse "^1.0.5"
 

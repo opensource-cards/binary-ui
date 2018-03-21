@@ -994,26 +994,26 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.2.tgz#4571c025375ab16ca57a5c9df394b4f776b27cb2"
+binary-ui-components@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.3.tgz#950cc5f007b2c70aa3f74bc99b96da0c9411489c"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.5.1"
-    binary-ui-styles "^0.5.0"
+    binary-ui-icons "^0.5.3"
+    binary-ui-styles "^0.5.3"
     prop-types "^15.5.10"
     styled-components "^3.0.0"
 
-binary-ui-icons@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.1.tgz#c5614c83649feb40bc1594b7d6075724422a58d8"
+binary-ui-icons@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.3.tgz#d4f69641f5c6c9965bc7ce073a9698d6c013ce68"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.0.tgz#3c017131374a898b5a828cd4678da904fe8cfec4"
+binary-ui-styles@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.3.tgz#b202ebe4dd99885b8442e7c1f7d99971009aad71"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -3118,8 +3118,8 @@ is-typedarray@~1.0.0:
   resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
 
 is-url@^1.2.0:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/is-url/-/is-url-1.2.2.tgz#498905a593bf47cc2d9e7f738372bbf7696c7f26"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/is-url/-/is-url-1.2.3.tgz#42f6487f61795154b098246954412048f7ab120b"
 
 is-utf8@^0.2.0:
   version "0.2.1"
@@ -4580,8 +4580,8 @@ resolve@1.1.7:
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
 resolve@^1.1.3, resolve@^1.1.6:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.6.0.tgz#0fbd21278b27b4004481c395349e7aba60a9ff5c"
   dependencies:
     path-parse "^1.0.5"
 

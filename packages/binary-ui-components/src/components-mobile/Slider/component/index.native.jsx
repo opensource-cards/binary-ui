@@ -1,29 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Slider, StyleSheet } from 'react-native';
-
-const styles = StyleSheet.create({
-  slider: {
-    flex: 9,
-  },
-});
+import { Slider } from 'react-native';
 
 const propTypes = {
   position: PropTypes.number.isRequired,
-  style: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
-  style: undefined,
 };
 
-const SliderBar = ({ position, style, onChange }) => (
+const SliderBar = ({ position, onChange, ...props }) => (
   <Slider
-    step={0.01}
+    {...props}
     minimumValue={0}
     maximumValue={1}
-    style={[styles.slider, style]}
+    step={0.01}
     value={position}
     onValueChange={onChange}
   />
