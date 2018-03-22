@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import InputRange from './components-styled/InputRange';
+import InputRange from '../components-styled/InputRange';
 
 const propTypes = {
   position: PropTypes.number.isRequired,
