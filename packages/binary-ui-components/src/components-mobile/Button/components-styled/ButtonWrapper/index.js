@@ -9,6 +9,8 @@ export default styled.div`
   cursor: default;
   display: flex;
   flex-direction: row-reverse;
+  flex-grow: 0;
+  flex-shrink: 0;
   height: ${LIST_ITEM_HEIGHT}px;
   padding-left: 10px;
   width: 100%;

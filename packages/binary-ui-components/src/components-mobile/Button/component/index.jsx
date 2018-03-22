@@ -7,27 +7,38 @@ import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyledWrapper from '../components-styled/IconStyledWrapper';
 
 const propTypes = {
-  color: PropTypes.string,
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
   isValid: PropTypes.bool,
   label: PropTypes.string.isRequired,
+  labelStyle: PropTypes.object,
   renderIcon: PropTypes.func,
   onClick: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
-  color: '#000000',
   isBold: false,
   isDisabled: false,
   isEdit: true,
   isValid: true,
+  labelStyle: undefined,
   renderIcon: (props) => (<ArrowRight {...props} />),
 };
 
-const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon, onClick }) => (
+const Button = ({
+  isBold,
+  isDisabled,
+  isEdit,
+  isValid,
+  label,
+  labelStyle,
+  renderIcon,
+  onClick,
+  ...props,
+}) => (
   <ButtonWrapper
+    {...props}
     isEdit={isEdit}
     isTapHighlight={!isDisabled}
     isTypingHighlight={false}
@@ -36,12 +47,11 @@ const Button = ({ color, isBold, isDisabled, isEdit, isValid, label, renderIcon,
   >
     <IconStyledWrapper>
       {renderIcon({
-        color,
         opacity: isDisabled ? OPACITY_DISABLED : 1,
         size: 18,
       })}
     </IconStyledWrapper>
-    <ButtonText isBold={isBold} isDisabled={isDisabled} styleColor={color} >
+    <ButtonText isBold={isBold} isDisabled={isDisabled} style={labelStyle}>
       {isBold ? label.toUpperCase() : label}
     </ButtonText>
   </ButtonWrapper>

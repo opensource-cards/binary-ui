@@ -2,7 +2,6 @@ import { FONT_SET_BOLD_CSS, FONT_SET_LIGHT_CSS, OPACITY_DISABLED } from 'binary-
 import styled from 'styled-components';
 
 export default styled.Text`
-  color: ${props => props.styleColor};
   opacity: ${props => (props.isDisabled ? OPACITY_DISABLED : '1')};
   flex: 9;
   padding-left: 10;

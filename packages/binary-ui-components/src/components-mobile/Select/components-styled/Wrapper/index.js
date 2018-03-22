@@ -11,12 +11,5 @@ export default styled.div`
   padding-left: 10px;
   position: relative;
   width: 100%;
-  ${props => (
-    getHighlightEditStyle(
-      props.isEdit,
-      props.isValid,
-      props.isTypingHighlight,
-      props.styleBorderColor
-    )
-  )}
+  ${getHighlightEditStyle(false, true, false, undefined)}
 `;

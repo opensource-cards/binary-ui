@@ -18,7 +18,9 @@ export default class App extends React.Component {
       "FiraSans-Medium": require("./node_modules/font-installer/lib/fira-sans/resources/FiraSans-Medium.ttf"),
       "FiraSans-Regular": require("./node_modules/font-installer/lib/fira-sans/resources/FiraSans-Regular.ttf"),
       "FiraSans-SemiBold": require("./node_modules/font-installer/lib/fira-sans/resources/FiraSans-SemiBold.ttf"),
-      "FiraSans-Thin": require("./node_modules/font-installer/lib/fira-sans/resources/FiraSans-Thin.ttf")
+      "FiraSans-Thin": require("./node_modules/font-installer/lib/fira-sans/resources/FiraSans-Thin.ttf"),
+      "PTSans-Narrow": require("./node_modules/font-installer/lib/pt-sans-narrow/resources/PTSans-Narrow.ttf"),
+      "PTSans-NarrowBold": require("./node_modules/font-installer/lib/pt-sans-narrow/resources/PTSans-NarrowBold.ttf")
     }).then(() => {
       this.setState({ isFontsLoaded: true });
     });

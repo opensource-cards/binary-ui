@@ -10,8 +10,8 @@ const propTypes = {
   isDisabled: PropTypes.bool,
   month: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired,
-  renderLeft: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
+  renderLeft: PropTypes.func,
 };
 
 const defaultProps = {

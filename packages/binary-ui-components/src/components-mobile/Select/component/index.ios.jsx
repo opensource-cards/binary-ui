@@ -1,45 +1,29 @@
 import Button from 'binary-ui-components/mobile/Button';
 import Group from 'binary-ui-components/mobile/Group';
-import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { DatePickerIOS, LayoutAnimation } from 'react-native';
+import { LayoutAnimation, Picker } from 'react-native';
 
 const propTypes = {
-  day: PropTypes.number.isRequired,
-  isDisabled: PropTypes.bool,
-  month: PropTypes.number.isRequired,
-  year: PropTypes.number.isRequired,
-  onChange: PropTypes.func,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  selected: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
   renderLeft: PropTypes.func,
 };
 
-const defaultProps = {
-  isDisabled: false,
-  onChange: () => {},
-  renderLeft: () => null,
-};
+const defaultProps = {};
 
 /**
- * DatePickerIOS: https://facebook.github.io/react-native/docs/datepickerios.html
+ * TimePickerAndroid: https://facebook.github.io/react-native/docs/timepickerandroid.html
  */
-class DatePicker extends React.Component {
+class Select extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isVisible: false,
     };
-    this.onDateChange = this.onDateChange.bind(this);
     this.onPress = this.onPress.bind(this);
-  }
-
-  onDateChange(date) {
-    const { onChange } = this.props;
-    onChange({
-      year: date.getFullYear(),
-      month: date.getMonth() + 1,
-      day: date.getDate(),
-    });
+    this.onValueChange = this.onValueChange.bind(this);
   }
 
   onPress() {
@@ -64,11 +48,17 @@ class DatePicker extends React.Component {
     }));
   }
 
+  onValueChange(itemValue) {
+    const { onChange } = this.props;
+    onChange(itemValue);
+  }
+
   render() {
-    const { day, month, year, renderLeft, ...props } = this.props;
+    /* eslint-disable no-unused-vars */
+    const { items, selected, onChange, renderLeft, ...props } = this.props;
+    /* eslint-enable no-unused-vars */
     const { isVisible } = this.state;
-    // A "isDisabled" property is passed to the button.
-    // Clicks will be ignored if "isDisabled" has a "true" value.
+    const itemSelected = items.find(item => item.value === selected);
     return (
       <React.Fragment>
         <Group
@@ -76,24 +66,28 @@ class DatePicker extends React.Component {
           renderRight={() => (
             <Button
               {...props}
-              label={`${year}-${padStart(month, 2, '0')}-${padStart(day, 2, '0')}`}
+              label={itemSelected ? itemSelected.label : undefined}
               onPress={this.onPress}
             />
           )}
         />
         {isVisible ? (
-          <DatePickerIOS
-            date={new Date(year, month - 1, day)}
-            mode="date"
-            onDateChange={this.onDateChange}
-          />
+          <Picker
+            mode="dropdown"
+            selectedValue={selected}
+            onValueChange={this.onValueChange}
+          >
+            {items.map(item => (
+              <Picker.Item key={item.key} label={item.label} value={item.value} />
+            ))}
+          </Picker>
         ) : null}
       </React.Fragment>
     );
   }
 }
 
-DatePicker.propTypes = propTypes;
-DatePicker.defaultProps = defaultProps;
+Select.propTypes = propTypes;
+Select.defaultProps = defaultProps;
 
-export default DatePicker;
+export default Select;

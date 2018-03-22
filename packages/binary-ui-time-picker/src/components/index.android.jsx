@@ -9,8 +9,8 @@ const propTypes = {
   hour: PropTypes.number.isRequired,
   isDisabled: PropTypes.bool,
   minute: PropTypes.number.isRequired,
-  onChange: PropTypes.func.isRequired,
-  renderLeft: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
+  renderLeft: PropTypes.func,
 };
 
 const defaultProps = {

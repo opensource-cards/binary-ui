@@ -8,7 +8,6 @@ import styled from 'styled-components';
 
 export default styled.div`
   ${props => (props.isBold ? FONT_SET_BOLD_CSS : FONT_SET_LIGHT_CSS)}
-  color: ${props => props.styleColor};
   display: inline-block;
   height: ${LIST_ITEM_HEIGHT}px;
   line-height: ${LIST_ITEM_HEIGHT}px;

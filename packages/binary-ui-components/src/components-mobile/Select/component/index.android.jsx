@@ -1,8 +1,7 @@
 import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
-import SelectIcon from '../components-styled/SelectIcon';
-import SelectInput from '../components-styled/SelectInput';
+import { Picker } from 'react-native';
 import Wrapper from '../components-styled/Wrapper';
 
 const propTypes = {
@@ -14,15 +13,18 @@ const propTypes = {
 
 const defaultProps = {};
 
+/**
+ * TimePickerAndroid: https://facebook.github.io/react-native/docs/timepickerandroid.html
+ */
 class Select extends React.Component {
   constructor(props) {
     super(props);
-    this.onChange = this.onChange.bind(this);
+    this.onValueChange = this.onValueChange.bind(this);
   }
 
-  onChange(e) {
+  onValueChange(itemValue) {
     const { onChange } = this.props;
-    onChange(e.target.value);
+    onChange(itemValue);
   }
 
   render() {
@@ -33,15 +35,16 @@ class Select extends React.Component {
       <Group
         renderLeft={renderLeft}
         renderRight={() => (
-          <Wrapper {...props} >
-            <SelectIcon size={18} />
-            <SelectInput value={selected} onChange={this.onChange} >
-              {items.map((listItem) => (
-                <option key={listItem.key} value={listItem.value} >
-                  {listItem.label}
-                </option>
+          <Wrapper>
+            <Picker
+              mode="dropdown"
+              selectedValue={selected}
+              onValueChange={this.onValueChange}
+            >
+              {items.map(item => (
+                <Picker.Item key={item.key} label={item.label} value={item.value} />
               ))}
-            </SelectInput>
+            </Picker>
           </Wrapper>
         )}
       />

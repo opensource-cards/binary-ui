@@ -14,6 +14,7 @@ import './index-components-imagepicker';
 import './index-components-notification-icon';
 import './index-components-progressbar';
 import './index-components-section';
+import './index-components-select';
 import './index-components-slider';
 import './index-components-spinner';
 import './index-components-switch';

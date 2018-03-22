@@ -3,19 +3,18 @@ import { OPACITY_DISABLED } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight } from 'react-native';
-import ButtonContentHighlight from '../components-styled/ButtonContentHighlight.native';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyledWrapper from '../components-styled/IconStyledWrapper';
 import { TAP_HIGHLIGHT_COLOR } from '../utils/styles';
 
 const propTypes = {
-  color: PropTypes.string,
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
   isValid: PropTypes.bool,
   label: PropTypes.string.isRequired,
+  labelStyle: PropTypes.object,
   renderIcon: PropTypes.func,
   onLongPress: PropTypes.func,
   onPress: PropTypes.func,
@@ -24,11 +23,11 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: '#000000',
   isBold: false,
   isDisabled: false,
   isEdit: true,
   isValid: true,
+  labelStyle: undefined,
   renderIcon: (props) => (<ArrowRight {...props} />),
   onLongPress: undefined,
   onPress: undefined,
@@ -37,12 +36,12 @@ const defaultProps = {
 };
 
 const Button = ({
-  color,
   isBold,
   isDisabled,
   isEdit,
   isValid,
   label,
+  labelStyle,
   renderIcon,
   onLongPress,
   onPress,
@@ -51,32 +50,34 @@ const Button = ({
   ...props,
 }) => (
   <TouchableHighlight
-    {...props}
     underlayColor={!isDisabled ? TAP_HIGHLIGHT_COLOR : undefined}
     onLongPress={!isDisabled ? onLongPress : undefined}
     onPress={!isDisabled ? onPress : undefined}
     onPressIn={!isDisabled ? onPressIn : undefined}
     onPressOut={!isDisabled ? onPressOut : undefined}
   >
-    <ButtonContentHighlight>
-      <ButtonWrapper
-        isEdit={isEdit}
-        isTapHighlight={!isDisabled}
-        isTypingHighlight={false}
-        isValid={isValid}
+    <ButtonWrapper
+      {...props}
+      isEdit={isEdit}
+      isTapHighlight={!isDisabled}
+      isTypingHighlight={false}
+      isValid={isValid}
+    >
+      <IconStyledWrapper>
+        {renderIcon({
+          opacity: isDisabled ? OPACITY_DISABLED : 1,
+          size: 18,
+        })}
+      </IconStyledWrapper>
+      <ButtonText
+        isBold={isBold}
+        isDisabled={isDisabled}
+        numberOfLines={1}
+        style={labelStyle}
       >
-        <IconStyledWrapper>
-          {renderIcon({
-            color,
-            opacity: isDisabled ? OPACITY_DISABLED : 1,
-            size: 18,
-          })}
-        </IconStyledWrapper>
-        <ButtonText isBold={isBold} isDisabled={isDisabled} numberOfLines={1} styleColor={color} >
-          {isBold ? label.toUpperCase() : label}
-        </ButtonText>
-      </ButtonWrapper>
-    </ButtonContentHighlight>
+        {isBold ? label.toUpperCase() : label}
+      </ButtonText>
+    </ButtonWrapper>
   </TouchableHighlight>
 );
 
