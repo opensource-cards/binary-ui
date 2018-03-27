@@ -7,8 +7,7 @@ const propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-const defaultProps = {
-};
+const defaultProps = {};
 
 const SliderBar = ({ position, onChange, ...props }) => (
   <Slider

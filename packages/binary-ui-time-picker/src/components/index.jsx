@@ -68,7 +68,7 @@ class TimePicker extends React.Component {
           <Input
             {...props}
             isDisabled={isDisabled}
-            step={minuteInterval * 60}
+            step={minuteInterval ? minuteInterval * 60 : undefined}
             type="time"
             value={`${padStart(hour, 2, '0')}:${padStart(minute, 2, '0')}`}
             onChange={this.onChange}
