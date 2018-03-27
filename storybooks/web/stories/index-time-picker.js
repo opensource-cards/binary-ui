@@ -14,7 +14,7 @@ class TimePickerDemo extends React.Component {
     super(props);
     this.state = {
       hour: 22,
-      minute: 59,
+      minute: 45,
     };
     this.onChange = this.onChange.bind(this);
   }
@@ -31,7 +31,9 @@ class TimePickerDemo extends React.Component {
     return (
       <TimePicker
         hour={hour}
+        locale="uk"
         minute={minute}
+        minuteInterval={15}
         onChange={this.onChange}
         renderLeft={() => (
           <Label isBold>
@@ -49,7 +51,9 @@ storiesOf('binary-ui-time-picker', module)
       <div>Preview</div>
       <TimePicker
         hour={22}
-        minute={59}
+        locale="uk"
+        minute={45}
+        minuteInterval={15}
         onChange={action}
         renderLeft={() => (
           <Label isBold>
@@ -60,7 +64,9 @@ storiesOf('binary-ui-time-picker', module)
       <TimePicker
         hour={22}
         isDisabled
-        minute={59}
+        locale="uk"
+        minute={45}
+        minuteInterval={15}
         onChange={action}
         renderLeft={() => (
           <Label isBold>

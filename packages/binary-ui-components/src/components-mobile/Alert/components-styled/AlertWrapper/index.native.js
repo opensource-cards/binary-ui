@@ -6,17 +6,10 @@ import {
 import styled from 'styled-components';
 import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
-export default styled.View.attrs({
-  style: () => ({
-    shadowOffset: { width: 0, height: 1 },
-  }),
-})`
+export default styled.View`
   border-radius: 5;
   flex-direction: row;
   justify-content: center;
-  shadow-color: #000;
-  shadow-opacity: 0.1;
-  shadow-radius: 2;
   margin-top: 3px;
   padding: 0 5px;
   elevation: 1;

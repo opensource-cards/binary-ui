@@ -33,6 +33,7 @@ class DatePickerDemo extends React.Component {
     return (
       <DatePicker
         day={day}
+        locale="uk"
         month={month}
         year={year}
         onChange={this.onChange}
@@ -52,6 +53,7 @@ storiesOf('binary-ui-date-picker', module)
       <div>Preview</div>
       <DatePicker
         day={23}
+        locale="uk"
         month={1}
         year={2018}
         onChange={action}
@@ -64,6 +66,7 @@ storiesOf('binary-ui-date-picker', module)
       <DatePicker
         day={23}
         isDisabled
+        locale="uk"
         month={1}
         year={2018}
         onChange={action}

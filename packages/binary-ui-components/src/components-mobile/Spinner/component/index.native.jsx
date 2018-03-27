@@ -16,7 +16,7 @@ const Spinner = ({ color, size, ...props }) => (
   <ActivityIndicator
     {...props}
     color={color}
-    size={size < 40 ? 'small' : 'large'}
+    size={size < 36 ? 'small' : 'large'}
   />
 );
 

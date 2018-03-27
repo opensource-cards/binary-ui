@@ -72,7 +72,6 @@ const Button = ({
       <ButtonText
         isBold={isBold}
         isDisabled={isDisabled}
-        numberOfLines={1}
         style={labelStyle}
       >
         {isBold ? label.toUpperCase() : label}

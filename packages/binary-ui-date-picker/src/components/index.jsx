@@ -8,6 +8,9 @@ import React from 'react';
 const propTypes = {
   day: PropTypes.number.isRequired,
   isDisabled: PropTypes.bool,
+  locale: PropTypes.string,
+  maximumDate: PropTypes.instanceOf(Date),
+  minimumDate: PropTypes.instanceOf(Date),
   month: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   onChange: PropTypes.func,
@@ -16,6 +19,9 @@ const propTypes = {
 
 const defaultProps = {
   isDisabled: false,
+  locale: undefined,
+  maximumDate: undefined,
+  minimumDate: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -47,13 +53,28 @@ class DatePicker extends React.Component {
   }
 
   render() {
-    const { day, month, year, renderLeft, ...props } = this.props;
+    /* eslint-disable no-unused-vars */
+    const {
+      day,
+      isDisabled,
+      locale,
+      maximumDate,
+      minimumDate,
+      month,
+      year,
+      renderLeft,
+      ...props,
+    } = this.props;
+    /* eslint-enable no-unused-vars */
     return (
       <Group
         renderLeft={renderLeft}
         renderRight={() => (
           <Input
             {...props}
+            isDisabled={isDisabled}
+            max={maximumDate ? `${maximumDate.getFullYear()}-${padStart(maximumDate.getMonth(), 2, '0')}-${padStart(maximumDate.getDate(), 2, '0')}` : undefined}
+            min={minimumDate ? `${minimumDate.getFullYear()}-${padStart(minimumDate.getMonth(), 2, '0')}-${padStart(minimumDate.getDate(), 2, '0')}` : undefined}
             type="date"
             value={`${year}-${padStart(month, 2, '0')}-${padStart(day, 2, '0')}`}
             onChange={this.onChange}

@@ -1,8 +1,8 @@
-import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Picker } from 'react-native';
 import Wrapper from '../components-styled/Wrapper';
+import Group from '../../Group';
 
 const propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,

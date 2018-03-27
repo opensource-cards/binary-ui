@@ -10,7 +10,7 @@ const defaultProps = {};
 const ImageUploadIcon = ({ renderIcon }) => (
   renderIcon({
     color: BINARY_COLOR_SAND_90,
-    size: 30,
+    size: 36,
   })
 );
 

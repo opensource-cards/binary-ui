@@ -8,13 +8,21 @@ import { DatePickerIOS, LayoutAnimation } from 'react-native';
 const propTypes = {
   hour: PropTypes.number.isRequired,
   isDisabled: PropTypes.bool,
+  locale: PropTypes.string,
+  maximumDate: PropTypes.instanceOf(Date),
+  minimumDate: PropTypes.instanceOf(Date),
   minute: PropTypes.number.isRequired,
+  minuteInterval: PropTypes.number,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
 
 const defaultProps = {
   isDisabled: false,
+  locale: undefined,
+  maximumDate: undefined,
+  minimumDate: undefined,
+  minuteInterval: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -63,11 +71,19 @@ class TimePicker extends React.Component {
   }
 
   render() {
-    const { hour, minute, renderLeft, ...props } = this.props;
+    const {
+      hour,
+      isDisabled,
+      locale,
+      maximumDate,
+      minimumDate,
+      minute,
+      minuteInterval,
+      renderLeft,
+      ...props,
+    } = this.props;
     const { isVisible } = this.state;
     const dateNow = new Date();
-    // A "isDisabled" property is passed to the button.
-    // Clicks will be ignored if "isDisabled" has a "true" value.
     return (
       <React.Fragment>
         <Group
@@ -75,6 +91,7 @@ class TimePicker extends React.Component {
           renderRight={() => (
             <Button
               {...props}
+              isDisabled={isDisabled}
               label={`${padStart(hour, 2, '0')}:${padStart(minute, 2, '0')}`}
               onPress={this.onPress}
             />
@@ -89,6 +106,10 @@ class TimePicker extends React.Component {
               hour,
               minute
             )}
+            locale={locale}
+            maximumDate={maximumDate}
+            minimumDate={minimumDate}
+            minuteInterval={minuteInterval}
             mode="time"
             onDateChange={this.onDateChange}
           />

@@ -1,8 +1,8 @@
-import Button from 'binary-ui-components/mobile/Button';
-import Group from 'binary-ui-components/mobile/Group';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { LayoutAnimation, Picker } from 'react-native';
+import Button from '../../Button';
+import Group from '../../Group';
 
 const propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,

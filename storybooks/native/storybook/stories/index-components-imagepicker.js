@@ -31,6 +31,7 @@ storiesOf('binary-ui-components/mobile', module)
         images={[{
           url: 'http://contacts.try.cards/card-placeholder-logo.png',
           id: imageSelectedId,
+          isLoading: true,
         }]}
         imageSelectedId={imageSelectedId}
         isImageUpload={true}

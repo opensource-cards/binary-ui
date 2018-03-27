@@ -11,5 +11,5 @@ export default styled.div`
   padding-left: 10px;
   position: relative;
   width: 100%;
-  ${getHighlightEditStyle(false, true, false, undefined)}
+  ${getHighlightEditStyle(true, true, false, undefined)}
 `;

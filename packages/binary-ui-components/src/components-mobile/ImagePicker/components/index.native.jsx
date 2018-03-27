@@ -23,7 +23,7 @@ const defaultProps = {
   onImageUpload: undefined,
 };
 
-export default class ImagePicker extends React.Component {
+class ImagePicker extends React.Component {
   constructor(props) {
     super(props);
     this.onImagePress = this.onImagePress.bind(this);
@@ -53,6 +53,7 @@ export default class ImagePicker extends React.Component {
             imageFit={imageFit}
             imageId={image.id}
             imageUrl={image.url}
+            isLoading={image.isLoading}
             isSelected={image.id === imageSelectedId}
             key={image.id}
             onPress={this.onImagePress}
@@ -68,3 +69,5 @@ export default class ImagePicker extends React.Component {
 
 ImagePicker.propTypes = propTypes;
 ImagePicker.defaultProps = defaultProps;
+
+export default ImagePicker;

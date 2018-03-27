@@ -615,26 +615,26 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.4.tgz#a294b7227357c6ea1ee1bd9cbc712e8e24e9f7dc"
+binary-ui-components@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.5.tgz#f4e7787e847f3c000467b7102ddea9040aefce77"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.5.4"
-    binary-ui-styles "^0.5.4"
+    binary-ui-icons "^0.5.5"
+    binary-ui-styles "^0.5.5"
     prop-types "^15.5.10"
     styled-components "^3.0.0"
 
-binary-ui-icons@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.4.tgz#d740ee03861e49f9cae76174dec00ceff37ac387"
+binary-ui-icons@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.5.tgz#5e4d4f252c5a456f46e57a41f53e2a162a23f4fc"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.5.4:
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.4.tgz#92dd8511cae0ffc6fe8249345f25065d21f719db"
+binary-ui-styles@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.5.tgz#4a87bc1b64576802595d0593e37c52df60f4ba21"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -1474,8 +1474,8 @@ iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
 ieee754@^1.1.4:
-  version "1.1.10"
-  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.10.tgz#719a6f7b026831e64bdb838b0de1bb0029bbf716"
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.11.tgz#c16384ffe00f5b7835824e67b6f2bd44a5229455"
 
 ignore@^3.2.0:
   version "3.3.7"
