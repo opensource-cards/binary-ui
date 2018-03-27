@@ -52,6 +52,14 @@ storiesOf("binary-ui-components/mobile", module).add("Input", () => (
       onChange={action()}
     />
     <Input
+      isDisabled
+      placeholder="Disabled with Icon"
+      type={INPUT_FIELD_TYPES.TEXT}
+      value=""
+      renderIcon={(props) => (<IconMore {...props} />)}
+      onChange={action()}
+    />
+    <Input
       placeholder="Text"
       type={INPUT_FIELD_TYPES.TEXT}
       value="Text"

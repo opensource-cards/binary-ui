@@ -1,10 +1,12 @@
-import { BINARY_COLOR_GRAY_40, OPACITY_ACTIVE, OPACITY_DISABLED } from 'binary-ui-styles';
+import { OPACITY_ACTIVE, OPACITY_DISABLED } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import TouchableOpacity from '../../../../components/TouchableOpacity';
+import TouchableOpacity from '../components-styled/TouchableOpacity';
 
 const propTypes = {
+  color: PropTypes.string,
   isDisabled: PropTypes.bool,
+  size: PropTypes.number,
   renderIcon: PropTypes.func.isRequired,
   onClick: PropTypes.func,
   onMouseDown: PropTypes.func,
@@ -12,24 +14,28 @@ const propTypes = {
 };
 
 const defaultProps = {
+  color: '#000000',
   isDisabled: false,
+  size: undefined,
   onClick: undefined,
   onMouseDown: undefined,
   onTouchStart: undefined,
 };
 
-class ActionListItemIcon extends React.Component {
-  renderIcon({ isDisabled, renderIcon }) {
+class ActionIcon extends React.Component {
+  renderIcon({ color, isDisabled, size, renderIcon }) {
     return renderIcon({
-      color: BINARY_COLOR_GRAY_40,
+      color,
       opacity: isDisabled ? OPACITY_DISABLED : 1,
-      size: 18,
+      size,
     });
   }
 
   render() {
     const {
+      color,
       isDisabled,
+      size,
       renderIcon,
       onClick,
       onMouseDown,
@@ -38,7 +44,7 @@ class ActionListItemIcon extends React.Component {
     } = this.props;
     return isDisabled ? (
       <div {...props} onClick={(e) => { e.preventDefault(); }} >
-        {this.renderIcon({ isDisabled, renderIcon })}
+        {this.renderIcon({ color, isDisabled, size, renderIcon })}
       </div>
     ) : (
       <TouchableOpacity
@@ -48,13 +54,13 @@ class ActionListItemIcon extends React.Component {
         onMouseDown={onMouseDown}
         onTouchStart={onTouchStart}
       >
-        {this.renderIcon({ isDisabled, renderIcon })}
+        {this.renderIcon({ color, isDisabled, size, renderIcon })}
       </TouchableOpacity>
     );
   }
 }
 
-ActionListItemIcon.propTypes = propTypes;
-ActionListItemIcon.defaultProps = defaultProps;
+ActionIcon.propTypes = propTypes;
+ActionIcon.defaultProps = defaultProps;
 
-export default ActionListItemIcon;
+export default ActionIcon;

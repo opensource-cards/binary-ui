@@ -105,7 +105,11 @@ export default class Input extends React.Component {
         styleBorderColor={styleBorderColor}
       >
         {renderIcon ? (
-          <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
+          <ActionListItemIcon
+            isDisabled={isDisabled}
+            renderIcon={renderIcon}
+            onClick={onIconClick}
+          />
         ) : null}
         <InputStyled
           {...props}

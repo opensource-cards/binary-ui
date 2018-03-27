@@ -6,6 +6,7 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
   children: PropTypes.any,
+  isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
   renderIcon: PropTypes.func,
   onIconClick: PropTypes.func,
@@ -13,18 +14,19 @@ const propTypes = {
 
 const defaultProps = {
   children: undefined,
+  isDisabled: false,
   isEdit: false,
   renderIcon: undefined,
   onIconClick: undefined,
 };
 
-const Viewline = ({ children, isEdit, renderIcon, onIconClick }) => (
+const Viewline = ({ children, isDisabled, isEdit, renderIcon, onIconClick }) => (
   <ViewWrapper isEdit={isEdit} >
     <ViewContent>
       {children}
     </ViewContent>
     {renderIcon ? (
-      <ActionListItemIcon renderIcon={renderIcon} onClick={onIconClick} />
+      <ActionListItemIcon isDisabled={isDisabled} renderIcon={renderIcon} onClick={onIconClick} />
     ) : null}
   </ViewWrapper>
 );

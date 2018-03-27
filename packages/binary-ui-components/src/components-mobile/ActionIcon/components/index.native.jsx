@@ -15,7 +15,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: undefined,
+  color: '#000000',
   isDisabled: false,
   size: undefined,
   onLongPress: undefined,
@@ -27,7 +27,7 @@ const defaultProps = {
 class ActionIcon extends React.Component {
   renderIcon({ color, isDisabled, size, renderIcon }) {
     return renderIcon({
-      color: color || '#000000',
+      color,
       opacity: isDisabled ? OPACITY_DISABLED : 1,
       size,
     });

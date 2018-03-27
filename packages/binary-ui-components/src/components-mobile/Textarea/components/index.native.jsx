@@ -5,6 +5,7 @@ import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
+  isDisabled: PropTypes.bool,
   isValid: PropTypes.bool,
   value: PropTypes.string.isRequired,
   renderIcon: PropTypes.func,
@@ -15,6 +16,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  isDisabled: false,
   isValid: true,
   renderIcon: undefined,
   onBlur: undefined,
@@ -61,6 +63,7 @@ export default class Textarea extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      isDisabled,
       isValid,
       renderIcon,
       onBlur,
@@ -79,6 +82,7 @@ export default class Textarea extends React.Component {
       >
         <TextareaInput
           {...props}
+          editable={!isDisabled}
           multiline
           paddingBottom={0}
           paddingTop={0}
@@ -88,7 +92,11 @@ export default class Textarea extends React.Component {
           onFocus={this.onFocus}
         />
         {renderIcon ? (
-          <ActionListItemIcon renderIcon={renderIcon} onPress={onIconPress} />
+          <ActionListItemIcon
+            isDisabled={isDisabled}
+            renderIcon={renderIcon}
+            onPress={onIconPress}
+          />
         ) : null}
       </TextareaWrapperStyled>
     );
