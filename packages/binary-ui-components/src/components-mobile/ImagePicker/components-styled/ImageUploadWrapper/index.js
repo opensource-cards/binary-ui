@@ -1,4 +1,4 @@
-import { BINARY_COLOR_SAND_90 } from 'binary-ui-styles';
+import { BINARY_COLOR_SAND_90, TRANSITION_FEEDBACK_OPACITY } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
@@ -11,6 +11,7 @@ export default styled.div`
   height: ${PHOTO_SIZE}px;
   justify-content: center;
   margin: 5px;
+  transition: ${TRANSITION_FEEDBACK_OPACITY};
   width: ${PHOTO_SIZE}px;
   &:active {
     opacity: 0.5;
