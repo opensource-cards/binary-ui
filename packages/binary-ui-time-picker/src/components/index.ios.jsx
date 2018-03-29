@@ -1,5 +1,6 @@
 import Button from 'binary-ui-components/mobile/Button';
 import Group from 'binary-ui-components/mobile/Group';
+import IconArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -94,6 +95,7 @@ class TimePicker extends React.Component {
               isDisabled={isDisabled}
               label={`${padStart(hour, 2, '0')}:${padStart(minute, 2, '0')}`}
               onPress={this.onPress}
+              renderIcon={rest => <IconArrowDown {...rest} />}
             />
           )}
         />

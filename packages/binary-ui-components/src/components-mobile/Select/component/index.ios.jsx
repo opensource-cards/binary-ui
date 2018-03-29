@@ -1,3 +1,4 @@
+import IconArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { LayoutAnimation, Picker } from 'react-native';
@@ -68,6 +69,7 @@ class Select extends React.Component {
               {...props}
               label={itemSelected ? itemSelected.label : undefined}
               onPress={this.onPress}
+              renderIcon={rest => <IconArrowDown {...rest} />}
             />
           )}
         />

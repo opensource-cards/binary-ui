@@ -5,6 +5,7 @@ import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
+  height: PropTypes.number,
   isDisabled: PropTypes.bool,
   isValid: PropTypes.bool,
   value: PropTypes.string.isRequired,
@@ -16,6 +17,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  height: 120,
   isDisabled: false,
   isValid: true,
   renderIcon: undefined,
@@ -63,6 +65,7 @@ export default class Textarea extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      height,
       isDisabled,
       isValid,
       renderIcon,
@@ -86,6 +89,7 @@ export default class Textarea extends React.Component {
           multiline
           paddingBottom={0}
           paddingTop={0}
+          styleHeight={height}
           underlineColorAndroid="rgba(0, 0, 0, 0)"
           onBlur={this.onBlur}
           onChangeText={onChange}

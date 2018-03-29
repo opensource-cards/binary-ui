@@ -13,7 +13,7 @@ export default styled.div`
   margin: 5px;
   transition: ${TRANSITION_FEEDBACK_OPACITY};
   width: ${PHOTO_SIZE}px;
-  &:active {
-    opacity: 0.5;
-  }
+  ${props => (
+    !props.isLoading ? '&:active { opacity: 0.5; }' : undefined
+  )}
 `;

@@ -5,6 +5,7 @@ import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
+  height: PropTypes.number,
   isDisabled: PropTypes.bool,
   isValid: PropTypes.bool,
   value: PropTypes.string.isRequired,
@@ -16,6 +17,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  height: 120,
   isDisabled: false,
   isValid: true,
   renderIcon: undefined,
@@ -72,6 +74,7 @@ export default class Textarea extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      height,
       isDisabled,
       isValid,
       renderIcon,
@@ -92,6 +95,7 @@ export default class Textarea extends React.Component {
         <TextareaInput
           {...props}
           disabled={isDisabled}
+          styleHeight={height}
           onBlur={this.onBlur}
           onChange={this.onChange}
           onFocus={this.onFocus}

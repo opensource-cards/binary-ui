@@ -8,7 +8,6 @@ export default styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  padding-top: 20px;
   ${props => (
     getHighlightEditStyle(
       props.isEdit,

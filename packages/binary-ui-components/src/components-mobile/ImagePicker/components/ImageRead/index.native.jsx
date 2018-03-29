@@ -4,7 +4,7 @@ import React from 'react';
 import IconDone from './components-styled/IconDone';
 import IconSpinner from './components-styled/IconSpinner';
 import ImageStyled from './components-styled/ImageStyled/index.native';
-import ImageContent from '../../components-styled/ImageContent';
+import ImageContent from './components-styled/ImageContent';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 const propTypes = {
@@ -28,7 +28,11 @@ export default class ImageRead extends React.Component {
   }
 
   onPress() {
-    const { imageId, onPress } = this.props;
+    const { imageId, isLoading, onPress } = this.props;
+    // Ignore click if image is loading.
+    if (isLoading) {
+      return;
+    }
     if (onPress) {
       onPress(imageId);
     }
@@ -46,9 +50,13 @@ export default class ImageRead extends React.Component {
   }
 
   render() {
-    const { imageFit, imageUrl } = this.props;
+    const { imageFit, imageUrl, isLoading } = this.props;
     return (
-      <ImageContent activeOpacity={OPACITY_ACTIVE} onPress={this.onPress} >
+      <ImageContent
+        activeOpacity={OPACITY_ACTIVE}
+        isLoading={isLoading}
+        onPress={this.onPress}
+      >
         <ImageStyled
           borderRadius={PHOTO_SIZE / 2}
           resizeMode={imageFit}

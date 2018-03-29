@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import IconDone from './components-styled/IconDone';
 import IconSpinner from './components-styled/IconSpinner';
-import ImageContent from '../../components-styled/ImageContent';
+import ImageContent from './components-styled/ImageContent';
 
 const propTypes = {
   imageFit: PropTypes.string.isRequired,
@@ -26,7 +26,11 @@ export default class ImageRead extends React.Component {
   }
 
   onClick() {
-    const { imageId, onClick } = this.props;
+    const { imageId, isLoading, onClick } = this.props;
+    // Ignore click if image is loading.
+    if (isLoading) {
+      return;
+    }
     if (onClick) {
       onClick(imageId);
     }
@@ -44,9 +48,14 @@ export default class ImageRead extends React.Component {
   }
 
   render() {
-    const { imageFit, imageUrl } = this.props;
+    const { imageFit, imageUrl, isLoading } = this.props;
     return (
-      <ImageContent imageFit={imageFit} imageUrl={imageUrl} onClick={this.onClick} >
+      <ImageContent
+        imageFit={imageFit}
+        imageUrl={imageUrl}
+        isLoading={isLoading}
+        onClick={this.onClick}
+      >
         {this.renderIcon()}
       </ImageContent>
     );

@@ -615,26 +615,26 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.6.tgz#4c5f80a6013b324f73b3e39ce6b3298d3289ce88"
+binary-ui-components@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.5.7.tgz#51acf330bef83d49c7b70321b9face9cde4e3175"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.5.6"
-    binary-ui-styles "^0.5.6"
+    binary-ui-icons "^0.5.7"
+    binary-ui-styles "^0.5.7"
     prop-types "^15.5.10"
     styled-components "^3.0.0"
 
-binary-ui-icons@^0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.6.tgz#2c343794202fb6b651b9b213e10b11acc20e3d4d"
+binary-ui-icons@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.5.7.tgz#b23ca94952b37f37e99c26ed316a9bacb0fc6aea"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.6.tgz#6218bedc583fe409e0181b49645b9ed94554a9e2"
+binary-ui-styles@^0.5.7:
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.5.7.tgz#aee7989d3a964b2d7d0b42f76cefad73a70086e4"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -951,8 +951,8 @@ encoding@^0.1.11:
     iconv-lite "~0.4.13"
 
 es5-ext@^0.10.14, es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14:
-  version "0.10.41"
-  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.41.tgz#bab3e982d750f0112f0cb9e6abed72c59eb33eb2"
+  version "0.10.42"
+  resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.42.tgz#8c07dd33af04d5dcd1310b5cef13bea63a89ba8d"
   dependencies:
     es6-iterator "~2.0.3"
     es6-symbol "~3.1.1"
