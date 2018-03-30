@@ -6,7 +6,7 @@ import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const styles = StyleSheet.create({
   switch: {
-    transform: [{ scaleX: 0.9 }, { scaleY: 0.9 }],
+    transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }],
   },
 });
 

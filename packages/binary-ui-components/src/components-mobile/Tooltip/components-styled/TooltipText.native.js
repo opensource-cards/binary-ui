@@ -5,5 +5,5 @@ export default styled.Text`
   flex: 0;
   font-family: ${props => props.theme.fontFamily400};
   font-size: 12px;
-  font-weight: ${props => props.theme.fontWeight400};;
+  font-weight: ${props => props.theme.fontWeight400};
 `;
