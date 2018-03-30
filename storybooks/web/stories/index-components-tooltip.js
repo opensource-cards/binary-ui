@@ -1,13 +1,14 @@
-import infoAddon from '@storybook/addon-info';
-import { setAddon, storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from '@storybook/addon-info';
-import React from 'react';
-import styled from 'styled-components';
+import infoAddon from "@storybook/addon-info";
+import { setAddon, storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { withInfo } from "@storybook/addon-info";
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
 
-import Tooltip from 'binary-ui-components/mobile/Tooltip';
-import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
-import Add from 'binary-ui-icons/binary/Add';
+import Tooltip from "binary-ui-components/mobile/Tooltip";
+import ActionIcon from "binary-ui-components/mobile/ActionIcon";
+import Add from "binary-ui-icons/binary/Add";
+import { THEME_MAIN } from "binary-ui-styles";
 
 setAddon(infoAddon);
 
@@ -18,7 +19,7 @@ class TooltipDemo extends React.Component {
       isRefLeft: false,
       isRefRight: false,
       isVisibleLeft: false,
-      isVisibleRight: false,
+      isVisibleRight: false
     };
     this.onSetLeft = this.onSetLeft.bind(this);
     this.onSetRight = this.onSetRight.bind(this);
@@ -28,48 +29,82 @@ class TooltipDemo extends React.Component {
 
   onSetLeft(ref) {
     this.buttonLeft = ref;
-    this.setState((prevState) => ({
-      isRefLeft: ref ? true : false,
+    this.setState(prevState => ({
+      isRefLeft: ref ? true : false
     }));
   }
 
   onSetRight(ref) {
     this.buttonRight = ref;
-    this.setState((prevState) => ({
-      isRefRight: ref ? true : false,
+    this.setState(prevState => ({
+      isRefRight: ref ? true : false
     }));
   }
 
   onChangeLeft() {
-    this.setState((prevState) => ({
-      isVisibleLeft: !prevState.isVisibleLeft,
+    this.setState(prevState => ({
+      isVisibleLeft: !prevState.isVisibleLeft
     }));
   }
 
   onChangeRight() {
-    this.setState((prevState) => ({
-      isVisibleRight: !prevState.isVisibleRight,
+    this.setState(prevState => ({
+      isVisibleRight: !prevState.isVisibleRight
     }));
   }
 
   render() {
     const { isVisibleLeft, isVisibleRight } = this.state;
     return (
-      <div style={{ padding: 50 }} >
-        <div style={{ float: 'left', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat', position: 'relative' }}>
-          <ActionIcon ref={this.onSetLeft} title="Icon" onClick={this.onChangeLeft} renderIcon={(props) => (<Add {...props} />)} size={20} />
+      <div style={{ padding: 50 }}>
+        <div
+          style={{
+            float: "left",
+            height: 20,
+            width: 20,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "wheat",
+            position: "relative"
+          }}
+        >
+          <ActionIcon
+            ref={this.onSetLeft}
+            title="Icon"
+            onClick={this.onChangeLeft}
+            renderIcon={props => <Add {...props} />}
+            size={20}
+          />
         </div>
-        <div style={{ float: 'right', height: 20, width: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat', position: 'relative' }}>
-          <ActionIcon ref={this.onSetRight} title="Icon" onClick={this.onChangeRight} renderIcon={(props) => (<Add {...props} />)} size={20} />
+        <div
+          style={{
+            float: "right",
+            height: 20,
+            width: 20,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "wheat",
+            position: "relative"
+          }}
+        >
+          <ActionIcon
+            ref={this.onSetRight}
+            title="Icon"
+            onClick={this.onChangeRight}
+            renderIcon={props => <Add {...props} />}
+            size={20}
+          />
         </div>
-        <div style={{ clear: 'both' }} />        
+        <div style={{ clear: "both" }} />
         <div>Container for Tooltips</div>
         <Tooltip
           isVisible={isVisibleLeft}
           label="Bottom Right tooltip"
           placement="bottom-right"
           target={this.buttonLeft}
-          style={{ transform: 'translate3d(65px, 70px, 0)' }}
+          style={{ transform: "translate3d(65px, 70px, 0)" }}
           onClick={this.onChangeLeft}
         />
         <Tooltip
@@ -77,7 +112,7 @@ class TooltipDemo extends React.Component {
           label="Bottom Left tooltip with very long text"
           placement="bottom-left"
           target={this.buttonRight}
-          style={{ transform: 'translate3d(-65px, 70px, 0)' }}
+          style={{ transform: "translate3d(-65px, 70px, 0)" }}
           onClick={this.onChangeRight}
         />
         <Tooltip
@@ -85,7 +120,7 @@ class TooltipDemo extends React.Component {
           label="Top Right tooltip"
           placement="top-right"
           target={this.topLeft}
-          style={{ transform: 'translate3d(65px, 15px, 0)' }}
+          style={{ transform: "translate3d(65px, 15px, 0)" }}
           onClick={this.onChangeLeft}
         />
         <Tooltip
@@ -93,7 +128,7 @@ class TooltipDemo extends React.Component {
           label="Top Left tooltip with very long text"
           placement="top-left"
           target={this.topRight}
-          style={{ transform: 'translate3d(-65px, 15px, 0)' }}
+          style={{ transform: "translate3d(-65px, 15px, 0)" }}
           onClick={this.onChangeRight}
         />
       </div>
@@ -101,7 +136,11 @@ class TooltipDemo extends React.Component {
   }
 }
 
-storiesOf('binary-ui-components/mobile', module)
-  .add('Tooltip', withInfo('Tooltip component')(() => (
-    <TooltipDemo />
-  )));
+storiesOf("binary-ui-components/mobile", module).add(
+  "Tooltip",
+  withInfo("Tooltip component")(() => (
+    <ThemeProvider theme={THEME_MAIN}>
+      <TooltipDemo />
+    </ThemeProvider>
+  ))
+);

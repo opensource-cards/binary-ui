@@ -1,3 +1,4 @@
+import { Easing } from 'react-native';
 import {
   BINARY_COLOR_BLUE_30,
   BINARY_COLOR_BLUE_40,
@@ -17,31 +18,21 @@ import {
   OPACITY_DISABLED,
 } from './index.native-and-web';
 
+export const FONT_FAMILY_MAIN_100 = 'Roboto';
+export const FONT_FAMILY_MAIN_200 = 'Roboto';
+export const FONT_FAMILY_MAIN_300 = 'Roboto';
+export const FONT_FAMILY_MAIN_400 = 'Roboto';
+export const FONT_FAMILY_MAIN_500 = 'Roboto';
+export const FONT_FAMILY_MAIN_600 = 'Roboto';
+export const FONT_FAMILY_MAIN_700 = 'Roboto';
+export const FONT_FAMILY_MAIN_800 = 'Roboto';
+export const FONT_FAMILY_MAIN_900 = 'Roboto';
+
 export * from './index.native-and-web';
 
-export const FONT_FAMILY_MAIN_100 = 'FiraSans-Thin';
-export const FONT_FAMILY_MAIN_200 = 'FiraSans-ExtraLight';
-export const FONT_FAMILY_MAIN_300 = 'FiraSans-Light';
-export const FONT_FAMILY_MAIN_400 = 'FiraSans-Regular';
-export const FONT_FAMILY_MAIN_500 = 'FiraSans-Medium';
-export const FONT_FAMILY_MAIN_600 = 'FiraSans-SemiBold';
-export const FONT_FAMILY_MAIN_700 = 'FiraSans-Bold';
-export const FONT_FAMILY_MAIN_800 = 'FiraSans-ExtraBold';
-export const FONT_FAMILY_MAIN_900 = 'FiraSans-Black';
-
-export const EASING_CURVE_FEEDBACK = 'cubic-bezier(0.455, 0.030, 0.515, 0.955)';
-export const EASING_CURVE_COMPONENT_STATE = 'cubic-bezier(0.420, 0.000, 0.580, 1.000)';
-export const EASING_CURVE_VIEW_STATE = 'cubic-bezier(0.190, 1.000, 0.220, 1.000)';
-
-export const TRANSITION_FEEDBACK = `0.1s ${EASING_CURVE_FEEDBACK}`;
-export const TRANSITION_FEEDBACK_OPACITY = `opacity ${TRANSITION_FEEDBACK}`;
-
-export const TRANSITION_COMPONENT_STATE = `0.25s ${EASING_CURVE_COMPONENT_STATE}`;
-export const TRANSITION_COMPONENT_STATE_OPACITY = `opacity ${TRANSITION_COMPONENT_STATE}`;
-
-export const TRANSITION_VIEW_STATE = `0.5s ${EASING_CURVE_VIEW_STATE}`;
-export const TRANSITION_VIEW_STATE_OPACITY = `opacity ${TRANSITION_VIEW_STATE}`;
-export const TRANSITION_VIEW_STATE_TRANSFORM = `transform ${TRANSITION_VIEW_STATE}`;
+export const EASING_CURVE_FEEDBACK = Easing.bezier(0.455, 0.030, 0.515, 0.955);
+export const EASING_CURVE_COMPONENT_STATE = Easing.bezier(0.420, 0.000, 0.580, 1.000);
+export const EASING_CURVE_VIEW_STATE = Easing.bezier(0.190, 1.000, 0.220, 1.000);
 
 export const THEME_MAIN = {
   colorBackgroundMain: BINARY_COLOR_SAND_90,

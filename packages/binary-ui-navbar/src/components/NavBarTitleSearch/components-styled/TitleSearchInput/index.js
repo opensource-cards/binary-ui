@@ -1,10 +1,11 @@
-import { FONT_SET_BOLD_CSS, FONT_SET_LIGHT_CSS, INPUT_RESET_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { INPUT_HEIGHT } from '../../constants';
 
 export default styled.input`
-  ${INPUT_RESET_CSS}
-  ${props => (props.isBold ? FONT_SET_BOLD_CSS : FONT_SET_LIGHT_CSS)}
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+
   appearance: none;
   background-color: transparent;
   border-radius: inherit;
@@ -16,4 +17,10 @@ export default styled.input`
   resize: none;
   width: 100%;
   -webkit-appearance: textfield;
+
+  color: hsl(0, 0%, 0%);
+  font-family: ${props => (props.isBold ? props.theme.fontFamily600 : props.theme.fontFamily200)};
+  font-size: ${props => (props.isBold ? '13px' : '18px')};
+  font-weight: ${props => (props.isBold ? props.theme.fontWeight600 : props.theme.fontWeight200)};
+  letter-spacing: ${props => (props.isBold ? '2px' : 'normal')};
 `;

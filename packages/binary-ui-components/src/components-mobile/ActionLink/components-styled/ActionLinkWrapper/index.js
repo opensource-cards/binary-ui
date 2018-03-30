@@ -1,12 +1,8 @@
-import {
-  BINARY_COLOR_BLUE_40,
-  BINARY_COLOR_BLUE_80,
-  TRANSITION_FEEDBACK_OPACITY,
-} from 'binary-ui-styles';
+import { TRANSITION_FEEDBACK_OPACITY } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.a`
-  color: ${BINARY_COLOR_BLUE_40};
+  color: ${props => props.theme.colorBlue40};
   opacity: 1;
   text-decoration: none;
   transition: ${TRANSITION_FEEDBACK_OPACITY};
@@ -16,11 +12,11 @@ export default styled.a`
   @media (pointer: fine) {
     &:hover {
       text-decoration: underline;
-      text-decoration-color: ${BINARY_COLOR_BLUE_80};
+      text-decoration-color: ${props => props.theme.colorBlue80};
       text-underline-position: under;
     }
     &:active {
-      opacity: 0.5;
+      opacity: ${props => props.theme.opacityActive};
     }
   }
 `;

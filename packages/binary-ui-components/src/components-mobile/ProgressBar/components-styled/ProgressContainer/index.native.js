@@ -1,8 +1,7 @@
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.View`
-  height: ${LIST_ITEM_HEIGHT}px;
+  height: ${props => props.theme.sizeListItemHeight}px;
   width: 96%;
   align-items: flex-start;
   justify-content: center;

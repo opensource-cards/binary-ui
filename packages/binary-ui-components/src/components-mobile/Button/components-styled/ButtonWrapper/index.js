@@ -1,4 +1,4 @@
-import { LIST_ITEM_HEIGHT, getHighlightEditStyle } from 'binary-ui-styles';
+import { getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { TAP_HIGHLIGHT_COLOR } from '../../utils/styles';
 
@@ -11,7 +11,7 @@ export default styled.div`
   flex-direction: row-reverse;
   flex-grow: 0;
   flex-shrink: 0;
-  height: ${LIST_ITEM_HEIGHT}px;
+  height: ${props => props.theme.sizeListItemHeight}px;
   padding-left: 10px;
   width: 100%;
   ${props => (

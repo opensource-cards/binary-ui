@@ -1,4 +1,3 @@
-import { FONT_FAMILY_MAIN_500 } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.Text.attrs({
@@ -8,7 +7,8 @@ export default styled.Text.attrs({
   align-items: center;
   color: black;
   flex-direction: row;
-  font-family: ${FONT_FAMILY_MAIN_500};
-  font-size: 16;
+  font-family: ${props => props.theme.fontFamily500};
+  font-size: 16px;
+  font-weight: ${props => props.theme.fontWeight500};
   justify-content: flex-start;
 `;

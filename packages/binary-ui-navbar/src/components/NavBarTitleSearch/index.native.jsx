@@ -105,7 +105,7 @@ class NavBarTitleSearch extends React.Component {
       </TitleSearchWrapper>
     );
   }
-}  
+}
 
 NavBarTitleSearch.propTypes = propTypes;
 NavBarTitleSearch.defaultProps = defaultProps;

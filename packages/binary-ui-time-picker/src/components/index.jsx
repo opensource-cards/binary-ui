@@ -6,6 +6,7 @@ import Input from '../components-styled/Input';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
+  is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
@@ -17,6 +18,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  is24Hour: undefined,
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
@@ -51,6 +53,7 @@ class TimePicker extends React.Component {
     /* eslint-disable no-unused-vars */
     const {
       hour,
+      is24Hour,
       isDisabled,
       locale,
       maximumDate,

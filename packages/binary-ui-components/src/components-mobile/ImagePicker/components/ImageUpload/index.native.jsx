@@ -1,18 +1,19 @@
-import { OPACITY_ACTIVE } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { withTheme } from 'styled-components';
 import ImageUploadIcon from '../ImageUploadIcon';
 import ImageUploadWrapper from '../../components-styled/ImageUploadWrapper';
 
 const propTypes = {
+  theme: PropTypes.object.isRequired,
   renderIcon: PropTypes.func.isRequired,
   onImageUpload: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
 
-const ImageUpload = ({ renderIcon, onImageUpload }) => (
-  <ImageUploadWrapper activeOpacity={OPACITY_ACTIVE} onPress={onImageUpload} >
+const ImageUpload = ({ theme, renderIcon, onImageUpload }) => (
+  <ImageUploadWrapper activeOpacity={theme.opacityActive} onPress={onImageUpload} >
     <ImageUploadIcon renderIcon={renderIcon} />
   </ImageUploadWrapper>
 );
@@ -20,4 +21,4 @@ const ImageUpload = ({ renderIcon, onImageUpload }) => (
 ImageUpload.propTypes = propTypes;
 ImageUpload.defaultProps = defaultProps;
 
-export default ImageUpload;
+export default withTheme(ImageUpload);

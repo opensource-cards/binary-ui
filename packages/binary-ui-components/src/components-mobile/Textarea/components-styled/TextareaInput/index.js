@@ -1,9 +1,10 @@
-import { FONT_SET_LIGHT_CSS, INPUT_RESET_CSS } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.textarea`
-  ${INPUT_RESET_CSS}
-  ${FONT_SET_LIGHT_CSS}
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+
   background-color: transparent;
   border-radius: 0;
   cursor: text;
@@ -13,4 +14,10 @@ export default styled.textarea`
   text-align: left;
   width: 100%;
   wrap: soft;
+
+  color: hsl(0, 0%, 0%);
+  font-family: ${props => props.theme.fontFamily200};
+  font-size: 18px;
+  font-weight: ${props => props.theme.fontWeight200};
+  letter-spacing: 0;
 `;

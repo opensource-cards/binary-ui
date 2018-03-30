@@ -1,12 +1,14 @@
-import { OPACITY_ACTIVE, OPACITY_DISABLED } from 'binary-ui-styles';
+
 import PropTypes from 'prop-types';
 import React from 'react';
+import { withTheme } from 'styled-components';
 import TouchableOpacity from '../components-styled/TouchableOpacity';
 
 const propTypes = {
   color: PropTypes.string,
   isDisabled: PropTypes.bool,
   size: PropTypes.number,
+  theme: PropTypes.object.isRequired,
   renderIcon: PropTypes.func.isRequired,
   onClick: PropTypes.func,
   onMouseDown: PropTypes.func,
@@ -23,10 +25,10 @@ const defaultProps = {
 };
 
 class ActionIcon extends React.Component {
-  renderIcon({ color, isDisabled, size, renderIcon }) {
+  renderIcon({ color, isDisabled, size, theme, renderIcon }) {
     return renderIcon({
       color,
-      opacity: isDisabled ? OPACITY_DISABLED : 1,
+      opacity: isDisabled ? theme.opacityDisabled : 1,
       size,
     });
   }
@@ -36,6 +38,7 @@ class ActionIcon extends React.Component {
       color,
       isDisabled,
       size,
+      theme,
       renderIcon,
       onClick,
       onMouseDown,
@@ -44,17 +47,17 @@ class ActionIcon extends React.Component {
     } = this.props;
     return isDisabled ? (
       <div {...props} onClick={(e) => { e.preventDefault(); }} >
-        {this.renderIcon({ color, isDisabled, size, renderIcon })}
+        {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
       </div>
     ) : (
       <TouchableOpacity
         {...props}
-        activeOpacity={OPACITY_ACTIVE}
+        activeOpacity={theme.opacityActive}
         onClick={onClick}
         onMouseDown={onMouseDown}
         onTouchStart={onTouchStart}
       >
-        {this.renderIcon({ color, isDisabled, size, renderIcon })}
+        {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
       </TouchableOpacity>
     );
   }
@@ -63,4 +66,4 @@ class ActionIcon extends React.Component {
 ActionIcon.propTypes = propTypes;
 ActionIcon.defaultProps = defaultProps;
 
-export default ActionIcon;
+export default withTheme(ActionIcon);

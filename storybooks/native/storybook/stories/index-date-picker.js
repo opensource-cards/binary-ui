@@ -1,10 +1,12 @@
-import { storiesOf } from '@storybook/react-native';
-import { action } from '@storybook/addon-actions';
-import React from 'react';
-import { Text, View } from 'react-native';
+import { storiesOf } from "@storybook/react-native";
+import { action } from "@storybook/addon-actions";
+import React from "react";
+import { Text, View } from "react-native";
+import { ThemeProvider } from "styled-components";
 
-import Label from 'binary-ui-components/mobile/Label';
-import DatePicker from 'binary-ui-date-picker';
+import Label from "binary-ui-components/mobile/Label";
+import DatePicker from "binary-ui-date-picker";
+import { THEME_MAIN } from "binary-ui-styles";
 
 class DatePickerDemo extends React.Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class DatePickerDemo extends React.Component {
     this.state = {
       day: 23,
       month: 1,
-      year: 2018,
+      year: 2018
     };
     this.onChange = this.onChange.bind(this);
   }
@@ -21,7 +23,7 @@ class DatePickerDemo extends React.Component {
     this.setState(() => ({
       day,
       month,
-      year,
+      year
     }));
   }
 
@@ -34,18 +36,14 @@ class DatePickerDemo extends React.Component {
         month={month}
         year={year}
         onChange={this.onChange}
-        renderLeft={() => (
-          <Label isBold>
-            Demo
-          </Label>
-        )}
+        renderLeft={() => <Label isBold>Demo</Label>}
       />
     );
   }
 }
 
-storiesOf('binary-ui-date-picker', module)
-  .add('DatePicker', () => (
+storiesOf("binary-ui-date-picker", module).add("DatePicker", () => (
+  <ThemeProvider theme={THEME_MAIN}>
     <View>
       <View>
         <Text>Static</Text>
@@ -56,11 +54,7 @@ storiesOf('binary-ui-date-picker', module)
         month={1}
         year={2018}
         onChange={action}
-        renderLeft={() => (
-          <Label isBold>
-            Available
-          </Label>
-        )}
+        renderLeft={() => <Label isBold>Available</Label>}
       />
       <DatePicker
         day={23}
@@ -69,15 +63,12 @@ storiesOf('binary-ui-date-picker', module)
         month={1}
         year={2018}
         onChange={action}
-        renderLeft={() => (
-          <Label isBold>
-            Disabled
-          </Label>
-        )}
+        renderLeft={() => <Label isBold>Disabled</Label>}
       />
       <View>
         <Text>Demo</Text>
       </View>
       <DatePickerDemo />
     </View>
-  ));
+  </ThemeProvider>
+));

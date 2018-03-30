@@ -1,16 +1,17 @@
-import { storiesOf } from '@storybook/react-native';
-import { action } from '@storybook/addon-actions';
-import React from 'react';
-import { Text, View } from 'react-native';
-import styled from 'styled-components';
+import { storiesOf } from "@storybook/react-native";
+import { action } from "@storybook/addon-actions";
+import React from "react";
+import { Text, View } from "react-native";
+import styled, { ThemeProvider } from "styled-components";
 
-import IconAdd from 'binary-ui-icons/binary/Add';
-import ActionLink from 'binary-ui-components/mobile/ActionLink';
+import IconAdd from "binary-ui-icons/binary/Add";
+import ActionLink from "binary-ui-components/mobile/ActionLink";
+import { THEME_MAIN } from "binary-ui-styles";
 
-storiesOf('binary-ui-components/mobile', module)
-  .add('ActionLink', () => (
+storiesOf("binary-ui-components/mobile", module).add("ActionLink", () => (
+  <ThemeProvider theme={THEME_MAIN}>
     <View>
-      <View style={{ padding: 5 }} >
+      <View style={{ padding: 5 }}>
         <Text>
           <Text>1. Here is an </Text>
           <ActionLink
@@ -24,7 +25,7 @@ storiesOf('binary-ui-components/mobile', module)
           <Text> example.</Text>
         </Text>
       </View>
-      <View style={{ padding: 5 }} >
+      <View style={{ padding: 5 }}>
         <ActionLink
           draggable={false}
           href="https://andcards.com"
@@ -35,4 +36,5 @@ storiesOf('binary-ui-components/mobile', module)
         </ActionLink>
       </View>
     </View>
-  ));
+  </ThemeProvider>
+));

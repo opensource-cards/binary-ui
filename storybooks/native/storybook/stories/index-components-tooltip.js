@@ -1,12 +1,14 @@
-import { storiesOf } from '@storybook/react-native';
-import { action } from '@storybook/addon-actions';
-import React from 'react';
-import { View, Text } from 'react-native';
+import { storiesOf } from "@storybook/react-native";
+import { action } from "@storybook/addon-actions";
+import React from "react";
+import { View, Text } from "react-native";
+import { ThemeProvider } from "styled-components";
 
-import Tooltip from 'binary-ui-components/mobile/Tooltip';
-import ActionIcon from 'binary-ui-components/mobile/ActionIcon';
-import IconAdd from 'binary-ui-icons/binary/Add';
-import IconAddCard from 'binary-ui-icons/binary/AddCard';
+import Tooltip from "binary-ui-components/mobile/Tooltip";
+import ActionIcon from "binary-ui-components/mobile/ActionIcon";
+import IconAdd from "binary-ui-icons/binary/Add";
+import IconAddCard from "binary-ui-icons/binary/AddCard";
+import { THEME_MAIN } from "binary-ui-styles";
 
 class TooltipDemo extends React.Component {
   constructor(props) {
@@ -15,7 +17,7 @@ class TooltipDemo extends React.Component {
       isRefLeft: false,
       isRefRight: false,
       isVisibleLeft: false,
-      isVisibleRight: false,
+      isVisibleRight: false
     };
     this.onSetLeft = this.onSetLeft.bind(this);
     this.onSetRight = this.onSetRight.bind(this);
@@ -25,46 +27,70 @@ class TooltipDemo extends React.Component {
 
   onSetLeft(ref) {
     this.buttonLeft = ref;
-    this.setState((prevState) => ({
-      isRefLeft: ref ? true : false,
+    this.setState(prevState => ({
+      isRefLeft: ref ? true : false
     }));
   }
 
   onSetRight(ref) {
     this.buttonRight = ref;
-    this.setState((prevState) => ({
-      isRefRight: ref ? true : false,
+    this.setState(prevState => ({
+      isRefRight: ref ? true : false
     }));
   }
 
   onChangeLeft() {
-    this.setState((prevState) => ({
-      isVisibleLeft: !prevState.isVisibleLeft,
+    this.setState(prevState => ({
+      isVisibleLeft: !prevState.isVisibleLeft
     }));
   }
 
   onChangeRight() {
-    this.setState((prevState) => ({
-      isVisibleRight: !prevState.isVisibleRight,
+    this.setState(prevState => ({
+      isVisibleRight: !prevState.isVisibleRight
     }));
   }
 
   render() {
     const { isVisibleLeft, isVisibleRight } = this.state;
     return (
-      <View style={{ width: '100%', marginTop: 50 }}>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+      <View style={{ width: "100%", marginTop: 50 }}>
+        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
           <View
             ref={this.onSetLeft}
-            style={{height: 50, margin: 50, width: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'wheat' }}
+            style={{
+              height: 50,
+              margin: 50,
+              width: 50,
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "wheat"
+            }}
           >
-            <ActionIcon title="Icon" onPress={this.onChangeLeft} renderIcon={(props) => (<IconAdd {...props} />)} size={20} />
+            <ActionIcon
+              title="Icon"
+              onPress={this.onChangeLeft}
+              renderIcon={props => <IconAdd {...props} />}
+              size={20}
+            />
           </View>
           <View
             ref={this.onSetRight}
-            style={{ height: 50, margin: 50, width: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: 'skyblue' }}
+            style={{
+              height: 50,
+              margin: 50,
+              width: 50,
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "skyblue"
+            }}
           >
-            <ActionIcon title="Icon" onPress={this.onChangeRight} renderIcon={(props) => (<IconAddCard {...props} />)} size={20} />
+            <ActionIcon
+              title="Icon"
+              onPress={this.onChangeRight}
+              renderIcon={props => <IconAddCard {...props} />}
+              size={20}
+            />
           </View>
         </View>
         <Text>Container for tooltips</Text>
@@ -105,7 +131,8 @@ class TooltipDemo extends React.Component {
   }
 }
 
-storiesOf('binary-ui-components/mobile', module)
-  .add('Tooltip', () => (
+storiesOf("binary-ui-components/mobile", module).add("Tooltip", () => (
+  <ThemeProvider theme={THEME_MAIN}>
     <TooltipDemo />
-  ));
+  </ThemeProvider>
+));

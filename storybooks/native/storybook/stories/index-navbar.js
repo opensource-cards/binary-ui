@@ -1,38 +1,40 @@
-import { storiesOf } from '@storybook/react-native';
-import { action } from '@storybook/addon-actions';
-import React from 'react';
-import { View, TextInput } from 'react-native';
-import { FONT_FAMILY_MAIN_300 } from 'binary-ui-styles';
+import { storiesOf } from "@storybook/react-native";
+import { action } from "@storybook/addon-actions";
+import React from "react";
+import { View, TextInput } from "react-native";
+import { FONT_FAMILY_MAIN_300 } from "binary-ui-styles";
+import { ThemeProvider } from "styled-components";
 
-import IconCancel from 'binary-ui-icons/binary/Cancel';
-import IconDrawer from 'binary-ui-icons/binary/Drawer';
-import IconDone from 'binary-ui-icons/binary/Done';
-import IconSearch from 'binary-ui-icons/binary/Search';
-import NavBar from 'binary-ui-navbar';
-import NavBarIconNotification from 'binary-ui-navbar/components/NavBarIconNotification';
-import NavBarTitleAction from 'binary-ui-navbar/components/NavBarTitleAction';
-import NavBarTitleSearch from 'binary-ui-navbar/components/NavBarTitleSearch';
-import NavBarTitleText from 'binary-ui-navbar/components/NavBarTitleText';
+import IconCancel from "binary-ui-icons/binary/Cancel";
+import IconDrawer from "binary-ui-icons/binary/Drawer";
+import IconDone from "binary-ui-icons/binary/Done";
+import IconSearch from "binary-ui-icons/binary/Search";
+import NavBar from "binary-ui-navbar";
+import NavBarIconNotification from "binary-ui-navbar/components/NavBarIconNotification";
+import NavBarTitleAction from "binary-ui-navbar/components/NavBarTitleAction";
+import NavBarTitleSearch from "binary-ui-navbar/components/NavBarTitleSearch";
+import NavBarTitleText from "binary-ui-navbar/components/NavBarTitleText";
+import { THEME_MAIN } from "binary-ui-styles";
 
 class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isSearch: false,
-      value: '',
+      value: ""
     };
     this.onValueChange = this.onValueChange.bind(this);
   }
 
   setIsSearch(isSearch) {
     this.setState(() => ({
-      isSearch,
+      isSearch
     }));
   }
 
   onValueChange(value) {
     this.setState(() => ({
-      value,
+      value
     }));
   }
 
@@ -40,28 +42,40 @@ class Demo extends React.Component {
     const { isSearch, value } = this.state;
     return (
       <NavBar
-        headerButtonLeft={isSearch ? undefined : {
-          renderIcon: props => (
-            <NavBarIconNotification>
-              <IconDrawer {...props} />
-            </NavBarIconNotification>
-          ),
-          onPress: action()
-        }}
-        headerButtonRight={isSearch ? {
-          renderIcon: props => <IconDone {...props} />,
-          onPress: () => {
-            this.setIsSearch(false);
-          }
-        } : {
-          renderIcon: props => <IconDone {...props} />,
-        }}
-        headerButtonRightSecondary={isSearch ? undefined : {
-          renderIcon: props => <IconSearch {...props} />,
-          onPress: () => {
-            this.setIsSearch(true);
-          }
-        }}
+        headerButtonLeft={
+          isSearch
+            ? undefined
+            : {
+                renderIcon: props => (
+                  <NavBarIconNotification>
+                    <IconDrawer {...props} />
+                  </NavBarIconNotification>
+                ),
+                onPress: action()
+              }
+        }
+        headerButtonRight={
+          isSearch
+            ? {
+                renderIcon: props => <IconDone {...props} />,
+                onPress: () => {
+                  this.setIsSearch(false);
+                }
+              }
+            : {
+                renderIcon: props => <IconDone {...props} />
+              }
+        }
+        headerButtonRightSecondary={
+          isSearch
+            ? undefined
+            : {
+                renderIcon: props => <IconSearch {...props} />,
+                onPress: () => {
+                  this.setIsSearch(true);
+                }
+              }
+        }
         style={{
           backgroundColor: "#eeeae5"
         }}
@@ -69,17 +83,15 @@ class Demo extends React.Component {
         {isSearch ? (
           <NavBarTitleSearch value={value} onChange={this.onValueChange} />
         ) : (
-          <NavBarTitleText>
-            Search Demo
-          </NavBarTitleText>
+          <NavBarTitleText>Search Demo</NavBarTitleText>
         )}
       </NavBar>
     );
   }
 }
 
-storiesOf('binary-ui-navbar', module)
-  .add('NavBar', () => (
+storiesOf("binary-ui-navbar", module).add("NavBar", () => (
+  <ThemeProvider theme={THEME_MAIN}>
     <View>
       <NavBar
         headerButtonLeft={{
@@ -158,7 +170,10 @@ storiesOf('binary-ui-navbar', module)
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleText>A really really long title that doesn't fit into pretty much any possible screen width</NavBarTitleText>
+        <NavBarTitleText>
+          A really really long title that doesn't fit into pretty much any
+          possible screen width
+        </NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonLeft={{
@@ -170,7 +185,10 @@ storiesOf('binary-ui-navbar', module)
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleText>A really really long title that doesn't fit into pretty much any possible screen width</NavBarTitleText>
+        <NavBarTitleText>
+          A really really long title that doesn't fit into pretty much any
+          possible screen width
+        </NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonRight={{
@@ -196,4 +214,5 @@ storiesOf('binary-ui-navbar', module)
       </NavBar>
       <Demo />
     </View>
-  ));
+  </ThemeProvider>
+));

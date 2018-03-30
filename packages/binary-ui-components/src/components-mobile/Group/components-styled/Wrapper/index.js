@@ -1,10 +1,9 @@
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
   background-color: #FFFFFF;
   display: flex;
-  height: ${LIST_ITEM_HEIGHT}px;
+  height: ${props => props.theme.sizeListItemHeight}px;
   max-width: 100%;
   user-select: none;
   width: 100%;

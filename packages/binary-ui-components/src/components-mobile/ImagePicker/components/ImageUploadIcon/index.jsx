@@ -1,15 +1,16 @@
-import { BINARY_COLOR_SAND_90 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
+import { withTheme } from 'styled-components';
 
 const propTypes = {
+  theme: PropTypes.object.isRequired,
   renderIcon: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
 
-const ImageUploadIcon = ({ renderIcon }) => (
+const ImageUploadIcon = ({ theme, renderIcon }) => (
   renderIcon({
-    color: BINARY_COLOR_SAND_90,
+    color: theme.colorBackgroundMain,
     size: 36,
   })
 );
@@ -17,4 +18,4 @@ const ImageUploadIcon = ({ renderIcon }) => (
 ImageUploadIcon.propTypes = propTypes;
 ImageUploadIcon.defaultProps = defaultProps;
 
-export default ImageUploadIcon;
+export default withTheme(ImageUploadIcon);

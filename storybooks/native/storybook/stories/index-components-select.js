@@ -2,12 +2,13 @@ import { storiesOf } from "@storybook/react-native";
 import { action } from "@storybook/addon-actions";
 import React from "react";
 import { Text, View } from "react-native";
+import { ThemeProvider } from "styled-components";
 
 import Add from "binary-ui-icons/binary/Add";
 import Remove from "binary-ui-icons/binary/Remove";
-
-import Label from 'binary-ui-components/mobile/Label';
+import Label from "binary-ui-components/mobile/Label";
 import Select from "binary-ui-components/mobile/Select";
+import { THEME_MAIN } from "binary-ui-styles";
 
 class SelectDemo extends React.Component {
   constructor(props) {
@@ -35,21 +36,19 @@ class SelectDemo extends React.Component {
         ]}
         selected={selected}
         onChange={this.onChange}
-        renderLeft={() => (
-          <Label isBold>
-            Demo
-          </Label>
-        )}
+        renderLeft={() => <Label isBold>Demo</Label>}
       />
     );
   }
 }
 
 storiesOf("binary-ui-components/mobile", module).add("Select", () => (
-  <View>
+  <ThemeProvider theme={THEME_MAIN}>
     <View>
-      <Text>Demo</Text>
+      <View>
+        <Text>Demo</Text>
+      </View>
+      <SelectDemo />
     </View>
-    <SelectDemo />
-  </View>
+  </ThemeProvider>
 ));

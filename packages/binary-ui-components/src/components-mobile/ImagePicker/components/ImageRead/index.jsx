@@ -1,6 +1,6 @@
-import { BINARY_COLOR_BLUE_50, BINARY_COLOR_SAND_90 } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { withTheme } from 'styled-components';
 import IconDone from './components-styled/IconDone';
 import IconSpinner from './components-styled/IconSpinner';
 import ImageContent from './components-styled/ImageContent';
@@ -11,6 +11,7 @@ const propTypes = {
   imageUrl: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   isSelected: PropTypes.bool.isRequired,
+  theme: PropTypes.object.isRequired,
   onClick: PropTypes.func,
 };
 
@@ -19,7 +20,7 @@ const defaultProps = {
   onClick: undefined,
 };
 
-export default class ImageRead extends React.Component {
+class ImageRead extends React.Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -37,12 +38,12 @@ export default class ImageRead extends React.Component {
   }
 
   renderIcon() {
-    const { isLoading, isSelected } = this.props;
+    const { isLoading, isSelected, theme } = this.props;
     if (isLoading) {
-      return <IconSpinner color={BINARY_COLOR_SAND_90} size={20} />;
+      return <IconSpinner color={theme.colorBackgroundMain} size={20} />;
     }
     if (isSelected) {
-      return <IconDone color={BINARY_COLOR_BLUE_50} size={36} />;
+      return <IconDone color={theme.colorBlue50} size={36} />;
     }
     return null;
   }
@@ -64,3 +65,5 @@ export default class ImageRead extends React.Component {
 
 ImageRead.propTypes = propTypes;
 ImageRead.defaultProps = defaultProps;
+
+export default withTheme(ImageRead);

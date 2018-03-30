@@ -1,10 +1,10 @@
-import { FONT_FAMILY_MAIN_400 } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.Text`
-  font-family: ${FONT_FAMILY_MAIN_400};
+  font-family: ${props => props.theme.fontFamily400};
   font-size: 14px;
+  font-weight: ${props => props.theme.fontWeight400};
   padding: 6px 5px 5px 5px;
   ${props => {
     switch (props.alertType) {

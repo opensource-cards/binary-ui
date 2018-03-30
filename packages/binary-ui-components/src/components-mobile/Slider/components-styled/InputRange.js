@@ -1,4 +1,3 @@
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.input`
@@ -13,15 +12,15 @@ export default styled.input`
     border: 1px solid black;
     border-radius: 50%;
     cursor: pointer;
-    height: ${LIST_ITEM_HEIGHT / 2}px;
-    width: ${LIST_ITEM_HEIGHT / 2}px;
+    height: ${props => props.theme.sizeListItemHeight / 2}px;
+    width: ${props => props.theme.sizeListItemHeight / 2}px;
   }
   &::-moz-range-thumb {
     background-color: white;
     border: 1px solid black;
     border-radius: 50%;
     cursor: pointer;
-    height: ${LIST_ITEM_HEIGHT / 2}px;
-    width: ${LIST_ITEM_HEIGHT / 2}px;
+    height: ${props => props.theme.sizeListItemHeight / 2}px;
+    width: ${props => props.theme.sizeListItemHeight / 2}px;
   }
 `;

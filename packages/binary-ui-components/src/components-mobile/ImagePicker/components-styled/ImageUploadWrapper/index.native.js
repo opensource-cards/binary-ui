@@ -1,11 +1,10 @@
-import { BINARY_COLOR_SAND_90 } from 'binary-ui-styles';
 import styled from 'styled-components';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 export default styled.TouchableOpacity`
   align-items: center;
   background-color: transparent;
-  border-color: ${BINARY_COLOR_SAND_90};
+  border-color: ${props => props.theme.colorBackgroundMain};
   border-radius: ${PHOTO_SIZE / 2}px;
   border-width: 1px;
   height: ${PHOTO_SIZE}px;

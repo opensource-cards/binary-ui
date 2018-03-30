@@ -1,4 +1,3 @@
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
@@ -8,7 +7,7 @@ export default styled.div`
   cursor: default;
   display: flex;
   flex-direction: row;
-  height: ${LIST_ITEM_HEIGHT}px;
+  height: ${props => props.theme.sizeListItemHeight}px;
   padding-left: 10px;
   width: 100%;
 `;

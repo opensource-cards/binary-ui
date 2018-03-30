@@ -1,7 +1,6 @@
-import { LIST_ITEM_HEIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.View`
-  height: ${LIST_ITEM_HEIGHT};
+  height: ${props => props.theme.sizeListItemHeight};
   width: 10;
 `;

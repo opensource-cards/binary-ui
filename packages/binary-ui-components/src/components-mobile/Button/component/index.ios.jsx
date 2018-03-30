@@ -1,8 +1,8 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
-import { OPACITY_DISABLED } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight } from 'react-native';
+import { withTheme } from 'styled-components';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyledWrapper from '../components-styled/IconStyledWrapper';
@@ -15,6 +15,7 @@ const propTypes = {
   isValid: PropTypes.bool,
   label: PropTypes.string.isRequired,
   labelStyle: PropTypes.object,
+  theme: PropTypes.object.isRequired,
   renderIcon: PropTypes.func,
   onLongPress: PropTypes.func,
   onPress: PropTypes.func,
@@ -42,6 +43,7 @@ const Button = ({
   isValid,
   label,
   labelStyle,
+  theme,
   renderIcon,
   onLongPress,
   onPress,
@@ -65,7 +67,7 @@ const Button = ({
     >
       <IconStyledWrapper>
         {renderIcon({
-          opacity: isDisabled ? OPACITY_DISABLED : 1,
+          opacity: isDisabled ? theme.opacityDisabled : 1,
           size: 18,
         })}
       </IconStyledWrapper>
@@ -83,4 +85,4 @@ const Button = ({
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
 
-export default Button;
+export default withTheme(Button);

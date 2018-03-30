@@ -2,9 +2,11 @@ import { storiesOf } from "@storybook/react-native";
 import { action } from "@storybook/addon-actions";
 import React from "react";
 import { View } from "react-native";
+import { ThemeProvider } from "styled-components";
 
 import IconMore from "binary-ui-icons/binary/More";
 import Input, { INPUT_FIELD_TYPES } from "binary-ui-components/mobile/Input";
+import { THEME_MAIN } from "binary-ui-styles";
 
 class InputDemo extends React.Component {
   constructor(props) {
@@ -37,91 +39,93 @@ class InputDemo extends React.Component {
 }
 
 storiesOf("binary-ui-components/mobile", module).add("Input", () => (
-  <View>
-    <Input
-      placeholder="Text Placeholder"
-      type={INPUT_FIELD_TYPES.TEXT}
-      value=""
-      onChange={action()}
-    />
-    <Input
-      isDisabled
-      placeholder="Disabled"
-      type={INPUT_FIELD_TYPES.TEXT}
-      value=""
-      onChange={action()}
-    />
-    <Input
-      isDisabled
-      placeholder="Disabled with Icon"
-      type={INPUT_FIELD_TYPES.TEXT}
-      value=""
-      renderIcon={(props) => (<IconMore {...props} />)}
-      onChange={action()}
-    />
-    <Input
-      placeholder="Text"
-      type={INPUT_FIELD_TYPES.TEXT}
-      value="Text"
-      onChange={action()}
-    />
-    <Input
-      isBold
-      placeholder="Bold placeholder"
-      type={INPUT_FIELD_TYPES.TEXT}
-      value=""
-      onChange={action()}
-    />
-    <Input
-      isBold
-      placeholder="Bold text"
-      type={INPUT_FIELD_TYPES.TEXT}
-      value="Bold text"
-      onChange={action()}
-    />
-    <Input
-      type={INPUT_FIELD_TYPES.TEXT}
-      value="Lorem ipsum dolor sit amet ipsum dolor sit amet"
-      renderIcon={props => <IconMore {...props} />}
-      onChange={action()}
-    />
-    <Input
-      type={INPUT_FIELD_TYPES.NUMBER}
-      value="1234567890"
-      renderIcon={props => <IconMore {...props} />}
-      onChange={action()}
-      onIconPress={action()}
-    />
-    <Input
-      type={INPUT_FIELD_TYPES.TEL}
-      value="010000000"
-      renderIcon={props => <IconMore {...props} />}
-      onChange={action()}
-      onIconPress={action()}
-    />
-    <Input
-      type={INPUT_FIELD_TYPES.PASSWORD}
-      value="Password"
-      renderIcon={props => <IconMore {...props} />}
-      onChange={action()}
-      onIconPress={action()}
-    />
-    <Input
-      type={INPUT_FIELD_TYPES.EMAIL}
-      value="job@andcards.com"
-      renderIcon={props => <IconMore {...props} />}
-      onChange={action()}
-      onIconPress={action()}
-    />
-    <Input
-      isValid={false}
-      placeholder="Invalid Email"
-      type={INPUT_FIELD_TYPES.EMAIL}
-      value=""
-      renderIcon={props => <IconMore {...props} />}
-      onChange={action()}
-      onIconPress={action()}
-    />
-    <InputDemo />
-  </View>
+  <ThemeProvider theme={THEME_MAIN}>
+    <View>
+      <Input
+        placeholder="Text Placeholder"
+        type={INPUT_FIELD_TYPES.TEXT}
+        value=""
+        onChange={action()}
+      />
+      <Input
+        isDisabled
+        placeholder="Disabled"
+        type={INPUT_FIELD_TYPES.TEXT}
+        value=""
+        onChange={action()}
+      />
+      <Input
+        isDisabled
+        placeholder="Disabled with Icon"
+        type={INPUT_FIELD_TYPES.TEXT}
+        value=""
+        renderIcon={props => <IconMore {...props} />}
+        onChange={action()}
+      />
+      <Input
+        placeholder="Text"
+        type={INPUT_FIELD_TYPES.TEXT}
+        value="Text"
+        onChange={action()}
+      />
+      <Input
+        isBold
+        placeholder="Bold placeholder"
+        type={INPUT_FIELD_TYPES.TEXT}
+        value=""
+        onChange={action()}
+      />
+      <Input
+        isBold
+        placeholder="Bold text"
+        type={INPUT_FIELD_TYPES.TEXT}
+        value="Bold text"
+        onChange={action()}
+      />
+      <Input
+        type={INPUT_FIELD_TYPES.TEXT}
+        value="Lorem ipsum dolor sit amet ipsum dolor sit amet"
+        renderIcon={props => <IconMore {...props} />}
+        onChange={action()}
+      />
+      <Input
+        type={INPUT_FIELD_TYPES.NUMBER}
+        value="1234567890"
+        renderIcon={props => <IconMore {...props} />}
+        onChange={action()}
+        onIconPress={action()}
+      />
+      <Input
+        type={INPUT_FIELD_TYPES.TEL}
+        value="010000000"
+        renderIcon={props => <IconMore {...props} />}
+        onChange={action()}
+        onIconPress={action()}
+      />
+      <Input
+        type={INPUT_FIELD_TYPES.PASSWORD}
+        value="Password"
+        renderIcon={props => <IconMore {...props} />}
+        onChange={action()}
+        onIconPress={action()}
+      />
+      <Input
+        type={INPUT_FIELD_TYPES.EMAIL}
+        value="job@andcards.com"
+        renderIcon={props => <IconMore {...props} />}
+        onChange={action()}
+        onIconPress={action()}
+      />
+      <Input
+        isValid={false}
+        placeholder="Invalid Email"
+        type={INPUT_FIELD_TYPES.EMAIL}
+        value=""
+        renderIcon={props => <IconMore {...props} />}
+        onChange={action()}
+        onIconPress={action()}
+      />
+      <InputDemo />
+    </View>
+  </ThemeProvider>
 ));

@@ -1,8 +1,3 @@
-import {
-  BINARY_COLOR_BLUE_40,
-  BINARY_COLOR_RED_40,
-  BINARY_COLOR_YELLOW_50,
-} from 'binary-ui-styles';
 import styled from 'styled-components';
 import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
@@ -18,13 +13,13 @@ export default styled.View`
   ${props => {
     switch (props.alertType) {
       case CONFIRM:
-        return `background-color: ${BINARY_COLOR_BLUE_40};`;
+        return `background-color: ${props.theme.colorBlue40};`;
       case PRIORITY:
-        return `background-color: ${BINARY_COLOR_YELLOW_50};`;
+        return `background-color: ${props.theme.colorYellow50};`;
       case CRITICAL:
-        return `background-color: ${BINARY_COLOR_RED_40};`;
+        return `background-color: ${props.theme.colorRed40};`;
       default:
-        return `background-color: ${BINARY_COLOR_BLUE_40};`;
+        return `background-color: ${props.theme.colorBlue40};`;
     }
   }};
 `;

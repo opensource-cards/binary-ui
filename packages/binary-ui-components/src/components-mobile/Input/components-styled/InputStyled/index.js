@@ -1,19 +1,15 @@
-import {
-  FONT_SET_BOLD_CSS,
-  FONT_SET_LIGHT_CSS,
-  INPUT_RESET_CSS,
-  LIST_ITEM_HEIGHT,
-} from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.input`
-  ${INPUT_RESET_CSS}
-  ${props => (props.isBold ? FONT_SET_BOLD_CSS : FONT_SET_LIGHT_CSS)}
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+
   appearance: none;
   border-radius: 0;
   cursor: text;
   display: inline-block;
-  height: ${LIST_ITEM_HEIGHT - 1}px;
+  height: ${props => props.theme.sizeListItemHeight - 1}px;
   overflow: hidden;
   padding-bottom: 0;
   padding-left: 10px;
@@ -29,4 +25,10 @@ export default styled.input`
     margin: 0;
     -webkit-appearance: none;
   }
+
+  color: hsl(0, 0%, 0%);
+  font-family: ${props => (props.isBold ? props.theme.fontFamily600 : props.theme.fontFamily200)};
+  font-size: ${props => (props.isBold ? '13px' : '18px')};
+  font-weight: ${props => (props.isBold ? props.theme.fontWeight600 : props.theme.fontWeight200)};
+  letter-spacing: ${props => (props.isBold ? '2px' : 'normal')};
 `;

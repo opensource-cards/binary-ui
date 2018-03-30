@@ -1,18 +1,16 @@
-import {
-  FONT_SET_BOLD_CSS,
-  FONT_SET_LIGHT_CSS,
-  INPUT_RESET_CSS,
-  LIST_ITEM_HEIGHT,
-} from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.TextInput`
-  ${INPUT_RESET_CSS}
-  ${props => (props.isBold ? FONT_SET_BOLD_CSS : FONT_SET_LIGHT_CSS)}
   flex: 9;
-  height: ${LIST_ITEM_HEIGHT};
+  height: ${props => props.theme.sizeListItemHeight};
   padding-bottom: 0;
   padding-left: 10;
   padding-right: 0;
   padding-top: 0;
+
+  color: hsl(0, 0%, 0%);
+  font-family: ${props => (props.isBold ? props.theme.fontFamily600 : props.theme.fontFamily200)};
+  font-size: ${props => (props.isBold ? '13px' : '18px')};
+  font-weight: ${props => (props.isBold ? props.theme.fontWeight600 : props.theme.fontWeight200)};
+  letter-spacing: ${props => (props.isBold ? 2 : 0)};
 `;

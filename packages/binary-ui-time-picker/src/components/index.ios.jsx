@@ -8,6 +8,7 @@ import { DatePickerIOS, LayoutAnimation } from 'react-native';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
+  is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
@@ -19,6 +20,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  is24Hour: undefined,
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
@@ -72,8 +74,10 @@ class TimePicker extends React.Component {
   }
 
   render() {
+    /* eslint-disable no-unused-vars */
     const {
       hour,
+      is24Hour,
       isDisabled,
       locale,
       maximumDate,
@@ -83,6 +87,7 @@ class TimePicker extends React.Component {
       renderLeft,
       ...props,
     } = this.props;
+    /* eslint-enable no-unused-vars */
     const { isVisible } = this.state;
     const dateNow = new Date();
     return (

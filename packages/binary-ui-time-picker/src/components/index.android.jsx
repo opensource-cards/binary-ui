@@ -8,6 +8,7 @@ import { TimePickerAndroid } from 'react-native';
 
 const propTypes = {
   hour: PropTypes.number.isRequired,
+  is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
@@ -19,6 +20,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  is24Hour: undefined,
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
@@ -38,12 +40,12 @@ class TimePicker extends React.Component {
   }
 
   onPress() {
-    const { hour: initHour, minute: initMinute, onChange } = this.props;
+    const { hour: initHour, is24Hour, minute: initMinute, onChange } = this.props;
     try {
       TimePickerAndroid.open({
         hour: initHour,
         minute: initMinute,
-        is24Hour: true,
+        is24Hour,
       }).then(({ action, hour, minute }) => {
         if (action === TimePickerAndroid.dismissedAction) {
           return;
@@ -64,6 +66,7 @@ class TimePicker extends React.Component {
     /* eslint-disable no-unused-vars */
     const {
       hour,
+      is24Hour,
       isDisabled,
       locale,
       maximumDate,

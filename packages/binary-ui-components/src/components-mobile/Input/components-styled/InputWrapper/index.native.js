@@ -1,11 +1,11 @@
-import { LIST_ITEM_HEIGHT, getHighlightEditStyle } from 'binary-ui-styles';
+import { getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.View`
   align-items: center;
   background-color: #FFFFFF;
   flex-direction: row-reverse;
-  height: ${LIST_ITEM_HEIGHT};
+  height: ${props => props.theme.sizeListItemHeight};
   width: 100%;
   ${props => (
     getHighlightEditStyle(

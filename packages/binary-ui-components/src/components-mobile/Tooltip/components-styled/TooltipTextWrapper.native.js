@@ -1,8 +1,7 @@
-import { BINARY_COLOR_GRAY_30 } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.View`
-  background-color: ${BINARY_COLOR_GRAY_30};
+  background-color: ${props => props.theme.colorGray40};
   border-radius: 5;
   elevation: 1;
   padding-horizontal: 10;

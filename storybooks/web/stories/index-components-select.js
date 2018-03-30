@@ -3,12 +3,13 @@ import { setAddon, storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withInfo } from "@storybook/addon-info";
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 
-import Label from 'binary-ui-components/mobile/Label';
+import Label from "binary-ui-components/mobile/Label";
 import Select from "binary-ui-components/mobile/Select";
 import Add from "binary-ui-icons/binary/Add";
 import Remove from "binary-ui-icons/binary/Remove";
+import { THEME_MAIN } from "binary-ui-styles";
 
 setAddon(infoAddon);
 
@@ -38,11 +39,7 @@ class SelectDemo extends React.Component {
         ]}
         selected={selected}
         onChange={this.onChange}
-        renderLeft={() => (
-          <Label isBold>
-            Demo
-          </Label>
-        )}
+        renderLeft={() => <Label isBold>Demo</Label>}
       />
     );
   }
@@ -51,9 +48,11 @@ class SelectDemo extends React.Component {
 storiesOf("binary-ui-components/mobile", module).add(
   "Select",
   withInfo("Select component")(() => (
-    <div>
-      <div>Demo</div>
-      <SelectDemo />
-    </div>
+    <ThemeProvider theme={THEME_MAIN}>
+      <div>
+        <div>Demo</div>
+        <SelectDemo />
+      </div>
+    </ThemeProvider>
   ))
 );

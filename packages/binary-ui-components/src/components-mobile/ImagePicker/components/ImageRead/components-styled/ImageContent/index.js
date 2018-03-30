@@ -6,6 +6,6 @@ export default ImageUploadWrapper.extend`
   background-position: center;
   background-repeat: no-repeat;
   background-size: ${props => props.imageFit};
-  opacity: ${props => (props.isLoading ? 0.5 : 1)};
+  opacity: ${props => (props.isLoading ? props.theme.opacityActive : 1)};
   transition: ${TRANSITION_FEEDBACK_OPACITY};
 `;
