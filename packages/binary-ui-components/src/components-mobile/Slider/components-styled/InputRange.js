@@ -8,16 +8,16 @@ export default styled.input`
   outline: none;
   &::-webkit-slider-thumb {
     appearance: none;
-    background-color: white;
-    border: 1px solid black;
+    background-color: #ffffff;
+    border: 1px solid #000000;
     border-radius: 50%;
     cursor: pointer;
     height: ${props => props.theme.sizeListItemHeight / 2}px;
     width: ${props => props.theme.sizeListItemHeight / 2}px;
   }
   &::-moz-range-thumb {
-    background-color: white;
-    border: 1px solid black;
+    background-color: #ffffff;
+    border: 1px solid #000000;
     border-radius: 50%;
     cursor: pointer;
     height: ${props => props.theme.sizeListItemHeight / 2}px;

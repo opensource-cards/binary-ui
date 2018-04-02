@@ -4,7 +4,7 @@ import { TAP_HIGHLIGHT_COLOR } from '../../utils/styles';
 
 export default styled.div`
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-sizing: border-box;
   cursor: default;
   display: flex;

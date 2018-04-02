@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.View`
+  align-self: center;
   border-radius: 5;
+  elevation: 1;
   flex-direction: row;
   justify-content: center;
   margin-top: 3px;
   padding: 0 5px;
-  elevation: 1;
-  align-self: center;
-
   ${props => {
     switch (props.alertType) {
       case CONFIRM:

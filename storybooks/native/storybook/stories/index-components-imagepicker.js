@@ -1,6 +1,6 @@
 import IconCamera from "binary-ui-icons/binary/CameraAlt";
 import React from "react";
-import { View } from "react-native";
+import { Image, View } from "react-native";
 import { ThemeProvider } from "styled-components";
 
 import { storiesOf } from "@storybook/react-native";
@@ -15,30 +15,54 @@ storiesOf("binary-ui-components/mobile", module).add("ImagePicker", () => (
   <ThemeProvider theme={THEME_MAIN}>
     <View>
       <ImagePicker
-        imageFit="contain"
         images={[
           {
-            url: "https://andcards.com/api/cover?hour=23",
+            url: "https://andcards.com/logotype-320x60.png",
             id: imageSelectedId
           }
         ]}
         imageSelectedId={imageSelectedId}
+        renderImage={({ isLoading, radius, url }) => (
+          <Image
+            resizeMode="contain"
+            source={{ uri: url }}
+            style={{
+              borderRadius: radius,
+              height: 2 * radius,
+              opacity: isLoading ? 0.5 : 1,
+              position: 'absolute',
+              width: 2 * radius,
+            }}
+          />
+        )}
         renderUploadIcon={props => <IconCamera {...props} />}
         isImageUpload={false}
         onImagePress={action()}
         onImageUpload={action()}
       />
       <ImagePicker
-        imageFit="cover"
         images={[
           {
-            url: "https://andcards.com/api/cover?hour=23",
+            url: "https://andcards.com/logotype-320x60.png",
             id: imageSelectedId,
             isLoading: true
           }
         ]}
         imageSelectedId={imageSelectedId}
         isImageUpload={true}
+        renderImage={({ isLoading,radius, url }) => (
+          <Image
+            resizeMode="cover"
+            source={{ uri: url }}
+            style={{
+              borderRadius: radius,
+              height: 2 * radius,
+              opacity: isLoading ? 0.5 : 1,
+              position: 'absolute',
+              width: 2 * radius,
+            }}
+          />
+        )}
         renderUploadIcon={props => <IconCamera {...props} />}
         onImagePress={action()}
         onImageUpload={action()}

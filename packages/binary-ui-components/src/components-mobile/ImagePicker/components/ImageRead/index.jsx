@@ -4,15 +4,16 @@ import { withTheme } from 'styled-components';
 import IconDone from './components-styled/IconDone';
 import IconSpinner from './components-styled/IconSpinner';
 import ImageContent from './components-styled/ImageContent';
+import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 const propTypes = {
-  imageFit: PropTypes.string.isRequired,
   imageId: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   isSelected: PropTypes.bool.isRequired,
   theme: PropTypes.object.isRequired,
   onClick: PropTypes.func,
+  renderImage: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -49,14 +50,13 @@ class ImageRead extends React.Component {
   }
 
   render() {
-    const { imageFit, imageUrl, isLoading } = this.props;
+    const { imageUrl, isLoading, renderImage } = this.props;
     return (
       <ImageContent
-        imageFit={imageFit}
         imageUrl={imageUrl}
-        isLoading={isLoading}
         onClick={this.onClick}
       >
+        {renderImage({ isLoading, radius: PHOTO_SIZE / 2, url: imageUrl })}
         {this.renderIcon()}
       </ImageContent>
     );

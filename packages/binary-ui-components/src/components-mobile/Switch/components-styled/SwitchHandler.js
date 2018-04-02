@@ -7,7 +7,7 @@ export default styled.div.attrs({
     : { borderColor: props.theme.colorGray80, left: 0 }
   ),
 })`
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 100%;
   border-width: 1px;
   border-style: solid;

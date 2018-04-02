@@ -27,12 +27,12 @@ storiesOf("binary-ui-components/mobile", module).add(
         <Alert
           text="Alert type CRITICAL"
           type={ALERT_TYPES.CRITICAL}
-          renderIconLeft={() => <IconWarning color="#FFFFFF" />}
+          renderIconLeft={() => <IconWarning color="#ffffff" />}
         />
         <Alert
           text="Reconnecting to internet..."
           type={ALERT_TYPES.CRITICAL}
-          renderIconLeft={() => <Spinner color="#FFFFFF" />}
+          renderIconLeft={() => <Spinner color="#ffffff" />}
         />
       </div>
     </ThemeProvider>

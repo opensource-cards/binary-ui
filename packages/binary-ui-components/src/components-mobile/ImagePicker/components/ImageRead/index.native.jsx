@@ -4,18 +4,17 @@ import React from 'react';
 import { withTheme } from 'styled-components';
 import IconDone from './components-styled/IconDone';
 import IconSpinner from './components-styled/IconSpinner';
-import ImageStyled from './components-styled/ImageStyled/index.native';
 import ImageContent from './components-styled/ImageContent';
 import { PHOTO_SIZE } from '../../utils/styles.native-and-web';
 
 const propTypes = {
-  imageFit: PropTypes.string.isRequired,
   imageId: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   isSelected: PropTypes.bool.isRequired,
   theme: PropTypes.object.isRequired,
   onPress: PropTypes.func,
+  renderImage: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -52,31 +51,18 @@ class ImageRead extends React.Component {
   }
 
   render() {
-    const { imageFit, imageUrl, isLoading, theme } = this.props;
+    const { imageUrl, isLoading, theme, renderImage } = this.props;
     return isLoading ? (
-      <ImageContent.View
-        activeOpacity={theme.opacityActive}
-        isLoading={isLoading}
-        onPress={this.onPress}
-      >
-        <ImageStyled
-          borderRadius={PHOTO_SIZE / 2}
-          resizeMode={imageFit}
-          source={{ uri: imageUrl }}
-        />
+      <ImageContent.View>
+        {renderImage({ isLoading, radius: PHOTO_SIZE / 2, url: imageUrl })}
         {this.renderIcon()}
       </ImageContent.View>
     ) : (
       <ImageContent.TouchableOpacity
         activeOpacity={theme.opacityActive}
-        isLoading={isLoading}
         onPress={this.onPress}
       >
-        <ImageStyled
-          borderRadius={PHOTO_SIZE / 2}
-          resizeMode={imageFit}
-          source={{ uri: imageUrl }}
-        />
+        {renderImage({ isLoading, radius: PHOTO_SIZE / 2, url: imageUrl })}
         {this.renderIcon()}
       </ImageContent.TouchableOpacity>
     );

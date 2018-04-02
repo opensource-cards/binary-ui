@@ -3,7 +3,6 @@ import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.div`
   border-radius: 5px;
-  box-shadow: 0px 0px 3px 0px rgba(128, 128, 128, 0.5);
   cursor: default;
   display: flex;
   flex-direction: row;
@@ -16,13 +15,13 @@ export default styled.div`
   ${props => {
     switch (props.alertType) {
       case CONFIRM:
-        return `background: ${props.theme.colorBlue40};color: white;`;
+        return `background: ${props.theme.colorBlue40};color: #ffffff;`;
       case PRIORITY:
-        return `background: ${props.theme.colorYellow50};color: black;`;
+        return `background: ${props.theme.colorYellow50};color: #000000;`;
       case CRITICAL:
-        return `background: ${props.theme.colorRed40};color: white;`;
+        return `background: ${props.theme.colorRed40};color: #ffffff;`;
       default:
-        return `background: ${props.theme.colorBlue40};color: white;`;
+        return `background: ${props.theme.colorBlue40};color: #ffffff;`;
     }
   }};
 `;

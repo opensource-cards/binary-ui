@@ -27,3 +27,5 @@ import './index-navbar';
 import './index-date-picker';
 
 import './index-time-picker';
+
+import './index-styles';

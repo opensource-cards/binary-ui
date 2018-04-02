@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export default styled.View`
-  height: ${props => props.theme.sizeListItemHeight}px;
-  width: 96%;
   align-items: flex-start;
+  height: ${props => props.theme.sizeListItemHeight}px;
   justify-content: center;
   margin-left: 2%;
   margin-right: 2%;
+  width: 96%;
 `;

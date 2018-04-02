@@ -4,7 +4,7 @@ import { INPUT_HEIGHT } from '../../constants';
 
 export default styled.View`
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 7px;
   flex: 1;
   flex-direction: row;

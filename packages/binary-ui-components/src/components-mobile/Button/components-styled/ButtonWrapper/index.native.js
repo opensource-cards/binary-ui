@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default styled.View`
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   flex-direction: row-reverse;
   height: ${props => props.theme.sizeListItemHeight};
   width: 100%;

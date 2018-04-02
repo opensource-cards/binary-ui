@@ -1,23 +1,20 @@
 import styled from 'styled-components';
 
 export default styled.textarea`
-  border: none;
-  box-sizing: border-box;
-  outline: 0;
-
   background-color: transparent;
+  border: none;
   border-radius: 0;
+  box-sizing: border-box;
+  color: hsl(0, 0%, 0%);
   cursor: text;
+  font-family: ${props => props.theme.fontFamily200};
+  font-size: 18px;
+  font-weight: ${props => props.theme.fontWeight200};
   height: ${props => props.styleHeight}px;
+  outline: 0;
   padding: 10px;
   resize: none;
   text-align: left;
   width: 100%;
   wrap: soft;
-
-  color: hsl(0, 0%, 0%);
-  font-family: ${props => props.theme.fontFamily200};
-  font-size: 18px;
-  font-weight: ${props => props.theme.fontWeight200};
-  letter-spacing: 0;
 `;

@@ -21,7 +21,7 @@ storiesOf("binary-ui-components/mobile", module).add("Alert", () => (
       <Alert
         text="Alert type CRITICAL"
         type={ALERT_TYPES.CRITICAL}
-        renderIconLeft={() => <IconWarning color="#FFFFFF" />}
+        renderIconLeft={() => <IconWarning color="#ffffff" />}
       />
     </View>
   </ThemeProvider>

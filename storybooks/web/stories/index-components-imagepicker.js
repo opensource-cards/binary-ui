@@ -9,7 +9,7 @@ import { action } from "@storybook/addon-actions";
 import { withInfo } from "@storybook/addon-info";
 
 import ImagePicker from "binary-ui-components/mobile/ImagePicker";
-import { THEME_MAIN } from "binary-ui-styles";
+import { THEME_MAIN, TRANSITION_FEEDBACK_OPACITY } from "binary-ui-styles";
 
 setAddon(infoAddon);
 
@@ -21,30 +21,56 @@ storiesOf("binary-ui-components/mobile", module).add(
     <ThemeProvider theme={THEME_MAIN}>
       <div>
         <ImagePicker
-          imageFit="contain"
           images={[
             {
-              url: "https://andcards.com/api/cover?hour=23",
+              url: "https://andcards.com/logotype-320x60.png",
               id: imageSelectedId
             }
           ]}
           imageSelectedId={imageSelectedId}
           isImageUpload={false}
+          renderImage={({ isLoading, radius, url }) => (
+            <img
+              src={url}
+              style={{
+                borderRadius: radius,
+                height: 2 * radius,
+                objectFit: "contain",
+                opacity: isLoading ? 0.5 : 1,
+                position: 'absolute',
+                transition: TRANSITION_FEEDBACK_OPACITY,
+                width: 2 * radius,
+              }}
+            />
+          )}
           renderUploadIcon={props => <IconCamera {...props} />}
           onImageClick={action()}
           onImageUpload={action()}
         />
         <ImagePicker
-          imageFit="cover"
           images={[
             {
-              url: "https://andcards.com/api/cover?hour=23",
+              url: "https://andcards.com/logotype-320x60.png",
               id: imageSelectedId,
               isLoading: true
             }
           ]}
           imageSelectedId={imageSelectedId}
           isImageUpload
+          renderImage={({ isLoading, radius, url }) => (
+            <img
+              src={url}
+              style={{
+                borderRadius: radius,
+                height: 2 * radius,
+                objectFit: "cover",
+                opacity: isLoading ? 0.5 : 1,
+                position: 'absolute',
+                transition: TRANSITION_FEEDBACK_OPACITY,
+                width: 2 * radius,
+              }}
+            />
+          )}
           renderUploadIcon={props => <IconCamera {...props} />}
           onImageClick={action()}
           onImageUpload={action()}

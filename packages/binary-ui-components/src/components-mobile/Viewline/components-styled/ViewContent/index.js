@@ -7,6 +7,6 @@ export default styled.div`
   outline: 0;
   overflow: hidden;
   text-overflow: hidden;
-  white-space: no-wrap;
+  white-space: nowrap;
   width: 100%;
 `;

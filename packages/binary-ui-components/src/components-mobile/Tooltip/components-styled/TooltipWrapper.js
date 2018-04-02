@@ -5,7 +5,6 @@ import { TOOLTIP_ARROW_HEIGHT, TOOLTIP_ARROW_WIDTH, TOOLTIP_ARROW_SHIFT } from '
 export default styled.div`
   background-color: ${props => props.theme.colorGray40};
   border-radius: 6px;
-  box-shadow: 0px 0px 3px 0px rgba(128, 128, 128, 0.5);
   color: #fff;
   cursor: default;
   font-family: ${props => props.theme.fontFamily400};

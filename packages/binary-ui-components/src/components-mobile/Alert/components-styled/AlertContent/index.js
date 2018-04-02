@@ -6,7 +6,7 @@ export default styled.div`
   font-size: 14px;
   font-weight: ${props => props.theme.fontWeight400};
   overflow: hidden;
-  padding: 6px 5px 5px 5px;
+  padding: 5px;
   text-overflow: ellipsis;
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;

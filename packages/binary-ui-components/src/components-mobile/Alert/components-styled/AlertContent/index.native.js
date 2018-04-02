@@ -5,17 +5,17 @@ export default styled.Text`
   font-family: ${props => props.theme.fontFamily400};
   font-size: 14px;
   font-weight: ${props => props.theme.fontWeight400};
-  padding: 6px 5px 5px 5px;
+  padding: 5px;
   ${props => {
     switch (props.alertType) {
       case CONFIRM:
-        return 'color: #FFFFFF;';
+        return 'color: #ffffff;';
       case PRIORITY:
         return 'color: #000000;';
       case CRITICAL:
-        return 'color: #FFFFFF;';
+        return 'color: #ffffff;';
       default:
-        return 'color: #FFFFFF;';
+        return 'color: #ffffff;';
     }
   }};
 `;

@@ -7,5 +7,5 @@ export default styled.Text.attrs({
   font-family: ${props => props.theme.fontFamily600};
   font-size: 12px;
   font-weight: ${props => props.theme.fontWeight600};
-  letter-spacing: 3px;
+  letter-spacing: ${props => props.theme.letterSpacing3};
 `;

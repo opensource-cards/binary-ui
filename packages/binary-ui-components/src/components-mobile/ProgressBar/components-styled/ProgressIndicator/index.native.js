@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default styled.View`
   background-color: ${props => (props.progress >= 90
-    ? `${props.theme.colorRed40}`
+    ? props.theme.colorRed40
     : '#000'
   )};
   height: 1px;

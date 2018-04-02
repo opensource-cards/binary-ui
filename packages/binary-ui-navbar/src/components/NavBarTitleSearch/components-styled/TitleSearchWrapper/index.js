@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default styled.div`
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 7px;
   box-sizing: border-box;
   display: flex;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default styled.div`
   align-content: center;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;

@@ -5,17 +5,16 @@ import ImageUpload from './ImageUpload';
 import ImagePickerWrapper from '../components-styled/ImagePickerWrapper';
 
 const propTypes = {
-  imageFit: PropTypes.string,
   imageSelectedId: PropTypes.string,
   images: PropTypes.array,
   isImageUpload: PropTypes.bool,
+  renderImage: PropTypes.func.isRequired,
   renderUploadIcon: PropTypes.func.isRequired,
   onImagePress: PropTypes.func,
   onImageUpload: PropTypes.func,
 };
 
 const defaultProps = {
-  imageFit: 'contain',
   imageSelectedId: undefined,
   images: [],
   isImageUpload: true,
@@ -40,9 +39,9 @@ class ImagePicker extends React.Component {
   render() {
     const {
       images,
-      imageFit,
       imageSelectedId,
       isImageUpload,
+      renderImage,
       renderUploadIcon,
       onImageUpload,
     } = this.props;
@@ -50,12 +49,12 @@ class ImagePicker extends React.Component {
       <ImagePickerWrapper>
         {images.map(image => (
           <ImageRead
-            imageFit={imageFit}
             imageId={image.id}
             imageUrl={image.url}
             isLoading={image.isLoading}
             isSelected={image.id === imageSelectedId}
             key={image.id}
+            renderImage={renderImage}
             onPress={this.onImagePress}
           />
         ))}

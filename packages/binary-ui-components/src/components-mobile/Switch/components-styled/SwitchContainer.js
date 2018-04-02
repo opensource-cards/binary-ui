@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  position: relative;
   height: ${props => props.theme.sizeListItemHeight / 2}px;
+  position: relative;
 `;
