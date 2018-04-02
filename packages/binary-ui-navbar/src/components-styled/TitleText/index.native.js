@@ -7,8 +7,8 @@ export default styled.Text.attrs({
   align-items: center;
   color: #000000;
   flex-direction: row;
-  font-family: ${props => props.theme.fontFamily500};
+  font-family: ${props => props.theme.fontFamily600};
   font-size: 16px;
-  font-weight: ${props => props.theme.fontWeight500};
+  font-weight: ${props => props.theme.fontWeight600};
   justify-content: flex-start;
 `;
