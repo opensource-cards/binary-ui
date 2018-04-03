@@ -73,8 +73,8 @@ class DatePicker extends React.Component {
           <Input
             {...props}
             isDisabled={isDisabled}
-            max={maximumDate ? `${maximumDate.getFullYear()}-${padStart(maximumDate.getMonth(), 2, '0')}-${padStart(maximumDate.getDate(), 2, '0')}` : undefined}
-            min={minimumDate ? `${minimumDate.getFullYear()}-${padStart(minimumDate.getMonth(), 2, '0')}-${padStart(minimumDate.getDate(), 2, '0')}` : undefined}
+            max={maximumDate ? `${maximumDate.getFullYear()}-${padStart(maximumDate.getMonth() + 1, 2, '0')}-${padStart(maximumDate.getDate(), 2, '0')}` : undefined}
+            min={minimumDate ? `${minimumDate.getFullYear()}-${padStart(minimumDate.getMonth() + 1, 2, '0')}-${padStart(minimumDate.getDate(), 2, '0')}` : undefined}
             type="date"
             value={`${year}-${padStart(month, 2, '0')}-${padStart(day, 2, '0')}`}
             onChange={this.onChange}

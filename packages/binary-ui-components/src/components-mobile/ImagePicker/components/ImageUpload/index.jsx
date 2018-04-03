@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ImageUploadInput from './components-styled/ImageUploadInput';
 import ImageUploadIcon from '../ImageUploadIcon';
-import ImageUploadInput from '../../components-styled/ImageUploadInput';
 import ImageUploadWrapper from '../../components-styled/ImageUploadWrapper';
 
 const propTypes = {
