@@ -607,19 +607,19 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.2.tgz#b314a4ee97d861d08165404d265219c68958bdf3"
+binary-ui-components@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.3.tgz#254e217ea27408cb02847773384450fa3840a75f"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.6.2"
+    binary-ui-icons "^0.6.3"
     binary-ui-styles "^0.6.2"
     prop-types "^15.5.10"
     styled-components "^3.0.0"
 
-binary-ui-icons@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.2.tgz#0665e1ea86d1aa39a906dfb67b7ada08f7cad85e"
+binary-ui-icons@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.3.tgz#2cecf8cccf3f829cbfbaabce05471c0d9a9e498d"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
@@ -2146,8 +2146,8 @@ rc@^1.1.7:
     strip-json-comments "~2.0.1"
 
 react@^16.0.0:
-  version "16.3.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.3.0.tgz#fc5a01c68f91e9b38e92cf83f7b795ebdca8ddff"
+  version "16.3.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.3.1.tgz#4a2da433d471251c69b6033ada30e2ed1202cfd8"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -2155,15 +2155,15 @@ react@^16.0.0:
     prop-types "^15.6.0"
 
 readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.2.2:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.5.tgz#b4f85003a938cbb6ecbce2a124fb1012bd1a838d"
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
   dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.3"
     isarray "~1.0.0"
     process-nextick-args "~2.0.0"
     safe-buffer "~5.1.1"
-    string_decoder "~1.0.3"
+    string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
 
 readdirp@^2.0.0:
@@ -2407,9 +2407,9 @@ string-width@^2.0.0:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^4.0.0"
 
-string_decoder@~1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.0.3.tgz#0fc67d7c141825de94282dd536bec6b9bce860ab"
+string_decoder@~1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.1.1.tgz#9cf1611ba62685d7030ae9e4ba34149c3af03fc8"
   dependencies:
     safe-buffer "~5.1.0"
 
