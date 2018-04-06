@@ -1,7 +1,7 @@
 import { EASING_CURVE_COMPONENT_STATE } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Animated, StyleSheet } from 'react-native';
+import { Animated, StyleSheet, ViewPropTypes } from 'react-native';
 import { TOOLTIP_ARROW_SHIFT, TOOLTIP_ARROW_WIDTH } from '../config';
 
 const styles = StyleSheet.create({
@@ -19,7 +19,7 @@ const propTypes = {
     'top-right',
     'top-left',
   ]).isRequired,
-  style: PropTypes.object,
+  style: ViewPropTypes.style,
 };
 
 const defaultProps = {

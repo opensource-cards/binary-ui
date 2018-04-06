@@ -7,4 +7,5 @@ export default styled(IconDone)`
   height: ${PHOTO_SIZE}px;
   position: absolute;
   width: ${PHOTO_SIZE}px;
+  z-index: 2;
 `;

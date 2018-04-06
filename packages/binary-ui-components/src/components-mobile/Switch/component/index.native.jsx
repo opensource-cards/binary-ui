@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { StyleSheet, Switch as ReactNativeSwitch } from 'react-native';
+import { StyleSheet, Switch as ReactNativeSwitch, ViewPropTypes } from 'react-native';
 import SwitchLabel from '../components-styled/SwitchLabel';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
 
@@ -14,7 +14,7 @@ const propTypes = {
   isChecked: PropTypes.bool.isRequired,
   isDisabled: PropTypes.bool,
   label: PropTypes.string,
-  style: PropTypes.object,
+  style: ViewPropTypes.style,
   onChange: PropTypes.func,
 };
 

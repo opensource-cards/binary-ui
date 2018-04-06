@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { withTheme } from 'styled-components';
 import ImageUploadInput from './components-styled/ImageUploadInput';
-import ImageUploadIcon from '../ImageUploadIcon';
 import ImageUploadWrapper from '../../components-styled/ImageUploadWrapper';
 
 const propTypes = {
+  theme: PropTypes.object.isRequired,
   renderIcon: PropTypes.func.isRequired,
   onImageUpload: PropTypes.func.isRequired,
 };
 
 const defaultProps = {};
 
-export default class ImageUpload extends React.Component {
+class ImageUpload extends React.Component {
   constructor(props) {
     super(props);
     this.onDivClick = this.onDivClick.bind(this);
@@ -43,7 +44,7 @@ export default class ImageUpload extends React.Component {
   }
 
   render() {
-    const { renderIcon } = this.props;
+    const { theme, renderIcon } = this.props;
     return (
       <ImageUploadWrapper imageUploadUrl={renderIcon} onClick={this.onDivClick} >
         <ImageUploadInput
@@ -53,7 +54,10 @@ export default class ImageUpload extends React.Component {
           onClick={this.onLoaderClick}
           onChange={this.onImageUpload}
         />
-        <ImageUploadIcon renderIcon={renderIcon} />
+        {renderIcon({
+          color: theme.colorBackgroundMain,
+          size: 36,
+        })}
       </ImageUploadWrapper>
     );
   }
@@ -61,3 +65,5 @@ export default class ImageUpload extends React.Component {
 
 ImageUpload.propTypes = propTypes;
 ImageUpload.defaultProps = defaultProps;
+
+export default withTheme(ImageUpload);

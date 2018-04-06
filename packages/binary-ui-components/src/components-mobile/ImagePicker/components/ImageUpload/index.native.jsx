@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'styled-components';
-import ImageUploadIcon from '../ImageUploadIcon';
 import ImageUploadWrapper from '../../components-styled/ImageUploadWrapper';
 
 const propTypes = {
@@ -14,7 +13,10 @@ const defaultProps = {};
 
 const ImageUpload = ({ theme, renderIcon, onImageUpload }) => (
   <ImageUploadWrapper activeOpacity={theme.opacityActive} onPress={onImageUpload} >
-    <ImageUploadIcon renderIcon={renderIcon} />
+    {renderIcon({
+      color: theme.colorBackgroundMain,
+      size: 36,
+    })}
   </ImageUploadWrapper>
 );
 

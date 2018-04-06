@@ -1,22 +1,26 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, ViewPropTypes } from 'react-native';
 
 const propTypes = {
   color: PropTypes.string,
+  opacity: PropTypes.number,
   size: PropTypes.number,
+  style: ViewPropTypes.style,
 };
 
 const defaultProps = {
-  color: '#000',
+  color: '#000000',
+  opacity: 1,
   size: 20,
 };
 
-const Spinner = ({ color, size, ...props }) => (
+const Spinner = ({ color, opacity, size, style, ...props }) => (
   <ActivityIndicator
     {...props}
     color={color}
     size={size < 36 ? 'small' : 'large'}
+    style={[style, { opacity }]}
   />
 );
 
