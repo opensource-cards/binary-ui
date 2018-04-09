@@ -35,12 +35,14 @@ export default class TooltipStyled extends React.Component {
   componentWillReceiveProps(newProps) {
     const { isVisible } = this.props;
     if (isVisible !== newProps.isVisible) {
-      Animated.timing(this.animatedOpacity, {
-        duration: 250,
-        toValue: newProps.isVisible ? 1 : 0,
-        easing: EASING_CURVE_COMPONENT_STATE,
-        useNativeDriver: true,
-      }).start();
+      requestAnimationFrame(() => {
+        Animated.timing(this.animatedOpacity, {
+          duration: 250,
+          toValue: newProps.isVisible ? 1 : 0,
+          easing: EASING_CURVE_COMPONENT_STATE,
+          useNativeDriver: true,
+        }).start();
+      });
     }
   }
 
