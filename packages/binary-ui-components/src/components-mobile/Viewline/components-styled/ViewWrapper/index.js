@@ -11,8 +11,6 @@ export default styled.div`
   justify-content: space-between;
   min-height: ${props => props.theme.sizeListItemHeight}px;
   padding-left: 10px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
   ${props =>
     (props.isEdit
       ? `border-bottom: 1px solid ${props.theme.colorBackgroundMain}`

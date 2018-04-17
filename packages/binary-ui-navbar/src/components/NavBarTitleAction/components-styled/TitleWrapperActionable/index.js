@@ -5,6 +5,9 @@ export default TitleWrapperBase.extend`
   cursor: pointer;
   display: flex;
   flex-direction: row;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
   &:active {
     opacity: 0.5;
   }

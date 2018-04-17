@@ -16,8 +16,8 @@ class ImageUpload extends React.Component {
   constructor(props) {
     super(props);
     this.onDivClick = this.onDivClick.bind(this);
-    this.onLoaderClick = this.onLoaderClick.bind(this);
     this.onImageUpload = this.onImageUpload.bind(this);
+    this.onLoaderClick = this.onLoaderClick.bind(this);
     this.onSetLoaderRef = this.onSetLoaderRef.bind(this);
   }
 
@@ -25,18 +25,18 @@ class ImageUpload extends React.Component {
     this.loader.click();
   }
 
-  onLoaderClick() {
-    this.loader.value = null;
-  }
-
   onImageUpload(e) {
     const reader = new FileReader();
     const file = e.target.files[0];
     reader.onload = (upload) => {
       const { onImageUpload } = this.props;
-      onImageUpload(upload.target.result);
+      onImageUpload(upload.target.result, file);
     };
     reader.readAsDataURL(file);
+  }
+
+  onLoaderClick() {
+    this.loader.value = null;
   }
 
   onSetLoaderRef(loader) {

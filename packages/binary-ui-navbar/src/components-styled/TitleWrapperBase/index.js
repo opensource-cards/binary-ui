@@ -9,9 +9,6 @@ export default styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   transition: ${TRANSITION_FEEDBACK_OPACITY};
-  user-select: none;
   white-space: nowrap;
   width: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
 `;

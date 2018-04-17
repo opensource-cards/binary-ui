@@ -6,6 +6,4 @@ export default styled.div`
   height: ${props => props.theme.sizeListItemHeight}px;
   max-width: 100%;
   width: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
 `;
