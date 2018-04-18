@@ -14,6 +14,9 @@ storiesOf("binary-ui-components/mobile", module).add("Viewline", () => (
       <Viewline>
         <Text>Viewline without icon</Text>
       </Viewline>
+      <Viewline isEdit isValid={false}>
+        <Text>Viewline invalid without icon</Text>
+      </Viewline>
       <Viewline
         renderIcon={props => <IconMore {...props} />}
         onIconPress={action()}

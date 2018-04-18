@@ -1,3 +1,4 @@
+import { getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.View`
@@ -8,8 +9,5 @@ export default styled.View`
   justify-content: space-between;
   overflow: hidden;
   width: 100%;
-  ${props => (props.isEdit
-    ? `border-bottom-width: 1;border-bottom-color: ${props.theme.colorBackgroundMain};`
-    : undefined
-  )}
+  ${props => getHighlightEditStyle(props.isEdit, props.isValid, false)}
 `;

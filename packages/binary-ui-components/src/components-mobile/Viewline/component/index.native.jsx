@@ -8,6 +8,7 @@ const propTypes = {
   children: PropTypes.any,
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
+  isValid: PropTypes.bool,
   renderIcon: PropTypes.func,
   onIconPress: PropTypes.func,
 };
@@ -16,12 +17,13 @@ const defaultProps = {
   children: undefined,
   isDisabled: false,
   isEdit: false,
+  isValid: true,
   renderIcon: undefined,
   onIconPress: undefined,
 };
 
-const Viewline = ({ children, isDisabled, isEdit, renderIcon, onIconPress }) => (
-  <ViewWrapper isEdit={isEdit} >
+const Viewline = ({ children, isDisabled, isEdit, isValid, renderIcon, onIconPress }) => (
+  <ViewWrapper isEdit={isEdit} isValid={isValid} >
     <ViewContent>
       {children}
     </ViewContent>
