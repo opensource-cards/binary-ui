@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'styled-components';
 import { TouchableOpacity, View } from 'react-native';
+import IconContainer from '../components-styled/IconContainer';
+import TouchableContainer from '../components-styled/TouchableContainer';
 
 const propTypes = {
   color: PropTypes.string,
@@ -18,7 +20,7 @@ const propTypes = {
 const defaultProps = {
   color: '#000000',
   isDisabled: false,
-  size: undefined,
+  size: 18,
   onLongPress: undefined,
   onPress: undefined,
   onPressIn: undefined,
@@ -49,7 +51,11 @@ class ActionIcon extends React.Component {
     } = this.props;
     return isDisabled ? (
       <View {...props} >
-        {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
+        <TouchableContainer size={size} >
+        <IconContainer>
+            {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
+          </IconContainer>
+        </TouchableContainer>
       </View>
     ) : (
       <TouchableOpacity
@@ -60,7 +66,11 @@ class ActionIcon extends React.Component {
         onPressIn={onPressIn}
         onPressOut={onPressOut}
       >
-        {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
+        <TouchableContainer size={size} >
+        <IconContainer>
+            {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
+          </IconContainer>
+        </TouchableContainer>
       </TouchableOpacity>
     );
   }

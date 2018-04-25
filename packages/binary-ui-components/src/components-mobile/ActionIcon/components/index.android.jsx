@@ -1,10 +1,9 @@
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'styled-components';
+import { TouchableNativeFeedback, View } from 'react-native';
 import IconContainer from '../components-styled/IconContainer';
 import TouchableContainer from '../components-styled/TouchableContainer';
-import TouchableOpacity from '../components-styled/TouchableOpacity';
 
 const propTypes = {
   color: PropTypes.string,
@@ -12,18 +11,20 @@ const propTypes = {
   size: PropTypes.number,
   theme: PropTypes.object.isRequired,
   renderIcon: PropTypes.func.isRequired,
-  onClick: PropTypes.func,
-  onMouseDown: PropTypes.func,
-  onTouchStart: PropTypes.func,
+  onLongPress: PropTypes.func,
+  onPress: PropTypes.func,
+  onPressIn: PropTypes.func,
+  onPressOut: PropTypes.func,
 };
 
 const defaultProps = {
   color: '#000000',
   isDisabled: false,
   size: 18,
-  onClick: undefined,
-  onMouseDown: undefined,
-  onTouchStart: undefined,
+  onLongPress: undefined,
+  onPress: undefined,
+  onPressIn: undefined,
+  onPressOut: undefined,
 };
 
 class ActionIcon extends React.Component {
@@ -42,33 +43,36 @@ class ActionIcon extends React.Component {
       size,
       theme,
       renderIcon,
-      onClick,
-      onMouseDown,
-      onTouchStart,
+      onLongPress,
+      onPress,
+      onPressIn,
+      onPressOut,
       ...props,
     } = this.props;
     return isDisabled ? (
-      <div {...props} onClick={(e) => { e.preventDefault(); }} >
+      <View {...props} >
         <TouchableContainer size={size} >
           <IconContainer>
             {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
           </IconContainer>
         </TouchableContainer>
-      </div>
+      </View>
     ) : (
-      <TouchableOpacity
-        {...props}
-        activeOpacity={theme.opacityActive}
-        onClick={onClick}
-        onMouseDown={onMouseDown}
-        onTouchStart={onTouchStart}
-      >
+      <View {...props}>
         <TouchableContainer size={size} >
-          <IconContainer>
-            {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
-          </IconContainer>
+          <TouchableNativeFeedback
+            background={TouchableNativeFeedback.Ripple(undefined, true)}
+            onLongPress={onLongPress}
+            onPress={onPress}
+            onPressIn={onPressIn}
+            onPressOut={onPressOut}
+          >
+            <IconContainer>
+              {this.renderIcon({ color, isDisabled, size, theme, renderIcon })}
+            </IconContainer>
+          </TouchableNativeFeedback>
         </TouchableContainer>
-      </TouchableOpacity>
+      </View>
     );
   }
 }

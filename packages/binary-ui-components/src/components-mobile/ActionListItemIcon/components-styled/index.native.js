@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import ActionListItemIcon from '../components';
+import Index from '../components';
 
-export default styled(ActionListItemIcon)`
+export default styled(Index)`
   justify-content: center;
-  padding: 10px;
+  padding: 4px;
 `;

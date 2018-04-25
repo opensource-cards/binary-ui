@@ -11,7 +11,7 @@ const propTypes = {
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
   isValid: PropTypes.bool,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   labelStyle: PropTypes.object,
   theme: PropTypes.object.isRequired,
   renderIcon: PropTypes.func,
@@ -23,6 +23,7 @@ const defaultProps = {
   isDisabled: false,
   isEdit: true,
   isValid: true,
+  label: '',
   labelStyle: undefined,
   renderIcon: (props) => (<ArrowRight {...props} />),
 };
