@@ -108,6 +108,7 @@ import Text from 'binary-ui-icons/binary/Text';
 import TextAlt from 'binary-ui-icons/binary/TextAlt';
 import Time from 'binary-ui-icons/binary/Time';
 import Translation from 'binary-ui-icons/binary/Translation';
+import Triangle from 'binary-ui-icons/binary/Triangle';
 import Twitter from 'binary-ui-icons/binary/Twitter';
 import Ubuntu from 'binary-ui-icons/binary/Ubuntu';
 import Uncheck from 'binary-ui-icons/binary/Uncheck';
@@ -209,6 +210,7 @@ storiesOf('binary-ui-icons/binary', module)
       <TextAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Time color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Translation color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Triangle color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Uncheck color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Update color={COLOR} size={SIZE} onPress={action('clicked')} />
       <User color={COLOR} size={SIZE} onPress={action('clicked')} />
