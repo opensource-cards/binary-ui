@@ -10,8 +10,9 @@ export default styled.textarea`
   font-family: ${props => props.theme.fontFamily200};
   font-size: 18px;
   font-weight: ${props => props.theme.fontWeight200};
-  height: ${props => props.styleHeight}px;
+  min-height: ${props => props.styleHeight}px;
   outline: 0;
+  overflow-y: ${props => (props.isAutoSize ? 'hidden' : 'auto')};
   padding: 10px;
   resize: none;
   text-align: left;

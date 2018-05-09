@@ -8,6 +8,7 @@ import { DatePickerIOS, LayoutAnimation } from 'react-native';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
+  formatDate: PropTypes.func,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
@@ -19,6 +20,9 @@ const propTypes = {
 };
 
 const defaultProps = {
+  formatDate: (date) => (
+    `${date.getFullYear()}-${padStart(date.getMonth(), 2, '0')}-${padStart(date.getDate(), 2, '0')}`
+  ),
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
@@ -74,6 +78,7 @@ class DatePicker extends React.Component {
   render() {
     const {
       day,
+      formatDate,
       isDisabled,
       locale,
       maximumDate,
@@ -92,7 +97,11 @@ class DatePicker extends React.Component {
             <Button
               {...props}
               isDisabled={isDisabled}
-              label={`${year}-${padStart(month, 2, '0')}-${padStart(day, 2, '0')}`}
+              label={formatDate(new Date(
+                year,
+                month,
+                day,
+              ))}
               onPress={this.onPress}
               renderIcon={rest => <IconArrowDown {...rest} />}
             />

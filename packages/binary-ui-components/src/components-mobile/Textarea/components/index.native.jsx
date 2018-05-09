@@ -4,8 +4,11 @@ import TextareaInput from '../components-styled/TextareaInput';
 import TextareaWrapperStyled from '../components-styled/TextareaWrapperStyled';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
+const PADDING = 10;
+
 const propTypes = {
   height: PropTypes.number,
+  isAutoSize: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isValid: PropTypes.bool,
   value: PropTypes.string.isRequired,
@@ -18,6 +21,7 @@ const propTypes = {
 
 const defaultProps = {
   height: 120,
+  isAutoSize: false,
   isDisabled: false,
   isValid: true,
   renderIcon: undefined,
@@ -31,9 +35,11 @@ export default class Textarea extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      height: props.height,
       isActive: false,
     };
     this.onBlur = this.onBlur.bind(this);
+    this.onContentSizeChange = this.onContentSizeChange.bind(this);
     this.onFocus = this.onFocus.bind(this);
   }
 
@@ -42,6 +48,18 @@ export default class Textarea extends React.Component {
     this.setFocus(false);
     if (onBlur) {
       onBlur(e);
+    }
+  }
+
+  onContentSizeChange(e) {
+    const { isAutoSize } = this.props;
+    if (!isAutoSize) {
+      return;
+    }
+    if (this.state.height !== e.nativeEvent.contentSize.height) {
+      this.setState({
+        height: Math.max(this.props.height, e.nativeEvent.contentSize.height + 2 * PADDING),
+      });
     }
   }
 
@@ -65,7 +83,7 @@ export default class Textarea extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
-      height,
+      isAutoSize,
       isDisabled,
       isValid,
       renderIcon,
@@ -76,7 +94,7 @@ export default class Textarea extends React.Component {
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars */
-    const { isActive } = this.state;
+    const { height, isActive } = this.state;
     return (
       <TextareaWrapperStyled
         isEdit
@@ -90,9 +108,11 @@ export default class Textarea extends React.Component {
           paddingBottom={0}
           paddingTop={0}
           styleHeight={height}
+          stylePadding={PADDING}
           underlineColorAndroid="rgba(0, 0, 0, 0)"
           onBlur={this.onBlur}
           onChangeText={onChange}
+          onContentSizeChange={this.onContentSizeChange}
           onFocus={this.onFocus}
         />
         {renderIcon ? (

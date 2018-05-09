@@ -7,6 +7,7 @@ export default styled.TextInput`
   font-size: 18px;
   font-weight: ${props => props.theme.fontWeight200};
   height: ${props => props.styleHeight}px;
-  padding: 10px;
+  min-height: ${props => props.styleHeight}px;
+  padding: ${props => props.stylePadding}px;
   text-align-vertical: top;
 `;

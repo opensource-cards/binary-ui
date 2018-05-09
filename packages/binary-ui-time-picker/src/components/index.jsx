@@ -5,6 +5,7 @@ import React from 'react';
 import Input from '../components-styled/Input';
 
 const propTypes = {
+  formatTime: PropTypes.func,
   hour: PropTypes.number.isRequired,
   is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
@@ -18,6 +19,9 @@ const propTypes = {
 };
 
 const defaultProps = {
+  formatTime: (date) => (
+    `${padStart(date.getHours(), 2, '0')}:${padStart(date.getMinutes(), 2, '0')}`
+  ),
   is24Hour: undefined,
   isDisabled: false,
   locale: undefined,
@@ -52,6 +56,7 @@ class TimePicker extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      formatTime,
       hour,
       is24Hour,
       isDisabled,
@@ -64,6 +69,7 @@ class TimePicker extends React.Component {
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars */
+    const dateNow = new Date();
     return (
       <Group
         renderLeft={renderLeft}
@@ -73,7 +79,15 @@ class TimePicker extends React.Component {
             isDisabled={isDisabled}
             step={minuteInterval ? minuteInterval * 60 : undefined}
             type="time"
-            value={`${padStart(hour, 2, '0')}:${padStart(minute, 2, '0')}`}
+            value={formatTime(new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              hour,
+              minute
+            ), {
+              hour12: is24Hour,
+            })}
             onChange={this.onChange}
           />
         )}

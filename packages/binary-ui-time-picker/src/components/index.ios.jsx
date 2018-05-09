@@ -7,6 +7,7 @@ import React from 'react';
 import { DatePickerIOS, LayoutAnimation } from 'react-native';
 
 const propTypes = {
+  formatTime: PropTypes.func,
   hour: PropTypes.number.isRequired,
   is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
@@ -20,6 +21,9 @@ const propTypes = {
 };
 
 const defaultProps = {
+  formatTime: (date) => (
+    `${padStart(date.getHours(), 2, '0')}:${padStart(date.getMinutes(), 2, '0')}`
+  ),
   is24Hour: undefined,
   isDisabled: false,
   locale: undefined,
@@ -76,6 +80,7 @@ class TimePicker extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      formatTime,
       hour,
       is24Hour,
       isDisabled,
@@ -98,7 +103,15 @@ class TimePicker extends React.Component {
             <Button
               {...props}
               isDisabled={isDisabled}
-              label={`${padStart(hour, 2, '0')}:${padStart(minute, 2, '0')}`}
+              label={formatTime(new Date(
+                dateNow.getFullYear(),
+                dateNow.getMonth(),
+                dateNow.getDate(),
+                hour,
+                minute
+              ), {
+                hour12: is24Hour,
+              })}
               onPress={this.onPress}
               renderIcon={rest => <IconArrowDown {...rest} />}
             />
