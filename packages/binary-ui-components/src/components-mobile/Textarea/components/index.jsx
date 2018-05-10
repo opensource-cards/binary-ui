@@ -80,6 +80,9 @@ export default class Textarea extends React.Component {
 
   onInputRef(inputRef) {
     this.inputRef = inputRef;
+    if (!this.inputRef) {
+      return;
+    }
     this.setInputHeight(this.inputRef.scrollHeight);
   }
 
