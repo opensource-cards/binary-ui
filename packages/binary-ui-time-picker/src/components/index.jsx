@@ -74,20 +74,20 @@ class TimePicker extends React.Component {
       <Group
         renderLeft={renderLeft}
         renderRight={() => (
+          // Note: Input uses system native time formatting.
+          // Using 'formatTime', can break the input.
           <Input
             {...props}
             isDisabled={isDisabled}
             step={minuteInterval ? minuteInterval * 60 : undefined}
             type="time"
-            value={formatTime(new Date(
+            value={new Date(
               dateNow.getFullYear(),
               dateNow.getMonth(),
               dateNow.getDate(),
               hour,
               minute
-            ), {
-              hour12: is24Hour,
-            })}
+            )}
             onChange={this.onChange}
           />
         )}

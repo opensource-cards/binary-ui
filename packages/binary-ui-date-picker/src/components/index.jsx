@@ -75,17 +75,15 @@ class DatePicker extends React.Component {
       <Group
         renderLeft={renderLeft}
         renderRight={() => (
+          // Note: Input uses system native date formatting.
+          // Using 'formatDate', can break the input.
           <Input
             {...props}
             isDisabled={isDisabled}
             max={maximumDate ? `${maximumDate.getFullYear()}-${padStart(maximumDate.getMonth() + 1, 2, '0')}-${padStart(maximumDate.getDate(), 2, '0')}` : undefined}
             min={minimumDate ? `${minimumDate.getFullYear()}-${padStart(minimumDate.getMonth() + 1, 2, '0')}-${padStart(minimumDate.getDate(), 2, '0')}` : undefined}
             type="date"
-            value={formatDate(new Date(
-              year,
-              month,
-              day,
-            ))}
+            value={new Date(year, month, day)}
             onChange={this.onChange}
           />
         )}
