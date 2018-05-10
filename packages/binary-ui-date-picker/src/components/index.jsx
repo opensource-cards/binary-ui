@@ -7,7 +7,6 @@ import React from 'react';
 
 const propTypes = {
   day: PropTypes.number.isRequired,
-  formatDate: PropTypes.func,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
@@ -19,9 +18,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  formatDate: (date) => (
-    `${date.getFullYear()}-${padStart(date.getMonth(), 2, '0')}-${padStart(date.getDate(), 2, '0')}`
-  ),
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
@@ -60,7 +56,6 @@ class DatePicker extends React.Component {
     /* eslint-disable no-unused-vars */
     const {
       day,
-      formatDate,
       isDisabled,
       locale,
       maximumDate,
@@ -71,19 +66,19 @@ class DatePicker extends React.Component {
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars */
+    // Note: The displayed date format will be chosen based on the set locale of the user's browser, whereas the date value is always formatted yyyy-mm-dd.
+    // See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date
     return (
       <Group
         renderLeft={renderLeft}
         renderRight={() => (
-          // Note: Input uses system native date formatting.
-          // Using 'formatDate', can break the input.
           <Input
             {...props}
             isDisabled={isDisabled}
             max={maximumDate ? `${maximumDate.getFullYear()}-${padStart(maximumDate.getMonth() + 1, 2, '0')}-${padStart(maximumDate.getDate(), 2, '0')}` : undefined}
             min={minimumDate ? `${minimumDate.getFullYear()}-${padStart(minimumDate.getMonth() + 1, 2, '0')}-${padStart(minimumDate.getDate(), 2, '0')}` : undefined}
             type="date"
-            value={new Date(year, month, day)}
+            value={`${year}-${padStart(month, 2, '0')}-${padStart(day, 2, '0')}`}
             onChange={this.onChange}
           />
         )}
