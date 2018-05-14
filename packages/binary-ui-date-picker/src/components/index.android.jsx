@@ -91,7 +91,7 @@ class DatePicker extends React.Component {
             isDisabled={isDisabled}
             label={formatDate(new Date(
               year,
-              month,
+              month - 1,
               day,
             ))}
             onPress={this.onPress}
