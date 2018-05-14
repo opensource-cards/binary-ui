@@ -29,7 +29,7 @@ const defaultProps = {
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
-  minuteInterval: undefined,
+  minuteInterval: 15,
   onChange: () => {},
   renderLeft: () => null,
 };

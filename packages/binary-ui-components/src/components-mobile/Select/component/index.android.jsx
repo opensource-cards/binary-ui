@@ -5,17 +5,17 @@ import Wrapper from '../components-styled/Wrapper';
 import Group from '../../Group';
 
 const propTypes = {
+  isDisabled: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   selected: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   renderLeft: PropTypes.func,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  isDisabled: false,
+};
 
-/**
- * TimePickerAndroid: https://facebook.github.io/react-native/docs/timepickerandroid.html
- */
 class Select extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +29,7 @@ class Select extends React.Component {
 
   render() {
     /* eslint-disable no-unused-vars */
-    const { items, selected, onChange, renderLeft, ...props } = this.props;
+    const { isDisabled, items, selected, onChange, renderLeft, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     return (
       <Group
@@ -37,6 +37,7 @@ class Select extends React.Component {
         renderRight={() => (
           <Wrapper>
             <Picker
+              enabled={!isDisabled}
               mode="dropdown"
               selectedValue={selected}
               onValueChange={this.onValueChange}

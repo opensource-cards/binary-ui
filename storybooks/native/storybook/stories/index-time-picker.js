@@ -31,6 +31,8 @@ class TimePickerDemo extends React.Component {
       <TimePicker
         hour={hour}
         locale="uk"
+        maximumDate={new Date(2018, 1, 1, 22, 15)}
+        minimumDate={new Date(2018, 1, 1, 8, 15)}
         minute={minute}
         minuteInterval={15}
         onChange={this.onChange}
@@ -50,7 +52,6 @@ storiesOf("binary-ui-time-picker", module).add("TimePicker", () => (
         hour={22}
         locale="uk"
         minute={45}
-        minuteInterval={15}
         onChange={action}
         renderLeft={() => <Label isBold>Available</Label>}
       />

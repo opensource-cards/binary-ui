@@ -6,13 +6,16 @@ import Wrapper from '../components-styled/Wrapper';
 import Group from '../../Group';
 
 const propTypes = {
+  isDisabled: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   selected: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   renderLeft: PropTypes.func,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  isDisabled: false,
+};
 
 class Select extends React.Component {
   constructor(props) {
@@ -27,7 +30,7 @@ class Select extends React.Component {
 
   render() {
     /* eslint-disable no-unused-vars */
-    const { items, selected, onChange, renderLeft, ...props } = this.props;
+    const { isDisabled, items, selected, onChange, renderLeft, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     return (
       <Group
@@ -35,7 +38,7 @@ class Select extends React.Component {
         renderRight={() => (
           <Wrapper {...props} >
             <SelectIcon size={18} />
-            <SelectInput value={selected} onChange={this.onChange} >
+            <SelectInput disabled={isDisabled} value={selected} onChange={this.onChange} >
               {items.map((listItem) => (
                 <option key={listItem.key} value={listItem.value} >
                   {listItem.label}

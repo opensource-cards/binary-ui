@@ -1,10 +1,10 @@
-import Group from 'binary-ui-components/mobile/Group';
+import Select from 'binary-ui-components/mobile/Select';
 import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Input from '../components-styled/Input';
 
 const propTypes = {
+  formatTime: PropTypes.func,
   hour: PropTypes.number.isRequired,
   is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
@@ -18,12 +18,15 @@ const propTypes = {
 };
 
 const defaultProps = {
+  formatTime: (date) => (
+    `${padStart(date.getHours(), 2, '0')}:${padStart(date.getMinutes(), 2, '0')}`
+  ),
   is24Hour: undefined,
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
-  minuteInterval: undefined,
+  minuteInterval: 15,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -36,22 +39,28 @@ class TimePicker extends React.Component {
 
   onChange(value) {
     const { onChange } = this.props;
-    try {
-      const valuesParsed = value.split(':');
-      onChange({
-        hour: Number(valuesParsed[0]),
-        minute: Number(valuesParsed[1]),
-      });
-    } catch (error) {
-      if (process.env.NODE_ENV !== 'production') {
-        console.warn('Cannot parse time', error);
-      }
+    onChange({
+      hour: Math.trunc(value / 60),
+      minute: value % 60,
+    });
+  }
+
+  getListOfTimePoints() {
+    const { maximumDate, minimumDate, minuteInterval } = this.props;
+    let timePoints = [];
+    let timeStart = minimumDate ? minimumDate.getHours() * 60 + minimumDate.getMinutes() : 0;
+    const timeEnd = maximumDate ? maximumDate.getHours() * 60 + maximumDate.getMinutes() : 24 * 60;
+    while (timeStart <= timeEnd) {
+      timePoints = [...timePoints, { hour: Math.trunc(timeStart / 60), minute: timeStart % 60 }];
+      timeStart += minuteInterval;
     }
+    return timePoints;
   }
 
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      formatTime,
       hour,
       is24Hour,
       isDisabled,
@@ -64,21 +73,27 @@ class TimePicker extends React.Component {
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars */
-    // Note: The value of the time input is always in 24-hour format: "hh:mm", regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent).
-    // See: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time
+    const dateNow = new Date();
     return (
-      <Group
+      <Select
+        {...props}
+        isDisabled={isDisabled}
+        items={this.getListOfTimePoints().map(value => ({
+          key: `${value.hour}:${value.minute}`,
+          label: formatTime(new Date(
+            dateNow.getFullYear(),
+            dateNow.getMonth(),
+            dateNow.getDate(),
+            value.hour,
+            value.minute
+          ), {
+            hour12: is24Hour,
+          }),
+          value: String(value.hour * 60 + value.minute),
+        }))}
+        selected={String(hour * 60 + minute)}
         renderLeft={renderLeft}
-        renderRight={() => (
-          <Input
-            {...props}
-            isDisabled={isDisabled}
-            step={minuteInterval ? minuteInterval * 60 : undefined}
-            type="time"
-            value={`${padStart(hour, 2, '0')}:${padStart(minute, 2, '0')}`}
-            onChange={this.onChange}
-          />
-        )}
+        onChange={this.onChange}
       />
     );
   }
