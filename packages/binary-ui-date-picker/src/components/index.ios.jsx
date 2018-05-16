@@ -48,7 +48,7 @@ class DatePicker extends React.Component {
     const { onChange } = this.props;
     onChange({
       year: date.getFullYear(),
-      month: date.getMonth() + 1,
+      month: date.getMonth(),
       day: date.getDate(),
     });
   }
@@ -97,11 +97,7 @@ class DatePicker extends React.Component {
             <Button
               {...props}
               isDisabled={isDisabled}
-              label={formatDate(new Date(
-                year,
-                month - 1,
-                day,
-              ))}
+              label={formatDate(new Date(year, month, day))}
               onPress={this.onPress}
               renderIcon={rest => <IconArrowDown {...rest} />}
             />
@@ -109,7 +105,7 @@ class DatePicker extends React.Component {
         />
         {isVisible ? (
           <DatePickerIOS
-            date={new Date(year, month - 1, day)}
+            date={new Date(year, month, day)}
             locale={locale}
             maximumDate={maximumDate}
             minimumDate={minimumDate}

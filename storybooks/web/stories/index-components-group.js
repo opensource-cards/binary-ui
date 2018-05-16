@@ -23,7 +23,6 @@ import Select from "binary-ui-components/mobile/Select";
 import Slider from "binary-ui-components/mobile/Slider";
 import Switch from "binary-ui-components/mobile/Switch";
 import Textarea from "binary-ui-components/mobile/Textarea";
-import Tooltip from "binary-ui-components/mobile/Tooltip";
 import Input, { INPUT_FIELD_TYPES } from "binary-ui-components/mobile/Input";
 import { THEME_MAIN } from "binary-ui-styles";
 

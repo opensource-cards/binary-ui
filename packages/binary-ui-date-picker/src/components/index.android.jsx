@@ -49,14 +49,14 @@ class DatePicker extends React.Component {
     } = this.props;
     try {
       DatePickerAndroid.open({
-        date: new Date(initYear, initMonth - 1, initDay),
-      }).then(({ action, day, year, month }) => {
+        date: new Date(initYear, initMonth, initDay),
+      }).then(({ action, day, month, year }) => {
         if (action === DatePickerAndroid.dismissedAction) {
           return;
         }
         onChange({
           day,
-          month: month + 1,
+          month,
           year,
         });
       });
@@ -89,11 +89,7 @@ class DatePicker extends React.Component {
           <Button
             {...props}
             isDisabled={isDisabled}
-            label={formatDate(new Date(
-              year,
-              month - 1,
-              day,
-            ))}
+            label={formatDate(new Date(year, month, day))}
             onPress={this.onPress}
             renderIcon={rest => <IconArrowDown {...rest} />}
           />

@@ -7,15 +7,15 @@ import React from 'react';
 import { TimePickerAndroid } from 'react-native';
 
 const propTypes = {
+  date: PropTypes.instanceOf(Date).isRequired,
   formatTime: PropTypes.func,
-  hour: PropTypes.number.isRequired,
   is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
-  minute: PropTypes.number.isRequired,
   minuteInterval: PropTypes.number,
+  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
@@ -30,6 +30,7 @@ const defaultProps = {
   maximumDate: undefined,
   minimumDate: undefined,
   minuteInterval: 15,
+  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -44,19 +45,24 @@ class TimePicker extends React.Component {
   }
 
   onPress() {
-    const { hour: initHour, is24Hour, minute: initMinute, onChange } = this.props;
+    const { date: dateInit, is24Hour, onChange } = this.props;
     try {
       TimePickerAndroid.open({
-        hour: initHour,
-        minute: initMinute,
+        hour: dateInit.getHours(),
+        minute: dateInit.getMinutes(),
         is24Hour,
       }).then(({ action, hour, minute }) => {
         if (action === TimePickerAndroid.dismissedAction) {
           return;
         }
         onChange({
-          hour,
-          minute,
+          date: new Date(
+            dateInit.getFullYear(),
+            dateInit.getMonth(),
+            dateInit.getDate(),
+            hour,
+            minute
+          ),
         });
       });
     } catch ({ code, message }) {
@@ -69,20 +75,19 @@ class TimePicker extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      date,
       formatTime,
-      hour,
       is24Hour,
       isDisabled,
       locale,
       maximumDate,
       minimumDate,
-      minute,
       minuteInterval,
+      timeZone,
       renderLeft,
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars */
-    const dateNow = new Date();
     return (
       <Group
         renderLeft={renderLeft}
@@ -90,14 +95,9 @@ class TimePicker extends React.Component {
           <Button
             {...props}
             isDisabled={isDisabled}
-            label={formatTime(new Date(
-              dateNow.getFullYear(),
-              dateNow.getMonth(),
-              dateNow.getDate(),
-              hour,
-              minute
-            ), {
+            label={formatTime(date, {
               hour12: is24Hour,
+              timeZone,
             })}
             onPress={this.onPress}
             renderIcon={rest => <IconArrowDown {...rest} />}

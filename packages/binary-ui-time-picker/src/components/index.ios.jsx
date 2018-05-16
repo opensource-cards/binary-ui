@@ -7,15 +7,15 @@ import React from 'react';
 import { DatePickerIOS, LayoutAnimation } from 'react-native';
 
 const propTypes = {
+  date: PropTypes.instanceOf(Date).isRequired,
   formatTime: PropTypes.func,
-  hour: PropTypes.number.isRequired,
   is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
-  minute: PropTypes.number.isRequired,
   minuteInterval: PropTypes.number,
+  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
@@ -30,6 +30,7 @@ const defaultProps = {
   maximumDate: undefined,
   minimumDate: undefined,
   minuteInterval: 15,
+  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -49,10 +50,7 @@ class TimePicker extends React.Component {
 
   onDateChange(date) {
     const { onChange } = this.props;
-    onChange({
-      hour: date.getHours(),
-      minute: date.getMinutes(),
-    });
+    onChange(date);
   }
 
   onPress() {
@@ -80,21 +78,20 @@ class TimePicker extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      date,
       formatTime,
-      hour,
       is24Hour,
       isDisabled,
       locale,
       maximumDate,
       minimumDate,
-      minute,
       minuteInterval,
+      timeZone,
       renderLeft,
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars */
     const { isVisible } = this.state;
-    const dateNow = new Date();
     return (
       <React.Fragment>
         <Group
@@ -103,14 +100,9 @@ class TimePicker extends React.Component {
             <Button
               {...props}
               isDisabled={isDisabled}
-              label={formatTime(new Date(
-                dateNow.getFullYear(),
-                dateNow.getMonth(),
-                dateNow.getDate(),
-                hour,
-                minute
-              ), {
+              label={formatTime(date, {
                 hour12: is24Hour,
+                timeZone,
               })}
               onPress={this.onPress}
               renderIcon={rest => <IconArrowDown {...rest} />}
@@ -119,13 +111,7 @@ class TimePicker extends React.Component {
         />
         {isVisible ? (
           <DatePickerIOS
-            date={new Date(
-              dateNow.getFullYear(),
-              dateNow.getMonth(),
-              dateNow.getDate(),
-              hour,
-              minute
-            )}
+            date={date}
             locale={locale}
             maximumDate={maximumDate}
             minimumDate={minimumDate}

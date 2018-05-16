@@ -16,7 +16,7 @@ class DatePickerDemo extends React.Component {
     super(props);
     this.state = {
       day: 23,
-      month: 1,
+      month: 0,
       year: 2018
     };
     this.onChange = this.onChange.bind(this);
@@ -54,7 +54,7 @@ storiesOf("binary-ui-date-picker", module).add(
         <DatePicker
           day={23}
           locale="uk"
-          month={1}
+          month={0}
           year={2018}
           onChange={action}
           renderLeft={() => <Label isBold>Available</Label>}
@@ -63,7 +63,7 @@ storiesOf("binary-ui-date-picker", module).add(
           day={23}
           isDisabled
           locale="uk"
-          month={1}
+          month={0}
           year={2018}
           onChange={action}
           renderLeft={() => <Label isBold>Disabled</Label>}

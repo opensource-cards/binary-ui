@@ -3,30 +3,33 @@ import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+export const MINUTE_MSEC = 60000;
+
+const formatTimeDefault = (date) => `${padStart(date.getHours(), 2, '0')}:${padStart(date.getMinutes(), 2, '0')}`;
+
 const propTypes = {
+  date: PropTypes.instanceOf(Date).isRequired,
   formatTime: PropTypes.func,
-  hour: PropTypes.number.isRequired,
   is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
-  minute: PropTypes.number.isRequired,
   minuteInterval: PropTypes.number,
+  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
 
 const defaultProps = {
-  formatTime: (date) => (
-    `${padStart(date.getHours(), 2, '0')}:${padStart(date.getMinutes(), 2, '0')}`
-  ),
+  formatTime: undefined,
   is24Hour: undefined,
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
   minuteInterval: 15,
+  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -40,19 +43,24 @@ class TimePicker extends React.Component {
   onChange(value) {
     const { onChange } = this.props;
     onChange({
-      hour: Math.trunc(value / 60),
-      minute: value % 60,
+      date: new Date(value),
     });
   }
 
   getListOfTimePoints() {
     const { maximumDate, minimumDate, minuteInterval } = this.props;
+    const dateNow = new Date();
+    const minimumDateValid = minimumDate || new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 0, 0);
+    const maximumDateValid = maximumDate || new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 24, 0);
     let timePoints = [];
-    let timeStart = minimumDate ? minimumDate.getHours() * 60 + minimumDate.getMinutes() : 0;
-    const timeEnd = maximumDate ? maximumDate.getHours() * 60 + maximumDate.getMinutes() : 24 * 60;
-    while (timeStart <= timeEnd) {
-      timePoints = [...timePoints, { hour: Math.trunc(timeStart / 60), minute: timeStart % 60 }];
-      timeStart += minuteInterval;
+    let minimumDateMsec = minimumDateValid.valueOf();
+    const maximumDateMsec = maximumDateValid.valueOf();
+    while (minimumDateMsec <= maximumDateMsec) {
+      timePoints = [
+        ...timePoints,
+        minimumDateMsec,
+      ];
+      minimumDateMsec += (minuteInterval * MINUTE_MSEC);
     }
     return timePoints;
   }
@@ -60,38 +68,36 @@ class TimePicker extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      date,
       formatTime,
-      hour,
       is24Hour,
       isDisabled,
       locale,
       maximumDate,
       minimumDate,
-      minute,
       minuteInterval,
+      timeZone,
       renderLeft,
       ...props,
     } = this.props;
+    const dateOriginalTimezoneOffset = date.getTimezoneOffset();
     /* eslint-enable no-unused-vars */
-    const dateNow = new Date();
     return (
       <Select
         {...props}
         isDisabled={isDisabled}
-        items={this.getListOfTimePoints().map(value => ({
-          key: `${value.hour}:${value.minute}`,
-          label: formatTime(new Date(
-            dateNow.getFullYear(),
-            dateNow.getMonth(),
-            dateNow.getDate(),
-            value.hour,
-            value.minute
-          ), {
-            hour12: is24Hour,
-          }),
-          value: String(value.hour * 60 + value.minute),
-        }))}
-        selected={String(hour * 60 + minute)}
+        items={this.getListOfTimePoints().map(value => {
+          const valueDate = new Date(value);
+          const dateCurrentTimezoneOffset = valueDate.getTimezoneOffset();
+          return {
+            key: String(value),
+            label: formatTime
+              ? formatTime(new Date(value), { hour12: is24Hour, timeZone })
+              : formatTimeDefault(new Date(value - (dateOriginalTimezoneOffset - dateCurrentTimezoneOffset) * MINUTE_MSEC)),
+            value: String(value),
+          };
+        })}
+        selected={String(date.valueOf())}
         renderLeft={renderLeft}
         onChange={this.onChange}
       />

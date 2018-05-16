@@ -42,7 +42,7 @@ class DatePicker extends React.Component {
       const valuesParsed = value.split('-');
       onChange({
         year: Number(valuesParsed[0]),
-        month: Number(valuesParsed[1]),
+        month: Number(valuesParsed[1]) - 1,
         day: Number(valuesParsed[2]),
       });
     } catch (error) {
@@ -78,7 +78,7 @@ class DatePicker extends React.Component {
             max={maximumDate ? `${maximumDate.getFullYear()}-${padStart(maximumDate.getMonth() + 1, 2, '0')}-${padStart(maximumDate.getDate(), 2, '0')}` : undefined}
             min={minimumDate ? `${minimumDate.getFullYear()}-${padStart(minimumDate.getMonth() + 1, 2, '0')}-${padStart(minimumDate.getDate(), 2, '0')}` : undefined}
             type="date"
-            value={`${year}-${padStart(month, 2, '0')}-${padStart(day, 2, '0')}`}
+            value={`${year}-${padStart(month + 1, 2, '0')}-${padStart(day, 2, '0')}`}
             onChange={this.onChange}
           />
         )}

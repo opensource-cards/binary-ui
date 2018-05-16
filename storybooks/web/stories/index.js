@@ -19,7 +19,6 @@ import './index-components-slider';
 import './index-components-spinner';
 import './index-components-switch';
 import './index-components-textarea';
-import './index-components-tooltip';
 import './index-components-viewline';
 
 import './index-navbar';
