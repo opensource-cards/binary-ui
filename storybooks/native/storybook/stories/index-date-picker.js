@@ -8,33 +8,29 @@ import Label from "binary-ui-components/mobile/Label";
 import DatePicker from "binary-ui-date-picker";
 import { THEME_MAIN } from "binary-ui-styles";
 
+const dateNow = new Date();
+
 class DatePickerDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      day: 23,
-      month: 0,
-      year: 2018
+      date: new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate())
     };
     this.onChange = this.onChange.bind(this);
   }
 
-  onChange({ day, month, year }) {
+  onChange(date) {
     this.setState(() => ({
-      day,
-      month,
-      year
+      date
     }));
   }
 
   render() {
-    const { day, month, year } = this.state;
+    const { date } = this.state;
     return (
       <DatePicker
-        day={day}
+        date={date}
         locale="uk"
-        month={month}
-        year={year}
         onChange={this.onChange}
         renderLeft={() => <Label isBold>Demo</Label>}
       />
@@ -49,19 +45,15 @@ storiesOf("binary-ui-date-picker", module).add("DatePicker", () => (
         <Text>Static</Text>
       </View>
       <DatePicker
-        day={23}
+        date={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate())}
         locale="uk"
-        month={0}
-        year={2018}
         onChange={action}
         renderLeft={() => <Label isBold>Available</Label>}
       />
       <DatePicker
-        day={23}
+        date={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate())}
         isDisabled
         locale="uk"
-        month={0}
-        year={2018}
         onChange={action}
         renderLeft={() => <Label isBold>Disabled</Label>}
       />

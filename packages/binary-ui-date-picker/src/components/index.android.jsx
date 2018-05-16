@@ -7,26 +7,26 @@ import React from 'react';
 import { DatePickerAndroid } from 'react-native';
 
 const propTypes = {
-  day: PropTypes.number.isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
   formatDate: PropTypes.func,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
-  month: PropTypes.number.isRequired,
-  year: PropTypes.number.isRequired,
+  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
 
 const defaultProps = {
   formatDate: (date) => (
-    `${date.getFullYear()}-${padStart(date.getMonth(), 2, '0')}-${padStart(date.getDate(), 2, '0')}`
+    `${date.getFullYear()}-${padStart(date.getMonth() + 1, 2, '0')}-${padStart(date.getDate(), 2, '0')}`
   ),
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
+  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -41,24 +41,15 @@ class DatePicker extends React.Component {
   }
 
   onPress() {
-    const {
-      day: initDay,
-      month: initMonth,
-      year: initYear,
-      onChange,
-    } = this.props;
+    const { date, onChange } = this.props;
     try {
       DatePickerAndroid.open({
-        date: new Date(initYear, initMonth, initDay),
+        date,
       }).then(({ action, day, month, year }) => {
         if (action === DatePickerAndroid.dismissedAction) {
           return;
         }
-        onChange({
-          day,
-          month,
-          year,
-        });
+        onChange(new Date(day, month, year));
       });
     } catch ({ code, message }) {
       if (process.env.NODE_ENV !== 'production') {
@@ -70,14 +61,13 @@ class DatePicker extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
-      day,
+      date,
       formatDate,
       isDisabled,
       locale,
       maximumDate,
       minimumDate,
-      month,
-      year,
+      timeZone,
       renderLeft,
       ...props,
     } = this.props;
@@ -89,7 +79,7 @@ class DatePicker extends React.Component {
           <Button
             {...props}
             isDisabled={isDisabled}
-            label={formatDate(new Date(year, month, day))}
+            label={formatDate(date, { timeZone })}
             onPress={this.onPress}
             renderIcon={rest => <IconArrowDown {...rest} />}
           />

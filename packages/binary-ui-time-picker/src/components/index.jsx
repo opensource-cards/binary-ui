@@ -42,9 +42,7 @@ class TimePicker extends React.Component {
 
   onChange(value) {
     const { onChange } = this.props;
-    onChange({
-      date: new Date(value),
-    });
+    onChange(new Date(Number(value)));
   }
 
   getListOfTimePoints() {

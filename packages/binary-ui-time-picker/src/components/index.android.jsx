@@ -45,25 +45,23 @@ class TimePicker extends React.Component {
   }
 
   onPress() {
-    const { date: dateInit, is24Hour, onChange } = this.props;
+    const { date, is24Hour, onChange } = this.props;
     try {
       TimePickerAndroid.open({
-        hour: dateInit.getHours(),
-        minute: dateInit.getMinutes(),
+        hour: date.getHours(),
+        minute: date.getMinutes(),
         is24Hour,
       }).then(({ action, hour, minute }) => {
         if (action === TimePickerAndroid.dismissedAction) {
           return;
         }
-        onChange({
-          date: new Date(
-            dateInit.getFullYear(),
-            dateInit.getMonth(),
-            dateInit.getDate(),
-            hour,
-            minute
-          ),
-        });
+        onChange(new Date(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate(),
+          hour,
+          minute
+        ));
       });
     } catch ({ code, message }) {
       if (process.env.NODE_ENV !== 'production') {

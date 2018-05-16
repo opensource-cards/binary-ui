@@ -7,26 +7,26 @@ import React from 'react';
 import { DatePickerIOS, LayoutAnimation } from 'react-native';
 
 const propTypes = {
-  day: PropTypes.number.isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
   formatDate: PropTypes.func,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
-  month: PropTypes.number.isRequired,
-  year: PropTypes.number.isRequired,
+  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
 
 const defaultProps = {
   formatDate: (date) => (
-    `${date.getFullYear()}-${padStart(date.getMonth(), 2, '0')}-${padStart(date.getDate(), 2, '0')}`
+    `${date.getFullYear()}-${padStart(date.getMonth() + 1, 2, '0')}-${padStart(date.getDate(), 2, '0')}`
   ),
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
+  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -46,11 +46,7 @@ class DatePicker extends React.Component {
 
   onDateChange(date) {
     const { onChange } = this.props;
-    onChange({
-      year: date.getFullYear(),
-      month: date.getMonth(),
-      day: date.getDate(),
-    });
+    onChange(date);
   }
 
   onPress() {
@@ -77,14 +73,13 @@ class DatePicker extends React.Component {
 
   render() {
     const {
-      day,
+      date,
       formatDate,
       isDisabled,
       locale,
       maximumDate,
       minimumDate,
-      month,
-      year,
+      timeZone,
       renderLeft,
       ...props,
     } = this.props;
@@ -97,7 +92,7 @@ class DatePicker extends React.Component {
             <Button
               {...props}
               isDisabled={isDisabled}
-              label={formatDate(new Date(year, month, day))}
+              label={formatDate(date, { timeZone })}
               onPress={this.onPress}
               renderIcon={rest => <IconArrowDown {...rest} />}
             />
@@ -105,7 +100,7 @@ class DatePicker extends React.Component {
         />
         {isVisible ? (
           <DatePickerIOS
-            date={new Date(year, month, day)}
+            date={date}
             locale={locale}
             maximumDate={maximumDate}
             minimumDate={minimumDate}

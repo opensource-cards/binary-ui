@@ -6,13 +6,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const propTypes = {
-  day: PropTypes.number.isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
   isDisabled: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
-  month: PropTypes.number.isRequired,
-  year: PropTypes.number.isRequired,
+  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
@@ -22,6 +21,7 @@ const defaultProps = {
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
+  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -40,11 +40,7 @@ class DatePicker extends React.Component {
     }
     try {
       const valuesParsed = value.split('-');
-      onChange({
-        year: Number(valuesParsed[0]),
-        month: Number(valuesParsed[1]) - 1,
-        day: Number(valuesParsed[2]),
-      });
+      onChange(new Date(Number(valuesParsed[0]), Number(valuesParsed[1]) - 1, Number(valuesParsed[2])));
     } catch (error) {
       if (process.env.NODE_ENV !== 'production') {
         console.warn('Cannot parse date', error);
@@ -55,13 +51,12 @@ class DatePicker extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
-      day,
+      date,
       isDisabled,
       locale,
       maximumDate,
       minimumDate,
-      month,
-      year,
+      timeZone,
       renderLeft,
       ...props,
     } = this.props;
@@ -78,7 +73,7 @@ class DatePicker extends React.Component {
             max={maximumDate ? `${maximumDate.getFullYear()}-${padStart(maximumDate.getMonth() + 1, 2, '0')}-${padStart(maximumDate.getDate(), 2, '0')}` : undefined}
             min={minimumDate ? `${minimumDate.getFullYear()}-${padStart(minimumDate.getMonth() + 1, 2, '0')}-${padStart(minimumDate.getDate(), 2, '0')}` : undefined}
             type="date"
-            value={`${year}-${padStart(month + 1, 2, '0')}-${padStart(day, 2, '0')}`}
+            value={`${date.getFullYear()}-${padStart(date.getMonth() + 1, 2, '0')}-${padStart(date.getDate(), 2, '0')}`}
             onChange={this.onChange}
           />
         )}
