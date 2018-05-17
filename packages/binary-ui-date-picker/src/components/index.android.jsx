@@ -49,7 +49,7 @@ class DatePicker extends React.Component {
         if (action === DatePickerAndroid.dismissedAction) {
           return;
         }
-        onChange(new Date(day, month, year));
+        onChange(new Date(year, month, day));
       });
     } catch ({ code, message }) {
       if (process.env.NODE_ENV !== 'production') {

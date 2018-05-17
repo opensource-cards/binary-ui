@@ -2,6 +2,8 @@
 
 import './index-icons';
 
+import './index-carousel';
+
 import './index-components-action-icon';
 import './index-components-action-link';
 import './index-components-alert';

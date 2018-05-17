@@ -4,6 +4,7 @@
     ["module-resolver", {
       "root": ["./"],
       "alias": {
+        "binary-ui-carousel": "./lib/binary-ui-carousel/src",
         "binary-ui-components/mobile": "./lib/binary-ui-components/src/components-mobile",
         "binary-ui-components-validation": "./lib/binary-ui-components/src/binary-ui-components-validation",
         "binary-ui-date-picker": "./lib/binary-ui-date-picker/src",

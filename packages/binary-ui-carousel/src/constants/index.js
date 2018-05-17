@@ -1,0 +1,4 @@
+
+export const INDICATOR_CONTAINER_HEIGHT = 40;
+export const SWIPE_THRESHOLD = 5;
+export const TRANSITION_VIEW_STATE_DURATION = 0.5;
