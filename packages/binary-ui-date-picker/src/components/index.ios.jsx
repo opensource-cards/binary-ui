@@ -13,7 +13,6 @@ const propTypes = {
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
-  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
@@ -26,7 +25,6 @@ const defaultProps = {
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
-  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -79,7 +77,6 @@ class DatePicker extends React.Component {
       locale,
       maximumDate,
       minimumDate,
-      timeZone,
       renderLeft,
       ...props,
     } = this.props;
@@ -92,7 +89,7 @@ class DatePicker extends React.Component {
             <Button
               {...props}
               isDisabled={isDisabled}
-              label={formatDate(date, { timeZone })}
+              label={formatDate(date)}
               onPress={this.onPress}
               renderIcon={rest => <IconArrowDown {...rest} />}
             />

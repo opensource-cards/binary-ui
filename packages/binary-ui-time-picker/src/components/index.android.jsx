@@ -15,7 +15,6 @@ const propTypes = {
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
   minuteInterval: PropTypes.number,
-  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
@@ -30,7 +29,6 @@ const defaultProps = {
   maximumDate: undefined,
   minimumDate: undefined,
   minuteInterval: 15,
-  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -81,7 +79,6 @@ class TimePicker extends React.Component {
       maximumDate,
       minimumDate,
       minuteInterval,
-      timeZone,
       renderLeft,
       ...props,
     } = this.props;
@@ -95,7 +92,6 @@ class TimePicker extends React.Component {
             isDisabled={isDisabled}
             label={formatTime(date, {
               hour12: is24Hour,
-              timeZone,
             })}
             onPress={this.onPress}
             renderIcon={rest => <IconArrowDown {...rest} />}

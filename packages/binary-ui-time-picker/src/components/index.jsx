@@ -5,8 +5,6 @@ import React from 'react';
 
 export const MINUTE_MSEC = 60000;
 
-const formatTimeDefault = (date) => `${padStart(date.getHours(), 2, '0')}:${padStart(date.getMinutes(), 2, '0')}`;
-
 const propTypes = {
   date: PropTypes.instanceOf(Date).isRequired,
   formatTime: PropTypes.func,
@@ -16,20 +14,18 @@ const propTypes = {
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
   minuteInterval: PropTypes.number,
-  timeZone: PropTypes.string,
   onChange: PropTypes.func,
   renderLeft: PropTypes.func,
 };
 
 const defaultProps = {
-  formatTime: undefined,
+  formatTime: (date) => `${padStart(date.getHours(), 2, '0')}:${padStart(date.getMinutes(), 2, '0')}`,
   is24Hour: undefined,
   isDisabled: false,
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
   minuteInterval: 15,
-  timeZone: undefined,
   onChange: () => {},
   renderLeft: () => null,
 };
@@ -74,27 +70,19 @@ class TimePicker extends React.Component {
       maximumDate,
       minimumDate,
       minuteInterval,
-      timeZone,
       renderLeft,
       ...props,
     } = this.props;
-    const dateOriginalTimezoneOffset = date.getTimezoneOffset();
     /* eslint-enable no-unused-vars */
     return (
       <Select
         {...props}
         isDisabled={isDisabled}
-        items={this.getListOfTimePoints().map(value => {
-          const valueDate = new Date(value);
-          const dateCurrentTimezoneOffset = valueDate.getTimezoneOffset();
-          return {
-            key: String(value),
-            label: formatTime
-              ? formatTime(new Date(value), { hour12: is24Hour, timeZone })
-              : formatTimeDefault(new Date(value - (dateOriginalTimezoneOffset - dateCurrentTimezoneOffset) * MINUTE_MSEC)),
-            value: String(value),
-          };
-        })}
+        items={this.getListOfTimePoints().map(value => ({
+          key: String(value),
+          label: formatTime(new Date(value), { hour12: is24Hour }),
+          value: String(value),
+        }))}
         selected={String(date.valueOf())}
         renderLeft={renderLeft}
         onChange={this.onChange}
