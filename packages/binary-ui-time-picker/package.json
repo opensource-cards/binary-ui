@@ -1,6 +1,6 @@
 {
   "name": "binary-ui-time-picker",
-  "version": "0.6.14",
+  "version": "0.6.15",
   "description": "React navigation bar for Cards' Binary Design.",
   "author": {
     "name": "Rostyslav Khanas",
@@ -23,7 +23,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "binary-ui-components": "^0.6.14",
+    "binary-ui-components": "^0.6.15",
     "lodash": "^4.17.5",
     "prop-types": "^15.5.10"
   },
@@ -48,7 +48,7 @@
     "eslint-plugin-import": "^1.5.0",
     "eslint-plugin-jsx-a11y": "^1.0.2",
     "eslint-plugin-react": "^5.0.1",
-    "mocha": "^3.0.2",
+    "mocha": "^5.0.4",
     "react": "^16.0.0",
     "react-native": "^0.55.4",
     "rimraf": "^2.3.4",

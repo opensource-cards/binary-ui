@@ -17,7 +17,11 @@ class DatePickerDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate())
+      date: new Date(
+        dateNow.getFullYear(),
+        dateNow.getMonth(),
+        dateNow.getDate()
+      )
     };
     this.onChange = this.onChange.bind(this);
   }
@@ -34,6 +38,20 @@ class DatePickerDemo extends React.Component {
       <DatePicker
         date={date}
         locale="uk"
+        maximumDate={
+          new Date(
+            dateNow.getFullYear() + 2,
+            dateNow.getMonth(),
+            dateNow.getDate()
+          )
+        }
+        minimumDate={
+          new Date(
+            dateNow.getFullYear() - 2,
+            dateNow.getMonth(),
+            dateNow.getDate()
+          )
+        }
         onChange={this.onChange}
         renderLeft={() => <Label isBold>Demo</Label>}
       />
@@ -48,13 +66,25 @@ storiesOf("binary-ui-date-picker", module).add(
       <div>
         <div>Preview</div>
         <DatePicker
-          date={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate())}
+          date={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate()
+            )
+          }
           locale="uk"
           onChange={action}
           renderLeft={() => <Label isBold>Available</Label>}
         />
         <DatePicker
-          date={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate())}
+          date={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate()
+            )
+          }
           isDisabled
           locale="uk"
           onChange={action}
