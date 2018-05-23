@@ -4,7 +4,7 @@ import IconArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import React from 'react';
 import { Dimensions, Text, View } from 'react-native';
 
-import BinaryUICarousel from '../../lib';
+import BinaryUICarousel from 'binary-ui-carousel';
 
 const { width } = Dimensions.get('window');
 

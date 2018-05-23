@@ -1431,16 +1431,16 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-icons@^0.6.14:
-  version "0.6.14"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.14.tgz#31c5ec8f5e8ef7350ca8e6ae283ec5006e3d0500"
+binary-ui-icons@^0.6.15:
+  version "0.6.15"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.15.tgz#d2b2a1fb088bb131f838b4008d756ccddf501e9f"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.6.14:
-  version "0.6.14"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.14.tgz#8dee9acdae6d551545046cff50e30cc5cd054b52"
+binary-ui-styles@^0.6.15:
+  version "0.6.15"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.15.tgz#75c9e289e1fee2d4cad2d20d6f8e211f592c794a"
   dependencies:
     babel-runtime "^6.23.0"
 

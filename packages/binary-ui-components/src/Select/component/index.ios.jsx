@@ -7,6 +7,7 @@ import Group from '../../Group';
 
 const propTypes = {
   isDisabled: PropTypes.bool,
+  isValid: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   selected: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
@@ -15,6 +16,7 @@ const propTypes = {
 
 const defaultProps = {
   isDisabled: false,
+  isValid: true,
 };
 
 class Select extends React.Component {
@@ -56,7 +58,7 @@ class Select extends React.Component {
 
   render() {
     /* eslint-disable no-unused-vars */
-    const { isDisabled, items, selected, onChange, renderLeft, ...props } = this.props;
+    const { isDisabled, isValid, items, selected, onChange, renderLeft, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     const { isVisible } = this.state;
     const itemSelected = items.find(item => item.value === selected);
@@ -67,6 +69,8 @@ class Select extends React.Component {
           renderRight={() => (
             <Button
               {...props}
+              isDisabled={isDisabled}
+              isValid={isValid}
               label={itemSelected ? itemSelected.label : undefined}
               onPress={this.onPress}
               renderIcon={rest => <IconArrowDown {...rest} />}

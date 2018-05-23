@@ -125,6 +125,7 @@ export default class Input extends React.Component {
           editable={!isDisabled}
           includeFontPadding
           isBold={isBold}
+          isDisabled={isDisabled}
           keyboardType={this.getKeyboardType()}
           paddingBottom={0}
           paddingTop={0}

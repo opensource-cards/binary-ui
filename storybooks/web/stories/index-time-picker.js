@@ -17,7 +17,13 @@ class TimePickerDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 22, 15),
+      date: new Date(
+        dateNow.getFullYear(),
+        dateNow.getMonth(),
+        dateNow.getDate(),
+        22,
+        15
+      )
     };
     this.onChange = this.onChange.bind(this);
   }
@@ -34,8 +40,24 @@ class TimePickerDemo extends React.Component {
       <TimePicker
         date={date}
         locale="uk"
-        maximumDate={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 22, 15)}
-        minimumDate={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 8, 15)}
+        maximumDate={
+          new Date(
+            dateNow.getFullYear(),
+            dateNow.getMonth(),
+            dateNow.getDate(),
+            22,
+            15
+          )
+        }
+        minimumDate={
+          new Date(
+            dateNow.getFullYear(),
+            dateNow.getMonth(),
+            dateNow.getDate(),
+            8,
+            15
+          )
+        }
         minuteInterval={15}
         onChange={this.onChange}
         renderLeft={() => <Label isBold>Demo</Label>}
@@ -51,26 +73,71 @@ storiesOf("binary-ui-time-picker", module).add(
       <div>
         <div>Preview</div>
         <TimePicker
-          date={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 22, 45)}
+          date={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              22,
+              45
+            )
+          }
           locale="uk"
-          maximumDate={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 24, 0)}
-          minimumDate={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 8, 15)}
+          maximumDate={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              24,
+              0
+            )
+          }
+          minimumDate={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              8,
+              15
+            )
+          }
           onChange={action}
           renderLeft={() => <Label isBold>Available</Label>}
         />
         <TimePicker
-          date={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 22, 45)}
+          date={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              22,
+              45
+            )
+          }
           locale="uk"
           onChange={action}
           renderLeft={() => <Label isBold>Available</Label>}
         />
         <TimePicker
-          date={new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), 22, 45)}
+          date={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              22,
+              45
+            )
+          }
           isDisabled
+          isValid={false}
           locale="uk"
           minuteInterval={15}
           onChange={action}
-          renderLeft={() => <Label isBold>Disabled</Label>}
+          renderLeft={() => (
+            <Label isBold isDisabled>
+              Disabled
+            </Label>
+          )}
         />
         <div>Demo</div>
         <TimePickerDemo />

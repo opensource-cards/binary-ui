@@ -10,6 +10,7 @@ const propTypes = {
   date: PropTypes.instanceOf(Date).isRequired,
   formatDate: PropTypes.func,
   isDisabled: PropTypes.bool,
+  isValid: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
@@ -22,6 +23,7 @@ const defaultProps = {
     `${date.getFullYear()}-${padStart(date.getMonth() + 1, 2, '0')}-${padStart(date.getDate(), 2, '0')}`
   ),
   isDisabled: false,
+  isValid: true,
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
@@ -62,6 +64,7 @@ class DatePicker extends React.Component {
       date,
       formatDate,
       isDisabled,
+      isValid,
       locale,
       maximumDate,
       minimumDate,
@@ -76,6 +79,7 @@ class DatePicker extends React.Component {
           <Button
             {...props}
             isDisabled={isDisabled}
+            isValid={isValid}
             label={formatDate(date)}
             onPress={this.onPress}
             renderIcon={rest => <IconArrowDown {...rest} />}

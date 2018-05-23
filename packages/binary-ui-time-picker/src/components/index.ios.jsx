@@ -11,6 +11,7 @@ const propTypes = {
   formatTime: PropTypes.func,
   is24Hour: PropTypes.bool,
   isDisabled: PropTypes.bool,
+  isValid: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
@@ -25,6 +26,7 @@ const defaultProps = {
   ),
   is24Hour: undefined,
   isDisabled: false,
+  isValid: true,
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
@@ -80,6 +82,7 @@ class TimePicker extends React.Component {
       formatTime,
       is24Hour,
       isDisabled,
+      isValid,
       locale,
       maximumDate,
       minimumDate,
@@ -97,6 +100,7 @@ class TimePicker extends React.Component {
             <Button
               {...props}
               isDisabled={isDisabled}
+              isValid={isValid}
               label={formatTime(date, {
                 hour12: is24Hour,
               })}

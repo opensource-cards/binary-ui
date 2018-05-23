@@ -115,6 +115,7 @@ export default class Input extends React.Component {
           {...props}
           disabled={isDisabled}
           isBold={isBold}
+          isDisabled={isDisabled}
           placeholder={isBold ? placeholder.toUpperCase() : placeholder}
           type={type}
           value={isBold ? value.toUpperCase() : value}

@@ -1,2 +1,2 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
-module.exports = require('../lib/components-mobile/Spinner');
+module.exports = require('../lib/Spinner');

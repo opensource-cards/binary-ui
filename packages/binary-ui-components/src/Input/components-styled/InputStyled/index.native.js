@@ -11,6 +11,7 @@ export default styled.TextInput`
     (props.isBold
       ? props.theme.letterSpacing2
       : props.theme.letterSpacingNormal)};
+  opacity: ${props => (props.isDisabled ? props.theme.opacityDisabled : '1')};
   padding-bottom: 0;
   padding-left: 10;
   padding-right: 0;

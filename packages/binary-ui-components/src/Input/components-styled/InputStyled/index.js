@@ -4,7 +4,7 @@ export default styled.input`
   appearance: none;
   border-radius: 0;
   color: hsl(0, 0%, 0%);
-  cursor: text;
+  cursor: ${props => (props.isDisabled ? 'default' : 'text')};
   border: none;
   box-sizing: border-box;
   display: inline-block;
@@ -16,6 +16,7 @@ export default styled.input`
     (props.isBold
       ? props.theme.letterSpacing2
       : props.theme.letterSpacingNormal)};
+  opacity: ${props => (props.isDisabled ? props.theme.opacityDisabled : '1')};
   outline: 0;
   overflow: hidden;
   padding-bottom: 0;

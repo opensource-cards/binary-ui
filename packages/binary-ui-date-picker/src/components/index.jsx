@@ -8,6 +8,7 @@ import React from 'react';
 const propTypes = {
   date: PropTypes.instanceOf(Date).isRequired,
   isDisabled: PropTypes.bool,
+  isValid: PropTypes.bool,
   locale: PropTypes.string,
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
@@ -17,6 +18,7 @@ const propTypes = {
 
 const defaultProps = {
   isDisabled: false,
+  isValid: true,
   locale: undefined,
   maximumDate: undefined,
   minimumDate: undefined,
@@ -60,6 +62,7 @@ class DatePicker extends React.Component {
     const {
       date,
       isDisabled,
+      isValid,
       locale,
       maximumDate,
       minimumDate,
@@ -76,6 +79,7 @@ class DatePicker extends React.Component {
           <Input
             {...props}
             isDisabled={isDisabled}
+            isValid={isValid}
             /*
             max={maximumDate ? `${maximumDate.getFullYear()}-${padStart(maximumDate.getMonth() + 1, 2, '0')}-${padStart(maximumDate.getDate(), 2, '0')}` : undefined}
             min={minimumDate ? `${minimumDate.getFullYear()}-${padStart(minimumDate.getMonth() + 1, 2, '0')}-${padStart(minimumDate.getDate(), 2, '0')}` : undefined}

@@ -86,9 +86,14 @@ storiesOf("binary-ui-date-picker", module).add(
             )
           }
           isDisabled
+          isValid={false}
           locale="uk"
           onChange={action}
-          renderLeft={() => <Label isBold>Disabled</Label>}
+          renderLeft={() => (
+            <Label isBold isDisabled>
+              Disabled
+            </Label>
+          )}
         />
         <div>Demo</div>
         <DatePickerDemo />
