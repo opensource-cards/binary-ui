@@ -75,8 +75,18 @@ class TimePicker extends React.Component {
     }));
   }
 
+  getHour12(is24Hour) {
+    if (is24Hour === true) {
+      return false;
+    }
+    if (is24Hour === false) {
+      return true;
+    }
+    // User default format.
+    return undefined;
+  }
+
   render() {
-    /* eslint-disable no-unused-vars */
     const {
       date,
       formatTime,
@@ -90,7 +100,6 @@ class TimePicker extends React.Component {
       renderLeft,
       ...props,
     } = this.props;
-    /* eslint-enable no-unused-vars */
     const { isVisible } = this.state;
     return (
       <React.Fragment>
@@ -102,7 +111,7 @@ class TimePicker extends React.Component {
               isDisabled={isDisabled}
               isValid={isValid}
               label={formatTime(date, {
-                hour12: is24Hour,
+                hour12: this.getHour12(is24Hour),
               })}
               onPress={this.onPress}
               renderIcon={rest => <IconArrowDown {...rest} />}

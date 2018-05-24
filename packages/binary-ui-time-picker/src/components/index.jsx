@@ -43,6 +43,17 @@ class TimePicker extends React.Component {
     onChange(new Date(Number(value)));
   }
 
+  getHour12(is24Hour) {
+    if (is24Hour === true) {
+      return false;
+    }
+    if (is24Hour === false) {
+      return true;
+    }
+    // User default format.
+    return undefined;
+  }
+
   getListOfTimePoints() {
     const { maximumDate, minimumDate, minuteInterval } = this.props;
     const dateNow = new Date();
@@ -84,7 +95,7 @@ class TimePicker extends React.Component {
         isValid={isValid}
         items={this.getListOfTimePoints().map(value => ({
           key: String(value),
-          label: formatTime(new Date(value), { hour12: is24Hour }),
+          label: formatTime(new Date(value), { hour12: this.getHour12(is24Hour) }),
           value: String(value),
         }))}
         selected={String(date.valueOf())}
