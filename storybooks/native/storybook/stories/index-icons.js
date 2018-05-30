@@ -7,6 +7,7 @@ import { action } from '@storybook/addon-actions';
 import Add from 'binary-ui-icons/binary/Add';
 import AddCard from 'binary-ui-icons/binary/AddCard';
 import AddEmoji from 'binary-ui-icons/binary/AddEmoji';
+import Announcements from 'binary-ui-icons/binary/Announcements';
 import Apple from 'binary-ui-icons/binary/Apple';
 import AppleAlt from 'binary-ui-icons/binary/AppleAlt';
 import Approval from 'binary-ui-icons/binary/Approval';
@@ -44,8 +45,10 @@ import Facetime from 'binary-ui-icons/binary/Facetime';
 import FacetimeAlt from 'binary-ui-icons/binary/FacetimeAlt';
 import Favorites from 'binary-ui-icons/binary/Favorites';
 import FavoritesAlt from 'binary-ui-icons/binary/FavoritesAlt';
+import FixedDesk from 'binary-ui-icons/binary/FixedDesk';
 import Google from 'binary-ui-icons/binary/Google';
 import Github from 'binary-ui-icons/binary/Github';
+import HotDesk from 'binary-ui-icons/binary/HotDesk';
 import Info from 'binary-ui-icons/binary/Info';
 import InfoAlt from 'binary-ui-icons/binary/InfoAlt';
 import Instagram from 'binary-ui-icons/binary/Instagram';
@@ -54,6 +57,7 @@ import KakaoPlus from 'binary-ui-icons/binary/KakaoPlus';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
+import Like from 'binary-ui-icons/binary/Like';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
 import List from 'binary-ui-icons/binary/List';
@@ -64,6 +68,7 @@ import Locked from 'binary-ui-icons/binary/Locked';
 import LockedAlt from 'binary-ui-icons/binary/LockedAlt';
 import Logout from 'binary-ui-icons/binary/Logout';
 import Medium from 'binary-ui-icons/binary/Medium';
+import MeetingRoom from 'binary-ui-icons/binary/MeetingRoom';
 import Microsoft from 'binary-ui-icons/binary/Microsoft';
 import Minus from 'binary-ui-icons/binary/Minus';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
@@ -75,6 +80,7 @@ import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
 import Organization from 'binary-ui-icons/binary/Organization';
 import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
+import Pass from 'binary-ui-icons/binary/Pass';
 import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import ResetSetting from 'binary-ui-icons/binary/ResetSetting';
@@ -102,6 +108,7 @@ import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
 import Statistics from 'binary-ui-icons/binary/Statistics';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
+import Switch from 'binary-ui-icons/binary/Switch';
 import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
 import Telegram from 'binary-ui-icons/binary/Telegram';
 import Text from 'binary-ui-icons/binary/Text';
@@ -132,6 +139,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Add color={COLOR} size={SIZE} onPress={action('clicked')} />
       <AddCard color={COLOR} size={SIZE} onPress={action('clicked')} />
       <AddEmoji color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Announcements color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Approval color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowDown color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ArrowLeft color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -160,10 +168,13 @@ storiesOf('binary-ui-icons/binary', module)
       <Event color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Favorites color={COLOR} size={SIZE} onPress={action('clicked')} />
       <FavoritesAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <FixedDesk color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <HotDesk color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Info color={COLOR} size={SIZE} onPress={action('clicked')} />
       <InfoAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Keypad color={COLOR} size={SIZE} onPress={action('clicked')} />
       <KeypadAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Like color={COLOR} size={SIZE} onPress={action('clicked')} />
       <List color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ListView color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Location color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -171,6 +182,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Locked color={COLOR} size={SIZE} onPress={action('clicked')} />
       <LockedAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Logout color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <MeetingRoom color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Minus color={COLOR} size={SIZE} onPress={action('clicked')} />
       <MinusAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <More color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -180,6 +192,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Open color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Organization color={COLOR} size={SIZE} onPress={action('clicked')} />
       <OrganizationDisconnected color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Pass color={COLOR} size={SIZE} onPress={action('clicked')} />
       <QuestionAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Remove color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ResetSetting color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -205,6 +218,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Statistics color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Store color={COLOR} size={SIZE} onPress={action('clicked')} />
       <StoreAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Switch color={COLOR} size={SIZE} onPress={action('clicked')} />
       <PhoneCard color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Text color={COLOR} size={SIZE} onPress={action('clicked')} />
       <TextAlt color={COLOR} size={SIZE} onPress={action('clicked')} />

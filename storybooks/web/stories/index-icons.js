@@ -5,6 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 import Add from 'binary-ui-icons/binary/Add';
 import AddCard from 'binary-ui-icons/binary/AddCard';
 import AddEmoji from 'binary-ui-icons/binary/AddEmoji';
+import Announcements from 'binary-ui-icons/binary/Announcements';
 import Apple from 'binary-ui-icons/binary/Apple';
 import AppleAlt from 'binary-ui-icons/binary/AppleAlt';
 import Approval from 'binary-ui-icons/binary/Approval';
@@ -42,8 +43,10 @@ import Facetime from 'binary-ui-icons/binary/Facetime';
 import FacetimeAlt from 'binary-ui-icons/binary/FacetimeAlt';
 import Favorites from 'binary-ui-icons/binary/Favorites';
 import FavoritesAlt from 'binary-ui-icons/binary/FavoritesAlt';
+import FixedDesk from 'binary-ui-icons/binary/FixedDesk';
 import Google from 'binary-ui-icons/binary/Google';
 import Github from 'binary-ui-icons/binary/Github';
+import HotDesk from 'binary-ui-icons/binary/HotDesk';
 import Info from 'binary-ui-icons/binary/Info';
 import InfoAlt from 'binary-ui-icons/binary/InfoAlt';
 import Instagram from 'binary-ui-icons/binary/Instagram';
@@ -52,6 +55,7 @@ import KakaoPlus from 'binary-ui-icons/binary/KakaoPlus';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
+import Like from 'binary-ui-icons/binary/Like';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
 import List from 'binary-ui-icons/binary/List';
@@ -62,6 +66,7 @@ import Locked from 'binary-ui-icons/binary/Locked';
 import LockedAlt from 'binary-ui-icons/binary/LockedAlt';
 import Logout from 'binary-ui-icons/binary/Logout';
 import Medium from 'binary-ui-icons/binary/Medium';
+import MeetingRoom from 'binary-ui-icons/binary/MeetingRoom';
 import Microsoft from 'binary-ui-icons/binary/Microsoft';
 import Minus from 'binary-ui-icons/binary/Minus';
 import MinusAlt from 'binary-ui-icons/binary/MinusAlt';
@@ -73,6 +78,8 @@ import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Open from 'binary-ui-icons/binary/Open';
 import Organization from 'binary-ui-icons/binary/Organization';
 import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
+import Pass from 'binary-ui-icons/binary/Pass';
+import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
 import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import ResetSetting from 'binary-ui-icons/binary/ResetSetting';
@@ -100,7 +107,7 @@ import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
 import Statistics from 'binary-ui-icons/binary/Statistics';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
-import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
+import Switch from 'binary-ui-icons/binary/Switch';
 import Telegram from 'binary-ui-icons/binary/Telegram';
 import Text from 'binary-ui-icons/binary/Text';
 import TextAlt from 'binary-ui-icons/binary/TextAlt';
@@ -138,6 +145,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Add color={COLOR} size={SIZE} />Add</div>
       <div><AddCard color={COLOR} size={SIZE} />AddCard</div>
       <div><AddEmoji color={COLOR} size={SIZE} />AddEmoji</div>
+      <div><Announcements color={COLOR} size={SIZE} />Announcements</div>
       <div><ArrowDown color={COLOR} size={SIZE} />ArrowDown</div>
       <div><ArrowLeft color={COLOR} size={SIZE} />ArrowLeft</div>
       <div><ArrowRight color={COLOR} size={SIZE} />ArrowRight</div>
@@ -166,10 +174,13 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Event color={COLOR} size={SIZE} />Event</div>
       <div><Favorites color={COLOR} size={SIZE} />Favorites</div>
       <div><FavoritesAlt color={COLOR} size={SIZE} />FavoritesAlt</div>
+      <div><FixedDesk color={COLOR} size={SIZE} />FixedDesk</div>
+      <div><HotDesk color={COLOR} size={SIZE} />HotDesk</div>
       <div><Info color={COLOR} size={SIZE} />Info</div>
       <div><InfoAlt color={COLOR} size={SIZE} />InfoAlt</div>
       <div><Keypad color={COLOR} size={SIZE} />Keypad</div>
       <div><KeypadAlt color={COLOR} size={SIZE} />KeypadAlt</div>
+      <div><Like color={COLOR} size={SIZE} />Like</div>
       <div><List color={COLOR} size={SIZE} />List</div>
       <div><ListView color={COLOR} size={SIZE} />ListView</div>
       <div><Location color={COLOR} size={SIZE} />Location</div>
@@ -177,6 +188,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Locked color={COLOR} size={SIZE} />Locked</div>
       <div><LockedAlt color={COLOR} size={SIZE} />LockedAlt</div>
       <div><Logout color={COLOR} size={SIZE} />Logout</div>
+      <div><MeetingRoom color={COLOR} size={SIZE} />MeetingRoom</div>
       <div><Minus color={COLOR} size={SIZE} />Minus</div>
       <div><MinusAlt color={COLOR} size={SIZE} />MinusAlt</div>
       <div><More color={COLOR} size={SIZE} />More</div>
@@ -186,6 +198,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Open color={COLOR} size={SIZE} />Open</div>
       <div><Organization color={COLOR} size={SIZE} />Organization</div>
       <div><OrganizationDisconnected color={COLOR} size={SIZE} />OrganizationDisconnected</div>
+      <div><Pass color={COLOR} size={SIZE} />Pass</div>
       <div><QuestionAlt color={COLOR} size={SIZE} />QuestionAlt</div>
       <div><Remove color={COLOR} size={SIZE} />Remove</div>
       <div><ResetSetting color={COLOR} size={SIZE} />ResetSetting</div>
@@ -211,6 +224,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Statistics color={COLOR} size={SIZE} />Statistics</div>
       <div><Store color={COLOR} size={SIZE} />Store</div>
       <div><StoreAlt color={COLOR} size={SIZE} />StoreAlt</div>
+      <div><Switch color={COLOR} size={SIZE} />Switch</div>
       <div><PhoneCard color={COLOR} size={SIZE} />PhoneCard</div>
       <div><Text color={COLOR} size={SIZE} />Text</div>
       <div><TextAlt color={COLOR} size={SIZE} />TextAlt</div>
