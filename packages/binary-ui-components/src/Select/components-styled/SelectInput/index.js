@@ -8,7 +8,7 @@ export default styled.select`
   box-sizing: border-box;
   color: hsl(0, 0%, 0%);
   font-family: ${props => props.theme.fontFamily200};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: ${props => props.theme.fontWeight200};
   height: ${props => props.theme.sizeListItemHeight}px;
   line-height: ${props => props.theme.sizeListItemHeight}px;
