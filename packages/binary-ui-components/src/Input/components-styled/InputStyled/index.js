@@ -8,14 +8,10 @@ export default styled.input`
   border: none;
   box-sizing: border-box;
   display: inline-block;
-  font-family: ${props => (props.isBold ? props.theme.fontFamily600 : props.theme.fontFamily200)};
-  font-size: ${props => (props.isBold ? '13px' : '18px')};
-  font-weight: ${props => (props.isBold ? props.theme.fontWeight600 : props.theme.fontWeight200)};
+  font-family: ${props => (props.isBold ? props.theme.fontFamily400 : props.theme.fontFamily200)};
+  font-size: 16px;
+  font-weight: ${props => (props.isBold ? props.theme.fontWeight400 : props.theme.fontWeight200)};
   height: ${props => props.theme.sizeListItemHeight - 1}px;
-  letter-spacing: ${props =>
-    (props.isBold
-      ? props.theme.letterSpacing2
-      : props.theme.letterSpacingNormal)};
   opacity: ${props => (props.isDisabled ? props.theme.opacityDisabled : '1')};
   outline: 0;
   overflow: hidden;

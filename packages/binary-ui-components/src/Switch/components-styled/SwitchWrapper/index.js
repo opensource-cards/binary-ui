@@ -8,6 +8,5 @@ export default styled.div`
   display: flex;
   flex-direction: row;
   height: ${props => props.theme.sizeListItemHeight}px;
-  padding-left: 10px;
   width: 100%;
 `;

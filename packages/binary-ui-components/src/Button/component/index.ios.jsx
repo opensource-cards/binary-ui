@@ -69,7 +69,7 @@ const Button = ({
       <IconStyledWrapper>
         {renderIcon({
           opacity: isDisabled ? theme.opacityDisabled : 1,
-          size: 18,
+          size: 16,
         })}
       </IconStyledWrapper>
       <ButtonText
@@ -77,7 +77,7 @@ const Button = ({
         isDisabled={isDisabled}
         style={labelStyle}
       >
-        {isBold ? label.toUpperCase() : label}
+        {label}
       </ButtonText>
     </ButtonWrapper>
   </TouchableHighlight>

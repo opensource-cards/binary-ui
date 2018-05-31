@@ -93,9 +93,9 @@ class NavBarTitleSearch extends React.Component {
           {...props}
           autoFocus
           isBold={isBold}
-          placeholder={isBold ? placeholder.toUpperCase() : placeholder}
+          placeholder={placeholder}
           type="search"
-          value={isBold ? value.toUpperCase() : value}
+          value={value}
           onBlur={this.onBlur}
           onChange={this.onChange}
           onFocus={this.onFocus}

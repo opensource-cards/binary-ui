@@ -63,7 +63,7 @@ const Button = ({
         <IconStyledWrapper>
           {renderIcon({
             opacity: isDisabled ? theme.opacityDisabled : 1,
-            size: 18,
+            size: 16,
           })}
         </IconStyledWrapper>
         <ButtonText
@@ -72,7 +72,7 @@ const Button = ({
           numberOfLines={1}
           style={labelStyle}
         >
-          {isBold ? label.toUpperCase() : label}
+          {label}
         </ButtonText>
       </ButtonWrapper>
     </TouchableWithoutFeedback>

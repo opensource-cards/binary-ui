@@ -16,7 +16,7 @@ const defaultProps = {
 
 const Label = ({ children, isBold, ...props }) => (
   <LabelText {...props} isBold={isBold} >
-    {isBold ? children.toUpperCase() : children}
+    {children}
   </LabelText>
 );
 
