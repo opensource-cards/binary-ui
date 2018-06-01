@@ -75,6 +75,7 @@ import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
 import Naver from 'binary-ui-icons/binary/Naver';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
+import Notices from 'binary-ui-icons/binary/Notices';
 import Open from 'binary-ui-icons/binary/Open';
 import Organization from 'binary-ui-icons/binary/Organization';
 import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
@@ -195,6 +196,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><MoreAlt color={COLOR} size={SIZE} />MoreAlt</div>
       <div><New color={COLOR} size={SIZE} />New</div>
       <div><NewAlt color={COLOR} size={SIZE} />NewAlt</div>
+      <div><Notices color={COLOR} size={SIZE} />Notices</div>
       <div><Open color={COLOR} size={SIZE} />Open</div>
       <div><Organization color={COLOR} size={SIZE} />Organization</div>
       <div><OrganizationDisconnected color={COLOR} size={SIZE} />OrganizationDisconnected</div>
