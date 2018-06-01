@@ -100,7 +100,7 @@ class NavBarTitleSearch extends React.Component {
           returnKeyType="search"
           textAlignVertical="center"
           underlineColorAndroid="rgba(0, 0, 0, 0)"
-          value={placeholder}
+          value={value}
           onBlur={this.onBlur}
           onChangeText={onChange}
           onFocus={this.onFocus}
