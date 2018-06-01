@@ -8,5 +8,4 @@ export default styled.Text.attrs({
   font-size: 16px;
   font-weight: ${props => (props.isBold ? props.theme.fontWeight300 : props.theme.fontWeight200)};
   opacity: ${props => (props.isDisabled ? props.theme.opacityDisabled : '1')};
-  padding-left: 10px;
 `;
