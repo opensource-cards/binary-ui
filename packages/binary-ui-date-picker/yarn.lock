@@ -460,8 +460,8 @@ acorn@^3.0.4:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
 
 acorn@^5.5.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.6.0.tgz#572bedb377a1c61b7a289e72b8c5cfeb7baaf0bf"
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.6.1.tgz#c9e50c3e3717cf897f1b071ceadbb543bbc0a8d4"
 
 ajv-keywords@^1.0.0:
   version "1.5.1"
@@ -1433,25 +1433,25 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.6.18:
-  version "0.6.18"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.18.tgz#94aecd06da276bfaf942d98fbd1306bc2699b08e"
+binary-ui-components@^0.6.19:
+  version "0.6.19"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.19.tgz#2bf950c5d17afcfa8c300375a892f7c111658a8c"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.6.18"
-    binary-ui-styles "^0.6.18"
+    binary-ui-icons "^0.6.19"
+    binary-ui-styles "^0.6.19"
     prop-types "^15.5.10"
 
-binary-ui-icons@^0.6.18:
-  version "0.6.18"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.18.tgz#b4a8a301b598523347f7a0b44b150765eceaef22"
+binary-ui-icons@^0.6.19:
+  version "0.6.19"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.19.tgz#a8a7f3cc47e084eb5b696cc6dc0411b4a9c98407"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.6.18:
-  version "0.6.18"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.18.tgz#047f56518be0144644780b6f45c162457f02fe47"
+binary-ui-styles@^0.6.19:
+  version "0.6.19"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.19.tgz#0b6c21f5c6c36a959ed03637b8aa258ed9ef9d3f"
   dependencies:
     babel-runtime "^6.23.0"
 
