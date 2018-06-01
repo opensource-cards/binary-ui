@@ -4,7 +4,7 @@ export default styled.TextInput`
   color: hsl(0, 0%, 0%);
   flex: 9;
   font-family: ${props => props.theme.fontFamily200};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: ${props => props.theme.fontWeight200};
   height: ${props => props.styleHeight}px;
   min-height: ${props => props.styleHeight}px;

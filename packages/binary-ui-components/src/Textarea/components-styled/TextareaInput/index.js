@@ -8,7 +8,7 @@ export default styled.textarea`
   color: hsl(0, 0%, 0%);
   cursor: text;
   font-family: ${props => props.theme.fontFamily200};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: ${props => props.theme.fontWeight200};
   min-height: ${props => props.styleHeight}px;
   outline: 0;

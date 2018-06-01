@@ -101,7 +101,7 @@ const Button = ({
           isDisabled={isDisabled}
           style={labelStyle}
         >
-          {isBold ? label.toUpperCase() : label}
+          {label}
         </ButtonText>
       </ButtonWrapper>
     </TouchableNativeFeedback>

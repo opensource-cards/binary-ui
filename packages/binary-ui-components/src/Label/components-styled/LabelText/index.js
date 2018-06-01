@@ -11,7 +11,6 @@ export default styled.div`
   opacity: ${props => (props.isDisabled ? props.theme.opacityDisabled : '1')};
   outline: 0;
   overflow: hidden;
-  padding-left: 10px;
   pointer-events: ${props => (props.isDisabled ? 'none' : 'auto')};
   text-overflow: ellipsis;
   white-space: nowrap;
