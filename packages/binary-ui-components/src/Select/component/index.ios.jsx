@@ -1,9 +1,15 @@
 import IconArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { LayoutAnimation, Picker } from 'react-native';
+import { LayoutAnimation, Picker, StyleSheet } from 'react-native';
 import Button from '../../Button';
 import Group from '../../Group';
+
+const styles = StyleSheet.create({
+  pickerItem: {
+    fontSize: 16,
+  },
+});
 
 const propTypes = {
   isDisabled: PropTypes.bool,
@@ -80,6 +86,7 @@ class Select extends React.Component {
         {isVisible ? (
           <Picker
             enabled={!isDisabled}
+            itemStyle={styles.pickerItem}
             mode="dropdown"
             selectedValue={selected}
             onValueChange={this.onValueChange}
