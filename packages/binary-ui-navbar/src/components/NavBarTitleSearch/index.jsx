@@ -75,11 +75,7 @@ class NavBarTitleSearch extends React.Component {
     // Note: No need to pass 'onBlur', 'onChange' and 'onFocus' handlers.
     /* eslint-disable no-unused-vars */
     const {
-      autoFocus,
-      isBold,
       isValid,
-      placeholder,
-      value,
       onBlur,
       onChange,
       onFocus,
@@ -97,11 +93,7 @@ class NavBarTitleSearch extends React.Component {
         {renderIcon({ color: '#A9A9A9', size: 20 })}
         <TitleSearchInput
           {...props}
-          autoFocus={autoFocus}
-          isBold={isBold}
-          placeholder={placeholder}
           type="search"
-          value={value}
           onBlur={this.onBlur}
           onChange={this.onChange}
           onFocus={this.onFocus}

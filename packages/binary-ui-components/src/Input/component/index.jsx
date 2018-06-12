@@ -87,6 +87,8 @@ export default class Input extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
+      autoCapitalize,
+      autoCorrect,
       isDisabled,
       isValid,
       styleBorderColor,
