@@ -85,7 +85,7 @@ class NavBarTitleSearch extends React.Component {
         isTypingHighlight={isActive}
         isValid={isValid}
       >
-        {renderIcon({ color: "#A9A9A9", margin: 5, size: 20 })}
+        {renderIcon({ color: '#A9A9A9', margin: 5, size: 20 })}
         <TitleSearchInput
           {...props}
           autoCapitalize="none"
