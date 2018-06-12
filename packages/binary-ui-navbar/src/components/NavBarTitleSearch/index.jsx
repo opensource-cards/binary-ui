@@ -13,6 +13,7 @@ const propTypes = {
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
+  renderIcon: PropTypes.func,
 };
 
 const defaultProps = {
@@ -23,6 +24,7 @@ const defaultProps = {
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
+  renderIcon: (props) => (<IconSearch {...props} />),
 };
 
 class NavBarTitleSearch extends React.Component {
@@ -81,6 +83,7 @@ class NavBarTitleSearch extends React.Component {
       onBlur,
       onChange,
       onFocus,
+      renderIcon,
       ...props,
     } = this.props;
     /* eslint-enable no-unused-vars */
@@ -91,7 +94,7 @@ class NavBarTitleSearch extends React.Component {
         isTypingHighlight={isActive}
         isValid={isValid}
       >
-        <IconSearch color="#A9A9A9" size={20} />
+        {renderIcon({ color: "#A9A9A9", size: 20 })}
         <TitleSearchInput
           {...props}
           autoFocus={autoFocus}
