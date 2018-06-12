@@ -7,6 +7,7 @@ import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
   autoCapitalize: PropTypes.string,
+  autoCorrect: PropTypes.bool,
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isValid: PropTypes.bool,
@@ -19,10 +20,12 @@ const propTypes = {
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onIconPress: PropTypes.func,
+  onSubmitEditing: PropTypes.func,
 };
 
 const defaultProps = {
   autoCapitalize: 'sentences',
+  autoCorrect: true,
   isBold: false,
   isDisabled: false,
   isValid: true,
@@ -34,6 +37,7 @@ const defaultProps = {
   onChange: undefined,
   onFocus: undefined,
   onIconPress: undefined,
+  onSubmitEditing: undefined,
 };
 
 export default class Input extends React.Component {
@@ -88,14 +92,10 @@ export default class Input extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
-      autoCapitalize,
-      isBold,
       isDisabled,
       isValid,
-      placeholder,
       styleBorderColor,
       type,
-      value,
       renderIcon,
       onBlur,
       onChange,
@@ -121,18 +121,14 @@ export default class Input extends React.Component {
         ) : null}
         <InputStyled
           {...props}
-          autoCapitalize={autoCapitalize}
           editable={!isDisabled}
           includeFontPadding
-          isBold={isBold}
           isDisabled={isDisabled}
           keyboardType={this.getKeyboardType()}
           paddingBottom={0}
           paddingTop={0}
-          placeholder={placeholder}
           secureTextEntry={type === INPUT_FIELD_TYPES.PASSWORD}
           textAlignVertical="center"
-          value={value}
           underlineColorAndroid="rgba(0, 0, 0, 0)"
           onBlur={this.onBlur}
           onChangeText={onChange}

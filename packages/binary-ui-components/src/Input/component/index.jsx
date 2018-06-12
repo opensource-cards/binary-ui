@@ -6,6 +6,8 @@ import INPUT_FIELD_TYPES from '../constants/text-field-component-types';
 import ActionListItemIcon from '../../ActionListItemIcon';
 
 const propTypes = {
+  autoCapitalize: PropTypes.string,
+  autoCorrect: PropTypes.bool,
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isValid: PropTypes.bool,
@@ -18,9 +20,12 @@ const propTypes = {
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onIconClick: PropTypes.func,
+  onSubmitEditing: PropTypes.func,
 };
 
 const defaultProps = {
+  autoCapitalize: undefined,
+  autoCorrect: undefined,
   isBold: false,
   isDisabled: false,
   isValid: true,
@@ -32,6 +37,7 @@ const defaultProps = {
   onChange: undefined,
   onFocus: undefined,
   onIconClick: undefined,
+  onSubmitEditing: undefined,
 };
 
 export default class Input extends React.Component {
@@ -81,13 +87,9 @@ export default class Input extends React.Component {
   render() {
     /* eslint-disable no-unused-vars */
     const {
-      isBold,
       isDisabled,
       isValid,
-      placeholder,
       styleBorderColor,
-      type,
-      value,
       renderIcon,
       onBlur,
       onChange,
@@ -114,11 +116,7 @@ export default class Input extends React.Component {
         <InputStyled
           {...props}
           disabled={isDisabled}
-          isBold={isBold}
           isDisabled={isDisabled}
-          placeholder={placeholder}
-          type={type}
-          value={value}
           onBlur={this.onBlur}
           onChange={this.onChange}
           onFocus={this.onFocus}
