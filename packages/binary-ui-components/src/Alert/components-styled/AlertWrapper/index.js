@@ -3,7 +3,6 @@ import { CONFIRM, PRIORITY, CRITICAL } from '../../constants/alert-types';
 
 export default styled.div`
   border-radius: 5px;
-  cursor: default;
   display: flex;
   flex-direction: row;
   margin: 3px auto 0 auto;

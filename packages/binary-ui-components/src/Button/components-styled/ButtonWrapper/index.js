@@ -6,7 +6,7 @@ export default styled.div`
   align-items: center;
   background-color: #ffffff;
   box-sizing: border-box;
-  cursor: default;
+  cursor: ${props => (props.isDisabled ? 'default' : 'pointer')};
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 0;

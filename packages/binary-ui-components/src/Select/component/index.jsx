@@ -34,7 +34,16 @@ class Select extends React.Component {
 
   render() {
     /* eslint-disable no-unused-vars */
-    const { isDisabled, isValid, items, selected, theme, onChange, renderLeft, ...props } = this.props;
+    const {
+      isDisabled,
+      isValid,
+      items,
+      selected,
+      theme,
+      onChange,
+      renderLeft,
+      ...props,
+    } = this.props;
     /* eslint-enable no-unused-vars */
     return (
       <Group

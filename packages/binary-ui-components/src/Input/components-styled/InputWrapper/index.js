@@ -5,7 +5,7 @@ export default styled.div`
   align-items: center;
   background-color: #ffffff;
   box-sizing: border-box;
-  cursor: default;
+  cursor: text;
   display: flex;
   flex-direction: row-reverse;
   width: 100%;

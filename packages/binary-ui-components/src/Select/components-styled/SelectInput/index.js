@@ -7,6 +7,7 @@ export default styled.select`
   border-radius: 0;
   box-sizing: border-box;
   color: hsl(0, 0%, 0%);
+  cursor: ${props => (props.isDisabled ? 'default' : 'pointer')};
   font-family: ${props => props.theme.fontFamily200};
   font-size: 16px;
   font-weight: ${props => props.theme.fontWeight200};

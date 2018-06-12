@@ -42,6 +42,7 @@ const Button = ({
 }) => (
   <ButtonWrapper
     {...props}
+    isDisabled={isDisabled}
     isEdit={isEdit}
     isTapHighlight={!isDisabled}
     isTypingHighlight={false}

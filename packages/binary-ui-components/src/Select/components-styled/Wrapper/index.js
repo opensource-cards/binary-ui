@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export default styled.div`
   align-items: center;
   box-sizing: border-box;
-  cursor: default;
   display: flex;
   flex-direction: row-reverse;
   height: ${props => props.theme.sizeListItemHeight}px;
