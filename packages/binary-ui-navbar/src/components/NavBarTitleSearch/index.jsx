@@ -5,6 +5,7 @@ import TitleSearchInput from './components-styled/TitleSearchInput';
 import TitleSearchWrapper from './components-styled/TitleSearchWrapper';
 
 const propTypes = {
+  autoCorrect: PropTypes.bool,
   autoFocus: PropTypes.bool,
   isBold: PropTypes.bool,
   isValid: PropTypes.bool,
@@ -19,6 +20,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  autoCorrect: undefined,
   autoFocus: false,
   isBold: false,
   isValid: true,
@@ -79,6 +81,7 @@ class NavBarTitleSearch extends React.Component {
     // Note: No need to pass 'onBlur', 'onChange' and 'onFocus' handlers.
     /* eslint-disable no-unused-vars */
     const {
+      autoCorrect,
       isValid,
       styleBorderColor,
       onBlur,
