@@ -9,6 +9,8 @@ const propTypes = {
   isBold: PropTypes.bool,
   isValid: PropTypes.bool,
   placeholder: PropTypes.string,
+  styleBorderColor: PropTypes.string,
+  styleFontColor: PropTypes.string,
   value: PropTypes.string.isRequired,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
@@ -21,6 +23,8 @@ const defaultProps = {
   isBold: false,
   isValid: true,
   placeholder: '',
+  styleBorderColor: 'hsla(0, 0%, 0%, 0.2)',
+  styleFontColor: 'hsl(0, 0%, 0%)',
   onBlur: undefined,
   onChange: undefined,
   onFocus: undefined,
@@ -76,6 +80,7 @@ class NavBarTitleSearch extends React.Component {
     /* eslint-disable no-unused-vars */
     const {
       isValid,
+      styleBorderColor,
       onBlur,
       onChange,
       onFocus,
@@ -89,6 +94,7 @@ class NavBarTitleSearch extends React.Component {
         isEdit
         isTypingHighlight={isActive}
         isValid={isValid}
+        styleBorderColor={styleBorderColor}
       >
         {renderIcon({ color: '#A9A9A9', size: 20 })}
         <TitleSearchInput

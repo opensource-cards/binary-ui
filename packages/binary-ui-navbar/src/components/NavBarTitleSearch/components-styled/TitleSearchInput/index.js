@@ -6,11 +6,11 @@ export default styled.input`
   border: none;
   border-radius: inherit;
   box-sizing: border-box;
-  color: hsl(0, 0%, 0%);
+  color: ${props => props.styleFontColor};
   font-family: ${props => (props.isBold ? props.theme.fontFamily600 : props.theme.fontFamily200)};
   font-size: 16px;
   font-weight: ${props => (props.isBold ? props.theme.fontWeight600 : props.theme.fontWeight200)};
-  height: ${INPUT_HEIGHT - 1}px;
+  height: ${INPUT_HEIGHT}px;
   outline: 0;
   padding-bottom: 10px;
   padding-left: 5px;

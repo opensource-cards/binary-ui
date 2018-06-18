@@ -116,6 +116,7 @@ storiesOf("binary-ui-components/mobile", module).add(
           onIconClick={action()}
         />
         <Input
+          autoCorrect
           isValid={false}
           placeholder="Invalid Email"
           type={INPUT_FIELD_TYPES.EMAIL}
