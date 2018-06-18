@@ -39,6 +39,7 @@ import DeletedAlt from 'binary-ui-icons/binary/DeletedAlt';
 import Designer from 'binary-ui-icons/binary/Designer';
 import Done from 'binary-ui-icons/binary/Done';
 import Drawer from 'binary-ui-icons/binary/Drawer';
+import Email from 'binary-ui-icons/binary/Email';
 import Event from 'binary-ui-icons/binary/Event';
 import Facebook from 'binary-ui-icons/binary/Facebook';
 import Facetime from 'binary-ui-icons/binary/Facetime';
@@ -127,6 +128,7 @@ import Viber from 'binary-ui-icons/binary/Viber';
 import Warning from 'binary-ui-icons/binary/Warning';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
+import World from 'binary-ui-icons/binary/World';
 import Yahoo from 'binary-ui-icons/binary/Yahoo';
 import Youtube from 'binary-ui-icons/binary/Youtube';
 
@@ -165,6 +167,7 @@ storiesOf('binary-ui-icons/binary', module)
       <DeletedAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Done color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Drawer color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Email color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Event color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Favorites color={COLOR} size={SIZE} onPress={action('clicked')} />
       <FavoritesAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -231,6 +234,7 @@ storiesOf('binary-ui-icons/binary', module)
       <UserAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <UserInvite color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Warning color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <World color={COLOR} size={SIZE} onPress={action('clicked')} />
     </View>
   )
 .add('Logotypes', () =>

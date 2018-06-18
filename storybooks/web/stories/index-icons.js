@@ -37,6 +37,7 @@ import DeletedAlt from 'binary-ui-icons/binary/DeletedAlt';
 import Designer from 'binary-ui-icons/binary/Designer';
 import Done from 'binary-ui-icons/binary/Done';
 import Drawer from 'binary-ui-icons/binary/Drawer';
+import Email from 'binary-ui-icons/binary/Email';
 import Event from 'binary-ui-icons/binary/Event';
 import Facebook from 'binary-ui-icons/binary/Facebook';
 import Facetime from 'binary-ui-icons/binary/Facetime';
@@ -126,6 +127,7 @@ import Viber from 'binary-ui-icons/binary/Viber';
 import Warning from 'binary-ui-icons/binary/Warning';
 import Whatsapp from 'binary-ui-icons/binary/Whatsapp';
 import WhatsappAlt from 'binary-ui-icons/binary/WhatsappAlt';
+import World from 'binary-ui-icons/binary/World';
 import Yahoo from 'binary-ui-icons/binary/Yahoo';
 import Youtube from 'binary-ui-icons/binary/Youtube';
 import React from 'react';
@@ -172,6 +174,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><DeletedAlt color={COLOR} size={SIZE} />DeletedAlt</div>
       <div><Done color={COLOR} size={SIZE} />Done</div>
       <div><Drawer color={COLOR} size={SIZE} />Drawer</div>
+      <div><Email color={COLOR} size={SIZE} />Email</div>
       <div><Event color={COLOR} size={SIZE} />Event</div>
       <div><Favorites color={COLOR} size={SIZE} />Favorites</div>
       <div><FavoritesAlt color={COLOR} size={SIZE} />FavoritesAlt</div>
@@ -239,6 +242,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><UserAlt color={COLOR} size={SIZE} />UserAlt</div>
       <div><UserInvite color={COLOR} size={SIZE} />UserInvite</div>
       <div><Warning color={COLOR} size={SIZE} />Warning</div>
+      <div><World color={COLOR} size={SIZE} />World</div>
     </div>
   )))
   .add('Logotypes', withInfo('')(() => (
