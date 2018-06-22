@@ -15,6 +15,7 @@ import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import ArrowUp from 'binary-ui-icons/binary/ArrowUp';
 import Autoconnect from 'binary-ui-icons/binary/Autoconnect';
 import Behance from 'binary-ui-icons/binary/Behance';
+import Beverage from 'binary-ui-icons/binary/Beverage';
 import Call from 'binary-ui-icons/binary/Call';
 import CallAlt from 'binary-ui-icons/binary/CallAlt';
 import CalendarView from 'binary-ui-icons/binary/CalendarView';
@@ -56,6 +57,7 @@ import KakaoPlus from 'binary-ui-icons/binary/KakaoPlus';
 import Kakaotalk from 'binary-ui-icons/binary/Kakaotalk';
 import Keypad from 'binary-ui-icons/binary/Keypad';
 import KeypadAlt from 'binary-ui-icons/binary/KeypadAlt';
+import Kitchen from 'binary-ui-icons/binary/Kitchen';
 import Like from 'binary-ui-icons/binary/Like';
 import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
@@ -65,6 +67,7 @@ import Location from 'binary-ui-icons/binary/Location';
 import LocationAlt from 'binary-ui-icons/binary/LocationAlt';
 import Locked from 'binary-ui-icons/binary/Locked';
 import LockedAlt from 'binary-ui-icons/binary/LockedAlt';
+import Locker from 'binary-ui-icons/binary/Locker';
 import Logout from 'binary-ui-icons/binary/Logout';
 import Medium from 'binary-ui-icons/binary/Medium';
 import MeetingRoom from 'binary-ui-icons/binary/MeetingRoom';
@@ -80,8 +83,11 @@ import Notices from 'binary-ui-icons/binary/Notices';
 import Open from 'binary-ui-icons/binary/Open';
 import Organization from 'binary-ui-icons/binary/Organization';
 import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
+import Parking from 'binary-ui-icons/binary/Parking';
 import Pass from 'binary-ui-icons/binary/Pass';
+import Photos from 'binary-ui-icons/binary/Photos';
 import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
+import Printer from 'binary-ui-icons/binary/Printer';
 import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import ResetSetting from 'binary-ui-icons/binary/ResetSetting';
@@ -89,6 +95,7 @@ import Remove from 'binary-ui-icons/binary/Remove';
 import RoomBooking from 'binary-ui-icons/binary/RoomBooking';
 import RotateLeft from 'binary-ui-icons/binary/RotateLeft';
 import RotateRight from 'binary-ui-icons/binary/RotateRight';
+import RoundTheClock from 'binary-ui-icons/binary/RoundTheClock';
 import Save from 'binary-ui-icons/binary/Save';
 import Scan from 'binary-ui-icons/binary/Scan';
 import ScanAlt from 'binary-ui-icons/binary/ScanAlt';
@@ -155,6 +162,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><ArrowUp color={COLOR} size={SIZE} />ArrowUp</div>
       <div><Approval color={COLOR} size={SIZE} />Approval</div>
       <div><Autoconnect color={COLOR} size={SIZE} />Autoconnect</div>
+      <div><Beverage color={COLOR} size={SIZE} />Beverage</div>
       <div><Call color={COLOR} size={SIZE} />Call</div>
       <div><CallAlt color={COLOR} size={SIZE} />CallAlt</div>
       <div><CalendarView color={COLOR} size={SIZE} />CalendarView</div>
@@ -184,6 +192,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><InfoAlt color={COLOR} size={SIZE} />InfoAlt</div>
       <div><Keypad color={COLOR} size={SIZE} />Keypad</div>
       <div><KeypadAlt color={COLOR} size={SIZE} />KeypadAlt</div>
+      <div><Kitchen color={COLOR} size={SIZE} />Kitchen</div>
       <div><Like color={COLOR} size={SIZE} />Like</div>
       <div><List color={COLOR} size={SIZE} />List</div>
       <div><ListView color={COLOR} size={SIZE} />ListView</div>
@@ -191,6 +200,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><LocationAlt color={COLOR} size={SIZE} />LocationAlt</div>
       <div><Locked color={COLOR} size={SIZE} />Locked</div>
       <div><LockedAlt color={COLOR} size={SIZE} />LockedAlt</div>
+      <div><Locker color={COLOR} size={SIZE} />Locker</div>
       <div><Logout color={COLOR} size={SIZE} />Logout</div>
       <div><MeetingRoom color={COLOR} size={SIZE} />MeetingRoom</div>
       <div><Minus color={COLOR} size={SIZE} />Minus</div>
@@ -203,13 +213,17 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Open color={COLOR} size={SIZE} />Open</div>
       <div><Organization color={COLOR} size={SIZE} />Organization</div>
       <div><OrganizationDisconnected color={COLOR} size={SIZE} />OrganizationDisconnected</div>
+      <div><Parking color={COLOR} size={SIZE} />Parking</div>
       <div><Pass color={COLOR} size={SIZE} />Pass</div>
+      <div><Photos color={COLOR} size={SIZE} />Photos</div>
+      <div><Printer color={COLOR} size={SIZE} />Printer</div>
       <div><QuestionAlt color={COLOR} size={SIZE} />QuestionAlt</div>
       <div><Remove color={COLOR} size={SIZE} />Remove</div>
       <div><ResetSetting color={COLOR} size={SIZE} />ResetSetting</div>
       <div><RoomBooking color={COLOR} size={SIZE} />RoomBooking</div>
       <div><RotateLeft color={COLOR} size={SIZE} />RotateLeft</div>
       <div><RotateRight color={COLOR} size={SIZE} />RotateRight</div>
+      <div><RoundTheClock color={COLOR} size={SIZE} />RoundTheClock</div>
       <div><Save color={COLOR} size={SIZE} />Save</div>
       <div><Scan color={COLOR} size={SIZE} />Scan</div>
       <div><ScanAlt color={COLOR} size={SIZE} />ScanAlt</div>
