@@ -40,7 +40,7 @@ const defaultProps = {
   onSubmitEditing: undefined,
 };
 
-export default class Input extends React.Component {
+class Input extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -141,3 +141,5 @@ export default class Input extends React.Component {
 
 Input.propTypes = propTypes;
 Input.defaultProps = defaultProps;
+
+export default Input;

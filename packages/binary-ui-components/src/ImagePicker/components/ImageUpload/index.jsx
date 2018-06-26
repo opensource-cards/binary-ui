@@ -18,7 +18,7 @@ class ImageUpload extends React.Component {
     this.onDivClick = this.onDivClick.bind(this);
     this.onImageUpload = this.onImageUpload.bind(this);
     this.onLoaderClick = this.onLoaderClick.bind(this);
-    this.onSetLoaderRef = this.onSetLoaderRef.bind(this);
+    this.onLoaderRef = this.onLoaderRef.bind(this);
   }
 
   onDivClick() {
@@ -39,7 +39,7 @@ class ImageUpload extends React.Component {
     this.loader.value = null;
   }
 
-  onSetLoaderRef(loader) {
+  onLoaderRef(loader) {
     this.loader = loader;
   }
 
@@ -49,7 +49,7 @@ class ImageUpload extends React.Component {
       <ImageUploadWrapper imageUploadUrl={renderIcon} onClick={this.onDivClick} >
         <ImageUploadInput
           accept="image/*"
-          innerRef={this.onSetLoaderRef}
+          innerRef={this.onLoaderRef}
           type="file"
           onClick={this.onLoaderClick}
           onChange={this.onImageUpload}

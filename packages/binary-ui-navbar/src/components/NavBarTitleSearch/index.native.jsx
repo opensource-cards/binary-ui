@@ -38,11 +38,14 @@ const defaultProps = {
 class NavBarTitleSearch extends React.Component {
   constructor(props) {
     super(props);
+    this.focus = this.focus.bind(this);
+    this.inputRef = undefined;
     this.state = {
       isActive: false,
     };
     this.onBlur = this.onBlur.bind(this);
     this.onFocus = this.onFocus.bind(this);
+    this.onInputRef = this.onInputRef.bind(this);
   }
 
   onBlur(e) {
@@ -61,6 +64,10 @@ class NavBarTitleSearch extends React.Component {
     }
   }
 
+  onInputRef(inputRef) {
+    this.inputRef = inputRef;
+  }
+
   setFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;
@@ -68,6 +75,13 @@ class NavBarTitleSearch extends React.Component {
     this.setState(() => ({
       isActive,
     }));
+  }
+
+  focus() {
+    if (!this.inputRef) {
+      return;
+    }
+    this.inputRef.focus();
   }
 
   render() {
@@ -96,6 +110,7 @@ class NavBarTitleSearch extends React.Component {
           {...props}
           clearButtonMode="always"
           includeFontPadding
+          innerRef={this.onInputRef}
           paddingBottom={0}
           paddingTop={0}
           returnKeyType="search"
