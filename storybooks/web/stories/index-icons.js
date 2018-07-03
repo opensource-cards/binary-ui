@@ -87,6 +87,7 @@ import Parking from 'binary-ui-icons/binary/Parking';
 import Pass from 'binary-ui-icons/binary/Pass';
 import Photos from 'binary-ui-icons/binary/Photos';
 import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
+import Pinterest from 'binary-ui-icons/binary/Pinterest';
 import Printer from 'binary-ui-icons/binary/Printer';
 import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
@@ -281,6 +282,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Medium color={COLOR} size={SIZE} />Medium</div>
       <div><Microsoft color={COLOR} size={SIZE} />Microsoft</div>
       <div><Naver color={COLOR} size={SIZE} />Naver</div>
+      <div><Pinterest color={COLOR} size={SIZE} />Pinterest</div>
       <div><Redhat color={COLOR} size={SIZE} />Redhat</div>
       <div><Skype color={COLOR} size={SIZE} />Skype</div>
       <div><Telegram color={COLOR} size={SIZE} />Telegram</div>
