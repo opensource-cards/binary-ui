@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default styled.div`
   align-items: center;
-  background-color: #ffffff;
+  background-color: ${props => props.styleBackgroundColor};
   box-sizing: border-box;
   display: flex;
   flex-direction: row;

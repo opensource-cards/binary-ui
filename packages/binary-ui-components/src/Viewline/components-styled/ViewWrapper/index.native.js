@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default styled.View`
   align-items: center;
-  background-color: #ffffff;
+  background-color: ${props => props.styleBackgroundColor};
   flex-direction: row;
   height: ${props => props.theme.sizeListItemHeight};
   justify-content: space-between;

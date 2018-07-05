@@ -9,6 +9,7 @@ const propTypes = {
   isDisabled: PropTypes.bool,
   isEdit: PropTypes.bool,
   isValid: PropTypes.bool,
+  styleBackgroundColor: PropTypes.string,
   renderIcon: PropTypes.func,
   onIconPress: PropTypes.func,
 };
@@ -18,12 +19,21 @@ const defaultProps = {
   isDisabled: false,
   isEdit: false,
   isValid: true,
+  styleBackgroundColor: '#ffffff',
   renderIcon: undefined,
   onIconPress: undefined,
 };
 
-const Viewline = ({ children, isDisabled, isEdit, isValid, renderIcon, onIconPress }) => (
-  <ViewWrapper isEdit={isEdit} isValid={isValid} >
+const Viewline = ({
+  children,
+  isDisabled,
+  isEdit,
+  isValid,
+  styleBackgroundColor,
+  renderIcon,
+  onIconPress,
+}) => (
+  <ViewWrapper isEdit={isEdit} isValid={isValid} styleBackgroundColor={styleBackgroundColor} >
     <ViewContent>
       {children}
     </ViewContent>
