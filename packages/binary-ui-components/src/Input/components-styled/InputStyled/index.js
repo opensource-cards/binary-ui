@@ -12,7 +12,7 @@ export default styled.input`
   font-size: 16px;
   font-weight: ${props => (props.isBold ? props.theme.fontWeight400 : props.theme.fontWeight200)};
   height: ${props => props.theme.sizeListItemHeight - 1}px;
-  opacity: ${props => (props.isDisabled ? props.theme.opacityDisabled : '1')};
+  opacity: ${props => (props.isDisabled ? props.theme.opacityDisabled : 1)};
   outline: 0;
   overflow: hidden;
   padding-bottom: 0;
