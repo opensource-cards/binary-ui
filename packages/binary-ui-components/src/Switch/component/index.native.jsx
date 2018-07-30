@@ -40,9 +40,11 @@ class Switch extends React.Component {
     const { isChecked, isDisabled, label, style } = this.props;
     return (
       <SwitchWrapper>
-        <SwitchLabel isBold isDisabled={isDisabled} >
-          {label}
-        </SwitchLabel>
+        {label ? (
+          <SwitchLabel isBold isDisabled={isDisabled} >
+            {label}
+          </SwitchLabel>
+        ) : null}
         <ReactNativeSwitch
           disabled={isDisabled}
           style={[styles.switch, style]}

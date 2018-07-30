@@ -38,9 +38,11 @@ class Switch extends React.Component {
     const { isChecked, isDisabled, label } = this.props;
     return (
       <SwitchWrapper isDisabled={isDisabled} >
-        <SwitchLabel isBold isDisabled={isDisabled} >
-          {label}
-        </SwitchLabel>
+        {label ? (
+          <SwitchLabel isBold isDisabled={isDisabled} >
+            {label}
+          </SwitchLabel>
+        ) : null}
         <SwitchToggle isDisabled={isDisabled} >
           <SwitchContainer onClick={this.onClick} >
             <SwitchBackground isChecked={isChecked} />
