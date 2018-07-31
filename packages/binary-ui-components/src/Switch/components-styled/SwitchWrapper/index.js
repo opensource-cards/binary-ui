@@ -7,5 +7,6 @@ export default styled.div`
   display: flex;
   flex-direction: row;
   height: ${props => props.theme.sizeListItemHeight}px;
+  justify-content: space-between;
   width: 100%;
 `;

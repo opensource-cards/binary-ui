@@ -5,6 +5,7 @@ import SwitchContainer from '../components-styled/SwitchContainer';
 import SwitchBackground from '../components-styled/SwitchBackground';
 import SwitchHandler from '../components-styled/SwitchHandler';
 import SwitchLabel from '../components-styled/SwitchLabel';
+import SwitchLabelEmpty from '../components-styled/SwitchLabelEmpty';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const propTypes = {
@@ -42,7 +43,9 @@ class Switch extends React.Component {
           <SwitchLabel isBold isDisabled={isDisabled} >
             {label}
           </SwitchLabel>
-        ) : null}
+        ) : (
+          <SwitchLabelEmpty />
+        )}
         <SwitchToggle isDisabled={isDisabled} >
           <SwitchContainer onClick={this.onClick} >
             <SwitchBackground isChecked={isChecked} />

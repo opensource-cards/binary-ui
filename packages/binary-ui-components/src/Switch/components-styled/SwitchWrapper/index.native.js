@@ -5,5 +5,6 @@ export default styled.View`
   background-color: #ffffff;
   flex-direction: row;
   height: ${props => props.theme.sizeListItemHeight}px;
+  justify-content: space-between;
   width: 100%;
 `;

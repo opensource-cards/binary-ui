@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, Switch as ReactNativeSwitch, ViewPropTypes } from 'react-native';
 import SwitchLabel from '../components-styled/SwitchLabel';
+import SwitchLabelEmpty from '../components-styled/SwitchLabelEmpty';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const styles = StyleSheet.create({
@@ -44,7 +45,9 @@ class Switch extends React.Component {
           <SwitchLabel isBold isDisabled={isDisabled} >
             {label}
           </SwitchLabel>
-        ) : null}
+        ) : (
+          <SwitchLabelEmpty />
+        )}
         <ReactNativeSwitch
           disabled={isDisabled}
           style={[styles.switch, style]}
