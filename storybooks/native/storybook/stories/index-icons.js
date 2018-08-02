@@ -39,6 +39,7 @@ import DeletedAlt from 'binary-ui-icons/binary/DeletedAlt';
 import Designer from 'binary-ui-icons/binary/Designer';
 import Done from 'binary-ui-icons/binary/Done';
 import Drawer from 'binary-ui-icons/binary/Drawer';
+import EditAlt from 'binary-ui-icons/binary/EditAlt';
 import Email from 'binary-ui-icons/binary/Email';
 import Event from 'binary-ui-icons/binary/Event';
 import Facebook from 'binary-ui-icons/binary/Facebook';
@@ -167,6 +168,7 @@ storiesOf('binary-ui-icons/binary', module)
       <DeletedAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Done color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Drawer color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <EditAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Email color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Event color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Favorites color={COLOR} size={SIZE} onPress={action('clicked')} />

@@ -40,6 +40,7 @@ import Done from 'binary-ui-icons/binary/Done';
 import Drawer from 'binary-ui-icons/binary/Drawer';
 import Email from 'binary-ui-icons/binary/Email';
 import Event from 'binary-ui-icons/binary/Event';
+import EditAlt from 'binary-ui-icons/binary/EditAlt';
 import Facebook from 'binary-ui-icons/binary/Facebook';
 import Facetime from 'binary-ui-icons/binary/Facetime';
 import FacetimeAlt from 'binary-ui-icons/binary/FacetimeAlt';
@@ -183,6 +184,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><DeletedAlt color={COLOR} size={SIZE} />DeletedAlt</div>
       <div><Done color={COLOR} size={SIZE} />Done</div>
       <div><Drawer color={COLOR} size={SIZE} />Drawer</div>
+      <div><EditAlt color={COLOR} size={SIZE} />EditAlt</div>
       <div><Email color={COLOR} size={SIZE} />Email</div>
       <div><Event color={COLOR} size={SIZE} />Event</div>
       <div><Favorites color={COLOR} size={SIZE} />Favorites</div>
