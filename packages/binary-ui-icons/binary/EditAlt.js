@@ -1,2 +1,2 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
-module.exports = require('../lib/components-icons/EditAl');
+module.exports = require('../lib/components-icons/EditAlt');
