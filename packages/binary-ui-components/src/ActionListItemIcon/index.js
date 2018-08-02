@@ -1,1 +1,1 @@
-export { default } from './components-styled';
+export { default } from './components';

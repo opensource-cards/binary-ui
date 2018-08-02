@@ -1,7 +1,7 @@
 import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableHighlight, ViewPropTypes } from 'react-native';
+import { TouchableHighlight } from 'react-native';
 import { withTheme } from 'styled-components';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
@@ -14,7 +14,7 @@ const propTypes = {
   isEdit: PropTypes.bool,
   isValid: PropTypes.bool,
   label: PropTypes.string,
-  labelStyle: ViewPropTypes.style,
+  labelStyle: PropTypes.object,
   theme: PropTypes.object.isRequired,
   renderIcon: PropTypes.func,
   onLongPress: PropTypes.func,

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'styled-components';
-import ActionIcon from '../../ActionIcon';
+import ActionIconCenter from '../components-styled/ActionIconCenter';
 
 const propTypes = {
   isDisabled: PropTypes.bool,
@@ -14,7 +14,7 @@ const defaultProps = {
 };
 
 const ActionListItemIcon = ({ isDisabled, theme, renderIcon, ...props }) => (
-  <ActionIcon
+  <ActionIconCenter
     {...props}
     color={theme.colorGray40}
     isDisabled={isDisabled}
