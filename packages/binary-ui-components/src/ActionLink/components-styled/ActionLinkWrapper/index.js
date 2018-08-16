@@ -12,8 +12,6 @@ export default styled.a`
   @media (pointer: fine) {
     &:hover {
       text-decoration: underline;
-      text-decoration-color: ${props => props.theme.colorBlue80};
-      text-underline-position: under;
     }
     &:active {
       opacity: ${props => props.theme.opacityActive};
