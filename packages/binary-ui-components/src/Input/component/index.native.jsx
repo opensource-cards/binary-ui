@@ -48,6 +48,7 @@ class Input extends React.Component {
     };
     this.onBlur = this.onBlur.bind(this);
     this.onFocus = this.onFocus.bind(this);
+    this.onInputRef = this.onInputRef.bind(this);
   }
 
   onBlur(e) {
@@ -66,6 +67,10 @@ class Input extends React.Component {
     }
   }
 
+  onInputRef(inputRef) {
+    this.inputRef = inputRef;
+  }
+
   setFocus(isActive) {
     if (this.state.isActive === isActive) {
       return;
@@ -73,6 +78,13 @@ class Input extends React.Component {
     this.setState(() => ({
       isActive,
     }));
+  }
+
+  focus() {
+    if (!this.inputRef) {
+      return;
+    }
+    this.inputRef.focus();
   }
 
   getKeyboardType() {
@@ -123,6 +135,7 @@ class Input extends React.Component {
           {...props}
           editable={!isDisabled}
           includeFontPadding
+          innerRef={this.onInputRef}
           isDisabled={isDisabled}
           keyboardType={this.getKeyboardType()}
           paddingBottom={0}
