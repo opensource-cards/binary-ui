@@ -1,14 +1,15 @@
 import { TouchableOpacity, View } from 'react-native';
+import styled from 'styled-components';
 import ImageUploadWrapper from '../../../../components-styled/ImageUploadWrapper';
 
-const ImageContent = ImageUploadWrapper.extend``;
+const ImageContent = styled(ImageUploadWrapper)``;
 
 // This component should be used for a not loading image.
-ImageContent.TouchableOpacity = ImageUploadWrapper.withComponent(
-  TouchableOpacity
-).extend``;
+ImageContent.TouchableOpacity = styled(
+  ImageUploadWrapper.withComponent(TouchableOpacity)
+)``;
 
 // This component should be used for a loading image.
-ImageContent.View = ImageUploadWrapper.withComponent(View).extend``;
+ImageContent.View = styled(ImageUploadWrapper.withComponent(View))``;
 
 export default ImageContent;

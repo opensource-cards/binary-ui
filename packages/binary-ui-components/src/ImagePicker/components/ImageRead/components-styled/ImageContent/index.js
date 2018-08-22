@@ -1,5 +1,6 @@
+import styled from 'styled-components';
 import ImageUploadWrapper from '../../../../components-styled/ImageUploadWrapper';
 
-export default ImageUploadWrapper.extend`
+export default styled(ImageUploadWrapper)`
   position: relative;
 `;

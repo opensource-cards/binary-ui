@@ -1,7 +1,8 @@
+import styled from 'styled-components';
 import TitleWrapperBase from '../../../../components-styled/TitleWrapperBase';
 
-export default TitleWrapperBase.extend`
-  align-itesm: center;
+export default styled(TitleWrapperBase)`
+  align-items: center;
   cursor: pointer;
   display: flex;
   flex-direction: row;
