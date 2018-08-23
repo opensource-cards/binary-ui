@@ -15,6 +15,7 @@ const propTypes = {
   maximumDate: PropTypes.instanceOf(Date),
   minimumDate: PropTypes.instanceOf(Date),
   onChange: PropTypes.func,
+  onOpen: PropTypes.func,
   renderLeft: PropTypes.func,
 };
 
@@ -28,6 +29,7 @@ const defaultProps = {
   maximumDate: undefined,
   minimumDate: undefined,
   onChange: () => {},
+  onOpen: () => {},
   renderLeft: () => null,
 };
 
@@ -42,6 +44,7 @@ class DatePicker extends React.Component {
     };
     this.onDateChange = this.onDateChange.bind(this);
     this.onPress = this.onPress.bind(this);
+    this.close = this.close.bind(this);
   }
 
   onDateChange(date) {
@@ -50,7 +53,19 @@ class DatePicker extends React.Component {
   }
 
   onPress() {
+    const { onOpen } = this.props;
     const { isVisible } = this.state;
+    const isVisibleNew = !isVisible;
+    this.animate();
+    this.setState(() => ({
+      isVisible: isVisibleNew,
+    }));
+    if (isVisibleNew) {
+      onOpen();
+    }
+  }
+
+  animate() {
     LayoutAnimation.configureNext({
       duration: 250,
       create: {
@@ -66,8 +81,12 @@ class DatePicker extends React.Component {
         property: LayoutAnimation.Properties.opacity,
       },
     });
+  }
+
+  close() {
+    this.animate();
     this.setState(() => ({
-      isVisible: !isVisible,
+      isVisible: false,
     }));
   }
 

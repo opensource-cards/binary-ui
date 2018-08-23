@@ -17,12 +17,14 @@ const propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   selected: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  onOpen: PropTypes.func,
   renderLeft: PropTypes.func,
 };
 
 const defaultProps = {
   isDisabled: false,
   isValid: true,
+  onOpen: () => {},
 };
 
 class Select extends React.Component {
@@ -33,10 +35,28 @@ class Select extends React.Component {
     };
     this.onPress = this.onPress.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
+    this.close = this.close.bind(this);
   }
 
   onPress() {
+    const { onOpen } = this.props;
     const { isVisible } = this.state;
+    const isVisibleNew = !isVisible;
+    this.animate();
+    this.setState(() => ({
+      isVisible: isVisibleNew,
+    }));
+    if (isVisibleNew) {
+      onOpen();
+    }
+  }
+
+  onValueChange(itemValue) {
+    const { onChange } = this.props;
+    onChange(itemValue);
+  }
+
+  animate() {
     LayoutAnimation.configureNext({
       duration: 250,
       create: {
@@ -52,14 +72,13 @@ class Select extends React.Component {
         property: LayoutAnimation.Properties.opacity,
       },
     });
-    this.setState(() => ({
-      isVisible: !isVisible,
-    }));
   }
 
-  onValueChange(itemValue) {
-    const { onChange } = this.props;
-    onChange(itemValue);
+  close() {
+    this.animate();
+    this.setState(() => ({
+      isVisible: false,
+    }));
   }
 
   render() {

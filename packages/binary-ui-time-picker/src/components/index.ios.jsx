@@ -17,6 +17,7 @@ const propTypes = {
   minimumDate: PropTypes.instanceOf(Date),
   minuteInterval: PropTypes.number,
   onChange: PropTypes.func,
+  onOpen: PropTypes.func,
   renderLeft: PropTypes.func,
 };
 
@@ -32,6 +33,7 @@ const defaultProps = {
   minimumDate: undefined,
   minuteInterval: 15,
   onChange: () => {},
+  onOpen: () => {},
   renderLeft: () => null,
 };
 
@@ -46,6 +48,7 @@ class TimePicker extends React.Component {
     };
     this.onDateChange = this.onDateChange.bind(this);
     this.onPress = this.onPress.bind(this);
+    this.close = this.close.bind(this);
   }
 
   onDateChange(date) {
@@ -54,7 +57,30 @@ class TimePicker extends React.Component {
   }
 
   onPress() {
+    const { onOpen } = this.props;
     const { isVisible } = this.state;
+    const isVisibleNew = !isVisible;
+    this.animate();
+    this.setState(() => ({
+      isVisible: isVisibleNew,
+    }));
+    if (isVisibleNew) {
+      onOpen();
+    }
+  }
+
+  getHour12(is24Hour) {
+    if (is24Hour === true) {
+      return false;
+    }
+    if (is24Hour === false) {
+      return true;
+    }
+    // User default format.
+    return undefined;
+  }
+
+  animate() {
     LayoutAnimation.configureNext({
       duration: 250,
       create: {
@@ -70,20 +96,13 @@ class TimePicker extends React.Component {
         property: LayoutAnimation.Properties.opacity,
       },
     });
-    this.setState(() => ({
-      isVisible: !isVisible,
-    }));
   }
 
-  getHour12(is24Hour) {
-    if (is24Hour === true) {
-      return false;
-    }
-    if (is24Hour === false) {
-      return true;
-    }
-    // User default format.
-    return undefined;
+  close() {
+    this.animate();
+    this.setState(() => ({
+      isVisible: false,
+    }));
   }
 
   render() {

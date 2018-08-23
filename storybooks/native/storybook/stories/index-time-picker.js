@@ -34,31 +34,70 @@ class TimePickerDemo extends React.Component {
   render() {
     const { date } = this.state;
     return (
-      <TimePicker
-        date={date}
-        locale="uk"
-        maximumDate={
-          new Date(
-            dateNow.getFullYear(),
-            dateNow.getMonth(),
-            dateNow.getDate(),
-            22,
-            15
-          )
-        }
-        minimumDate={
-          new Date(
-            dateNow.getFullYear(),
-            dateNow.getMonth(),
-            dateNow.getDate(),
-            8,
-            15
-          )
-        }
-        minuteInterval={15}
-        onChange={this.onChange}
-        renderLeft={() => <Label isBold>Demo</Label>}
-      />
+      <React.Fragment>
+        <TimePicker
+          date={date}
+          locale="uk"
+          maximumDate={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              22,
+              15
+            )
+          }
+          minimumDate={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              8,
+              15
+            )
+          }
+          minuteInterval={15}
+          ref={(ref) => { this.timePicker1Ref = ref }}
+          onChange={this.onChange}
+          onOpen={() => {
+            if (this.timePicker2Ref && this.timePicker2Ref.close) {
+              this.timePicker2Ref.close();
+            }
+          }}
+          renderLeft={() => <Label isBold>Demo</Label>}
+        />
+        <TimePicker
+          date={date}
+          locale="uk"
+          maximumDate={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              22,
+              15
+            )
+          }
+          minimumDate={
+            new Date(
+              dateNow.getFullYear(),
+              dateNow.getMonth(),
+              dateNow.getDate(),
+              8,
+              15
+            )
+          }
+          minuteInterval={15}
+          ref={(ref) => { this.timePicker2Ref = ref }}
+          onChange={this.onChange}
+          onOpen={() => {
+            if (this.timePicker1Ref && this.timePicker1Ref.close) {
+              this.timePicker1Ref.close();
+            }
+          }}
+          renderLeft={() => <Label isBold>Demo</Label>}
+        />
+      </React.Fragment>
     );
   }
 }
