@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { STACK_HEADER_HEIGHT } from '../../../../constants';
 
 export default styled.div`
   align-items: center;
@@ -8,5 +7,5 @@ export default styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   font-size: 22px;
-  height: ${STACK_HEADER_HEIGHT}px;
+  height: 50px;
 `;

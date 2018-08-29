@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { STACK_HEADER_HEIGHT } from '../../../../constants';
 
 export default styled.View`
   align-items: center;
   flex-direction: row;
-  height: ${STACK_HEADER_HEIGHT};
+  height: 50px;
   overflow: hidden;
 `;
