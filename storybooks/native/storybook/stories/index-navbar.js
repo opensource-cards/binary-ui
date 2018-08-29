@@ -11,7 +11,6 @@ import IconDone from "binary-ui-icons/binary/Done";
 import IconSearch from "binary-ui-icons/binary/Search";
 import NavBar from "binary-ui-navbar";
 import NavBarIconNotification from "binary-ui-navbar/components/NavBarIconNotification";
-import NavBarTitleAction from "binary-ui-navbar/components/NavBarTitleAction";
 import NavBarTitleSearch from "binary-ui-navbar/components/NavBarTitleSearch";
 import NavBarTitleText from "binary-ui-navbar/components/NavBarTitleText";
 import { THEME_MAIN } from "binary-ui-styles";
@@ -106,7 +105,7 @@ storiesOf("binary-ui-navbar", module).add("NavBar", () => (
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleAction>NavBar with active buttons</NavBarTitleAction>
+        <NavBarTitleText>NavBar with active buttons</NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonLeft={{
@@ -129,7 +128,7 @@ storiesOf("binary-ui-navbar", module).add("NavBar", () => (
           backgroundColor: "#eeeae5"
         }}
       >
-        <NavBarTitleAction>NavBar with secondary button</NavBarTitleAction>
+        <NavBarTitleText>NavBar with secondary button</NavBarTitleText>
       </NavBar>
       <NavBar
         headerButtonLeft={{

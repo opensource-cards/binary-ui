@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import TitleText from '../../components-styled/TitleText';
-import TitleWrapperText from '../../components-styled/TitleWrapperBase';
+import TitleText from './components-styled/TitleText';
+import TitleWrapperText from './components-styled/TitleWrapperBase';
 
 const propTypes = {
   children: PropTypes.node,
