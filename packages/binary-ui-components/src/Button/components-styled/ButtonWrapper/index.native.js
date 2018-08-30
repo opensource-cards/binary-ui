@@ -4,9 +4,9 @@ import styled from 'styled-components';
 export default styled.View`
   align-items: center;
   background-color: #ffffff;
+  flex: 1;
   flex-direction: row-reverse;
   height: ${props => props.theme.sizeListItemHeight};
-  width: 100%;
   ${props => (
     getHighlightEditStyle(
       props.isEdit,
