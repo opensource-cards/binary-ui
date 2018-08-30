@@ -80,13 +80,6 @@ class Input extends React.Component {
     }));
   }
 
-  focus() {
-    if (!this.inputRef) {
-      return;
-    }
-    this.inputRef.focus();
-  }
-
   getKeyboardType() {
     const { type } = this.props;
     switch (type) {
@@ -99,6 +92,13 @@ class Input extends React.Component {
       default:
         return 'default';
     }
+  }
+
+  focus() {
+    if (!this.inputRef) {
+      return;
+    }
+    this.inputRef.focus();
   }
 
   render() {
