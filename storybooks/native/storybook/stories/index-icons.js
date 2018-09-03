@@ -83,6 +83,7 @@ import Open from 'binary-ui-icons/binary/Open';
 import Organization from 'binary-ui-icons/binary/Organization';
 import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
 import Pass from 'binary-ui-icons/binary/Pass';
+import Pinned from 'binary-ui-icons/binary/Pinned';
 import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
 import Redhat from 'binary-ui-icons/binary/Redhat';
 import ResetSetting from 'binary-ui-icons/binary/ResetSetting';
@@ -110,6 +111,7 @@ import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
 import Statistics from 'binary-ui-icons/binary/Statistics';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
+import Subscribe from 'binary-ui-icons/binary/Subscribe';
 import Switch from 'binary-ui-icons/binary/Switch';
 import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
 import Telegram from 'binary-ui-icons/binary/Telegram';
@@ -198,6 +200,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Organization color={COLOR} size={SIZE} onPress={action('clicked')} />
       <OrganizationDisconnected color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Pass color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Pinned color={COLOR} size={SIZE} onPress={action('clicked')} />
       <QuestionAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Remove color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ResetSetting color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -223,6 +226,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Statistics color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Store color={COLOR} size={SIZE} onPress={action('clicked')} />
       <StoreAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Subscribe color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Switch color={COLOR} size={SIZE} onPress={action('clicked')} />
       <PhoneCard color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Text color={COLOR} size={SIZE} onPress={action('clicked')} />

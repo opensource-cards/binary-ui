@@ -88,6 +88,7 @@ import Parking from 'binary-ui-icons/binary/Parking';
 import Pass from 'binary-ui-icons/binary/Pass';
 import Photos from 'binary-ui-icons/binary/Photos';
 import PhoneCard from 'binary-ui-icons/binary/PhoneCard';
+import Pinned from 'binary-ui-icons/binary/Pinned';
 import Pinterest from 'binary-ui-icons/binary/Pinterest';
 import Printer from 'binary-ui-icons/binary/Printer';
 import QuestionAlt from 'binary-ui-icons/binary/QuestionAlt';
@@ -118,6 +119,7 @@ import StackUnavailableAlt from 'binary-ui-icons/binary/StackUnavailableAlt';
 import Statistics from 'binary-ui-icons/binary/Statistics';
 import Store from 'binary-ui-icons/binary/Store';
 import StoreAlt from 'binary-ui-icons/binary/StoreAlt';
+import Subscribe from 'binary-ui-icons/binary/Subscribe';
 import Switch from 'binary-ui-icons/binary/Switch';
 import Telegram from 'binary-ui-icons/binary/Telegram';
 import Text from 'binary-ui-icons/binary/Text';
@@ -219,6 +221,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Parking color={COLOR} size={SIZE} />Parking</div>
       <div><Pass color={COLOR} size={SIZE} />Pass</div>
       <div><Photos color={COLOR} size={SIZE} />Photos</div>
+      <div><Pinned color={COLOR} size={SIZE} />Pinned</div>
       <div><Printer color={COLOR} size={SIZE} />Printer</div>
       <div><QuestionAlt color={COLOR} size={SIZE} />QuestionAlt</div>
       <div><Remove color={COLOR} size={SIZE} />Remove</div>
@@ -246,6 +249,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Statistics color={COLOR} size={SIZE} />Statistics</div>
       <div><Store color={COLOR} size={SIZE} />Store</div>
       <div><StoreAlt color={COLOR} size={SIZE} />StoreAlt</div>
+      <div><Subscribe color={COLOR} size={SIZE} />Subscribe</div>
       <div><Switch color={COLOR} size={SIZE} />Switch</div>
       <div><PhoneCard color={COLOR} size={SIZE} />PhoneCard</div>
       <div><Text color={COLOR} size={SIZE} />Text</div>
