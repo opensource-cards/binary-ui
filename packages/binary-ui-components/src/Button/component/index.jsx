@@ -44,7 +44,6 @@ const Button = ({
     {...props}
     isDisabled={isDisabled}
     isEdit={isEdit}
-    isTapHighlight={!isDisabled}
     isTypingHighlight={false}
     isValid={isValid}
     onClick={!isDisabled ? onClick : undefined}

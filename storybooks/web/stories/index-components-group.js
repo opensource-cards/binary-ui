@@ -15,7 +15,6 @@ import ActionIcon from "binary-ui-components/mobile/ActionIcon";
 import Alert, { ALERT_TYPES } from "binary-ui-components/mobile/Alert";
 import Button from "binary-ui-components/mobile/Button";
 import Group from "binary-ui-components/mobile/Group";
-import ImagePicker from "binary-ui-components/mobile/ImagePicker";
 import Label from "binary-ui-components/mobile/Label";
 import ProgressBar from "binary-ui-components/mobile/ProgressBar";
 import Section from "binary-ui-components/mobile/Section";

@@ -12,7 +12,6 @@ import './index-components-checkbox';
 import './index-components-group';
 import './index-components-input';
 import './index-components-label';
-import './index-components-imagepicker';
 import './index-components-notification-icon';
 import './index-components-progressbar';
 import './index-components-section';

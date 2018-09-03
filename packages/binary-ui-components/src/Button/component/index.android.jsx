@@ -55,8 +55,8 @@ const Button = ({
     <TouchableWithoutFeedback>
       <ButtonWrapper
         {...props}
+        isDisabled={isDisabled}
         isEdit={isEdit}
-        isTapHighlight={!isDisabled}
         isTypingHighlight={false}
         isValid={isValid}
       >
@@ -85,8 +85,8 @@ const Button = ({
     >
       <ButtonWrapper
         {...props}
+        isDisabled={isDisabled}
         isEdit={isEdit}
-        isTapHighlight={!isDisabled}
         isTypingHighlight={false}
         isValid={isValid}
       >

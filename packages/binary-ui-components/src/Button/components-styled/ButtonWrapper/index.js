@@ -1,6 +1,5 @@
 import { getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components';
-import { TAP_HIGHLIGHT_COLOR } from '../../utils/styles';
 
 export default styled.div`
   align-items: center;
@@ -12,6 +11,7 @@ export default styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   height: ${props => props.theme.sizeListItemHeight}px;
+  opacity: 1;
   padding-left: 10px;
   width: 100%;
   ${props => (
@@ -23,6 +23,8 @@ export default styled.div`
     )
   )}
   ${props => (
-    props.isTapHighlight ? `&:active { background-color: ${TAP_HIGHLIGHT_COLOR}; }` : undefined
-  )}
+    !props.isDisabled
+      ? `&:active { opacity: ${props.theme.opacityActive}; }`
+      : undefined
+  )};
 `;

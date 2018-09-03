@@ -2,7 +2,7 @@ import Check from 'binary-ui-icons/binary/Check';
 import Uncheck from 'binary-ui-icons/binary/Uncheck';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableWithoutFeedback, View } from 'react-native';
 import { withTheme } from 'styled-components';
 
 const propTypes = {
@@ -39,13 +39,15 @@ class Checkbox extends React.Component {
     const { isChecked, theme, onChange, ...props } = this.props;
     /* eslint-enable no-unused-vars */
     return (
-      <TouchableOpacity {...props} activeOpacity={theme.opacityActive} onPress={this.onPress} >
-        {isChecked ? (
-          <Check color={theme.colorBlue40} size={30} />
-        ) : (
-          <Uncheck color={theme.colorGray80} size={30} />
-        )}
-      </TouchableOpacity>
+      <TouchableWithoutFeedback onPress={this.onPress}>
+        <View {...props} activeOpacity={theme.opacityActive}>
+          {isChecked ? (
+            <Check color={theme.colorBlue40} size={30} />
+          ) : (
+            <Uncheck color={theme.colorGray80} size={30} />
+          )}
+        </View>
+      </TouchableWithoutFeedback>
     );
   }
 }

@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/react-native";
 import { action } from "@storybook/addon-actions";
 import React from "react";
-import { TouchableOpacity, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { ThemeProvider } from "styled-components";
 
 import IconMore from "binary-ui-icons/binary/More";
@@ -33,8 +33,7 @@ storiesOf("binary-ui-components/mobile", module).add("Viewline", () => (
         renderIcon={props => <IconMore {...props} />}
         onIconPress={action()}
       >
-        <TouchableOpacity
-          activeOpacity={OPACITY_ACTIVE}
+        <View
           style={{
             backgroundColor: "hsla(0, 0%, 0%, 0.05)",
             padding: 10,
@@ -43,7 +42,7 @@ storiesOf("binary-ui-components/mobile", module).add("Viewline", () => (
           }}
         >
           <Text>Viewline with complex styles</Text>
-        </TouchableOpacity>
+        </View>
       </Viewline>
     </View>
   </ThemeProvider>

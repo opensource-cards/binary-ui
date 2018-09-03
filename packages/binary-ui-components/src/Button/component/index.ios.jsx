@@ -6,7 +6,6 @@ import { withTheme } from 'styled-components';
 import ButtonText from '../components-styled/ButtonText';
 import ButtonWrapper from '../components-styled/ButtonWrapper';
 import IconStyledWrapper from '../components-styled/IconStyledWrapper';
-import { TAP_HIGHLIGHT_COLOR } from '../utils/styles';
 
 const propTypes = {
   isBold: PropTypes.bool,
@@ -53,7 +52,7 @@ const Button = ({
   ...props,
 }) => (
   <TouchableHighlight
-    underlayColor={!isDisabled ? TAP_HIGHLIGHT_COLOR : undefined}
+    underlayColor={!isDisabled ? 'rgba(0, 0, 0, 0.1)' : undefined}
     onLongPress={!isDisabled ? onLongPress : undefined}
     onPress={!isDisabled ? onPress : undefined}
     onPressIn={!isDisabled ? onPressIn : undefined}
@@ -61,8 +60,8 @@ const Button = ({
   >
     <ButtonWrapper
       {...props}
+      isDisabled={isDisabled}
       isEdit={isEdit}
-      isTapHighlight={!isDisabled}
       isTypingHighlight={false}
       isValid={isValid}
     >
