@@ -6,15 +6,14 @@ export default styled.a`
   opacity: 1;
   text-decoration: none;
   transition: ${TRANSITION_FEEDBACK_OPACITY};
-  user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
+  &:active {
+    opacity: ${props => props.theme.opacityActive};
+  }
   @media (pointer: fine) {
     &:hover {
       text-decoration: underline;
-    }
-    &:active {
-      opacity: ${props => props.theme.opacityActive};
     }
   }
 `;
