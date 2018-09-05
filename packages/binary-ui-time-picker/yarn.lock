@@ -1428,25 +1428,25 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.6.44:
-  version "0.6.44"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.44.tgz#c8cc93befb772e175f89534a6c3c764fb0763693"
+binary-ui-components@^0.6.45:
+  version "0.6.45"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.45.tgz#33cde920eb24a18fad237433e172f7912f614507"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.6.44"
-    binary-ui-styles "^0.6.44"
+    binary-ui-icons "^0.6.45"
+    binary-ui-styles "^0.6.45"
     prop-types "^15.5.10"
 
-binary-ui-icons@^0.6.44:
-  version "0.6.44"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.44.tgz#204818c507b395e5c1b155c8bf6a20d075fd35dd"
+binary-ui-icons@^0.6.45:
+  version "0.6.45"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.45.tgz#96ae4a15d76d6b8aa8396319c0378a58c4889c20"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.6.44:
-  version "0.6.44"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.44.tgz#ae636d59d247af7ad908cbf4d8e05b99f0ab9951"
+binary-ui-styles@^0.6.45:
+  version "0.6.45"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.45.tgz#b287bb9f01a96f048e7f2d5890271ddb6c817192"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -1738,8 +1738,10 @@ contains-path@^0.1.0:
   resolved "https://registry.yarnpkg.com/contains-path/-/contains-path-0.1.0.tgz#fe8cf184ff6670b6baef01a9d4861a5cbec4120a"
 
 convert-source-map@^1.1.0, convert-source-map@^1.5.0, convert-source-map@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.6.0.tgz#51b537a8c43e0f04dec1993bffcdd504e758ac20"
+  dependencies:
+    safe-buffer "~5.1.1"
 
 copy-descriptor@^0.1.0:
   version "0.1.1"
@@ -4369,7 +4371,7 @@ sax@^1.2.4:
 
 sax@~1.1.1:
   version "1.1.6"
-  resolved "https://registry.yarnpkg.com/sax/-/sax-1.1.6.tgz#5d616be8a5e607d54e114afae55b7eaf2fcc3240"
+  resolved "http://registry.npmjs.org/sax/-/sax-1.1.6.tgz#5d616be8a5e607d54e114afae55b7eaf2fcc3240"
 
 "semver@2 || 3 || 4 || 5", semver@5.x, semver@^5.0.1, semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1:
   version "5.5.1"
@@ -4714,7 +4716,7 @@ svgs@^3.1.2:
 
 table@^3.7.8:
   version "3.8.3"
-  resolved "https://registry.yarnpkg.com/table/-/table-3.8.3.tgz#2bbc542f0fda9861a755d3947fefd8b3f513855f"
+  resolved "http://registry.npmjs.org/table/-/table-3.8.3.tgz#2bbc542f0fda9861a755d3947fefd8b3f513855f"
   dependencies:
     ajv "^4.7.0"
     ajv-keywords "^1.0.0"
