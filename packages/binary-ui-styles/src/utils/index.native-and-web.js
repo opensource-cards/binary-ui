@@ -1,4 +1,5 @@
 
+export const BINARY_COLOR_SAND_MAIN = '#F5F3EF';
 export const BINARY_COLOR_SAND_90 = '#ebe7e0';
 export const BINARY_COLOR_SAND_80 = '#d6cfc2';
 export const BINARY_COLOR_SAND_70 = '#c2b8a3';
@@ -99,5 +100,5 @@ export function getHighlightEditStyle(isEdit, isValid, isTypingHighlight, border
   if (borderColor) {
     return getEditStyle(borderColor);
   }
-  return getEditStyle(BINARY_COLOR_SAND_90);
+  return getEditStyle(BINARY_COLOR_SAND_MAIN);
 }

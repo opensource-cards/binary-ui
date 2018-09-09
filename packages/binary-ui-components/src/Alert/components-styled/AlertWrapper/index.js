@@ -16,7 +16,7 @@ export default styled.div`
       case CONFIRM:
         return `background: ${props.theme.colorBlue40};color: #ffffff;`;
       case PRIORITY:
-        return `background: ${props.theme.colorYellow50};color: #000000;`;
+        return `background: ${props.theme.colorYellow50};color: hsl(0, 0%, 0%);`;
       case CRITICAL:
         return `background: ${props.theme.colorRed40};color: #ffffff;`;
       default:

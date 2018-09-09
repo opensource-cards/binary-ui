@@ -146,7 +146,7 @@ import styled from 'styled-components';
 
 setAddon(infoAddon);
 
-const COLOR = '#000000';
+const COLOR = 'hsl(0, 0%, 0%)';
 const SIZE = 50;
 
 const AddStyled = styled(Add)`

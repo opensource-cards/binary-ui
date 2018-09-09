@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { StyleSheet, Switch as ReactNativeSwitch, ViewPropTypes } from 'react-native';
+import { Platform, StyleSheet, Switch as ReactNativeSwitch, ViewPropTypes } from 'react-native';
 import SwitchLabel from '../components-styled/SwitchLabel';
 import SwitchLabelEmpty from '../components-styled/SwitchLabelEmpty';
 import SwitchWrapper from '../components-styled/SwitchWrapper';
 
 const styles = StyleSheet.create({
   switch: {
-    transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }],
+    transform: [
+      { scaleX: Platform.OS === 'ios' ? 0.8 : 1 },
+      { scaleY: Platform.OS === 'ios' ? 0.8 : 1 },
+    ],
   },
 });
 

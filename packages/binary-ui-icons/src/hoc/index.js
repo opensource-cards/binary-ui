@@ -11,7 +11,7 @@ export default (IconContentComponent) => {
   };
 
   const defaultProps = {
-    color: '#000000',
+    color: 'hsl(0, 0%, 0%)',
     size: 20,
   };
 

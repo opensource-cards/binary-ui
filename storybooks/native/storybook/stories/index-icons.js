@@ -135,7 +135,7 @@ import World from 'binary-ui-icons/binary/World';
 import Yahoo from 'binary-ui-icons/binary/Yahoo';
 import Youtube from 'binary-ui-icons/binary/Youtube';
 
-const COLOR = '#000000';
+const COLOR = 'hsl(0, 0%, 0%)';
 const SIZE = 50;
 
 storiesOf('binary-ui-icons/binary', module)

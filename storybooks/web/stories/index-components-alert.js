@@ -22,7 +22,7 @@ storiesOf("binary-ui-components/mobile", module).add(
         <Alert
           text="Alert type PRIORITY"
           type={ALERT_TYPES.PRIORITY}
-          renderIconRight={() => <IconOrganizationDisconnected color="#000000" />}
+          renderIconRight={() => <IconOrganizationDisconnected color="hsl(0, 0%, 0%)" />}
         />
         <Alert
           text="Alert type CRITICAL"

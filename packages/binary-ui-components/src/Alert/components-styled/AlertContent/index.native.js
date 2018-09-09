@@ -11,7 +11,7 @@ export default styled.Text`
       case CONFIRM:
         return 'color: #ffffff;';
       case PRIORITY:
-        return 'color: #000000;';
+        return 'color: hsl(0, 0%, 0%);';
       case CRITICAL:
         return 'color: #ffffff;';
       default:

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export default styled.Text.attrs({
   numberOfLines: 1,
 })`
-  color: #000000;
+  color: hsl(0, 0%, 0%);
   font-family: ${props => props.theme.fontFamily600};
   font-size: 12px;
   font-weight: ${props => props.theme.fontWeight600};

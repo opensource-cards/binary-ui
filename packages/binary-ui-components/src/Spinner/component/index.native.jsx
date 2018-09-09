@@ -10,7 +10,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: '#000000',
+  color: 'hsl(0, 0%, 0%)',
   opacity: 1,
   size: 20,
 };

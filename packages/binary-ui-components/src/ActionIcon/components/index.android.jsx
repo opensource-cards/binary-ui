@@ -18,7 +18,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  color: '#000000',
+  color: 'hsl(0, 0%, 0%)',
   isDisabled: false,
   size: 18,
   onLongPress: undefined,

@@ -27,7 +27,7 @@ const defaultProps = {
   isBold: false,
   isValid: true,
   placeholder: '',
-  styleBorderColor: 'hsla(0, 0%, 0%, 0.2)',
+  styleBorderColor: 'hsla(0, 0%, 0%, 0.15)',
   styleFontColor: 'hsl(0, 0%, 0%)',
   onBlur: undefined,
   onChange: undefined,

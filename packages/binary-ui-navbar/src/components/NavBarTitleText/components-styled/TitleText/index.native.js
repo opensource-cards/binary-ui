@@ -5,7 +5,7 @@ export default styled.Text.attrs({
   numberOfLines: 1,
 })`
   align-items: center;
-  color: #000000;
+  color: hsl(0, 0%, 0%);
   flex-direction: row;
   font-family: ${props => props.theme.fontFamily500};
   font-size: 16px;

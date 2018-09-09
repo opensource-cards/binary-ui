@@ -9,7 +9,7 @@ export default styled.input`
   &::-webkit-slider-thumb {
     appearance: none;
     background-color: #ffffff;
-    border: 1px solid #000000;
+    border: 1px solid hsl(0, 0%, 0%);
     border-radius: 50%;
     cursor: pointer;
     height: ${props => props.theme.sizeListItemHeight / 2}px;
@@ -17,7 +17,7 @@ export default styled.input`
   }
   &::-moz-range-thumb {
     background-color: #ffffff;
-    border: 1px solid #000000;
+    border: 1px solid hsl(0, 0%, 0%);
     border-radius: 50%;
     cursor: pointer;
     height: ${props => props.theme.sizeListItemHeight / 2}px;
