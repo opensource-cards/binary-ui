@@ -26,5 +26,5 @@ export default styled.div`
     !props.isDisabled
       ? `&:active { opacity: ${props.theme.opacityActive}; }`
       : undefined
-  )};
+  )}
 `;

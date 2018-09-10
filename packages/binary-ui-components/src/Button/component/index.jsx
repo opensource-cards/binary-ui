@@ -1,4 +1,3 @@
-import ArrowRight from 'binary-ui-icons/binary/ArrowRight';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'styled-components';
@@ -25,7 +24,7 @@ const defaultProps = {
   isValid: true,
   label: '',
   labelStyle: undefined,
-  renderIcon: (props) => (<ArrowRight {...props} />),
+  renderIcon: () => null,
 };
 
 const Button = ({
