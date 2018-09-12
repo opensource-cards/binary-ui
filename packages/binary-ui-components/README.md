@@ -7,11 +7,11 @@ This package provides a set of React components implementing Binary Design Syste
 ## Using in your project
 
 ```
-import Section from 'binary-ui-components/mobile/Section';
+import Label from 'binary-ui-components/mobile/Label';
 
-<Section label="Label" />
-
+<Label>Text</Label>
 ```
+
 ## License
 
 MIT
