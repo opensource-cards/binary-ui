@@ -4,7 +4,8 @@ import IconArrowDown from 'binary-ui-icons/binary/ArrowDown';
 import padStart from 'lodash/padStart';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { DatePickerIOS, LayoutAnimation } from 'react-native';
+import { LayoutAnimation } from 'react-native';
+import DatePickerIOS from '../components-styled/DatePickerIOS/index.ios';
 
 const propTypes = {
   date: PropTypes.instanceOf(Date).isRequired,

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.textarea`
-  background-color: transparent;
+  background-color: #ffffff;
   border: none;
   border-radius: 0;
   box-sizing: border-box;
