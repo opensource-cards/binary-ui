@@ -24,7 +24,7 @@ export default styled.div`
   )}
   ${props => (
     !props.isDisabled
-      ? `&:active { background-color: ${BINARY_COLOR_SAND_MAIN_LIGHT}; }`
+      ? `&:active { background-color: ${BINARY_COLOR_SAND_MAIN_LIGHT}; opacity: 0.85; }`
       : undefined
   )}
 `;
