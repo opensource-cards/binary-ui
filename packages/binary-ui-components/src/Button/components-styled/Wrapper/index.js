@@ -1,4 +1,4 @@
-import { getHighlightEditStyle } from 'binary-ui-styles';
+import { getHighlightEditStyle, BINARY_COLOR_SAND_MAIN_LIGHT } from 'binary-ui-styles';
 import styled from 'styled-components';
 
 export default styled.div`
@@ -24,7 +24,7 @@ export default styled.div`
   )}
   ${props => (
     !props.isDisabled
-      ? `&:active { opacity: ${props.theme.opacityActive}; }`
+      ? `&:active { background-color: ${BINARY_COLOR_SAND_MAIN_LIGHT}; }`
       : undefined
   )}
 `;

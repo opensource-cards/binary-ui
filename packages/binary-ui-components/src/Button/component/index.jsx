@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'styled-components';
-import ButtonText from '../components-styled/ButtonText';
-import ButtonWrapper from '../components-styled/ButtonWrapper';
-import IconStyledWrapper from '../components-styled/IconStyledWrapper';
+import IconContainer from '../components-styled/IconContainer';
+import Text from '../components-styled/Text';
+import Wrapper from '../components-styled/Wrapper';
 
 const propTypes = {
   isBold: PropTypes.bool,
@@ -39,7 +39,7 @@ const Button = ({
   onClick,
   ...props,
 }) => (
-  <ButtonWrapper
+  <Wrapper
     {...props}
     isDisabled={isDisabled}
     isEdit={isEdit}
@@ -47,16 +47,16 @@ const Button = ({
     isValid={isValid}
     onClick={!isDisabled ? onClick : undefined}
   >
-    <IconStyledWrapper>
+    <IconContainer>
       {renderIcon({
         opacity: isDisabled ? theme.opacityDisabled : 1,
         size: 16,
       })}
-    </IconStyledWrapper>
-    <ButtonText isBold={isBold} isDisabled={isDisabled} style={labelStyle}>
+    </IconContainer>
+    <Text isBold={isBold} isDisabled={isDisabled} style={labelStyle}>
       {label}
-    </ButtonText>
-  </ButtonWrapper>
+    </Text>
+  </Wrapper>
 );
 
 Button.propTypes = propTypes;

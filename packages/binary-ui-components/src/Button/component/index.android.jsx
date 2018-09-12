@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableNativeFeedback, TouchableWithoutFeedback } from 'react-native';
 import { withTheme } from 'styled-components';
-import ButtonText from '../components-styled/ButtonText';
-import ButtonWrapper from '../components-styled/ButtonWrapper';
-import IconStyledWrapper from '../components-styled/IconStyledWrapper';
+import IconContainer from '../components-styled/IconContainer';
+import Text from '../components-styled/Text';
+import Wrapper from '../components-styled/Wrapper';
 
 const propTypes = {
   isBold: PropTypes.bool,
@@ -52,28 +52,28 @@ const Button = ({
 }) => (
   isDisabled ? (
     <TouchableWithoutFeedback>
-      <ButtonWrapper
+      <Wrapper
         {...props}
         isDisabled={isDisabled}
         isEdit={isEdit}
         isTypingHighlight={false}
         isValid={isValid}
       >
-        <IconStyledWrapper>
+        <IconContainer>
           {renderIcon({
             opacity: isDisabled ? theme.opacityDisabled : 1,
             size: 16,
           })}
-        </IconStyledWrapper>
-        <ButtonText
+        </IconContainer>
+        <Text
           isBold={isBold}
           isDisabled={isDisabled}
           numberOfLines={1}
           style={labelStyle}
         >
           {label}
-        </ButtonText>
-      </ButtonWrapper>
+        </Text>
+      </Wrapper>
     </TouchableWithoutFeedback>
   ) : (
     <TouchableNativeFeedback
@@ -82,27 +82,27 @@ const Button = ({
       onPressIn={onPressIn}
       onPressOut={onPressOut}
     >
-      <ButtonWrapper
+      <Wrapper
         {...props}
         isDisabled={isDisabled}
         isEdit={isEdit}
         isTypingHighlight={false}
         isValid={isValid}
       >
-        <IconStyledWrapper>
+        <IconContainer>
           {renderIcon({
             opacity: isDisabled ? theme.opacityDisabled : 1,
             size: 16,
           })}
-        </IconStyledWrapper>
-        <ButtonText
+        </IconContainer>
+        <Text
           isBold={isBold}
           isDisabled={isDisabled}
           style={labelStyle}
         >
           {label}
-        </ButtonText>
-      </ButtonWrapper>
+        </Text>
+      </Wrapper>
     </TouchableNativeFeedback>
   )
 );

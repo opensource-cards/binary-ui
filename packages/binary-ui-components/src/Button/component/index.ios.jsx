@@ -1,10 +1,11 @@
+import { BINARY_COLOR_SAND_MAIN_LIGHT } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight } from 'react-native';
 import { withTheme } from 'styled-components';
-import ButtonText from '../components-styled/ButtonText';
-import ButtonWrapper from '../components-styled/ButtonWrapper';
-import IconStyledWrapper from '../components-styled/IconStyledWrapper';
+import IconContainer from '../components-styled/IconContainer';
+import Text from '../components-styled/Text';
+import Wrapper from '../components-styled/Wrapper';
 
 const propTypes = {
   isBold: PropTypes.bool,
@@ -51,33 +52,33 @@ const Button = ({
   ...props,
 }) => (
   <TouchableHighlight
-    underlayColor={!isDisabled ? 'rgba(0, 0, 0, 0.1)' : undefined}
+    underlayColor={!isDisabled ? BINARY_COLOR_SAND_MAIN_LIGHT : undefined}
     onLongPress={!isDisabled ? onLongPress : undefined}
     onPress={!isDisabled ? onPress : undefined}
     onPressIn={!isDisabled ? onPressIn : undefined}
     onPressOut={!isDisabled ? onPressOut : undefined}
   >
-    <ButtonWrapper
+    <Wrapper
       {...props}
       isDisabled={isDisabled}
       isEdit={isEdit}
       isTypingHighlight={false}
       isValid={isValid}
     >
-      <IconStyledWrapper>
+      <IconContainer>
         {renderIcon({
           opacity: isDisabled ? theme.opacityDisabled : 1,
           size: 16,
         })}
-      </IconStyledWrapper>
-      <ButtonText
+      </IconContainer>
+      <Text
         isBold={isBold}
         isDisabled={isDisabled}
         style={labelStyle}
       >
         {label}
-      </ButtonText>
-    </ButtonWrapper>
+      </Text>
+    </Wrapper>
   </TouchableHighlight>
 );
 

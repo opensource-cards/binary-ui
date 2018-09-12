@@ -577,25 +577,25 @@ binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
 
-binary-ui-components@^0.6.46:
-  version "0.6.46"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.46.tgz#ce7b2d1fa1d040303c95d07bcc8e8033019c2b22"
+binary-ui-components@^0.6.47:
+  version "0.6.47"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.47.tgz#1b5e7b9ef8fc905edecb81d5746de42ee53273df"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.6.46"
-    binary-ui-styles "^0.6.46"
+    binary-ui-icons "^0.6.47"
+    binary-ui-styles "^0.6.47"
     prop-types "^15.5.10"
 
-binary-ui-icons@^0.6.46:
-  version "0.6.46"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.46.tgz#35e11974ecced914d6107c0f1977fbed4c1ff727"
+binary-ui-icons@^0.6.47:
+  version "0.6.47"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.47.tgz#79194e4524e8e945e4cb4bddbdca31e8b66e21ed"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.6.46:
-  version "0.6.46"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.46.tgz#f85af07373057f0df6f4d46a141aa48eb4b13326"
+binary-ui-styles@^0.6.47:
+  version "0.6.47"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.47.tgz#c52df7bf8ca53a47e91ebc5faee1bcf16a0ccfe5"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -1682,8 +1682,8 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
 needle@^2.2.1:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/needle/-/needle-2.2.2.tgz#1120ca4c41f2fcc6976fd28a8968afe239929418"
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/needle/-/needle-2.2.3.tgz#c1b04da378cd634d8befe2de965dc2cfb0fd65ca"
   dependencies:
     debug "^2.1.2"
     iconv-lite "^0.4.4"
@@ -1944,7 +1944,7 @@ react@^16.0.0:
 
 readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.2.2:
   version "2.3.6"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
+  resolved "http://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
   dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.3"
@@ -2189,8 +2189,8 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
 styled-components@^3.0.0:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.5.tgz#6cbfde7c9189c868b9fd01fee40f5330dbd0cc8d"
+  version "3.4.6"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.6.tgz#134f1ab89ed732686bf7de3ff8fca557283cbd60"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
@@ -2255,7 +2255,7 @@ text-table@~0.2.0:
 
 through@^2.3.6:
   version "2.3.8"
-  resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  resolved "http://registry.npmjs.org/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
 tlds@^1.187.0:
   version "1.203.1"
