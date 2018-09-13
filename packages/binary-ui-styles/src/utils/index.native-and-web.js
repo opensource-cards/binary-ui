@@ -71,7 +71,7 @@ export const BINARY_COLOR_SLATE_30 = '#434556';
 export const BINARY_COLOR_SLATE_20 = '#2c2e3a';
 export const BINARY_COLOR_SLATE_10 = '#16171d';
 
-export const LIST_ITEM_HEIGHT = 44;
+export const LIST_ITEM_HEIGHT = 46;
 
 export const OPACITY_ACTIVE = 0.5;
 export const OPACITY_DISABLED = 0.3;
