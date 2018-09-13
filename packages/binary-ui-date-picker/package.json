@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:opensource-cards/binary-ui.git"
+    "url": "git@github.com:andcards/binary-ui.git"
   },
   "files": [
     "lib"

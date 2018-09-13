@@ -4,11 +4,11 @@ The Binary Design System offers a set of guidelines and open-source libraries fo
 
 Designed for [andCards Spaces](https://andcards.com) web site, [andCards Suite Web App](https://andcards.com/suite), [andCards Suite Android App](https://play.google.com/store/apps/details?id=com.cardscorp.contacts) and [andCards Suite iOS App](https://itunes.apple.com/us/app/andcards-suite/id1291226540?mt=8).
 
-<img src="https://github.com/opensource-cards/binary-ui/blob/master/cover.png" />
+<img src="https://github.com/andcards/binary-ui/blob/master/cover.png" />
 
 ### Demo
 
-- [Web](https://opensource-cards.github.io/binary-ui)
+- [Web](https://andcards.github.io/binary-ui)
 - [Expo](https://exp.host/@rtkhanas/binaryui)
 
 ### About
