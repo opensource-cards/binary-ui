@@ -7,7 +7,6 @@ export default styled(ActionIcon)`
   display: flex;
   flex-shrink: 0;
   flex-grow: 0;
-  height: 50px;
   justify-content: center;
   min-width: 50px;
   user-select: none;

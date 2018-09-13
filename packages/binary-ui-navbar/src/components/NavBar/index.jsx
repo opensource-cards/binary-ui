@@ -9,6 +9,7 @@ const propTypes = {
   headerButtonLeft: PropTypes.object,
   headerButtonRight: PropTypes.object,
   headerButtonRightSecondary: PropTypes.object,
+  styleHeight: PropTypes.string,
 };
 
 const defaultProps = {
@@ -16,6 +17,7 @@ const defaultProps = {
   headerButtonLeft: {},
   headerButtonRight: {},
   headerButtonRightSecondary: {},
+  styleHeight: '50px',
 };
 
 const NavBar = ({

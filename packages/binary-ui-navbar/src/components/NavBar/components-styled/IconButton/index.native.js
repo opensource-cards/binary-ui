@@ -5,8 +5,7 @@ export default styled(ActionIcon)`
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  height: 50px;
   justify-content: center;
+  min-width: 50px;
   overflow: hidden;
-  min-width: 50;
 `;

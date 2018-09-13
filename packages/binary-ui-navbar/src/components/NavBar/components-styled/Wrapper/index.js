@@ -7,5 +7,5 @@ export default styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   font-size: 22px;
-  height: 50px;
+  height: ${props => props.styleHeight};
 `;
