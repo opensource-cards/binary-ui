@@ -7,5 +7,4 @@ export default styled.Text.attrs({
   font-family: ${props => (props.isBold ? props.theme.fontFamily400 : props.theme.fontFamily200)};
   font-size: 16px;
   font-weight: ${props => (props.isBold ? props.theme.fontWeight400 : props.theme.fontWeight200)};
-  height: ${props => props.theme.sizeListItemHeight}px;
 `;
