@@ -10,9 +10,10 @@ import { THEME_MAIN } from "binary-ui-styles";
 storiesOf("binary-ui-components/mobile", module).add("Label", () => (
   <ThemeProvider theme={THEME_MAIN}>
     <View>
-      <Label>Label</Label>
+      <Label isRequired>Label</Label>
       <Label isDisabled>Label disabled</Label>
-      <Label isBold>Label bold</Label>
+      <Label isBold isRequired>Label bold</Label>
+      <Label isBold isRequired>Label bold Label bold Label bold Label bold Label bold</Label>
       <Label isBold isDisabled>
         Label bold disabled
       </Label>

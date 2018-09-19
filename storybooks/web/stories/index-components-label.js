@@ -15,9 +15,10 @@ storiesOf("binary-ui-components/mobile", module).add(
   withInfo("A Label Component")(() => (
     <ThemeProvider theme={THEME_MAIN}>
       <div>
-        <Label>Label</Label>
+        <Label isRequired>Label</Label>
         <Label isDisabled>Label disabled</Label>
-        <Label isBold>Label bold</Label>
+        <Label isBold isRequired>Label bold</Label>
+        <Label isBold isRequired>Label bold Label bold Label bold Label bold Label bold</Label>
         <Label isBold isDisabled>
           Label bold disabled
         </Label>
