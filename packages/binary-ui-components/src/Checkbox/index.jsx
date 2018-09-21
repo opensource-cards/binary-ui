@@ -1,8 +1,8 @@
-import Check from 'binary-ui-icons/binary/Check';
-import Uncheck from 'binary-ui-icons/binary/Uncheck';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'styled-components';
+import Check from './components-styled/Check';
+import Uncheck from './components-styled/Uncheck';
 
 const propTypes = {
   isChecked: PropTypes.bool.isRequired,
