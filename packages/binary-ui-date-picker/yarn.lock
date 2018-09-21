@@ -471,7 +471,7 @@ ajv@^4.7.0:
 
 ansi-colors@^1.0.1:
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
+  resolved "http://registry.npmjs.org/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
   dependencies:
     ansi-wrap "^0.1.0"
 
@@ -1159,8 +1159,8 @@ babel-plugin-transform-react-jsx@^6.24.1, babel-plugin-transform-react-jsx@^6.5.
     babel-runtime "^6.22.0"
 
 babel-plugin-transform-react-remove-prop-types@^0.4.6:
-  version "0.4.15"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.15.tgz#7ba830e77276a0e788cd58ea527b5f70396e12a7"
+  version "0.4.18"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.18.tgz#85ff79d66047b34288c6f7cc986b8854ab384f8c"
 
 babel-plugin-transform-regenerator@^6.24.1, babel-plugin-transform-regenerator@^6.5.0:
   version "6.26.0"
@@ -1412,10 +1412,10 @@ base@^0.11.1:
     pascalcase "^0.1.1"
 
 basic-auth@~2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.0.tgz#015db3f353e02e56377755f962742e8981e7bbba"
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.1.tgz#b998279bf47ce38344b4f3cf916d4679bbf51e3a"
   dependencies:
-    safe-buffer "5.1.1"
+    safe-buffer "5.1.2"
 
 big-integer@^1.6.7:
   version "1.6.36"
@@ -1429,25 +1429,25 @@ binary-extensions@^1.0.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.12.0.tgz#c2d780f53d45bba8317a8902d4ceeaf3a6385b14"
 
-binary-ui-components@^0.6.53:
-  version "0.6.53"
-  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.53.tgz#93aa6717438d2cc64e48edb5429358021eb86e66"
+binary-ui-components@^0.6.54:
+  version "0.6.54"
+  resolved "https://registry.yarnpkg.com/binary-ui-components/-/binary-ui-components-0.6.54.tgz#9c3a3183a38979d2e58c811e3368a8a6e57f456f"
   dependencies:
     babel-runtime "^6.23.0"
-    binary-ui-icons "^0.6.53"
-    binary-ui-styles "^0.6.53"
+    binary-ui-icons "^0.6.54"
+    binary-ui-styles "^0.6.54"
     prop-types "^15.5.10"
 
-binary-ui-icons@^0.6.53:
-  version "0.6.53"
-  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.53.tgz#dfbeb207c6d2ea174f6fa9a8d10059a1b3c782ba"
+binary-ui-icons@^0.6.54:
+  version "0.6.54"
+  resolved "https://registry.yarnpkg.com/binary-ui-icons/-/binary-ui-icons-0.6.54.tgz#6028c7bb8e7a297c53a907e61beae5771386559a"
   dependencies:
     babel-runtime "^6.23.0"
     prop-types "^15.5.10"
 
-binary-ui-styles@^0.6.53:
-  version "0.6.53"
-  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.53.tgz#f1b6e4cabf0af4c958b5946deabfa93b7e1527dd"
+binary-ui-styles@^0.6.54:
+  version "0.6.54"
+  resolved "https://registry.yarnpkg.com/binary-ui-styles/-/binary-ui-styles-0.6.54.tgz#0cb182a08a580f41ac5f2896239b82235ed436eb"
   dependencies:
     babel-runtime "^6.23.0"
 
@@ -3729,7 +3729,7 @@ onetime@^2.0.0:
 
 opn@^3.0.2:
   version "3.0.3"
-  resolved "https://registry.yarnpkg.com/opn/-/opn-3.0.3.tgz#b6d99e7399f78d65c3baaffef1fb288e9b85243a"
+  resolved "http://registry.npmjs.org/opn/-/opn-3.0.3.tgz#b6d99e7399f78d65c3baaffef1fb288e9b85243a"
   dependencies:
     object-assign "^4.0.1"
 
@@ -4337,10 +4337,6 @@ rx-lite@*, rx-lite@^4.0.8:
 rx-lite@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
-
-safe-buffer@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
 safe-buffer@5.1.2, safe-buffer@^5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"

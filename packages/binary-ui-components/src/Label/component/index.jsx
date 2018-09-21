@@ -11,6 +11,7 @@ const propTypes = {
   isBold: PropTypes.bool,
   isDisabled: PropTypes.bool,
   isRequired: PropTypes.bool,
+  styleFontSize: PropTypes.string,
 };
 
 const defaultProps = {
@@ -18,18 +19,19 @@ const defaultProps = {
   isBold: false,
   isDisabled: false,
   isRequired: false,
+  styleFontSize: '16px',
 };
 
-const Label = ({ children, isBold, isRequired, ...props }) => (
+const Label = ({ children, isBold, isRequired, styleFontSize, ...props }) => (
   <Wrapper {...props}>
     <TextContainer>
-      <Text isBold={isBold}>
+      <Text isBold={isBold} styleFontSize={styleFontSize}>
         {children}
       </Text>
     </TextContainer>
     {isRequired ? (
       <RequiredIconContainer>
-        <RequiredIcon isBold={isBold}>*</RequiredIcon>
+        <RequiredIcon isBold={isBold} styleFontSize={styleFontSize}>*</RequiredIcon>
       </RequiredIconContainer>
     ) : null}
   </Wrapper>
