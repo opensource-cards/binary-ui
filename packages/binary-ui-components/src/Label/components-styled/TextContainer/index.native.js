@@ -5,5 +5,5 @@ export default styled.View`
   height: ${props => props.theme.sizeListItemHeight}px;
   justify-content: center;
   max-width: 100%;
-  padding-right: 10px;
+  padding-right: ${props => (props.isRequired ? '10px' : '0px')};
 `;

@@ -24,7 +24,7 @@ const defaultProps = {
 
 const Label = ({ children, isBold, isRequired, styleFontSize, ...props }) => (
   <Wrapper {...props}>
-    <TextContainer>
+    <TextContainer isRequired={isRequired}>
       <Text isBold={isBold} styleFontSize={styleFontSize}>
         {children}
       </Text>
