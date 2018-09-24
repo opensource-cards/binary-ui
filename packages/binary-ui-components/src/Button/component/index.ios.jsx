@@ -1,4 +1,4 @@
-import { BINARY_COLOR_SAND_MAIN_LIGHT } from 'binary-ui-styles';
+import { BINARY_COLOR_SAND_MAIN } from 'binary-ui-styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { TouchableHighlight } from 'react-native';
@@ -52,7 +52,8 @@ const Button = ({
   ...props,
 }) => (
   <TouchableHighlight
-    underlayColor={!isDisabled ? BINARY_COLOR_SAND_MAIN_LIGHT : undefined}
+    activeOpacity={0.2}
+    underlayColor={!isDisabled ? BINARY_COLOR_SAND_MAIN : undefined}
     onLongPress={!isDisabled ? onLongPress : undefined}
     onPress={!isDisabled ? onPress : undefined}
     onPressIn={!isDisabled ? onPressIn : undefined}

@@ -1,6 +1,8 @@
-import { getHighlightEditStyle, BINARY_COLOR_SAND_MAIN_LIGHT } from 'binary-ui-styles';
+import { getHighlightEditStyle } from 'binary-ui-styles';
 import styled from 'styled-components';
 
+// Highligh BINARY_COLOR_SAND_MAIN + opacity 0.8 over #ffffff background is #fdfdfd.
+// A #ffffff + opacity 0.8 over BINARY_COLOR_SAND_MAIN background is #fdfdfd.
 export default styled.div`
   align-items: center;
   background-color: #ffffff;
@@ -24,7 +26,7 @@ export default styled.div`
   )}
   ${props => (
     !props.isDisabled
-      ? `&:active { background-color: ${BINARY_COLOR_SAND_MAIN_LIGHT}; opacity: 0.85; }`
+      ? '&:active { opacity: 0.8; }'
       : undefined
   )}
 `;
