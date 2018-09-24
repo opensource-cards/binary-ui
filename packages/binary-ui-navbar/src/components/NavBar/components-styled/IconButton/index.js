@@ -10,6 +10,4 @@ export default styled(ActionIcon)`
   justify-content: center;
   min-width: 50px;
   user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
 `;

@@ -9,5 +9,4 @@ export default styled.div`
   padding: 5px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-font-smoothing: antialiased;
 `;

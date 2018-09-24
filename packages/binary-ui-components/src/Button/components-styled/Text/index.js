@@ -17,6 +17,4 @@ export default styled.div`
   vertical-align: middle;
   white-space: nowrap;
   width: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
 `;

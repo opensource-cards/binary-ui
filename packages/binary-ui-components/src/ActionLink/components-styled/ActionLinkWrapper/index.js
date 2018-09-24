@@ -6,8 +6,6 @@ export default styled.a`
   opacity: 1;
   text-decoration: none;
   transition: ${TRANSITION_FEEDBACK_OPACITY};
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
   &:active {
     opacity: ${props => props.theme.opacityActive};
   }

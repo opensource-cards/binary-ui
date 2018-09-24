@@ -9,8 +9,6 @@ export default styled.div`
   padding: 0 5px;
   user-select: none;
   width: fit-content;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
   ${props => {
     switch (props.alertType) {
       case CONFIRM:
