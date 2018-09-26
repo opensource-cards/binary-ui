@@ -20,6 +20,7 @@ import Behance from 'binary-ui-icons/binary/Behance';
 import Call from 'binary-ui-icons/binary/Call';
 import CallAlt from 'binary-ui-icons/binary/CallAlt';
 import CalendarView from 'binary-ui-icons/binary/CalendarView';
+import CalendarViewAlt from 'binary-ui-icons/binary/CalendarViewAlt';
 import CameraAlt from 'binary-ui-icons/binary/CameraAlt';
 import Cancel from 'binary-ui-icons/binary/Cancel';
 import Card from 'binary-ui-icons/binary/Card';
@@ -64,6 +65,7 @@ import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
 import List from 'binary-ui-icons/binary/List';
 import ListView from 'binary-ui-icons/binary/ListView';
+import ListViewAlt from 'binary-ui-icons/binary/ListViewAlt';
 import Location from 'binary-ui-icons/binary/Location';
 import LocationAlt from 'binary-ui-icons/binary/LocationAlt';
 import Locked from 'binary-ui-icons/binary/Locked';
@@ -79,8 +81,11 @@ import MoreAlt from 'binary-ui-icons/binary/MoreAlt';
 import Naver from 'binary-ui-icons/binary/Naver';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
+import Notices from 'binary-ui-icons/binary/Notices';
+import NoticesAlt from 'binary-ui-icons/binary/NoticesAlt';
 import Open from 'binary-ui-icons/binary/Open';
 import Organization from 'binary-ui-icons/binary/Organization';
+import OrganizationAlt from 'binary-ui-icons/binary/OrganizationAlt';
 import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
 import Pass from 'binary-ui-icons/binary/Pass';
 import Pinned from 'binary-ui-icons/binary/Pinned';
@@ -154,6 +159,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Call color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CallAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CalendarView color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <CalendarViewAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <CameraAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Cancel color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Card color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -184,6 +190,7 @@ storiesOf('binary-ui-icons/binary', module)
       <Like color={COLOR} size={SIZE} onPress={action('clicked')} />
       <List color={COLOR} size={SIZE} onPress={action('clicked')} />
       <ListView color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <ListViewAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Location color={COLOR} size={SIZE} onPress={action('clicked')} />
       <LocationAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Locked color={COLOR} size={SIZE} onPress={action('clicked')} />
@@ -196,8 +203,11 @@ storiesOf('binary-ui-icons/binary', module)
       <MoreAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <New color={COLOR} size={SIZE} onPress={action('clicked')} />
       <NewAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <Notices color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <NoticesAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Open color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Organization color={COLOR} size={SIZE} onPress={action('clicked')} />
+      <OrganizationAlt color={COLOR} size={SIZE} onPress={action('clicked')} />
       <OrganizationDisconnected color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Pass color={COLOR} size={SIZE} onPress={action('clicked')} />
       <Pinned color={COLOR} size={SIZE} onPress={action('clicked')} />

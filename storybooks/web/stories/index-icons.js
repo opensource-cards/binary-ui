@@ -19,6 +19,7 @@ import Beverage from 'binary-ui-icons/binary/Beverage';
 import Call from 'binary-ui-icons/binary/Call';
 import CallAlt from 'binary-ui-icons/binary/CallAlt';
 import CalendarView from 'binary-ui-icons/binary/CalendarView';
+import CalendarViewAlt from 'binary-ui-icons/binary/CalendarViewAlt';
 import CameraAlt from 'binary-ui-icons/binary/CameraAlt';
 import Cancel from 'binary-ui-icons/binary/Cancel';
 import Card from 'binary-ui-icons/binary/Card';
@@ -64,6 +65,7 @@ import Linkedin from 'binary-ui-icons/binary/Linkedin';
 import LinkedinAlt from 'binary-ui-icons/binary/LinkedinAlt';
 import List from 'binary-ui-icons/binary/List';
 import ListView from 'binary-ui-icons/binary/ListView';
+import ListViewAlt from 'binary-ui-icons/binary/ListViewAlt';
 import Location from 'binary-ui-icons/binary/Location';
 import LocationAlt from 'binary-ui-icons/binary/LocationAlt';
 import Locked from 'binary-ui-icons/binary/Locked';
@@ -81,8 +83,10 @@ import Naver from 'binary-ui-icons/binary/Naver';
 import New from 'binary-ui-icons/binary/New';
 import NewAlt from 'binary-ui-icons/binary/NewAlt';
 import Notices from 'binary-ui-icons/binary/Notices';
+import NoticesAlt from 'binary-ui-icons/binary/NoticesAlt';
 import Open from 'binary-ui-icons/binary/Open';
 import Organization from 'binary-ui-icons/binary/Organization';
+import OrganizationAlt from 'binary-ui-icons/binary/OrganizationAlt';
 import OrganizationDisconnected from 'binary-ui-icons/binary/OrganizationDisconnected';
 import Parking from 'binary-ui-icons/binary/Parking';
 import Pass from 'binary-ui-icons/binary/Pass';
@@ -170,6 +174,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Call color={COLOR} size={SIZE} />Call</div>
       <div><CallAlt color={COLOR} size={SIZE} />CallAlt</div>
       <div><CalendarView color={COLOR} size={SIZE} />CalendarView</div>
+      <div><CalendarViewAlt color={COLOR} size={SIZE} />CalendarViewAlt</div>
       <div><CameraAlt color={COLOR} size={SIZE} />CameraAlt</div>
       <div><Cancel color={COLOR} size={SIZE} />Cancel</div>
       <div><Card color={COLOR} size={SIZE} />Card</div>
@@ -201,6 +206,7 @@ storiesOf('binary-ui-icons/binary', module)
       <div><Like color={COLOR} size={SIZE} />Like</div>
       <div><List color={COLOR} size={SIZE} />List</div>
       <div><ListView color={COLOR} size={SIZE} />ListView</div>
+      <div><ListViewAlt color={COLOR} size={SIZE} />ListViewAlt</div>
       <div><Location color={COLOR} size={SIZE} />Location</div>
       <div><LocationAlt color={COLOR} size={SIZE} />LocationAlt</div>
       <div><Locked color={COLOR} size={SIZE} />Locked</div>
@@ -215,8 +221,10 @@ storiesOf('binary-ui-icons/binary', module)
       <div><New color={COLOR} size={SIZE} />New</div>
       <div><NewAlt color={COLOR} size={SIZE} />NewAlt</div>
       <div><Notices color={COLOR} size={SIZE} />Notices</div>
+      <div><NoticesAlt color={COLOR} size={SIZE} />NoticesAlt</div>
       <div><Open color={COLOR} size={SIZE} />Open</div>
       <div><Organization color={COLOR} size={SIZE} />Organization</div>
+      <div><OrganizationAlt color={COLOR} size={SIZE} />OrganizationAlt</div>
       <div><OrganizationDisconnected color={COLOR} size={SIZE} />OrganizationDisconnected</div>
       <div><Parking color={COLOR} size={SIZE} />Parking</div>
       <div><Pass color={COLOR} size={SIZE} />Pass</div>
